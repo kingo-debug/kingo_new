@@ -8,6 +8,7 @@ public class WeaponStatus : MonoBehaviour
  public int TotalAmmo;
  public bool MaxedAmmo;
  public bool NoAmmo;
+    public GameObject CurrentWeapon;
 
 void Update() 
 {

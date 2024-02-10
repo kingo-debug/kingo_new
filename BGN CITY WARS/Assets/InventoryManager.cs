@@ -11,11 +11,13 @@ public class InventoryManager : MonoBehaviour
     [SerializeField]
     private PlayerActionsVar Actions;
     private PhotonView PV;
+    private Animator animator;
     // Start is called before the first frame update
     void Start()
     {
         PV = GetComponent<PhotonView>();
-        if(PV.IsMine)
+        animator = GetComponent<Animator>();
+        if (PV.IsMine)
         {
             Actions.InventoryTrack = 0;
         }
@@ -33,10 +35,16 @@ public class InventoryManager : MonoBehaviour
         foreach (Transform item in Inventory)
         {
             // Check if the current index matches the inventory track int
-            if (index == inventoryTrackInt)
+            if (!Switched && index == inventoryTrackInt)
             {
                 // Activate the item
                 item.gameObject.SetActive(true);
+                Switched = true;
+                animator.SetTrigger("SWITCH");
+                animator.SetInteger("INVENTORY", inventoryTrackInt);
+                Invoke("ResetSwitched", SwitchTime);
+
+
             }
             else
             {
@@ -49,4 +57,9 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
+    private void ResetSwitched()
+    {
+        Switched = false;
+        animator.ResetTrigger("SWITCH");
+    }
 }

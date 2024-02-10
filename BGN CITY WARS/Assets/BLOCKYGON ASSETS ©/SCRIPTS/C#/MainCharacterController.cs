@@ -191,6 +191,7 @@ public class MainCharacterController : MonoBehaviour
         }
 
         Jump();
+        Aim();
     }
 
     void Jump()
@@ -219,8 +220,14 @@ public class MainCharacterController : MonoBehaviour
 
     void Aim()
     {
-        Combatmode = true;
-        ISAiming = true;
+        if (ControlFreak2.CF2Input.GetMouseButtonDown(1))
+        {
+            Combatmode = true;
+            ISAiming = true;
+            animator.SetBool("IS AIMING", true);
+
+        }
+      
 
 
     }
