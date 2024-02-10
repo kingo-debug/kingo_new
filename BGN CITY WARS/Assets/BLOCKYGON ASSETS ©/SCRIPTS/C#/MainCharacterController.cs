@@ -1,8 +1,9 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using ControlFreak2;
+
 
 
 
@@ -18,6 +19,7 @@ public class MainCharacterController : MonoBehaviour
     [Space(3)]
     [SerializeField]
     private float RotateTowardsSpeed;
+    private bool ISAiming = false;
     [SerializeField]
     private float CMMoveThreshold;
     public float CMSpeed;
@@ -46,6 +48,9 @@ public class MainCharacterController : MonoBehaviour
     private float jumpHeight = 5f;
     public float gravity = 9.8f;
     private Vector3 velocity;
+    private Animator animator;
+    private SpeedCheck speedcheck;
+    private float SyncSpeed = 10f;
 
 
     #endregion
@@ -53,17 +58,49 @@ public class MainCharacterController : MonoBehaviour
     {
         joystick = GameObject.FindWithTag("JoyStick").GetComponent<TouchJoystick>();
 
+        animator = GetComponent<Animator>();
+
         PV = GetComponent<PhotonView>();
 
         CharController = GetComponent<CharacterController>();
 
         MainCamera = Camera.main.transform;
 
+        speedcheck = GetComponent<SpeedCheck>();
+
+
+        
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        isGrounded = CharController.isGrounded;
+        #region Animator Parameters.
+        animator.SetBool("Grounded", isGrounded);
+        animator.SetBool("combat", Combatmode);
+
+   
+        if (float.IsNaN(animator.GetFloat("PlayerVelocity")))
+        {
+            animator.SetFloat("PlayerVelocity", 0f);
+            animator.SetFloat("inputx",0f);
+            animator.SetFloat("inputY",0f);
+            animator.SetFloat("inputMagnitude", 0f);
+
+        }
+        else
+        {
+            animator.SetFloat("PlayerVelocity", speedcheck.speed, 1, Time.deltaTime * 9);
+            animator.SetFloat("inputx", joystick.GetVector().x*SyncSpeed, 0.5f, Time.deltaTime*5);
+            animator.SetFloat("inputY", joystick.GetVector().y * SyncSpeed, 0.5f, Time.deltaTime*5);
+            animator.SetFloat("inputMagnitude", new Vector2(animator.GetFloat("inputx"), animator.GetFloat("inputY")).magnitude);
+
+        }
+
+        #endregion
+
         if (Combatmode)
         {
             CombatMode();
@@ -77,6 +114,10 @@ public class MainCharacterController : MonoBehaviour
         void CombatMode()
         {
             //Combat mode features
+            #region Strafe Move
+            Vector3 Strafemove = transform.rotation * new Vector3(joystick.GetVector().x * CMSpeed, 0, joystick.GetVector().y * CMSpeed) * Time.deltaTime;
+            CharController.Move(Strafemove);
+            #endregion
             #region RotateChar
             Vector3 Rotation = new Vector3(MainCamera.forward.x, 0, MainCamera.forward.z);
 
@@ -154,25 +195,18 @@ public class MainCharacterController : MonoBehaviour
 
     void Jump()
     {
-        isGrounded = CharController.isGrounded;
+
 
         if (isGrounded && velocity.y < 0)
         {
             velocity.y = -2f; // Ensure you are grounded to avoid gravity accumulation
         }
 
-        float horizontalInput = joystick.GetVector().x;
-        float verticalInput = joystick.GetVector().y;
-
-        Vector3 moveDirection = transform.right * horizontalInput + transform.forward * verticalInput;
-
-        if (ControlFreak2.CF2Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if (ControlFreak2.CF2Input.GetKey(KeyCode.Space) && isGrounded)
         {
             // Calculate the jump velocity based on jump height
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
 
-            // Add the forward force if moving forward
-            velocity += moveDirection * 5f;
         }
 
         // Apply gravity to pull the character down
@@ -181,7 +215,20 @@ public class MainCharacterController : MonoBehaviour
         // Move the character
         CharController.Move(velocity * Time.deltaTime);
     }
+
+
+    void Aim()
+    {
+        Combatmode = true;
+        ISAiming = true;
+
+
+    }
 }
+    
+
+
+
 
 
 
