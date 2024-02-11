@@ -88,6 +88,7 @@ public class MainCharacterController : MonoBehaviour
         animator.SetBool("Grounded", isGrounded);
         animator.SetBool("combat", Combatmode);
 
+        
    
         if (float.IsNaN(animator.GetFloat("PlayerVelocity")))
         {
@@ -108,7 +109,7 @@ public class MainCharacterController : MonoBehaviour
 
         #endregion
 
-        if (Combatmode)
+        if (actionsVar.Fired || actionsVar.IsAiming)
         {
             CombatMode();
         }
@@ -121,6 +122,7 @@ public class MainCharacterController : MonoBehaviour
         void CombatMode()
         {
             //Combat mode features
+            Combatmode = true;
             #region Strafe Move
             Vector3 Strafemove = transform.rotation * new Vector3(joystick.GetVector().x * CMSpeed, 0, joystick.GetVector().y * CMSpeed) * Time.deltaTime;
             CharController.Move(Strafemove);
@@ -132,12 +134,15 @@ public class MainCharacterController : MonoBehaviour
 
             transform.forward = (SmoothRotation);
             #endregion
+            if(!actionsVar.Fired && ! actionsVar.IsAiming)
+            Invoke("FreeMode", 2f);
         }
 
 
 
         void FreeMode()
         {
+            Combatmode = false ;
             #region Free Movement
             if (PV.IsMine && joystick.GetVector().magnitude > FMMoveThreshold)
 
