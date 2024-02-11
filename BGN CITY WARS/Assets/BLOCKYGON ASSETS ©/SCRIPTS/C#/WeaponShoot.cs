@@ -73,6 +73,7 @@ public class WeaponShoot : MonoBehaviour
     private GameObject CameraMain;
     private GameObject ScopeUI;
     private Animator ScopeAnimator;
+    private Animator Parentanimator;
 
     //pun variables
     [Header("Debugs")]
@@ -93,15 +94,16 @@ public class WeaponShoot : MonoBehaviour
 
     private void OnEnable()
     {
-        #region CrosshairSetUp
+                #region CrosshairSetUp
         Transform DefaultReticle;
         DefaultReticle = GameObject.Find("DEFAULT RETICLE").transform;
         HitReticleCrosshair = DefaultReticle.transform.GetChild(1).gameObject;
         ScopeUI = DefaultReticle.transform.GetChild(3).gameObject;
         ScopeAnimator = ScopeUI.GetComponent<Animator>();
         #endregion
-  
-        AS = GetComponent<AudioSource>();
+
+      
+      AS = GetComponent<AudioSource>();
 
         #region find  and assign kill pop up feeds.
         KillFeed = GameObject.Find("KILL FEEDS").transform.GetChild(0).gameObject;
@@ -111,6 +113,8 @@ public class WeaponShoot : MonoBehaviour
         Invoke("FindParent", .5f);
         PV = this.GetComponent<PhotonView>();
         AmmoRefresh();
+        SyncFireAnim();
+        Parentanimator.SetFloat("ReloadSpeed",ReloadTime*2.5f);
         collided = hit.collider;
    
       
@@ -136,6 +140,7 @@ public class WeaponShoot : MonoBehaviour
         weaponstatus = PlayerParent.GetComponent<WeaponStatus>();
         Parentvariables = PlayerParent.GetComponent<PlayerActionsVar>();
         Parentvariables.Fired = Fired;
+        Parentanimator = PlayerParent.GetComponent<Animator>();
 
 
 
@@ -160,9 +165,6 @@ public class WeaponShoot : MonoBehaviour
         Canfire = PlayerParent.GetComponent<PlayerActionsVar>().canfire;
         PlayerParent.GetComponent<WeaponStatus>().CurrentClip = currentclip;
         PlayerParent.GetComponent<WeaponStatus>().TotalAmmo = totalammo;
-
-
-     
 
 
         modifiedFireRate = 1.0f / FireRate;
@@ -193,6 +195,8 @@ public class WeaponShoot : MonoBehaviour
         {
             Fired = false;
            Parentvariables.Fired = false;
+            Parentanimator.SetBool("shoot", false);
+
         }
 
 
@@ -245,9 +249,11 @@ public class WeaponShoot : MonoBehaviour
     {
         #region AtShootActions !!!! ^
         ScopeAnimator.SetTrigger("fired");
+        
         started = true;
         Fired = true;
         Parentvariables.Fired = true;
+        Parentanimator.SetBool("shoot", true);
         #endregion
 
         //track shots fired
@@ -610,12 +616,18 @@ public class WeaponShoot : MonoBehaviour
         #endregion
     }
 
+    void SyncFireAnim()
+    {
+        Parentanimator.SetFloat("FireRate", FireRate / 3);
+        AS.pitch = ReloadTime * 3;
+        
+    }
     #region /////Coroutines/////
 
     //Ammo & reload
     IEnumerator Reload()
 {
-    Reloading = true;           PlayerParent.GetComponent<PlayerActionsVar>().IsReloading = true;
+    Reloading = true;           PlayerParent.GetComponent<PlayerActionsVar>().IsReloading = true;     Parentanimator.SetBool("RELOAD", true);
 
      noammo = false;
 
@@ -640,8 +652,8 @@ public class WeaponShoot : MonoBehaviour
         currentclip += BulletsFired;
         totalammo -= BulletsFired;
         BulletsFired = 0;
-        Reloading = false;                   PlayerParent.GetComponent<PlayerActionsVar>().IsReloading = false;
-        AmmoMessage.text = (""); AmmoMessage.color = new Color(255f, 178f, 255f);
+        Reloading = false;                   PlayerParent.GetComponent<PlayerActionsVar>().IsReloading = false; Parentanimator.SetBool("RELOAD", false);
+            AmmoMessage.text = (""); AmmoMessage.color = new Color(255f, 178f, 255f);
         AmmoRefresh();
         }
 

@@ -1,8 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using Photon.Pun;
 using ControlFreak2;
+using RootMotion.FinalIK;
 
 
 
@@ -19,7 +18,7 @@ public class MainCharacterController : MonoBehaviour
     [Space(3)]
     [SerializeField]
     private float RotateTowardsSpeed;
-    private bool ISAiming = false;
+    public bool ISAiming = false;
     [SerializeField]
     private float CMMoveThreshold;
     public float CMSpeed;
@@ -51,6 +50,11 @@ public class MainCharacterController : MonoBehaviour
     private Animator animator;
     private SpeedCheck speedcheck;
     private float SyncSpeed = 10f;
+    private LookAtIK lookik;
+    private AimIK aimik;
+    private PlayerActionsVar actionsVar;
+
+
 
 
     #endregion
@@ -67,9 +71,12 @@ public class MainCharacterController : MonoBehaviour
         MainCamera = Camera.main.transform;
 
         speedcheck = GetComponent<SpeedCheck>();
+        lookik = GetComponent<LookAtIK>();
+        aimik = GetComponent<AimIK>();
+        actionsVar = GetComponent<PlayerActionsVar>();
+        animator.SetBool("IS AIMING", false);
 
 
-        
 
     }
 
@@ -220,14 +227,43 @@ public class MainCharacterController : MonoBehaviour
 
     void Aim()
     {
-        if (ControlFreak2.CF2Input.GetMouseButtonDown(1))
+        if (ControlFreak2.CF2Input.GetMouseButtonDown(1) && ! actionsVar.IsReloading && actionsVar.Weapontype >0)
         {
-            Combatmode = true;
-            ISAiming = true;
-            animator.SetBool("IS AIMING", true);
+      
+            if(ISAiming)
+            {
+                ISAiming = false ;
+                Combatmode = false;
+                animator.SetBool("IS AIMING", false);
+                aimik.GetIKSolver().SetIKPositionWeight(0);
+                lookik.GetIKSolver().SetIKPositionWeight(0);
+                actionsVar.IsAiming = false;
+                
+
+            }
+       else
+            {
+                ISAiming = true;
+                Combatmode = true;
+                animator.SetBool("IS AIMING", true);
+                aimik.GetIKSolver().SetIKPositionWeight(.8f );
+                lookik.GetIKSolver().SetIKPositionWeight(0.8f);
+                actionsVar.IsAiming = true;
+
+            }
 
         }
-      
+        else if (actionsVar.IsReloading)
+        {
+            ISAiming = false;
+            Combatmode = false;
+            animator.SetBool("IS AIMING", false);
+            aimik.GetIKSolver().SetIKPositionWeight(0);
+            lookik.GetIKSolver().SetIKPositionWeight(0);
+            actionsVar.IsAiming = false;
+
+        }
+
 
 
     }
