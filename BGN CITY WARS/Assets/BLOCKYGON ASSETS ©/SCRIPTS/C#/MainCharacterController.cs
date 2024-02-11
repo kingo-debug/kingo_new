@@ -13,6 +13,8 @@ public class MainCharacterController : MonoBehaviour
     [Header("ControollerMode")]
     [Space(3)]
     public bool Combatmode;
+    [SerializeField]
+    private float CombatCoolDown;
     [Space(10)]
     [Header("CombatMode")]
     [Space(3)]
@@ -76,9 +78,13 @@ public class MainCharacterController : MonoBehaviour
         actionsVar = GetComponent<PlayerActionsVar>();
         animator.SetBool("IS AIMING", false);
 
+        FreeMode();
+
 
 
     }
+
+   
 
     // Update is called once per frame
     void Update()
@@ -88,8 +94,21 @@ public class MainCharacterController : MonoBehaviour
         animator.SetBool("Grounded", isGrounded);
         animator.SetBool("combat", Combatmode);
 
-        
-   
+        if  (actionsVar.Fired || actionsVar.IsAiming)
+        {
+            Combatmode = true;
+       
+        }
+
+
+        if (Combatmode == true)
+        {
+            Invoke("ResetCombatMode", CombatCoolDown);
+        }
+
+
+
+
         if (float.IsNaN(animator.GetFloat("PlayerVelocity")))
         {
             animator.SetFloat("PlayerVelocity", 0f);
@@ -109,102 +128,118 @@ public class MainCharacterController : MonoBehaviour
 
         #endregion
 
-        if (actionsVar.Fired || actionsVar.IsAiming)
+        if (Combatmode )
         {
             CombatMode();
+
         }
         else
         {
             FreeMode();
         }
+       
 
 
-        void CombatMode()
-        {
-            //Combat mode features
-            Combatmode = true;
-            #region Strafe Move
-            Vector3 Strafemove = transform.rotation * new Vector3(joystick.GetVector().x * CMSpeed, 0, joystick.GetVector().y * CMSpeed) * Time.deltaTime;
-            CharController.Move(Strafemove);
-            #endregion
-            #region RotateChar
-            Vector3 Rotation = new Vector3(MainCamera.forward.x, 0, MainCamera.forward.z);
-
-            Vector3 SmoothRotation = Vector3.Lerp(transform.forward, Rotation, Time.deltaTime * RotateTowardsSpeed);
-
-            transform.forward = (SmoothRotation);
-            #endregion
-            if(!actionsVar.Fired && ! actionsVar.IsAiming)
-            Invoke("FreeMode", 2f);
-        }
-
-
-
-        void FreeMode()
-        {
-            Combatmode = false ;
-            #region Free Movement
-            if (PV.IsMine && joystick.GetVector().magnitude > FMMoveThreshold)
-
-            {
-                // Get the joystick input vector
-                Vector3 joystickInput = joystick.GetVector();
-                if (Lerp < FMSpeed)
-                {
-                    Lerp = Mathf.Clamp(Lerp += MoveSmoothness * Time.deltaTime, 0, FMSpeed);
-                }
-
-
-
-
-                // Create a movement vector based on the joystick input
-                Vector3 movement = transform.rotation * new Vector3(0, 0, Mathf.Abs(joystickInput.magnitude * Lerp * Time.deltaTime));
-
-                // Apply the movement to the character controller
-                CharController.Move(movement);
-            }
-            else
-            {
-                if (Lerp > 0)
-                {
-                    Lerp = Mathf.Clamp(Lerp -= MoveSmoothness * 0.5f * Time.deltaTime, 0, FMSpeed);
-                }
-            }
-
-            #endregion
-
-            #region Free Rotate
-            if (joystick.GetVector() != Vector2.zero && targetDirection.magnitude > 0.1f)
-            {
-                Vector3 lookDirection = targetDirection.normalized;
-                freeRotation = Quaternion.LookRotation(lookDirection, transform.up);
-                var diferenceRotation = freeRotation.eulerAngles.y - transform.eulerAngles.y;
-                var eulerY = transform.eulerAngles.y;
-
-                if (diferenceRotation < 0 || diferenceRotation > 0) eulerY = freeRotation.eulerAngles.y;
-                var euler = new Vector3(0, eulerY, 0);
-
-                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(euler), turnSpeed * FreeRotationSpeed * Time.deltaTime);
-            }
-
-            FreeRotationSpeed = 1f;
-            var forward = MainCamera.transform.TransformDirection(Vector3.forward);
-            forward.y = 0;
-
-            //get the right-facing direction of the referenceTransform
-            var right = MainCamera.transform.TransformDirection(Vector3.right);
-
-            // determine the direction the player will face based on input and the referenceTransform's right and forward directions
-            targetDirection = joystick.GetVector().x * right + joystick.GetVector().y * forward;
-
-            #endregion
-
-
-        }
 
         Jump();
         Aim();
     }
+
+    void CombatMode()
+    {
+        //Combat mode features
+       
+        #region Strafe Move
+        Vector3 Strafemove = transform.rotation * new Vector3(joystick.GetVector().x * CMSpeed, 0, joystick.GetVector().y * CMSpeed) * Time.deltaTime;
+        CharController.Move(Strafemove);
+        #endregion
+        #region RotateChar
+        Vector3 Rotation = new Vector3(MainCamera.forward.x, 0, MainCamera.forward.z);
+
+        Vector3 SmoothRotation = Vector3.Lerp(transform.forward, Rotation, Time.deltaTime * RotateTowardsSpeed);
+
+        transform.forward = (SmoothRotation);
+        #endregion
+ 
+    }
+
+    void FreeMode()
+    {
+
+        #region Free Movement
+        if (PV.IsMine && joystick.GetVector().magnitude > FMMoveThreshold)
+
+        {
+            // Get the joystick input vector
+            Vector3 joystickInput = joystick.GetVector();
+            if (Lerp < FMSpeed)
+            {
+                Lerp = Mathf.Clamp(Lerp += MoveSmoothness * Time.deltaTime, 0, FMSpeed);
+            }
+
+
+
+
+            // Create a movement vector based on the joystick input
+            Vector3 movement = transform.rotation * new Vector3(0, 0, Mathf.Abs(joystickInput.magnitude * Lerp * Time.deltaTime));
+
+            // Apply the movement to the character controller
+            CharController.Move(movement);
+        }
+        else
+        {
+            if (Lerp > 0)
+            {
+                Lerp = Mathf.Clamp(Lerp -= MoveSmoothness * 0.5f * Time.deltaTime, 0, FMSpeed);
+            }
+        }
+
+        #endregion
+
+        #region Free Rotate
+        if (joystick.GetVector() != Vector2.zero && targetDirection.magnitude > 0.1f)
+        {
+            Vector3 lookDirection = targetDirection.normalized;
+            freeRotation = Quaternion.LookRotation(lookDirection, transform.up);
+            var diferenceRotation = freeRotation.eulerAngles.y - transform.eulerAngles.y;
+            var eulerY = transform.eulerAngles.y;
+
+            if (diferenceRotation < 0 || diferenceRotation > 0) eulerY = freeRotation.eulerAngles.y;
+            var euler = new Vector3(0, eulerY, 0);
+
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(euler), turnSpeed * FreeRotationSpeed * Time.deltaTime);
+        }
+
+        FreeRotationSpeed = 1f;
+        var forward = MainCamera.transform.TransformDirection(Vector3.forward);
+        forward.y = 0;
+
+        //get the right-facing direction of the referenceTransform
+        var right = MainCamera.transform.TransformDirection(Vector3.right);
+
+        // determine the direction the player will face based on input and the referenceTransform's right and forward directions
+        targetDirection = joystick.GetVector().x * right + joystick.GetVector().y * forward;
+
+        #endregion
+
+
+    }
+
+    void ResetCombatMode()
+    {
+        if(Combatmode)
+        {
+            if (!actionsVar.Fired && actionsVar.IsAiming)
+            {
+                Combatmode = false;
+            }
+            else
+            {
+                Invoke("ResetCombatMode", CombatCoolDown);
+            }
+        }
+    }
+       
 
     void Jump()
     {
