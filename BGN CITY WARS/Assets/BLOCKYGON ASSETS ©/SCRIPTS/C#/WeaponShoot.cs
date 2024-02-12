@@ -158,6 +158,7 @@ public class WeaponShoot : MonoBehaviour
         Shootpoint = GameObject.FindGameObjectWithTag("ShootPoint").transform;
         CameraMain = Camera.main.gameObject;   pos = CameraMain.transform.GetChild(2);
         SyncFireAnim();
+        Parentanimator.SetFloat("ReloadSpeed", ReloadTime * 2.5f);
 
 
     }
