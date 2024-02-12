@@ -70,6 +70,8 @@ public class WeaponShoot : MonoBehaviour
     public ParticleSystem BulletTrailVFX;
     public ParticleSystem BulletDropVFX;
     public GameObject BulletHoleVFX;
+    [SerializeField]
+    private GameObject FireVFX; 
     private GameObject CameraMain;
     private GameObject ScopeUI;
     private Animator ScopeAnimator;
@@ -155,6 +157,7 @@ public class WeaponShoot : MonoBehaviour
         AmmoMessage = GameObject.Find("AMMO MESSAGE").GetComponent<TextMeshProUGUI>();
         Shootpoint = GameObject.FindGameObjectWithTag("ShootPoint").transform;
         CameraMain = Camera.main.gameObject;   pos = CameraMain.transform.GetChild(2);
+        SyncFireAnim();
 
 
     }
@@ -194,7 +197,8 @@ public class WeaponShoot : MonoBehaviour
         if (Time.time > lastshot + 0.2f)
         {
             Fired = false;
-           Parentvariables.Fired = false;
+            FireVFX.SetActive(false);
+            Parentvariables.Fired = false;
             Parentanimator.SetBool("shoot", false);
 
         }
@@ -254,6 +258,7 @@ public class WeaponShoot : MonoBehaviour
         Fired = true;
         Parentvariables.Fired = true;
         Parentanimator.SetBool("shoot", true);
+        FireVFX.SetActive(true);
         #endregion
 
         //track shots fired
@@ -618,7 +623,7 @@ public class WeaponShoot : MonoBehaviour
 
     void SyncFireAnim()
     {
-        Parentanimator.SetFloat("FireRate", FireRate / 3);
+        Parentanimator.SetFloat("FireRate", FireRate / 3.5f);
         AS.pitch = ReloadTime * 3;
         
     }

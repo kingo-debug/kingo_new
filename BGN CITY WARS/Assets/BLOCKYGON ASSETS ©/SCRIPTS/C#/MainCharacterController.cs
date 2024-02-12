@@ -85,7 +85,7 @@ public class MainCharacterController : MonoBehaviour
 
     }
 
-   
+
 
     // Update is called once per frame
     void Update()
@@ -95,13 +95,13 @@ public class MainCharacterController : MonoBehaviour
         animator.SetBool("Grounded", isGrounded);
         animator.SetBool("combat", Combatmode);
 
-        if  (actionsVar.Fired || ISAiming)
+        if (actionsVar.Fired || ISAiming)
         {
             Combatmode = true;
-       
+
         }
 
-        if (Combatmode && !actionsVar.Fired && !ISAiming && ! animator.GetBool("FIRE INPUT"))
+        if (Combatmode && !actionsVar.Fired && !ISAiming && !animator.GetBool("FIRE INPUT"))
         {
             StartCoroutine(ResetCombatMode());
 
@@ -111,23 +111,23 @@ public class MainCharacterController : MonoBehaviour
         if (float.IsNaN(animator.GetFloat("PlayerVelocity")))
         {
             animator.SetFloat("PlayerVelocity", 0f);
-            animator.SetFloat("inputx",0f);
-            animator.SetFloat("inputY",0f);
+            animator.SetFloat("inputx", 0f);
+            animator.SetFloat("inputY", 0f);
             animator.SetFloat("inputMagnitude", 0f);
 
         }
         else
         {
             animator.SetFloat("PlayerVelocity", speedcheck.speed, 1, Time.deltaTime * 9);
-            animator.SetFloat("inputx", joystick.GetVector().x*SyncSpeed, 0.5f, Time.deltaTime*5);
-            animator.SetFloat("inputY", joystick.GetVector().y * SyncSpeed, 0.5f, Time.deltaTime*5);
+            animator.SetFloat("inputx", joystick.GetVector().x * SyncSpeed, 0.5f, Time.deltaTime * 5);
+            animator.SetFloat("inputY", joystick.GetVector().y * SyncSpeed, 0.5f, Time.deltaTime * 5);
             animator.SetFloat("inputMagnitude", new Vector2(animator.GetFloat("inputx"), animator.GetFloat("inputY")).magnitude);
 
         }
 
         #endregion
 
-        if (Combatmode )
+        if (Combatmode)
         {
             CombatMode();
 
@@ -136,18 +136,19 @@ public class MainCharacterController : MonoBehaviour
         {
             FreeMode();
         }
-       
+
 
 
 
         Jump();
         Aim();
+        Shoot();
     }
 
     void CombatMode()
     {
         //Combat mode features
-       
+
         #region Strafe Move
         Vector3 Strafemove = transform.rotation * new Vector3(joystick.GetVector().x * CMSpeed, 0, joystick.GetVector().y * CMSpeed) * Time.deltaTime;
         CharController.Move(Strafemove);
@@ -159,7 +160,7 @@ public class MainCharacterController : MonoBehaviour
 
         transform.forward = (SmoothRotation);
         #endregion
- 
+
     }
 
     void FreeMode()
@@ -228,14 +229,14 @@ public class MainCharacterController : MonoBehaviour
     {
         yield return new WaitForSeconds(CombatCoolDown);
 
-        if (Combatmode && !actionsVar.Fired && !ISAiming && ! animator.GetBool("FIRE INPUT"))
+        if (Combatmode && !actionsVar.Fired && !ISAiming && !animator.GetBool("FIRE INPUT"))
         {
             Combatmode = false;
         }
 
-           
-        
-        
+
+
+
     }
 
 
@@ -265,24 +266,24 @@ public class MainCharacterController : MonoBehaviour
 
     void Aim()
     {
-        if (ControlFreak2.CF2Input.GetMouseButtonDown(1) && ! actionsVar.IsReloading && actionsVar.Weapontype >0)
+        if (ControlFreak2.CF2Input.GetMouseButtonDown(1) && !actionsVar.IsReloading && actionsVar.Weapontype > 0)
         {
-      
-            if(ISAiming)
+
+            if (ISAiming)
             {
-                ISAiming = false ;
+                ISAiming = false;
                 animator.SetBool("IS AIMING", false);
                 aimik.GetIKSolver().SetIKPositionWeight(0);
                 lookik.GetIKSolver().SetIKPositionWeight(0);
                 actionsVar.IsAiming = false;
-                
+
 
             }
-       else
+            else
             {
                 ISAiming = true;
                 animator.SetBool("IS AIMING", true);
-                aimik.GetIKSolver().SetIKPositionWeight(.8f );
+                aimik.GetIKSolver().SetIKPositionWeight(.8f);
                 lookik.GetIKSolver().SetIKPositionWeight(0.8f);
                 actionsVar.IsAiming = true;
 
@@ -302,9 +303,22 @@ public class MainCharacterController : MonoBehaviour
 
 
     }
-}
-    
 
+    void Shoot()
+    {
+        if (ControlFreak2.CF2Input.GetMouseButton(0) && !actionsVar.IsReloading )
+        {
+            aimik.GetIKSolver().SetIKPositionWeight(.8f);
+            lookik.GetIKSolver().SetIKPositionWeight(0.8f);
+        }
+        else if (!ISAiming)
+        {
+            aimik.GetIKSolver().SetIKPositionWeight(0);
+            lookik.GetIKSolver().SetIKPositionWeight(0);
+        }
+    }
+
+}
 
 
 
