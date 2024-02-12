@@ -63,10 +63,7 @@ public class MainCharacterController : MonoBehaviour
     #endregion
     void Start()
     {
-        if(!PV.IsMine)
-        {
-            this.enabled = false; ;
-        }
+        
         joystick = GameObject.FindWithTag("JoyStick").GetComponent<TouchJoystick>();
 
         animator = GetComponent<Animator>();
@@ -82,6 +79,10 @@ public class MainCharacterController : MonoBehaviour
         aimik = GetComponent<AimIK>();
         actionsVar = GetComponent<PlayerActionsVar>();
         animator.SetBool("IS AIMING", false);
+        if (!PV.IsMine)
+        {
+            this.enabled = false; ;
+        }
 
         FreeMode();
 
