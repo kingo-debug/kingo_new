@@ -63,6 +63,10 @@ public class MainCharacterController : MonoBehaviour
     #endregion
     void Start()
     {
+        if(!PV.IsMine)
+        {
+            this.enabled = false; ;
+        }
         joystick = GameObject.FindWithTag("JoyStick").GetComponent<TouchJoystick>();
 
         animator = GetComponent<Animator>();
@@ -242,34 +246,60 @@ public class MainCharacterController : MonoBehaviour
 
     void Jump()
     {
-
-
-        if (isGrounded && velocity.y < 0)
+        if(PV.IsMine)
         {
-            velocity.y = -2f; // Ensure you are grounded to avoid gravity accumulation
+            if (isGrounded && velocity.y < 0)
+            {
+                velocity.y = -2f; // Ensure you are grounded to avoid gravity accumulation
+            }
+
+            if (ControlFreak2.CF2Input.GetKey(KeyCode.Space) && isGrounded)
+            {
+                // Calculate the jump velocity based on jump height
+                velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+
+            }
+
+            // Apply gravity to pull the character down
+            velocity.y += gravity * Time.deltaTime;
+
+            // Move the character
+            CharController.Move(velocity * Time.deltaTime);
         }
 
-        if (ControlFreak2.CF2Input.GetKey(KeyCode.Space) && isGrounded)
-        {
-            // Calculate the jump velocity based on jump height
-            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
 
-        }
-
-        // Apply gravity to pull the character down
-        velocity.y += gravity * Time.deltaTime;
-
-        // Move the character
-        CharController.Move(velocity * Time.deltaTime);
     }
 
 
     void Aim()
     {
-        if (ControlFreak2.CF2Input.GetMouseButtonDown(1) && !actionsVar.IsReloading && actionsVar.Weapontype > 0)
+        if(PV.IsMine)
         {
+            if (ControlFreak2.CF2Input.GetMouseButtonDown(1) && !actionsVar.IsReloading && actionsVar.Weapontype > 0)
+            {
 
-            if (ISAiming)
+                if (ISAiming)
+                {
+                    ISAiming = false;
+                    animator.SetBool("IS AIMING", false);
+                    aimik.GetIKSolver().SetIKPositionWeight(0);
+                    lookik.GetIKSolver().SetIKPositionWeight(0);
+                    actionsVar.IsAiming = false;
+
+
+                }
+                else
+                {
+                    ISAiming = true;
+                    animator.SetBool("IS AIMING", true);
+                    aimik.GetIKSolver().SetIKPositionWeight(.8f);
+                    lookik.GetIKSolver().SetIKPositionWeight(0.8f);
+                    actionsVar.IsAiming = true;
+
+                }
+
+            }
+            else if (actionsVar.IsReloading)
             {
                 ISAiming = false;
                 animator.SetBool("IS AIMING", false);
@@ -277,44 +307,25 @@ public class MainCharacterController : MonoBehaviour
                 lookik.GetIKSolver().SetIKPositionWeight(0);
                 actionsVar.IsAiming = false;
 
-
             }
-            else
-            {
-                ISAiming = true;
-                animator.SetBool("IS AIMING", true);
-                aimik.GetIKSolver().SetIKPositionWeight(.8f);
-                lookik.GetIKSolver().SetIKPositionWeight(0.8f);
-                actionsVar.IsAiming = true;
-
-            }
-
         }
-        else if (actionsVar.IsReloading)
-        {
-            ISAiming = false;
-            animator.SetBool("IS AIMING", false);
-            aimik.GetIKSolver().SetIKPositionWeight(0);
-            lookik.GetIKSolver().SetIKPositionWeight(0);
-            actionsVar.IsAiming = false;
-
-        }
-
-
 
     }
 
     void Shoot()
     {
-        if (ControlFreak2.CF2Input.GetMouseButton(0) && !actionsVar.IsReloading )
+      if (PV.IsMine)
         {
-            aimik.GetIKSolver().SetIKPositionWeight(.8f);
-            lookik.GetIKSolver().SetIKPositionWeight(0.8f);
-        }
-        else if (!ISAiming)
-        {
-            aimik.GetIKSolver().SetIKPositionWeight(0);
-            lookik.GetIKSolver().SetIKPositionWeight(0);
+            if (ControlFreak2.CF2Input.GetMouseButton(0) && !actionsVar.IsReloading)
+            {
+                aimik.GetIKSolver().SetIKPositionWeight(.8f);
+                lookik.GetIKSolver().SetIKPositionWeight(0.8f);
+            }
+            else if (!ISAiming)
+            {
+                aimik.GetIKSolver().SetIKPositionWeight(0);
+                lookik.GetIKSolver().SetIKPositionWeight(0);
+            }
         }
     }
 
