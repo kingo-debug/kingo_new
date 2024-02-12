@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using Photon.Pun;
+using System.Collections;
 using ControlFreak2;
 using RootMotion.FinalIK;
 
@@ -94,19 +95,17 @@ public class MainCharacterController : MonoBehaviour
         animator.SetBool("Grounded", isGrounded);
         animator.SetBool("combat", Combatmode);
 
-        if  (actionsVar.Fired || actionsVar.IsAiming)
+        if  (actionsVar.Fired || ISAiming)
         {
             Combatmode = true;
        
         }
 
-
-        if (Combatmode == true)
+        if (Combatmode && !actionsVar.Fired && !ISAiming && ! animator.GetBool("FIRE INPUT"))
         {
-            Invoke("ResetCombatMode", CombatCoolDown);
+            StartCoroutine(ResetCombatMode());
+
         }
-
-
 
 
         if (float.IsNaN(animator.GetFloat("PlayerVelocity")))
@@ -225,21 +224,20 @@ public class MainCharacterController : MonoBehaviour
 
     }
 
-    void ResetCombatMode()
+    IEnumerator ResetCombatMode()
     {
-        if(Combatmode)
+        yield return new WaitForSeconds(CombatCoolDown);
+
+        if (Combatmode && !actionsVar.Fired && !ISAiming && ! animator.GetBool("FIRE INPUT"))
         {
-            if (!actionsVar.Fired && actionsVar.IsAiming)
-            {
-                Combatmode = false;
-            }
-            else
-            {
-                Invoke("ResetCombatMode", CombatCoolDown);
-            }
+            Combatmode = false;
         }
+
+           
+        
+        
     }
-       
+
 
     void Jump()
     {
@@ -273,7 +271,6 @@ public class MainCharacterController : MonoBehaviour
             if(ISAiming)
             {
                 ISAiming = false ;
-                Combatmode = false;
                 animator.SetBool("IS AIMING", false);
                 aimik.GetIKSolver().SetIKPositionWeight(0);
                 lookik.GetIKSolver().SetIKPositionWeight(0);
@@ -284,7 +281,6 @@ public class MainCharacterController : MonoBehaviour
        else
             {
                 ISAiming = true;
-                Combatmode = true;
                 animator.SetBool("IS AIMING", true);
                 aimik.GetIKSolver().SetIKPositionWeight(.8f );
                 lookik.GetIKSolver().SetIKPositionWeight(0.8f);
@@ -296,7 +292,6 @@ public class MainCharacterController : MonoBehaviour
         else if (actionsVar.IsReloading)
         {
             ISAiming = false;
-            Combatmode = false;
             animator.SetBool("IS AIMING", false);
             aimik.GetIKSolver().SetIKPositionWeight(0);
             lookik.GetIKSolver().SetIKPositionWeight(0);
