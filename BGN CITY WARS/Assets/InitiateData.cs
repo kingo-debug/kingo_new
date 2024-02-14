@@ -23,12 +23,13 @@ public class InitiateData : MonoBehaviour
     {
         PhotonNetwork.NickName = PlayerPrefs.GetString("UserStats_PlayerName");
     }
-    void Start()
+
+    private void Awake()
     {
         // data initiatation.
-      if (PlayerPrefs.GetInt ("FirstTime") ==0)
+        if (PlayerPrefs.GetInt("FirstTime") == 0)
         {
-            int RandomNums = Random.Range(1000,10000);
+            int RandomNums = Random.Range(1000, 10000);
 
             //set all initiatated data.
             #region Initiate UserStats
@@ -38,7 +39,7 @@ public class InitiateData : MonoBehaviour
             //ESsave for security
             BGNCoins = 500;
             ES3.Save("BgnCoins", BGNCoins);
-            
+
 
 
 
@@ -56,15 +57,15 @@ public class InitiateData : MonoBehaviour
 
 
             #endregion
-    
-            PlayerPrefs.SetInt("FirstTime",1);
+
+            PlayerPrefs.SetInt("FirstTime", 1);
 
             #region NetWorking
             PhotonNetwork.NickName = PlayerPrefs.GetString("UserStats_PlayerName");
             #endregion
         }
         else
-     // data retrieving.
+        // data retrieving.
         {
             #region Recieve UserStats
             PlayerPrefs.SetString("UserStats_PlayerName", PlayerPrefs.GetString("UserStats_PlayerName"));
@@ -77,8 +78,9 @@ public class InitiateData : MonoBehaviour
         }
 
     }
+    
 
-
+ 
     public void SaveStats()
     {
         ES3.Save("BgnCoins", BGNCoins);
@@ -102,7 +104,7 @@ public class InitiateData : MonoBehaviour
         if(CurrentXP > CurrentLevel*99)
         {
             CurrentLevel++;
-            CurrentLevelUI.text = ES3.Load("CurrentLevel", CurrentLevel).ToString();
+            CurrentLevelUI.text = CurrentLevel.ToString();
             CurrentXP = 0;
             ConvertedXP = CurrentXP.ToString() + "/" + (CurrentLevel * 99).ToString();
 
