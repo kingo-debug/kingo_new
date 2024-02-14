@@ -1,11 +1,23 @@
 using UnityEngine;
 using Photon.Pun;
+using TMPro;
 public class InitiateData : MonoBehaviour
 {
-  
-    [SerializeField]
-    private int DefaultCoins;
+    private bool NewPlayer = true;
+    public int BGNCoins;
+    public int CurrentXP;
+    public int CurrentLevel;
+    public string ConvertedXP;
 
+    public Material Skin;
+    [SerializeField]
+    private TextMeshProUGUI CoinsTextUI;
+
+    [SerializeField]
+    private TextMeshProUGUI CurrentLevelUI;
+
+    [SerializeField]
+    private TextMeshProUGUI ConvertedXPUi;
 
     private void OnEnable()
     {
@@ -22,11 +34,14 @@ public class InitiateData : MonoBehaviour
             #region Initiate UserStats
             PlayerPrefs.SetString("UserStats_PlayerName", "Player" + RandomNums.ToString());
 
-            PlayerPrefs.SetInt("BCoins", DefaultCoins);
 
-            PlayerPrefs.SetInt("LVL", 1);
+            //ESsave for security
+            BGNCoins = 500;
+            ES3.Save("BgnCoins", BGNCoins);
+            
 
-            PlayerPrefs.SetInt("XP", 0);
+
+
             #endregion
 
             #region GameSettings
@@ -41,7 +56,7 @@ public class InitiateData : MonoBehaviour
 
 
             #endregion
-
+    
             PlayerPrefs.SetInt("FirstTime",1);
 
             #region NetWorking
@@ -52,27 +67,52 @@ public class InitiateData : MonoBehaviour
      // data retrieving.
         {
             #region Recieve UserStats
-            int RandomNums = Random.Range(10000, 100000);
             PlayerPrefs.SetString("UserStats_PlayerName", PlayerPrefs.GetString("UserStats_PlayerName"));
 
-            PlayerPrefs.SetInt("BCoins", PlayerPrefs.GetInt("BCoins"));
+            LoadStats();
 
-            PlayerPrefs.SetInt("LVL", PlayerPrefs.GetInt("LVL"));
-
-            PlayerPrefs.SetInt("XP", PlayerPrefs.GetInt("XP"));
             #endregion
 
             PlayerPrefs.SetInt("FirstTime", PlayerPrefs.GetInt("FirstTime"));
         }
+
     }
 
-    public void PrintTest(string key)
+
+    public void SaveStats()
     {
-        Debug.Log(PlayerPrefs.GetString(key));
+        ES3.Save("BgnCoins", BGNCoins);
+        ES3.Save("CurrentLevel", CurrentLevel);
+        ES3.Save("CurrentXP", CurrentXP);
+        LoadStats();
 
-        Debug.Log(PlayerPrefs.GetInt(key));
-        Debug.Log(PlayerPrefs.GetFloat(key));
+    }
+
+    public void LoadStats()
+    {
+        BGNCoins= ES3.Load("BgnCoins", BGNCoins);
+        CoinsTextUI.text = ES3.Load("BgnCoins", BGNCoins).ToString();
+
+        CurrentLevel = ES3.Load("CurrentLevel", CurrentLevel);
+        CurrentLevelUI.text = ES3.Load("CurrentLevel", CurrentLevel).ToString();
+
+        #region XP
+        CurrentXP = ES3.Load("CurrentXP", CurrentXP);
+         ConvertedXP = CurrentXP.ToString() + "/" + (CurrentLevel * 99).ToString();
+        if(CurrentXP > CurrentLevel*99)
+        {
+            CurrentLevel++;
+            CurrentLevelUI.text = ES3.Load("CurrentLevel", CurrentLevel).ToString();
+            CurrentXP = 0;
+            ConvertedXP = CurrentXP.ToString() + "/" + (CurrentLevel * 99).ToString();
+
+        }
+
+        ConvertedXPUi.text = ConvertedXP;
+    
+        #endregion
+
 
     }
 
-    }
+}

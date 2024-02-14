@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   settings:
     _location: 0
-    path: SaveFile.es3
-    encryptionType: 0
-    compressionType: 0
+    path: SaveFile.bgn
+    encryptionType: 1
+    compressionType: 1
     encryptionPassword: password
     directory: 0
     format: 0
@@ -55,7 +55,7 @@ MonoBehaviour:
     - PPv2URPConverters
     - PunDemos.DemoHubEditor
     - PunDemos.DemoSlotcarEditor
-    showAdvancedSettings: 0
+    showAdvancedSettings: 1
   addMgrToSceneAutomatically: 0
   autoUpdateReferences: 1
   addAllPrefabsToManager: 1

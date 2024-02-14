@@ -4,7 +4,7 @@ using UnityEngine;
 namespace ES3Types
 {
 	[UnityEngine.Scripting.Preserve]
-	[ES3PropertiesAttribute("anchorMin", "anchorMax", "anchoredPosition", "sizeDelta", "pivot", "offsetMin", "localPosition", "localRotation", "localScale", "parent")]
+	[ES3PropertiesAttribute("anchorMin", "anchorMax", "anchoredPosition", "sizeDelta", "pivot", "offsetMin", "offsetMax", "localPosition", "localRotation", "localScale", "parent", "name")]
 	public class ES3UserType_RectTransform : ES3ComponentType
 	{
 		public static ES3Type Instance = null;
@@ -22,6 +22,7 @@ namespace ES3Types
 			writer.WriteProperty("sizeDelta", instance.sizeDelta, ES3Type_Vector2.Instance);
 			writer.WriteProperty("pivot", instance.pivot, ES3Type_Vector2.Instance);
 			writer.WriteProperty("offsetMin", instance.offsetMin, ES3Type_Vector2.Instance);
+			writer.WriteProperty("offsetMax", instance.offsetMax, ES3Type_Vector2.Instance);
 			writer.WriteProperty("localPosition", instance.localPosition, ES3Type_Vector3.Instance);
 			writer.WriteProperty("localRotation", instance.localRotation, ES3Type_Quaternion.Instance);
 			writer.WriteProperty("localScale", instance.localScale, ES3Type_Vector3.Instance);
@@ -53,6 +54,9 @@ namespace ES3Types
 						break;
 					case "offsetMin":
 						instance.offsetMin = reader.Read<UnityEngine.Vector2>(ES3Type_Vector2.Instance);
+						break;
+					case "offsetMax":
+						instance.offsetMax = reader.Read<UnityEngine.Vector2>(ES3Type_Vector2.Instance);
 						break;
 					case "localPosition":
 						instance.localPosition = reader.Read<UnityEngine.Vector3>(ES3Type_Vector3.Instance);
