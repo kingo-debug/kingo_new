@@ -13,6 +13,13 @@ public class InitiateData : MonoBehaviour
     public int CurrentXP;
     public int CurrentLevel;
     public string ConvertedXP;
+    [Space(10)]
+    [Header("Equipped Inventory")]
+    public string EquippedMelee;
+    public string EquippedBackup;
+    public string EquippedPrimary;
+    public string EquippedHeavy;
+
 
     public Dictionary<string, string> Weaponinventory = new Dictionary<string, string>();
 
@@ -108,6 +115,13 @@ public class InitiateData : MonoBehaviour
         CurrentLevel = ES3.Load("CurrentLevel", CurrentLevel);
         CurrentLevelUI.text = ES3.Load("CurrentLevel", CurrentLevel).ToString();
         Weaponinventory = ES3.Load("Weaponinventory", Weaponinventory);
+
+        #region load Inventory
+        EquippedMelee = Weaponinventory.GetValueOrDefault("Melee");
+        EquippedBackup = Weaponinventory.GetValueOrDefault("Backup");
+        EquippedPrimary = Weaponinventory.GetValueOrDefault("Primary");
+        EquippedHeavy = Weaponinventory.GetValueOrDefault("Heavy");
+        #endregion
 
 
 
