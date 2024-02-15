@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   settings:
     _location: 0
-    path: SaveFile.bgn
+    path: BgnUserData.bgn
     encryptionType: 1
     compressionType: 1
     encryptionPassword: password

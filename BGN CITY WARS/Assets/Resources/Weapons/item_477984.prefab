@@ -82,7 +82,7 @@ GameObject:
   - component: {fileID: 6840343057783526408}
   - component: {fileID: 319402084386130019}
   m_Layer: 0
-  m_Name: Weapon_P90
+  m_Name: item_477984
   m_TagString: weapon/active
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

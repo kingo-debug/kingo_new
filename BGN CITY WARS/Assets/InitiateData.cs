@@ -1,6 +1,11 @@
 using UnityEngine;
 using Photon.Pun;
 using TMPro;
+using System.Collections;
+using System.Collections.Generic;
+
+
+
 public class InitiateData : MonoBehaviour
 {
     private bool NewPlayer = true;
@@ -8,6 +13,10 @@ public class InitiateData : MonoBehaviour
     public int CurrentXP;
     public int CurrentLevel;
     public string ConvertedXP;
+
+    public Dictionary<string, string> Weaponinventory = new Dictionary<string, string>();
+
+
 
     public Material Skin;
     [SerializeField]
@@ -86,6 +95,7 @@ public class InitiateData : MonoBehaviour
         ES3.Save("BgnCoins", BGNCoins);
         ES3.Save("CurrentLevel", CurrentLevel);
         ES3.Save("CurrentXP", CurrentXP);
+        ES3.Save("Weaponinventory", Weaponinventory);
         LoadStats();
 
     }
@@ -97,6 +107,9 @@ public class InitiateData : MonoBehaviour
 
         CurrentLevel = ES3.Load("CurrentLevel", CurrentLevel);
         CurrentLevelUI.text = ES3.Load("CurrentLevel", CurrentLevel).ToString();
+        Weaponinventory = ES3.Load("Weaponinventory", Weaponinventory);
+
+
 
         #region XP
         CurrentXP = ES3.Load("CurrentXP", CurrentXP);
