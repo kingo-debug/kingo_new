@@ -21,7 +21,7 @@ public class EquipWeapon : MonoBehaviour
         EquippedButton = transform.parent.GetChild(2).gameObject;
 
     }
-    public  void Equip()
+    public void Equip()
     {
         // Check if the category exists in the dictionary
         if (data.Weaponinventory.ContainsKey(category))
@@ -33,12 +33,16 @@ public class EquipWeapon : MonoBehaviour
             data.SaveStats();
             EquippedButton.SetActive(true);
             gameObject.SetActive(false);
+
+
+
         }
         else
         {
             // If the category doesn't exist, add it to the dictionary
             data.Weaponinventory.Add(category, buy.WeaponID);
         }
+   
     }
     public void DebugTest()
     {

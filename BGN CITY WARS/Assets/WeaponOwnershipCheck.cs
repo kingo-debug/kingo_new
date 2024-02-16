@@ -49,12 +49,16 @@ public class WeaponOwnershipCheck : MonoBehaviour
             Owned = false;
         }
 
-        if (Owned&& Buy.WeaponID == data.EquippedBackup ||
+        if (Buy.WeaponID == data.EquippedBackup ||
        Buy.WeaponID == data.EquippedMelee ||
        Buy.WeaponID == data.EquippedPrimary ||
-       Buy.WeaponID == data.EquippedHeavy)
+       Buy.WeaponID == data.EquippedHeavy && Owned==true)
         {
-            equip.Equip();
+           
+                
+                equip.Equip();
+                
+         
         }
           else if (Owned)
         {
