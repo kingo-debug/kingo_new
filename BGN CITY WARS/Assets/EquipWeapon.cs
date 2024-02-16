@@ -8,14 +8,17 @@ public class EquipWeapon : MonoBehaviour
     private BuyWeapon buy;
     private InitiateData data;
 
+
     [SerializeField]
     private string category;
 
+    private GameObject EquippedButton;
 
     private void Start()
     {
-        buy = transform.parent.Find("BUY").GetComponent<BuyWeapon>();
+        buy = transform.parent.Find("STATE").transform.GetChild(0).GetComponent<BuyWeapon>();
         data = GameObject.Find("ApplicationManager").GetComponent<InitiateData>();
+        EquippedButton = transform.parent.transform.Find("STATE").transform.GetChild(2).gameObject;
 
     }
     public  void Equip()
@@ -28,7 +31,8 @@ public class EquipWeapon : MonoBehaviour
             Debug.Log(data.Weaponinventory.TryGetValue(category, out string value));
             Debug.Log(value);
             data.SaveStats();
-
+            EquippedButton.SetActive(true);
+            gameObject.SetActive(false);
         }
         else
         {

@@ -5,15 +5,11 @@ using UnityEngine;
 public class BuyWeapon : MonoBehaviour
 {
 
-    [SerializeField]
     private InitiateData Data;
     private OwnedShopItems shopitems;
-    [SerializeField]
     private GameObject BuySuccessMessage;
-
-    [SerializeField]
     private GameObject BuyFailedMessage;
-    [SerializeField]
+ 
     private GameObject EquipButton;
 
     [SerializeField]
@@ -31,8 +27,13 @@ public class BuyWeapon : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Data = GameObject.Find("ApplicationManager").GetComponent<InitiateData>();
         AS = GameObject.Find("MENU SFX").GetComponent<AudioSource>();
         shopitems = GameObject.Find("SHOP MENU").GetComponent<OwnedShopItems>();
+        EquipButton = transform.parent.transform.Find("STATE").transform.GetChild(1).gameObject;
+        BuySuccessMessage = GameObject.Find("SHOP NOTIFICATION").transform.GetChild(0).gameObject;
+        BuyFailedMessage = GameObject.Find("SHOP NOTIFICATION").transform.GetChild(1).gameObject;
+
     }
 
    public  void Buy()
