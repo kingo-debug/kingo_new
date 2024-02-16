@@ -17,18 +17,19 @@ public class WeaponOwnershipCheck : MonoBehaviour
 
     void OnEnable()
     {
-        CheckOwnerShipAndEquip();
-    }
-    // Start is called before the first frame update
-    [SerializeField]
-    private void Start()
-    {
         Buy = transform.Find("STATE").transform.GetChild(0).gameObject.GetComponent<BuyWeapon>();
         equip = transform.Find("STATE").transform.GetChild(1).gameObject.GetComponent<EquipWeapon>();
         Equipped = transform.Find("STATE").transform.GetChild(2).gameObject;
         data = GameObject.Find("ApplicationManager").GetComponent<InitiateData>();
         shopitems = GameObject.Find("SHOP MENU").GetComponent<OwnedShopItems>();
+        CheckOwnerShipAndEquip();
+    }
 
+
+    private void Start()
+    {
+
+     
 
         CheckOwnerShipAndEquip();
     }
@@ -46,11 +47,22 @@ public class WeaponOwnershipCheck : MonoBehaviour
         {
             equip.Equip();
         }
-          else
+          else if (Owned)
         {
+        
             equip.gameObject.SetActive(true);
             Equipped.SetActive(false);
-            
+            Buy.gameObject.SetActive(false);
+
+        }
+        else
+        {
+            equip.gameObject.SetActive(false);
+            Equipped.SetActive(false);
+            Buy.gameObject.SetActive(true);
+            Owned = false;
+
+
         }
     }
   
