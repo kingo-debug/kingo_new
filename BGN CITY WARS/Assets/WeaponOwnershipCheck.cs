@@ -38,6 +38,15 @@ public class WeaponOwnershipCheck : MonoBehaviour
         if (shopitems.OwnedWeapons.Contains(Buy.WeaponID))
         {
             Owned = true;
+            Buy.gameObject.SetActive(false);
+
+        }
+        else
+        {
+            equip.gameObject.SetActive(false);
+            Equipped.SetActive(false);
+            Buy.gameObject.SetActive(true);
+            Owned = false;
         }
 
         if (Buy.WeaponID == data.EquippedBackup ||
@@ -55,15 +64,9 @@ public class WeaponOwnershipCheck : MonoBehaviour
             Buy.gameObject.SetActive(false);
 
         }
-        else
-        {
-            equip.gameObject.SetActive(false);
-            Equipped.SetActive(false);
-            Buy.gameObject.SetActive(true);
-            Owned = false;
-
-
-        }
+       
+    
+        
     }
   
 }
