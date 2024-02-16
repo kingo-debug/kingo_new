@@ -30,7 +30,7 @@ public class BuyWeapon : MonoBehaviour
         Data = GameObject.Find("ApplicationManager").GetComponent<InitiateData>();
         AS = GameObject.Find("MENU SFX").GetComponent<AudioSource>();
         shopitems = GameObject.Find("SHOP MENU").GetComponent<OwnedShopItems>();
-        EquipButton = transform.parent.transform.Find("STATE").transform.GetChild(1).gameObject;
+        EquipButton = transform.parent.GetChild(1).gameObject;
         BuySuccessMessage = GameObject.Find("SHOP NOTIFICATION").transform.GetChild(0).gameObject;
         BuyFailedMessage = GameObject.Find("SHOP NOTIFICATION").transform.GetChild(1).gameObject;
 

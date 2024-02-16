@@ -16,9 +16,9 @@ public class EquipWeapon : MonoBehaviour
 
     private void Start()
     {
-        buy = transform.parent.Find("STATE").transform.GetChild(0).GetComponent<BuyWeapon>();
+        buy = transform.parent.GetChild(0).GetComponent<BuyWeapon>();
         data = GameObject.Find("ApplicationManager").GetComponent<InitiateData>();
-        EquippedButton = transform.parent.transform.Find("STATE").transform.GetChild(2).gameObject;
+        EquippedButton = transform.parent.GetChild(2).gameObject;
 
     }
     public  void Equip()
