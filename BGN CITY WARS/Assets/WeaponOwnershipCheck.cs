@@ -44,12 +44,12 @@ public class WeaponOwnershipCheck : MonoBehaviour
         else
         {
             equip.gameObject.SetActive(false);
-            Equipped.SetActive(false);
+            Equipped. SetActive(false);
             Buy.gameObject.SetActive(true);
             Owned = false;
         }
 
-        if (Buy.WeaponID == data.EquippedBackup ||
+        if (Owned&& Buy.WeaponID == data.EquippedBackup ||
        Buy.WeaponID == data.EquippedMelee ||
        Buy.WeaponID == data.EquippedPrimary ||
        Buy.WeaponID == data.EquippedHeavy)
