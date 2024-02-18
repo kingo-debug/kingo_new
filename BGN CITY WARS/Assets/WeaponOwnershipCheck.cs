@@ -28,11 +28,10 @@ public class WeaponOwnershipCheck : MonoBehaviour
 
     private void Start()
     {
-
-     
-
         CheckOwnerShipAndEquip();
     }
+
+
     public void CheckOwnerShipAndEquip()
     {
         if (shopitems.OwnedWeapons.Contains(Buy.WeaponID))

@@ -25,7 +25,7 @@ public class InitiateData : MonoBehaviour
 
 
 
-    public Material Skin;
+    public string EquippedSkin;
     [SerializeField]
     private TextMeshProUGUI CoinsTextUI;
 
@@ -103,6 +103,7 @@ public class InitiateData : MonoBehaviour
         ES3.Save("CurrentLevel", CurrentLevel);
         ES3.Save("CurrentXP", CurrentXP);
         ES3.Save("Weaponinventory", Weaponinventory);
+        ES3.Save("EquippedSkin", EquippedSkin);
         LoadStats();
 
     }
@@ -112,9 +113,13 @@ public class InitiateData : MonoBehaviour
         BGNCoins= ES3.Load("BgnCoins", BGNCoins);
         CoinsTextUI.text = ES3.Load("BgnCoins", BGNCoins).ToString();
 
+
         CurrentLevel = ES3.Load("CurrentLevel", CurrentLevel);
         CurrentLevelUI.text = ES3.Load("CurrentLevel", CurrentLevel).ToString();
         Weaponinventory = ES3.Load("Weaponinventory", Weaponinventory);
+
+     EquippedSkin = ES3.Load<string>("EquippedSkin");
+
 
         #region load Inventory
         EquippedMelee = Weaponinventory.GetValueOrDefault("Melee");

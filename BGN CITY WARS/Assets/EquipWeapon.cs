@@ -8,7 +8,7 @@ public class EquipWeapon : MonoBehaviour
 {
     private BuyWeapon buy;
     private InitiateData data;
-    private RefreshWeaponStates states;
+    private RefreshEquippedStates states;
     private GameObject WeaponItem;
 
 
@@ -26,7 +26,7 @@ public class EquipWeapon : MonoBehaviour
         buy = transform.parent.GetChild(0).GetComponent<BuyWeapon>();
         data = GameObject.Find("ApplicationManager").GetComponent<InitiateData>();
         EquippedButton = transform.parent.GetChild(2).gameObject;
-        states = transform.parent.parent.parent.GetComponent<RefreshWeaponStates>();
+        states = transform.parent.parent.parent.GetComponent<RefreshEquippedStates>();
 
     }
 

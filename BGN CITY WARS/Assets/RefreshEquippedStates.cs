@@ -1,7 +1,7 @@
 
 using UnityEngine;
 
-public class RefreshWeaponStates : MonoBehaviour
+public class RefreshEquippedStates : MonoBehaviour
 
 {
     public GameObject EquippedItem;

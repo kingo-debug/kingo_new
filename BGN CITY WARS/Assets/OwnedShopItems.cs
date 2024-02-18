@@ -14,6 +14,7 @@ public class OwnedShopItems : MonoBehaviour
     {
 
         LoadWeapons();
+        LoadSkins();
     }
 
     public void SaveWeapons()
@@ -25,4 +26,17 @@ public class OwnedShopItems : MonoBehaviour
     {
         OwnedWeapons =ES3.Load<List<string>>("OwnedWeapons", OwnedWeapons);
     }
+
+
+    public void LoadSkins()
+    {
+        OwnedSkins = ES3.Load<List<string>>("OwnedSkins", OwnedSkins);
+    }
+
+
+    public void SaveSkins()
+    {
+        ES3.Save<List<string>>("OwnedSkins", OwnedSkins);
+    }
+
 }
