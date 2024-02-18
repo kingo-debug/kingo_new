@@ -23,6 +23,15 @@ public class BuySkin : MonoBehaviour
 
     [SerializeField]
     private int Price;
+    private void OnEnable()
+    {
+        //check if already owned
+        if (shopitems.OwnedSkins.Contains(SkinID))
+        {
+            EquipButton.SetActive(true); gameObject.SetActive(false);
+        }
+
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -34,10 +43,7 @@ public class BuySkin : MonoBehaviour
         BuySuccessMessage = GameObject.Find("SHOP NOTIFICATION").transform.GetChild(0).gameObject;
         BuyFailedMessage = GameObject.Find("SHOP NOTIFICATION").transform.GetChild(1).gameObject;
 
-        if (shopitems.OwnedSkins.Contains(SkinID))
-        {
-            EquipButton.SetActive(true); gameObject.SetActive(false);
-        }
+      
 
     }
 
