@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 using UnityEditor;
 
@@ -8,20 +9,37 @@ public class EquipWeapon : MonoBehaviour
     private BuyWeapon buy;
     private InitiateData data;
     private RefreshWeaponStates states;
+    private GameObject WeaponItem;
+
 
 
     [SerializeField]
     private string category;
+    [SerializeField]
+    private Transform CategorySelectPFP;
 
     private GameObject EquippedButton;
 
     private void Start()
     {
+        WeaponItem = transform.parent.parent.gameObject;
         buy = transform.parent.GetChild(0).GetComponent<BuyWeapon>();
         data = GameObject.Find("ApplicationManager").GetComponent<InitiateData>();
         EquippedButton = transform.parent.GetChild(2).gameObject;
         states = transform.parent.parent.parent.GetComponent<RefreshWeaponStates>();
 
+    }
+
+    private void OnEnable()
+    {
+
+        if (buy.WeaponID == data.EquippedBackup ||
+       buy.WeaponID == data.EquippedMelee ||
+       buy.WeaponID == data.EquippedPrimary ||
+       buy.WeaponID == data.EquippedHeavy )
+        {
+            Equip();
+        }
     }
     public void Equip()
     {
@@ -41,7 +59,9 @@ public class EquipWeapon : MonoBehaviour
           
             states.EquippedItem = transform.parent.parent.gameObject;    //update equipped item
             #endregion
+            CategorySelectPFP.Find("EQUIP PFP").GetComponent<Image>().sprite = WeaponItem.transform.Find("Weapon icon").GetComponent<Image>().sprite;
             gameObject.SetActive(false);
+
 
 
 
@@ -53,11 +73,6 @@ public class EquipWeapon : MonoBehaviour
         }
    
     }
-    public void DebugTest()
-    {
-        Debug.Log(data.Weaponinventory.TryGetValue(category, out string value));
-        Debug.Log(value);
 
-    }
 
 }
