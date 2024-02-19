@@ -7,5 +7,4 @@ public class RefreshEquippedStates : MonoBehaviour
     public GameObject EquippedItem;
 
 
-   
 }

@@ -41,14 +41,19 @@ public class EquipSkin : MonoBehaviour
     
             Debug.Log(data.EquippedSkin = buy.SkinID);
             data.SaveStats();
-            #region Button Toggles
-            EquippedButton.SetActive(true);
+        #region Button Toggles
+        EquippedButton.SetActive(true);
+
+        states.EquippedItem.transform.Find("STATE").GetChild(2).gameObject.SetActive(false);    //deactivate equipped button
+        states.EquippedItem.transform.transform.Find("STATE").GetChild(1).gameObject.SetActive(true);    //activate equip button
+
+        states.EquippedItem = transform.parent.parent.gameObject;    //update equipped item
+        #endregion
 
 
-           
-            #endregion
-    
-            gameObject.SetActive(false);
+
+
+        gameObject.SetActive(false);
 
 
 
