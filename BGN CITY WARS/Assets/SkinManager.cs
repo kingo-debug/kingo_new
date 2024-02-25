@@ -15,7 +15,7 @@ public class SkinManager : MonoBehaviour
     {
         data = GameObject.Find("ApplicationManager").GetComponent<InitiateData>();
         PV = GetComponent<PhotonView>();
-        SpawnSkin();
+        Invoke("SpawnSkin", 0.1f);
     }
 
     public void SpawnSkin()
