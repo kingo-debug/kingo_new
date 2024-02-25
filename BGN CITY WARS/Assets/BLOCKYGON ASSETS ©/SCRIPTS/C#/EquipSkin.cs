@@ -25,15 +25,17 @@ public class EquipSkin : MonoBehaviour
 
     private void OnEnable()
     {
-        SkinItem = transform.parent.parent.gameObject;
+        if (SkinItem == null || buy == null || states == null | EquippedButton == null | data == null)
+        {
+            SkinItem = transform.parent.parent.gameObject;
 
-        data = GameObject.Find("ApplicationManager").GetComponent<InitiateData>();
-        EquippedButton = transform.parent.GetChild(2).gameObject;
-        buy = transform.parent.GetChild(0).GetComponent<BuySkin>();
-        states = transform.parent.parent.parent.GetComponent<RefreshEquippedStates>();
-        states.EquippedItem.transform.Find("STATE").GetChild(2).gameObject.SetActive(false);    //deactivate equipped button
-        states.EquippedItem.transform.transform.Find("STATE").GetChild(1).gameObject.SetActive(true);    //activate equip button
-        states.EquippedItem = transform.parent.parent.gameObject;    //update equipped item
+            data = GameObject.Find("ApplicationManager").GetComponent<InitiateData>();
+            EquippedButton = transform.parent.GetChild(2).gameObject;
+            buy = transform.parent.GetChild(0).GetComponent<BuySkin>();
+            states = transform.parent.parent.parent.GetComponent<RefreshEquippedStates>();
+
+        }
+
 
         
     }
@@ -48,6 +50,10 @@ public class EquipSkin : MonoBehaviour
         states.EquippedItem.transform.transform.Find("STATE").GetChild(1).gameObject.SetActive(true);    //activate equip button
 
         states.EquippedItem = transform.parent.parent.gameObject;    //update equipped item
+
+        states.EquippedItem.transform.Find("STATE").GetChild(2).gameObject.SetActive(true);    //activate equipped button
+        states.EquippedItem.transform.transform.Find("STATE").GetChild(1).gameObject.SetActive(false);    //deactivate equip button
+
         #endregion
 
 

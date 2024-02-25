@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
-using UnityEditor;
 
 public class EquipWeapon : MonoBehaviour
 {
@@ -20,18 +17,17 @@ public class EquipWeapon : MonoBehaviour
 
     private GameObject EquippedButton;
 
-    private void Start()
-    {
-        WeaponItem = transform.parent.parent.gameObject;
-        buy = transform.parent.GetChild(0).GetComponent<BuyWeapon>();
-        data = GameObject.Find("ApplicationManager").GetComponent<InitiateData>();
-        EquippedButton = transform.parent.GetChild(2).gameObject;
-        states = transform.parent.parent.parent.GetComponent<RefreshEquippedStates>();
-
-    }
-
     private void OnEnable()
     {
+        if(WeaponItem ==null || buy == null || states ==null | EquippedButton ==null | data ==null)
+        {
+            WeaponItem = transform.parent.parent.gameObject;
+            buy = transform.parent.GetChild(0).GetComponent<BuyWeapon>();
+            data = GameObject.Find("ApplicationManager").GetComponent<InitiateData>();
+            EquippedButton = transform.parent.GetChild(2).gameObject;
+            states = transform.parent.parent.parent.GetComponent<RefreshEquippedStates>();
+        }
+
 
         if (buy.WeaponID == data.EquippedBackup ||
        buy.WeaponID == data.EquippedMelee ||
@@ -58,6 +54,8 @@ public class EquipWeapon : MonoBehaviour
             states.EquippedItem.transform.transform.Find("STATE").GetChild(1).gameObject.SetActive(true);    //activate equip button
           
             states.EquippedItem = transform.parent.parent.gameObject;    //update equipped item
+            states.EquippedItem.transform.Find("STATE").GetChild(2).gameObject.SetActive(true);    //activate equipped button
+            states.EquippedItem.transform.transform.Find("STATE").GetChild(1).gameObject.SetActive(false);    //deactivate equip button
             #endregion
             CategorySelectPFP.Find("EQUIP PFP").GetComponent<Image>().sprite = WeaponItem.transform.Find("Weapon icon").GetComponent<Image>().sprite;
             gameObject.SetActive(false);
