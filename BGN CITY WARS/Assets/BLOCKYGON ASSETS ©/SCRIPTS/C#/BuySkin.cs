@@ -25,6 +25,8 @@ public class BuySkin : MonoBehaviour
     private int Price;
     private void OnEnable()
     {
+        shopitems = GameObject.Find("SHOP MENU").GetComponent<OwnedShopItems>();
+        EquipButton = transform.parent.GetChild(1).gameObject;
         //check if already owned
         if (shopitems.OwnedSkins.Contains(SkinID))
         {
@@ -38,8 +40,7 @@ public class BuySkin : MonoBehaviour
     {
         Data = GameObject.Find("ApplicationManager").GetComponent<InitiateData>();
         AS = GameObject.Find("MENU SFX").GetComponent<AudioSource>();
-        shopitems = GameObject.Find("SHOP MENU").GetComponent<OwnedShopItems>();
-        EquipButton = transform.parent.GetChild(1).gameObject;
+
         BuySuccessMessage = GameObject.Find("SHOP NOTIFICATION").transform.GetChild(0).gameObject;
         BuyFailedMessage = GameObject.Find("SHOP NOTIFICATION").transform.GetChild(1).gameObject;
 
