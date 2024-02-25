@@ -1,26 +1,40 @@
 using UnityEngine;
+using Photon.Pun;
+using System.IO;
 
 public class SkinManager : MonoBehaviour
 {
     [SerializeField]
-    private GameObject SkinMesh;
-    public int EquippedSkin;
-
+    private SkinnedMeshRenderer SkinMesh;
+    public string EquippedSkin;
+    private InitiateData data;
+    private PhotonView PV;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        data = GameObject.Find("ApplicationManager").GetComponent<InitiateData>();
+        PV = GetComponent<PhotonView>();
+        SpawnSkin();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
         
     }
 
-    public void EquipSkin()
+    public void SpawnSkin()
     {
+        if(PV.IsMine)
+        {
 
+            SkinMesh.material =  Resources.Load<GameObject>(Path.Combine(("skins"), data.EquippedSkin)).GetComponent<SkinData>().SkinMaterial;
+
+            EquippedSkin = data.EquippedSkin;
+
+
+
+
+        }
     }
 }

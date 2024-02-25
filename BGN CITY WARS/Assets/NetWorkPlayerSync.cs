@@ -22,8 +22,9 @@ public class NetWorkPlayerSync : MonoBehaviour
         aimik = GetComponent<AimIK>();
         lookik = GetComponent<LookAtIK>();
         playerActions = GetComponent<PlayerActionsVar>();
+        Data = GameObject.Find("ApplicationManager").GetComponent<InitiateData>();
 
-        if(!PV.IsMine)
+        if (!PV.IsMine)
         {
             #region Disable all not mine objects
             foreach (GameObject item in NotMine)
