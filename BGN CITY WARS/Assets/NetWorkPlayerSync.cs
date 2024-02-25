@@ -15,6 +15,7 @@ public class NetWorkPlayerSync : MonoBehaviour
     private LookAtIK lookik;
     private AimIK aimik;
     private InitiateData Data;
+    private SkinManager skinManager;
     void Start()
     {
         PV = GetComponent<PhotonView>();
@@ -23,6 +24,7 @@ public class NetWorkPlayerSync : MonoBehaviour
         lookik = GetComponent<LookAtIK>();
         playerActions = GetComponent<PlayerActionsVar>();
         Data = GameObject.Find("ApplicationManager").GetComponent<InitiateData>();
+        skinManager = GetComponent<SkinManager>();
 
         if (!PV.IsMine)
         {
@@ -69,7 +71,10 @@ public class NetWorkPlayerSync : MonoBehaviour
             aimik.solver.IKPositionWeight = PunSerializer.AimIK;
 
             lookik.solver.IKPositionWeight = PunSerializer.LookIK;
-    
+
+            skinManager.EquippedSkin = PunSerializer.SkinID;
+
+
 
 
         }
