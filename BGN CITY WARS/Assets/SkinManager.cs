@@ -18,11 +18,6 @@ public class SkinManager : MonoBehaviour
         SpawnSkin();
     }
 
-    private void Awake()
-    {
-        
-    }
-
     public void SpawnSkin()
     {
         if(PV.IsMine)
@@ -31,7 +26,6 @@ public class SkinManager : MonoBehaviour
             SkinMesh.material =  Resources.Load<GameObject>(Path.Combine(("skins"), data.EquippedSkin)).GetComponent<SkinData>().SkinMaterial;
 
             EquippedSkin = data.EquippedSkin;
-
 
 
 
