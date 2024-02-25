@@ -14,6 +14,7 @@ public class NetWorkPlayerSync : MonoBehaviour
     private Component[] NotMineComponents;
     private LookAtIK lookik;
     private AimIK aimik;
+    private InitiateData Data;
     void Start()
     {
         PV = GetComponent<PhotonView>();
@@ -55,7 +56,7 @@ public class NetWorkPlayerSync : MonoBehaviour
 
         if (PV.IsMine)
         {
-            //   PunSerializer.SkinID =
+            PunSerializer.SkinID = Data.EquippedSkin;
             PunSerializer.InventoryTrack = playerActions.InventoryTrack;
             PunSerializer.CurrentWeaponType = playerActions.Weapontype;
             PunSerializer.Fired = playerActions.Fired;
@@ -68,6 +69,7 @@ public class NetWorkPlayerSync : MonoBehaviour
 
             lookik.solver.IKPositionWeight = PunSerializer.LookIK;
     
+
 
         }
 
