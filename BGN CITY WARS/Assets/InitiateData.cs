@@ -8,7 +8,6 @@ using System.Collections.Generic;
 
 public class InitiateData : MonoBehaviour
 {
-    private bool NewPlayer = true;
     public int BGNCoins;
     public int CurrentXP;
     public int CurrentLevel;
