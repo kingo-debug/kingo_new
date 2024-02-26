@@ -9,12 +9,14 @@ public class SkinManager : MonoBehaviour
     public string EquippedSkin;
     private InitiateData data;
     private PhotonView PV;
+    private PhotonSerializerBGN photonSerializer;
 
     // Start is called before the first frame update
     void Start()
     {
         data = GameObject.Find("ApplicationManager").GetComponent<InitiateData>();
         PV = GetComponent<PhotonView>();
+        photonSerializer = GetComponent<PhotonSerializerBGN>();
         Invoke("SpawnSkin", 0.02f);
     }
 
@@ -27,7 +29,12 @@ public class SkinManager : MonoBehaviour
 
             EquippedSkin = data.EquippedSkin;
 
+        }
+        else
+        {
+            SkinMesh.material = Resources.Load<GameObject>(Path.Combine(("skins"),photonSerializer.SkinID)).GetComponent<SkinData>().SkinMaterial;
 
+            EquippedSkin = photonSerializer.SkinID;
 
         }
     }
