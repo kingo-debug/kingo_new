@@ -5014,6 +5014,7 @@ GameObject:
   - component: {fileID: 27987362121610832}
   - component: {fileID: 8301319463140567370}
   - component: {fileID: 7974759447167129766}
+  - component: {fileID: 2660289304864789145}
   m_Layer: 0
   m_Name: item_477595
   m_TagString: weapon/active
@@ -5303,6 +5304,18 @@ MonoBehaviour:
   WeaponName: 
   WeaponPFP: {fileID: 0}
   Weapontype: 0
+--- !u!114 &2660289304864789145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2756809065339087750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9629a989d51d17b42becdc0a98cb67e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3155694809895205082
 GameObject:
   m_ObjectHideFlags: 0

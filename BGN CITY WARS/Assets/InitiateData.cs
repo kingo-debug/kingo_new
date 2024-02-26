@@ -55,7 +55,8 @@ public class InitiateData : MonoBehaviour
             //ESsave for security
             BGNCoins = 500;
             ES3.Save("BgnCoins", BGNCoins);
-
+            // Default Skin Trev
+            EquippedSkin = ("SkinItem_322577");
 
 
 
