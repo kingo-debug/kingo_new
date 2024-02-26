@@ -17,6 +17,7 @@ public class InventoryManager : MonoBehaviour
     {
         PV = GetComponent<PhotonView>();
         animator = GetComponent<Animator>();
+        photonSerializer = GetComponent<PhotonSerializerBGN>();
         if (PV.IsMine)
         {
             Actions.InventoryTrack = 0;
