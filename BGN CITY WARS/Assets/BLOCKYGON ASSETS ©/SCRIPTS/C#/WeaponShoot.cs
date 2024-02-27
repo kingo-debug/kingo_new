@@ -114,6 +114,10 @@ public class WeaponShoot : MonoBehaviour
         #endregion
         Invoke("FindParent", .5f);
         PV = this.GetComponent<PhotonView>();
+        if(!PV.IsMine)
+        {
+            GetComponent<WeaponShoot>().enabled = false;
+        }
         AmmoRefresh();
         SyncFireAnim();
         Parentanimator.SetFloat("ReloadSpeed",ReloadTime*2.5f);
@@ -159,6 +163,7 @@ public class WeaponShoot : MonoBehaviour
         CameraMain = Camera.main.gameObject;   pos = CameraMain.transform.GetChild(2);
         SyncFireAnim();
         Parentanimator.SetFloat("ReloadSpeed", ReloadTime * 2.5f);
+
 
 
     }
