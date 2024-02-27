@@ -16,6 +16,8 @@ public class NetWorkPlayerSync : MonoBehaviour
     private AimIK aimik;
     private InitiateData Data;
     private SkinManager skinManager;
+    private camera2 Camera2;
+    private Camera Playercamera;
     void Start()
     {
         PV = GetComponent<PhotonView>();
@@ -25,6 +27,10 @@ public class NetWorkPlayerSync : MonoBehaviour
         playerActions = GetComponent<PlayerActionsVar>();
         Data = GameObject.Find("ApplicationManager").GetComponent<InitiateData>();
         skinManager = GetComponent<SkinManager>();
+        Playercamera = transform.parent.transform.GetChild(1).GetChild(0).GetComponent<Camera>();
+        Camera2 = transform.parent.transform.GetChild(1).GetChild(0).GetComponent<camera2>();
+
+
 
         if (!PV.IsMine)
         {
@@ -42,6 +48,8 @@ public class NetWorkPlayerSync : MonoBehaviour
                     ((Behaviour)item).enabled = false;
                 }
             }
+            Playercamera.enabled = false;
+            Camera2.enabled = false;
             #endregion
 
         }
@@ -64,7 +72,7 @@ public class NetWorkPlayerSync : MonoBehaviour
             PunSerializer.CurrentWeaponType = playerActions.Weapontype;
             PunSerializer.Fired = playerActions.Fired;
             PunSerializer.LookIK = lookik.GetIKSolver().IKPositionWeight;
-            PunSerializer.AimIK = (int)aimik.solver.IKPositionWeight;
+            PunSerializer.AimIK = aimik.GetIKSolver().IKPositionWeight;
 
         }
         else
