@@ -53,17 +53,18 @@ public class NetWorkPlayerSync : MonoBehaviour
     void Update()
     {
         #region Set variables anyway
-        PunSerializer.LookIK = (int)lookik.solver.IKPositionWeight;
-        PunSerializer.AimIK = (int)aimik.solver.IKPositionWeight;
+
         #endregion
 
         if (PV.IsMine)
         {
+
             PunSerializer.SkinID = Data.EquippedSkin;
             PunSerializer.InventoryTrack = playerActions.InventoryTrack;
             PunSerializer.CurrentWeaponType = playerActions.Weapontype;
             PunSerializer.Fired = playerActions.Fired;
-
+            PunSerializer.LookIK = lookik.GetIKSolver().IKPositionWeight;
+            PunSerializer.AimIK = (int)aimik.solver.IKPositionWeight;
 
         }
         else

@@ -22,8 +22,8 @@ public class PhotonSerializerBGN : MonoBehaviourPunCallbacks,IPunObservable
     public int CurrentWeaponType;
 
     [Header("IK")]
-    public int LookIK;
-    public int AimIK;
+    public float LookIK;
+    public float AimIK;
 
     [Header("Weapon Status")]
     public bool Fired;
@@ -80,9 +80,9 @@ public class PhotonSerializerBGN : MonoBehaviourPunCallbacks,IPunObservable
 
             CurrentWeaponType = (int)stream.ReceiveNext(); //other player CurrentWeaponType
 
-            LookIK = (int)stream.ReceiveNext(); // other player LookIK
+            LookIK = (float)stream.ReceiveNext(); // other player LookIK
 
-            AimIK = (int)stream.ReceiveNext(); // other player aIMik
+            AimIK = (float)stream.ReceiveNext(); // other player aIMik
 
             Fired = (bool)stream.ReceiveNext(); // other player FiredBool
 
