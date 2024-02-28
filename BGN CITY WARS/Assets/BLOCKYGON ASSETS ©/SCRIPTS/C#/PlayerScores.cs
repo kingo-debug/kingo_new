@@ -20,7 +20,7 @@ public class PlayerScores : MonoBehaviourPunCallbacks, IPunObservable
         {
             transform.GetChild(0).gameObject.SetActive(true);
 
-            FindParentItem();
+            Invoke("FindParentItem", .15f);
         }
         UpdateScoreData();
     }
@@ -73,7 +73,12 @@ public class PlayerScores : MonoBehaviourPunCallbacks, IPunObservable
         if (transform.parent == null)
         {
             transform.parent = GameObject.Find("SCENE Canvas").transform.GetChild(0).GetChild(1).GetChild(0);
-            transform.localScale = new Vector3(0, 0, 0);
+            Invoke("scale", 1);
+            void scale()
+            {
+                transform.localScale = new Vector3(1, 1, 1);
+            }
+        
         }
 
 
