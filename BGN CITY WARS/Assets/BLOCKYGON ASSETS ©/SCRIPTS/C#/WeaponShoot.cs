@@ -534,6 +534,7 @@ public class WeaponShoot : MonoBehaviour
     {
         HeadShotKill.gameObject.SetActive(true);
         Parentvariables.TotalRoomkillsTrack++;
+        Killcountupdate.UpdateKillCount(Parentvariables.TotalRoomkillsTrack);
 
 
         TargetHP = 100;

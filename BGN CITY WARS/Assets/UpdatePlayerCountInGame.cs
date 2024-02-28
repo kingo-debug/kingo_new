@@ -23,6 +23,7 @@ public class UpdatePlayerCountInGame : MonoBehaviourPunCallbacks
 
     private void Start()
     {
+        text = GetComponent<TMPro.TextMeshProUGUI>();
         UpdatePlayerCount(PhotonNetwork.CurrentRoom.PlayerCount);
     }
 }
