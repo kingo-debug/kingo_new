@@ -15,6 +15,7 @@ public class PlayerScores : MonoBehaviourPunCallbacks, IPunObservable
 
     private void Start()
     {
+        FindParentItem();
         photonView = GetComponent<PhotonView>();
         if (photonView.IsMine)
         {
@@ -73,11 +74,12 @@ public class PlayerScores : MonoBehaviourPunCallbacks, IPunObservable
         if (transform.parent == null)
         {
             transform.parent = GameObject.Find("SCENE Canvas").transform.GetChild(0).GetChild(1).GetChild(0);
-            Invoke("scale", 1);
-            void scale()
+            if(transform.localScale != new Vector3(1,1,1))
             {
                 transform.localScale = new Vector3(1, 1, 1);
             }
+               
+            
         
         }
 
@@ -88,14 +90,12 @@ public class PlayerScores : MonoBehaviourPunCallbacks, IPunObservable
 
 
 
-
-
     public void UpdateScoreData()
     {
 
         foreach (GameObject player in GameObject.FindGameObjectsWithTag("Player"))
         {
-            if (photonView.IsMine)
+            if (player.GetComponent<PhotonView>().IsMine)
             {
                 NickName.text = player.GetComponent<PhotonSerializerBGN>().PlayerNickName;
                 gameObject.name = KillCount.text = player.GetComponent<PlayerActionsVar>().TotalRoomkillsTrack.ToString();
