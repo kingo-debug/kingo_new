@@ -7,23 +7,25 @@ using TMPro;
 public class PlayerScores : MonoBehaviourPunCallbacks, IPunObservable
 {
     [SerializeField]
-    private new PhotonView photonView;
+    private  PhotonView PV;
     [SerializeField]
     private TMPro.TextMeshProUGUI NickName;
     [SerializeField]
     private TMPro.TextMeshProUGUI KillCount;
+    [SerializeField]
+    private GameObject PlayerOwner;
 
     private void Start()
     {
         FindParentItem();
-        photonView = GetComponent<PhotonView>();
+        PV = GetComponent<PhotonView>();
         if (photonView.IsMine)
         {
             transform.GetChild(0).gameObject.SetActive(true);
 
             Invoke("FindParentItem", .15f);
         }
-        UpdateScoreData();
+        Invoke("UpdateScoreData", 1f);
     }
 
     [Header("Player Room Status")]
@@ -93,22 +95,46 @@ public class PlayerScores : MonoBehaviourPunCallbacks, IPunObservable
     public void UpdateScoreData()
     {
 
-        foreach (GameObject player in GameObject.FindGameObjectsWithTag("Player"))
+        //    foreach (GameObject player in GameObject.FindGameObjectsWithTag("Player"))
+        //  {
+        //   if (player.GetComponent<PhotonView>().IsMine)
+        //  {
+        //   NickName.text = player.GetComponent<PhotonSerializerBGN>().PlayerNickName;
+        //    gameObject.name = KillCount.text = player.GetComponent<PlayerActionsVar>().TotalRoomkillsTrack.ToString();
+
+        //  }
+        //    else
+        //     {
+        //  NickName.text = player.GetComponent<PhotonSerializerBGN>().PlayerNickName;
+        //  gameObject.name = KillCount.text = TotalRoomKills.ToString();
+
+        // }
+
+        //  }
+        if(PV.IsMine)
         {
-            if (player.GetComponent<PhotonView>().IsMine)
-            {
-                NickName.text = player.GetComponent<PhotonSerializerBGN>().PlayerNickName;
-                gameObject.name = KillCount.text = player.GetComponent<PlayerActionsVar>().TotalRoomkillsTrack.ToString();
-                
-            }
-            else
-            {
-                NickName.text = player.GetComponent<PhotonSerializerBGN>().PlayerNickName;
-                gameObject.name = KillCount.text = TotalRoomKills.ToString();
-             
-            }
+            PlayerOwner = GameObject.Find(PV.Owner.ToString()).gameObject.transform.GetChild(0).gameObject;
+
+            NickName.text = PlayerOwner.GetComponent<PhotonSerializerBGN>().PlayerNickName;
+
+            KillCount.text = PlayerOwner.GetComponent<PlayerActionsVar>().TotalRoomkillsTrack.ToString();
+
+            gameObject.name = KillCount.text;
+
+            TotalRoomKills = PlayerOwner.GetComponent<PlayerActionsVar>().TotalRoomkillsTrack;
 
         }
+        else
+        {
+            PlayerOwner = GameObject.Find(PV.Owner.ToString()).gameObject.transform.GetChild(0).gameObject;
+
+            NickName.text = PlayerOwner.GetComponent<PhotonSerializerBGN>().PlayerNickName;
+
+            KillCount.text = TotalRoomKills.ToString();
+        }
+  
+
+
     }
 
 }
