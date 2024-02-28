@@ -18,6 +18,7 @@ public class NetWorkPlayerSync : MonoBehaviour
     private SkinManager skinManager;
     private camera2 Camera2;
     private Camera Playercamera;
+    private TakeDamage takedamage;
     void Start()
     {
         PV = GetComponent<PhotonView>();
@@ -29,7 +30,7 @@ public class NetWorkPlayerSync : MonoBehaviour
         skinManager = GetComponent<SkinManager>();
         Playercamera = transform.parent.transform.GetChild(1).GetChild(0).GetComponent<Camera>();
         Camera2 = transform.parent.transform.GetChild(1).GetChild(0).GetComponent<camera2>();
-
+        takedamage = GetComponent<TakeDamage>();
 
 
         if (!PV.IsMine)
@@ -73,6 +74,7 @@ public class NetWorkPlayerSync : MonoBehaviour
             PunSerializer.Fired = playerActions.Fired;
             PunSerializer.LookIK = lookik.GetIKSolver().IKPositionWeight;
             PunSerializer.AimIK = aimik.GetIKSolver().IKPositionWeight;
+            PunSerializer.HP = takedamage.HP;
 
         }
         else
@@ -82,6 +84,9 @@ public class NetWorkPlayerSync : MonoBehaviour
             lookik.solver.IKPositionWeight = PunSerializer.LookIK;
 
             skinManager.EquippedSkin = PunSerializer.SkinID;
+
+            takedamage.HP = PunSerializer.HP;
+
 
 
 
