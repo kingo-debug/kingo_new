@@ -115,6 +115,8 @@ public class PlayerScores : MonoBehaviourPunCallbacks, IPunObservable
         {
             PlayerOwner = GameObject.Find(PV.Owner.ToString()).gameObject.transform.GetChild(0).gameObject;
 
+            PlayerOwner.GetComponent<PlayerActionsVar>().ScoreItemUI = gameObject;
+
             NickName.text = PlayerOwner.GetComponent<PhotonSerializerBGN>().PlayerNickName;
 
             KillCount.text = PlayerOwner.GetComponent<PlayerActionsVar>().TotalRoomkillsTrack.ToString();

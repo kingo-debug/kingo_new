@@ -16,6 +16,7 @@ public class PlayerActionsVar : MonoBehaviour
     public int Weapontype;
     public int InventoryTrack;
     public int TotalRoomkillsTrack;
+    public GameObject ScoreItemUI;
 
     
 }

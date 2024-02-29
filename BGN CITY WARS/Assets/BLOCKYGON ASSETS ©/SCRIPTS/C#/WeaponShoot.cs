@@ -17,6 +17,7 @@ public class WeaponShoot : MonoBehaviour
     public int TotalDamageDealt;
     public float WeaponRange;
     private UpdateKillDisplay Killcountupdate;
+    private PlayerScores ScoreItem;
 
 
     [Space(10)]
@@ -166,6 +167,7 @@ public class WeaponShoot : MonoBehaviour
         Parentanimator.SetFloat("ReloadSpeed", ReloadTime * 2.5f);
 
         Killcountupdate = GameObject.Find("KILL COUNT TEXT DISPLAY").GetComponent<UpdateKillDisplay>();
+        ScoreItem = PlayerParent.GetComponent<PlayerActionsVar>().ScoreItemUI.gameObject.GetComponent<PlayerScores>();
 
 
     }
@@ -519,10 +521,11 @@ public class WeaponShoot : MonoBehaviour
         KillFeed.gameObject.SetActive(true);
         Parentvariables.TotalRoomkillsTrack++;
         Killcountupdate.UpdateKillCount(Parentvariables.TotalRoomkillsTrack);
+        ScoreItem.UpdateScoreData();
 
 
 
-         TargetHP = 100;
+        TargetHP = 100;
 
         GameObject Killpopupitem = PhotonNetwork.Instantiate("KILLS POPUP ITEM", transform.position, Quaternion.identity); // spawn kill UI notification
         Killpopupitem.GetComponent<KillPopupManager>().PlayerKilled = TPV.GetComponent<PhotonSerializerBGN>().PlayerNickName;
@@ -535,6 +538,7 @@ public class WeaponShoot : MonoBehaviour
         HeadShotKill.gameObject.SetActive(true);
         Parentvariables.TotalRoomkillsTrack++;
         Killcountupdate.UpdateKillCount(Parentvariables.TotalRoomkillsTrack);
+        ScoreItem.UpdateScoreData();
 
 
         TargetHP = 100;
