@@ -32,23 +32,19 @@ public class PlayerScores : MonoBehaviourPunCallbacks, IPunObservable
     public string PlayerName;
     public int TotalRoomKills;
     public int TotalRoomDeaths;
+    private int LastTotalKills;
 
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
         if (stream.IsWriting) // is Writing(CurrentPlayer)
         {
-            Debug.Log("before stream.SendNext(PlayerName +  stream.SendNext(TotalRoomKills");
-            stream.SendNext(PlayerName);
             stream.SendNext(TotalRoomKills);   //room kills Track
-            Debug.Log("after stream.SendNext(PlayerName +  stream.SendNext(TotalRoomKills");
+
         }
         else if (stream.IsReading) // is Reading(otherplayers)
-        {
-            Debug.Log("before TotalRoomKills = (int)stream.ReceiveNext" + "PlayerName = (string)stream.ReceiveNext");
-            PlayerName = (string)stream.ReceiveNext();
-            TotalRoomKills = (int)stream.ReceiveNext(); // total room kills
-            Debug.Log("TotalRoomKills = (int)stream.ReceiveNext" + "PlayerName = (string)stream.ReceiveNext");
+        {          
+            TotalRoomKills = (int)stream.ReceiveNext(); // total room kills      
         }
 
     }
@@ -93,27 +89,10 @@ public class PlayerScores : MonoBehaviourPunCallbacks, IPunObservable
 
 
     public void UpdateScoreData()
-    {
-
-        //    foreach (GameObject player in GameObject.FindGameObjectsWithTag("Player"))
-        //  {
-        //   if (player.GetComponent<PhotonView>().IsMine)
-        //  {
-        //   NickName.text = player.GetComponent<PhotonSerializerBGN>().PlayerNickName;
-        //    gameObject.name = KillCount.text = player.GetComponent<PlayerActionsVar>().TotalRoomkillsTrack.ToString();
-
-        //  }
-        //    else
-        //     {
-        //  NickName.text = player.GetComponent<PhotonSerializerBGN>().PlayerNickName;
-        //  gameObject.name = KillCount.text = TotalRoomKills.ToString();
-
-        // }
-
-        //  }
+    {      
         if(PV.IsMine)
         {
-            PlayerOwner = GameObject.Find(PV.Owner.ToString()).gameObject.transform.GetChild(0).gameObject;
+            PlayerOwner = GameObject.Find(PV.Owner.ToString()).gameObject.transform.GetChild(0).gameObject;  //find player owner object for local
 
             PlayerOwner.GetComponent<PlayerActionsVar>().ScoreItemUI = gameObject;
 
@@ -128,7 +107,7 @@ public class PlayerScores : MonoBehaviourPunCallbacks, IPunObservable
         }
         else
         {
-            PlayerOwner = GameObject.Find(PV.Owner.ToString()).gameObject.transform.GetChild(0).gameObject;
+            PlayerOwner = GameObject.Find(PV.Owner.ToString()).gameObject.transform.GetChild(0).gameObject;   //find player owner object for others
 
             NickName.text = PlayerOwner.GetComponent<PhotonSerializerBGN>().PlayerNickName;
 
@@ -137,6 +116,15 @@ public class PlayerScores : MonoBehaviourPunCallbacks, IPunObservable
   
 
 
+    }
+
+    private void Update()
+    {
+        if(!PV.IsMine && TotalRoomKills!= LastTotalKills)
+        {
+            UpdateScoreData();
+            LastTotalKills = TotalRoomKills;
+        }
     }
 
 }
