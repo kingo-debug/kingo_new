@@ -122,8 +122,11 @@ public class PlayerScores : MonoBehaviourPunCallbacks, IPunObservable
     {
         if(!PV.IsMine && TotalRoomKills!= LastTotalKills)
         {
+         
             UpdateScoreData();
+            KillCount.text = TotalRoomKills.ToString();
             LastTotalKills = TotalRoomKills;
+
         }
     }
 
