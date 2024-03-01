@@ -297,6 +297,7 @@ public class WeaponShoot : MonoBehaviour
 
         //UpdateAmmoAfterShoot
         AmmoRefresh();
+        UpdateAmmoUI.UpdateAmmoUIDisplay();
 
 
 
