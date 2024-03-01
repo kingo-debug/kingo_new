@@ -17,6 +17,7 @@ public class WeaponShoot : MonoBehaviour
     public int TotalDamageDealt;
     public float WeaponRange;
     private UpdateKillDisplay Killcountupdate;
+    private UpdateAmmoUI UpdateAmmoUI;
     private PlayerScores ScoreItem;
 
 
@@ -168,6 +169,7 @@ public class WeaponShoot : MonoBehaviour
 
         Killcountupdate = GameObject.Find("KILL COUNT TEXT DISPLAY").GetComponent<UpdateKillDisplay>();
         ScoreItem = PlayerParent.GetComponent<PlayerActionsVar>().ScoreItemUI.gameObject.GetComponent<PlayerScores>();
+        UpdateAmmoUI = PlayerParent.transform.Find("PLAYER Canvas").Find("WEAPON UI INFO").Find("AMMO").GetComponent<UpdateAmmoUI>();
 
 
     }
@@ -297,6 +299,7 @@ public class WeaponShoot : MonoBehaviour
         AmmoRefresh();
 
 
+
         if (collided == null || collided.gameObject.layer == 0)
 
         { return; }
@@ -318,7 +321,7 @@ public class WeaponShoot : MonoBehaviour
 
             HeadShot();
             #region AfterShootActions
-     
+            UpdateAmmoUI.UpdateAmmoUIDisplay();
             #endregion
         }
 
@@ -572,6 +575,7 @@ public class WeaponShoot : MonoBehaviour
     {
         totalammo = MaxAmmo;  noammo = false;
         AmmoRefresh();
+        UpdateAmmoUI.UpdateAmmoUIDisplay();
     }
 
     private void AmmoRefresh()
@@ -666,6 +670,7 @@ public class WeaponShoot : MonoBehaviour
         BulletsFired = 0;
         Reloading = false;          PlayerParent.GetComponent<PlayerActionsVar>().IsReloading = false;
             AmmoRefresh();
+            UpdateAmmoUI.UpdateAmmoUIDisplay();
         }
     else
     {
@@ -675,6 +680,7 @@ public class WeaponShoot : MonoBehaviour
         Reloading = false;                   PlayerParent.GetComponent<PlayerActionsVar>().IsReloading = false; Parentanimator.SetBool("RELOAD", false);
             AmmoMessage.text = (""); AmmoMessage.color = new Color(255f, 178f, 255f);
         AmmoRefresh();
+            UpdateAmmoUI.UpdateAmmoUIDisplay();
         }
 
 
