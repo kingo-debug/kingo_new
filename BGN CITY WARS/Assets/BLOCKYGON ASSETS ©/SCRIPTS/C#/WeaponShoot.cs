@@ -115,13 +115,13 @@ public class WeaponShoot : MonoBehaviour
         HeadShotKill = GameObject.Find("KILL FEEDS").transform.GetChild(1).gameObject;
 
         #endregion
-        Invoke("FindParent", .5f);
+        Invoke("FindParent", .15f);
         PV = this.GetComponent<PhotonView>();
         if(!PV.IsMine)
         {
             GetComponent<WeaponShoot>().enabled = false;
         }
-        AmmoRefresh();
+
         SyncFireAnim();
         Parentanimator.SetFloat("ReloadSpeed",ReloadTime*2.5f);
         collided = hit.collider;
@@ -151,6 +151,7 @@ public class WeaponShoot : MonoBehaviour
         Parentvariables.Fired = Fired;
         Parentanimator = PlayerParent.GetComponent<Animator>();
         UpdateAmmoUI.UpdateAmmoUIDisplay(currentclip, totalammo);
+        AmmoRefresh();
 
 
 
@@ -692,7 +693,11 @@ public class WeaponShoot : MonoBehaviour
     {
         yield return new WaitForSeconds(0.15f);
 
-        BulletTrailVFX.Play();
+        if(BulletTrailVFX!=null)
+        {
+            BulletTrailVFX.Play();
+        }
+       
         BulletDropVFX.Play();
     }
     // Hit Reticles Toggle
