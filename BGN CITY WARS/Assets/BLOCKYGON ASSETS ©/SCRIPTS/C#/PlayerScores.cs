@@ -52,7 +52,9 @@ public class PlayerScores : MonoBehaviourPunCallbacks, IPunObservable
 
 
 
-
+    void Awake()
+    {
+        gameObject.name = "0";    }
 
 
 
