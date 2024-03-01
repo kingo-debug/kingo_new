@@ -39,7 +39,7 @@ public class JoinedRoom : MonoBehaviourPunCallbacks
             RoomOptions roomOptions = new RoomOptions();
             roomOptions.MaxPlayers = MaxPlayersinRoom; // Set the maximum number of players for the room
 
-            PhotonNetwork.JoinOrCreateRoom("RoomSceneName", roomOptions, TypedLobby.Default);
+            PhotonNetwork.JoinOrCreateRoom(RoomSceneName, roomOptions, TypedLobby.Default);
 
         }
         else
