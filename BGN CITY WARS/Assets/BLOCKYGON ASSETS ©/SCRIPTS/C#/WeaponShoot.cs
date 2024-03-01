@@ -150,6 +150,7 @@ public class WeaponShoot : MonoBehaviour
         Parentvariables = PlayerParent.GetComponent<PlayerActionsVar>();
         Parentvariables.Fired = Fired;
         Parentanimator = PlayerParent.GetComponent<Animator>();
+        UpdateAmmoUI.UpdateAmmoUIDisplay(currentclip, totalammo);
 
 
 
@@ -297,7 +298,7 @@ public class WeaponShoot : MonoBehaviour
 
         //UpdateAmmoAfterShoot
         AmmoRefresh();
-        UpdateAmmoUI.UpdateAmmoUIDisplay();
+        UpdateAmmoUI.UpdateAmmoUIDisplay(currentclip,totalammo);
 
 
 
@@ -322,7 +323,7 @@ public class WeaponShoot : MonoBehaviour
 
             HeadShot();
             #region AfterShootActions
-            UpdateAmmoUI.UpdateAmmoUIDisplay();
+            UpdateAmmoUI.UpdateAmmoUIDisplay(currentclip, totalammo);
             #endregion
         }
 
@@ -576,7 +577,7 @@ public class WeaponShoot : MonoBehaviour
     {
         totalammo = MaxAmmo;  noammo = false;
         AmmoRefresh();
-        UpdateAmmoUI.UpdateAmmoUIDisplay();
+        UpdateAmmoUI.UpdateAmmoUIDisplay(currentclip, totalammo);
     }
 
     private void AmmoRefresh()
@@ -671,7 +672,7 @@ public class WeaponShoot : MonoBehaviour
         BulletsFired = 0;
         Reloading = false;          PlayerParent.GetComponent<PlayerActionsVar>().IsReloading = false;
             AmmoRefresh();
-            UpdateAmmoUI.UpdateAmmoUIDisplay();
+            UpdateAmmoUI.UpdateAmmoUIDisplay(currentclip, totalammo);
         }
     else
     {
@@ -681,7 +682,7 @@ public class WeaponShoot : MonoBehaviour
         Reloading = false;                   PlayerParent.GetComponent<PlayerActionsVar>().IsReloading = false; Parentanimator.SetBool("RELOAD", false);
             AmmoMessage.text = (""); AmmoMessage.color = new Color(255f, 178f, 255f);
         AmmoRefresh();
-            UpdateAmmoUI.UpdateAmmoUIDisplay();
+            UpdateAmmoUI.UpdateAmmoUIDisplay(currentclip, totalammo);
         }
 
 

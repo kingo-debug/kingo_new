@@ -6,19 +6,11 @@ public class UpdateAmmoUI : MonoBehaviour
     [SerializeField]
     PlayerActionsVar playerActions;
     [SerializeField]
-    WeaponStatus weaponStatus;
-    [SerializeField]
     private TextMeshProUGUI text;
-
-    void Start()
-    {
-        UpdateAmmoUIDisplay();
-    }
-
  
-   public void UpdateAmmoUIDisplay()
+   public void UpdateAmmoUIDisplay(int Clip, int TotalAmmo )
     {
-        text.text = (weaponStatus.CurrentClip.ToString() + "/" + weaponStatus.TotalAmmo.ToString());
+        text.text = (Clip.ToString() + "/" + TotalAmmo.ToString());
     }
 
     public void HideAmmoUI()
