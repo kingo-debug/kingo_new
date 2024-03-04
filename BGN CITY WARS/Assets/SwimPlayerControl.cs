@@ -1,18 +1,26 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SwimPlayerControl : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private Animator animator;
+    public bool Swiming;
+    public float SwimEnterSpeed = 2f;
+    private void Start()
     {
-        
+        animator = GetComponent<Animator>();
+        SwimmodeExit();
+    }
+    public void SwimModeEnter()
+    {
+        Swiming = true;
+        animator.SetLayerWeight(2, Mathf.Lerp(animator.GetLayerWeight(2), 1, Time.deltaTime * SwimEnterSpeed));
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SwimmodeExit()
     {
-        
+        Swiming = false;
+        animator.SetLayerWeight(2, Mathf.Lerp(animator.GetLayerWeight(2), 0, Time.deltaTime* SwimEnterSpeed));
     }
+
 }

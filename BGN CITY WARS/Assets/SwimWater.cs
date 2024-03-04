@@ -6,11 +6,11 @@ public class SwimWater : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player"))
         {
-           
+            other.GetComponent<SwimPlayerControl>().SwimModeEnter();
         }
     }
     private void OnTriggerExit(Collider other)
     {
-        
+        other.GetComponent<SwimPlayerControl>().SwimmodeExit();
     }
 }
