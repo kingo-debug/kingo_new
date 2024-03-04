@@ -11,16 +11,31 @@ public class SwimPlayerControl : MonoBehaviour
         SwimmodeExit();
     }
     public void SwimModeEnter()
-    {
+    { 
         Swiming = true;
-        animator.SetLayerWeight(2, Mathf.Lerp(animator.GetLayerWeight(2), 1, Time.deltaTime * SwimEnterSpeed));
-
     }
 
     public void SwimmodeExit()
     {
         Swiming = false;
-        animator.SetLayerWeight(2, Mathf.Lerp(animator.GetLayerWeight(2), 0, Time.deltaTime* SwimEnterSpeed));
+    }
+
+    private void Update()
+    {
+        if(Swiming)
+        {
+            if (animator.GetLayerWeight(2) < 1)
+            {
+                animator.SetLayerWeight(2, Mathf.Lerp(animator.GetLayerWeight(2), 1, Time.deltaTime * SwimEnterSpeed));
+            }
+        }
+        else
+        {
+            if(animator.GetLayerWeight(2)>0)
+            {
+                animator.SetLayerWeight(2, Mathf.Lerp(animator.GetLayerWeight(2), 0, Time.deltaTime * SwimEnterSpeed));
+            }
+        }
     }
 
 }

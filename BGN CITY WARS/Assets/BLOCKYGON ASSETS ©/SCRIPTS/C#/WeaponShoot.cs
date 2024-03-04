@@ -94,6 +94,7 @@ public class WeaponShoot : MonoBehaviour
     private int LastDamageType;
     private GameObject HitReticleCrosshair;
     private TextMeshProUGUI AmmoMessage;
+    private SwimPlayerControl swimcontrol;
 
     #endregion Variables
 
@@ -151,6 +152,9 @@ public class WeaponShoot : MonoBehaviour
         Parentvariables.Fired = Fired;
         Parentanimator = PlayerParent.GetComponent<Animator>();
         UpdateAmmoUI.UpdateAmmoUIDisplay(currentclip, totalammo);
+        swimcontrol = PlayerParent.GetComponent<SwimPlayerControl>();
+
+
         AmmoRefresh();
 
 
@@ -221,20 +225,29 @@ public class WeaponShoot : MonoBehaviour
         if (Canfire)
         { //canfire
 
-            if (ControlFreak2.CF2Input.GetMouseButton(0) == true && PV.IsMine && Time.time > lastshot + modifiedFireRate && currentclip > 0 && !Reloading && Canfire)
-            {
-                AS.PlayOneShot(FireSFX, 1f);
+            if (ControlFreak2.CF2Input.GetMouseButton(0) == true ) // first condition
 
-                StartCoroutine(VFX());
-
-                float nextActionTime = 0.0f;
-                float period = 5f;
-                if (Time.time > nextActionTime)
+            { 
+               if( PV.IsMine && Time.time > lastshot + modifiedFireRate && currentclip > 0 && !Reloading && Canfire&& !swimcontrol.Swiming)
                 {
-                    nextActionTime += period;
-                    Shoot();
-                }
+                    AS.PlayOneShot(FireSFX, 1f);
+
+                    StartCoroutine(VFX());
+
+                    float nextActionTime = 0.0f;
+                    float period = 5f;
+                    if (Time.time > nextActionTime)
+                    {
+                        nextActionTime += period;
+                        Shoot();
+                    }
+                } // other conditions
+
             }
+
+            
+     
+            
         }//canfire
 
 

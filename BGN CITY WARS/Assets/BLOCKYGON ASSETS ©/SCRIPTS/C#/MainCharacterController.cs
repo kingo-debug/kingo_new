@@ -56,6 +56,7 @@ public class MainCharacterController : MonoBehaviour
     private LookAtIK lookik;
     private AimIK aimik;
     private PlayerActionsVar actionsVar;
+    private SwimPlayerControl swimcontrols;
 
 
 
@@ -79,6 +80,7 @@ public class MainCharacterController : MonoBehaviour
         aimik = GetComponent<AimIK>();
         actionsVar = GetComponent<PlayerActionsVar>();
         animator.SetBool("IS AIMING", false);
+        swimcontrols = GetComponent<SwimPlayerControl>();
         if (!PV.IsMine)
         {
             this.enabled = false; ;
@@ -276,30 +278,34 @@ public class MainCharacterController : MonoBehaviour
     {
         if(PV.IsMine)
         {
-            if (ControlFreak2.CF2Input.GetMouseButtonDown(1) && !actionsVar.IsReloading && actionsVar.Weapontype > 0)
-            {
-
-                if (ISAiming)
+            if (ControlFreak2.CF2Input.GetMouseButtonDown(1)) // first condition
+                if( !actionsVar.IsReloading && actionsVar.Weapontype > 0 && !swimcontrols.Swiming)
                 {
-                    ISAiming = false;
-                    animator.SetBool("IS AIMING", false);
-                    aimik.GetIKSolver().SetIKPositionWeight(0);
-                    lookik.GetIKSolver().SetIKPositionWeight(0);
-                    actionsVar.IsAiming = false;
+                    if (ISAiming)
+                    {
+                        ISAiming = false;
+                        animator.SetBool("IS AIMING", false);
+                        aimik.GetIKSolver().SetIKPositionWeight(0);
+                        lookik.GetIKSolver().SetIKPositionWeight(0);
+                        actionsVar.IsAiming = false;
 
 
+                    }
+                    else
+                    {
+                        ISAiming = true;
+                        animator.SetBool("IS AIMING", true);
+                        aimik.GetIKSolver().SetIKPositionWeight(.8f);
+                        lookik.GetIKSolver().SetIKPositionWeight(0.8f);
+                        actionsVar.IsAiming = true;
+
+                    }
                 }
-                else
-                {
-                    ISAiming = true;
-                    animator.SetBool("IS AIMING", true);
-                    aimik.GetIKSolver().SetIKPositionWeight(.8f);
-                    lookik.GetIKSolver().SetIKPositionWeight(0.8f);
-                    actionsVar.IsAiming = true;
+            
 
-                }
 
-            }
+
+            
             else if (actionsVar.IsReloading)
             {
                 ISAiming = false;
