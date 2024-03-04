@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class SwimPlayerControl : MonoBehaviour
 {
+    [SerializeField]
     private Animator animator;
     public bool Swiming;
     public float SwimEnterSpeed = 2f;
     private void Start()
     {
-        animator = GetComponent<Animator>();
         SwimmodeExit();
     }
     public void SwimModeEnter()
