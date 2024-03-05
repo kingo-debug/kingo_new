@@ -79,6 +79,11 @@ public class WeaponShoot : MonoBehaviour
     private GameObject ScopeUI;
     private Animator ScopeAnimator;
     private Animator Parentanimator;
+    [Space(10)]
+    [Header("Reticle&Recoil")]
+    [SerializeField]
+    private int  ReticleType;
+    private Transform DefaultReticle;
 
     //pun variables
     [Header("Debugs")]
@@ -100,15 +105,17 @@ public class WeaponShoot : MonoBehaviour
 
     private void OnEnable()
     {
-                #region CrosshairSetUp
-        Transform DefaultReticle;
-        DefaultReticle = GameObject.Find("DEFAULT RETICLE").transform;
+        #region CrosshairSetUp
+
+        DefaultReticle = GameObject.Find("CROSSHAIRS").transform.GetChild(ReticleType);
         HitReticleCrosshair = DefaultReticle.transform.GetChild(1).gameObject;
         ScopeUI = DefaultReticle.transform.GetChild(3).gameObject;
         ScopeAnimator = ScopeUI.GetComponent<Animator>();
+        DefaultReticle.gameObject.SetActive(true);
+
         #endregion
 
-      
+
       AS = GetComponent<AudioSource>();
 
         #region find  and assign kill pop up feeds.
@@ -142,6 +149,11 @@ public class WeaponShoot : MonoBehaviour
         Reloading = false;
         bodyshotHit = false;
         headshotHit = false;
+        DefaultReticle.gameObject.SetActive(false);
+        Parentanimator.SetBool("RELOAD", false);
+        AmmoMessage.text = ("");
+
+
 
     }
     void FindParent()
