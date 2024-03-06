@@ -23,10 +23,6 @@ public class WeaponType : MonoBehaviour
         actions.Weapontype = Weapontype;
         animator.SetInteger("WeaponType", Weapontype);
         Crosshiars = GameObject.Find("CROSSHAIRS").transform;
-       foreach (RectTransform child in Crosshiars)
-        {
-            Reticles.Add(child);
-        }
         UpdateReticle();
 
     }
@@ -34,21 +30,23 @@ public class WeaponType : MonoBehaviour
     {
         WeaponStatus Status = transform.root.GetChild(0).GetComponent<WeaponStatus>();
         Status.CurrentWeapon = this.gameObject;
+        UpdateReticle();
 
     }
 
     public void UpdateReticle()
     {
-        foreach (RectTransform reticle in Reticles)
+        if(ReticleType==0)
         {
-            if(reticle.name != ReticleType.ToString()  )
-            {
-                reticle.gameObject.SetActive(false);
-            }
-            else
-            {
-                reticle.gameObject.SetActive(true);
-            }
+            Crosshiars.GetChild(0).gameObject.SetActive(true);
+        }
+        else if (ReticleType == 1)
+        {
+            Crosshiars.GetChild(1).gameObject.SetActive(true);
+        }
+        else if (ReticleType == 2)
+        {
+            Crosshiars.GetChild(2).gameObject.SetActive(true);
         }
     }
 }

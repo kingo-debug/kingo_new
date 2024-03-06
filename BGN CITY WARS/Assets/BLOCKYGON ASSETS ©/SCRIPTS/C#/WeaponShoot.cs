@@ -141,7 +141,7 @@ public class WeaponShoot : MonoBehaviour
     
 
         // start reload after weapon pull//
-        if (currentclip < 1 && weaponstatus.NoAmmo != true)
+        if (currentclip < 1 && totalammo>0)
         {
             StartCoroutine(Reload());
         }
