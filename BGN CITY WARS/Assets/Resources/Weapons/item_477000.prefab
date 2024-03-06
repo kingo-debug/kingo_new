@@ -275,6 +275,7 @@ MonoBehaviour:
   WeaponName: Fist
   WeaponPFP: {fileID: 21300000, guid: 38d76b4b4cee091489747dcd6de211a3, type: 3}
   Weapontype: 0
+  ReticleType: 0
 --- !u!114 &4016920629615224043
 MonoBehaviour:
   m_ObjectHideFlags: 0

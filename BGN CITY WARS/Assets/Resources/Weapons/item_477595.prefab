@@ -5304,6 +5304,7 @@ MonoBehaviour:
   WeaponName: 
   WeaponPFP: {fileID: 0}
   Weapontype: 0
+  ReticleType: 1
 --- !u!114 &2660289304864789145
 MonoBehaviour:
   m_ObjectHideFlags: 0

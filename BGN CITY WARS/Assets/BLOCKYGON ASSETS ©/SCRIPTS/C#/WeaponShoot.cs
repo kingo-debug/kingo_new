@@ -7,6 +7,7 @@ public class WeaponShoot : MonoBehaviour
 
     #region Variables
     private WeaponStatus weaponstatus;
+    private WeaponType weapontype;
     [SerializeField]
     private PlayerActionsVar Parentvariables;
     [Header("Weapon Specs")]
@@ -80,9 +81,8 @@ public class WeaponShoot : MonoBehaviour
     private Animator ScopeAnimator;
     private Animator Parentanimator;
     [Space(10)]
-    [Header("Reticle&Recoil")]
+    [Header("Recoil")]
     [SerializeField]
-    private int  ReticleType;
     private Transform DefaultReticle;
 
     //pun variables
@@ -107,11 +107,14 @@ public class WeaponShoot : MonoBehaviour
     {
         #region CrosshairSetUp
 
-        DefaultReticle = GameObject.Find("CROSSHAIRS").transform.GetChild(ReticleType);
+        weapontype = GetComponent<WeaponType>();
+        DefaultReticle = GameObject.Find("CROSSHAIRS").transform.GetChild(weapontype.ReticleType);
         HitReticleCrosshair = DefaultReticle.transform.GetChild(1).gameObject;
         ScopeUI = DefaultReticle.transform.GetChild(3).gameObject;
         ScopeAnimator = ScopeUI.GetComponent<Animator>();
-        DefaultReticle.gameObject.SetActive(true);
+
+     
+        
 
         #endregion
 
@@ -149,7 +152,6 @@ public class WeaponShoot : MonoBehaviour
         Reloading = false;
         bodyshotHit = false;
         headshotHit = false;
-        DefaultReticle.gameObject.SetActive(false);
         Parentanimator.SetBool("RELOAD", false);
         AmmoMessage.text = ("");
 
