@@ -56,6 +56,7 @@ public class MainCharacterController : MonoBehaviour
     private LookAtIK lookik;
     private AimIK aimik;
     private PlayerActionsVar actionsVar;
+    private WeaponStatus weaponstatus;
     private SwimPlayerControl swimcontrols;
 
 
@@ -81,6 +82,7 @@ public class MainCharacterController : MonoBehaviour
         actionsVar = GetComponent<PlayerActionsVar>();
         animator.SetBool("IS AIMING", false);
         swimcontrols = GetComponent<SwimPlayerControl>();
+        weaponstatus = GetComponent<WeaponStatus>();
         if (!PV.IsMine)
         {
             this.enabled = false; ;
@@ -323,7 +325,7 @@ public class MainCharacterController : MonoBehaviour
     {
       if (PV.IsMine)
         {
-            if (ControlFreak2.CF2Input.GetMouseButton(0) && !actionsVar.IsReloading)
+            if (ControlFreak2.CF2Input.GetMouseButton(0) && !actionsVar.IsReloading && !weaponstatus.NoAmmo)
             {
                 aimik.GetIKSolver().SetIKPositionWeight(.8f);
                 lookik.GetIKSolver().SetIKPositionWeight(0.8f);
