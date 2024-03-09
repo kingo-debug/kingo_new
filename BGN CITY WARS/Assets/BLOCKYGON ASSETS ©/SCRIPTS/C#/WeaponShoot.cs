@@ -95,7 +95,7 @@ public class WeaponShoot : MonoBehaviour
     private int TargetShield;
     private PhotonView TPV;
     private bool hasExecutedKill = false;
-    private float DamageDelay;
+    public float DamageDelay;
     private int LastDamageType;
     private GameObject HitReticleCrosshair;
     private TextMeshProUGUI AmmoMessage;
@@ -555,7 +555,7 @@ public class WeaponShoot : MonoBehaviour
         Parentvariables.TotalRoomkillsTrack++;
         Killcountupdate.UpdateKillCount(Parentvariables.TotalRoomkillsTrack);
         ScoreItem.UpdateScoreData();
-
+   
 
 
         TargetHP = 100;
@@ -740,8 +740,11 @@ public class WeaponShoot : MonoBehaviour
         {
             TotalDamageDealt += BodyDamage;
         }
-       
 
+        if( TargetHP<=0)
+        {
+            TotalDamageDealt = 0;
+        }
 
     }
     #endregion 

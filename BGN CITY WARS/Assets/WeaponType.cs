@@ -23,14 +23,16 @@ public class WeaponType : MonoBehaviour
         actions.Weapontype = Weapontype;
         animator.SetInteger("WeaponType", Weapontype);
         Crosshiars = GameObject.Find("CROSSHAIRS").transform;
-        UpdateReticle();
+        Invoke("UpdateReticle", 0.1f);
 
     }
     private void Start()
     {
         WeaponStatus Status = transform.root.GetChild(0).GetComponent<WeaponStatus>();
         Status.CurrentWeapon = this.gameObject;
-        UpdateReticle();
+        Crosshiars = GameObject.Find("CROSSHAIRS").transform;
+        Invoke("UpdateReticle", 0.1f);
+        
 
     }
 
