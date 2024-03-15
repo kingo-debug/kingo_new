@@ -211,7 +211,7 @@ public class WeaponShoot : MonoBehaviour
 
         }
 
-        if (TargetHP == 0 && !hasExecutedKill && PV.IsMine)
+        if (TargetHP <= 0 && !hasExecutedKill && PV.IsMine)
         {
             if (LastDamageType == 0)
             {
