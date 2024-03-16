@@ -35,13 +35,16 @@ public class WeaponShoot : MonoBehaviour
     private float lastshot = 0f;
     [Space(10)]
     [Header("Firing Info")]
-    public bool Canfire;
+    public bool Canfire = false;
     private bool started;
     public bool Fired;
     public float modifiedFireRate;
     [Space(10)]
     [Header("Reload Info")]
     public bool Reloading;
+    [SerializeField]
+    private float PullOutTime;
+
 
 
 
@@ -91,7 +94,7 @@ public class WeaponShoot : MonoBehaviour
     private Collider collided;
     private GameObject KillFeed;
     private GameObject HeadShotKill;
-    private int TargetHP;
+    private int TargetHP = 100;
     private int TargetShield;
     private PhotonView TPV;
     private bool hasExecutedKill = false;
@@ -105,20 +108,16 @@ public class WeaponShoot : MonoBehaviour
 
     private void OnEnable()
     {
+        StartCoroutine("StartCoroutine");
         #region CrosshairSetUp
-
         weapontype = GetComponent<WeaponType>();
         DefaultReticle = GameObject.Find("CROSSHAIRS").transform.GetChild(weapontype.ReticleType);
         HitReticleCrosshair = DefaultReticle.transform.GetChild(1).gameObject;
         ScopeUI = DefaultReticle.transform.GetChild(3).gameObject;
         ScopeAnimator = ScopeUI.GetComponent<Animator>();
-
-     
-        
-
         #endregion
 
-
+     
       AS = GetComponent<AudioSource>();
 
         #region find  and assign kill pop up feeds.
@@ -154,6 +153,7 @@ public class WeaponShoot : MonoBehaviour
         headshotHit = false;
         Parentanimator.SetBool("RELOAD", false);
         AmmoMessage.text = ("");
+        Canfire = false;
 
 
 
@@ -374,26 +374,25 @@ public class WeaponShoot : MonoBehaviour
                         return;
                     else // other online player detect
                     {
-
-                        //       TargetHP = TPV.GetComponent<TakeDamage>().HP;
-                        //  TargetShield = TPV.GetComponent<TakeDamage>().Shield;
-
-                        AS.PlayOneShot(BodyshotSFX, 1f);
-
-                        RpcTarget RPCTYPE = new RpcTarget();
-                        if (TPV.IsMine && TPV.gameObject.tag == ("CAR"))
+                        TargetHP = TPV.GetComponent<TakeDamage>().HP;
+                        if (TargetHP > 0)
                         {
-                            RPCTYPE = RpcTarget.All;
+                            AS.PlayOneShot(BodyshotSFX, 1f);
+
+                            RpcTarget RPCTYPE = new RpcTarget();
+                            if (TPV.IsMine && TPV.gameObject.tag == ("CAR"))
+                            {
+                                RPCTYPE = RpcTarget.All;
+                            }
+                            else RPCTYPE = RpcTarget.Others;
+
+                            Bodydamage();
+
+                            Debug.Log("Real Player Detected-Body");
+
+                            HitReticleCrosshair.SetActive(true);
                         }
-                        else RPCTYPE = RpcTarget.Others;
-
-                        Bodydamage();
-
-                        //  TPV = collided.GetComponent<PhotonView>();
-
-                        Debug.Log("Real Player Detected-Body");
-
-                        HitReticleCrosshair.SetActive(true);
+     
                     }
 
 
@@ -459,27 +458,31 @@ public class WeaponShoot : MonoBehaviour
                         return;
                     else // other online player detect
                     {
-
-                        TargetHP = TPV.GetComponent<TakeDamage>().HP;
+       
+          
+                            TargetHP = TPV.GetComponent<TakeDamage>().HP;
                         TargetShield = TPV.GetComponent<TakeDamage>().Shield;
-
-                        AS.PlayOneShot(HeadshotSFX, 1f);
-
-                        RpcTarget RPCTYPE = new RpcTarget();
-                        if (TPV.IsMine && TPV.gameObject.tag == ("CAR"))
+                        if (TargetHP > 0)
                         {
-                            RPCTYPE = RpcTarget.All;
+                            AS.PlayOneShot(HeadshotSFX, 1f);
+
+                            RpcTarget RPCTYPE = new RpcTarget();
+                            if (TPV.IsMine && TPV.gameObject.tag == ("CAR"))
+                            {
+                                RPCTYPE = RpcTarget.All;
+                            }
+                            else RPCTYPE = RpcTarget.Others;
+
+                            Headdamage();
+
+                            //  TPV = collided.GetComponent<PhotonView>();
+
+                            Debug.Log("Real Player Detected-HEAD");
+
+                            //Hit Reticle Enable
+                            HitReticleCrosshair.SetActive(true);
                         }
-                        else RPCTYPE = RpcTarget.Others;
 
-                        Headdamage();
-
-                        //  TPV = collided.GetComponent<PhotonView>();
-
-                        Debug.Log("Real Player Detected-HEAD");
-
-                        //Hit Reticle Enable
-                        HitReticleCrosshair.SetActive(true);
                     }
 
 
@@ -745,6 +748,12 @@ public class WeaponShoot : MonoBehaviour
         {
             TotalDamageDealt = 0;
         }
+
+    }
+    IEnumerator ReadyForFire()
+    {
+        yield return new WaitForSeconds(PullOutTime);
+        Canfire = true;
 
     }
     #endregion 
