@@ -11,6 +11,8 @@ public class WeaponShoot : MonoBehaviour
     [SerializeField]
     private PlayerActionsVar Parentvariables;
     [Header("Weapon Specs")]
+    [SerializeField]
+    private float PullOutTime;
     public float FireRate;
     public float ReloadTime;
     public int BodyDamage;
@@ -42,8 +44,7 @@ public class WeaponShoot : MonoBehaviour
     [Space(10)]
     [Header("Reload Info")]
     public bool Reloading;
-    [SerializeField]
-    private float PullOutTime;
+
 
 
 
@@ -108,7 +109,7 @@ public class WeaponShoot : MonoBehaviour
 
     private void OnEnable()
     {
-        StartCoroutine("StartCoroutine");
+        StartCoroutine(ReadyForFire());
         #region CrosshairSetUp
         weapontype = GetComponent<WeaponType>();
         DefaultReticle = GameObject.Find("CROSSHAIRS").transform.GetChild(weapontype.ReticleType);
@@ -197,7 +198,7 @@ public class WeaponShoot : MonoBehaviour
     void Update()
     {//update S
      //var sync with plaayer
-        Canfire = PlayerParent.GetComponent<PlayerActionsVar>().canfire;
+
         PlayerParent.GetComponent<WeaponStatus>().CurrentClip = currentclip;
         PlayerParent.GetComponent<WeaponStatus>().TotalAmmo = totalammo;
 
