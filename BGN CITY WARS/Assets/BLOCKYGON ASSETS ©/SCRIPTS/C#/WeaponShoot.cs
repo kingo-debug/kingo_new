@@ -559,7 +559,7 @@ public class WeaponShoot : MonoBehaviour
         Parentvariables.TotalRoomkillsTrack++;
         Killcountupdate.UpdateKillCount(Parentvariables.TotalRoomkillsTrack);
         ScoreItem.UpdateScoreData();
-   
+        TotalDamageDealt = 0;
 
 
         TargetHP = 100;
@@ -576,6 +576,7 @@ public class WeaponShoot : MonoBehaviour
         Parentvariables.TotalRoomkillsTrack++;
         Killcountupdate.UpdateKillCount(Parentvariables.TotalRoomkillsTrack);
         ScoreItem.UpdateScoreData();
+        TotalDamageDealt = 0;
 
 
         TargetHP = 100;
