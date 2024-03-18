@@ -295,8 +295,6 @@ public class MainCharacterController : MonoBehaviour
                             GetComponent<ScopingManager>().ScopeOff();
                         }
 
-
-
                     }
                     else
                     {
@@ -340,6 +338,19 @@ public class MainCharacterController : MonoBehaviour
 
     }
 
+    public void StopAim()
+    {
+        ISAiming = false;
+        animator.SetBool("IS AIMING", false);
+        aimik.GetIKSolver().SetIKPositionWeight(0);
+        lookik.GetIKSolver().SetIKPositionWeight(0);
+        actionsVar.IsAiming = false;
+        if (weaponstatus.CurrentWeapon.GetComponent<WeaponType>().Scope)
+        {
+            GetComponent<ScopingManager>().ScopeOff();
+        }
+}
+
     void Shoot()
     {
       if (PV.IsMine)
@@ -357,9 +368,8 @@ public class MainCharacterController : MonoBehaviour
         }
     }
 
+
 }
-
-
 
 
 
