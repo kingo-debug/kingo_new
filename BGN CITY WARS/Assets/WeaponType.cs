@@ -7,6 +7,7 @@ public class WeaponType : MonoBehaviour
     public Sprite WeaponPFP;
     public int Weapontype;
     public int ReticleType;
+    public bool Scope;
     private PlayerActionsVar actions;
     private Animator animator;
     private List<RectTransform> Reticles;
@@ -26,7 +27,10 @@ public class WeaponType : MonoBehaviour
         animator.SetInteger("WeaponType", Weapontype);
         Crosshiars = GameObject.Find("CROSSHAIRS").transform;
         Invoke("UpdateReticle", 0.1f);
+        if(Scope)
+        {
         transform.root.GetChild(0).GetComponent<ScopingManager>().WeaponMesh = transform.GetChild(0).transform.Find("BODY").gameObject;
+        }
 
 
 

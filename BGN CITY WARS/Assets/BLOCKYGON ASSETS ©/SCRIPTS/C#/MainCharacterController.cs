@@ -298,7 +298,12 @@ public class MainCharacterController : MonoBehaviour
                         aimik.GetIKSolver().SetIKPositionWeight(.8f);
                         lookik.GetIKSolver().SetIKPositionWeight(0.8f);
                         actionsVar.IsAiming = true;
-                        GetComponent<ScopingManager>().ScopeOn();
+                        //scope check
+                        if (weaponstatus.CurrentWeapon.GetComponent<WeaponType>().Scope)
+                        {
+                            GetComponent<ScopingManager>().ScopeOn();
+                        }
+              
 
                     }
                 }
@@ -315,6 +320,8 @@ public class MainCharacterController : MonoBehaviour
                 lookik.GetIKSolver().SetIKPositionWeight(0);
                 actionsVar.IsAiming = false;
                 GetComponent<ScopingManager>().ScopeOff();
+                  
+
 
                 }
         }
