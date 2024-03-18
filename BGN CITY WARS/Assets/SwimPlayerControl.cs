@@ -26,16 +26,19 @@ public class SwimPlayerControl : MonoBehaviour
         {
             if (animator.GetLayerWeight(2) < 1)
             {
-                animator.SetLayerWeight(2, Mathf.Lerp(animator.GetLayerWeight(2), 1, Time.deltaTime * SwimEnterSpeed));
+                animator.SetLayerWeight(2, Mathf.Lerp(animator.GetLayerWeight(2), 1.2f, Time.deltaTime * SwimEnterSpeed));
             }
         }
         else
         {
             if(animator.GetLayerWeight(2)>0)
             {
-                animator.SetLayerWeight(2, Mathf.Lerp(animator.GetLayerWeight(2), 0, Time.deltaTime * SwimEnterSpeed));
+                animator.SetLayerWeight(2, Mathf.Lerp(animator.GetLayerWeight(2), -0.2f, Time.deltaTime * SwimEnterSpeed));
             }
         }
+
     }
+
+
 
 }

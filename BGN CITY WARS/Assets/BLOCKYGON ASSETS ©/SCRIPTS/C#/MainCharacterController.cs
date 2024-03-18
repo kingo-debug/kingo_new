@@ -89,9 +89,6 @@ public class MainCharacterController : MonoBehaviour
         }
 
         FreeMode();
-
-
-
     }
 
 
@@ -290,6 +287,7 @@ public class MainCharacterController : MonoBehaviour
                         aimik.GetIKSolver().SetIKPositionWeight(0);
                         lookik.GetIKSolver().SetIKPositionWeight(0);
                         actionsVar.IsAiming = false;
+                      GetComponent<ScopingManager>().ScopeOff();
 
 
                     }
@@ -300,6 +298,7 @@ public class MainCharacterController : MonoBehaviour
                         aimik.GetIKSolver().SetIKPositionWeight(.8f);
                         lookik.GetIKSolver().SetIKPositionWeight(0.8f);
                         actionsVar.IsAiming = true;
+                        GetComponent<ScopingManager>().ScopeOn();
 
                     }
                 }
@@ -315,8 +314,9 @@ public class MainCharacterController : MonoBehaviour
                 aimik.GetIKSolver().SetIKPositionWeight(0);
                 lookik.GetIKSolver().SetIKPositionWeight(0);
                 actionsVar.IsAiming = false;
+                GetComponent<ScopingManager>().ScopeOff();
 
-            }
+                }
         }
 
     }
