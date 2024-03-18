@@ -136,6 +136,7 @@ public class MainCharacterController : MonoBehaviour
         if (Combatmode)
         {
             CombatMode();
+         
 
         }
         else
@@ -166,7 +167,7 @@ public class MainCharacterController : MonoBehaviour
 
         transform.forward = (SmoothRotation);
         #endregion
-
+        actionsVar.Combat = Combatmode;
     }
 
     void FreeMode()
@@ -228,6 +229,8 @@ public class MainCharacterController : MonoBehaviour
 
         #endregion
 
+        actionsVar.Combat = Combatmode;
+
 
     }
 
@@ -287,7 +290,11 @@ public class MainCharacterController : MonoBehaviour
                         aimik.GetIKSolver().SetIKPositionWeight(0);
                         lookik.GetIKSolver().SetIKPositionWeight(0);
                         actionsVar.IsAiming = false;
-                      GetComponent<ScopingManager>().ScopeOff();
+                        if (weaponstatus.CurrentWeapon.GetComponent<WeaponType>().Scope)
+                        {
+                            GetComponent<ScopingManager>().ScopeOff();
+                        }
+
 
 
                     }
@@ -319,7 +326,12 @@ public class MainCharacterController : MonoBehaviour
                 aimik.GetIKSolver().SetIKPositionWeight(0);
                 lookik.GetIKSolver().SetIKPositionWeight(0);
                 actionsVar.IsAiming = false;
-                GetComponent<ScopingManager>().ScopeOff();
+
+                if (weaponstatus.CurrentWeapon.GetComponent<WeaponType>().Scope)
+                    {
+                        GetComponent<ScopingManager>().ScopeOff();
+                    }
+                       
                   
 
 

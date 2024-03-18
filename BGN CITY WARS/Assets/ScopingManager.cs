@@ -5,6 +5,7 @@ public class ScopingManager : MonoBehaviour
     [SerializeField]
     private GameObject PlayerMesh;
     public GameObject WeaponMesh;
+    public bool CanScope;
 
     [SerializeField]
     private GameObject ScopeUI;
@@ -35,10 +36,6 @@ public class ScopingManager : MonoBehaviour
         }
 
     }
-    private void Start()
-    {
 
-  
-    }
 
 }

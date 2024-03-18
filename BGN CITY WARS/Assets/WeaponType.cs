@@ -27,10 +27,13 @@ public class WeaponType : MonoBehaviour
         animator.SetInteger("WeaponType", Weapontype);
         Crosshiars = GameObject.Find("CROSSHAIRS").transform;
         Invoke("UpdateReticle", 0.1f);
-        if(Scope)
+        transform.root.transform.GetChild(0).GetComponent<ScopingManager>().CanScope = Scope;
+        if (Scope)
         {
         transform.root.GetChild(0).GetComponent<ScopingManager>().WeaponMesh = transform.GetChild(0).transform.Find("BODY").gameObject;
+
         }
+
 
 
 
