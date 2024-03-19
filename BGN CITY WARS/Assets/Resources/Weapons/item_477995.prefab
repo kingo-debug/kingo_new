@@ -53,18 +53,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e64487113c1978438e49837bcfe77ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RocketWeapon: {fileID: 0}
-  rocketPrefab: {fileID: 0}
+  RocketWeapon: {fileID: 11400000, guid: 32e59fe3eb611d543bdc21e8b1cf7e5b, type: 2}
+  rocketPrefab: {fileID: 7028547478874290931, guid: 3ab2d00b111402e4f8f850eebd34d0d4, type: 3}
   launchPoint: {fileID: 0}
-  launchForce: 500
-  fireRate: 0
+  launchForce: 65
+  fireRate: 2.56
   canfire: 1
   weapontype: 0
   Fired: 0
-  RocketsFired: 0
-  currentclip: 0
-  totalammo: 0
-  noammo: 1
+  RocketsFired: 112
+  currentclip: 4
+  totalammo: 181
+  noammo: 0
   Reloading: 0
   SmokeVFX: {fileID: 0}
   crosshair: {fileID: 0}
@@ -164,6 +164,8 @@ MonoBehaviour:
   WeaponName: 
   WeaponPFP: {fileID: 0}
   Weapontype: 0
+  ReticleType: 0
+  Scope: 0
 --- !u!114 &-636743612384669427
 MonoBehaviour:
   m_ObjectHideFlags: 0
