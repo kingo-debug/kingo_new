@@ -14322,18 +14322,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _data:
     _json: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"FIRE
-      RECOIL","value":{"x":50.0,"y":50.0,"$type":"UnityEngine.Vector2"},"typeHandle":{"Identification":null,"$version":"A"},"$version":"A"},{"name":"DEFAULT
-      RECOIL","value":{"x":40.0,"y":40.0,"$type":"UnityEngine.Vector2"},"typeHandle":{"Identification":null,"$version":"A"},"$version":"A"},{"name":"MOVE
-      RETICLE","value":{"x":15.0,"y":15.0,"$type":"UnityEngine.Vector2"},"typeHandle":{"Identification":null,"$version":"A"},"$version":"A"},{"name":"FMC
-      RETICLE","value":{"x":25.0,"y":25.0,"$type":"UnityEngine.Vector2"},"typeHandle":{"Identification":null,"$version":"A"},"$version":"A"},{"name":"AMC
-      RETICLE","value":{"x":70.0,"y":70.0,"$type":"UnityEngine.Vector2"},"typeHandle":{"Identification":null,"$version":"A"},"$version":"A"},{"name":"CMC
-      RETICLE","value":{"x":50.0,"y":50.0,"$type":"UnityEngine.Vector2"},"typeHandle":{"Identification":null,"$version":"A"},"$version":"A"},{"name":"RETICLE
-      TYPE","value":{"$content":"ROCKET RETICLE","$type":"System.String"},"typeHandle":{"Identification":null,"$version":"A"},"$version":"A"},{"name":"CMC
-      SPEED","value":{"$content":0.0,"$type":"System.Single"},"typeHandle":{"Identification":null,"$version":"A"},"$version":"A"},{"name":"FMC
-      SPEED","value":{"$content":3.8,"$type":"System.Single"},"typeHandle":{"Identification":null,"$version":"A"},"$version":"A"},{"name":"WEAPON
-      UI","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":null,"$version":"A"},"$version":"A"},{"name":"WEAPON
-      TYPE","value":{"$content":3,"$type":"System.Int32"},"typeHandle":{"Identification":null,"$version":"A"},"$version":"A"},{"name":"SCOPE","value":{"$content":false,"$type":"System.Boolean"},"typeHandle":{"Identification":null,"$version":"A"},"$version":"A"},{"name":"RARITY","value":{"$content":"CHRONIC","$type":"System.String"},"typeHandle":{"Identification":null,"$version":"A"},"$version":"A"},{"name":"Melee","value":{"$content":false,"$type":"System.Boolean"},"typeHandle":{"Identification":null,"$version":"A"},"$version":"A"},{"name":"INVENTORY
-      SLOT","value":{"$content":"i:4","$type":"System.String"},"typeHandle":{"Identification":null,"$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+      RECOIL","value":{"x":50.0,"y":50.0,"$type":"UnityEngine.Vector2"},"typeHandle":{"Identification":"UnityEngine.Vector2,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"DEFAULT
+      RECOIL","value":{"x":40.0,"y":40.0,"$type":"UnityEngine.Vector2"},"typeHandle":{"Identification":"UnityEngine.Vector2,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"MOVE
+      RETICLE","value":{"x":15.0,"y":15.0,"$type":"UnityEngine.Vector2"},"typeHandle":{"Identification":"UnityEngine.Vector2,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"FMC
+      RETICLE","value":{"x":25.0,"y":25.0,"$type":"UnityEngine.Vector2"},"typeHandle":{"Identification":"UnityEngine.Vector2,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"AMC
+      RETICLE","value":{"x":70.0,"y":70.0,"$type":"UnityEngine.Vector2"},"typeHandle":{"Identification":"UnityEngine.Vector2,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"CMC
+      RETICLE","value":{"x":50.0,"y":50.0,"$type":"UnityEngine.Vector2"},"typeHandle":{"Identification":"UnityEngine.Vector2,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"RETICLE
+      TYPE","value":{"$content":"ROCKET RETICLE","$type":"System.String"},"typeHandle":{"Identification":"System.String,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"CMC
+      SPEED","value":{"$content":0.0,"$type":"System.Single"},"typeHandle":{"Identification":"System.Single,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"FMC
+      SPEED","value":{"$content":3.8,"$type":"System.Single"},"typeHandle":{"Identification":"System.Single,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"WEAPON
+      UI","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.Sprite,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"WEAPON
+      TYPE","value":{"$content":3,"$type":"System.Int32"},"typeHandle":{"Identification":"System.Int32,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"SCOPE","value":{"$content":false,"$type":"System.Boolean"},"typeHandle":{"Identification":"System.Boolean,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"RARITY","value":{"$content":"CHRONIC","$type":"System.String"},"typeHandle":{"Identification":"System.String,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"Melee","value":{"$content":false,"$type":"System.Boolean"},"typeHandle":{"Identification":"System.Boolean,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"INVENTORY
+      SLOT","value":{"$content":"i:4","$type":"System.String"},"typeHandle":{"Identification":"System.String,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 21300000, guid: fa87b34f7dc59a64c95fc40ebb2c4e8b, type: 3}
 --- !u!114 &2744358314529681123
@@ -14401,9 +14416,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bf03735980ac2e4fbe540f618673502, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WeaponName: 
-  WeaponPFP: {fileID: 0}
+  WeaponName: military
+  WeaponPFP: {fileID: 21300000, guid: fa87b34f7dc59a64c95fc40ebb2c4e8b, type: 3}
   Weapontype: 0
+  ReticleType: 0
+  Scope: 0
 --- !u!114 &4339730538231821587
 MonoBehaviour:
   m_ObjectHideFlags: 0

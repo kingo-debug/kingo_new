@@ -123,6 +123,7 @@ public class TakeDamage : MonoBehaviour
         if(pv.IsMine&& HP<1&& CanDie)
         {
             Dead = true;
+            animator.SetLayerWeight(3, 1f);
             animator.SetBool("DEAD", true);
             DieUi.SetActive(true);
 
@@ -137,6 +138,7 @@ public class TakeDamage : MonoBehaviour
             yield return new WaitForSeconds(RespawnTime);
 
             Dead = false;
+            animator.SetLayerWeight(3, 1f);
             animator.SetBool("DEAD", false);
 
             if (TryGetComponent<MainCharacterController>(out mainCharacterController))
