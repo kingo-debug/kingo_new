@@ -30,6 +30,7 @@ public class WeaponRecoil : MonoBehaviour
             recttransform.sizeDelta = Vector2.Lerp(recttransform.sizeDelta, DefaultReticleSize,Time.deltaTime* RecoilCoolDownSpeed);
             
         }
+
     }
     public void AddReticleRecoid()
     {

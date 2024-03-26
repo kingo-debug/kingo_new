@@ -5332,7 +5332,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f6b635b5c4f1a540ac1ac063e79b151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DefaultReticleSize: {x: 0, y: 0}
+  DefaultReticleSize: {x: -30, y: -30}
+  ReticleRecoilAmount: {x: -50, y: -50}
+  RecoilCoolDownSpeed: 1.5
+  SpreadSpeed: 20
 --- !u!1 &3155694809895205082
 GameObject:
   m_ObjectHideFlags: 0
