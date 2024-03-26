@@ -5015,6 +5015,7 @@ GameObject:
   - component: {fileID: 8301319463140567370}
   - component: {fileID: 7974759447167129766}
   - component: {fileID: 2660289304864789145}
+  - component: {fileID: 6027529781833821261}
   m_Layer: 0
   m_Name: item_477595
   m_TagString: weapon/active
@@ -5305,6 +5306,7 @@ MonoBehaviour:
   WeaponPFP: {fileID: 0}
   Weapontype: 0
   ReticleType: 1
+  Scope: 0
 --- !u!114 &2660289304864789145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5318,6 +5320,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InventorySlot: 2
+--- !u!114 &6027529781833821261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2756809065339087750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f6b635b5c4f1a540ac1ac063e79b151, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DefaultReticleSize: {x: 0, y: 0}
 --- !u!1 &3155694809895205082
 GameObject:
   m_ObjectHideFlags: 0
