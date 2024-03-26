@@ -88,6 +88,8 @@ public class WeaponShoot : MonoBehaviour
     [Header("Recoil")]
     [SerializeField]
     private Transform DefaultReticle;
+    [SerializeField]
+    private WeaponRecoil RecoilManager;
 
     //pun variables
     [Header("Debugs")]
@@ -301,6 +303,9 @@ public class WeaponShoot : MonoBehaviour
         Parentvariables.Fired = true;
         Parentanimator.SetBool("shoot", true);
         FireVFX.SetActive(true);
+        #endregion
+        #region Reticle Recoils
+        RecoilManager.AddReticleRecoid();
         #endregion
 
         //track shots fired
