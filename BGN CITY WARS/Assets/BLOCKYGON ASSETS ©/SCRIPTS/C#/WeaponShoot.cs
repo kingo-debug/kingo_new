@@ -698,7 +698,7 @@ public class WeaponShoot : MonoBehaviour
         AmmoMessage.color = Color.white;    AmmoMessage.text= ("Reloading..");  
 
 
-                // Calculate reload time based on the inverse of WeaponType.ReloadSpeed
+        // Calculate reload time based on the inverse of WeaponType.ReloadSpeed
         float reloadTime = 1.0f / ReloadTime;
 
     yield return new WaitForSeconds(reloadTime);
@@ -708,7 +708,7 @@ public class WeaponShoot : MonoBehaviour
         currentclip += totalammo;
         totalammo -= BulletsFired;
         BulletsFired = 0;
-        Reloading = false;          PlayerParent.GetComponent<PlayerActionsVar>().IsReloading = false;
+        Reloading = false;          PlayerParent.GetComponent<PlayerActionsVar>().IsReloading = false;   Parentanimator.SetBool("RELOAD", false);
             AmmoRefresh();
             UpdateAmmoUI.UpdateAmmoUIDisplay(currentclip, totalammo);
         }
