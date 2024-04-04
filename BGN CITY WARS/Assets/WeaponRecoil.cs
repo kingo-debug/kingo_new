@@ -43,13 +43,13 @@ public class WeaponRecoil : MonoBehaviour
         } //DEFAULT STATE
             else if(recttransform.sizeDelta.x != AimingReticleSize && PlayerAiming)
         {
-            recttransform.sizeDelta -= new Vector2(RecoilCoolDownSpeed, RecoilCoolDownSpeed);
+            recttransform.sizeDelta -= new Vector2(RecoilCoolDownSpeed, RecoilCoolDownSpeed)*Time.deltaTime;
 
             if (recttransform.sizeDelta.x > ReticleMaxSpread/1.75f) // Limit Max
             {
                 recttransform.sizeDelta = new Vector2(ReticleMaxSpread/1.75f, ReticleMaxSpread/1.75f);
             }
-            else if (recttransform.sizeDelta.x < DefaultReticleSize) // LimitMin)
+            else if (recttransform.sizeDelta.x < AimingReticleSize) // LimitMin)
             {
                 recttransform.sizeDelta = new Vector2(AimingReticleSize, AimingReticleSize);
             }
@@ -57,6 +57,6 @@ public class WeaponRecoil : MonoBehaviour
     }
     public void AddReticleRecoid()
     {
-        recttransform.sizeDelta += new Vector2(ReticleRecoilAmount, ReticleRecoilAmount);
+        recttransform.sizeDelta += new Vector2(ReticleRecoilAmount, ReticleRecoilAmount)*Time.deltaTime;
     }
 }
