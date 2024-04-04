@@ -45,9 +45,9 @@ public class WeaponRecoil : MonoBehaviour
         {
             recttransform.sizeDelta -= new Vector2(RecoilCoolDownSpeed, RecoilCoolDownSpeed);
 
-            if (recttransform.sizeDelta.x > ReticleMaxSpread) // Limit Max
+            if (recttransform.sizeDelta.x > ReticleMaxSpread/1.75f) // Limit Max
             {
-                recttransform.sizeDelta = new Vector2(ReticleMaxSpread, ReticleMaxSpread);
+                recttransform.sizeDelta = new Vector2(ReticleMaxSpread/1.75f, ReticleMaxSpread/1.75f);
             }
             else if (recttransform.sizeDelta.x < DefaultReticleSize) // LimitMin)
             {
