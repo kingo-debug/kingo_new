@@ -287,9 +287,11 @@ public class MainCharacterController : MonoBehaviour
                     {
                         ISAiming = false;
                         animator.SetBool("IS AIMING", false);
+                        weaponstatus.CurrentWeapon.GetComponent<WeaponRecoil>().PlayerAiming = false;
                         aimik.GetIKSolver().SetIKPositionWeight(0);
                         lookik.GetIKSolver().SetIKPositionWeight(0);
                         actionsVar.IsAiming = false;
+         
                         if (weaponstatus.CurrentWeapon.GetComponent<WeaponType>().Scope)
                         {
                             GetComponent<ScopingManager>().ScopeOff();
@@ -299,6 +301,7 @@ public class MainCharacterController : MonoBehaviour
                     else
                     {
                         ISAiming = true;
+                        weaponstatus.CurrentWeapon.GetComponent<WeaponRecoil>().PlayerAiming = true;
                         animator.SetBool("IS AIMING", true);
                         aimik.GetIKSolver().SetIKPositionWeight(.8f);
                         lookik.GetIKSolver().SetIKPositionWeight(0.8f);
@@ -320,6 +323,7 @@ public class MainCharacterController : MonoBehaviour
             else if (actionsVar.IsReloading)
             {
                 ISAiming = false;
+                weaponstatus.CurrentWeapon.GetComponent<WeaponRecoil>().PlayerAiming = false;
                 animator.SetBool("IS AIMING", false);
                 aimik.GetIKSolver().SetIKPositionWeight(0);
                 lookik.GetIKSolver().SetIKPositionWeight(0);
