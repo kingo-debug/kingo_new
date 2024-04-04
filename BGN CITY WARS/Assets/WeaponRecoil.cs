@@ -6,18 +6,20 @@ public class WeaponRecoil : MonoBehaviour
     // Start is called before the first frame update
     private WeaponType weapontype;
     private Transform Reticle;
-    public Vector2 DefaultReticleSize;
-    public Vector2 AimingReticleSize;
-    public Vector2 ReticleRecoilAmount;
+    public float DefaultReticleSize;
+    public float AimingReticleSize;
+    public float ReticleRecoilAmount;
     private RectTransform recttransform;
     public float RecoilCoolDownSpeed;
     public float SpreadSpeed;
     public bool PlayerAiming = false;
+
+    public float DebugRectmag;
     private void OnEnable()
     {
         weapontype = GetComponent<WeaponType>();
         Reticle = GameObject.Find("CROSSHAIRS").transform.GetChild(weapontype.ReticleType).GetChild(0);
-        Reticle.GetComponent<RectTransform>().sizeDelta = DefaultReticleSize;
+        Reticle.GetComponent<RectTransform>().sizeDelta = new Vector2( DefaultReticleSize, DefaultReticleSize);
     }
     void Start()
     {
@@ -27,19 +29,19 @@ public class WeaponRecoil : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-     if (recttransform.sizeDelta !=  DefaultReticleSize&& !PlayerAiming)
+        DebugRectmag = recttransform.sizeDelta.x;
+     if (recttransform.sizeDelta.x <  DefaultReticleSize&& !PlayerAiming)
         {
-            recttransform.sizeDelta = Vector2.Lerp(recttransform.sizeDelta, DefaultReticleSize,Time.deltaTime* RecoilCoolDownSpeed);
-            
-        }
-     else
-        {
-            recttransform.sizeDelta = Vector2.Lerp(recttransform.sizeDelta, DefaultReticleSize + AimingReticleSize, Time.deltaTime * 7f);
+            recttransform.sizeDelta += new Vector2(RecoilCoolDownSpeed, RecoilCoolDownSpeed) * Time.deltaTime;
 
+        }
+     else if(PlayerAiming && recttransform.sizeDelta.magnitude < AimingReticleSize )
+        {
+             recttransform.sizeDelta += new Vector2(RecoilCoolDownSpeed, RecoilCoolDownSpeed) * Time.deltaTime;
         }
     }
     public void AddReticleRecoid()
     {
-        recttransform.sizeDelta -= ReticleRecoilAmount * Time.deltaTime*SpreadSpeed;
+        recttransform.sizeDelta += new Vector2 (ReticleRecoilAmount ,ReticleRecoilAmount)* Time.deltaTime*SpreadSpeed;
     }
 }
