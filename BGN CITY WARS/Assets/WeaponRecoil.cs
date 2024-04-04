@@ -13,6 +13,7 @@ public class WeaponRecoil : MonoBehaviour
     public float RecoilCoolDownSpeed;
     public float SpreadSpeed;
     public bool PlayerAiming = false;
+    public float ReticleMaxSpread;
 
     public float DebugRectmag;
     private void OnEnable()
@@ -30,10 +31,19 @@ public class WeaponRecoil : MonoBehaviour
     void Update()
     {
         DebugRectmag = recttransform.sizeDelta.x;
-     if (recttransform.sizeDelta.x <  DefaultReticleSize&& !PlayerAiming)
+    
+            if (recttransform.sizeDelta.x != DefaultReticleSize&& !PlayerAiming)
         {
-            recttransform.sizeDelta += new Vector2(RecoilCoolDownSpeed, RecoilCoolDownSpeed) * Time.deltaTime;
+            recttransform.sizeDelta -= new Vector2(RecoilCoolDownSpeed, RecoilCoolDownSpeed) ;
 
+            if(recttransform.sizeDelta.x > ReticleMaxSpread) // Limit Max
+            {
+                recttransform.sizeDelta = new Vector2(ReticleMaxSpread, ReticleMaxSpread);
+            }
+            else if(recttransform.sizeDelta.x < DefaultReticleSize) // LimitMin)
+            {
+                recttransform.sizeDelta = new Vector2(DefaultReticleSize, DefaultReticleSize);
+            }
         }
      else if(PlayerAiming && recttransform.sizeDelta.magnitude < AimingReticleSize )
         {
@@ -42,6 +52,6 @@ public class WeaponRecoil : MonoBehaviour
     }
     public void AddReticleRecoid()
     {
-        recttransform.sizeDelta += new Vector2 (ReticleRecoilAmount ,ReticleRecoilAmount)* Time.deltaTime*SpreadSpeed;
+        recttransform.sizeDelta += new Vector2(ReticleRecoilAmount, ReticleRecoilAmount);
     }
 }
