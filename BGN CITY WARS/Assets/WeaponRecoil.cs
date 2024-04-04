@@ -43,7 +43,7 @@ public class WeaponRecoil : MonoBehaviour
         } //DEFAULT STATE
             else if(recttransform.sizeDelta.x != AimingReticleSize && PlayerAiming)
         {
-            recttransform.sizeDelta -= new Vector2(RecoilCoolDownSpeed, RecoilCoolDownSpeed)*Time.deltaTime;
+            recttransform.sizeDelta -= new Vector2(RecoilCoolDownSpeed, RecoilCoolDownSpeed);
 
             if (recttransform.sizeDelta.x > ReticleMaxSpread/1.75f) // Limit Max
             {
