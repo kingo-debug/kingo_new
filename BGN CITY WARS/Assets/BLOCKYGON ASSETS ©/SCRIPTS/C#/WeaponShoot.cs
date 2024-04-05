@@ -81,6 +81,7 @@ public class WeaponShoot : MonoBehaviour
     [SerializeField]
     private GameObject FireVFX; 
     private GameObject CameraMain;
+    private CameraAddOns CamAddons;
     private GameObject ScopeUI;
     private Animator ScopeAnimator;
     private Animator Parentanimator;
@@ -187,6 +188,7 @@ public class WeaponShoot : MonoBehaviour
         AmmoMessage = GameObject.Find("AMMO MESSAGE").GetComponent<TextMeshProUGUI>();
         Shootpoint = GameObject.FindGameObjectWithTag("ShootPoint").transform;
         CameraMain = Camera.main.gameObject;   pos = CameraMain.transform.GetChild(2);
+        CamAddons = CameraMain.GetComponent<CameraAddOns>();
         SyncFireAnim();
         Parentanimator.SetFloat("ReloadSpeed", ReloadTime * 2.5f);
 
@@ -306,6 +308,9 @@ public class WeaponShoot : MonoBehaviour
         #endregion
         #region Reticle Recoils
         RecoilManager.AddReticleRecoid();
+        #endregion
+        #region CamShakes
+        CamAddons.AddFireRecoil();
         #endregion
 
         //track shots fired
