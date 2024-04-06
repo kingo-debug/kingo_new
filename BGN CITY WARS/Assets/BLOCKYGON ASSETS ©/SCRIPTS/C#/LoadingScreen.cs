@@ -11,15 +11,7 @@ public class LoadingScreen : MonoBehaviour
     // The scene to load (you can set this in the Unity editor)
     public string sceneToLoad;
 
-    void Start()
-    {
-        // Assuming you have a button or trigger to start the loading
-        // For example, you can call this method from a button click
-        // or trigger it in another way that suits your game logic.
-        LoadSceneAsync();
-    }
-
-    void LoadSceneAsync()
+   public void LoadSceneAsync()
     {
         StartCoroutine(LoadSceneAsyncCoroutine());
     }
