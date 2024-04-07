@@ -340,7 +340,7 @@ public class MainCharacterController : MonoBehaviour
                 }
         }
 
-    }
+    }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
 
     public void StopAim()
     {
