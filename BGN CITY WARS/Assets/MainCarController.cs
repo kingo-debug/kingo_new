@@ -81,40 +81,41 @@ public class MainCarController : MonoBehaviour
         // Inputs forward drive
         if (Accelerating&&grounded)
         {
-            Torque +=Acceleration * Time.deltaTime;   //DRIVE FORWARD//
+            Accelerate();
         }
-        else if(!Reversing)
-        {
-            Deaccelerate();
-        }
+  
 
-        if (Reversing && grounded)
+        if (Reversing && grounded)       //DRIVE backwards//
         {
-            Torque += ReverseSpeed * Time.deltaTime;   //DRIVE backwards//
+            Reverse();        
         }
-        else if (!Accelerating)
-        {
-            Deaccelerate();
-        }
-        if (Input.GetKey(KeyCode.A)&& grounded&& MPH>2)
-        {      
-        transform.Rotate(0,-SteerDirection* MinSteerSpeed * Time.deltaTime,0); //Steer Left //
-        }
+        //   if (Input.GetKey(KeyCode.A)&& grounded&& MPH>2)
+        //   {      
+        //  transform.Rotate(0,-SteerDirection* MinSteerSpeed * Time.deltaTime,0); //Steer Left //
+        //  }
 
-     else if (Input.GetKey(KeyCode.D) && grounded && MPH > 2)
-        {
-            transform.Rotate(0, SteerDirection * MinSteerSpeed * Time.deltaTime, 0);   // Steer Right //
-        }
+        // else if (Input.GetKey(KeyCode.D) && grounded && MPH > 2)
+        //  {
+        //       transform.Rotate(0, SteerDirection * MinSteerSpeed * Time.deltaTime, 0);   // Steer Right //
+        //   }
 
-     if(Input.GetKey(KeyCode.Space) && grounded)   // braking// 
+       
+
+        if (Input.GetKey(KeyCode.Space) && grounded)               // braking// 
         {
             ApplyBrakes();
         } 
 
-           Accelerate();
-           Reverse();
+
+  
            AddGravity();
            IsGrounded();
+        
+        if(!Accelerating&&!Reversing)
+        {
+            Deaccelerate();
+        }
+      
 
     }
 
@@ -122,8 +123,8 @@ public class MainCarController : MonoBehaviour
 
     void Accelerate()
     {
-      
-            rb.AddForce(transform.forward * Torque, ForceMode.Acceleration);  
+        Torque += Acceleration * Time.deltaTime;   //DRIVE FORWARD//
+        rb.AddForce(transform.forward * Torque, ForceMode.Acceleration);  
  
     }
 
@@ -152,7 +153,9 @@ public class MainCarController : MonoBehaviour
 
     void Reverse()
     {
-        rb.AddForce(-transform.forward * Torque, ForceMode.Acceleration);
+
+        //Torque += ReverseSpeed * Time.deltaTime;   //DRIVE FORWARD//
+       // rb.AddForce(-transform.forward * Torque, ForceMode.Acceleration);
     }
 
     bool IsGrounded()
