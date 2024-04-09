@@ -37,6 +37,12 @@ scopes = {
 	"last_search.C87CA1ED" = ""
 	"OpenInspectorPreview.C87CA1ED" = "0"
 	"currentGroup.C87CA1ED" = "all"
+	"last_search.ED0D7199" = ""
+	"OpenInspectorPreview.ED0D7199" = "0"
+	"currentGroup.ED0D7199" = "all"
+	"last_search.B007E015" = "AUDIO LISTEN"
+	"OpenInspectorPreview.B007E015" = "0"
+	"currentGroup.B007E015" = "all"
 }
 providers = {
 	asset = {

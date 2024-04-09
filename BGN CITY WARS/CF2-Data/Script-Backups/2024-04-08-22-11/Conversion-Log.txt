@@ -1,0 +1,12 @@
+Converting script [1 / 1]	[\BLOCKYGON ASSETS ©\BARROWED ASSETS\Standard Assets\Vehicles\Car\Scripts\CarUserControl.cs]
+	Fragments : 3
+		[ 0] : Line:   23	InputMethod   GetAxis             	("Horizontal")
+		[ 1] : Line:   24	InputMethod   GetAxis             	("Vertical")
+		[ 2] : Line:   26	InputMethod   GetAxis             	("Jump")
+
+
+1 scripts modified!
+Overwriting actual scripts...
+	[0 / 1] from  [D:/projects/kingo_new/BGN CITY WARS/CF2-Data/Script-Backups/2024-04-08-22-11\Assets-After/\BLOCKYGON ASSETS ©\BARROWED ASSETS\Standard Assets\Vehicles\Car\Scripts\CarUserControl.cs] to [D:/projects/kingo_new/BGN CITY WARS/Assets/\BLOCKYGON ASSETS ©\BARROWED ASSETS\Standard Assets\Vehicles\Car\Scripts\CarUserControl.cs]
+
+Overwriting COMPLETED!

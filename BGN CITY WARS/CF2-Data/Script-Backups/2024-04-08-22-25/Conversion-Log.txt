@@ -1,0 +1,24 @@
+Converting script [1 / 2]	[\Plugins\RootMotion\Shared Demo Assets\Scripts\Camera Controllers\CameraController.cs]
+	Fragments : 8
+		[ 0] : Line:  121	Other mod.	[Cursor.lockState]
+		[ 1] : Line:  122	Other mod.	[Cursor.visible]
+		[ 2] : Line:  125	InputMethod   GetMouseButton      	(0)
+		[ 3] : Line:  125	InputMethod   GetMouseButton      	(1)
+		[ 4] : Line:  125	InputMethod   GetMouseButton      	(2)
+		[ 5] : Line:  129	InputMethod   GetAxis             	("Mouse X")
+		[ 6] : Line:  130	InputMethod   GetAxis             	("Mouse Y")
+		[ 7] : Line:  192	InputMethod   GetAxis             	("Mouse ScrollWheel")
+
+Converting script [2 / 2]	[\Plugins\RootMotion\Shared Demo Assets\Scripts\Camera Controllers\CameraControllerFPS.cs]
+	Fragments : 3
+		[ 0] : Line:   24	Other mod.	[Cursor.lockState]
+		[ 1] : Line:   26	InputMethod   GetAxis             	("Mouse X")
+		[ 2] : Line:   27	InputMethod   GetAxis             	("Mouse Y")
+
+
+2 scripts modified!
+Overwriting actual scripts...
+	[0 / 2] from  [D:/projects/kingo_new/BGN CITY WARS/CF2-Data/Script-Backups/2024-04-08-22-25\Assets-After/\Plugins\RootMotion\Shared Demo Assets\Scripts\Camera Controllers\CameraController.cs] to [D:/projects/kingo_new/BGN CITY WARS/Assets/\Plugins\RootMotion\Shared Demo Assets\Scripts\Camera Controllers\CameraController.cs]
+	[1 / 2] from  [D:/projects/kingo_new/BGN CITY WARS/CF2-Data/Script-Backups/2024-04-08-22-25\Assets-After/\Plugins\RootMotion\Shared Demo Assets\Scripts\Camera Controllers\CameraControllerFPS.cs] to [D:/projects/kingo_new/BGN CITY WARS/Assets/\Plugins\RootMotion\Shared Demo Assets\Scripts\Camera Controllers\CameraControllerFPS.cs]
+
+Overwriting COMPLETED!
