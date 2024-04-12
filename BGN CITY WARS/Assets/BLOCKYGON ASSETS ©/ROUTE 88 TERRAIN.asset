@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c509dbaa7b6f416409e3195321a2187e, type: 3}
+  m_Name: ROUTE 88 TERRAIN
+  m_EditorClassIdentifier: 
+  PaletteLayers:
+  - {fileID: 8574412962073106934, guid: 29bdd43b8e7ca6446a457ed0bdee12d5, type: 2}
+  - {fileID: 8574412962073106934, guid: 61efc1eb8b5e72246a7ae8bb712a40c7, type: 2}
+  - {fileID: 8574412962073106934, guid: 0ea4c58c195e9674196ac6b3f2afc7ce, type: 2}
+  - {fileID: 8574412962073106934, guid: ef185b924f655ac44b0fa02e709e7a77, type: 2}

@@ -48,6 +48,8 @@ public class MainCharacterController : MonoBehaviour
     public bool isGrounded;
     [SerializeField]
     private float jumpHeight = 5f;
+    public bool Jumping = false;
+    private float JumpTime = .32f;
     public float gravity = 9.8f;
     private Vector3 velocity;
     private Animator animator;
@@ -58,6 +60,7 @@ public class MainCharacterController : MonoBehaviour
     private PlayerActionsVar actionsVar;
     private WeaponStatus weaponstatus;
     private SwimPlayerControl swimcontrols;
+    private JetPackManager jpmanager;
 
 
 
@@ -83,6 +86,7 @@ public class MainCharacterController : MonoBehaviour
         animator.SetBool("IS AIMING", false);
         swimcontrols = GetComponent<SwimPlayerControl>();
         weaponstatus = GetComponent<WeaponStatus>();
+        jpmanager = GetComponent<JetPackManager>();
         if (!PV.IsMine)
         {
             this.enabled = false; ;
@@ -247,7 +251,12 @@ public class MainCharacterController : MonoBehaviour
 
 
     }
+    IEnumerator Resetjump()
+    {
+        yield return new WaitForSeconds(JumpTime);
+        Jumping = false;
 
+    }
 
     void Jump()
     {
@@ -260,18 +269,24 @@ public class MainCharacterController : MonoBehaviour
 
             if (ControlFreak2.CF2Input.GetKey(KeyCode.Space) && isGrounded)
             {
+                Jumping = true;
+               StartCoroutine(Resetjump());
                 // Calculate the jump velocity based on jump height
                 velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
 
             }
+                // Apply gravity to pull the character down
+                velocity.y += gravity * Time.deltaTime;
 
-            // Apply gravity to pull the character down
-            velocity.y += gravity * Time.deltaTime;
+                // Move the character
+                CharController.Move(velocity * Time.deltaTime);
 
-            // Move the character
-            CharController.Move(velocity * Time.deltaTime);
         }
 
+        if (jpmanager.JetPackActive && ControlFreak2.CF2Input.GetKey(KeyCode.Space) &&!Jumping)
+        {
+            velocity.y = -0f;
+        }
 
     }
 
