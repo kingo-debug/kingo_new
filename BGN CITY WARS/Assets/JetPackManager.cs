@@ -13,11 +13,16 @@ public class JetPackManager : MonoBehaviour
     public float maxJetpackSpeed = 5f;
     public float accelerationRate = 0.1f;
 
+    [Space(20)]
     [Header("Fuel")]
     public float CurrentFuel;
     public float MaxFuel = 100f;
     public float ConsumptionSpeed = 1f;
     private float currentJetpackSpeed;
+
+    [Space(20)]
+    [Header("VFX")]
+    private GameObject AccerlateVFX;
 
     private void Start()
     {
@@ -32,9 +37,12 @@ public class JetPackManager : MonoBehaviour
         if (ControlFreak2.CF2Input.GetKey(KeyCode.Space) && !maincont.Jumping && JetPackActive&&!Charcontroller.isGrounded&& CurrentFuel >0)
         {
             AccelerateJP();
+            if (!AccerlateVFX.activeSelf)
+                AccerlateVFX.SetActive(true);
         }
         else currentJetpackSpeed = Mathf.Clamp(currentJetpackSpeed - accelerationRate * Time.deltaTime, initialJetpackSpeed, maxJetpackSpeed);
-
+        if (AccerlateVFX.activeSelf)
+            AccerlateVFX.SetActive(false) ;
     }
 
   void AccelerateJP()
@@ -51,6 +59,9 @@ public class JetPackManager : MonoBehaviour
 
     }
 
+    public void RestoreJetpackFuel()
+    {
 
+    }
 
 }
