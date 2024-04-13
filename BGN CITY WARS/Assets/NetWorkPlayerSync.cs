@@ -19,7 +19,7 @@ public class NetWorkPlayerSync : MonoBehaviour
     private camera2 Camera2;
     private Camera Playercamera;
     private TakeDamage takedamage;
-    void Start()
+    void Awake()
     {
         PV = GetComponent<PhotonView>();
         PunSerializer = GetComponent<PhotonSerializerBGN>();
