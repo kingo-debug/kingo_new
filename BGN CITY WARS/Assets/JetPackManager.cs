@@ -22,6 +22,7 @@ public class JetPackManager : MonoBehaviour
 
     [Space(20)]
     [Header("VFX")]
+    [SerializeField]
     private GameObject AccerlateVFX;
 
     private void Start()
@@ -38,11 +39,17 @@ public class JetPackManager : MonoBehaviour
         {
             AccelerateJP();
             if (!AccerlateVFX.activeSelf)
-                AccerlateVFX.SetActive(true);
+            AccerlateVFX.SetActive(true);
         }
-        else currentJetpackSpeed = Mathf.Clamp(currentJetpackSpeed - accelerationRate * Time.deltaTime, initialJetpackSpeed, maxJetpackSpeed);
-        if (AccerlateVFX.activeSelf)
-            AccerlateVFX.SetActive(false) ;
+        else
+        {
+            currentJetpackSpeed = Mathf.Clamp(currentJetpackSpeed - accelerationRate * Time.deltaTime, initialJetpackSpeed, maxJetpackSpeed);
+            if (AccerlateVFX.activeSelf)
+            AccerlateVFX.SetActive(false);
+ 
+        }
+    
+
     }
 
   void AccelerateJP()
@@ -56,12 +63,16 @@ public class JetPackManager : MonoBehaviour
         #region Fuel
         CurrentFuel = Mathf.Clamp(CurrentFuel - ConsumptionSpeed * Time.deltaTime, 0, MaxFuel);
         #endregion
-
+        if (CurrentFuel<0.1)
+        {
+            JetPackActive = false;
+        }
     }
 
     public void RestoreJetpackFuel()
     {
-
+        JetPackActive = true;
+        CurrentFuel = MaxFuel;
     }
 
 }
