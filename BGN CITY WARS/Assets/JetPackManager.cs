@@ -4,7 +4,7 @@ using System.Collections;
 public class JetPackManager : MonoBehaviour
 {
     private CharacterController Charcontroller;
-    public bool JetPackActive;
+    public bool JetPackActive = false;
 
     [SerializeField]
     private bool CanAccel = false;
@@ -25,13 +25,21 @@ public class JetPackManager : MonoBehaviour
     [SerializeField]
     private GameObject AccerlateVFX;
 
+    [SerializeField]
+    private GameObject JetPackObject;
+
+    private UIBarRefresh UIBar;
+
     private void Start()
     {
         Charcontroller = GetComponent<CharacterController>();
         maincont = GetComponent<MainCharacterController>();
         CurrentFuel = MaxFuel;
+        UIBar = GameObject.Find("JETPACK BAR").GetComponent<UIBarRefresh>();
+        UIBar.gameObject.SetActive(false);
+        UIBar.UpdateHP(Mathf.RoundToInt(CurrentFuel));
 
-}
+    }
     private void Update()
     {
 
@@ -65,14 +73,27 @@ public class JetPackManager : MonoBehaviour
         #endregion
         if (CurrentFuel<0.1)
         {
-            JetPackActive = false;
+            DisableJP();
         }
+
+        #region UI Bar
+        UIBar.UpdateHP(Mathf.RoundToInt(CurrentFuel));
+        #endregion
     }
 
     public void RestoreJetpackFuel()
     {
         JetPackActive = true;
         CurrentFuel = MaxFuel;
+        JetPackObject.SetActive(true);
+        UIBar.gameObject.SetActive(true);
     }
 
+    public void DisableJP()
+    {
+        JetPackActive = false;
+        CurrentFuel = 0;
+        JetPackObject.SetActive(false);
+        UIBar.gameObject.SetActive(false);
+    }
 }
