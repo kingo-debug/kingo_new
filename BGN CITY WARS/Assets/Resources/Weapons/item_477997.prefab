@@ -14418,8 +14418,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WeaponName: military
   WeaponPFP: {fileID: 21300000, guid: fa87b34f7dc59a64c95fc40ebb2c4e8b, type: 3}
-  Weapontype: 0
-  ReticleType: 0
+  Weapontype: 3
+  ReticleType: 3
   Scope: 0
 --- !u!114 &4339730538231821587
 MonoBehaviour:
