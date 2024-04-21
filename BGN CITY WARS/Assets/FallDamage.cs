@@ -4,6 +4,8 @@ public class FallDamage : MonoBehaviour
     private SpeedCheck Speed;
     private TakeDamage takedamage;
     [SerializeField]
+    private float MinSpeedRoll;
+    [SerializeField]
     private float MinSpeedCheck;
     [SerializeField]
     private int MinDamage;
@@ -15,31 +17,38 @@ public class FallDamage : MonoBehaviour
     private float MaxSpeedCheck;
     [SerializeField]
     private int MaxDamage;
+    private Animator animator;
 
 
     void Start()
     {
         Speed = GetComponent<SpeedCheck>();
         takedamage = GetComponent<TakeDamage>();
+        animator = GetComponent<Animator>();
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer== 0 || other.gameObject.layer== 10 || other.gameObject.layer == 4 )
         {
-
-            if (Speed.speed > MinSpeedCheck && Speed.speed < MidSpeedCheck)
+            if (Speed.speed > MinSpeedRoll && Speed.speed < MinSpeedCheck) // Just Roll
             {
-
-                CallMinDamage();
+                Roll();
             }
-            else if (Speed.speed > MidSpeedCheck && Speed.speed < MaxSpeedCheck)
+              else if (Speed.speed > MinSpeedCheck && Speed.speed < MidSpeedCheck) // min damage
+            {
+                CallMinDamage();
+               
+            }
+            else if (Speed.speed > MidSpeedCheck && Speed.speed < MaxSpeedCheck) // mid damage
             {
                 CallMidDamage();
+               
             }
-            else if (Speed.speed > MaxSpeedCheck)
+            else if (Speed.speed > MaxSpeedCheck) // maxDamage
             {
                 CallMaxDamage();
+           
             }
         }
          
@@ -58,5 +67,13 @@ public class FallDamage : MonoBehaviour
     void CallMaxDamage()
     {
         takedamage.Takedamage(MaxDamage);
+    }
+    void Roll()
+    {
+        animator.SetLayerWeight(7, 1);
+    }
+   public void ResetRoll()
+    {
+        animator.SetLayerWeight(7, 0);
     }
 }
