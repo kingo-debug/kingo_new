@@ -61,8 +61,9 @@ public class MainCharacterController : MonoBehaviour
     private WeaponStatus weaponstatus;
     private SwimPlayerControl swimcontrols;
     private JetPackManager jpmanager;
-
-
+    [Space(3)]
+    [Header("Roll System")]
+    public bool Rolling;
 
 
     #endregion
@@ -140,8 +141,7 @@ public class MainCharacterController : MonoBehaviour
         if (Combatmode)
         {
             CombatMode();
-         
-
+        
         }
         else
         {
@@ -387,7 +387,16 @@ public class MainCharacterController : MonoBehaviour
         }
     }
 
-
+    public void Roll()
+    {
+        Rolling = true;
+        animator.SetLayerWeight(7, 1);
+    }
+    public void ResetRoll()
+    {
+        animator.SetLayerWeight(7, 0);
+        Rolling = false;
+    }
 }
 
 

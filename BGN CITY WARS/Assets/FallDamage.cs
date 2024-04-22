@@ -18,6 +18,7 @@ public class FallDamage : MonoBehaviour
     [SerializeField]
     private int MaxDamage;
     private Animator animator;
+    private MainCharacterController Mainchar;
 
 
     void Start()
@@ -25,6 +26,8 @@ public class FallDamage : MonoBehaviour
         Speed = GetComponent<SpeedCheck>();
         takedamage = GetComponent<TakeDamage>();
         animator = GetComponent<Animator>();
+        Mainchar = GetComponent<MainCharacterController>();
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -33,7 +36,7 @@ public class FallDamage : MonoBehaviour
         {
             if (Speed.speed > MinSpeedRoll && Speed.speed < MinSpeedCheck) // Just Roll
             {
-                Roll();
+                Mainchar.Roll();
             }
               else if (Speed.speed > MinSpeedCheck && Speed.speed < MidSpeedCheck) // min damage
             {
@@ -68,12 +71,5 @@ public class FallDamage : MonoBehaviour
     {
         takedamage.Takedamage(MaxDamage);
     }
-    void Roll()
-    {
-        animator.SetLayerWeight(7, 1);
-    }
-   public void ResetRoll()
-    {
-        animator.SetLayerWeight(7, 0);
-    }
+ 
 }
