@@ -148,9 +148,23 @@ public class MainCharacterController : MonoBehaviour
             FreeMode();
         }
 
+        #region IK 
+        if (!ISAiming && aimik.GetIKSolver().IKPositionWeight>0)
+        {
+            StopAim();
+        }
+        #endregion
 
-
-
+        #region RollingCheck
+        if (Rolling)
+        {
+            Roll();
+        }
+        if (!Rolling && animator.GetLayerWeight(7) > 0)
+        {
+            ResetRoll();
+        }
+        #endregion
         Jump();
         Aim();
         Shoot();
@@ -301,11 +315,11 @@ public class MainCharacterController : MonoBehaviour
                     if (ISAiming)
                     {
                         ISAiming = false;
-                        animator.SetBool("IS AIMING", false);
-                        weaponstatus.CurrentWeapon.GetComponent<WeaponRecoil>().PlayerAiming = false;
-                        aimik.GetIKSolver().SetIKPositionWeight(0);
-                        lookik.GetIKSolver().SetIKPositionWeight(0);
-                        actionsVar.IsAiming = false;
+                     //   animator.SetBool("IS AIMING", false);
+                   //     weaponstatus.CurrentWeapon.GetComponent<WeaponRecoil>().PlayerAiming = false;
+                      //  aimik.GetIKSolver().SetIKPositionWeight(0);
+                       // lookik.GetIKSolver().SetIKPositionWeight(0);
+                      //  actionsVar.IsAiming = false;
          
                         if (weaponstatus.CurrentWeapon.GetComponent<WeaponType>().Scope)
                         {
@@ -338,11 +352,11 @@ public class MainCharacterController : MonoBehaviour
             else if (actionsVar.IsReloading)
             {
                 ISAiming = false;
-                weaponstatus.CurrentWeapon.GetComponent<WeaponRecoil>().PlayerAiming = false;
-                animator.SetBool("IS AIMING", false);
-                aimik.GetIKSolver().SetIKPositionWeight(0);
-                lookik.GetIKSolver().SetIKPositionWeight(0);
-                actionsVar.IsAiming = false;
+            //    weaponstatus.CurrentWeapon.GetComponent<WeaponRecoil>().PlayerAiming = false;
+              //  animator.SetBool("IS AIMING", false);
+             //   aimik.GetIKSolver().SetIKPositionWeight(0);
+             //   lookik.GetIKSolver().SetIKPositionWeight(0);
+          //      actionsVar.IsAiming = false;
 
                 if (weaponstatus.CurrentWeapon.GetComponent<WeaponType>().Scope)
                     {
@@ -360,14 +374,19 @@ public class MainCharacterController : MonoBehaviour
     public void StopAim()
     {
         ISAiming = false;
+        if (weaponstatus.CurrentWeapon.GetComponent<WeaponRecoil>()!=null)
+        {
+            weaponstatus.CurrentWeapon.GetComponent<WeaponRecoil>().PlayerAiming = false;
+        }
         animator.SetBool("IS AIMING", false);
-        aimik.GetIKSolver().SetIKPositionWeight(0);
-        lookik.GetIKSolver().SetIKPositionWeight(0);
+        aimik.GetIKSolver().SetIKPositionWeight(Mathf.Lerp(aimik.GetIKSolver().IKPositionWeight, -0.01f,Time.deltaTime*1.15f));
+        lookik.GetIKSolver().SetIKPositionWeight(Mathf.Lerp(lookik.GetIKSolver().IKPositionWeight, -0.01f, Time.deltaTime * 1.15f));
         actionsVar.IsAiming = false;
         if (weaponstatus.CurrentWeapon.GetComponent<WeaponType>().Scope)
         {
             GetComponent<ScopingManager>().ScopeOff();
         }
+
 }
 
     void Shoot()
@@ -381,23 +400,28 @@ public class MainCharacterController : MonoBehaviour
             }
             else if (!ISAiming)
             {
-                aimik.GetIKSolver().SetIKPositionWeight(0);
-                lookik.GetIKSolver().SetIKPositionWeight(0);
+                //   aimik.GetIKSolver().SetIKPositionWeight(0);
+                //  lookik.GetIKSolver().SetIKPositionWeight(0);
+                StopAim();
             }
         }
     }
 
     public void Roll()
     {
-        Rolling = true;
-        animator.SetLayerWeight(7, 1);
-        StopAim();
-        FreeMode();
+        if(!Rolling)
+        {
+            Rolling = true;
+            animator.SetLayerWeight(7, Mathf.Lerp(animator.GetLayerWeight(7), 1.1f, Time.deltaTime * 2));
+            StopAim();
+            FreeMode();
+        }
+    
 
     }
     public void ResetRoll()
     {
-        animator.SetLayerWeight(7, 0);
+        animator.SetLayerWeight(7, Mathf.Lerp(animator.GetLayerWeight(7), -0.01f, Time.deltaTime * 8));
         Rolling = false;
     }
 }

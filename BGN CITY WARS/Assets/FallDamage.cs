@@ -36,7 +36,7 @@ public class FallDamage : MonoBehaviour
         {
             if (Speed.speed > MinSpeedRoll && Speed.speed < MinSpeedCheck) // Just Roll
             {
-                Mainchar.Roll();
+                Mainchar.Rolling = true;
             }
               else if (Speed.speed > MinSpeedCheck && Speed.speed < MidSpeedCheck) // min damage
             {
