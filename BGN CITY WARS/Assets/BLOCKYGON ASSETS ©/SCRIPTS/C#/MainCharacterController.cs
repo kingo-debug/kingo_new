@@ -409,14 +409,14 @@ public class MainCharacterController : MonoBehaviour
 
     public void Roll()
     {
-
+        if(isGrounded)
+        {
             Rolling = true;
             animator.SetLayerWeight(7, Mathf.Lerp(animator.GetLayerWeight(7), 1.1f, Time.deltaTime * 8));
             animator.SetBool("ROLL", true);
             StopAim();
             FreeMode();
-  
-    
+        }
 
     }
     public void ResetRoll()

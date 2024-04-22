@@ -107,6 +107,7 @@ public class WeaponShoot : MonoBehaviour
     private GameObject HitReticleCrosshair;
     private TextMeshProUGUI AmmoMessage;
     private SwimPlayerControl swimcontrol;
+    private MainCharacterController mainCharacterController;
 
     #endregion Variables
 
@@ -195,6 +196,7 @@ public class WeaponShoot : MonoBehaviour
         Killcountupdate = GameObject.Find("KILL COUNT TEXT DISPLAY").GetComponent<UpdateKillDisplay>();
         ScoreItem = PlayerParent.GetComponent<PlayerActionsVar>().ScoreItemUI.gameObject.GetComponent<PlayerScores>();
         UpdateAmmoUI = PlayerParent.transform.Find("PLAYER Canvas").Find("WEAPON UI INFO").Find("AMMO").GetComponent<UpdateAmmoUI>();
+        mainCharacterController = PlayerParent.GetComponent<MainCharacterController>();
 
 
     }
@@ -247,7 +249,7 @@ public class WeaponShoot : MonoBehaviour
             if (ControlFreak2.CF2Input.GetMouseButton(0) == true ) // first condition
 
             { 
-               if( PV.IsMine && Time.time > lastshot + modifiedFireRate && currentclip > 0 && !Reloading && Canfire&& !swimcontrol.Swiming)
+               if( PV.IsMine && Time.time > lastshot + modifiedFireRate && currentclip > 0 && !Reloading && Canfire&& !swimcontrol.Swiming && !mainCharacterController.Rolling)
                 {
                     AS.PlayOneShot(FireSFX, 1f);
 
