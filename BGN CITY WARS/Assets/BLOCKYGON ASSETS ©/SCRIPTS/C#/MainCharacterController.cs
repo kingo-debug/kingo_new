@@ -421,9 +421,9 @@ public class MainCharacterController : MonoBehaviour
     }
     public void ResetRoll()
     {
-        animator.SetLayerWeight(7, Mathf.Lerp(animator.GetLayerWeight(7), -0.01f, Time.deltaTime * 8));
-        animator.SetBool("ROLL", false);
         Rolling = false;
+        animator.SetLayerWeight(7, Mathf.Lerp(animator.GetLayerWeight(7), -0.01f, Time.deltaTime * 7));
+        animator.SetBool("ROLL", false);
     }
 }
 

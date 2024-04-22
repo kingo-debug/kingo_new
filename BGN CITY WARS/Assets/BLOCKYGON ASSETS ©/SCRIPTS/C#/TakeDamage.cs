@@ -51,6 +51,7 @@ public class TakeDamage : MonoBehaviour
     {
         LastDamageTook = Damage;
         hurt = true;
+
         if (ActivateEvent.transform != null)
         {
             ActivateEvent.gameObject.SetActive(true);
