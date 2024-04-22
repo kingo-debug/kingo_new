@@ -267,7 +267,7 @@ public class MainCharacterController : MonoBehaviour
                 velocity.y = -2f; // Ensure you are grounded to avoid gravity accumulation
             }
 
-            if (ControlFreak2.CF2Input.GetKey(KeyCode.Space) && isGrounded)
+            if (ControlFreak2.CF2Input.GetKey(KeyCode.Space) && isGrounded&& !Rolling)
             {
                 Jumping = true;
                StartCoroutine(Resetjump());
@@ -296,7 +296,7 @@ public class MainCharacterController : MonoBehaviour
         if(PV.IsMine)
         {
             if (ControlFreak2.CF2Input.GetMouseButtonDown(1)) // first condition
-                if( !actionsVar.IsReloading && actionsVar.Weapontype > 0 && !swimcontrols.Swiming)
+                if( !actionsVar.IsReloading && actionsVar.Weapontype > 0 && !swimcontrols.Swiming&& !Rolling)
                 {
                     if (ISAiming)
                     {
@@ -374,7 +374,7 @@ public class MainCharacterController : MonoBehaviour
     {
       if (PV.IsMine)
         {
-            if (ControlFreak2.CF2Input.GetMouseButton(0) && !actionsVar.IsReloading && !weaponstatus.NoAmmo)
+            if (ControlFreak2.CF2Input.GetMouseButton(0) && !actionsVar.IsReloading && !weaponstatus.NoAmmo && !Rolling)
             {
                 aimik.GetIKSolver().SetIKPositionWeight(.8f);
                 lookik.GetIKSolver().SetIKPositionWeight(0.8f);
@@ -391,6 +391,9 @@ public class MainCharacterController : MonoBehaviour
     {
         Rolling = true;
         animator.SetLayerWeight(7, 1);
+        StopAim();
+        FreeMode();
+
     }
     public void ResetRoll()
     {
