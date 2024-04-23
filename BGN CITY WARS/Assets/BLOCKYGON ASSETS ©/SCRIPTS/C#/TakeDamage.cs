@@ -132,6 +132,8 @@ public class TakeDamage : MonoBehaviour
             if (TryGetComponent<MainCharacterController>(out mainCharacterController))
             {
                 mainCharacterController.enabled = false;
+                mainCharacterController.StopAim();
+                mainCharacterController.Combatmode = false;
             }
 
 
