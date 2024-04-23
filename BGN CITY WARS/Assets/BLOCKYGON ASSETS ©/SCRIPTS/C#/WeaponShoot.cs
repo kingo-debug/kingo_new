@@ -174,6 +174,7 @@ public class WeaponShoot : MonoBehaviour
         swimcontrol = PlayerParent.GetComponent<SwimPlayerControl>();
 
 
+
         AmmoRefresh();
 
 
@@ -684,6 +685,17 @@ public class WeaponShoot : MonoBehaviour
         if (currentclip >= MaxClip)
 
         { currentclip = MaxClip; }
+        #endregion
+
+        #region RELOADING ON SWITCH
+        if (currentclip > 0)
+        {
+            Reloading = false;
+            Parentvariables.IsReloading = false;
+        }
+        else 
+        { Reload(); }
+     
         #endregion
     }
 
