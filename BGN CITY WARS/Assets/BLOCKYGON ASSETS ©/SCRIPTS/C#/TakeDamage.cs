@@ -134,6 +134,7 @@ public class TakeDamage : MonoBehaviour
                 mainCharacterController.enabled = false;
                 mainCharacterController.StopAim();
                 mainCharacterController.Combatmode = false;
+                animator.SetBool("FIRE INPUT", false);
             }
 
 
