@@ -100,7 +100,7 @@ Material:
     m_Floats:
     - _AlphaClip: 0
     - _AlphaToMask: 0
-    - _AnimationSpeed: 0.05
+    - _AnimationSpeed: 0.15
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
     - _BumpScale: 1
@@ -133,11 +133,11 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - _AnimateTile: {r: 50, g: 50, b: 0, a: 0}
+    - _AnimateTile: {r: 50, g: 5, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _MainColor: {r: 0, g: 0.067746334, b: 0.11320752, a: 0.48235294}
-    - _OutLineColor: {r: 1, g: 1, b: 1, a: 1}
+    - _OutLineColor: {r: 450.98138, g: 450.98138, b: 450.98138, a: 0.5254902}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
   m_BuildTextureStacks: []
