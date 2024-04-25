@@ -34,14 +34,24 @@ private AudioSource AS;
         if(other.CompareTag("Player"))
         {
             Player= other.gameObject ;
-        PV.RPC("PickUP", RpcTarget.AllBuffered);
+            if(Player==other.gameObject)
+            {
+                PV.RPC("PickUP", RpcTarget.AllBuffered);
+            }
+         
         }
     }
     [PunRPC]
     void PickUP()
     {
         AS.PlayOneShot(PickupSFX);
-        Player.GetComponent<JetPackManager>().RestoreJetpackFuel();
+    
+        if(Player!=null)
+        {
+            Player.GetComponent<JetPackManager>().RestoreJetpackFuel();
+        }
+       
+        
         PickedUp = true;
         GetComponent<BoxCollider>().enabled = false;
         transform.GetChild(0).gameObject.SetActive(false);

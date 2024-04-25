@@ -3,7 +3,17 @@ guid: 1c939d3449a97044688e938eb2a1a4e7
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BASKET_BALL_FIELD
+    second: {fileID: 2100000, guid: 10a5c51c2af2b8a4094f214bc474189c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: VOLLYBALLNET
+    second: {fileID: 2100000, guid: 3327d440b8c179b42a2bb9c75cf87426, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
