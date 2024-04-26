@@ -10,16 +10,13 @@ private AudioSource AS;
     [SerializeField]
     private AudioClip PickupSFX;
     private GameObject Player;
-
-    [SerializeField]
-    float RespawnTime = 60f;
+    public bool Spawned = true;
     public bool PickedUp = false;
     private PhotonView PV;
-
-    public float RoundTime = 60.0f; // Set your countdown time in seconds here
+    public float RespawnTime = 60.0f; // Set your countdown time in seconds here
     private float currentTime;
-
     private float previousSeconds = -1;
+    
 
 
     void Start()
@@ -28,24 +25,29 @@ private AudioSource AS;
 
         Invoke("FindPlayer", 0.25f);
         PV = GetComponent<PhotonView>();
+        currentTime = RespawnTime;
     }
 
     private void Update()
     {
-        currentTime -= Time.deltaTime;
-
-        float seconds = Mathf.RoundToInt(currentTime % 60);
-
-        if (seconds != previousSeconds)
+        if(!Spawned)
         {
-            float minutes = Mathf.Floor(currentTime / 60);
-            previousSeconds = seconds;
-        }
+            currentTime -= Time.deltaTime;
 
-        if (currentTime <= 0)
-        {
-            PV.RPC("RespawnLoot",RpcTarget.AllBufferedViaServer);
+            float seconds = Mathf.RoundToInt(currentTime % 60);
+
+            if (seconds != previousSeconds)
+            {
+                float minutes = Mathf.Floor(currentTime / 60);
+                previousSeconds = seconds;
+            }
+
+            if (currentTime <= 0)
+            {
+                PV.RPC("RespawnLoot", RpcTarget.AllBufferedViaServer);
+            }
         }
+    
     }
 
     private void OnTriggerEnter(Collider other)
@@ -63,19 +65,19 @@ private AudioSource AS;
     [PunRPC]
     void PickUP()
     {
-        AS.PlayOneShot(PickupSFX);
-    
+        AS.PlayOneShot(PickupSFX);  
         if(Player!=null)
         {
            // Player.GetComponent<JetPackManager>().RestoreJetpackFuel();
             Player.GetPhotonView().RPC("RestoreJetpackFuel", RpcTarget.AllBufferedViaServer);
-        }
-       
-        
+        }    
         PickedUp = true;
         GetComponent<BoxCollider>().enabled = false;
         transform.GetChild(0).gameObject.SetActive(false);
-     
+        Spawned = false;
+        currentTime = RespawnTime;
+
+
 
     }
    [PunRPC]
@@ -84,6 +86,10 @@ private AudioSource AS;
         PickedUp = false;
         GetComponent<BoxCollider>().enabled = true;
         transform.GetChild(0).gameObject.SetActive(true);
+        currentTime = RespawnTime;
+        Spawned = true;
+
+
     }
     void FindPlayer()
     {
