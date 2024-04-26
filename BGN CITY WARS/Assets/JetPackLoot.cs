@@ -36,7 +36,7 @@ private AudioSource AS;
             Player= other.gameObject ;
             if(Player==other.gameObject)
             {
-                PV.RPC("PickUP", RpcTarget.AllBuffered);
+                PV.RPC("PickUP", RpcTarget.All);
             }
          
         }
@@ -48,7 +48,8 @@ private AudioSource AS;
     
         if(Player!=null)
         {
-            Player.GetComponent<JetPackManager>().RestoreJetpackFuel();
+           // Player.GetComponent<JetPackManager>().RestoreJetpackFuel();
+            Player.GetPhotonView().RPC("RestoreJetpackFuel", RpcTarget.All);
         }
        
         
