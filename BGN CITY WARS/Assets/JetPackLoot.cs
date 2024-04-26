@@ -26,6 +26,7 @@ private AudioSource AS;
         Invoke("FindPlayer", 0.25f);
         PV = GetComponent<PhotonView>();
         currentTime = RespawnTime;
+        Spawned = true;
     }
 
     private void Update()
