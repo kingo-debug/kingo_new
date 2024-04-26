@@ -15,7 +15,11 @@ private AudioSource AS;
     float RespawnTime = 60f;
     public bool PickedUp = false;
     private PhotonView PV;
-  
+
+    public float RoundTime = 60.0f; // Set your countdown time in seconds here
+    private float currentTime;
+
+    private float previousSeconds = -1;
 
 
     void Start()
@@ -24,10 +28,25 @@ private AudioSource AS;
 
         Invoke("FindPlayer", 0.25f);
         PV = GetComponent<PhotonView>();
-
-
     }
 
+    private void Update()
+    {
+        currentTime -= Time.deltaTime;
+
+        float seconds = Mathf.RoundToInt(currentTime % 60);
+
+        if (seconds != previousSeconds)
+        {
+            float minutes = Mathf.Floor(currentTime / 60);
+            previousSeconds = seconds;
+        }
+
+        if (currentTime <= 0)
+        {
+            PV.RPC("RespawnLoot",RpcTarget.AllBufferedViaServer);
+        }
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -36,7 +55,7 @@ private AudioSource AS;
             Player= other.gameObject ;
             if(Player==other.gameObject)
             {
-                PV.RPC("PickUP", RpcTarget.All);
+                PV.RPC("PickUP", RpcTarget.AllBufferedViaServer);
             }
          
         }
@@ -49,14 +68,14 @@ private AudioSource AS;
         if(Player!=null)
         {
            // Player.GetComponent<JetPackManager>().RestoreJetpackFuel();
-            Player.GetPhotonView().RPC("RestoreJetpackFuel", RpcTarget.All);
+            Player.GetPhotonView().RPC("RestoreJetpackFuel", RpcTarget.AllBufferedViaServer);
         }
        
         
         PickedUp = true;
         GetComponent<BoxCollider>().enabled = false;
         transform.GetChild(0).gameObject.SetActive(false);
-        Invoke("RespawnLoot", RespawnTime);
+     
 
     }
    [PunRPC]
