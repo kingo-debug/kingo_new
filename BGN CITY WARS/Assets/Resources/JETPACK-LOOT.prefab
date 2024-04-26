@@ -98,7 +98,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3024387503546651451
 Transform:
   m_ObjectHideFlags: 0
@@ -263,8 +263,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PickupSFX: {fileID: 8300000, guid: 6a1cbce439eb7db4d8f563f3063ed101, type: 3}
-  RespawnTime: 60
+  Spawned: 0
   PickedUp: 0
+  RespawnTime: 60
 --- !u!65 &2273159456470085101
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -400,7 +401,8 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   observableSearch: 2
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 5273808237130106746}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0

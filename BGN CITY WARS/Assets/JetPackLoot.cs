@@ -1,23 +1,36 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 
-public class JetPackLoot : MonoBehaviour
+public class JetPackLoot : MonoBehaviourPunCallbacks,IPunObservable
 {
 
 private AudioSource AS;
     [SerializeField]
     private AudioClip PickupSFX;
     private GameObject Player;
-    public bool Spawned = true;
+    public bool Spawned = false;
     public bool PickedUp = false;
     private PhotonView PV;
     public float RespawnTime = 60.0f; // Set your countdown time in seconds here
     private float currentTime;
     private float previousSeconds = -1;
-    
 
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if(stream.IsWriting && PV != null)
+        {
+            stream.SendNext(currentTime); //Accelerating? this player
+            stream.SendNext(Spawned); //Spawned loot ? this player
+            stream.SendNext(PickedUp); //PickedUp loot ? this player
+        }
+
+        else
+        {
+            currentTime = (float)stream.ReceiveNext(); // other player loot currentTime?
+            Spawned = (bool)stream.ReceiveNext(); // other player  loot Spawned?
+            PickedUp = (bool)stream.ReceiveNext(); // other player  loot PickedUp?
+        }
+    }
 
     void Start()
     {
@@ -26,12 +39,16 @@ private AudioSource AS;
         Invoke("FindPlayer", 0.25f);
         PV = GetComponent<PhotonView>();
         currentTime = RespawnTime;
-        Spawned = true;
+        if(PhotonNetwork.IsMasterClient)
+        {
+            RespawnLoot();
+        }
+
     }
 
     private void Update()
     {
-        if(!Spawned)
+        if(!Spawned && PhotonNetwork.IsMasterClient)
         {
             currentTime -= Time.deltaTime;
 
@@ -43,12 +60,25 @@ private AudioSource AS;
                 previousSeconds = seconds;
             }
 
-            if (currentTime <= 0)
+            
+        }
+        else if(!PhotonNetwork.IsMasterClient)
+        {
+            if(Spawned)
             {
-                PV.RPC("RespawnLoot", RpcTarget.AllBufferedViaServer);
+                RespawnLoot();
+            }
+            else
+            {
+                GetComponent<BoxCollider>().enabled = false;
+                transform.GetChild(0).gameObject.SetActive(false);
             }
         }
-    
+        if (currentTime <= 0) // check to spawn
+        {
+            RespawnLoot();
+        }
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -60,7 +90,6 @@ private AudioSource AS;
             {
                 PV.RPC("PickUP", RpcTarget.AllBufferedViaServer);
             }
-         
         }
     }
     [PunRPC]
@@ -81,7 +110,7 @@ private AudioSource AS;
 
 
     }
-   [PunRPC]
+
     void RespawnLoot()
     {
         PickedUp = false;

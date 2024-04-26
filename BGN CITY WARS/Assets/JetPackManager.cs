@@ -42,6 +42,7 @@ public class JetPackManager : MonoBehaviourPunCallbacks,IPunObservable
         UIBar = GameObject.Find("JETPACK BAR").GetComponent<UIBarRefresh>();
         UIBar.gameObject.SetActive(false);
         UIBar.UpdateHP(Mathf.RoundToInt(CurrentFuel));
+      
     }
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info) // Sync Accel for other players
@@ -49,11 +50,13 @@ public class JetPackManager : MonoBehaviourPunCallbacks,IPunObservable
         if (stream.IsWriting && PV != null)
         {
             stream.SendNext(Accelerating); //Accelerating? this player
+            stream.SendNext(JetPackActive); //JetPackActive? this player
         }
 
         else
         {
             Accelerating = (bool)stream.ReceiveNext(); // other player Accelerating?
+            JetPackActive = (bool)stream.ReceiveNext(); // other player JetPackActive?
         }
     }
 
@@ -81,6 +84,7 @@ public class JetPackManager : MonoBehaviourPunCallbacks,IPunObservable
     }
         else if (AccerlateVFX)
         {
+            JetPackObject.SetActive(JetPackActive);
             AccerlateVFX.SetActive(Accelerating);
         }
     }
@@ -141,6 +145,7 @@ public class JetPackManager : MonoBehaviourPunCallbacks,IPunObservable
     
     }
 
+  
    
 
 }
