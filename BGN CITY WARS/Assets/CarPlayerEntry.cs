@@ -14,7 +14,7 @@ public class CarPlayerEntry : MonoBehaviour
             PlayerPV = other.GetComponent<PhotonView>();
             if(PlayerPV.IsMine)
             {
-                DoorUIButton = PlayerPV.gameObject.transform.Find("PLAYER Canvas").transform.Find("CF2-Rig").transform.Find("CarDoor").gameObject;
+                DoorUIButton = PlayerPV.gameObject.transform.Find("PLAYER Canvas").transform.Find("CF2-Rig").transform.GetChild(0).transform.Find("CarDoor").gameObject;
                 DoorUIButton.SetActive(true);
             }
         }
