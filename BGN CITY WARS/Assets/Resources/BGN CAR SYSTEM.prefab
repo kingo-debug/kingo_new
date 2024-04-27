@@ -7051,6 +7051,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c094bd0ce3a1744bae24ecd7322da05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DoorUIButton: {fileID: 0}
 --- !u!1 &3604891813536555467
 GameObject:
   m_ObjectHideFlags: 0
