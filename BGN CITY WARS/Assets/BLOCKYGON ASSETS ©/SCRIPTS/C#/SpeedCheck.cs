@@ -4,6 +4,8 @@ public class SpeedCheck : MonoBehaviour
 {
     public CharacterController characterController;
     public float speed;
+    private JetPackManager JPmanager;
+    private Animator animator;
 
     private Vector3 lastPosition;
     private float lastTime;
@@ -13,6 +15,8 @@ public class SpeedCheck : MonoBehaviour
         // Initialize the last position and time
         lastPosition = characterController.transform.position;
         lastTime = Time.time;
+        JPmanager = GetComponent<JetPackManager>();
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -31,5 +35,16 @@ public class SpeedCheck : MonoBehaviour
         // Update last position and time for the next frame
         lastPosition = currentPosition;
         lastTime = currentTime;
+        if (speed > 10 && !JPmanager.JetPackActive)
+        {
+            animator.SetBool("FALLING FAST", true);
+        }
+        else
+        {
+                animator.SetBool("FALLING FAST", false);
+        }    
+     
+        
     }
+   
 }
