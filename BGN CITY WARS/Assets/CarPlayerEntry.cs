@@ -6,6 +6,7 @@ public class CarPlayerEntry : MonoBehaviour
 {
 
     private PhotonView PlayerPV;
+    private CarController carcontroller;
     [SerializeField]
     private GameObject DoorUIButton;
     public GameObject Player;
@@ -16,12 +17,14 @@ public class CarPlayerEntry : MonoBehaviour
     private AudioClip EnterSound;
     [SerializeField]
     private AudioClip StartSound;
-    private AudioSource AS;
+
+    [SerializeField]
+    private GameObject EFX;
 
 
     private void Start()
     {
-        AS = GetComponent<AudioSource>();
+        carcontroller = GetComponent<CarController>();
     }
     void OnTriggerEnter(Collider other)
     {
@@ -63,29 +66,32 @@ public class CarPlayerEntry : MonoBehaviour
         GetComponent<CarController>().enabled = true;
         GetComponent <CarUserControl>().enabled = true;
         GetComponent<CarAudio>().enabled = true;
-        AS.PlayOneShot(EnterSound,1);      AS.PlayOneShot(StartSound,1);
+        GetComponent<AudioSource>().enabled = true;
         PlayerInCar = true;
 }
 
     public void ExitCar()
     {
         Player.transform.position = transform.Find("EXIT POINTS").transform.Find("LEFT").transform.position;
-        Player.transform.root.gameObject.SetActive(true); // Enable Player
         transform.parent.GetChild(1).gameObject.SetActive(false); // Car Cameras Disable
         transform.Find("CAR CANVAS").transform.GetChild(0).gameObject.SetActive(false); // disable car canvas
         GetComponent<CarController>().enabled = false; // disable car controller
         GetComponent<CarUserControl>().enabled = false; //disable car controls
-        GetComponent<CarAudio>().enabled = false; // disable car audio sounds
-        AS.PlayOneShot(EnterSound, 1); AS.PlayOneShot(StartSound, 1); // play exit sfx
+        Player.transform.root.gameObject.SetActive(true); // Enable Player
+        carcontroller.Move(0, 0, 50000, 50000);
+
+        GetComponent<AudioSource>().enabled = false;
+
         PlayerInCar = false;
 
     }
     private void Update()
     {
-        if(ControlFreak2.CF2Input.GetKeyDown(KeyCode.E) &&PlayerInCar)
+        if(ControlFreak2.CF2Input.GetKeyDown(KeyCode.E) && PlayerInCar)
         {
             ExitCar();
         }
+        
     }
 
 }
