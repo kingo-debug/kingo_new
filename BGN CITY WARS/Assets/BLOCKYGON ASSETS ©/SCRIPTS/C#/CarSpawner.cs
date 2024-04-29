@@ -7,8 +7,10 @@ using Photon;
 public class CarSpawner : MonoBehaviour
 
 {//SC
-
+    [Header("Vehicle Entry")]
+    public GameObject CarinRange;
     //Spawnvars
+    [Space(10)]
     [Header("Vehicle Spawn Settings")]
     public Transform VehiclePos;
 public GameObject VehicleToSpawn;
@@ -18,13 +20,9 @@ private GameObject VehichleSpawned;
 public Transform Player;
 public Vector3 OffsetCheck;
 
-
-
 //SpawnableVarslge
 
 public float BlockRadius;
-
-
 
 [SerializeField]
 private bool Blocked;
@@ -32,9 +30,6 @@ private bool Blocked;
 //MessageVars
 public GameObject MessageError;
 public KeyCode Keybind;
-
-
-
 
 public LayerMask layerMask;
     [Header("SpawnTime")]
@@ -44,9 +39,6 @@ public bool ReadyToCool = false;
 public bool ReadyToSpawn = true;
 [SerializeField]
 private bool IsSpawned = false;
-
-
-
 //level script access
 [SerializeField]
 private VehicleCoolDown vehicleCoolDown;
@@ -66,27 +58,27 @@ private VehicleCoolDown vehicleCoolDown;
     }
 
 
-
-
  void FixedUpdate() 
  
  {
    
 MessageError.SetActive(Blocked);
 
-    CheckSpawnable();
-     
-    SpawnCar();
-
+CheckSpawnable();
+CheckEntry();
+SpawnCar();
     
 
 
- }
+}
 
-
-
-
-
+    void CheckEntry()
+    {
+        if(CarinRange != null && ControlFreak2.CF2Input.GetKeyDown(KeyCode.E))
+        {
+            CarinRange.GetComponent<CarPlayerEntry>().EnterCar();
+        }
+    }
 void CheckSpawnable()
 {
 
@@ -106,22 +98,10 @@ void CheckSpawnable()
 }
 
 
-
-
-
-
 private void OnDrawGizmos()
 {
     Gizmos.DrawWireSphere(Player.position + OffsetCheck + transform.forward,BlockRadius);
 }
-
-
-
-
-
-
-
-
 
 
 
