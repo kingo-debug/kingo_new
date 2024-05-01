@@ -94,4 +94,25 @@ public class NetWorkPlayerSync : MonoBehaviour
         }
 
     }
+
+
+    [PunRPC]
+    public void DisablePlayer()
+    {
+        transform.root.gameObject.SetActive(false);
+    }
+    [PunRPC]
+    public void EnablePlayer()
+    {
+        transform.root.gameObject.SetActive(true);
+    }
+
+    public void OnDisable()
+    {
+        PV.RPC("DisablePlayer", RpcTarget.Others);
+    }
+    public void OnEnable()
+    {
+        PV.RPC("EnablePlayer", RpcTarget.Others);
+    }
 }
