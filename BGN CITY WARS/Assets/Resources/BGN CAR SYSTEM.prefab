@@ -1074,7 +1074,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5246890675479992167}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BGN CAR SYSTEM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1314,6 +1314,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5214071098199359068}
   - component: {fileID: 2584276584170608250}
+  - component: {fileID: 8856752615836153273}
   m_Layer: 0
   m_Name: HeadlighRightSpot
   m_TagString: Untagged
@@ -1398,6 +1399,29 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &8856752615836153273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791384574899008737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1 &1804925613638141655
 GameObject:
   m_ObjectHideFlags: 0
@@ -1901,7 +1925,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2933821923926700075}
   - component: {fileID: 1443092888485138036}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ColliderFront
   m_TagString: CAR
   m_Icon: {fileID: 0}
@@ -2032,7 +2056,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7533886189155902272}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2067,7 +2091,7 @@ GameObject:
   m_Component:
   - component: {fileID: 442918070667621368}
   - component: {fileID: 6785438395188966192}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ColliderBottom
   m_TagString: CAR
   m_Icon: {fileID: 0}
@@ -2327,7 +2351,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2463740965841322431}
   - component: {fileID: 1230347732925676356}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ColliderBody
   m_TagString: CAR
   m_Icon: {fileID: 0}
@@ -6387,6 +6411,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1533666972281702378}
   - component: {fileID: 4300141032003806563}
+  - component: {fileID: 2076598930053912370}
   m_Layer: 0
   m_Name: HeadlightLeftSpot
   m_TagString: Untagged
@@ -6471,6 +6496,29 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &2076598930053912370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5919115990214757398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1 &5974711181844767568
 GameObject:
   m_ObjectHideFlags: 0
@@ -6898,7 +6946,7 @@ GameObject:
   - component: {fileID: 5392402489459566571}
   - component: {fileID: 7130965328512485408}
   - component: {fileID: 2910670010552543276}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BGN CAR ROOT
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -7053,6 +7101,10 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 5392402489459566571}
+  - {fileID: 1455983818488694295}
+  - {fileID: 864503425015179813}
+  - {fileID: 5920817240967450437}
+  - {fileID: 6556056211843838299}
   - {fileID: 2408215747033407808}
   - {fileID: 5832311413271368418}
   - {fileID: 3167133864515152103}
