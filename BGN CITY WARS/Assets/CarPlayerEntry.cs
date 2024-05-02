@@ -66,6 +66,7 @@ public class CarPlayerEntry : MonoBehaviour
             GetComponent<CarController>().enabled = true;
             GetComponent<CarUserControl>().enabled = true;
             GetComponent<CarAudio>().enabled = true;
+            GetComponent<Animator>().enabled = true;
             if (TryGetComponent<AudioSource>(out AudioSource AS))
             {
                 AS.enabled = true;
@@ -80,6 +81,7 @@ public class CarPlayerEntry : MonoBehaviour
         {   
             GetComponent<CarAudio>().enabled = true;
             GetComponent<AudioSource>().enabled = true;
+            GetComponent<Animator>().enabled = true;
             PlayerInCar = true;
         }
 
@@ -97,11 +99,13 @@ public class CarPlayerEntry : MonoBehaviour
         Player.transform.root.gameObject.SetActive(true); // Enable Player
         carcontroller.Move(0, 0, 50000, 50000);
         GetComponent<AudioSource>().enabled = false;
-        PlayerInCar = false;
+            GetComponent<Animator>().enabled = false;
+            PlayerInCar = false;
         }
         else
         {           
             GetComponent<AudioSource>().enabled = false;
+            GetComponent<Animator>().enabled = false;
             PlayerInCar = false;
         }
     }
