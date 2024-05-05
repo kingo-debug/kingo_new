@@ -1,161 +1,446 @@
 fileFormatVersion: 2
 guid: ac1eea795233d3f4b8f40d531cb09a50
-timeCreated: 1524193321
-licenseType: Store
 ModelImporter:
-  serializedVersion: 21
-  fileIDToRecycleName:
-    100000: ciment
-    100002: color_1
-    100004: color_2
-    100006: color_3
-    100008: color_4
-    100010: color_5
-    100012: color_6
-    100014: door
-    100016: ground_1
-    100018: ground_2
-    100020: ground_3
-    100022: ground_4
-    100024: ground_5
-    100026: ground_6
-    100028: logo
-    100030: metal_1
-    100032: metal_2
-    100034: //RootNode
-    100036: roof
-    100038: sidewalk
-    100040: wall_1
-    100042: wall_2
-    100044: wall_3
-    100046: wall_4
-    100048: wall_5
-    100050: wall_6
-    100052: wall_7
-    100054: wood_1
-    100056: wood_2
-    400000: ciment
-    400002: color_1
-    400004: color_2
-    400006: color_3
-    400008: color_4
-    400010: color_5
-    400012: color_6
-    400014: door
-    400016: ground_1
-    400018: ground_2
-    400020: ground_3
-    400022: ground_4
-    400024: ground_5
-    400026: ground_6
-    400028: logo
-    400030: metal_1
-    400032: metal_2
-    400034: //RootNode
-    400036: roof
-    400038: sidewalk
-    400040: wall_1
-    400042: wall_2
-    400044: wall_3
-    400046: wall_4
-    400048: wall_5
-    400050: wall_6
-    400052: wall_7
-    400054: wood_1
-    400056: wood_2
-    2300000: ciment
-    2300002: color_1
-    2300004: color_2
-    2300006: color_3
-    2300008: color_4
-    2300010: color_5
-    2300012: color_6
-    2300014: door
-    2300016: ground_1
-    2300018: ground_2
-    2300020: ground_3
-    2300022: ground_4
-    2300024: ground_5
-    2300026: ground_6
-    2300028: logo
-    2300030: metal_1
-    2300032: metal_2
-    2300034: roof
-    2300036: sidewalk
-    2300038: wall_1
-    2300040: wall_2
-    2300042: wall_3
-    2300044: wall_4
-    2300046: wall_5
-    2300048: wall_6
-    2300050: wall_7
-    2300052: wood_1
-    2300054: wood_2
-    3300000: ciment
-    3300002: color_1
-    3300004: color_2
-    3300006: color_3
-    3300008: color_4
-    3300010: color_5
-    3300012: color_6
-    3300014: door
-    3300016: ground_1
-    3300018: ground_2
-    3300020: ground_3
-    3300022: ground_4
-    3300024: ground_5
-    3300026: ground_6
-    3300028: logo
-    3300030: metal_1
-    3300032: metal_2
-    3300034: roof
-    3300036: sidewalk
-    3300038: wall_1
-    3300040: wall_2
-    3300042: wall_3
-    3300044: wall_4
-    3300046: wall_5
-    3300048: wall_6
-    3300050: wall_7
-    3300052: wood_1
-    3300054: wood_2
-    4300000: ground_2
-    4300002: wall_6
-    4300004: color_5
-    4300006: color_6
-    4300008: wall_5
-    4300010: wall_4
-    4300012: sidewalk
-    4300014: ground_3
-    4300016: ground_4
-    4300018: ground_6
-    4300020: door
-    4300022: ground_1
-    4300024: wood_2
-    4300026: roof
-    4300028: wall_1
-    4300030: color_3
-    4300032: wood_1
-    4300034: color_2
-    4300036: ground_5
-    4300038: metal_2
-    4300040: color_1
-    4300042: metal_1
-    4300044: wall_7
-    4300046: logo
-    4300048: color_4
-    4300050: wall_2
-    4300052: wall_3
-    4300054: ciment
+  serializedVersion: 22200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: ciment
+  - first:
+      1: 100002
+    second: color_1
+  - first:
+      1: 100004
+    second: color_2
+  - first:
+      1: 100006
+    second: color_3
+  - first:
+      1: 100008
+    second: color_4
+  - first:
+      1: 100010
+    second: color_5
+  - first:
+      1: 100012
+    second: color_6
+  - first:
+      1: 100014
+    second: door
+  - first:
+      1: 100016
+    second: ground_1
+  - first:
+      1: 100018
+    second: ground_2
+  - first:
+      1: 100020
+    second: ground_3
+  - first:
+      1: 100022
+    second: ground_4
+  - first:
+      1: 100024
+    second: ground_5
+  - first:
+      1: 100026
+    second: ground_6
+  - first:
+      1: 100028
+    second: logo
+  - first:
+      1: 100030
+    second: metal_1
+  - first:
+      1: 100032
+    second: metal_2
+  - first:
+      1: 100034
+    second: //RootNode
+  - first:
+      1: 100036
+    second: roof
+  - first:
+      1: 100038
+    second: sidewalk
+  - first:
+      1: 100040
+    second: wall_1
+  - first:
+      1: 100042
+    second: wall_2
+  - first:
+      1: 100044
+    second: wall_3
+  - first:
+      1: 100046
+    second: wall_4
+  - first:
+      1: 100048
+    second: wall_5
+  - first:
+      1: 100050
+    second: wall_6
+  - first:
+      1: 100052
+    second: wall_7
+  - first:
+      1: 100054
+    second: wood_1
+  - first:
+      1: 100056
+    second: wood_2
+  - first:
+      4: 400000
+    second: ciment
+  - first:
+      4: 400002
+    second: color_1
+  - first:
+      4: 400004
+    second: color_2
+  - first:
+      4: 400006
+    second: color_3
+  - first:
+      4: 400008
+    second: color_4
+  - first:
+      4: 400010
+    second: color_5
+  - first:
+      4: 400012
+    second: color_6
+  - first:
+      4: 400014
+    second: door
+  - first:
+      4: 400016
+    second: ground_1
+  - first:
+      4: 400018
+    second: ground_2
+  - first:
+      4: 400020
+    second: ground_3
+  - first:
+      4: 400022
+    second: ground_4
+  - first:
+      4: 400024
+    second: ground_5
+  - first:
+      4: 400026
+    second: ground_6
+  - first:
+      4: 400028
+    second: logo
+  - first:
+      4: 400030
+    second: metal_1
+  - first:
+      4: 400032
+    second: metal_2
+  - first:
+      4: 400034
+    second: //RootNode
+  - first:
+      4: 400036
+    second: roof
+  - first:
+      4: 400038
+    second: sidewalk
+  - first:
+      4: 400040
+    second: wall_1
+  - first:
+      4: 400042
+    second: wall_2
+  - first:
+      4: 400044
+    second: wall_3
+  - first:
+      4: 400046
+    second: wall_4
+  - first:
+      4: 400048
+    second: wall_5
+  - first:
+      4: 400050
+    second: wall_6
+  - first:
+      4: 400052
+    second: wall_7
+  - first:
+      4: 400054
+    second: wood_1
+  - first:
+      4: 400056
+    second: wood_2
+  - first:
+      23: 2300000
+    second: ciment
+  - first:
+      23: 2300002
+    second: color_1
+  - first:
+      23: 2300004
+    second: color_2
+  - first:
+      23: 2300006
+    second: color_3
+  - first:
+      23: 2300008
+    second: color_4
+  - first:
+      23: 2300010
+    second: color_5
+  - first:
+      23: 2300012
+    second: color_6
+  - first:
+      23: 2300014
+    second: door
+  - first:
+      23: 2300016
+    second: ground_1
+  - first:
+      23: 2300018
+    second: ground_2
+  - first:
+      23: 2300020
+    second: ground_3
+  - first:
+      23: 2300022
+    second: ground_4
+  - first:
+      23: 2300024
+    second: ground_5
+  - first:
+      23: 2300026
+    second: ground_6
+  - first:
+      23: 2300028
+    second: logo
+  - first:
+      23: 2300030
+    second: metal_1
+  - first:
+      23: 2300032
+    second: metal_2
+  - first:
+      23: 2300034
+    second: roof
+  - first:
+      23: 2300036
+    second: sidewalk
+  - first:
+      23: 2300038
+    second: wall_1
+  - first:
+      23: 2300040
+    second: wall_2
+  - first:
+      23: 2300042
+    second: wall_3
+  - first:
+      23: 2300044
+    second: wall_4
+  - first:
+      23: 2300046
+    second: wall_5
+  - first:
+      23: 2300048
+    second: wall_6
+  - first:
+      23: 2300050
+    second: wall_7
+  - first:
+      23: 2300052
+    second: wood_1
+  - first:
+      23: 2300054
+    second: wood_2
+  - first:
+      33: 3300000
+    second: ciment
+  - first:
+      33: 3300002
+    second: color_1
+  - first:
+      33: 3300004
+    second: color_2
+  - first:
+      33: 3300006
+    second: color_3
+  - first:
+      33: 3300008
+    second: color_4
+  - first:
+      33: 3300010
+    second: color_5
+  - first:
+      33: 3300012
+    second: color_6
+  - first:
+      33: 3300014
+    second: door
+  - first:
+      33: 3300016
+    second: ground_1
+  - first:
+      33: 3300018
+    second: ground_2
+  - first:
+      33: 3300020
+    second: ground_3
+  - first:
+      33: 3300022
+    second: ground_4
+  - first:
+      33: 3300024
+    second: ground_5
+  - first:
+      33: 3300026
+    second: ground_6
+  - first:
+      33: 3300028
+    second: logo
+  - first:
+      33: 3300030
+    second: metal_1
+  - first:
+      33: 3300032
+    second: metal_2
+  - first:
+      33: 3300034
+    second: roof
+  - first:
+      33: 3300036
+    second: sidewalk
+  - first:
+      33: 3300038
+    second: wall_1
+  - first:
+      33: 3300040
+    second: wall_2
+  - first:
+      33: 3300042
+    second: wall_3
+  - first:
+      33: 3300044
+    second: wall_4
+  - first:
+      33: 3300046
+    second: wall_5
+  - first:
+      33: 3300048
+    second: wall_6
+  - first:
+      33: 3300050
+    second: wall_7
+  - first:
+      33: 3300052
+    second: wood_1
+  - first:
+      33: 3300054
+    second: wood_2
+  - first:
+      43: 4300000
+    second: ground_2
+  - first:
+      43: 4300002
+    second: wall_6
+  - first:
+      43: 4300004
+    second: color_5
+  - first:
+      43: 4300006
+    second: color_6
+  - first:
+      43: 4300008
+    second: wall_5
+  - first:
+      43: 4300010
+    second: wall_4
+  - first:
+      43: 4300012
+    second: sidewalk
+  - first:
+      43: 4300014
+    second: ground_3
+  - first:
+      43: 4300016
+    second: ground_4
+  - first:
+      43: 4300018
+    second: ground_6
+  - first:
+      43: 4300020
+    second: door
+  - first:
+      43: 4300022
+    second: ground_1
+  - first:
+      43: 4300024
+    second: wood_2
+  - first:
+      43: 4300026
+    second: roof
+  - first:
+      43: 4300028
+    second: wall_1
+  - first:
+      43: 4300030
+    second: color_3
+  - first:
+      43: 4300032
+    second: wood_1
+  - first:
+      43: 4300034
+    second: color_2
+  - first:
+      43: 4300036
+    second: ground_5
+  - first:
+      43: 4300038
+    second: metal_2
+  - first:
+      43: 4300040
+    second: color_1
+  - first:
+      43: 4300042
+    second: metal_1
+  - first:
+      43: 4300044
+    second: wall_7
+  - first:
+      43: 4300046
+    second: logo
+  - first:
+      43: 4300048
+    second: color_4
+  - first:
+      43: 4300050
+    second: wall_2
+  - first:
+      43: 4300052
+    second: wall_3
+  - first:
+      43: 4300054
+    second: ciment
+  externalObjects: {}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -163,6 +448,8 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -175,32 +462,51 @@ ModelImporter:
   meshes:
     lODScreenPercentages: []
     globalScale: 0.8
-    meshCompression: 0
+    meshCompression: 2
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 0
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
+    strictVertexDataChecks: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -210,14 +516,19 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 0.8
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 0
   humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  importBlendShapeDeformPercent: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

@@ -1,112 +1,251 @@
 fileFormatVersion: 2
 guid: b306989d6fbcfd749a7eda403a18c40b
-timeCreated: 1483933346
-licenseType: Store
 ModelImporter:
-  serializedVersion: 19
-  fileIDToRecycleName:
-    100000: espelhoDir
-    100002: espelhoEsq
-    100004: farois
-    100006: faroletes
-    100008: freios
-    100010: piscaDir
-    100012: piscaEsq
-    100014: re
-    100016: roda
-    100018: //RootNode
-    100020: volante
-    400000: espelhoDir
-    400002: espelhoEsq
-    400004: farois
-    400006: faroletes
-    400008: freios
-    400010: piscaDir
-    400012: piscaEsq
-    400014: re
-    400016: roda
-    400018: //RootNode
-    400020: volante
-    2300000: espelhoDir
-    2300002: espelhoEsq
-    2300004: farois
-    2300006: faroletes
-    2300008: freios
-    2300010: piscaDir
-    2300012: piscaEsq
-    2300014: re
-    2300016: roda
-    2300018: //RootNode
-    2300020: volante
-    3300000: espelhoDir
-    3300002: espelhoEsq
-    3300004: farois
-    3300006: faroletes
-    3300008: freios
-    3300010: piscaDir
-    3300012: piscaEsq
-    3300014: re
-    3300016: roda
-    3300018: //RootNode
-    3300020: volante
-    4300000: Vehicle3
-    4300002: roda
-    4300004: volante
-    4300006: espelhoDir
-    4300008: espelhoEsq
-    4300010: piscaEsq
-    4300012: faroletes
-    4300014: farois
-    4300016: piscaDir
-    4300018: freios
-    4300020: re
+  serializedVersion: 22200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: espelhoDir
+  - first:
+      1: 100002
+    second: espelhoEsq
+  - first:
+      1: 100004
+    second: farois
+  - first:
+      1: 100006
+    second: faroletes
+  - first:
+      1: 100008
+    second: freios
+  - first:
+      1: 100010
+    second: piscaDir
+  - first:
+      1: 100012
+    second: piscaEsq
+  - first:
+      1: 100014
+    second: re
+  - first:
+      1: 100016
+    second: roda
+  - first:
+      1: 100018
+    second: //RootNode
+  - first:
+      1: 100020
+    second: volante
+  - first:
+      4: 400000
+    second: espelhoDir
+  - first:
+      4: 400002
+    second: espelhoEsq
+  - first:
+      4: 400004
+    second: farois
+  - first:
+      4: 400006
+    second: faroletes
+  - first:
+      4: 400008
+    second: freios
+  - first:
+      4: 400010
+    second: piscaDir
+  - first:
+      4: 400012
+    second: piscaEsq
+  - first:
+      4: 400014
+    second: re
+  - first:
+      4: 400016
+    second: roda
+  - first:
+      4: 400018
+    second: //RootNode
+  - first:
+      4: 400020
+    second: volante
+  - first:
+      23: 2300000
+    second: espelhoDir
+  - first:
+      23: 2300002
+    second: espelhoEsq
+  - first:
+      23: 2300004
+    second: farois
+  - first:
+      23: 2300006
+    second: faroletes
+  - first:
+      23: 2300008
+    second: freios
+  - first:
+      23: 2300010
+    second: piscaDir
+  - first:
+      23: 2300012
+    second: piscaEsq
+  - first:
+      23: 2300014
+    second: re
+  - first:
+      23: 2300016
+    second: roda
+  - first:
+      23: 2300018
+    second: //RootNode
+  - first:
+      23: 2300020
+    second: volante
+  - first:
+      33: 3300000
+    second: espelhoDir
+  - first:
+      33: 3300002
+    second: espelhoEsq
+  - first:
+      33: 3300004
+    second: farois
+  - first:
+      33: 3300006
+    second: faroletes
+  - first:
+      33: 3300008
+    second: freios
+  - first:
+      33: 3300010
+    second: piscaDir
+  - first:
+      33: 3300012
+    second: piscaEsq
+  - first:
+      33: 3300014
+    second: re
+  - first:
+      33: 3300016
+    second: roda
+  - first:
+      33: 3300018
+    second: //RootNode
+  - first:
+      33: 3300020
+    second: volante
+  - first:
+      43: 4300000
+    second: Vehicle3
+  - first:
+      43: 4300002
+    second: roda
+  - first:
+      43: 4300004
+    second: volante
+  - first:
+      43: 4300006
+    second: espelhoDir
+  - first:
+      43: 4300008
+    second: espelhoEsq
+  - first:
+      43: 4300010
+    second: piscaEsq
+  - first:
+      43: 4300012
+    second: faroletes
+  - first:
+      43: 4300014
+    second: farois
+  - first:
+      43: 4300016
+    second: piscaDir
+  - first:
+      43: 4300018
+    second: freios
+  - first:
+      43: 4300020
+    second: re
+  externalObjects: {}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 3
-    meshCompression: 0
+    meshCompression: 2
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 0
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
+    strictVertexDataChecks: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -116,14 +255,19 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 3
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 0
   humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  importBlendShapeDeformPercent: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

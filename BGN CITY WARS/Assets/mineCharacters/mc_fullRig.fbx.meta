@@ -1,92 +1,254 @@
 fileFormatVersion: 2
 guid: 8bd310336dd38b64486e76c842ea63db
 ModelImporter:
-  serializedVersion: 22
-  fileIDToRecycleName:
-    100000: arm _L
-    100002: arm _R
-    100004: char .000
-    100006: chest
-    100008: downEyelid_Left
-    100010: downEyelid_Right
-    100012: eye
-    100014: eye_Left
-    100016: eye_Right
-    100018: eyebrow_Left
-    100020: eyebrow_Right
-    100022: face
-    100024: foot _L
-    100026: foot _R
-    100028: forearm _L
-    100030: forearm _R
-    100032: hand_L
-    100034: hand_R
-    100036: head
-    100038: 'HIPS '
-    100040: Leg _L
-    100042: Leg _R
-    100044: //RootNode
-    100046: mouth
-    100048: mouth_Left
-    100050: mouth_Left2
-    100052: mouth_Right
-    100054: mouth_Right2
-    100056: 'neck '
-    100058: shoulders _L
-    100060: shoulders _R
-    100062: spine
-    100064: upEyelid_Left
-    100066: upEyelid_Right
-    100068: UpLeg _L
-    100070: UpLeg _R
-    100072: Hips
-    100074: Spine
-    400000: arm _L
-    400002: arm _R
-    400004: char .000
-    400006: chest
-    400008: downEyelid_Left
-    400010: downEyelid_Right
-    400012: eye
-    400014: eye_Left
-    400016: eye_Right
-    400018: eyebrow_Left
-    400020: eyebrow_Right
-    400022: face
-    400024: foot _L
-    400026: foot _R
-    400028: forearm _L
-    400030: forearm _R
-    400032: hand_L
-    400034: hand_R
-    400036: head
-    400038: 'HIPS '
-    400040: Leg _L
-    400042: Leg _R
-    400044: //RootNode
-    400046: mouth
-    400048: mouth_Left
-    400050: mouth_Left2
-    400052: mouth_Right
-    400054: mouth_Right2
-    400056: 'neck '
-    400058: shoulders _L
-    400060: shoulders _R
-    400062: spine
-    400064: upEyelid_Left
-    400066: upEyelid_Right
-    400068: UpLeg _L
-    400070: UpLeg _R
-    400072: Hips
-    400074: Spine
-    2100000: char  04
-    4300000: char .000
-    9500000: //RootNode
-    13700000: char .000
-    2186277476908879412: ImportLogs
+  serializedVersion: 22200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: arm _L
+  - first:
+      1: 100002
+    second: arm _R
+  - first:
+      1: 100004
+    second: char .000
+  - first:
+      1: 100006
+    second: chest
+  - first:
+      1: 100008
+    second: downEyelid_Left
+  - first:
+      1: 100010
+    second: downEyelid_Right
+  - first:
+      1: 100012
+    second: eye
+  - first:
+      1: 100014
+    second: eye_Left
+  - first:
+      1: 100016
+    second: eye_Right
+  - first:
+      1: 100018
+    second: eyebrow_Left
+  - first:
+      1: 100020
+    second: eyebrow_Right
+  - first:
+      1: 100022
+    second: face
+  - first:
+      1: 100024
+    second: foot _L
+  - first:
+      1: 100026
+    second: foot _R
+  - first:
+      1: 100028
+    second: forearm _L
+  - first:
+      1: 100030
+    second: forearm _R
+  - first:
+      1: 100032
+    second: hand_L
+  - first:
+      1: 100034
+    second: hand_R
+  - first:
+      1: 100036
+    second: head
+  - first:
+      1: 100038
+    second: 'HIPS '
+  - first:
+      1: 100040
+    second: Leg _L
+  - first:
+      1: 100042
+    second: Leg _R
+  - first:
+      1: 100044
+    second: //RootNode
+  - first:
+      1: 100046
+    second: mouth
+  - first:
+      1: 100048
+    second: mouth_Left
+  - first:
+      1: 100050
+    second: mouth_Left2
+  - first:
+      1: 100052
+    second: mouth_Right
+  - first:
+      1: 100054
+    second: mouth_Right2
+  - first:
+      1: 100056
+    second: 'neck '
+  - first:
+      1: 100058
+    second: shoulders _L
+  - first:
+      1: 100060
+    second: shoulders _R
+  - first:
+      1: 100062
+    second: spine
+  - first:
+      1: 100064
+    second: upEyelid_Left
+  - first:
+      1: 100066
+    second: upEyelid_Right
+  - first:
+      1: 100068
+    second: UpLeg _L
+  - first:
+      1: 100070
+    second: UpLeg _R
+  - first:
+      1: 100072
+    second: Hips
+  - first:
+      1: 100074
+    second: Spine
+  - first:
+      4: 400000
+    second: arm _L
+  - first:
+      4: 400002
+    second: arm _R
+  - first:
+      4: 400004
+    second: char .000
+  - first:
+      4: 400006
+    second: chest
+  - first:
+      4: 400008
+    second: downEyelid_Left
+  - first:
+      4: 400010
+    second: downEyelid_Right
+  - first:
+      4: 400012
+    second: eye
+  - first:
+      4: 400014
+    second: eye_Left
+  - first:
+      4: 400016
+    second: eye_Right
+  - first:
+      4: 400018
+    second: eyebrow_Left
+  - first:
+      4: 400020
+    second: eyebrow_Right
+  - first:
+      4: 400022
+    second: face
+  - first:
+      4: 400024
+    second: foot _L
+  - first:
+      4: 400026
+    second: foot _R
+  - first:
+      4: 400028
+    second: forearm _L
+  - first:
+      4: 400030
+    second: forearm _R
+  - first:
+      4: 400032
+    second: hand_L
+  - first:
+      4: 400034
+    second: hand_R
+  - first:
+      4: 400036
+    second: head
+  - first:
+      4: 400038
+    second: 'HIPS '
+  - first:
+      4: 400040
+    second: Leg _L
+  - first:
+      4: 400042
+    second: Leg _R
+  - first:
+      4: 400044
+    second: //RootNode
+  - first:
+      4: 400046
+    second: mouth
+  - first:
+      4: 400048
+    second: mouth_Left
+  - first:
+      4: 400050
+    second: mouth_Left2
+  - first:
+      4: 400052
+    second: mouth_Right
+  - first:
+      4: 400054
+    second: mouth_Right2
+  - first:
+      4: 400056
+    second: 'neck '
+  - first:
+      4: 400058
+    second: shoulders _L
+  - first:
+      4: 400060
+    second: shoulders _R
+  - first:
+      4: 400062
+    second: spine
+  - first:
+      4: 400064
+    second: upEyelid_Left
+  - first:
+      4: 400066
+    second: upEyelid_Right
+  - first:
+      4: 400068
+    second: UpLeg _L
+  - first:
+      4: 400070
+    second: UpLeg _R
+  - first:
+      4: 400072
+    second: Hips
+  - first:
+      4: 400074
+    second: Spine
+  - first:
+      21: 2100000
+    second: char  04
+  - first:
+      43: 4300000
+    second: char .000
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: char .000
+  - first:
+      41386430: 2186277476908879412
+    second: ImportLogs
   externalObjects: {}
   materials:
-    importMaterials: 0
+    materialImportMode: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -95,6 +257,7 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -116,34 +279,51 @@ ModelImporter:
   meshes:
     lODScreenPercentages: []
     globalScale: 1
-    meshCompression: 0
+    meshCompression: 2
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 0
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 0
     importLights: 0
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
+    strictVertexDataChecks: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 0
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human:
     - boneName: Hips
       humanName: Hips
@@ -476,8 +656,7 @@ ModelImporter:
     - name: hand_R
       parentName: forearm _R
       position: {x: -0.00000011920929, y: 0.30730042, z: -1.3500312e-13}
-      rotation: {x: -0.000000067179386, y: -0.000000021015515, z: -4.1585853e-15,
-        w: 1}
+      rotation: {x: -0.000000067179386, y: -0.000000021015515, z: -4.1585853e-15, w: 1}
       scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
     foreArmTwist: 0.5
@@ -486,14 +665,19 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
   humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  importBlendShapeDeformPercent: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

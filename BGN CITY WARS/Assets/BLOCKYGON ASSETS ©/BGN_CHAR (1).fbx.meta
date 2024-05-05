@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: e7f24a4f51cb7554bb437ce08f72c0e8
 ModelImporter:
-  serializedVersion: 21100
+  serializedVersion: 22200
   internalIDToNameTable:
   - first:
       74: 4658424353121662922
@@ -73,66 +73,12 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
     rigImportErrors: 
-    rigImportWarnings: "Avatar Rig Configuration mis-match. Inbetween bone rotation
-      in configuration does not match rotation in animation file:\n\t'LEG_R' : rotation
-      error = 52.170815 deg\n"
+    rigImportWarnings: 
     animationImportErrors: 
-    animationImportWarnings: "\nClip 'walk backwards' has import animation warnings
-      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
-      to improve retargeting quality.\n\t'LEG_L' is inbetween humanoid transforms
-      and has rotation animation that will be discarded.\n\t'LEG_R' is inbetween
-      humanoid transforms and has rotation animation that will be discarded.\n\nClip
-      'strafe right' has import animation warnings that might lower retargeting quality:\nNote:
-      Activate translation DOF on avatar to improve retargeting quality.\n\t'LEG_L'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'LEG_R'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
-      'strafe left' has import animation warnings that might lower retargeting quality:\nNote:
-      Activate translation DOF on avatar to improve retargeting quality.\n\t'LEG_L'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'LEG_R'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
-      'STRAFE RIGHT FORWARD' has import animation warnings that might lower retargeting
-      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'LEG_L'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'LEG_R'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
-      'walk' has import animation warnings that might lower retargeting quality:\nNote:
-      Activate translation DOF on avatar to improve retargeting quality.\n\t'LEG_L'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'LEG_R'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
-      'STRAFE LEFT FORWARD' has import animation warnings that might lower retargeting
-      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'LEG_L'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'LEG_R'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
-      'backwards right' has import animation warnings that might lower retargeting
-      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'LEG_L'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'LEG_R'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
-      'backwards left' has import animation warnings that might lower retargeting
-      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'LEG_L'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'LEG_R'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
-      'BGN_IDLE' has import animation warnings that might lower retargeting quality:\nNote:
-      Activate translation DOF on avatar to improve retargeting quality.\n\t'spine3'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'SHOULDER_L'
-      has translation animation that will be discarded.\n\t'SHOULDER_R' has translation
-      animation that will be discarded.\n\nClip 'pull out small weap' has import
-      animation warnings that might lower retargeting quality:\nNote: Activate translation
-      DOF on avatar to improve retargeting quality.\n\t'SHOULDER_R' has translation
-      animation that will be discarded.\n\nClip 'pistol idle' has import animation
-      warnings that might lower retargeting quality:\nNote: Activate translation
-      DOF on avatar to improve retargeting quality.\n\t'spine3' is inbetween humanoid
-      transforms and has rotation animation that will be discarded.\n\t'SHOULDER_L'
-      has translation animation that will be discarded.\n\t'SHOULDER_R' has translation
-      animation that will be discarded.\n\nClip 'big weapon hold' has import animation
-      warnings that might lower retargeting quality:\nNote: Activate translation
-      DOF on avatar to improve retargeting quality.\n\t'SHOULDER_L' has translation
-      animation that will be discarded.\n\t'SHOULDER_R' has translation animation
-      that will be discarded.\n\nClip 'BGN_RUN' has import animation warnings that
-      might lower retargeting quality:\nNote: Activate translation DOF on avatar
-      to improve retargeting quality.\n\t'LEG_L' is inbetween humanoid transforms
-      and has rotation animation that will be discarded.\n\t'LEG_R' is inbetween
-      humanoid transforms and has rotation animation that will be discarded.\n"
+    animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -671,14 +617,16 @@ ModelImporter:
   meshes:
     lODScreenPercentages: []
     globalScale: 1
-    meshCompression: 0
+    meshCompression: 2
     addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
+    importPhysicalCameras: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    nodeNameCollisionStrategy: 0
     fileIdsGeneration: 2
     swapUVChannels: 0
     generateSecondaryUV: 0
@@ -690,6 +638,7 @@ ModelImporter:
     skinWeightsMode: 0
     maxBonesPerVertex: 4
     minBoneWeight: 0.001
+    optimizeBones: 1
     meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
@@ -700,6 +649,7 @@ ModelImporter:
     secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
+    strictVertexDataChecks: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -857,6 +807,8 @@ ModelImporter:
   humanoidOversampling: 1
   avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
