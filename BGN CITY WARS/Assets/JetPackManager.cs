@@ -33,6 +33,7 @@ public class JetPackManager : MonoBehaviourPunCallbacks,IPunObservable
 
     private UIBarRefresh UIBar;
 
+    private FallDamage falldamage;
     private void Start()
     {
         PV = GetComponent<PhotonView>();
@@ -42,7 +43,10 @@ public class JetPackManager : MonoBehaviourPunCallbacks,IPunObservable
         UIBar = GameObject.Find("JETPACK BAR").GetComponent<UIBarRefresh>();
         UIBar.gameObject.SetActive(false);
         UIBar.UpdateHP(Mathf.RoundToInt(CurrentFuel));
-      
+        falldamage = GetComponent<FallDamage>();
+
+
+
     }
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info) // Sync Accel for other players
@@ -95,6 +99,7 @@ public class JetPackManager : MonoBehaviourPunCallbacks,IPunObservable
 
         // Move the character controller upwards using the jetpack speed
         Charcontroller.Move(Vector3.up * Time.deltaTime * currentJetpackSpeed);
+        falldamage.ResetFalling();
 
         #region Fuel
         CurrentFuel = Mathf.Clamp(CurrentFuel - ConsumptionSpeed * Time.deltaTime, 0, MaxFuel);

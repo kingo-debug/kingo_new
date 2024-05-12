@@ -1,7 +1,8 @@
 using UnityEngine;
 public class FallDamage : MonoBehaviour
 {
-    private SpeedCheck Speed;
+
+
     private TakeDamage takedamage;
     [SerializeField]
     private float MinSpeedRoll;
@@ -19,11 +20,12 @@ public class FallDamage : MonoBehaviour
     private int MaxDamage;
     private Animator animator;
     private MainCharacterController Mainchar;
-
+    public float FallingTime;
+    [SerializeField]
+    private float FallingSpeed = 1f;
 
     void Start()
     {
-        Speed = GetComponent<SpeedCheck>();
         takedamage = GetComponent<TakeDamage>();
         animator = GetComponent<Animator>();
         Mainchar = GetComponent<MainCharacterController>();
@@ -34,24 +36,27 @@ public class FallDamage : MonoBehaviour
     {
         if (other.gameObject.layer== 0 || other.gameObject.layer== 10 || other.gameObject.layer == 4 )
         {
-            if (Speed.speed > MinSpeedRoll && Speed.speed < MinSpeedCheck) // Just Roll
+            if (FallingTime > MinSpeedRoll && FallingTime < MinSpeedCheck) // Just Roll
             {
                 Mainchar.Rolling = true;
+   
             }
-              else if (Speed.speed > MinSpeedCheck && Speed.speed < MidSpeedCheck) // min damage
+              else if (FallingTime > MinSpeedCheck && FallingTime < MidSpeedCheck) // min damage
             {
                 CallMinDamage();
-               
+             
+
             }
-            else if (Speed.speed > MidSpeedCheck && Speed.speed < MaxSpeedCheck) // mid damage
+            else if (FallingTime > MidSpeedCheck && FallingTime < MaxSpeedCheck) // mid damage
             {
                 CallMidDamage();
-               
+                
+
             }
-            else if (Speed.speed > MaxSpeedCheck) // maxDamage
+            else if (FallingTime > MaxSpeedCheck) // maxDamage
             {
                 CallMaxDamage();
-           
+               
             }
         }
          
@@ -71,5 +76,19 @@ public class FallDamage : MonoBehaviour
     {
         takedamage.Takedamage(MaxDamage);
     }
- 
+
+    private void Update()
+    {
+        if (!Mainchar.isGrounded)
+        {
+            FallingTime += FallingSpeed * Time.deltaTime;
+        }
+        else ResetFalling();     
+    }
+
+
+    public void ResetFalling()
+    {
+        FallingTime = 0f;
+    }
 }
