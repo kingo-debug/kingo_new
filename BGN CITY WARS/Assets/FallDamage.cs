@@ -23,12 +23,14 @@ public class FallDamage : MonoBehaviour
     public float FallingTime;
     [SerializeField]
     private float FallingSpeed = 1f;
+    private JetPackManager jpmanager;
 
     void Start()
     {
         takedamage = GetComponent<TakeDamage>();
         animator = GetComponent<Animator>();
         Mainchar = GetComponent<MainCharacterController>();
+        jpmanager = GetComponent<JetPackManager>();
 
     }
 
@@ -79,7 +81,7 @@ public class FallDamage : MonoBehaviour
 
     private void Update()
     {
-        if (!Mainchar.isGrounded)
+        if (!Mainchar.isGrounded &&! jpmanager.Accelerating)
         {
             FallingTime += FallingSpeed * Time.deltaTime;
         }
