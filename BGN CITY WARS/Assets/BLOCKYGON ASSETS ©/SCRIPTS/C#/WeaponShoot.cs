@@ -702,7 +702,7 @@ public class WeaponShoot : MonoBehaviour
     void SyncFireAnim()
     {
         Parentanimator.SetFloat("FireRate", FireRate/3.5f);
-        AS.pitch = ReloadTime * 3;
+        AS.pitch = FireRate * 3;
         
     }
     #region /////Coroutines/////

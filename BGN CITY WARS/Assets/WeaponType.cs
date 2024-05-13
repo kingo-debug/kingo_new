@@ -12,7 +12,9 @@ public class WeaponType : MonoBehaviour
     private Animator animator;
     private List<RectTransform> Reticles;
     private Transform Crosshiars;
-
+    [SerializeField]
+    private AudioClip[] ReloadPartsSFX;
+    private SFXmanager sfxmanager;
 
 
 
@@ -35,6 +37,8 @@ public class WeaponType : MonoBehaviour
         }
 
 
+    
+
 
 
     }
@@ -44,12 +48,15 @@ public class WeaponType : MonoBehaviour
         Status.CurrentWeapon = this.gameObject;
         Crosshiars = GameObject.Find("CROSSHAIRS").transform;
         Invoke("UpdateReticle", 0.1f);
+        sfxmanager = transform.root.transform.GetChild(0).GetComponent<SFXmanager>();
+
 
 
     }
 
-    public void UpdateReticle()
+    public void UpdateReticle() // AND  assign reload parts audio  to Player IS IN THIS FUNCTION
     {
+
         if (ReticleType == 0)
         {
             Crosshiars.GetChild(0).gameObject.SetActive(true);
@@ -62,6 +69,7 @@ public class WeaponType : MonoBehaviour
         {
             Crosshiars.GetChild(2).gameObject.SetActive(true);
         }
+        sfxmanager.ReloadPart = ReloadPartsSFX; // assign reload parts to Player
     }
 
 }

@@ -20,6 +20,7 @@ public class SFXmanager : MonoBehaviour
     [SerializeField]
     private AudioClip[] LadderClimb;
 
+    public AudioClip[] ReloadPart ;
 
     private void Start()
     {
@@ -104,10 +105,25 @@ public class SFXmanager : MonoBehaviour
             Debug.LogError("No LadderClimb clips available in the array.");
         }
     }
+    //Weapons
+    public void ReloadFirstPart()
+    {
+        AS.PlayOneShot(ReloadPart.GetValue(0) as AudioClip);
+    }
+    public void ReloadSecondPart()
+    {
+        AS.PlayOneShot(ReloadPart.GetValue(1) as AudioClip);
+    }
+    public void ReloadLastPart()
+    {
+        AS.PlayOneShot(ReloadPart.GetValue(2) as AudioClip);
+    }
+
     #endregion
+    }
 
 
-}
+
 
 
 

@@ -277,6 +277,7 @@ MonoBehaviour:
   Weapontype: 0
   ReticleType: 0
   Scope: 0
+  ReloadPartsSFX: []
 --- !u!114 &4016920629615224043
 MonoBehaviour:
   m_ObjectHideFlags: 0
