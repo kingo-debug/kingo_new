@@ -21,6 +21,8 @@ public class SFXmanager : MonoBehaviour
     private AudioClip[] LadderClimb;
 
     public AudioClip[] ReloadPart ;
+    [SerializeField]
+    private AudioClip RollSFX;
 
     private void Start()
     {
@@ -119,7 +121,12 @@ public class SFXmanager : MonoBehaviour
         AS.PlayOneShot(ReloadPart.GetValue(2) as AudioClip);
     }
 
-    #endregion
+    // action
+    public void RollingSFX()
+    {
+        AS.PlayOneShot(RollSFX);
+    }
+        #endregion
     }
 
 

@@ -188,7 +188,7 @@ public class MainCharacterController : MonoBehaviour
         actionsVar.Combat = Combatmode;
     }
 
-    void FreeMode()
+   public  void FreeMode()
     {
 
         #region Free Movement
@@ -415,7 +415,8 @@ public class MainCharacterController : MonoBehaviour
             animator.SetLayerWeight(7, Mathf.Lerp(animator.GetLayerWeight(7), 1.1f, Time.deltaTime * 8));
             animator.SetBool("ROLL", true);
             StopAim();
-            FreeMode();
+            // FreeMode();
+            Combatmode = false;
         }
 
     }
