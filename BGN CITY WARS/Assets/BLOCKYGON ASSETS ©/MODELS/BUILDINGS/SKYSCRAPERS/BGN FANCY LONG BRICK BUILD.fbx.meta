@@ -30,7 +30,8 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    extraUserProperties: []
+    extraUserProperties:
+    - '#BAKERY{"meshName":["BGN_FANCY_LONG_BRICK_BUILD"],"padding":[3],"unwrapper":[0]}'
     clipAnimations: []
     isReadable: 0
   meshes:

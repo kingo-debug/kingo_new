@@ -30,7 +30,8 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    extraUserProperties: []
+    extraUserProperties:
+    - '#BAKERY{"meshName":["BLOCKYGON_TABLE_BIG___4_","BLOCKYGON_CHAIR__2_","BLOCKYGON_BEACH_BED__1_","WIDES","UNDERROOF","ROOF","Cube__10_","Cube__9_","LONGS","ENTERANCE","GLASS_ELEVATOR"],"padding":[122,163,135,5,7,4,5,5,5,12,8],"unwrapper":[0,0,0,0,0,0,0,0,0,0,0]}'
     clipAnimations: []
     isReadable: 0
   meshes:

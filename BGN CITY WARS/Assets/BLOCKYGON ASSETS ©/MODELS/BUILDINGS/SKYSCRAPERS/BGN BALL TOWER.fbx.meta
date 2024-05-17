@@ -30,7 +30,8 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    extraUserProperties: []
+    extraUserProperties:
+    - '#BAKERY{"meshName":["STAIRS__2_","ball_build","BGN_BALL_TOWER"],"padding":[30,1,2],"unwrapper":[0,0,0]}'
     clipAnimations: []
     isReadable: 0
   meshes:

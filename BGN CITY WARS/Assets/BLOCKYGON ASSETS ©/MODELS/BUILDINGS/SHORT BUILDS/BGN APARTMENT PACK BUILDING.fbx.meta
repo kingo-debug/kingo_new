@@ -30,7 +30,8 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    extraUserProperties: []
+    extraUserProperties:
+    - '#BAKERY{"meshName":["apartment_6","apartment_5","apartment_4","apartment_3","apartment_2","apartment_1","apartment","BGN_DOOR__1_"],"padding":[6,6,4,6,6,8,5,124],"unwrapper":[0,0,0,0,0,0,0,0]}'
     clipAnimations: []
     isReadable: 0
   meshes:

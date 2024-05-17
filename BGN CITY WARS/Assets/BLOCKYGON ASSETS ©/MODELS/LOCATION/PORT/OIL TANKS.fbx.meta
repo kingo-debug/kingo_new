@@ -30,7 +30,8 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    extraUserProperties: []
+    extraUserProperties:
+    - '#BAKERY{"meshName":["OIL_TANKS_2","OIL_TANKS_1","BUILDING_PORT"],"padding":[20,19,20],"unwrapper":[0,0,0]}'
     clipAnimations: []
     isReadable: 0
   meshes:

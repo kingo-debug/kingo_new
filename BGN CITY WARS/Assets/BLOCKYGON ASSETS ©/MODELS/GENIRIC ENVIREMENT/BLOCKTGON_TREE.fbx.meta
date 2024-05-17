@@ -45,7 +45,8 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    extraUserProperties: []
+    extraUserProperties:
+    - '#BAKERY{"meshName":["BLOCKYGON_TREE_3","BLOCKYGON_TREE_1","BLOCKYGON_TREE","BLOCKYGON_TREE_2"],"padding":[62,32,48,58],"unwrapper":[0,0,0,0]}'
     clipAnimations: []
     isReadable: 0
   meshes:
