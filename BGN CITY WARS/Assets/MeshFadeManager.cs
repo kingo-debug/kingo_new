@@ -25,6 +25,7 @@ public class MeshFadeManager : MonoBehaviour
     [SerializeField]
     private float DistanceToScale = 0.35f;
     private Vector3 DefaultTargetPointScale;
+    private bool TargetPointScaled = false;
 
     void Start()
     {
@@ -43,11 +44,11 @@ public class MeshFadeManager : MonoBehaviour
         }
         else SetOpaque();
 
-        if (distance < DistanceToScale && TargetPoint.localScale!= new Vector3(0, 0, 0))
+        if (ScaleTargetPoint && distance < DistanceToScale && !TargetPointScaled)
         {
             SetScaleTargetPoint();
         }
-        else if (TargetPoint.localScale !=DefaultTargetPointScale)
+        else if (ScaleTargetPoint && distance > DistanceToScale && TargetPointScaled)
         {
             ResetTargetPointScale();
         }
@@ -95,11 +96,13 @@ void SetTransparent()
 
     void SetScaleTargetPoint()
     {
-
+        TargetPointScaled = true;
         TargetPoint.localScale = new Vector3(0, 0, 0);
+
     }
     void ResetTargetPointScale()
     {
+        TargetPointScaled = false;
         TargetPoint.localScale = DefaultTargetPointScale;
     }
 }
