@@ -51,7 +51,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["R_R__7___1_","POLICE_TAG__1_","POLICE_TAG","_911__1","_911_","BGN_POLICE_CAR"],"padding":[256,256,256,256,256,65],"unwrapper":[0,0,0,0,0,0]}'
+    - '#BAKERY{"meshName":["R_R__7___1_","POLICE_TAG__1_","POLICE_TAG","_911__1","_911_","BGN_POLICE_CAR"],"padding":[256,256,256,256,256,58],"unwrapper":[0,0,0,0,0,0]}'
     clipAnimations: []
     isReadable: 0
   meshes:

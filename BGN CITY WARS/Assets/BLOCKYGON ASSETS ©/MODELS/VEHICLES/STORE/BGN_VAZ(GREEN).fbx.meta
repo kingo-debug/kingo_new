@@ -41,7 +41,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["R_R","R_L","F_R","F_L","BGN_VAZ_GREEN_"],"padding":[256,256,256,256,75],"unwrapper":[0,0,0,0,0]}'
+    - '#BAKERY{"meshName":["R_R","R_L","F_R","F_L","BGN_VAZ_GREEN_"],"padding":[256,256,256,256,66],"unwrapper":[0,0,0,0,0]}'
     clipAnimations: []
     isReadable: 0
   meshes:

@@ -36,7 +36,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["BGN_STREET_TELEPHONE"],"padding":[175],"unwrapper":[0]}'
+    - '#BAKERY{"meshName":["BGN_STREET_TELEPHONE"],"padding":[155],"unwrapper":[0]}'
     clipAnimations: []
     isReadable: 0
   meshes:

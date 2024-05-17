@@ -31,7 +31,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["BLOCKYGON_SOLAR_PANE__3_","BLOCKYGON_ROOF_AC__4_","BGN_MAYOR_BUILD"],"padding":[111,88,2],"unwrapper":[0,0,0]}'
+    - '#BAKERY{"meshName":["BLOCKYGON_SOLAR_PANE__3_","BLOCKYGON_ROOF_AC__4_","BGN_MAYOR_BUILD"],"padding":[99,78,2],"unwrapper":[0,0,0]}'
     clipAnimations: []
     isReadable: 0
   meshes:

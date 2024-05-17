@@ -41,7 +41,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["BLOCKYGON_CHINA_OBJECT_1"],"padding":[80],"unwrapper":[0]}'
+    - '#BAKERY{"meshName":["BLOCKYGON_CHINA_OBJECT_1"],"padding":[71],"unwrapper":[0]}'
     clipAnimations: []
     isReadable: 0
   meshes:

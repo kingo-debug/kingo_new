@@ -41,7 +41,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["BGN_ TOILET BOOTH"],"padding":[69],"unwrapper":[0]}'
+    - '#BAKERY{"meshName":["BGN_ TOILET BOOTH"],"padding":[62],"unwrapper":[0]}'
     clipAnimations: []
     isReadable: 0
   meshes:

@@ -31,7 +31,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["SPACE","BGN_BCW_TOWER_2"],"padding":[6,2],"unwrapper":[0,0]}'
+    - '#BAKERY{"meshName":["SPACE","BGN_BCW_TOWER_2"],"padding":[5,2],"unwrapper":[0,0]}'
     clipAnimations: []
     isReadable: 0
   meshes:

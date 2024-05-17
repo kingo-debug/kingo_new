@@ -31,7 +31,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["BGN_GRILL_OPEN_"],"padding":[232],"unwrapper":[0]}'
+    - '#BAKERY{"meshName":["BGN_GRILL_OPEN_"],"padding":[206],"unwrapper":[0]}'
     clipAnimations: []
     isReadable: 0
   meshes:

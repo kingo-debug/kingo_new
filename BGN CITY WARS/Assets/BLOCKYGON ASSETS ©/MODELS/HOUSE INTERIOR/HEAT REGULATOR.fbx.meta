@@ -31,7 +31,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["HEAT_REGULATOR"],"padding":[223],"unwrapper":[0]}'
+    - '#BAKERY{"meshName":["HEAT_REGULATOR"],"padding":[199],"unwrapper":[0]}'
     clipAnimations: []
     isReadable: 0
   meshes:
