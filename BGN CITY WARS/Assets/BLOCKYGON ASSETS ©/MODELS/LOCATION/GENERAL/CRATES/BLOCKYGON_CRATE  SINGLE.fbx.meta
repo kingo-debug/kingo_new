@@ -36,7 +36,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["BLOCKYGON_CRATE"],"padding":[211],"unwrapper":[0]}'
+    - '#BAKERY{"meshName":["BLOCKYGON_CRATE"],"padding":[187],"unwrapper":[0]}'
     clipAnimations: []
     isReadable: 0
   meshes:

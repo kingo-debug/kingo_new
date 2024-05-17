@@ -56,7 +56,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["BGN_TRUCK_OIL_CONTAINER"],"padding":[26],"unwrapper":[0]}'
+    - '#BAKERY{"meshName":["BGN_TRUCK_OIL_CONTAINER"],"padding":[23],"unwrapper":[0]}'
     clipAnimations: []
     isReadable: 0
   meshes:
