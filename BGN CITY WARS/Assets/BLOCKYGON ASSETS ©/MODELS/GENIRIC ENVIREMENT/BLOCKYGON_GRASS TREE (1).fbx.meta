@@ -36,7 +36,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["BLOCKYGON_GRASS_TREE__1_"],"padding":[100],"unwrapper":[0]}'
+    - '#BAKERY{"meshName":["BLOCKYGON_GRASS_TREE__1_"],"padding":[90],"unwrapper":[0]}'
     clipAnimations: []
     isReadable: 0
   meshes:

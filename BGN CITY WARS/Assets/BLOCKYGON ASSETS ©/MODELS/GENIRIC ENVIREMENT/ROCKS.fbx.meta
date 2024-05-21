@@ -36,7 +36,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["ROCKS_2","ROCKS_1","ROCKS"],"padding":[140,155,108],"unwrapper":[0,0,0]}'
+    - '#BAKERY{"meshName":["ROCKS_2","ROCKS_1","ROCKS"],"padding":[126,139,97],"unwrapper":[0,0,0]}'
     clipAnimations: []
     isReadable: 0
   meshes:
@@ -66,17 +66,17 @@ ModelImporter:
     optimizeBones: 1
     meshOptimizationFlags: -1
     indexFormat: 0
-    secondaryUVAngleDistortion: 8
-    secondaryUVAreaDistortion: 15.000001
+    secondaryUVAngleDistortion: 75
+    secondaryUVAreaDistortion: 75
     secondaryUVHardAngle: 88
     secondaryUVMarginMethod: 1
     secondaryUVMinLightmapResolution: 40
     secondaryUVMinObjectScale: 1
-    secondaryUVPackMargin: 4
+    secondaryUVPackMargin: 58
     useFileScale: 1
     strictVertexDataChecks: 0
   tangentSpace:
-    normalSmoothAngle: 60
+    normalSmoothAngle: 88
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4

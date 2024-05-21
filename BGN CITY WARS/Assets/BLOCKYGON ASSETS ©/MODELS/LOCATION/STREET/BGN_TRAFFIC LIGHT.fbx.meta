@@ -41,7 +41,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["BGN_TRAFFIC_LIGHT"],"padding":[79],"unwrapper":[0]}'
+    - '#BAKERY{"meshName":["BGN_TRAFFIC_LIGHT"],"padding":[71],"unwrapper":[0]}'
     clipAnimations: []
     isReadable: 0
   meshes:

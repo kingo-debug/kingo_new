@@ -31,7 +31,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["BGN_CHINA__DRAGON_STATUE"],"padding":[41],"unwrapper":[0]}'
+    - '#BAKERY{"meshName":["BGN_CHINA__DRAGON_STATUE"],"padding":[37],"unwrapper":[0]}'
     clipAnimations: []
     isReadable: 0
   meshes:

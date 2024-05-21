@@ -31,7 +31,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["apartment_6","apartment_5","apartment_4","apartment_3","apartment_2","apartment_1","apartment","BGN_DOOR__1_"],"padding":[6,6,3,5,6,7,4,110],"unwrapper":[0,0,0,0,0,0,0,0]}'
+    - '#BAKERY{"meshName":["apartment_6","apartment_5","apartment_4","apartment_3","apartment_2","apartment_1","apartment","BGN_DOOR__1_"],"padding":[5,5,3,4,5,6,4,99],"unwrapper":[0,0,0,0,0,0,0,0]}'
     clipAnimations: []
     isReadable: 0
   meshes:

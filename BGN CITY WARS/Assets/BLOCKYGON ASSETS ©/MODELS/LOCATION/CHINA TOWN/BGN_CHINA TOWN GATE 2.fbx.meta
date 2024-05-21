@@ -51,7 +51,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["BGN_CHINA_TOWN_GATE_2"],"padding":[13],"unwrapper":[0]}'
+    - '#BAKERY{"meshName":["BGN_CHINA_TOWN_GATE_2"],"padding":[12],"unwrapper":[0]}'
     clipAnimations: []
     isReadable: 0
   meshes:

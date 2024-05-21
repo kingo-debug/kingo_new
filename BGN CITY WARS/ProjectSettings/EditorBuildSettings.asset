@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/BLOCKYGON ASSETS \xA9/Scenes/pvp maps/HOPSITAL PVP/HOSPITAL PVP.unity"
     guid: 834bee1432677c9498929f3d5369e35e
+  - enabled: 1
+    path: "Assets/BLOCKYGON ASSETS \xA9/Scenes/pvp maps/POLICE PVP/POLICE PVP.unity"
+    guid: f96cc2e23ea9dbb49ba4fb839fcd5355
   m_configObjects:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: 950618393ebc9fa4ea8010392d55ea08, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 92daab451b67e7c428cd97f1a653c21c, type: 2}

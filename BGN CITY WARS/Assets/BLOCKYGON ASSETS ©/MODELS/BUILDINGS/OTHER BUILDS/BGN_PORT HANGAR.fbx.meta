@@ -46,7 +46,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["BGN_PORT_HANGAR"],"padding":[4],"unwrapper":[0]}'
+    - '#BAKERY{"meshName":["BGN_PORT_HANGAR"],"padding":[3],"unwrapper":[0]}'
     clipAnimations: []
     isReadable: 0
   meshes:

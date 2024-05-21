@@ -31,7 +31,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["OIL_TANKS_2","OIL_TANKS_1","BUILDING_PORT"],"padding":[18,17,17],"unwrapper":[0,0,0]}'
+    - '#BAKERY{"meshName":["OIL_TANKS_2","OIL_TANKS_1","BUILDING_PORT"],"padding":[16,15,16],"unwrapper":[0,0,0]}'
     clipAnimations: []
     isReadable: 0
   meshes:

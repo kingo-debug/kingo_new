@@ -45,7 +45,8 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    extraUserProperties: []
+    extraUserProperties:
+    - '#BAKERY{"meshName":["CRAIN_RAIL_PATH","CRAIN_RAIL_PATH_1","CRAIN_RAIL_PATH_2"],"padding":[35,35,22],"unwrapper":[0,0,0]}'
     clipAnimations: []
     isReadable: 0
   meshes:
@@ -63,7 +64,7 @@ ModelImporter:
     nodeNameCollisionStrategy: 0
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1

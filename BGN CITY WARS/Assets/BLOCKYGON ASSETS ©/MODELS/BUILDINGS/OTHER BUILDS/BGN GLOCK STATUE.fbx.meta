@@ -31,7 +31,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["Cube__90_","BGN_BLOCKGLOCK__3_"],"padding":[17,37],"unwrapper":[0,0]}'
+    - '#BAKERY{"meshName":["Cube__90_","BGN_BLOCKGLOCK__3_"],"padding":[15,33],"unwrapper":[0,0]}'
     clipAnimations: []
     isReadable: 0
   meshes:

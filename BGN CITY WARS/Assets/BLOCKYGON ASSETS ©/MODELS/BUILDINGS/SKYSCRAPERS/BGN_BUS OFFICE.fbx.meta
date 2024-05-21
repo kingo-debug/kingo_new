@@ -37,7 +37,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties:
     - '#BAKERY{"meshName":["BGN_BUS OFFICE","BLOCKYGON_SOLAR PANE (3)","BLOCKYGON_ROOF
-      AC (9)"],"padding":[6,99,78],"unwrapper":[0,0,0]}'
+      AC (9)"],"padding":[5,89,70],"unwrapper":[0,0,0]}'
     clipAnimations: []
     isReadable: 0
   meshes:

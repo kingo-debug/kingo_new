@@ -31,7 +31,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["CITY_STATUE","BLOCKYGON_SOLIDER_STATUE__2_","BLOCKYGON_SOLIDER_STATUE__1_","BLOCKYGON_SOLIDER_STATUE"],"padding":[12,28,30,29],"unwrapper":[0,0,0,0]}'
+    - '#BAKERY{"meshName":["CITY_STATUE","BLOCKYGON_SOLIDER_STATUE__2_","BLOCKYGON_SOLIDER_STATUE__1_","BLOCKYGON_SOLIDER_STATUE"],"padding":[10,25,27,26],"unwrapper":[0,0,0,0]}'
     clipAnimations: []
     isReadable: 0
   meshes:
