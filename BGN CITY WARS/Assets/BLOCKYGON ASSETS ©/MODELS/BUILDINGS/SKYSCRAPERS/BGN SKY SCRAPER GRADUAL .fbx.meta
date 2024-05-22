@@ -31,7 +31,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["BGN_SKY_SCRAPER_GRADUAL_"],"padding":[2],"unwrapper":[0]}'
+    - '#BAKERY{"meshName":["BGN_SKY_SCRAPER_GRADUAL_"],"padding":[5],"unwrapper":[0]}'
     clipAnimations: []
     isReadable: 0
   meshes:
