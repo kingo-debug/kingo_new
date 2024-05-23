@@ -43,21 +43,34 @@ public class FallDamage : MonoBehaviour
             {
                 Mainchar.Rolling = true;  
             }
-              else if (FallingTime > MinSpeedCheck && FallingTime < MidSpeedCheck && other.gameObject.layer!= 4)// min damage
+              else if (FallingTime > MinSpeedCheck && FallingTime < MidSpeedCheck )// min damage
             {
-                CallMinDamage();
+                if(other.gameObject.layer != 4) // check if layer is water
+                {
+                    CallMinDamage(); //if not then damage
+                }
+                else Mainchar.Rolling = true; // if water then dive using roll method
+
             }
             
 
 
-            else if (FallingTime > MidSpeedCheck && FallingTime < MaxSpeedCheck&& other.gameObject.layer != 4) // mid damage
+            else if (FallingTime > MidSpeedCheck && FallingTime < MaxSpeedCheck) // mid damage
             {
-                CallMidDamage();              
+                if (other.gameObject.layer != 4) // check if layer is water
+                {
+                    CallMidDamage(); //if not then damage
+                }
+                else Mainchar.Rolling = true; //  if water then dive using roll method
             }
         
-            else if (FallingTime > MaxSpeedCheck && other.gameObject.layer != 4) // maxDamage
+            else if (FallingTime > MaxSpeedCheck) // maxDamage
             {
-                CallMaxDamage();          
+                if (other.gameObject.layer != 4) // check if layer is water
+                {
+                    CallMaxDamage(); //if not then damage
+                }
+                else Mainchar.Rolling = true; //  if water then dive using roll method
             }
          
             
