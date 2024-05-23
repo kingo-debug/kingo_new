@@ -156,9 +156,9 @@ public class MainCharacterController : MonoBehaviour
         #endregion
 
         #region RollingCheck
-        if (Rolling)
+       if (Rolling)
         {
-            Roll();
+          Roll();
         }
         if (!Rolling && animator.GetLayerWeight(7) > 0)
         {

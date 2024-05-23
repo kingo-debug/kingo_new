@@ -24,6 +24,7 @@ public class FallDamage : MonoBehaviour
     [SerializeField]
     private float FallingSpeed = 1f;
     private JetPackManager jpmanager;
+    private SwimPlayerControl SwimControl;
 
     void Start()
     {
@@ -31,7 +32,7 @@ public class FallDamage : MonoBehaviour
         animator = GetComponent<Animator>();
         Mainchar = GetComponent<MainCharacterController>();
         jpmanager = GetComponent<JetPackManager>();
-
+        SwimControl = GetComponent<SwimPlayerControl>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -40,26 +41,26 @@ public class FallDamage : MonoBehaviour
         {
             if (FallingTime > MinSpeedRoll && FallingTime < MinSpeedCheck) // Just Roll
             {
-                Mainchar.Rolling = true;
-   
+                Mainchar.Rolling = true;  
             }
-              else if (FallingTime > MinSpeedCheck && FallingTime < MidSpeedCheck) // min damage
+              else if (FallingTime > MinSpeedCheck && FallingTime < MidSpeedCheck && other.gameObject.layer!= 4)// min damage
             {
                 CallMinDamage();
-             
+            }
+            
 
-            }
-            else if (FallingTime > MidSpeedCheck && FallingTime < MaxSpeedCheck) // mid damage
-            {
-                CallMidDamage();
-                
 
-            }
-            else if (FallingTime > MaxSpeedCheck) // maxDamage
+            else if (FallingTime > MidSpeedCheck && FallingTime < MaxSpeedCheck&& other.gameObject.layer != 4) // mid damage
             {
-                CallMaxDamage();
-               
+                CallMidDamage();              
             }
+        
+            else if (FallingTime > MaxSpeedCheck && other.gameObject.layer != 4) // maxDamage
+            {
+                CallMaxDamage();          
+            }
+         
+            
         }
          
     }
@@ -81,7 +82,7 @@ public class FallDamage : MonoBehaviour
 
     private void Update()
     {
-        if (!Mainchar.isGrounded &&! jpmanager.Accelerating)
+        if (!Mainchar.isGrounded &&! jpmanager.Accelerating && ! SwimControl.Swiming)
         {
             FallingTime += FallingSpeed * Time.deltaTime;
         }

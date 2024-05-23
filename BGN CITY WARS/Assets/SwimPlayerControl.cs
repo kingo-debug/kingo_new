@@ -13,11 +13,13 @@ public class SwimPlayerControl : MonoBehaviour
     public void SwimModeEnter()
     { 
         Swiming = true;
+        animator.SetBool("SWIMMING", true);
     }
 
     public void SwimmodeExit()
     {
         Swiming = false;
+        animator.SetBool("SWIMMING", false);
     }
 
     private void Update()
@@ -26,6 +28,7 @@ public class SwimPlayerControl : MonoBehaviour
         {
             if (animator.GetLayerWeight(2) < 1)
             {
+        
                 animator.SetLayerWeight(2, Mathf.Lerp(animator.GetLayerWeight(2), 1.2f, Time.deltaTime * SwimEnterSpeed));
             }
         }
@@ -33,6 +36,7 @@ public class SwimPlayerControl : MonoBehaviour
         {
             if(animator.GetLayerWeight(2)>0)
             {
+             
                 animator.SetLayerWeight(2, Mathf.Lerp(animator.GetLayerWeight(2), -0.2f, Time.deltaTime * SwimEnterSpeed));
             }
         }
