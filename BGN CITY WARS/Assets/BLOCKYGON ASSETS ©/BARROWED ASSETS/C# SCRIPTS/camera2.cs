@@ -43,29 +43,28 @@ public class camera2 : MonoBehaviour
     public string currentStateName;
     //  [HideInInspector]
     public Transform currentTarget;
- 
+    [HideInInspector]
     public Vector2 movementSpeed;
 
     public Transform targetLookAt;
-    [SerializeField]
+
     private Vector3 currentTargetPos;
-    [SerializeField]
-    private Vector3 lookPoint;
-    [SerializeField]
+
+
     private Vector3 current_cPos;
-    [SerializeField]
+
     private Vector3 desired_cPos;
     private Camera _camera;
-    [SerializeField]
+
     private float distance = 5f;
     private float mouseY = 0f;
     private float mouseX = 0f;
-    [SerializeField]
+
     private float currentHeight;
     public float cullingDistance;
     [SerializeField]
     private float checkHeightRadius = 0.4f;
-    [SerializeField]
+
     private float clipPlaneMargin = 0f;
     private float forward = -1f;
     [SerializeField]
