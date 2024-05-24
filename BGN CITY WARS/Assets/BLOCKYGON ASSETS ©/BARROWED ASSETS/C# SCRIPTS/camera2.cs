@@ -37,41 +37,49 @@ public class camera2 : MonoBehaviour
 
     [HideInInspector]
     public int indexList, indexLookPoint;
-    [HideInInspector]
+
     public float offSetPlayerPivot;
     [HideInInspector]
     public string currentStateName;
     //  [HideInInspector]
     public Transform currentTarget;
-    [HideInInspector]
+ 
     public Vector2 movementSpeed;
 
     public Transform targetLookAt;
+    [SerializeField]
     private Vector3 currentTargetPos;
+    [SerializeField]
     private Vector3 lookPoint;
+    [SerializeField]
     private Vector3 current_cPos;
+    [SerializeField]
     private Vector3 desired_cPos;
     private Camera _camera;
+    [SerializeField]
     private float distance = 5f;
     private float mouseY = 0f;
     private float mouseX = 0f;
+    [SerializeField]
     private float currentHeight;
     public float cullingDistance;
+    [SerializeField]
     private float checkHeightRadius = 0.4f;
+    [SerializeField]
     private float clipPlaneMargin = 0f;
     private float forward = -1f;
+    [SerializeField]
     private float xMinLimit = -360f;
+    [SerializeField]
     private float xMaxLimit = 360f;
+    [SerializeField]
     private float cullingHeight = 0.2f;
+    [SerializeField]
     private float cullingMinDist = 0.1f;
 
     #endregion
 
-    // New private variables for touch input
-    private bool isTouching = false;
-    private Vector2 touchStartPos;
-    private Vector2 touchCurrentPos;
-    public bool Blocked;
+
     private bool isShaking = false;
     public float shakeAmount = 0.0f;
     private Vector3 originalPosition;
@@ -250,7 +258,7 @@ public class camera2 : MonoBehaviour
         transform.rotation = rotation;
         movementSpeed = Vector2.zero;
     }
-
+  
 
     /// <summary>
     /// Custom Raycast using NearClipPlanesPoints
@@ -292,36 +300,6 @@ public class camera2 : MonoBehaviour
         return hitInfo.collider && value;
     }
 
-    // New method to handle touch input
-    private void HandleTouchInput()
-    {
-        if(!Blocked)
-        {
-        if (ControlFreak2.CF2Input.touchCount > 0)
-        {
-            ControlFreak2.InputRig.Touch touch = ControlFreak2.CF2Input.GetTouch(0);
-
-            switch (touch.phase)
-            {
-                case TouchPhase.Began:
-                    isTouching = true;
-                    touchStartPos = touch.position;
-                    break;
-
-                case TouchPhase.Moved:
-                    touchCurrentPos = touch.position;
-                    RotateCamera(touchCurrentPos.x - touchStartPos.x, touchCurrentPos.y - touchStartPos.y);
-                    touchStartPos = touchCurrentPos;
-                    break;
-
-                case TouchPhase.Ended:
-                case TouchPhase.Canceled:
-                    isTouching = false;
-                    break;
-            }
-        }
-    }
-}
 
 
     // New method to start camera shake

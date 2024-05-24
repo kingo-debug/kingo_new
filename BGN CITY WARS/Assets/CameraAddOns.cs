@@ -25,10 +25,10 @@ public class CameraAddOns : MonoBehaviour
     }
 
     // Update is called once per frame
-    void LateUpdate()
-    {
-        cam2.rightOffset = Mathf.Lerp(cam2.rightOffset, Mathf.Clamp(PlayerRoot.transform.position.y / transform.position.y * DefaultRightOffset, MinRightOffset, MaxRightOffset), Time.deltaTime*Smoothness);
-    }
+  //  void LateUpdate()
+  //  {
+       // cam2.rightOffset = Mathf.Lerp(cam2.rightOffset, Mathf.Clamp(PlayerRoot.transform.position.y / transform.position.y * DefaultRightOffset, MinRightOffset, MaxRightOffset), Time.deltaTime*Smoothness);
+ //   }
     public void AddFireRecoil( )
     {
         Cam.fieldOfView -= CameraShakeStrenght * Time.deltaTime;
