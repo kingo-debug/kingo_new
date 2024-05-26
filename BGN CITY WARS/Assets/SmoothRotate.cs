@@ -11,6 +11,7 @@ public class SmoothRotate : MonoBehaviour
     void Update()
     {
         transform.Rotate(RotateDirection, Speed*Time.deltaTime);
+
        
     }
 }
