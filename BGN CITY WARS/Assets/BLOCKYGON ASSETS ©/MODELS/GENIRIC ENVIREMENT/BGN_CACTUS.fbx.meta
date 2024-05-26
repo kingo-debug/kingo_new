@@ -31,7 +31,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["CACTUS_2","CACTUS_1"],"padding":[61,72],"unwrapper":[0,0]}'
+    - '#BAKERY{"meshName":["CACTUS_2","CACTUS_1"],"padding":[33,36],"unwrapper":[0,0]}'
     clipAnimations: []
     isReadable: 0
   meshes:
