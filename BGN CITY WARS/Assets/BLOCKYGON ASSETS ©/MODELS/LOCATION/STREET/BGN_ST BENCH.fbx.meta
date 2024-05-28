@@ -41,7 +41,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["BGN_ST_BENCH"],"padding":[128],"unwrapper":[0]}'
+    - '#BAKERY{"meshName":["BGN_ST_BENCH"],"padding":[256],"unwrapper":[0]}'
     clipAnimations: []
     isReadable: 0
   meshes:

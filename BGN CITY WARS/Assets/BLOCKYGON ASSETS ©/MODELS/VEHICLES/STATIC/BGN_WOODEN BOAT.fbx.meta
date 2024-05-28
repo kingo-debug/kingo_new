@@ -41,7 +41,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["BGN_BOAT_","PADDLES"],"padding":[58,256],"unwrapper":[0,0]}'
+    - '#BAKERY{"meshName":["BGN_BOAT_","PADDLES"],"padding":[117,256],"unwrapper":[0,0]}'
     clipAnimations: []
     isReadable: 0
   meshes:

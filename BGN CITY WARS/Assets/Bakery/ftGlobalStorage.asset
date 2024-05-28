@@ -259,7 +259,10 @@ MonoBehaviour:
   - "Assets/BLOCKYGON ASSETS \xA9/MODELS/LOCATION/STREET/BLOCKYGON_STREET LIGHT (BASIC).fbx"
   - "Assets/BLOCKYGON ASSETS \xA9/MODELS/OTHER/BGN_WINDMILL.fbx"
   - "Assets/BLOCKYGON ASSETS \xA9/MODELS/GENIRIC ENVIREMENT/BLOCKYGON_TREE CUT .fbx"
-  modifiedAssetPaddingHash: d6a958ffbb2f089478f71be0363fd3d914f33a06fd7d9363eec3a6933367e2a8d60aecc0907f9363d60aecc0153f035bb84608c80aa3dddeba5634b7333fd3d90cf43a06383fd3d904cb8a8e3937ca4a04cb8a8e393fd3d99d4dfff0333fd3d9bb7d936308b309ce93933aa2c34608c87cc29cc8969a26fcfd834561c525ce9e363fd3d98109ecc0814d45c638c2a6937574bf0929755ffc534ffff0751a3ea2393fd3d9194efff0b58fb81fd0a557aa393fd3d9393fd3d91759eb86393fd3d9de901ac2f50aecc07d8f1ac2f166e2a88109ecc0363fd3d9393fd3d9b4c2a69358fe2cd0be06d84b363fd3d9fd7d9363363fd3d99f398033fc5131eef83980335bc2a6939c09ecc079c591ff7e4dfff00bb5554ae1c4d8907b8f1ac2885031ee393fd3d9194efff0353fd3d9353fd3d93e901ac2a1933aa20f6b6294383fd3d971dcd6f6b4c2a693393fd3d9323fd3d93531b00708dc894b393fd3d937b20ba73b901ac2b4c2a693393fd3d9383fd3d9cb318883e55031ee393fd3d9ce07ce9e9150cf35343fd3d9333fd3d9343fd3d9393fd3d978c6d8907c398033363fd3d9377e9363f166e2a8b4c2a693393fd3d9383fd3d9353fd3d91b3a803342792f7b393fd3d9363fd3d91d901ac22713bda0393fd3d9e55031ee393fd3d9383fd3d9363fd3d9383fd3d9383fd3d9393fd3d9ddcfc96b393fd3d9333fd3d91e901ac23f3fd3d9f1e75388e4d54eb7b45634b719dcd203383fd3d934d0d203363fd3d9393fd3d9393fd3d9393fd3d9393fd3d9363fd3d9383fd3d9323fd3d93f09ecc087841b44f437ed04d7c2a693c04dfff01067e2a85dc5d89056f23a06a35031ee14f33a06605e43a21728c115ecc12491ced1508038c2a693f227c115f1d3ee00b4c2a693de09ecc0f1f23a06e55031eeffb209ceffb209ce000000008a1acada08dc894b3e3fd3d938c2a6939d4dfff00b38ed04d0c1249178c6d890d60aecc0ecc12491222f63a50838ed04344ffff0fdb209cefeb209ce04c5d890abdb894b3367e2a827dc894b17ddd3bbbe398033377e936378c6d890b67cb4e2b84608c8ecc12491ad5634b7ff27c11508dc894bdc4608c8db4608c8c34608c8cedb894be55031ee1c7e936338c2a69378c6d890d5482e237b5ea586
+  - "Assets/BLOCKYGON ASSETS \xA9/MODELS/LOCATION/BEACH/ITEMS/BGN_BEACH BALLOON.fbx"
+  - "Assets/BLOCKYGON ASSETS \xA9/MODELS/LOCATION/BEACH/ITEMS/BGN_BEACH BEDS.fbx"
+  - "Assets/BLOCKYGON ASSETS \xA9/MODELS/STREET ROADS/ROAD MARKS/BGN_CROSS WALK.fbx"
+  modifiedAssetPaddingHash: d6a958ff0cfaec03c096e86b343fd3d95267e2a8da4608c8cdd150801428c115d60aecc0feb209cecb318883ecb4d8acd35634b7ecc12491ecc124913f3fd3d9cf318883343fd3d9fe8dea1b6e624f9cfe8dea1b323fd3d9b05634b73f3fd3d909a3dddeecc124911d853e6dcd5634b70596fc78c37140c5f48dea1b9161d67c383fd3d997c6d89032413231ba5634b7ceb0e1ddeb406f59534ffff0ec9d160b333fd3d9cedb894b9c8202450880be28323fd3d9333fd3d91719097f323fd3d94ef5d476fcb209ceb0026bda0da3ddde97c6d890383fd3d9333fd3d9c04dfff0e21cb64499b459d8383fd3d9f527c115393fd3d9bc4608c8c1d1508098f23a06c44608c8e1c4d89009b36352cec12491d38bdc51f437ed0459059dd778c6d890333fd3d9695031ee797e9363de09ecc09d8f1ac27185a0c8460e8d7d343fd3d93f8a53ab5bc2a693323fd3d9af67e2a80680be282009ecc0323fd3d975b27ddec38f1ac25bc2a693333fd3d9343fd3d9ecc12491d9398033333fd3d9ab1750ebecc1249180c5d8903f3fd3d91b3a8033323fd3d9d7318883b15634b7383fd3d9abdb894b0ca3ddde5bc2a693333fd3d9343fd3d9de09ecc0d2f23a06c98d2793323fd3d9383fd3d97f8f1ac22133c349323fd3d9d9398033333fd3d9343fd3d9383fd3d9343fd3d9343fd3d9323fd3d91a616dbd323fd3d93f3fd3d97d8f1ac24adc894bcfaa50ba303c4cf2ecc1249172c8d203353fd3d928be2372393fd3d9323fd3d9323fd3d9333fd3d9333fd3d9383fd3d9353fd3d9af67e2a8e937ed0437869da1ecc12491fa4dfff0b94608c8ef37ed04df4dfff00ba3ddde5d3980338c67e2a8338f406b1728c115ecc12491ecc12491ba5634b72028c1158933dfda5bc2a6935dc5d8905267e2a83ec5d890ecc12491ecc12491de09ecc01b54f64a2009ecc0d7c2a693ba5634b7af5634b7ecc12491ecc12491d6318883ca318883ecc124914ca7a894ecc124919250cf35ecc12491ecc12491fe27c115b45634b7f927c1156209ecc09e528dbd0cf43a06abdb894bd6318883491ecafdd35634b7ecc12491ecc12491e64608c8bb7d9363ecc12491db4608c8c34608c8cedb894be55031eefc5131eeb95634b7d7318883503c8af8f8aaff81ecc12491fe4945be78c6d890
   modifiedMeshList: []
   modifiedMeshPaddingList: 
   modifiedAssets:
@@ -648,7 +651,7 @@ MonoBehaviour:
     - R_R__2_
     - R_R__1_
     - BGN_RV
-    padding: 9200000092000000920000009200000016000000
+    padding: 000100000001000000010000000100005a000000
     unwrapper: 0000000000000000000000000000000000000000
   - meshName:
     - TIRE__12_
@@ -658,27 +661,27 @@ MonoBehaviour:
     - TIRE__8_
     - TIRE__7_
     - BGN_SEMI
-    padding: 4a0000004a0000004a0000004a0000004a0000004a0000000e000000
+    padding: 0001000000010000000100000001000000010000000100003a000000
     unwrapper: 00000000000000000000000000000000000000000000000000000000
   - meshName:
     - BGN_MOTEL
-    padding: 01000000
+    padding: 07000000
     unwrapper: 00000000
   - meshName:
     - BGN_TRUCK_OIL_CONTAINER
-    padding: 0a000000
+    padding: 29000000
     unwrapper: 00000000
   - meshName:
     - BLOCKYGON_WATER_DISPENSER
-    padding: 35000000
+    padding: d6000000
     unwrapper: 00000000
   - meshName:
     - BLOCKYGON_BED1
-    padding: 59000000
+    padding: b2000000
     unwrapper: 00000000
   - meshName:
     - BLOCKYGON_OFFICE_DRAWER_1
-    padding: 33000000
+    padding: cd000000
     unwrapper: 00000000
   - meshName:
     - BLOCKYGON_OFFICE_CHAIR
@@ -686,41 +689,41 @@ MonoBehaviour:
     unwrapper: 00000000
   - meshName:
     - BLOCKYGON_BLOCKYCOLA_VENDING_MACHINE
-    padding: 53000000
+    padding: a6000000
     unwrapper: 00000000
   - meshName:
     - BLOCKYGON_COUCHBIG
-    padding: 5c000000
+    padding: b9000000
     unwrapper: 00000000
   - meshName:
     - TREE_VASE_2
     - TREE_VASE_1
     - TREE_VASE
-    padding: df000000d7000000e8000000
+    padding: 000100000001000000010000
     unwrapper: 000000000000000000000000
   - meshName:
     - BGN_ATM
-    padding: 73000000
+    padding: e7000000
     unwrapper: 00000000
   - meshName:
     - BGN_STREET_TELEPHONE
-    padding: 8c000000
+    padding: 00010000
     unwrapper: 00000000
   - meshName:
     - BLOCKUGON_TOILET
-    padding: 8b000000
+    padding: 00010000
     unwrapper: 00000000
   - meshName:
     - BGN_CONNECTABLE_BUILD
-    padding: 04000000
+    padding: 08000000
     unwrapper: 00000000
   - meshName:
     - BLOCKYGON_GRASS_TREE__1_
-    padding: 5a000000
+    padding: b5000000
     unwrapper: 00000000
   - meshName:
     - CANNED_HAM_BUILD
-    padding: 03000000
+    padding: 07000000
     unwrapper: 00000000
   - meshName:
     - R_R__8_
@@ -728,14 +731,14 @@ MonoBehaviour:
     - R_R__6_
     - R_R__5_
     - BGN_DEFAULT_CAR
-    padding: 0001000000010000000100000001000036000000
+    padding: 000100000001000000010000000100006c000000
     unwrapper: 0000000000000000000000000000000000000000
   - meshName:
     - BLOCKYGON_SOLAR_PANE__5_
     - BLOCKYGON_ROOF_AC__11_
     - BGN_DOOR__1_
     - BGN_CONNECTED_BUILDS
-    padding: 59000000460000005a00000002000000
+    padding: b20000008d000000b400000005000000
     unwrapper: 00000000000000000000000000000000
   - meshName:
     - R_R__8_
@@ -743,36 +746,36 @@ MonoBehaviour:
     - R_R__6_
     - R_R__5_
     - BG_PICK_UP_TRUCK
-    padding: 0001000000010000000100000001000036000000
+    padding: 000100000001000000010000000100006c000000
     unwrapper: 0000000000000000000000000000000000000000
   - meshName:
     - BGN_LONG_BUILD
-    padding: 02000000
+    padding: 05000000
     unwrapper: 00000000
   - meshName:
     - BGN_ST_SELLING_3
-    padding: 44000000
+    padding: 89000000
     unwrapper: 00000000
   - meshName:
     - BGN_GENERIC_WIDE_BUILD
-    padding: 04000000
+    padding: 08000000
     unwrapper: 00000000
   - meshName:
     - BGN_CITY_TABLE
-    padding: 49000000
+    padding: 93000000
     unwrapper: 00000000
   - meshName:
     - BLOCKYGON_CRATE
-    padding: a8000000
+    padding: 00010000
     unwrapper: 00000000
   - meshName:
     - BLOCKYGON_STREET_TREE__1
     - BLOCKYGON_STREET_TREE
-    padding: 2100000026000000
+    padding: 430000004d000000
     unwrapper: 0000000000000000
   - meshName:
     - BLOCKYGON_TREE_LOG
-    padding: 76000000
+    padding: ed000000
     unwrapper: 00000000
   - meshName:
     - R_R__7___1_
@@ -781,12 +784,12 @@ MonoBehaviour:
     - _911__1
     - _911_
     - BGN_POLICE_CAR
-    padding: 000100000001000000010000000100000001000034000000
+    padding: 000100000001000000010000000100000001000069000000
     unwrapper: 000000000000000000000000000000000000000000000000
   - meshName:
     - BGN_WIDE_BRICK_BUILD
     - BLOCKYGON_ROOF_AC__1_
-    padding: 030000003d000000
+    padding: 070000007b000000
     unwrapper: 0000000000000000
   - meshName:
     - R_R__8_
@@ -794,20 +797,20 @@ MonoBehaviour:
     - R_R__6_
     - R_R__5_
     - BGN_TAXI_CAR
-    padding: 0001000000010000000100000001000035000000
+    padding: 000100000001000000010000000100006a000000
     unwrapper: 0000000000000000000000000000000000000000
   - meshName:
     - Sphere
     - ball_build_statue
-    padding: 080000000a000000
+    padding: 1000000014000000
     unwrapper: 0000000000000000
   - meshName:
     - BGN_SHIP_TOWER
-    padding: 01000000
+    padding: 03000000
     unwrapper: 00000000
   - meshName:
     - BLOCKYGON_BLUE_CONTAINER_CLOSED__
-    padding: 2a000000
+    padding: 54000000
     unwrapper: 00000000
   - meshName:
     - TIRE__8_
@@ -815,11 +818,11 @@ MonoBehaviour:
     - TIRE__6_
     - TIRE__5_
     - BGN_EXPRESS
-    padding: d0000000d0000000d0000000d00000002a000000
+    padding: 0001000000010000000100000001000055000000
     unwrapper: 0000000000000000000000000000000000000000
   - meshName:
     - BGN_ST_SELLING
-    padding: 45000000
+    padding: 8b000000
     unwrapper: 00000000
   - meshName:
     - TOILET_DOORS
@@ -827,7 +830,7 @@ MonoBehaviour:
     - hospital_interior
     - BLOCKYGON_HOSPITAL_BED__1_
     - BLOCKYGON_COUCHBIG__1_
-    padding: 2a0000002400000006000000580000004e000000
+    padding: 54000000480000000c000000b00000009d000000
     unwrapper: 0000000000000000000000000000000000000000
   - meshName:
     - BLOCKYGON_TABLE_SMALL_
@@ -836,8 +839,9 @@ MonoBehaviour:
     - BUILD_VERY_TALL_
     - BGN_DOOR__2_
     - BG_GARAGE_DOOR2
-    padding: 8a0000001b00000029000000010000008a00000049000000
-    unwrapper: 000000000000000000000000000000000000000000000000
+    - BGN_DOOR__5_
+    padding: 000100003600000052000000020000000001000093000000d6000000
+    unwrapper: 00000000000000000000000000000000000000000000000000000000
   - meshName:
     - BLOCKYGON_CRATE_TILE
     padding: 58000000
@@ -848,15 +852,15 @@ MonoBehaviour:
     - F_R
     - F_L
     - BGN_VAZ_GREEN_
-    padding: fc000000fc000000fc000000fc0000003c000000
+    padding: 0001000000010000000100000001000078000000
     unwrapper: 0000000000000000000000000000000000000000
   - meshName:
     - BGN_WALBLOCK
-    padding: 02000000
+    padding: 04000000
     unwrapper: 00000000
   - meshName:
     - BGN_STYLISH WATER FOUNTAIN
-    padding: 1c000000
+    padding: 38000000
     unwrapper: 00000000
   - meshName:
     - BLOCKYGON_COUCHBIG
@@ -914,20 +918,20 @@ MonoBehaviour:
     - BLOCKYGON_OFFICE_DRAWER_MEDIUM
     - BLOCKYGON_CRATE__MEDIUM
     - BLOCKYGON_BOOK_SHELF
-    padding: 4e0000006f0000000900000005000000460000002b000000210000001f00000005000000bf00000039000000380000003900000039000000390000007a0000008c00000087000000bb0000000001000000010000ec0000000001000000010000000100006a0000003c0000006b000000a200000056000000aa00000055000000d000000049000000a80000000001000000010000000100005300000059000000aa00000000010000920000005400000073000000aa00000000010000000100001c00000069000000710000007e000000660000003d0000006e000000
+    padding: 9d000000de000000120000000a0000008d00000057000000430000003e0000000b000000000100007300000070000000730000007300000073000000f4000000000100000001000000010000000100000001000000010000000100000001000000010000d400000079000000d600000000010000ad00000000010000ab000000000100009200000000010000000100000001000000010000a6000000b2000000000100000001000000010000a9000000e700000000010000000100000001000038000000d3000000e2000000fd000000cd0000007b000000dd000000
     unwrapper: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   - meshName:
     - BLOCKYGON_ROOF_AC__4_
     - BGN_BUILDING_OFFICE_TWIN
-    padding: 4600000003000000
+    padding: 8d00000006000000
     unwrapper: 0000000000000000
   - meshName:
     - BGN_BCW_TOWER
-    padding: 02000000
+    padding: 05000000
     unwrapper: 00000000
   - meshName:
     - BGN_BUILDING_
-    padding: 02000000
+    padding: 04000000
     unwrapper: 00000000
   - meshName:
     - BLOCKYGON_TABLE_BIG___4_
@@ -968,90 +972,90 @@ MonoBehaviour:
     - BLOCKYGON_ROOF_AC__1_
     - LITTLE_ROOM
     - ELEVATOR
-    padding: 62000000830000006c000000040000000500000003000000040000000400000004000000090000000700000000010000000100000001000000010000d9000000d9000000d9000000d9000000680000001f000000b600000024000000a800000053000000ec00000077000000aa000000000100005200000000010000680000000c0000002000000025000000460000000f00000034000000
+    padding: c400000000010000d8000000080000000b00000007000000080000000800000008000000130000000e0000000001000000010000000100000001000000010000000100000001000000010000680000003f000000000100004900000000010000a600000000010000ef0000000001000000010000a400000000010000d000000018000000410000004b0000008d0000001e00000034000000
     unwrapper: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   - meshName:
     - BGN_FANCY_X_BRICK_TOWER
-    padding: 02000000
+    padding: 05000000
     unwrapper: 00000000
   - meshName:
     - BLOCKYGON_CARRIERER_LEGS
     - BLOCKYGON_WATER
-    padding: 0800000008000000
+    padding: 1000000010000000
     unwrapper: 0000000000000000
   - meshName:
     - BGN_TELEPHONE_BOOTH
-    padding: 52000000
+    padding: a4000000
     unwrapper: 00000000
   - meshName:
     - Cube__142_
     - Cube__89_
-    padding: 0500000004000000
+    padding: 0a00000009000000
     unwrapper: 0000000000000000
   - meshName:
     - BGN_TRAFFIC_LIGHT
-    padding: 47000000
+    padding: 8f000000
     unwrapper: 00000000
   - meshName:
     - BLOCKYGON_RED_CONTAINER_CLOSED_
-    padding: 2a000000
+    padding: 54000000
     unwrapper: 00000000
   - meshName:
     - BUILDING_BIG
-    padding: 01000000
+    padding: 03000000
     unwrapper: 00000000
   - meshName:
     - BCW_BUILD
-    padding: 02000000
+    padding: 04000000
     unwrapper: 00000000
   - meshName:
     - BLOCKYGON_WHITE_CONTAINER_HALF_OPEN_
-    padding: 1d000000
+    padding: 3a000000
     unwrapper: 00000000
   - meshName:
     - BLOCKYGON_TREE_3
     - BLOCKYGON_TREE_1
     - BLOCKYGON_TREE
     - BLOCKYGON_TREE_2
-    padding: 3200000019000000260000002f000000
+    padding: 64000000330000004d0000005e000000
     unwrapper: 00000000000000000000000000000000
   - meshName:
     - BGN_BUS OFFICE
     - BLOCKYGON_SOLAR PANE (3)
     - BLOCKYGON_ROOF AC (9)
-    padding: 050000005900000046000000
+    padding: 0b000000b20000008d000000
     unwrapper: 000000000000000000000000
   - meshName:
     - BGN_WIDE_BUILD
-    padding: 01000000
+    padding: 03000000
     unwrapper: 00000000
   - meshName:
     - BGN_ST_BUNKERS
-    padding: 35000000
+    padding: 6b000000
     unwrapper: 00000000
   - meshName:
     - BGN__BUILD_ON_BUILD
-    padding: 01000000
+    padding: 02000000
     unwrapper: 00000000
   - meshName:
     - BGN_ TOILET BOOTH
-    padding: 37000000
+    padding: 6f000000
     unwrapper: 00000000
   - meshName:
     - BLOCKYGON_STREET_LIGHT
-    padding: 57000000
+    padding: ae000000
     unwrapper: 00000000
   - meshName:
     - BGN_TREE_S
-    padding: 19000000
+    padding: 32000000
     unwrapper: 00000000
   - meshName:
     - BGN_BEACH BED FULL
-    padding: 3b000000
+    padding: 77000000
     unwrapper: 00000000
   - meshName:
     - BLOCKYGON_RED__CONTAINER_HALF_OPEN_
-    padding: 20000000
+    padding: 40000000
     unwrapper: 00000000
   - meshName:
     - Cube__84_
@@ -1059,198 +1063,198 @@ MonoBehaviour:
     - Cube__79_
     - Cube__55_
     - Cube__54_
-    padding: 0500000005000000050000000300000004000000
+    padding: 0b0000000a0000000b0000000700000008000000
     unwrapper: 0000000000000000000000000000000000000000
   - meshName:
     - BGN_ST SELLING CART
-    padding: 4e000000
+    padding: 9d000000
     unwrapper: 00000000
   - meshName:
     - ROCKS_2
     - ROCKS_1
     - ROCKS
-    padding: 7e0000008b00000061000000
+    padding: fd00000000010000c3000000
     unwrapper: 000000000000000000000000
   - meshName:
     - BLOCKYGON_CHINA_OBJECT_1
-    padding: 40000000
+    padding: 80000000
     unwrapper: 00000000
   - meshName:
     - SPACE
     - BGN_BCW_TOWER_2
-    padding: 0500000002000000
+    padding: 0a00000004000000
     unwrapper: 0000000000000000
   - meshName:
     - BLOCKYGON_PARK_TABLE
-    padding: 2f000000
+    padding: 5e000000
     unwrapper: 00000000
   - meshName:
     - BGN_BUILD_ON_BUILD2
-    padding: 02000000
+    padding: 04000000
     unwrapper: 00000000
   - meshName:
     - BLOCKYGON_YELLOW_CONTAINER_HALF_OPEN_
-    padding: 1c000000
+    padding: 39000000
     unwrapper: 00000000
   - meshName:
     - BGN_HOUSE_1
-    padding: 06000000
+    padding: 0d000000
     unwrapper: 00000000
   - meshName:
     - BGN_BASKETBALL_FIELD
-    padding: 06000000
+    padding: 0c000000
     unwrapper: 00000000
   - meshName:
     - BUILDING_1
     - BUILDING
-    padding: 0300000003000000
+    padding: 0600000007000000
     unwrapper: 0000000000000000
   - meshName:
     - CACTUS_2
     - CACTUS_1
-    padding: 2100000024000000
+    padding: 7a00000091000000
     unwrapper: 0000000000000000
   - meshName:
     - CITY_STATUE
     - BLOCKYGON_SOLIDER_STATUE__2_
     - BLOCKYGON_SOLIDER_STATUE__1_
     - BLOCKYGON_SOLIDER_STATUE
-    padding: 0a000000190000001b0000001a000000
+    padding: 15000000330000003700000034000000
     unwrapper: 00000000000000000000000000000000
   - meshName:
     - BGN_BUIL_BOOKS_
-    padding: 03000000
+    padding: 07000000
     unwrapper: 00000000
   - meshName:
     - BLOCKYGON_ROOF_AC__2_
     - BGN_NICE_BUILD
     - BGN_DOOR__1_
-    padding: 460000000400000000010000
+    padding: 8d0000000900000000010000
     unwrapper: 000000000000000000000000
   - meshName:
     - BLOCKYGON_YELLOW_CONTAINER_OPEN_
-    padding: 1d000000
+    padding: 3b000000
     unwrapper: 00000000
   - meshName:
     - BGN_FANCY_LONG_BRICK_BUILD
-    padding: 02000000
+    padding: 05000000
     unwrapper: 00000000
   - meshName:
     - BGN__WIDE_BUID_OLD
-    padding: 05000000
+    padding: 0b000000
     unwrapper: 00000000
   - meshName:
     - BLOCKYGON_ROOF_AC__10_
     - BUILD
-    padding: 4600000002000000
+    padding: 8d00000004000000
     unwrapper: 0000000000000000
   - meshName:
     - BLOCKYGON_YELLOW_CONTAINER_CLOSED_
-    padding: 24000000
+    padding: 48000000
     unwrapper: 00000000
   - meshName:
     - BGN_BCW_BUILD_S
-    padding: 02000000
+    padding: 05000000
     unwrapper: 00000000
   - meshName:
     - BLOCKYGON_SOLAR_PANE__3_
     - BLOCKYGON_ROOF_AC__4_
     - BGN_MAYOR_BUILD
-    padding: 590000004600000002000000
+    padding: b20000008d00000004000000
     unwrapper: 000000000000000000000000
   - meshName:
     - Cube__118_
     - Cube__117_
-    padding: 0300000004000000
+    padding: 0700000008000000
     unwrapper: 0000000000000000
   - meshName:
     - BLOCKYGON_BLUE_CONTAINER_OPEN_
-    padding: 1d000000
+    padding: 3b000000
     unwrapper: 00000000
   - meshName:
     - BGN_BELL_TOWER
-    padding: 02000000
+    padding: 04000000
     unwrapper: 00000000
   - meshName:
     - BGN_PORT_HANGAR
-    padding: 03000000
+    padding: 07000000
     unwrapper: 00000000
   - meshName:
     - BGN_GRILL_OPEN_
-    padding: b9000000
+    padding: 00010000
     unwrapper: 00000000
   - meshName:
     - BGN_MINI_BUILD
-    padding: 11000000
+    padding: 23000000
     unwrapper: 00000000
   - meshName:
     - BGN_TOWER_STLYISH
-    padding: 02000000
+    padding: 04000000
     unwrapper: 00000000
   - meshName:
     - NICE_BUILD
     - BLOCKYGON_ROOF_AC__9_
-    padding: 0100000046000000
+    padding: 030000008d000000
     unwrapper: 0000000000000000
   - meshName:
     - BGN_MAILBOX
-    padding: c4000000
+    padding: 00010000
     unwrapper: 00000000
   - meshName:
     - BGN_PORT_LIGHT_HOUSE
-    padding: 07000000
+    padding: 0e000000
     unwrapper: 00000000
   - meshName:
     - BUILD
-    padding: 04000000
+    padding: 08000000
     unwrapper: 00000000
   - meshName:
     - BGN_PUBLIC_STORAGE
-    padding: 07000000
+    padding: 0f000000
     unwrapper: 00000000
   - meshName:
     - BGN_BUILDING_WHITE
-    padding: 02000000
+    padding: 05000000
     unwrapper: 00000000
   - meshName:
     - BLOCKYGON_TABLE_BIG_
-    padding: 5e000000
+    padding: bd000000
     unwrapper: 00000000
   - meshName:
     - BGN_BEACH_BED_FULL_2
-    padding: 41000000
+    padding: 82000000
     unwrapper: 00000000
   - meshName:
     - BGN_WHITE_BUILD_TWIN
-    padding: 01000000
-    unwrapper: 00000000
-  - meshName:
-    - BLOCKYGON_RED_CONTAINER_OPEN_
-    padding: 21000000
-    unwrapper: 00000000
-  - meshName:
-    - BGN_ST_SELLING_2
-    padding: 47000000
-    unwrapper: 00000000
-  - meshName:
-    - BLOCKYGON_WHITE_CONTAINERS_OPEN_
-    padding: 1d000000
-    unwrapper: 00000000
-  - meshName:
-    - BGN_PARKING_GARAGE_1
-    padding: 02000000
-    unwrapper: 00000000
-  - meshName:
-    - BGN_BUILD_STYLE
     padding: 03000000
     unwrapper: 00000000
   - meshName:
+    - BLOCKYGON_RED_CONTAINER_OPEN_
+    padding: 42000000
+    unwrapper: 00000000
+  - meshName:
+    - BGN_ST_SELLING_2
+    padding: 8e000000
+    unwrapper: 00000000
+  - meshName:
+    - BLOCKYGON_WHITE_CONTAINERS_OPEN_
+    padding: 3b000000
+    unwrapper: 00000000
+  - meshName:
+    - BGN_PARKING_GARAGE_1
+    padding: 04000000
+    unwrapper: 00000000
+  - meshName:
+    - BGN_BUILD_STYLE
+    padding: 07000000
+    unwrapper: 00000000
+  - meshName:
     - BLOCKYGON_STATUE_OF_LIBERTY
-    padding: 06000000
+    padding: 0c000000
     unwrapper: 00000000
   - meshName:
     - BGN_MINI_OFFICE_BUILD
-    padding: 0f000000
+    padding: 1e000000
     unwrapper: 00000000
   - meshName:
     - apartment_6
@@ -1261,81 +1265,81 @@ MonoBehaviour:
     - apartment_1
     - apartment
     - BGN_DOOR__1_
-    padding: 0500000005000000030000000400000005000000060000000400000063000000
+    padding: 0b0000000b00000006000000090000000a0000000d00000008000000c7000000
     unwrapper: 0000000000000000000000000000000000000000000000000000000000000000
   - meshName:
     - BGN__WINDOWS__TOWER
-    padding: 02000000
+    padding: 05000000
     unwrapper: 00000000
   - meshName:
     - BUILD_TELPHONE_
-    padding: 01000000
+    padding: 03000000
     unwrapper: 00000000
   - meshName:
     - Cube__134_
     - Cube__133_
-    padding: 0200000003000000
+    padding: 0500000006000000
     unwrapper: 0000000000000000
   - meshName:
     - OIL_TANKS_2
     - OIL_TANKS_1
     - BUILDING_PORT
-    padding: 100000000f00000010000000
+    padding: 200000001f00000020000000
     unwrapper: 000000000000000000000000
   - meshName:
     - BGN_WHITE_BUILD_STAIRS
-    padding: 02000000
+    padding: 05000000
     unwrapper: 00000000
   - meshName:
     - BGN_BEACH_GUARD_HOUSE  (UPDATED)
-    padding: 11000000
+    padding: 23000000
     unwrapper: 00000000
   - meshName:
     - BGN_CONSTRUCTION_SITE
-    padding: 02000000
+    padding: 04000000
     unwrapper: 00000000
   - meshName:
     - BGN_FANCY_BRICK_BUILD
-    padding: 03000000
+    padding: 07000000
     unwrapper: 00000000
   - meshName:
     - BGN_BCW_BUILD_2
-    padding: 01000000
+    padding: 03000000
     unwrapper: 00000000
   - meshName:
     - BGN_V_BUILD_SHORT
-    padding: 03000000
+    padding: 07000000
     unwrapper: 00000000
   - meshName:
     - BGN_FANCY_BRICK_TOWER
-    padding: 03000000
+    padding: 07000000
     unwrapper: 00000000
   - meshName:
     - BGN_BUILDING_
-    padding: 02000000
+    padding: 05000000
     unwrapper: 00000000
   - meshName:
     - STAIRS__2_
     - ball_build
     - BGN_BALL_TOWER
-    padding: 180000000100000001000000
+    padding: 300000000200000003000000
     unwrapper: 000000000000000000000000
   - meshName:
     - BGN_SKY_SCRAPER_GRADUAL_
-    padding: 02000000
+    padding: 05000000
     unwrapper: 00000000
   - meshName:
     - BGN_BUILD_WIDE_FANCY
-    padding: 04000000
+    padding: 08000000
     unwrapper: 00000000
   - meshName:
     - Cube__19_
     - Cube__18_
-    padding: 0200000002000000
+    padding: 0500000004000000
     unwrapper: 0000000000000000
   - meshName:
     - BGN_OIL_SIL0S
-    padding: 08000000
+    padding: 10000000
     unwrapper: 00000000
   - meshName:
     - ROOF
@@ -1344,68 +1348,68 @@ MonoBehaviour:
     - SOCCER_MARK
     - GOAL_1
     - GOAL
-    padding: 0100000003000000010000001f0000002500000025000000
+    padding: 0300000007000000020000003f0000004a0000004a000000
     unwrapper: 000000000000000000000000000000000000000000000000
   - meshName:
     - Cube__90_
     - BGN_BLOCKGLOCK__3_
-    padding: 0f00000021000000
+    padding: 1f00000042000000
     unwrapper: 0000000000000000
   - meshName:
     - BLOCKYGON_STLYISH_TABLE
-    padding: 85000000
+    padding: 00010000
     unwrapper: 00000000
   - meshName:
     - Cube__8_
     - Cube__2_
     - Cube
-    padding: 020000000400000004000000
+    padding: 050000000900000009000000
     unwrapper: 000000000000000000000000
   - meshName:
     - BGN_THIN_TOWER
-    padding: 03000000
+    padding: 06000000
     unwrapper: 00000000
   - meshName:
     - Cube__151_
     - Cube__150_
     - Cube__115_
-    padding: 070000000700000007000000
+    padding: 0e0000000e0000000e000000
     unwrapper: 000000000000000000000000
   - meshName:
     - BGN_TALL_ON_SHORT
-    padding: 01000000
+    padding: 02000000
     unwrapper: 00000000
   - meshName:
     - BGN_GRADUAL_BUILDING
-    padding: 02000000
-    unwrapper: 00000000
-  - meshName:
-    - BGN_BRICK_BUILDING_HIGH
-    padding: 02000000
-    unwrapper: 00000000
-  - meshName:
-    - BGN_STYLE_C_BUILD
-    padding: 02000000
-    unwrapper: 00000000
-  - meshName:
-    - BGN_BRICK_HOTEL_HIGH
-    padding: 02000000
-    unwrapper: 00000000
-  - meshName:
-    - BGN_TOWER 1
-    padding: 01000000
-    unwrapper: 00000000
-  - meshName:
-    - BLOCKYGON_CAR_GARAGE
-    padding: 03000000
-    unwrapper: 00000000
-  - meshName:
-    - BGN_SHOPPING_CENTER
     padding: 05000000
     unwrapper: 00000000
   - meshName:
+    - BGN_BRICK_BUILDING_HIGH
+    padding: 05000000
+    unwrapper: 00000000
+  - meshName:
+    - BGN_STYLE_C_BUILD
+    padding: 04000000
+    unwrapper: 00000000
+  - meshName:
+    - BGN_BRICK_HOTEL_HIGH
+    padding: 04000000
+    unwrapper: 00000000
+  - meshName:
+    - BGN_TOWER 1
+    padding: 03000000
+    unwrapper: 00000000
+  - meshName:
+    - BLOCKYGON_CAR_GARAGE
+    padding: 06000000
+    unwrapper: 00000000
+  - meshName:
+    - BGN_SHOPPING_CENTER
+    padding: 0b000000
+    unwrapper: 00000000
+  - meshName:
     - SM_BOLLARD__15_
-    padding: 3e000000
+    padding: 7d000000
     unwrapper: 00000000
   - meshName:
     - Cube__114_
@@ -1413,45 +1417,45 @@ MonoBehaviour:
     - Cube__107_
     - Cube__106_
     - Cube__102_
-    padding: 06000000060000000b0000000a0000000a000000
+    padding: 0d0000000d000000160000001500000015000000
     unwrapper: 0000000000000000000000000000000000000000
   - meshName:
     - BGN_ST_BENCH
-    padding: 80000000
+    padding: 00010000
     unwrapper: 00000000
   - meshName:
     - BGN_ST_PALM_TREE
-    padding: 13000000
+    padding: 26000000
     unwrapper: 00000000
   - meshName:
     - POWER_BOX
-    padding: 3a000000
+    padding: 74000000
     unwrapper: 00000000
   - meshName:
     - BLOCKYGON_CRATE_TILE
-    padding: 3d000000
+    padding: 7b000000
     unwrapper: 00000000
   - meshName:
     - BGN_TRUCK_AUTO_CARRIER
-    padding: 18000000
+    padding: 30000000
     unwrapper: 00000000
   - meshName:
     - BGN_STATUE_CUP
-    padding: 46000000
+    padding: 8d000000
     unwrapper: 00000000
   - meshName:
     - BGN_CHINA__DRAGON_STATUE
-    padding: 25000000
+    padding: 4b000000
     unwrapper: 00000000
   - meshName:
     - BGN_PORT_GATE
-    padding: 0a000000
+    padding: 15000000
     unwrapper: 00000000
   - meshName:
     - Plane_1
     - Plane
     - BGN_FOUNTAIN_PARK__1_
-    padding: 180000002d0000000d000000
+    padding: 310000005b0000001b000000
     unwrapper: 000000000000000000000000
   - meshName:
     - BGN_LIGHT HOUSE
@@ -1463,48 +1467,48 @@ MonoBehaviour:
     unwrapper: 00000000
   - meshName:
     - HEAT_REGULATOR
-    padding: b3000000
+    padding: 00010000
     unwrapper: 00000000
   - meshName:
     - BGN__DINNING_TABLE_WITH_CHAIRS
-    padding: 45000000
+    padding: 8b000000
     unwrapper: 00000000
   - meshName:
     - BLOCKYGON_SINK
-    padding: 68000000
+    padding: d1000000
     unwrapper: 00000000
   - meshName:
     - SMALL
     - BIG
-    padding: 1d00000018000000
+    padding: 3b00000031000000
     unwrapper: 0000000000000000
   - meshName:
     - BLOCKYGON_PALM_TREE
-    padding: 1d000000
+    padding: 3b000000
     unwrapper: 00000000
   - meshName:
     - BGN_CHINA_TOWN_GATE_2
-    padding: 0c000000
+    padding: 18000000
     unwrapper: 00000000
   - meshName:
     - BGN_GAZEBO
-    padding: 14000000
+    padding: 29000000
     unwrapper: 00000000
   - meshName:
     - BGN_LILYPAD_WAER
-    padding: 11000000
+    padding: 22000000
     unwrapper: 00000000
   - meshName:
     - BGN_TRASH_CAN_CLOSED_
-    padding: a7000000
+    padding: 00010000
     unwrapper: 00000000
   - meshName:
     - BGN_TRASH_CAN_OPEN_
-    padding: a7000000
+    padding: 00010000
     unwrapper: 00000000
   - meshName:
     - BGN_MOUTAIN_2
-    padding: 06000000
+    padding: 0c000000
     unwrapper: 00000000
   - meshName:
     - INTERIOR_WALLS
@@ -1542,39 +1546,39 @@ MonoBehaviour:
     - BGN_AC_2
     - BGN__DINNING_TABLE_WITH_CHAIRS__1_
     - EXTERIOR
-    padding: 1100000000010000490000008100000000010000a7000000b1000000b80000000001000058000000aa0000005700000010000000d6000000b8000000a6000000b30000009b00000064000000680000007a0000005c000000850000008600000059000000b90000008b00000095000000e300000069000000b9000000ce000000af000000450000000a000000
+    padding: 220000000001000093000000000100000001000000010000000100000001000000010000b000000000010000af000000200000000001000000010000000100000001000000010000c8000000d1000000f5000000b90000000001000000010000b200000000010000000100000001000000010000d30000000001000000010000000100008b00000014000000
     unwrapper: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   - meshName:
     - BLOCKYGON_WHITE_CONTAINER_CLOSED_
-    padding: 24000000
+    padding: 48000000
     unwrapper: 00000000
   - meshName:
     - BGN__ELECTRIC_BOX_GROUP_FENCE
-    padding: 09000000
+    padding: 13000000
     unwrapper: 00000000
   - meshName:
     - BLOCKYGON_TILE_LOG__MEDIUM_
-    padding: 45000000
+    padding: 8b000000
     unwrapper: 00000000
   - meshName:
     - BGN_TREE_LOG_GROUP
-    padding: 44000000
+    padding: 88000000
     unwrapper: 00000000
   - meshName:
     - BGN_ST_LANTERN
-    padding: e0000000
+    padding: 00010000
     unwrapper: 00000000
   - meshName:
     - BLOCKYGON_CHAIR
-    padding: 97000000
+    padding: 00010000
     unwrapper: 00000000
   - meshName:
     - BLOCKYGON_CAMPFIRE
-    padding: 5e000000
+    padding: bc000000
     unwrapper: 00000000
   - meshName:
     - BGN__AC_UNIT_2
-    padding: 5c000000
+    padding: b8000000
     unwrapper: 00000000
   - meshName:
     - BGN_CACTUS_VASE
@@ -1583,66 +1587,66 @@ MonoBehaviour:
   - meshName:
     - BGN_BOAT_
     - PADDLES
-    padding: 3a00000000010000
+    padding: 7500000000010000
     unwrapper: 0000000000000000
   - meshName:
     - BGN_SINGLE_CABINET
-    padding: e3000000
+    padding: 00010000
     unwrapper: 00000000
   - meshName:
     - BLOCKYGON_OFFICE__SET_UP__1_
-    padding: 62000000
+    padding: c5000000
     unwrapper: 00000000
   - meshName:
     - BLOCKYGON_STOVE
-    padding: a5000000
+    padding: 00010000
     unwrapper: 00000000
   - meshName:
     - BGN_BICYCLE
-    padding: a6000000
+    padding: 00010000
     unwrapper: 00000000
   - meshName:
     - BGN_VOLLYBALL NET
-    padding: 36000000
+    padding: 6c000000
     unwrapper: 00000000
   - meshName:
     - BLOCKYGON_LARGE_PIPE_BIG_
-    padding: 42000000
+    padding: 85000000
     unwrapper: 00000000
   - meshName:
     - BGN_BUS_STATION
-    padding: 33000000
+    padding: 67000000
     unwrapper: 00000000
   - meshName:
     - BGN_OIL_CONTAINER
-    padding: 1a000000
+    padding: 34000000
     unwrapper: 00000000
   - meshName:
     - CRAIN_RAIL_PATH
     - CRAIN_RAIL_PATH_1
     - CRAIN_RAIL_PATH_2
-    padding: 230000002300000016000000
+    padding: 46000000460000002d000000
     unwrapper: 000000000000000000000000
   - meshName:
     - BGN_HEART_TREE
-    padding: 2d000000
+    padding: 5a000000
     unwrapper: 00000000
   - meshName:
     - BLOCKYGON_BEACH_GUARD_TOWER
-    padding: 21000000
+    padding: 42000000
     unwrapper: 00000000
   - meshName:
     - BLOCKYGON__PIPE_BIG_
-    padding: 5e000000
+    padding: bc000000
     unwrapper: 00000000
   - meshName:
     - CRANE_BODY
     - CRANE_TOP
-    padding: 0c0000000c000000
+    padding: 1800000019000000
     unwrapper: 0000000000000000
   - meshName:
     - BLOCKYGON_LARGE_PIPE_SINGLE_
-    padding: 73000000
+    padding: e7000000
     unwrapper: 00000000
   - meshName:
     - BLOCKYGON_AXE
@@ -1650,19 +1654,19 @@ MonoBehaviour:
     unwrapper: 00000000
   - meshName:
     - BLOCKYGON__PIPE_MEDIUM__
-    padding: 86000000
+    padding: 00010000
     unwrapper: 00000000
   - meshName:
     - BLOCKYGON_DROPBOX
-    padding: 6d000000
+    padding: da000000
     unwrapper: 00000000
   - meshName:
     - BLOCKYGON_HEART_STAIRS
-    padding: 24000000
+    padding: 49000000
     unwrapper: 00000000
   - meshName:
     - BLOCKYGON__PIPE_SINGLE_
-    padding: d4000000
+    padding: 00010000
     unwrapper: 00000000
   - meshName:
     - blockygon_telepohone
@@ -1682,28 +1686,41 @@ MonoBehaviour:
     unwrapper: 00000000
   - meshName:
     - BGN_POSTER
-    padding: 2b000000
+    padding: 57000000
     unwrapper: 00000000
   - meshName:
     - BLOCKYGON_BUOY
-    padding: 45000000
+    padding: 8a000000
     unwrapper: 00000000
   - meshName:
     - BLOCKYGON_STREET_LIGHT__BASIC_
-    padding: 5e000000
+    padding: bd000000
     unwrapper: 00000000
   - meshName:
     - FAN
     - BGN_WINDMILL
-    padding: 3d0000001f000000
+    padding: 7b0000003e000000
     unwrapper: 0000000000000000
   - meshName:
     - BLOCKYGON_TREE_CUT_
     - BLOCKYGON_TREE_CUT__3
     - BLOCKYGON_TREE_CUT__2
     - BLOCKYGON_TREE_CUT__1
-    padding: 2400000020000000280000002f000000
+    padding: 4800000041000000510000005e000000
     unwrapper: 00000000000000000000000000000000
+  - meshName:
+    - BGN_BEACH BALLOON
+    padding: 00010000
+    unwrapper: 00000000
+  - meshName:
+    - BGN_BEACH_BEDS_1
+    - BGN_BEACH_BEDS
+    padding: 0001000000010000
+    unwrapper: 0000000000000000
+  - meshName:
+    - BGN_CROSS_WALK
+    padding: 5e000000
+    unwrapper: 00000000
   assetList:
   - Assets/Bakery/examples/content/sponza/bush.FBX
   - Assets/Bakery/examples/content/floor_lamp.FBX
@@ -1996,7 +2013,7 @@ MonoBehaviour:
   renderSettingsRTPVWidth: 640
   renderSettingsRTPVHeight: 360
   tagOverrides: []
-  modifiedMeshPaddingArray: 2100000024000000
-  modifiedMeshUnwrapperArray: 0000000000000000
+  modifiedMeshPaddingArray: 04000000
+  modifiedMeshUnwrapperArray: 00000000
   texSettingsKey: []
   texSettingsVal: []

@@ -31,7 +31,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["BLOCKYGON_ROOF_AC__2_","BGN_NICE_BUILD","BGN_DOOR__1_"],"padding":[70,4,256],"unwrapper":[0,0,0]}'
+    - '#BAKERY{"meshName":["BLOCKYGON_ROOF_AC__2_","BGN_NICE_BUILD","BGN_DOOR__1_"],"padding":[141,9,256],"unwrapper":[0,0,0]}'
     clipAnimations: []
     isReadable: 0
   meshes:

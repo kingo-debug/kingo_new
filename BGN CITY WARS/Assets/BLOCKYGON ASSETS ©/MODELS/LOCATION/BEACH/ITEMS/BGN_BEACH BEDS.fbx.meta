@@ -30,7 +30,8 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    extraUserProperties: []
+    extraUserProperties:
+    - '#BAKERY{"meshName":["BGN_BEACH_BEDS_1","BGN_BEACH_BEDS"],"padding":[256,256],"unwrapper":[0,0]}'
     clipAnimations: []
     isReadable: 0
   meshes:

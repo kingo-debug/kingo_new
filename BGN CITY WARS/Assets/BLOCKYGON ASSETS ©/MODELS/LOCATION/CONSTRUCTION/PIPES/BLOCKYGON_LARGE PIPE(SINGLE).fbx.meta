@@ -41,7 +41,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["BLOCKYGON_LARGE_PIPE_SINGLE_"],"padding":[115],"unwrapper":[0]}'
+    - '#BAKERY{"meshName":["BLOCKYGON_LARGE_PIPE_SINGLE_"],"padding":[231],"unwrapper":[0]}'
     clipAnimations: []
     isReadable: 0
   meshes:

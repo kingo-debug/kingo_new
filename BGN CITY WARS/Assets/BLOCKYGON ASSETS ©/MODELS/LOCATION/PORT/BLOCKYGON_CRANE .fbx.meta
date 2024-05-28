@@ -31,7 +31,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["CRANE_BODY","CRANE_TOP"],"padding":[12,12],"unwrapper":[0,0]}'
+    - '#BAKERY{"meshName":["CRANE_BODY","CRANE_TOP"],"padding":[24,25],"unwrapper":[0,0]}'
     clipAnimations: []
     isReadable: 0
   meshes:

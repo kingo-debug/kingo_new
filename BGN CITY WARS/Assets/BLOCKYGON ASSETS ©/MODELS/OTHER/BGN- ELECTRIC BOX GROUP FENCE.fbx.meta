@@ -46,7 +46,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["BGN__ELECTRIC_BOX_GROUP_FENCE"],"padding":[9],"unwrapper":[0]}'
+    - '#BAKERY{"meshName":["BGN__ELECTRIC_BOX_GROUP_FENCE"],"padding":[19],"unwrapper":[0]}'
     clipAnimations: []
     isReadable: 0
   meshes:

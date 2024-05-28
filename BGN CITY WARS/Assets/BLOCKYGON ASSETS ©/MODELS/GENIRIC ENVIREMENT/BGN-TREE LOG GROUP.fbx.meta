@@ -31,7 +31,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["BGN_TREE_LOG_GROUP"],"padding":[68],"unwrapper":[0]}'
+    - '#BAKERY{"meshName":["BGN_TREE_LOG_GROUP"],"padding":[136],"unwrapper":[0]}'
     clipAnimations: []
     isReadable: 0
   meshes:

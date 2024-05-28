@@ -41,7 +41,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["BGN_TRUCK_AUTO_CARRIER"],"padding":[24],"unwrapper":[0]}'
+    - '#BAKERY{"meshName":["BGN_TRUCK_AUTO_CARRIER"],"padding":[48],"unwrapper":[0]}'
     clipAnimations: []
     isReadable: 0
   meshes:

@@ -31,7 +31,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["BUILD_TELPHONE_"],"padding":[1],"unwrapper":[0]}'
+    - '#BAKERY{"meshName":["BUILD_TELPHONE_"],"padding":[3],"unwrapper":[0]}'
     clipAnimations: []
     isReadable: 0
   meshes:

@@ -41,7 +41,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["BGN_BASKETBALL_FIELD"],"padding":[6],"unwrapper":[0]}'
+    - '#BAKERY{"meshName":["BGN_BASKETBALL_FIELD"],"padding":[12],"unwrapper":[0]}'
     clipAnimations: []
     isReadable: 0
   meshes:

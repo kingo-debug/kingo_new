@@ -31,7 +31,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["FAN","BGN_WINDMILL"],"padding":[61,31],"unwrapper":[0,0]}'
+    - '#BAKERY{"meshName":["FAN","BGN_WINDMILL"],"padding":[123,62],"unwrapper":[0,0]}'
     clipAnimations: []
     isReadable: 0
   meshes:

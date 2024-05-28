@@ -31,7 +31,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["TOILET_DOORS","CIELING_LIGHT__30_","hospital_interior","BLOCKYGON_HOSPITAL_BED__1_","BLOCKYGON_COUCHBIG__1_"],"padding":[42,36,6,88,78],"unwrapper":[0,0,0,0,0]}'
+    - '#BAKERY{"meshName":["TOILET_DOORS","CIELING_LIGHT__30_","hospital_interior","BLOCKYGON_HOSPITAL_BED__1_","BLOCKYGON_COUCHBIG__1_"],"padding":[84,72,12,176,157],"unwrapper":[0,0,0,0,0]}'
     clipAnimations: []
     isReadable: 0
   meshes:

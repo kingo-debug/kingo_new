@@ -31,7 +31,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["CANNED_HAM_BUILD"],"padding":[3],"unwrapper":[0]}'
+    - '#BAKERY{"meshName":["CANNED_HAM_BUILD"],"padding":[7],"unwrapper":[0]}'
     clipAnimations: []
     isReadable: 0
   meshes:

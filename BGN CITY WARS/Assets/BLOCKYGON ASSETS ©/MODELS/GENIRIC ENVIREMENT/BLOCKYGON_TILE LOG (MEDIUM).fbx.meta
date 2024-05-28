@@ -31,7 +31,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["BLOCKYGON_TILE_LOG__MEDIUM_"],"padding":[69],"unwrapper":[0]}'
+    - '#BAKERY{"meshName":["BLOCKYGON_TILE_LOG__MEDIUM_"],"padding":[139],"unwrapper":[0]}'
     clipAnimations: []
     isReadable: 0
   meshes:

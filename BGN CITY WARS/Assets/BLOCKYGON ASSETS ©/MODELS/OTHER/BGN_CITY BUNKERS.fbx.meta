@@ -31,7 +31,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["BGN_ST_BUNKERS"],"padding":[53],"unwrapper":[0]}'
+    - '#BAKERY{"meshName":["BGN_ST_BUNKERS"],"padding":[107],"unwrapper":[0]}'
     clipAnimations: []
     isReadable: 0
   meshes:

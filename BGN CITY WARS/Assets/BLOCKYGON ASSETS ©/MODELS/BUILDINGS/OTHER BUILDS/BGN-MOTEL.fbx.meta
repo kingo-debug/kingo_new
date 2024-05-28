@@ -46,7 +46,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["BGN_MOTEL"],"padding":[1],"unwrapper":[0]}'
+    - '#BAKERY{"meshName":["BGN_MOTEL"],"padding":[7],"unwrapper":[0]}'
     clipAnimations: []
     isReadable: 0
   meshes:

@@ -46,7 +46,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["CRAIN_RAIL_PATH","CRAIN_RAIL_PATH_1","CRAIN_RAIL_PATH_2"],"padding":[35,35,22],"unwrapper":[0,0,0]}'
+    - '#BAKERY{"meshName":["CRAIN_RAIL_PATH","CRAIN_RAIL_PATH_1","CRAIN_RAIL_PATH_2"],"padding":[70,70,45],"unwrapper":[0,0,0]}'
     clipAnimations: []
     isReadable: 0
   meshes:

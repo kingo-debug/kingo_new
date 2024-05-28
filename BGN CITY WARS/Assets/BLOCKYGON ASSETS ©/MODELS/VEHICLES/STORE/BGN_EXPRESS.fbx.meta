@@ -41,7 +41,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["TIRE__8_","TIRE__7_","TIRE__6_","TIRE__5_","BGN_EXPRESS"],"padding":[208,208,208,208,42],"unwrapper":[0,0,0,0,0]}'
+    - '#BAKERY{"meshName":["TIRE__8_","TIRE__7_","TIRE__6_","TIRE__5_","BGN_EXPRESS"],"padding":[256,256,256,256,85],"unwrapper":[0,0,0,0,0]}'
     clipAnimations: []
     isReadable: 0
   meshes:

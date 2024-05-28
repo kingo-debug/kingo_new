@@ -5,6 +5,7 @@ public class EquipSkin : MonoBehaviour
 {
     private BuySkin buy;
     private InitiateData data;
+    [SerializeField]
     private RefreshEquippedStates states;
     private GameObject SkinItem;
 
@@ -29,7 +30,7 @@ public class EquipSkin : MonoBehaviour
             data = GameObject.Find("ApplicationManager").GetComponent<InitiateData>();
             EquippedButton = transform.parent.GetChild(2).gameObject;
             buy = transform.parent.GetChild(0).GetComponent<BuySkin>();
-            states = transform.parent.parent.parent.GetComponent<RefreshEquippedStates>();
+           states = GameObject.Find("skin window").GetComponent<RefreshEquippedStates>();
 
         }
 
