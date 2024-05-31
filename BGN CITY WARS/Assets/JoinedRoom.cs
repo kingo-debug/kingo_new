@@ -7,6 +7,7 @@ using Photon.Realtime;
 public class JoinedRoom : MonoBehaviourPunCallbacks
 {
     public string RoomSceneName;
+    public string GameMode;
     public Transform LoadingScreen;
     [SerializeField]
     private int MaxroomsAllowed;
@@ -21,26 +22,31 @@ public class JoinedRoom : MonoBehaviourPunCallbacks
 
     public override void OnJoinedRoom()
     {
-        PhotonNetwork.LoadLevel(RoomSceneName);
-        if(LoadingScreen!=null)
+        string RoomName = PhotonNetwork.CurrentRoom.Name;
+        if(LoadingScreen!=null )
         {
+
             LoadingScreen.gameObject.SetActive(true);
+
         }
 
-        PhotonView pv = GetComponent<PhotonView>();
-   
-        pv.RPC("newPlayerJoined", RpcTarget.All);
         
     }
+
+
+
+
+
+
     public void CreateOrJoinroom()
     {
         if (PhotonNetwork.CountOfRooms < MaxroomsAllowed)
         {
             RoomOptions roomOptions = new RoomOptions();
             roomOptions.MaxPlayers = MaxPlayersinRoom; // Set the maximum number of players for the room
-
-            PhotonNetwork.JoinOrCreateRoom(RoomSceneName, roomOptions, TypedLobby.Default);
-
+            TypedLobby lobby = new TypedLobby(GameMode, LobbyType.Default);
+            PhotonNetwork.JoinOrCreateRoom(RoomSceneName, roomOptions, lobby);
+            PhotonNetwork.LoadLevel(RoomSceneName);
         }
         else
             ErrorMaxRooms.gameObject.SetActive(true);
