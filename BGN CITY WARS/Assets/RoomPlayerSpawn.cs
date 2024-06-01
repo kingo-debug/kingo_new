@@ -14,12 +14,12 @@ public class RoomPlayerSpawn : MonoBehaviour
     void Start()
         
     {
-        Transform RandomSP = SpawnPoints[0];
+        Transform RandomSP = SpawnPoints[Random.Range(0,SpawnPoints.Length)];
        
 
         SpawnedPlayer = PhotonNetwork.Instantiate("BGN-Player new", RandomSP.position, Quaternion.identity);  // spawn player
 
-        SpawnedPlayer.transform.position = SpawnPoints[0].position;  // set player position
+        SpawnedPlayer.transform.GetChild(0).position = RandomSP.position; // set player position
       GameObject Scoreitem=   PhotonNetwork.Instantiate("_PLAYER SCORE BOARD ITEM_", transform.position, Quaternion.identity); // spawn player score board item
 
         Scoreitem.transform.parent = RoomScoreBoard.transform;
