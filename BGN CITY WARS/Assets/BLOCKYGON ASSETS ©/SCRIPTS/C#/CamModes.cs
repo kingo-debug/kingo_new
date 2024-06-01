@@ -5,10 +5,29 @@ using UnityEngine;
 public class CamModes : MonoBehaviour
 {
     public Camera Camera;
+    [SerializeField]
+    private camera2 camcontroller;
     public PlayerActionsVar vars;
     //CAM MODES
     public float FMC = 30f;
-    public float CMC = 25;
+
+    [SerializeField]
+    private float CombatDistance = 2f;
+    [SerializeField]
+    private float CombatRightOffset = 0.4f;
+    [SerializeField]
+    private float CombatHeight = 1.2f;
+
+
+
+    [SerializeField]
+    private float FreeDistance = 3f;
+    [SerializeField]
+    private float FreeRightOffset = 0.2f;
+    [SerializeField]
+    private float FreeHeight = 1.2f;
+
+
     public float AMC = 21;
     public float SCOPE = 15;
     public float SprintingFOV = 40f;
@@ -38,27 +57,34 @@ public class CamModes : MonoBehaviour
       
         if (!vars.Sprinting)
         {
-        if (vars.Combat & !vars.IsAiming)
+        if (vars.Combat) // combat mode//
 
+            {
 
-            Camera.fieldOfView = Mathf.SmoothDamp(Camera.fieldOfView, CMC, ref currentspeedCMC, Time.deltaTime * smoothness);
+                camcontroller.defaultDistance = Mathf.Lerp(camcontroller.defaultDistance,CombatDistance, Time.deltaTime * smoothness);
+                camcontroller.rightOffset = Mathf.Lerp(camcontroller.rightOffset, CombatRightOffset, Time.deltaTime * smoothness);
+                camcontroller.height = Mathf.Lerp(camcontroller.height, CombatHeight, Time.deltaTime * smoothness);
+            }
 
-
-
-
-        else if (vars.Combat  && vars.IsAiming && ! scopemanager.CanScope)
+            if (vars.IsAiming && ! scopemanager.CanScope) // hipsfire mode//
         {
             Camera.fieldOfView = Mathf.SmoothDamp(Camera.fieldOfView, AMC, ref currentspeedAMC, Time.deltaTime * smoothnessAMC);
         }
 
-        else if (vars.Combat && vars.IsAiming && scopemanager.CanScope)
+        else if ( vars.IsAiming && scopemanager.CanScope) // scope aiming mode//
         {
             Camera.fieldOfView = Mathf.SmoothDamp(Camera.fieldOfView, SCOPE, ref currentspeedFMC, Time.deltaTime * smoothness);
 
         }
-        else
+        if(!vars.Combat)  // free mode //
             {
-                Camera.fieldOfView = Mathf.SmoothDamp(Camera.fieldOfView, FMC, ref currentspeedCMC, Time.deltaTime * smoothness);
+                Camera.fieldOfView = Mathf.SmoothDamp(Camera.fieldOfView, FMC, ref currentspeedFMC, Time.deltaTime * smoothness);
+                
+                camcontroller.defaultDistance = Mathf.Lerp(camcontroller.defaultDistance, FreeDistance, Time.deltaTime * smoothness);
+                camcontroller.rightOffset = Mathf.Lerp(camcontroller.rightOffset, FreeRightOffset, Time.deltaTime * smoothness);
+                camcontroller.height = Mathf.Lerp(camcontroller.height, FreeHeight, Time.deltaTime * smoothness);
+
+
             }
 
         }
