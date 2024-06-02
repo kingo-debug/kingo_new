@@ -147,6 +147,8 @@ public class TakeDamage : MonoBehaviour
 
             if (TryGetComponent<MainCharacterController>(out mainCharacterController))
             {
+                Transform spawnpoints = GameObject.FindWithTag("SP").transform;
+                transform.position = spawnpoints.GetChild(Random.Range(0, spawnpoints.childCount)).position;
                 mainCharacterController.enabled = true;
             }
             HP = 100;
