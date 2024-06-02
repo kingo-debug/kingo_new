@@ -14,7 +14,7 @@ public class RoomPlayerSpawn : MonoBehaviour
     void Start()
         
     {
-        Transform RandomSP = SpawnPoints[Random.Range(0,SpawnPoints.Length)];
+        Transform RandomSP = SpawnPoints[Random.Range(0,SpawnPoints.Length-1)];
        
 
         SpawnedPlayer = PhotonNetwork.Instantiate("BGN-Player new", RandomSP.position, Quaternion.identity);  // spawn player
