@@ -69,7 +69,7 @@ void SetOpaque()
         material.renderQueue = (int)UnityEngine.Rendering.RenderQueue.Geometry;
         material.EnableKeyword("_SURFACE_TYPE_OPAQUE");
         material.DisableKeyword("_SURFACE_TYPE_TRANSPARENT");
-        material.SetColor("_BaseColor", new Color(.55f,.55f, .55f, 1));
+        material.SetColor("_BaseColor", new Color(.75f,.75f, .75f, 1));
     }
 
 
@@ -85,7 +85,7 @@ void SetTransparent()
         material.renderQueue = (int)UnityEngine.Rendering.RenderQueue.Transparent;
         material.EnableKeyword("_SURFACE_TYPE_TRANSPARENT");
         material.DisableKeyword("_SURFACE_TYPE_OPAQUE");
-        material.SetColor("_BaseColor", new Color(0.55f,.55f, 0.55f, distance*FadeSensitivity));
+        material.SetColor("_BaseColor", new Color(0.75f,.75f, 0.75f, distance*FadeSensitivity));
     }
 
 

@@ -31,7 +31,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["TREE_VASE_2","TREE_VASE_1","TREE_VASE"],"padding":[256,256,256],"unwrapper":[0,0,0]}'
+    - '#BAKERY{"meshName":["TREE_VASE_2","TREE_VASE_1","TREE_VASE"],"padding":[70,67,61],"unwrapper":[0,0,0]}'
     clipAnimations: []
     isReadable: 0
   meshes:
