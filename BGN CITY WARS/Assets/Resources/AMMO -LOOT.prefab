@@ -5021,9 +5021,10 @@ GameObject:
   - component: {fileID: 4793136016696614104}
   - component: {fileID: 7661621957170242962}
   - component: {fileID: 6590515245768507654}
-  - component: {fileID: 4337684085205569508}
   - component: {fileID: 3862038822257847937}
-  m_Layer: 0
+  - component: {fileID: 5056438245959543592}
+  - component: {fileID: 2105022088540230770}
+  m_Layer: 17
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5039,8 +5040,8 @@ Transform:
   m_GameObject: {fileID: 4337684085205569507}
   serializedVersion: 2
   m_LocalRotation: {x: 0.000000021073427, y: 3.552713e-15, z: 0.17798072, w: 0.984034}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.1063164, y: 1.1063164, z: 1.1063163}
+  m_LocalPosition: {x: -0.009, y: 0.024, z: 0}
+  m_LocalScale: {x: 1.0319405, y: 1.0319405, z: 1.0319403}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3738884125511871393}
@@ -5095,7 +5096,21 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &4337684085205569508
+--- !u!114 &3862038822257847937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4337684085205569507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00aa0ace74e69d540a2a713722896824, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PickupSFX: {fileID: 8300000, guid: 6a1cbce439eb7db4d8f563f3063ed101, type: 3}
+  RespawnTime: 60
+--- !u!135 &5056438245959543592
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5114,9 +5129,9 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.7825722
-  m_Center: {x: -0.0004293504, y: 0.024862222, z: 0.18979847}
---- !u!114 &3862038822257847937
+  m_Radius: 0.47
+  m_Center: {x: -0.000016245993, y: -0.000015318396, z: 0.0000016465783}
+--- !u!114 &2105022088540230770
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5125,8 +5140,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 4337684085205569507}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00aa0ace74e69d540a2a713722896824, type: 3}
+  m_Script: {fileID: 11500000, guid: bff1903c6340b0f4cb0a3670d9d54243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickupSFX: {fileID: 8300000, guid: 6a1cbce439eb7db4d8f563f3063ed101, type: 3}
-  RespawnTime: 60
+  RotateDirection: {x: 0, y: 1, z: 0}
+  Speed: 30

@@ -9,13 +9,13 @@ public class LootAmmo : MonoBehaviour
      void OnTriggerEnter(Collider other)
       
     {
-        if(other.gameObject.CompareTag("Player") && other.transform.GetChild(0).GetComponent<IKGripLocator>().ActiveWeapon.GetComponent<WeaponShoot>() != null)
-        {
+       
+        
             Debug.Log(other.name + "HAS PICKED UP LOOT");
-            other.transform.GetChild(0).GetComponent<IKGripLocator>().ActiveWeapon.GetComponent<WeaponShoot>().AmmoRefil();
+            other.transform.GetComponent<WeaponStatus>().CurrentWeapon.GetComponent<WeaponShoot>().AmmoRefil();
             other.GetComponent<AudioSource>().PlayOneShot(PickupSFX);
             PickedUp();
-        }
+        
     }
     private void PickedUp()
     {

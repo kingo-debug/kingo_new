@@ -6483,3 +6483,27 @@ Running halffloat2hdr "E:/temp/POLICE PVP_LM0_final_HDR.lz4" "D:/projects/kingo_
 Running halffloat2hdr "E:/temp/POLICE PVP_LMA1_final_HDR.lz4" "D:/projects/kingo_new/BGN CITY WARS/Assets/BakeryLightmaps/POLICE PVP_LMA1_final.hdr" 1024
 Total cache size 267816972
 Total cache size after purge 267816972
+Total cache size 267816972
+Total cache size after purge 267816972
+Total cache size 267816972
+Total cache size after purge 267816972
+Total cache size 267816972
+Total cache size after purge 267816972
+Total cache size 267816972
+Total cache size after purge 267816972
+Total cache size 267816972
+Total cache size after purge 267816972
+Total cache size 267816972
+Total cache size after purge 267816972
+Total cache size 267816972
+Total cache size after purge 267816972
+Total cache size 267816972
+Total cache size after purge 267816972
+Total cache size 267816972
+Total cache size after purge 267816972
+Total cache size 267816972
+Total cache size after purge 267816972
+Total cache size 267816972
+Total cache size after purge 267816972
+Total cache size 267816972
+Total cache size after purge 267816972
