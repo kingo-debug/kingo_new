@@ -6507,3 +6507,1027 @@ Total cache size 267816972
 Total cache size after purge 267816972
 Total cache size 267816972
 Total cache size after purge 267816972
+Total cache size 267816972
+Total cache size after purge 267816972
+Total cache size 267816972
+Total cache size after purge 267816972
+Rebuilding DAG because directory contents changed: Library/PlayerDataCache/Android/Data
+*** Tundra requires additional run (0.37 seconds), 0 items updated, 0 evaluated
+Finished compiling graph: 1465 nodes, 3242 flattened edges (3242 ToBuild, 0 ToUse), maximum node priority 103
+[           0s] Delete 76 artifact files that are no longer in use. (like D:\projects\kingo_new\BGN CITY WARS\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\assets\bin\Data\GI\level4\e9\e90a990eb90a0cb6e9b3372fca24a8c6.rsc.neo)
+[ 178/1460  0s] WriteText Library/Bee/artifacts/csharpactions/boot.config_x4e9.info
+[ 193/1460  0s] SplitFile Library/Bee/artifacts/Android/Split/globalgamemanagers.assets
+[ 201/1460  0s] SplitFile Library/Bee/artifacts/Android/Split/sharedassets0.assets
+[ 215/1460  0s] SplitFile Library/Bee/artifacts/Android/Split/level3
+[ 242/1460  0s] SplitFile Library/Bee/artifacts/Android/Split/sharedassets3.assets
+[ 246/1460  0s] SplitFile Library/Bee/artifacts/Android/Split/sharedassets5.assets
+[ 247/1460  0s] SplitFile Library/Bee/artifacts/Android/Split/sharedassets1.assets
+[ 248/1460  0s] SplitFile Library/Bee/artifacts/Android/Split/level5
+[ 284/1460  0s] SplitFile Library/Bee/artifacts/Android/Split/level4
+[ 288/1460  0s] WriteText Library/Bee/artifacts/csharpactions/unity_app_guid_ow15.info
+[ 289/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets1.assets.split12
+[ 290/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/level5.split1
+[ 291/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/level5.split0
+[ 292/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/level4.split0
+[ 293/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/level4.split2
+[ 294/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets1.assets.split13
+[ 295/1460  0s] AddBootConfigGUID Library/Bee/artifacts/Android/boot.config
+[ 296/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/level4.split1
+[ 297/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets1.assets.split11
+[ 298/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets1.assets.split14
+[ 299/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets1.assets.split10
+[ 300/1460  0s] SplitFile Library/Bee/artifacts/Android/Split/level1
+[ 301/1460  0s] SplitFile Library/Bee/artifacts/Android/Split/sharedassets4.assets
+[ 303/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets1.assets.split3
+[ 304/1460  0s] SplitFile Library/Bee/artifacts/Android/Split/level0
+[ 305/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets1.assets.split6
+[ 306/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets1.assets.split7
+[ 307/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets1.assets.split9
+[ 308/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/level1
+[ 309/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets1.assets.split0
+[ 310/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/boot.config
+[ 311/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/level0
+[ 312/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets1.assets.split4
+[ 313/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets1.assets.split2
+[ 314/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets1.assets.split8
+[ 315/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets4.assets
+[ 316/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets1.assets.split1
+[ 317/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets1.assets.split5
+[ 318/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets5.assets.split4
+[ 319/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets5.assets.split8
+[ 320/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets5.assets.split5
+[ 321/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets5.assets.split3
+[ 322/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets5.assets.split7
+[ 323/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets5.assets.split2
+[ 324/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets5.assets.split0
+[ 325/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets3.assets.split4
+[ 326/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets3.assets.split2
+[ 327/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets3.assets.split1
+[ 328/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets5.assets.split1
+[ 329/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets5.assets.split6
+[ 330/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets3.assets.split5
+[ 331/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets3.assets.split3
+[ 332/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets3.assets.split6
+[ 333/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/level3.split1
+[ 337/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets3.assets.split7
+[ 338/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/globalgamemanagers.assets.split2
+[ 342/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets3.assets.split0
+[ 343/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets0.assets.split2
+[ 344/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/level3.split0
+[ 346/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets0.assets.split1
+[ 347/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/level3.split2
+[ 349/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/globalgamemanagers.assets.split3
+[ 363/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/globalgamemanagers.assets.split1
+[ 372/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets0.assets.split0
+[ 373/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/globalgamemanagers.assets.split0
+[ 512/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Managed/Assembly-CSharp.dll
+[ 513/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/Resources/unity_builtin_extra
+[ 514/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets1.resource
+[ 515/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets3.resource
+[ 516/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets5.resource
+[ 517/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/GI/level4/9a/9a19d406e8795ce0a66d7bc78c50c74d.vis
+[ 518/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/GI/level4/f9/f907f8bc08fccf5af08e1a8dfd1b49c5.ecm
+[ 519/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/GI/level4/9a/9a19d406e8795ce0a66d7bc78c50c74d.rsc.neo
+[ 520/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/globalgamemanagers
+[ 521/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/GI/level4/f9/f907f8bc08fccf5af08e1a8dfd1b49c5.caw
+[ 522/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets4.resource
+[ 523/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.resource
+[ 524/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/GI/level4/9a/9a19d406e8795ce0a66d7bc78c50c74d.rgb
+[ 525/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/GI/level4/9a/9a19d406e8795ce0a66d7bc78c50c74d.caw
+[ 526/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/GI/level4/9a/9a19d406e8795ce0a66d7bc78c50c74d.iws.neo
+[ 527/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/GI/level4/9a/9a19d406e8795ce0a66d7bc78c50c74d.ecm
+[ 528/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/GI/level4/f9/f907f8bc08fccf5af08e1a8dfd1b49c5.rgb
+[ 529/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/GI/level4/f9/f907f8bc08fccf5af08e1a8dfd1b49c5.rsc.neo
+[ 530/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/GI/level4/69/6958d7602d7f93f4de8947ff3f6b1fa2.vis
+[ 531/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/GI/level4/69/6958d7602d7f93f4de8947ff3f6b1fa2.rsc.neo
+[ 532/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/GI/level4/69/6958d7602d7f93f4de8947ff3f6b1fa2.rgb
+[ 533/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/GI/level4/f9/f907f8bc08fccf5af08e1a8dfd1b49c5.vis
+[ 534/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/GI/level4/f9/f907f8bc08fccf5af08e1a8dfd1b49c5.iws.neo
+[ 535/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/GI/level4/69/6958d7602d7f93f4de8947ff3f6b1fa2.iws.neo
+[ 536/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/GI/level4/69/6958d7602d7f93f4de8947ff3f6b1fa2.ecm
+[ 537/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/GI/level4/69/6958d7602d7f93f4de8947ff3f6b1fa2.caw
+[ 538/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/GI/level4/41/413fed5ad9dbe118162e1c0f9fc77d84.rsc.neo
+[ 539/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/GI/level4/41/413fed5ad9dbe118162e1c0f9fc77d84.vis
+[ 540/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/GI/level4/41/413fed5ad9dbe118162e1c0f9fc77d84.rgb
+[ 541/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/GI/level4/41/413fed5ad9dbe118162e1c0f9fc77d84.ecm
+[ 542/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/GI/level4/41/413fed5ad9dbe118162e1c0f9fc77d84.caw
+[ 543/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/GI/level4/41/413fed5ad9dbe118162e1c0f9fc77d84.iws.neo
+[ 544/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/GI/level4/1f/1f9c811ac3b4235e794c7b9863d737b8.vis
+[ 545/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/GI/level4/1f/1f9c811ac3b4235e794c7b9863d737b8.rsc.neo
+[ 546/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/GI/level4/1f/1f9c811ac3b4235e794c7b9863d737b8.rgb
+[ 547/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/GI/level4/1f/1f9c811ac3b4235e794c7b9863d737b8.ecm
+[ 548/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/GI/level4/1f/1f9c811ac3b4235e794c7b9863d737b8.iws.neo
+[ 549/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/GI/level4/1f/1f9c811ac3b4235e794c7b9863d737b8.caw
+[ 550/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/GI/level4/3f/3fa5bbbb634248a45059f5e1de72bc5f.vis
+[ 551/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/GI/level4/3f/3fa5bbbb634248a45059f5e1de72bc5f.iws.neo
+[ 552/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/GI/level4/3f/3fa5bbbb634248a45059f5e1de72bc5f.rsc.neo
+[ 553/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/GI/level4/19/196bb00e517cb9103ad7c45adcc56c9b.vis
+[ 554/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/GI/level4/19/196bb00e517cb9103ad7c45adcc56c9b.rgb
+[ 555/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/GI/level4/19/196bb00e517cb9103ad7c45adcc56c9b.rsc.neo
+[ 556/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/GI/level4/3f/3fa5bbbb634248a45059f5e1de72bc5f.rgb
+[ 557/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/GI/level4/3f/3fa5bbbb634248a45059f5e1de72bc5f.ecm
+[ 558/1460  0s] SplitFile Library/Bee/artifacts/Android/Split/level2
+[ 559/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/GI/level4/19/196bb00e517cb9103ad7c45adcc56c9b.iws.neo
+[ 560/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/GI/level4/19/196bb00e517cb9103ad7c45adcc56c9b.ecm
+[ 561/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/GI/level4/3f/3fa5bbbb634248a45059f5e1de72bc5f.caw
+[ 562/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/GI/level4/19/196bb00e517cb9103ad7c45adcc56c9b.caw
+[ 563/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/GI/level4/0a/0a18b0e77c0528daac7400317341468e.iws.neo
+[ 564/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/GI/level4/0a/0a18b0e77c0528daac7400317341468e.rgb
+[ 565/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/GI/level4/0a/0a18b0e77c0528daac7400317341468e.vis
+[ 566/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/GI/level4/0a/0a18b0e77c0528daac7400317341468e.ecm
+[ 567/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/GI/level4/0a/0a18b0e77c0528daac7400317341468e.caw
+[ 568/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/GI/level4/0a/0a18b0e77c0528daac7400317341468e.rsc.neo
+[ 569/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/fff1956ef61ae424b91dfd2ed6ce880e
+[ 570/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/level2.split6
+[ 571/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/level2.split0
+[ 572/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/level2.split2
+[ 573/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/level2.split8
+[ 574/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/ffe429e4755255f4e8b5085dd36c8589
+[ 575/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/level2.split17
+[ 576/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/level2.split1
+[ 577/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/level2.split3
+[ 578/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/level2.split5
+[ 579/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/level2.split7
+[ 580/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/level2.split9
+[ 581/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/level2.split10
+[ 582/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/level2.split4
+[ 583/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/level2.split11
+[ 584/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/level2.split25
+[ 585/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/level2.split37
+[ 586/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/level2.split18
+[ 587/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/level2.split38
+[ 588/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/level2.split13
+[ 589/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/level2.split20
+[ 590/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/level2.split22
+[ 591/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/level2.split30
+[ 592/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/level2.split33
+[ 593/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/level2.split34
+[ 594/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/level2.split19
+[ 595/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/level2.split27
+[ 596/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/level2.split32
+[ 597/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/level2.split24
+[ 598/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/level2.split12
+[ 599/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/level2.split16
+[ 600/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/level2.split26
+[ 601/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/level2.split21
+[ 602/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/level2.split23
+[ 603/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/level2.split36
+[ 604/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/level2.split29
+[ 605/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/ff9e6f0e3f17b7a44b3734c145be3ebf
+[ 606/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/ffda69ef07257904db14a905cc4e86a3
+[ 607/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/level2.split15
+[ 608/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/ff84b7f849f1f454db87a146b743f460
+[ 609/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/level2.split14
+[ 610/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/ff2f26bc616fa0945ad17e6f619d97bf
+[ 611/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/ff721caafe458664e9f2bcfa423df5a9
+[ 612/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/level2.split31
+[ 613/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/fef45cc204351a9458f02ad7c0243f18
+[ 614/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/ffda69ef07257904db14a905cc4e86a3.resource
+[ 615/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/level2.split28
+[ 616/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/fe1bf4b94fdd65a41a0a9118bcedcbae
+[ 617/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/fe481424cfe6854488d84d32d6408432
+[ 618/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/fdef18eea357eb34286da0fe4ed0d49b
+[ 619/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/fe764102aa5aa431795da15fa2dec0e2
+[ 620/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/fd39a7cb1dad71346a0fcc4743dbb0f6
+[ 621/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/level2.split35
+[ 622/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/fecaf82414bbec8439d7e3d53698e19c
+[ 623/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/fcad7331abd38f34ca7ea73a671bb71a
+[ 624/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/fcad7331abd38f34ca7ea73a671bb71a.resource
+[ 625/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/fc1c71e760fd6db45a02402d72273c9d
+[ 626/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/fcdcf0258794fb44298ee36183440e49
+[ 627/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/fbd8df583ed218d4f9e2740e23f6f8d9
+[ 628/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/fb5cfd8121ecb7f4496f331481c57431
+[ 629/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/fa18463bc6fbd374e9bda448e401d74f
+[ 630/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/f8ff69706a104cf40b0de4733cb03510
+[ 631/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/fb5cfd8121ecb7f4496f331481c57431.resource
+[ 632/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/f952c082cb03451daed3ee968ac6c63e
+[ 633/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/f8cd77cc01bbbcd4287103ce82e56f58
+[ 634/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/fade42e8bc714b018fac513c043d323b
+[ 635/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/f980d8e5270a88e439b6cd4bf56cb55a
+[ 636/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/f7f5e36797cf0c1408561665c67b179b
+[ 637/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/fa394d505c6ab8045903f32092993c83
+[ 638/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/f844b5df80d99ff43b03ce2359467692
+[ 639/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/f8d0ae1c87e258245ad3a373a57f92a0
+[ 640/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/f7299cc78404903499c64b919cd84568
+[ 641/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/f75cfa7d313f4ca4a9a0367922a04e8b
+[ 642/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/fa87b34f7dc59a64c95fc40ebb2c4e8b
+[ 643/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/f694f40c6e4a192408764416581ed108
+[ 644/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/f6ea0fdb96333be43ae9212f4e50d454
+[ 645/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/f5b1c294ee3987f4ebe34f64bb5a86fa
+[ 646/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/f6ce33b91f6ffe54cadacbf4bb112440
+[ 647/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/f6b1a0fe75d5009449cf55ae76220e2b
+[ 648/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/f3ef785c59e0643408555edff136a3ca
+[ 649/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/f3b31ad327ff89f4ea05a283d1e19f85
+[ 650/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/f3cb3c8f5cd4b514ebf9fbfda32cb36d
+[ 651/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/f22bcc84a5f4a1944b075a2c4ac71493
+[ 652/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/f431e0b93501ec243a62d4819e46ccb4
+[ 653/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/f1f487674a19078488e196273be1d582
+[ 654/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/f1d411053f33268408c8a877d4c1f4dd
+[ 655/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/f4dd0bba6decdd5418fd3d541ff5f7f0
+[ 656/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/f1b5e5c3ece1e0443892bca78e611e15
+[ 657/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/f12ca5c2925cc4f4ba67a8d888b0de3e
+[ 658/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/f448d28f94ab20e44adfa3547f4b35c0
+[ 659/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/f1c4532a4a60ad446bcd769af5902f45
+[ 660/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/f21b5fb936545174aa7036b5f2c896c8
+[ 661/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/f0964da9cfc65234ea18c103cc594d31
+[ 662/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/f4fd1fa3cfbbff5449a2cc1b2e9b85dd
+[ 663/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/eef75e4160e15bd4984c27cfd2a54eb8
+[ 664/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/eebc8512dbdb1f14c99e4f56bdcea788
+[ 665/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/f090e25ea9368d445adb744e3e8714cf
+[ 666/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/ee63c059352a53343ac936635dfbbe34
+[ 667/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/eb927957ef513c74ab95640a830827a6
+[ 668/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/ef3b3d7a896d9984abc202b3a8e3e438
+[ 669/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/ecf63429b312339428f5d91d69d85cac
+[ 670/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/ee1f1c0667c7b014bba2814ea29c7624
+[ 671/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/efbb13993d8043d4ba5c752ed4b1a2bc
+[ 672/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/ea3da6890a41fe04caede6bed0c81e84
+[ 673/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/e9bdf07223ebe71458ae0b477cd4f7f0
+[ 674/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/ede00b712b6fb134282e1efba44fefd8
+[ 675/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/eae5947b1d39d5f4ebc12b03234ac7b1
+[ 676/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/e9047c31f56e6314284348d24247f9fa
+[ 677/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/e92cab028892b7c41a5ef08ffc6b9247
+[ 678/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/e8583ae4de1af8b4ebfc279d142d2872
+[ 679/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/e924cbe37d3499c4095a0cba77fb21b7
+[ 680/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/e67983ca0702d7d46a91f3e605d2f479
+[ 681/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/e73a58f6e2794ae7b1b7e50b7fb811b0
+[ 682/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/e5e5459e3602eae489be6fa89ea77c1f
+[ 683/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/e5e5459e3602eae489be6fa89ea77c1f.resource
+[ 684/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/ea1584d2181dbe545975be7886604466
+[ 685/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/ee33224b0f79f904eb515fe1a2c2c439
+[ 686/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/e48936691123f0b48a444bd3a8080bda
+[ 687/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/e4f85b2e68822a041b8df56db88fbd27
+[ 688/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/e3d0cd78ac42bab4cb7c844248e49898.resource
+[ 689/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/e3767adfa5dac5544830cd097ef6c09f
+[ 690/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/e52fb17f9b1e7fd48b8955f1391d3688
+[ 691/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/e6378b1a0f5b45a458f6dad2547d6818
+[ 692/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/e3b5b074fc1cc3d4aa2c17e67b26405c
+[ 693/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/e3d0cd78ac42bab4cb7c844248e49898
+[ 694/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/e51fc0fc22c7de646bbbcd108fa8ce5d
+[ 695/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/e3770a2a9790bc548a31c21bb9072315
+[ 696/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/e4627330551d3014bb2d466848a06dff
+[ 697/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/e2d6e0f2b1efa644a8edd7f5f18b4793
+[ 698/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/e3265ab4bf004d28a9537516768c1c75
+[ 699/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/e0dcb921374a01d43ba00d459f0080cd
+[ 700/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/e41946a981c3b444a84d15eb7c608ca4
+[ 701/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/e1f8fba40e7f37640888b98881f8f7f0
+[ 702/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/e271c8767dfac4c4fbf6b4848642bef6
+[ 703/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/e0808853c2b829a47a5385b9eadfb08b.resource
+[ 704/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/e09bdac63c472574c8d8106ccd97f806
+[ 705/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/e0808853c2b829a47a5385b9eadfb08b
+[ 706/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/e1c856352cf5b9b479ddb80c85c84cd5
+[ 707/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/decbd609323f6604092f00bf6f6a0eab.resource
+[ 708/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/df4a2d45a93034a49983d0c0ceba9798
+[ 709/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/dffa50cfe77e0434bbfa71245b3dd529
+[ 710/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/dffef66376be4fa480fb02b19edbe903
+[ 711/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/e260aa2c0d42edd46b92fbee2c8f73ec
+[ 712/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/df4a2d45a93034a49983d0c0ceba9798.resource
+[ 713/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/e15ba2e953ed0a444b87805165969cea
+[ 714/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/de58791328b0aa24fbc546436e2ab448
+[ 715/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/dec97bec2afbdda4f98505ef01e897aa
+[ 716/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/df4796b594b970842b69211cb0078c5d
+[ 717/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/decbd609323f6604092f00bf6f6a0eab
+[ 718/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/ddd99084bf4dcd54e8a575ee0959c08e
+[ 719/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/dc0f88987826e6e48b1fe9c7c2b53a53
+[ 720/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/db6307a81d564e14398675ec315fe0f2
+[ 721/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/dbff3e481fd36ae4d838c10c4ee9bd93
+[ 722/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/de17a92435bd0d944a8bfd3f52599a7e
+[ 723/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/db1318ffb13bfef419a8dad09473425d
+[ 724/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/dcc19ce42d48d6648a4d66911790b60f
+[ 725/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/dd95c11f947a415479b60cfb0bf35193
+[ 726/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/da8b16bd16c81974cbdc1dc2884bf8b7
+[ 727/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/daa46a58178a6ad41ae1ddc2dc7f856d
+[ 728/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/dada400a734c32f49a147909927faa79
+[ 729/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/d9e7467f4890a244083c45417bc31ab4
+[ 730/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/d98b78a8f11bf3f4f927b4b7f53d2557
+[ 731/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/daddb9dbd13e3ec4791765b44681dcb6
+[ 732/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/d9c282927f4ab074a84e2e638c3a79ac
+[ 733/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/d9dcb6643db3ac14b92fa1553f9fd83e
+[ 734/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/d8f5589d2e3db6148a9963dcca1b840a
+[ 735/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/d8c744701b43c864b88e7f8144e19bc5
+[ 736/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/d6ef25af89fe77148bf342346546d1d5
+[ 737/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/d6d92f40e7533cf47b41548fdff21781
+[ 738/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/d80da67c2b387fc428dee412799ce753
+[ 739/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/d9c282927f4ab074a84e2e638c3a79ac.resource
+[ 740/1460  1s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/da07703fcc09f8d4799221050659bd55
+[ 741/1460  1s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/d89531f879872fa4cb0dffdeeaa5eda2
+[ 742/1460  1s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/d57c42422bb580a4dae11933dcb61805
+[ 743/1460  1s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/d82c1b31c7e74239bff1220585707d2b
+[ 744/1460  1s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/d90a8faf6fb9540b084ef2825cc3a5dc
+[ 745/1460  1s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/d68d66fddcb556648bb2e5c821d9824f
+[ 746/1460  1s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/d6c4c95730a736d4aba96d185b0d8506
+[ 747/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/d49e78756811bfa4aafb8b6535417991
+[ 748/1460  1s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/d55bff31ea39ada4a9bd9cb6b7712b52
+[ 749/1460  1s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/d6590f39353bf4efdb3b14691166135f
+[ 750/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/d556ab52e17604958b19876c5f242758
+[ 751/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/d4ae8d9f867eb0746a64a5bc14480a0f
+[ 752/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/d47f009476100f545971a81ede14c750
+[ 753/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/d48723a9122613a46a57c70406594587
+[ 754/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/d2f9cee546f306449bca37dc80e2152d
+[ 755/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/d4765d65c13ecf54abefc0606370307d
+[ 756/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/d06d2f147c474b542a9d215471c93d1a
+[ 757/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/d172682391e7ec146ae7240088061be3
+[ 758/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/d2e467e3bd1c77345b1c5238ab4f4cdb
+[ 759/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/cfa7edf01005f4e338d973cea2f6eab3
+[ 760/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/d172682391e7ec146ae7240088061be3.resource
+[ 761/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/d0ef5c1132253174bb893508afc53904
+[ 762/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/cf6cbdd672089a84796e55a21fed1cbe
+[ 763/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/d3c1b5b65dd435b48bf99c18f6748d56.resource
+[ 764/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/d3c1b5b65dd435b48bf99c18f6748d56
+[ 765/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/d3770aaa3bbd8384aabab9ddd383e21e
+[ 766/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/cf81c85f95fe47e1a27f6ae460cf182c
+[ 767/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/cfefb9309617fb0459c2853d6d9d6453
+[ 768/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/cef9a0c8b14aecf4096e3ff65ed281fb
+[ 769/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/cf593cb3310b7784a8f0967b8ba89b02
+[ 770/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/ce347ad101f41ee4ab5c3fbc0ea447db
+[ 771/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/cd2e82ac6f8e1264586e2cc4e9bc7ee4
+[ 772/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/cd8002f70c22e4840bffd510c84d3c10
+[ 773/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/cb5e060a4c896854b8ee750058c07470
+[ 774/1460  2s] SplitFile Library/Bee/artifacts/Android/Split/sharedassets2.assets
+[ 775/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/ca6c7033bc25a884b947995cad4b48c3
+[ 776/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/cb2109cd71778f54696ee472967066f2
+[ 777/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/cc55193b165fe34428c3434c56d39a3a
+[ 778/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/ca3e294656861a64b8aeeb9f916da0a9
+[ 779/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/ca00b11f52914e14a920dbf5055edd00
+[ 780/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/c9bec0ecadc5ab6479d11776b9b63b5d
+[ 781/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/c9375f4d76c8c5e4880df24ee97c7919
+[ 782/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/c9248d8e58293473bb27cf2f5505f88b
+[ 783/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/c84d57d423a2042eb92da86f9fa670a3
+[ 784/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/c798603beb3c1fc4a96620cf6b35cc32
+[ 785/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split51
+[ 786/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/c76d0883e2dffb448a31fceef0800c90
+[ 787/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/c75ee2325f7738c4d91ff2553d00be15.resource
+[ 788/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/c76d0883e2dffb448a31fceef0800c90.resource
+[ 789/1460  2s] ExtractUsedFeatures Library/Bee/artifacts/Android/Features/Assembly-CSharp-FeaturesChecked.txt
+[ 790/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split18
+[ 791/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split94
+[ 792/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split62
+[ 793/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split70
+[ 794/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split59
+[ 795/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split85
+[ 796/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split56
+[ 797/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split34
+[ 799/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split24
+[ 800/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split60
+[ 801/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split95
+[ 802/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split42
+[ 803/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split45
+[ 804/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split69
+[ 805/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split61
+[ 806/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split82
+[ 807/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split76
+[ 808/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split38
+[ 809/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split17
+[ 810/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split23
+[ 811/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split39
+[ 812/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split19
+[ 813/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split53
+[ 814/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split64
+[ 815/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split37
+[ 816/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split12
+[ 817/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split68
+[ 818/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split31
+[ 819/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split30
+[ 820/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split36
+[ 821/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split81
+[ 822/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split89
+[ 823/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split87
+[ 824/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split93
+[ 825/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split20
+[ 826/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split27
+[ 827/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split58
+[ 828/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split92
+[ 829/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split91
+[ 830/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split71
+[ 831/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split65
+[ 832/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split25
+[ 833/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split16
+[ 834/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split26
+[ 835/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split40
+[ 836/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split88
+[ 837/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split33
+[ 838/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split21
+[ 839/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split11
+[ 840/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split79
+[ 841/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split14
+[ 842/1460  1s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split43
+[ 843/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split84
+[ 844/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split49
+[ 845/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split13
+[ 846/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split80
+[ 847/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split73
+[ 848/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split90
+[ 849/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split57
+[ 850/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split55
+[ 851/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split32
+[ 852/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split47
+[ 853/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split50
+[ 854/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split66
+[ 855/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split78
+[ 856/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split29
+[ 857/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split41
+[ 858/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split67
+[ 859/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split77
+[ 860/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split35
+[ 861/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split44
+[ 862/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split63
+[ 863/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split86
+[ 864/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split74
+[ 865/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split22
+[ 866/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split15
+[ 867/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split75
+[ 868/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split28
+[ 869/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split54
+[ 870/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split72
+[ 871/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split48
+[ 872/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split52
+[ 873/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split83
+[ 874/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split46
+[ 875/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split3
+[ 876/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split1
+[ 877/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split0
+[ 878/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split10
+[ 879/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split2
+[ 880/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split6
+[ 881/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split4
+[ 882/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split5
+[ 883/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split7
+[ 884/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/c75ee2325f7738c4d91ff2553d00be15
+[ 885/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split8
+[ 886/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/sharedassets2.assets.split9
+[ 887/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/c6c0c702db31fc247a6b2db184b3e422
+[ 888/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/c65adc2c5dbd0124e91e23e9729db111
+[ 889/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/c617e7cbee0d2344a9b5e53116c43a2c
+[ 890/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/c5fbc5ec2d1bc574abb27e7b00d321bc
+[ 891/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/c55d8a690263137499f11137961adb82
+[ 892/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/c5488e5756bce1f40be4a002c4da8c3d
+[ 893/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/c54bb34ed8a0fcd4395bed47efc5d7b8
+[ 894/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/c5bb4fac1f2342844928b2ad100a9987
+[ 895/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/c4bdd8a09a210434e847efc4c199130c.resource
+[ 896/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/c75eb77b7d09e4e42a99f9adf75e32cb
+[ 897/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/c590f3c1049090649b7d60a7620a351b
+[ 898/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/c4d8928c75c21af43998193f0f038429.resource
+[ 899/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/c4d8928c75c21af43998193f0f038429
+[ 900/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/c454080d636f840038dc8f37941751b3
+[ 901/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/c4bdd8a09a210434e847efc4c199130c
+[ 902/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/c428aebd02e241b47b9b1df0a60b2601.resource
+[ 903/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/c41005c129ba4d66911b75229fd70b45
+[ 904/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/c428aebd02e241b47b9b1df0a60b2601
+[ 905/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/c5488e5756bce1f40be4a002c4da8c3d.resource
+[ 906/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/c43c7975075568c448aeb70ab4fce276
+[ 907/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/c35e85b8b8ac35141a46b3a6db8eedbb
+[ 908/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/c398f312f60db834cbdc85fa64b77c52.resource
+[ 909/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/c282d31bf082fca4a822239b62ff8257
+[ 910/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/c398f312f60db834cbdc85fa64b77c52
+[ 911/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/c2fd731efb0a1e54ebebb64603c8542b
+[ 912/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/c26db15b9a2ed4b2ebefefd26ce85ae1
+[ 913/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/c35693c079f3840f7938a4a323096e84
+[ 914/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/c25dc49fa16dcd84db60d92232902c44
+[ 915/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/c22777d6e868e4f2fb421913386b154e
+[ 916/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/c03db626b21a527429d9f0adc838ec31.resource
+[ 917/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/c1aee4e1d80833f42a6b2100cc41614d
+[ 918/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/c21b36a1a993d4042813056e682485b7
+[ 919/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/c14837dfa515883428e5652d93e80c72
+[ 920/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/c220e0d80920bdb4d9cfb9bd80a8fdf1
+[ 921/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/c03db626b21a527429d9f0adc838ec31
+[ 922/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/bf1ead0918390474d9afd48641114faa
+[ 923/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/bfc02e2f0447eaf4190d17879193f0e2
+[ 924/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/bf996e4c860570d49ad14a963fffc370
+[ 925/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/bf9eeaa82f2984244ae0707e4200b147
+[ 926/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/bf4ccf80fc8e5ae458fcf038166cff38
+[ 927/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/be22c550ba3c5a04f92ff17e171db805
+[ 928/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/be629b64608333f48bff675c01337714
+[ 929/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/bd9566abdbf08834281bfb4ea8b92a5d
+[ 930/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/be133ffd3629c834ab5c6eb73425cd1a
+[ 931/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/bc7f73aad75bda84b91b729bcddc4717
+[ 932/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/bd9566abdbf08834281bfb4ea8b92a5d.resource
+[ 933/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/bd7876b9c2293874fa6bd8c8a487d76e
+[ 934/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/bc67dca9ad870564a83aec7029ab30cb
+[ 935/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/bbb235fff4f48426b863b36058ab66d2
+[ 936/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/bd75232dae40a4b44929377957993520
+[ 937/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/bc010dedfb42d2946b6ef6739b5c6364
+[ 938/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/bb3893464287f084db146d38b29f67ed
+[ 939/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/b957742c5b9bfd441b9b330c8b55d0c5
+[ 940/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/b8e86d08b7fcf4c46a87c1c9398cbc87
+[ 941/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/ba58b75bea0964c45aaf53f8d0f4a4ae
+[ 942/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/b7d67d7d7ddb88542b23886a4b496c77
+[ 943/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/b91e8e4485c70ce45a8ba7e668929f96
+[ 944/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/b79a7cdf95fcc58408df5112a741f006
+[ 945/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/b5c9180aa171f524b8a235c3a45e3c37
+[ 946/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/b71f17f13c20dbe46b0a2fdb159f39c1
+[ 947/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/b55b07114aedb3e4eb8b5b4acf0067ff
+[ 948/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/b676a215be26cba488e51c0dda84e72d
+[ 949/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/b549c06ac9b3b96408cd6a98a6c70bf7
+[ 950/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/b465c451c01c117458142e3e46fe035b
+[ 951/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/b516bf3727899f745a539e18fe18eeda
+[ 952/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/b2da6b27df236b144b3516ed8e7d36ac
+[ 953/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/b4d80c56b3b7c0144a259e9d0ee1baa6
+[ 954/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/b346b2a2df1d290438be3287b6419408
+[ 955/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/b3fd87e2e956e41b0b43f76bb50a4934
+[ 956/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/b2d4d223bc1121a4c888cc1c2b4db992
+[ 957/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/b296a58958976a542962de9054976216
+[ 958/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/b23528b172bf0ab459d12b978186714c
+[ 959/1460  1s] GuidGenerator D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/unity_app_guid
+[ 960/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/b1bee5179bed05b43904746bce1b91a2
+[ 961/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/b16c22b4e3fa11d4b9e83f6fcfac8cc6
+[ 962/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/b10156bd8b948cb4f901462ab4cda8fb
+[ 963/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/aee657c3f9f974e46a21a4cf4bd2967f
+[ 964/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/aff43f84d1905ee4aa6a2a6794d8abe2
+[ 965/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/af255f48cc639df458fdad40d392c279.resource
+[ 966/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/b05171e12835ff84fb155f51d69d7c31
+[ 967/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/af255f48cc639df458fdad40d392c279
+[ 968/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/ae0ab2493b0c7314482648ba7b59bfb8
+[ 969/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/ae5f8794f5787534089faef2d1db0881
+[ 970/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/ae00bb75e0cd5b04b8fe7fb4ab662629
+[ 971/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/afb9875366814f9498254e28c37ca006
+[ 972/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/ae1d9371594658b42a5fcb97619d8fd8
+[ 973/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/ae337c4e31fbf2c41984ab42c28d816f
+[ 974/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/ad83bc56407925d44a77a5bd01cd6783
+[ 975/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/ac817401e68da054892b4bede9e7d1cb
+[ 976/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/abadaa451a7bff0489078ed9eec61133
+[ 977/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/ae3d5253a8d7afc45b9eedd02a88c471
+[ 978/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/abc49fa8b01f5314c880641bc7c5986d
+[ 979/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/ac5e326588327d841b2501709f9b491e
+[ 980/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/ad7aaf70e5052b54bb727ac1b510c56b
+[ 981/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/aba8aba95b4421d4db19f385939b5887
+[ 982/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/ac817401e68da054892b4bede9e7d1cb.resource
+[ 983/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/ab5dedcc868cf0b40b3eef76796cb1e0
+[ 984/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/ab11d9d7923783d47b1f1d109e93a079
+[ 985/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/a953e371e99bc3d48932437bf48345f8
+[ 986/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/a92188bec980baf4196780c3fa5f7c0e
+[ 987/1460  1s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/aa692a314fc061c42a78cc0d165abd8a
+[ 988/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/a99d1374d33e78e4c849e00fbb11e430
+[ 989/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/a7cd63dce5cc6fa41814ce252601cb7e
+[ 990/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/a98f8175a6670c04789da93491be76e5
+[ 991/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/a5f18b68facc4d24084a5bcfb4b615a2.resource
+[ 992/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/a5353c99e51971e4ba1554e5344f7457.resource
+[ 993/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/a87cfaef648f17c41b568e842e068c51
+[ 994/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/a773bd7a075f9534e9c9ed1eb6e9a30f
+[ 995/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/a90d2c08dcfdba3448c119ca57050629
+[ 996/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/a674720496c1ed248a5b7ea3e22a11fd
+[ 997/1460  1s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/aa8248b8478aba94089c7910a27f607e
+[ 998/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/a5f18b68facc4d24084a5bcfb4b615a2
+[ 999/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/a53ef0dd76f2fe74eb5f43267d7c0195
+[1000/1460  1s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/a808e4bff06acd4439b755aed43af03e
+[1001/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/a3cb93ad22938ca40bee498a58aef0ef
+[1002/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/a4735cbe1c4487945a2ff3213428b7ff
+[1003/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/a222b3d2c604e1946af11e01d29efdee
+[1004/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/a5353c99e51971e4ba1554e5344f7457
+[1005/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/a3314359bb5324641987b9101c632db4
+[1006/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/a2148203dd960814ca5db0c293ceda35
+[1007/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/a2c3392126c795e4b84b899264ccb56b
+[1008/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/a55849d9af84f5d4ab2b427ed8d5ff36
+[1009/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/a1e97cbf2538241b691aae8243b5fb10
+[1010/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/a12c12c17cb00fd498f464864871fd20
+[1011/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/a1454d7237641fa49a7f66d6bee624ad
+[1012/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/a1e2dae241a055243bb02f443e436a1c
+[1013/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/9ff45449484fa4a4fac7ef3495a78e57
+[1014/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/9ffc1418f00ab7b44ac1461bc3a9597e
+[1015/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/9fe554f066a300f4fac7c26fdc65af5d
+[1016/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/9fe554f066a300f4fac7c26fdc65af5d.resource
+[1017/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/9e6d15f5ca3056242a64ea454589b19a
+[1018/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/9e1b5e96821de0845bef8caed731bc5a
+[1019/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/9de1e751c3a13f14cac6c4ac6d03898f.resource
+[1020/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/9d0862121c112ec4abc229920df08581
+[1021/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/9db296b8bb78143c1a5f7fa8f611967e
+[1022/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/9dd9988cddadbd04aa651d9107445dd2
+[1023/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/9cc3c2bbff5d71d45ab82bdd222f75c3
+[1024/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/9de1e751c3a13f14cac6c4ac6d03898f
+[1025/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/9af789e82d98c2143a0ad44e9308bfc2
+[1026/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/9aa04b7dcbc6eda449a80ef070379e32
+[1027/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/9c972933c7f668741906b79b2b1db47c
+[1028/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/9bece53dc19e3a040bcb3277a7721499
+[1029/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/9a11f1e8eec414f40ae589be1049bcd7
+[1030/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/99e588461de51d14a809c357f0191ba9
+[1031/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/9ba36f75129f63349afbead8321ac9ec
+[1032/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/9812e7dbadcb06b4eae97d8d621b5f51
+[1033/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/988db55689193434fb0b3b89538f978f
+[1034/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/98842fcecde8c06459b52135febf894c
+[1035/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/98842fcecde8c06459b52135febf894c.resource
+[1036/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/9a8e616f2f1c47043a3649cabc32d674
+[1037/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/98253537a167e304db495260acbc528d
+[1038/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/9a32a6cc2cb803443983d45d4a513506
+[1039/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/980c24c5a501a9a429356d191ad356a9
+[1040/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/97e1600e87b2cb24fb703106e85d2903
+[1041/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/97ec2262fb592f94a9569e156ea65d7b
+[1042/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/973a3a370e9c413418305ab45ec2668f
+[1043/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/96e8fc6842926d14ba0ee48d025fcc7c.resource
+[1044/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/971f3e6c9b11f2941877034a7a9ff3ec
+[1045/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/978bbcf5050244f1b95128c04103f628
+[1046/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/968fc57e6928a5448ae7d0644246d534
+[1047/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/9526fc0bb74900243b85b83e21d661d0
+[1048/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/96963f1f3e9ce28409e2273bbf916eae
+[1049/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/9515108b8376ad7418e8138858201b72
+[1050/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/94afea5f242d72547979595ba963f335
+[1051/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/94e6c4d9d5bddc94898d462191b1df94
+[1052/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/96e8fc6842926d14ba0ee48d025fcc7c
+[1053/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/91a0952852e36a141a8721ae96fe0161
+[1054/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/93b5388fc61adc24b9d664e3be014505
+[1055/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/912594c81c4180b41950638fc91518af
+[1056/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/90f50d8c2f55b304ca92bf1a3f6c8b3f
+[1057/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/90dbf173ff255434d8191e5cbbe24576
+[1058/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/8d2bb70cbf9db8d4da26e15b26e74248
+[1059/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/8cb4d6fee77fd4ee6895f08b240d625f
+[1060/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/908f3a8b18cdb9842bfc5023fcba5467
+[1061/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/908532344ea180a4c91b55a0bb49e866
+[1062/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/8f586378b4e144a9851e7b34d9b748ee
+[1063/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/90d3218bb5da4ae41a97225ab1691869
+[1064/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/90f50d8c2f55b304ca92bf1a3f6c8b3f.resource
+[1065/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/8d5bf5a31d35ec445a883f4823c5b7da
+[1066/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/8c1ac2a2068320b4cb6d57c8eb7f7f84
+[1067/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/8be38aa6f3d51354e90e181e624c6f00
+[1068/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/8b391bf70180f1a468329006caf238e5
+[1069/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/8ba4fcb9690a97f4d995090d6162e1c7
+[1070/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/8b2d2df69b0ea764b91a02f27b368108
+[1071/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/8cb74f08e3fc52942a0d8557772bf4dc
+[1072/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/89b06ff8ae01b62408d79256f2a4e509
+[1073/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/8f3e236b4c1a693498c26510721d4d99
+[1074/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/8778e6b26b51c6a4999b94d7cacd8b5d
+[1075/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/8764e26efc3afff4db4bfbabc8fd2043
+[1076/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/892f3ee487d32704987d0e0f55111cf1
+[1077/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/87647e4bdb3ce6c4991788394df1f294
+[1078/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/88348ea53df6bc148b5f38a000809048.resource
+[1079/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/876381332148db04fad2a9201a17deef
+[1080/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/88475eb3770a0cf42b3d3a9ae6567dd3
+[1081/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/88348ea53df6bc148b5f38a000809048
+[1082/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/86b250a0578090746840c6eda8a93c9b
+[1083/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/838f18a321d81764bb692de4eb53a700
+[1084/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/836534bc792f94047802c84a147ab8eb
+[1085/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/83557ce7cfe8ed1488473b9061976216
+[1086/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/933532a4fcc9baf4fa0491de14d08ed7
+[1087/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/8165a4af79e702a4e8904221e2d566d2
+[1088/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/86a77d70e3e180546b5f3600e367a4e9
+[1089/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/8a3eab9b465a2ec4cbf8291ee3eb82fa
+[1090/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/868765ab184df744392490307d616448
+[1091/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/8c8303cdadb166347b489ae5648e549f
+[1092/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/86212504c7e9f468db2300dc5932dc17
+[1093/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/80a8f08eb2b00ff4381ffaf9bb75d9f4
+[1094/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/82908f3e53910e744903749b6ede350f
+[1095/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/802641276fbe87e44a3fafcd1fd84866.resource
+[1096/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/802641276fbe87e44a3fafcd1fd84866
+[1097/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/809fec7308fd63741bdfaaab50a6104e
+[1098/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/7e9f566ee272d9f43877ef25337b1438
+[1099/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/8032eb385ea1b4e46a6c7c611af1a9bf
+[1100/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/7e4b97337334f42d2a700647fd938234
+[1101/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/7e538e35c4ed3134e807fd63666f86e2
+[1102/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/7e1e8740a0442a540a686855399ceace
+[1103/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/7ffaceceeb7d2874580e371f7845c4bc
+[1104/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/7dded5dac1b2f0145905773e36e11db1
+[1105/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/7da55032bc1723749a4a351ea0d98969
+[1106/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/7e313b2bf4cf5754cb22659b8b7293e0
+[1107/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/7d9fe5edc70b287428fbb5637dcadaac
+[1108/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/7cfdbd39c8e6cdb42b44d142482d766a
+[1109/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/7d5c9fc287a2aa945a98203d41282923
+[1110/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/7d5268f4a2e0bc443a5bf8a9cc11a4f7.resource
+[1111/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/7ccca7166b8dfda418b604057eca7e8c
+[1112/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/7dcadaf22424c4f5d82f4d48c3b8097f
+[1113/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/7d5268f4a2e0bc443a5bf8a9cc11a4f7
+[1114/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/7a476dc67a02800419a471b766d34638
+[1115/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/7cb2912222469634ba17a77055919ea8
+[1116/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/7b6f6cd4b236626488f9a27809f4ba2d
+[1117/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/7c2db9e29dacb944d83a81c1168acd36
+[1118/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/7b912c5dfa554a04296ecbf246180058
+[1119/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/7a97867987ad26046828c6718b5e8393
+[1120/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/7a0568d5e3330b84687e307992be3030
+[1121/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/79c7d30cee5a77e46b9a39b7ec8caf75
+[1122/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/79459efec17a4d00a321bdcc27bbc385
+[1123/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/7a034c8d003ebef4d89457c73317547b
+[1124/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/7c78b588b2e1f7c4a86ca4a985cf6e4a
+[1125/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/77c185820dd1a464eac89cae3abccddf
+[1126/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/7c9f47f523ba630428fce465e366f7f9
+[1127/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/7c0f8e358704a404eacac42e8f8359ad
+[1128/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/76cbafeb3b16ce5418573936642f2553
+[1129/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/775dd0a15ad25a544b33ad40ef0da1f0
+[1130/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/770c1adcc84c6234a8a4faf0f389489c
+[1131/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/770c1adcc84c6234a8a4faf0f389489c.resource
+[1132/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/75c2d979e60474d4194697a1e5c80413
+[1133/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/76ab10a7a432c514e8802ffe6530a138.resource
+[1134/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/7836da74ab2c08243a57c96d960842f5
+[1135/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/757fc9771ce30dc468c775b392518d81
+[1136/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/763893191720f5b4795036fb3c25bfba
+[1137/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/76ab10a7a432c514e8802ffe6530a138
+[1138/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/74a5091d8707f334b9a5c31ef71a64ba
+[1139/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/73cc8e3e146e79b479fcfc6d05b6b033
+[1140/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/730fa942e3b908f4b847008502bc8342
+[1141/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/7542714800fa77b4cbb0102c99061156
+[1142/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/71e3000ee30414d368eeee6d87961b6d
+[1143/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/703b63e3cf0f1484594a076b961dfae5
+[1144/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/6feaff2a93ccc134d85badd0752803f2
+[1145/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/71fb06861f0035e4a9c64c2d2ea4b01e
+[1146/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/6f791f763d4b9ba45945b31ef9122bf7
+[1147/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/6ece725ac5d55294297b081fb48fdefd
+[1148/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/6f3cf506b7543bb4d87244e56d64752c
+[1149/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/6e8df7eaf831da2419256f970aad2a08
+[1150/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/6e4f1e675f91cd84c8f8caf0c36e3454
+[1151/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/6fe15af0e28a31a43bf683296709c6b0
+[1152/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/6e32d0d2313389f4f99ffd7394da9cb4
+[1153/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/6bc386843be1bdd4bb5dee795f602269
+[1154/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/69f311703b4216349b26420a01a5c043
+[1155/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/69cd5eb3eadf9304897b76432296d549
+[1156/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/69d0e4b8aca2cab40b3d3faa5079c19a
+[1157/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/6a1cbce439eb7db4d8f563f3063ed101.resource
+[1158/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/68895eac13d2f1f4fa59609587f1ad2a
+[1159/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/68f5240a952ca8b49978fbb54ea95375.resource
+[1160/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/68895eac13d2f1f4fa59609587f1ad2a.resource
+[1161/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/6a1cbce439eb7db4d8f563f3063ed101
+[1162/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/68f5240a952ca8b49978fbb54ea95375
+[1163/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/683a66d3a42a8834dbe76ca1e13a3dff
+[1164/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/6831902e286e9864f8b8a9d649fa0830
+[1165/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/67226dc2270154d43a251fe6cfdc9105
+[1166/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/69d0e4b8aca2cab40b3d3faa5079c19a.resource
+[1167/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/65e16ec6a1570944a980e4988e715ae6
+[1168/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/663ee9d85e680bb458eef5750c9557b0
+[1169/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/65c936515afabdd48a010bb8501560b8
+[1170/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/65e6383a46d9bb4479d3369787d78fff
+[1171/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/653d4611cb4d76f4fabdff37f811301e
+[1172/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/65511690a06e65a48b50f9e6e4f4d28e
+[1173/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/64ad38bf0a108af46833a37b37b9a3ec
+[1174/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/64ad4acebca001c41a63ff5b2db978f5
+[1175/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/65fe4d99ca5e43a4898ab165fef4a9ea
+[1176/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/636fcbe12b5a9c54699477ce52ed3866
+[1177/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/650dd9526735d5b46b79224bc6e94025
+[1178/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/63502309b9507ca49a3c1c7e0ed6dc43.resource
+[1179/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/6344bf96fbda94141a525046d088fb23
+[1180/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/62c9a5d6c05b10545bade4f04fc69793
+[1181/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/62230bf9e8be63f4a890bedac6758c3d.resource
+[1182/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/63502309b9507ca49a3c1c7e0ed6dc43
+[1183/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/62230bf9e8be63f4a890bedac6758c3d
+[1184/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/618b4e48b6a7f344b9aead812c0d46bd
+[1185/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/60a92976a004368459af26b2eed9e6cc
+[1186/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/5fd3702e9942b7343826e69ca8ecad79
+[1187/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/615fcef88d38f96448cd94b9ccf11f15
+[1188/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/6032072a992f61a448a379b2ba9aba1e
+[1189/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/5fd3702e9942b7343826e69ca8ecad79.resource
+[1190/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/5f6b877eab954f044911d1bca6880622
+[1191/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/60517823b0b30f1499d779b1a25ed61c
+[1192/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/6032072a992f61a448a379b2ba9aba1e.resource
+[1193/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/5eebffa2668af434699ba05aa3997faf
+[1194/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/5dd517a78dbdf6b458e51ed706356e58
+[1195/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/5df57201646d36d4e819e462e73ab556
+[1196/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/5d18ef6881f00db44a16f0ed81443fcd
+[1197/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/5dd517a78dbdf6b458e51ed706356e58.resource
+[1198/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/5d63f038d9da908459ca3095283c1af3
+[1199/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/5cac54160dd157e4592addbfc7487ca9
+[1200/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/5ca3ace7ebd844a47913a21194988cac
+[1201/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/5d63f038d9da908459ca3095283c1af3.resource
+[1202/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/5b6e47c67fd83504482ce55de6bcd273
+[1203/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/5b6e47c67fd83504482ce55de6bcd273.resource
+[1204/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/5b1a64ea234fb2343b8d0686c51280de
+[1205/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/5b56d9fa0e8bd6e409ed188db38a692c
+[1206/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/5a31483cc0661454c84ec91dfa604e09
+[1207/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/5affc9bd33af7834ab2ed31248282e5a.resource
+[1208/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/5affc9bd33af7834ab2ed31248282e5a
+[1209/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/5a64ebca9aca6ab46aed98772615b84e
+[1210/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/5a6bb4e8faaef734d9a1c6536560af7c
+[1211/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/5b76c19628812c54f923c8865105d8f2
+[1212/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/5af72429fbb90954b93b13976d4d9578
+[1213/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/595ea4da08e3e8247b9aea3d8690b3fb
+[1214/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/5897aeed9b676024fbb8c694b421a861.resource
+[1215/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/5897aeed9b676024fbb8c694b421a861
+[1216/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/5695904020f064fdab5ad265b274a616
+[1217/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/5624ee9da9d10514ea7b808e83979c85
+[1218/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/550ec40b0227501408125ca3f542296e
+[1219/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/55e3457676665534084fa345141d5766
+[1220/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/57a5e59ab3b7a2341a0a38de79fda711
+[1221/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/541fb27caece7184891f81f3456625e4
+[1222/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/5387b9ed08b08714b9f4338bce2a2bba
+[1223/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/53402777211d4e445a0a28f63bb49aee
+[1224/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/5387b9ed08b08714b9f4338bce2a2bba.resource
+[1225/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/523d6b87481a434438fb5ed583f6edd3
+[1226/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/523014c40d71cda4085b4ccfea4904f1
+[1227/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/509a7213b27f37943aa904462939513e.resource
+[1228/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/583cdd6548357fc468f18a72f562f88e
+[1229/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/509a7213b27f37943aa904462939513e
+[1230/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/4f63c89046acf074585f74962433c920
+[1231/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/4fc32862c4d091948bfdc3ad1a518b4c
+[1232/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/4ebb9926546381046a4271ece54ce919
+[1233/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/5088d0220f0c4df439cf06c5c270eacb
+[1234/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/4e915b25a175ce64599029e52cb42723.resource
+[1235/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/4e24b96c248722643a6d1644164fc4b5
+[1236/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/5798ed6c6c3fce740be2cd78eeaf9347
+[1237/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/4e1a4e79a3548164da24123dbb0f3566
+[1238/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/55efd6dde4891824eb442906b725be22
+[1239/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/501adfcf23c6b124081c3f0ed7f3b494
+[1240/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/4ff996e3a0a5743a3987ab6231160665
+[1241/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/4e04c0cd39b7a03418b25a8cc04eb7d9
+[1242/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/4d62860704795814fa07db07bd7663ef
+[1243/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/4d7c4ae48815837469b48b217b59166c
+[1244/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/4cf38eda12d49f54d83a8d3de778eab9
+[1245/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/4cd5e6fbbbacfef4995a04a13383aa47.resource
+[1246/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/4cc71d1f73fad3245ad50823b0f92f4e
+[1247/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/4e915b25a175ce64599029e52cb42723
+[1248/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/4cfec70c836ccf746be4a1d7113f5940
+[1249/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/4c9b29de5bae56e4bac146d9df91072d
+[1250/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/4cd5e6fbbbacfef4995a04a13383aa47
+[1251/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/4ad9452cd1004624f819e31cda3cdcce
+[1252/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/4d41868a3ae5d3d4ebf0e85afc771572
+[1253/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/4c1a1a36cdc1a4147b6eedf08ed09a0e
+[1254/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/4b93d7b329d197348900ed24cda5d20f
+[1255/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/4b6aa99de5d21424eab6ae279f31475b
+[1256/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/4c9b29de5bae56e4bac146d9df91072d.resource
+[1257/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/4910a004464ca4efa808af20d2eb1e15
+[1258/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/491505b26e8d72f459b6d273d7b9f656
+[1259/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/479cbf10a2ba803449168e0148bcdbb5
+[1260/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/496676ffecd2dcf42bb99bc8a7ebd3a6
+[1261/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/48fb043c850cadc4a883b53785e14c6e
+[1262/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/494bd40c662cdd34bbfa8aad2b167ed2
+[1263/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/462ab88ca2c13ad46a44b86ef1e70280.resource
+[1264/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/464ca14f3cfaf433582758afa13a9473
+[1265/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/4708a7f023770d747ae9e5aee4311062
+[1266/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/45cd8ea91e59dcc41b26a13812bbb3c0.resource
+[1267/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/452dbda9106de28438ab738b0abcb11b
+[1268/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/450dd918846b28b408e044f16f827449
+[1269/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/449bc34df9d80e44c8f8a2a78b372a07
+[1270/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/454213bd9075e39408aa5cbaf5b53d13
+[1271/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/427e63feb4d7ab7418df537b19923785
+[1272/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/43f1d606245f90f4ca674c96e0c36f22
+[1273/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/45cd8ea91e59dcc41b26a13812bbb3c0
+[1274/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/41c4630354ab4c345bc456225eef3bf2
+[1275/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/43da6266235cdcb4c897da5202e0018e
+[1276/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/41bc85dbbd5ff1a49bac9f4656a25868
+[1277/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/4a6514b15bf322344a6aba173483bd3c
+[1278/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/415240b97a12d2e41815cde5df06f0b1
+[1279/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/413e590ddd7597a408a4e9ff6aaf04e0
+[1280/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/412ede0e5a858c44eae005f8b556ee3c
+[1281/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/47eb3fdd01eb327428cfafbefee8f3bc
+[1282/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/401fae203bae0ee428e401e7f9af9be8
+[1283/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/409bf720e9924426b9f253cf037a8f4e
+[1284/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/4072416bb11f3264587a0d784454e2dd
+[1285/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/3feab3391a3730b4d95a16824416fc0e
+[1286/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/429717fff45b9ba4794756088c17a9e4
+[1287/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/3e78b3c913dd3c547b9910b8e208bdcb
+[1288/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/462ab88ca2c13ad46a44b86ef1e70280
+[1289/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/3e8a4b85a4669e84c8edb33c7673d5f9
+[1290/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/3c65333d7185e3a45a8aac5532fd6e77.resource
+[1291/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/3c65333d7185e3a45a8aac5532fd6e77
+[1292/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/3b98509951fd504469141087a9d7c091.resource
+[1293/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/3cc11e099b3fe8d46b0174c3168b7b4f
+[1294/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/3f5b5dff67a942289a9defa416b206f3
+[1295/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/3b906374c01220b44b13cbd2ef0df38b
+[1296/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/3f32737a4f5f20848b588c8c3b7147d9
+[1297/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/3b59edf059e313547a4471698e4e18c6
+[1298/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/3b98509951fd504469141087a9d7c091
+[1299/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/38a07789c9e87004dad98c2909f58369
+[1300/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/39f9ce52d9f01504c85b8bfa82da69c0
+[1301/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/3ab2d00b111402e4f8f850eebd34d0d4
+[1302/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/38d76b4b4cee091489747dcd6de211a3
+[1303/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/361a0c9b63b1116469f207738f7d9ca6
+[1304/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/3aadd3e3e0a95ec4784e89b2e6686ee5
+[1305/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/3849731f87957fe4ca8e47a1c235c5a2
+[1306/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/35e778fba8b2b49a198d8d7cfced67eb
+[1307/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/365b251c5dd4f3042af57d19979edcde
+[1308/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/3ac6d0d057512b0429944ea721b84045
+[1309/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/368e17ff0546fb94da4cbe89b5007c60
+[1310/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/383955c9feeae2a4b8fe771a8c8873fe
+[1311/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/392f51d17d817874bac64beff11c2040
+[1312/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/36e77c9c3b4c7af45acccb2a04cbbb1c
+[1313/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/35959070af73e674dae72e4ebd8f8a29
+[1314/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/3396eb7f93cf88b42bebc50dad963f89
+[1315/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/33cbeb0ea585f6f42ba946d97937f301.resource
+[1316/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/336f94fceef887d4fbb6127ebc54cd8f
+[1317/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/32e59fe3eb611d543bdc21e8b1cf7e5b
+[1318/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/32db656e365759a4b8de4cd7c91e554f
+[1319/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/30b8e2fbfa183764391e6d51a58ea510
+[1320/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/320b1c2af77554f99a1658df4a6d3d5c
+[1321/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/32db656e365759a4b8de4cd7c91e554f.resource
+[1322/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/33b806d9841c0b740800fc43b1e646c5
+[1323/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/326f7c58aed965d41bf7805a782d1e44
+[1324/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/33cbeb0ea585f6f42ba946d97937f301
+[1325/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/30ccf49ad34d1e94fa7762f883609208
+[1326/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/31efa20d509c63f44b233e5f2c27d374
+[1327/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/35cf05bd9aaf3264cbc53206c77878d9
+[1328/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/306e32563d366c34aa0690e1a931b98b
+[1329/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/30a8575e1d4cc4e01a88ffbf4f973d80
+[1330/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/32f16f3e0c4d9b24a9fd1c72295dbdd9
+[1331/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/3044ee1867540b5489f87fdd355d29e9
+[1332/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/304470f975f608844981c0869e14b9a0
+[1333/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/2f64517d37370a84297670f15b26b044
+[1334/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/2d79bd5c0ba916f4eaef7a2026471516
+[1335/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/2ece168e47a476c429395bc965620b2b
+[1336/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/2f27968b83030fc48b915647f71264b8
+[1337/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/2c4059e3d4014454c9f15405b2cecad0
+[1338/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/2d5424f8da733d74484e10ce2f81351b
+[1339/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/2d019437ff89b8d44949727731cd9357
+[1340/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/2bffc50af4b1ff34cb151aa15bb9edb4
+[1341/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/2b1aa748746db1a468e8f355278cbf46
+[1342/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/2e498d1c8094910479dc3e1b768306a4
+[1343/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/2f247612a97dc9646b9624cf12731e38
+[1344/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/2a3d1a05cceb0184bba25312f11406fb
+[1345/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/2b03f9687ffc7884c9a88fe96b738d9d
+[1346/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/28835ac2377afc24c8a9247827c0e649
+[1347/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/29faade0994586044928a998af7dfde8
+[1348/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/29966c3c0907b49b58c4e59342d020cf
+[1349/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/274b173282daf114db48c8ef9b5bc89d.resource
+[1350/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/2a170a55744728e448a2cccccde7f364
+[1351/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/27c4fcb3e27206041b94863a30e06d96
+[1352/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/232c443afd6ed994aa4da1d352911753
+[1353/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/29f72cbed9d15c640815a658906e070f
+[1354/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/226cd6e91102c614ba39bad31ffe2afc
+[1355/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/27aab35ed4f366a4cac70c549db21d7c
+[1356/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/27aab35ed4f366a4cac70c549db21d7c.resource
+[1357/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/274b173282daf114db48c8ef9b5bc89d
+[1358/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/28050dc483281534b877b0c2e6efdd33
+[1359/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/20bf263e38b1a8c41b965a85bab7466c
+[1360/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/20b31fcfaed0cb842a56fbbe2419428f
+[1361/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/2c29c08dd1c0b6749b7cd0fcff7a29fd
+[1362/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/246b3fbb1a82b70419b988bc51acf9ae
+[1363/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/20c6f007a542deb43b7c9eb74ec2c56b
+[1364/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/1f835b8ac4f16174889bcee8981c9142
+[1365/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/226cd6e91102c614ba39bad31ffe2afc.resource
+[1366/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/1ef9c6a0a89ba464d9b2a97c669e3071
+[1367/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/1fd2963e35ed24ba89705127fca0fba1
+[1368/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/1edd75fb8287e5f4bb58a72f43f198cf
+[1369/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/1fbb41709a1d9334696860db720026e5
+[1370/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/1eeb8ea49edbead4bad05553f7eef4dd
+[1371/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/1ef9c6a0a89ba464d9b2a97c669e3071.resource
+[1372/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/1deb2816594550043bd39325439bffa7.resource
+[1373/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/1e7b7a4b8323a0b43a12a8d11eec5e3f
+[1374/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/1e7b7a4b8323a0b43a12a8d11eec5e3f.resource
+[1375/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/1ec55baed88ac07429a52bee4c519015
+[1376/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/1cb8ed3cbba15f0479fbae54e0a963df
+[1377/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/1c87ab2ce8b8b304d98fbe9a734b1f74
+[1378/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/1bc118708ec27fe47bedbad497f766ce
+[1379/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/1ccecd9b89b8a4f14bfb64f29ddfcc81
+[1380/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/1d368b04baa28df409a4b460404cffd7
+[1381/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/1deb2816594550043bd39325439bffa7
+[1382/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/1a31655e698df0a41bb17aaee646ad94
+[1383/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/19004eb4dcfb4d24eb0b1ecf05679b93
+[1384/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/18a79aea49b60d342b7a672b7a34edbe
+[1385/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/18d902ce167a9bb47851b702efab7916
+[1386/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/1864b3da2a78fd443a0a406a9b8a76bb.resource
+[1387/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/174851d576d374044b8fcd67e8ae9e2c
+[1388/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/1785c9126c7a72b499267e5f4f70329a
+[1389/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/18077ec77bade604e9aa3a807c81f1bb
+[1390/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/15f43343ba0a60e47a63d28496373c3f
+[1391/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/141e6634cf457c94f96d15a57b6efc57
+[1392/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/1864b3da2a78fd443a0a406a9b8a76bb
+[1393/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/15f82d428586ac94f8d9a1d7b71f0702
+[1394/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/1b5652adb09c5a4429b9acf712ed0163
+[1395/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/12faad18c4b35fe4c86aa5826dba334d
+[1396/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/1b7f379c2e2d0984d80aba5e388266d6
+[1397/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/1b222757b9e3844209748206173481c3
+[1398/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/1559f30eb18bc6c4cb3f73cc46bad5da
+[1399/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/127279d577f25ac4ea17dae3782e5074
+[1400/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/12c8a95ddc5cf3f42845dd67d4806a43
+[1401/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/12198f57333855f46aa03a242e9e4ddd
+[1402/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/12a6cee790b806d48a486d58a44b9bf4
+[1403/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/132f2c31e32f76847878046250b8ebc8
+[1404/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/11d130b46ae9dd340847d95f251c08b6
+[1405/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/10a25524b0986f9488b430e2829bbbe8
+[1406/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/109c3016baf6c954a8552950b9031acf
+[1407/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/10cca2aee5479344e8def673309ea8ba
+[1408/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/119a07623dc59744c9ef79408875e932
+[1409/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/0fc7539bbdbbfce469cc2057a93d5fc9
+[1410/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/0dd3fbd5475976a4aa96298afc680d17
+[1411/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/0eec08dcc1590d24590bebf95ecbad1f
+[1412/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/0f995b3145e0e7247a42da6cef1dbf23
+[1413/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/1062212255550964e974f3ffb3cbaae3
+[1414/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/0d9d26e2162aa4d11ab075b34c029673
+[1415/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/0f844a6558bba334d8a87425fa0414d9
+[1416/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/0ab6a3116bcdb0144935ec11f8cdeded
+[1417/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/0befced9886cc4a4a9237966e0068916
+[1418/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/0b1ce81871adf494bb5f778383010327
+[1419/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/106fc33e3a3dab34f89693e3ed333fa2
+[1420/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/0aa851515cd3747d6b3b3e461199a2ed
+[1421/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/0fed0456aafa4fc42ab05caf5b44298c
+[1422/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/09e816a32c9dffb4c876e3a0db90a7af
+[1423/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/0c4c5159dcddba345a2aede959b2b3eb
+[1424/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/09b6777424a501e47a7d7ea5df457bab
+[1425/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/0a7116385ff189f408e908da5ae31c8a
+[1426/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/0a743b143d5c8cb49af595203f3a47ec
+[1427/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/09f4942833b61cf429ab5ae4addaacac
+[1428/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/0adefe7b176156d4bbd820bc5877d15b
+[1429/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/092158a3421cf6e40870b9c9a6f0bfe6
+[1430/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/08860f5a2ea791b418ad49e30b240d79
+[1431/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/073b1ee561def20429e655b5c8893ad4
+[1432/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/05114e856bbd57f4aa786903d66b9ecc
+[1433/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/077a003b1de1e4c35923be7a21b5d948
+[1434/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/03e3bd08a6e70684dbe299a3e185fdd2.resource
+[1435/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/056fac03dbba26648b3cd605bf50e798
+[1436/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/08dc2fbe3db99c44ca525c3907631b22
+[1437/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/03e3bd08a6e70684dbe299a3e185fdd2
+[1438/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/08fe73246f62c3645a906731871a1fb7
+[1439/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/0796daece8f353d4ca47710382cac607
+[1440/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/047548221b83c1a449911b5c2f6234d1
+[1441/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/061d88369b48a35448710fb839d83074
+[1442/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/03bf91d88fce91c41995d27de63cc967
+[1443/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/05cd7273cc9763e4e9646de6e89817b6
+[1444/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/02c56ad43f44aa94fa344bc7d589a7c9
+[1445/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/02c5a12c4a8ccfc42a2ea759935ea25b
+[1446/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/03bf91d88fce91c41995d27de63cc967.resource
+[1447/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/02a1bd20fcfcd234c978fa6fa87ad972.resource
+[1448/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/02321396050468640af190a93168c846
+[1449/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/02a1bd20fcfcd234c978fa6fa87ad972
+[1450/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/010a6e5305fa7004f89c5d317b7b47d4
+[1451/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/00102373043eef842bee9e986845e68b
+[1452/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/03c9cc9f444676e43bec7bd0a279c803
+[1453/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/005d799d3178bc54db06106c41b75276
+[1454/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/00fedc70b62a31e448e8ccc298257b56
+[1455/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/016d4daaf07f3e247a21e3727f711977
+[1456/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/0123421463a5e0e4ab1e735046728aa0
+[1457/1460  0s] CopyFiles D:/projects/kingo_new/BGN CITY WARS/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/0000000000000000f000000000000000
+[1458/1460 18s] GenerateNativePluginsForAssemblies Library/Bee/artifacts/Android/AsyncPluginsFromLinker
+*** Tundra build success (19.09 seconds), 1011 items updated, 1460 evaluated
+Total cache size 267816972
+Total cache size after purge 267816972
+Total cache size 267816972
+Total cache size after purge 267816972
