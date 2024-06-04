@@ -1,26 +1,96 @@
 
 using UnityEngine;
+using Photon.Pun;
 
-public class LootAmmo : MonoBehaviour
+public class LootAmmo : MonoBehaviour, IPunObservable
 {
-    public AudioClip PickupSFX;
+    private AudioSource AS;
     [SerializeField]
-    private float RespawnTime;
-     void OnTriggerEnter(Collider other)
-      
+    private AudioClip PickupSFX;
+    private GameObject Player;
+    public bool Spawned = false;
+    public bool PickedUp = false;
+    private PhotonView PV;
+    public float RespawnTime = 60.0f; // Set your countdown time in seconds here
+    private float currentTime;
+    private float previousSeconds = -1;
+
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
-       
-        
-            Debug.Log(other.name + "HAS PICKED UP LOOT");
-            other.transform.GetComponent<WeaponStatus>().CurrentWeapon.GetComponent<WeaponShoot>().AmmoRefil();
-            other.GetComponent<AudioSource>().PlayOneShot(PickupSFX);
-            PickedUp();
-        
-    }
-    private void PickedUp()
-    {
-        transform.parent.parent.GetComponent<ReEnable>().ReEnableItem(RespawnTime, this.gameObject.transform.parent.gameObject);
-        transform.parent.gameObject.SetActive(false);
+        if (stream.IsWriting && PV != null)
+        {
+            stream.SendNext(currentTime); //Accelerating? this player
+            stream.SendNext(Spawned); //Spawned loot ? this player
+            stream.SendNext(PickedUp); //PickedUp loot ? this player
+        }
+
+        else
+        {
+            currentTime = (float)stream.ReceiveNext(); // other player loot currentTime?
+            Spawned = (bool)stream.ReceiveNext(); // other player  loot Spawned?
+            PickedUp = (bool)stream.ReceiveNext(); // other player  loot PickedUp?
+        }
     }
 
+    void Start()
+    {
+        AS = GetComponent<AudioSource>();
+
+        Invoke("FindPlayer", 0.25f);
+        PV = GetComponent<PhotonView>();
+        currentTime = RespawnTime;
+        if (PhotonNetwork.IsMasterClient)
+        {
+            RespawnLoot();
+        }
+
+    }
+    void OnTriggerEnter(Collider other)
+
+    {
+
+
+        if (other.CompareTag("Player"))
+        {
+            Player = other.gameObject;
+            if (Player == other.gameObject)
+            {
+                PV.RPC("PickUP", RpcTarget.AllBufferedViaServer);
+            }
+        }
+
+    }
+    [PunRPC]
+    private void PickUP()
+    {
+        AS.PlayOneShot(PickupSFX);
+        if (Player != null)
+        {
+            Player.GetComponent<WeaponStatus>().CurrentWeapon.GetComponent<WeaponShoot>().AmmoRefil();
+        }
+
+
+        PickedUp = true;
+        GetComponent<BoxCollider>().enabled = false;
+        transform.GetChild(0).gameObject.SetActive(false);
+        Spawned = false;
+        currentTime = RespawnTime;
+    }
+
+    void RespawnLoot()
+    {
+        PickedUp = false;
+        GetComponent<BoxCollider>().enabled = true;
+        transform.GetChild(0).gameObject.SetActive(true);
+        currentTime = RespawnTime;
+        Spawned = true;
+    }
+    void FindPlayer()
+    {
+        if (GameObject.FindWithTag("Player").GetComponent<PhotonView>().IsMine)
+        {
+            //    PV = GameObject.FindWithTag("Player").GetComponent<PhotonView>();
+        }
+
+    }
 }
