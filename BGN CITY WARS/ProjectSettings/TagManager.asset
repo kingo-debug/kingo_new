@@ -39,6 +39,8 @@ TagManager:
   - PlayerScoreItem
   - MINI MAP
   - head track
+  - Fire
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -57,7 +59,7 @@ TagManager:
   - MINI MAP
   - CarEntryZone
   - weapon preview
-  - 
+  - loot item
   - 
   - 
   - 

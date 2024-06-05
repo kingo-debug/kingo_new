@@ -98,7 +98,8 @@ public class LootAmmo : MonoBehaviour, IPunObservable
         AS.PlayOneShot(PickupSFX);
         if (Player != null)
         {
-            Player.GetPhotonView().RPC("RestoreJetpackFuel", RpcTarget.AllBufferedViaServer);
+            // Player.GetPhotonView().RPC("RestoreJetpackFuel", RpcTarget.AllBufferedViaServer);
+            Player.GetComponent<WeaponStatus>().CurrentWeapon.GetComponent<WeaponShoot>().AmmoRefil();
         }
         PickedUp = true;
         GetComponent<BoxCollider>().enabled = false;

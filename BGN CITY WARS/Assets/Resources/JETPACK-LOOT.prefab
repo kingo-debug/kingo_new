@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8090835167935667464}
   - component: {fileID: 4714654830585985436}
   - component: {fileID: 7824194675035764259}
-  m_Layer: 2
+  m_Layer: 17
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3024387503546651451}
-  m_Layer: 2
+  m_Layer: 17
   m_Name: VFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -143,7 +143,7 @@ GameObject:
   - component: {fileID: 3024387503549518623}
   - component: {fileID: 3024387503548420575}
   - component: {fileID: 8479628052425643726}
-  m_Layer: 2
+  m_Layer: 17
   m_Name: PowerUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -249,7 +249,7 @@ GameObject:
   - component: {fileID: 2273159456470085101}
   - component: {fileID: 4797521109875423617}
   - component: {fileID: 6958226287651650967}
-  m_Layer: 2
+  m_Layer: 17
   m_Name: JETPACK-LOOT
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}

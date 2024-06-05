@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3965412065226052512}
   - component: {fileID: 6428849995791983654}
   - component: {fileID: 7321402853717868698}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: AMMO -LOOT
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
@@ -72,7 +72,7 @@ MonoBehaviour:
   PickupSFX: {fileID: 8300000, guid: 6a1cbce439eb7db4d8f563f3063ed101, type: 3}
   Spawned: 0
   PickedUp: 0
-  RespawnTime: 60
+  RespawnTime: 30
 --- !u!82 &6428849995791983654
 AudioSource:
   m_ObjectHideFlags: 0
@@ -84,7 +84,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -201,7 +201,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3738884125511871393}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: ' EFX'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -237,7 +237,7 @@ GameObject:
   - component: {fileID: 3738884125508971397}
   - component: {fileID: 3738884125509970245}
   - component: {fileID: 5815750135842220513}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: PowerUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}

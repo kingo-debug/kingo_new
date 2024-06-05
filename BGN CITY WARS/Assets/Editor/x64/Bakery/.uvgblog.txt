@@ -7531,3 +7531,520 @@ Total cache size 267816972
 Total cache size after purge 267816972
 Total cache size 267816972
 Total cache size after purge 267816972
+Total cache size 267816972
+Total cache size after purge 267816972
+Total cache size 267816972
+Total cache size after purge 267816972
+Total cache size 267816972
+Total cache size after purge 267816972
+Total cache size 267816972
+Total cache size after purge 267816972
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+initScene done
+Num alphas of 32x32: 1
+Num alphas of 45x45: 1
+Num alphas of 64x64: 2
+Done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+Rendering UV GBuffer for POLICE PVP_LM0 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for POLICE PVP_LMA1 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Done
+Done
+Running ftrace fixpos12 "E:/temp" "uvpos_POLICE PVP_LM0.lz4" 2 0 0 0
+Running ftrace fixpos12 "E:/temp" "uvpos_POLICE PVP_LMA1.lz4" 2 0 1 0
+Running ftrace texarealight "E:/temp" "light_1_0" 4 0 0 lights0.bin
+Running ftrace texarealight "E:/temp" "light_2_0" 4 0 0 lights1.bin
+Running ftrace texarealight "E:/temp" "light_3_0" 4 0 0 lights2.bin
+Running ftrace texarealight "E:/temp" "light_4_0" 4 0 0 lights3.bin
+Running ftrace texarealight "E:/temp" "light_5_0" 4 0 0 lights4.bin
+Running ftrace arealight "E:/temp" "light_6_0" 4 0 0 lights5.bin
+Running ftrace texarealight "E:/temp" "light_7_0" 4 0 0 lights6.bin
+Running ftrace texarealight "E:/temp" "light_8_0" 4 0 0 lights7.bin
+Running ftrace texarealight "E:/temp" "light_9_0" 4 0 0 lights8.bin
+Running ftrace batchpointlightlegacy "E:/temp" "PointBatch_0_0_0" 4 0 0 batchpointlight_0_0_0.bin
+Running ftrace batchpointlightlegacy "E:/temp" "PointBatch_0_1_33" 4 0 0 batchpointlight_0_1_33.bin
+Running ftrace addmul "E:/temp" "POLICE PVP_LM0" 4 0 0 comp_0.bin
+Running ftrace texarealight "E:/temp" "light_1_1" 4 0 1 lights0.bin
+Running ftrace texarealight "E:/temp" "light_2_1" 4 0 1 lights1.bin
+Running ftrace texarealight "E:/temp" "light_3_1" 4 0 1 lights2.bin
+Running ftrace texarealight "E:/temp" "light_4_1" 4 0 1 lights3.bin
+Running ftrace texarealight "E:/temp" "light_5_1" 4 0 1 lights4.bin
+Running ftrace arealight "E:/temp" "light_6_1" 4 0 1 lights5.bin
+Running ftrace texarealight "E:/temp" "light_7_1" 4 0 1 lights6.bin
+Running ftrace texarealight "E:/temp" "light_8_1" 4 0 1 lights7.bin
+Running ftrace texarealight "E:/temp" "light_9_1" 4 0 1 lights8.bin
+Running ftrace batchpointlightlegacy "E:/temp" "PointBatch_1_0_0" 4 0 1 batchpointlight_1_0_0.bin
+Running ftrace batchpointlightlegacy "E:/temp" "PointBatch_1_1_33" 4 0 1 batchpointlight_1_1_33.bin
+Running ftrace addmul "E:/temp" "POLICE PVP_LMA1" 4 0 1 comp_1.bin
+Running ftrace texgi "E:/temp" "POLICE PVP_LM0_diffuse" 4 16 0 "gi_POLICE PVP_LM00.bin" "POLICE PVP_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "E:/temp" "POLICE PVP_LMA1_diffuse" 4 16 1 "gi_POLICE PVP_LMA10.bin" "POLICE PVP_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "E:/temp" "POLICE PVP_LM0_diffuse" 4 16 0 "gi_POLICE PVP_LM01.bin" "POLICE PVP_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "E:/temp" "POLICE PVP_LMA1_diffuse" 4 16 1 "gi_POLICE PVP_LMA11.bin" "POLICE PVP_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "E:/temp" "POLICE PVP_LM0_diffuse" 4 16 0 "gi_POLICE PVP_LM02.bin" "POLICE PVP_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "E:/temp" "POLICE PVP_LMA1_diffuse" 4 16 1 "gi_POLICE PVP_LMA12.bin" "POLICE PVP_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "E:/temp" "POLICE PVP_LM0_diffuse" 4 16 0 "gi_POLICE PVP_LM03.bin" "POLICE PVP_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "E:/temp" "POLICE PVP_LMA1_diffuse" 4 16 1 "gi_POLICE PVP_LMA13.bin" "POLICE PVP_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "E:/temp" "POLICE PVP_LM0_final" 4 16 0 "gi_POLICE PVP_LM04.bin" "POLICE PVP_LM0_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "E:/temp" "POLICE PVP_LMA1_final" 4 16 1 "gi_POLICE PVP_LMA14.bin" "POLICE PVP_LMA1_lights_HDR.lz4" vbTraceTex.bin
+Running denoiserLegacy c "E:/temp/POLICE PVP_LM0_final_HDR.lz4" "E:/temp/POLICE PVP_LM0_final_HDR.lz4" 2048 0
+Running seamfixer "E:/temp" "0" "POLICE PVP_LM0_final_HDR.lz4"
+Running denoiserLegacy c "E:/temp/POLICE PVP_LMA1_final_HDR.lz4" "E:/temp/POLICE PVP_LMA1_final_HDR.lz4" 2048 0
+Running seamfixer "E:/temp" "1" "POLICE PVP_LMA1_final_HDR.lz4"
+Running halffloat2hdr "E:/temp/POLICE PVP_LM0_final_HDR.lz4" "D:/projects/kingo_new/BGN CITY WARS/Assets/BakeryLightmaps/POLICE PVP_LM0_final.hdr" 1024
+Running halffloat2hdr "E:/temp/POLICE PVP_LMA1_final_HDR.lz4" "D:/projects/kingo_new/BGN CITY WARS/Assets/BakeryLightmaps/POLICE PVP_LMA1_final.hdr" 1024
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+initScene done
+Num alphas of 32x32: 1
+Num alphas of 45x45: 1
+Num alphas of 64x64: 2
+Done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+Rendering UV GBuffer for POLICE PVP_LM0 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for POLICE PVP_LMA1 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Done
+Done
+Running ftrace fixpos12 "E:/temp" "uvpos_POLICE PVP_LM0.lz4" 2 0 0 0
+Running ftrace fixpos12 "E:/temp" "uvpos_POLICE PVP_LMA1.lz4" 2 0 1 0
+Running ftrace arealight "E:/temp" "light_1_0" 4 0 0 lights0.bin
+Running ftrace arealight "E:/temp" "light_2_0" 4 0 0 lights1.bin
+Running ftrace texarealight "E:/temp" "light_3_0" 4 0 0 lights2.bin
+Running ftrace texarealight "E:/temp" "light_4_0" 4 0 0 lights3.bin
+Running ftrace texarealight "E:/temp" "light_5_0" 4 0 0 lights4.bin
+Running ftrace texarealight "E:/temp" "light_6_0" 4 0 0 lights5.bin
+Running ftrace texarealight "E:/temp" "light_7_0" 4 0 0 lights6.bin
+Running ftrace arealight "E:/temp" "light_8_0" 4 0 0 lights7.bin
+Running ftrace texarealight "E:/temp" "light_9_0" 4 0 0 lights8.bin
+Running ftrace texarealight "E:/temp" "light_10_0" 4 0 0 lights9.bin
+Running ftrace texarealight "E:/temp" "light_11_0" 4 0 0 lights10.bin
+Running ftrace batchpointlightlegacy "E:/temp" "PointBatch_0_0_0" 4 0 0 batchpointlight_0_0_0.bin
+Running ftrace batchpointlightlegacy "E:/temp" "PointBatch_0_1_35" 4 0 0 batchpointlight_0_1_35.bin
+Running ftrace addmul "E:/temp" "POLICE PVP_LM0" 4 0 0 comp_0.bin
+Running ftrace arealight "E:/temp" "light_1_1" 4 0 1 lights0.bin
+Running ftrace arealight "E:/temp" "light_2_1" 4 0 1 lights1.bin
+Running ftrace texarealight "E:/temp" "light_3_1" 4 0 1 lights2.bin
+Running ftrace texarealight "E:/temp" "light_4_1" 4 0 1 lights3.bin
+Running ftrace texarealight "E:/temp" "light_5_1" 4 0 1 lights4.bin
+Running ftrace texarealight "E:/temp" "light_6_1" 4 0 1 lights5.bin
+Running ftrace texarealight "E:/temp" "light_7_1" 4 0 1 lights6.bin
+Running ftrace arealight "E:/temp" "light_8_1" 4 0 1 lights7.bin
+Running ftrace texarealight "E:/temp" "light_9_1" 4 0 1 lights8.bin
+Running ftrace texarealight "E:/temp" "light_10_1" 4 0 1 lights9.bin
+Running ftrace texarealight "E:/temp" "light_11_1" 4 0 1 lights10.bin
+Running ftrace batchpointlightlegacy "E:/temp" "PointBatch_1_0_0" 4 0 1 batchpointlight_1_0_0.bin
+Running ftrace batchpointlightlegacy "E:/temp" "PointBatch_1_1_35" 4 0 1 batchpointlight_1_1_35.bin
+Running ftrace addmul "E:/temp" "POLICE PVP_LMA1" 4 0 1 comp_1.bin
+Running ftrace texgi "E:/temp" "POLICE PVP_LM0_diffuse" 4 16 0 "gi_POLICE PVP_LM00.bin" "POLICE PVP_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "E:/temp" "POLICE PVP_LMA1_diffuse" 4 16 1 "gi_POLICE PVP_LMA10.bin" "POLICE PVP_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "E:/temp" "POLICE PVP_LM0_diffuse" 4 16 0 "gi_POLICE PVP_LM01.bin" "POLICE PVP_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "E:/temp" "POLICE PVP_LMA1_diffuse" 4 16 1 "gi_POLICE PVP_LMA11.bin" "POLICE PVP_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "E:/temp" "POLICE PVP_LM0_diffuse" 4 16 0 "gi_POLICE PVP_LM02.bin" "POLICE PVP_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "E:/temp" "POLICE PVP_LMA1_diffuse" 4 16 1 "gi_POLICE PVP_LMA12.bin" "POLICE PVP_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "E:/temp" "POLICE PVP_LM0_diffuse" 4 16 0 "gi_POLICE PVP_LM03.bin" "POLICE PVP_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "E:/temp" "POLICE PVP_LMA1_diffuse" 4 16 1 "gi_POLICE PVP_LMA13.bin" "POLICE PVP_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "E:/temp" "POLICE PVP_LM0_final" 4 16 0 "gi_POLICE PVP_LM04.bin" "POLICE PVP_LM0_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "E:/temp" "POLICE PVP_LMA1_final" 4 16 1 "gi_POLICE PVP_LMA14.bin" "POLICE PVP_LMA1_lights_HDR.lz4" vbTraceTex.bin
+Running denoiserLegacy c "E:/temp/POLICE PVP_LM0_final_HDR.lz4" "E:/temp/POLICE PVP_LM0_final_HDR.lz4" 2048 0
+Running seamfixer "E:/temp" "0" "POLICE PVP_LM0_final_HDR.lz4"
+Running denoiserLegacy c "E:/temp/POLICE PVP_LMA1_final_HDR.lz4" "E:/temp/POLICE PVP_LMA1_final_HDR.lz4" 2048 0
+Running seamfixer "E:/temp" "1" "POLICE PVP_LMA1_final_HDR.lz4"
+Running halffloat2hdr "E:/temp/POLICE PVP_LM0_final_HDR.lz4" "D:/projects/kingo_new/BGN CITY WARS/Assets/BakeryLightmaps/POLICE PVP_LM0_final.hdr" 1024
+Running halffloat2hdr "E:/temp/POLICE PVP_LMA1_final_HDR.lz4" "D:/projects/kingo_new/BGN CITY WARS/Assets/BakeryLightmaps/POLICE PVP_LMA1_final.hdr" 1024
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+initScene done
+Num alphas of 32x32: 1
+Num alphas of 45x45: 1
+Num alphas of 64x64: 2
+Done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+Rendering UV GBuffer for POLICE PVP_LM0 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for POLICE PVP_LMA1 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Done
+Done
+Running ftrace fixpos12 "E:/temp" "uvpos_POLICE PVP_LM0.lz4" 2 0 0 0
+Running ftrace fixpos12 "E:/temp" "uvpos_POLICE PVP_LMA1.lz4" 2 0 1 0
+Running ftrace texarealight "E:/temp" "light_1_0" 4 0 0 lights0.bin
+Running ftrace texarealight "E:/temp" "light_2_0" 4 0 0 lights1.bin
+Running ftrace arealight "E:/temp" "light_3_0" 4 0 0 lights2.bin
+Running ftrace texarealight "E:/temp" "light_4_0" 4 0 0 lights3.bin
+Running ftrace texarealight "E:/temp" "light_5_0" 4 0 0 lights4.bin
+Running ftrace texarealight "E:/temp" "light_6_0" 4 0 0 lights5.bin
+Running ftrace arealight "E:/temp" "light_7_0" 4 0 0 lights6.bin
+Running ftrace arealight "E:/temp" "light_8_0" 4 0 0 lights7.bin
+Running ftrace texarealight "E:/temp" "light_9_0" 4 0 0 lights8.bin
+Running ftrace texarealight "E:/temp" "light_10_0" 4 0 0 lights9.bin
+Running ftrace texarealight "E:/temp" "light_11_0" 4 0 0 lights10.bin
+Running ftrace batchpointlightlegacy "E:/temp" "PointBatch_0_0_0" 4 0 0 batchpointlight_0_0_0.bin
+Running ftrace batchpointlightlegacy "E:/temp" "PointBatch_0_1_35" 4 0 0 batchpointlight_0_1_35.bin
+Running ftrace addmul "E:/temp" "POLICE PVP_LM0" 4 0 0 comp_0.bin
+Running ftrace texarealight "E:/temp" "light_1_1" 4 0 1 lights0.bin
+Running ftrace texarealight "E:/temp" "light_2_1" 4 0 1 lights1.bin
+Running ftrace arealight "E:/temp" "light_3_1" 4 0 1 lights2.bin
+Running ftrace texarealight "E:/temp" "light_4_1" 4 0 1 lights3.bin
+Running ftrace texarealight "E:/temp" "light_5_1" 4 0 1 lights4.bin
+Running ftrace texarealight "E:/temp" "light_6_1" 4 0 1 lights5.bin
+Running ftrace arealight "E:/temp" "light_7_1" 4 0 1 lights6.bin
+Running ftrace arealight "E:/temp" "light_8_1" 4 0 1 lights7.bin
+Running ftrace texarealight "E:/temp" "light_9_1" 4 0 1 lights8.bin
+Running ftrace texarealight "E:/temp" "light_10_1" 4 0 1 lights9.bin
+Running ftrace texarealight "E:/temp" "light_11_1" 4 0 1 lights10.bin
+Running ftrace batchpointlightlegacy "E:/temp" "PointBatch_1_0_0" 4 0 1 batchpointlight_1_0_0.bin
+Running ftrace batchpointlightlegacy "E:/temp" "PointBatch_1_1_35" 4 0 1 batchpointlight_1_1_35.bin
+Running ftrace addmul "E:/temp" "POLICE PVP_LMA1" 4 0 1 comp_1.bin
+Running ftrace texgi "E:/temp" "POLICE PVP_LM0_diffuse" 4 16 0 "gi_POLICE PVP_LM00.bin" "POLICE PVP_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "E:/temp" "POLICE PVP_LMA1_diffuse" 4 16 1 "gi_POLICE PVP_LMA10.bin" "POLICE PVP_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "E:/temp" "POLICE PVP_LM0_diffuse" 4 16 0 "gi_POLICE PVP_LM01.bin" "POLICE PVP_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "E:/temp" "POLICE PVP_LMA1_diffuse" 4 16 1 "gi_POLICE PVP_LMA11.bin" "POLICE PVP_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "E:/temp" "POLICE PVP_LM0_diffuse" 4 16 0 "gi_POLICE PVP_LM02.bin" "POLICE PVP_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "E:/temp" "POLICE PVP_LMA1_diffuse" 4 16 1 "gi_POLICE PVP_LMA12.bin" "POLICE PVP_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "E:/temp" "POLICE PVP_LM0_diffuse" 4 16 0 "gi_POLICE PVP_LM03.bin" "POLICE PVP_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "E:/temp" "POLICE PVP_LMA1_diffuse" 4 16 1 "gi_POLICE PVP_LMA13.bin" "POLICE PVP_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "E:/temp" "POLICE PVP_LM0_final" 4 16 0 "gi_POLICE PVP_LM04.bin" "POLICE PVP_LM0_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "E:/temp" "POLICE PVP_LMA1_final" 4 16 1 "gi_POLICE PVP_LMA14.bin" "POLICE PVP_LMA1_lights_HDR.lz4" vbTraceTex.bin
+Running denoiserLegacy c "E:/temp/POLICE PVP_LM0_final_HDR.lz4" "E:/temp/POLICE PVP_LM0_final_HDR.lz4" 2048 0
+Running seamfixer "E:/temp" "0" "POLICE PVP_LM0_final_HDR.lz4"
+Running denoiserLegacy c "E:/temp/POLICE PVP_LMA1_final_HDR.lz4" "E:/temp/POLICE PVP_LMA1_final_HDR.lz4" 2048 0
+Running seamfixer "E:/temp" "1" "POLICE PVP_LMA1_final_HDR.lz4"
+Running halffloat2hdr "E:/temp/POLICE PVP_LM0_final_HDR.lz4" "D:/projects/kingo_new/BGN CITY WARS/Assets/BakeryLightmaps/POLICE PVP_LM0_final.hdr" 1024
+Running halffloat2hdr "E:/temp/POLICE PVP_LMA1_final_HDR.lz4" "D:/projects/kingo_new/BGN CITY WARS/Assets/BakeryLightmaps/POLICE PVP_LMA1_final.hdr" 1024
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+initScene done
+Num alphas of 32x32: 1
+Num alphas of 45x45: 1
+Num alphas of 64x64: 2
+Done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+Rendering UV GBuffer for POLICE PVP_LM0 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for POLICE PVP_LMA1 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Done
+Done
+Running ftrace fixpos12 "E:/temp" "uvpos_POLICE PVP_LM0.lz4" 2 0 0 0
+Running ftrace fixpos12 "E:/temp" "uvpos_POLICE PVP_LMA1.lz4" 2 0 1 0
+Running ftrace texarealight "E:/temp" "light_1_0" 4 0 0 lights0.bin
+Running ftrace texarealight "E:/temp" "light_2_0" 4 0 0 lights1.bin
+Running ftrace arealight "E:/temp" "light_3_0" 4 0 0 lights2.bin
+Running ftrace texarealight "E:/temp" "light_4_0" 4 0 0 lights3.bin
+Running ftrace texarealight "E:/temp" "light_5_0" 4 0 0 lights4.bin
+Running ftrace texarealight "E:/temp" "light_6_0" 4 0 0 lights5.bin
+Running ftrace arealight "E:/temp" "light_7_0" 4 0 0 lights6.bin
+Running ftrace arealight "E:/temp" "light_8_0" 4 0 0 lights7.bin
+Running ftrace texarealight "E:/temp" "light_9_0" 4 0 0 lights8.bin
+Running ftrace texarealight "E:/temp" "light_10_0" 4 0 0 lights9.bin
+Running ftrace texarealight "E:/temp" "light_11_0" 4 0 0 lights10.bin
+Running ftrace batchpointlightlegacy "E:/temp" "PointBatch_0_0_0" 4 0 0 batchpointlight_0_0_0.bin
+Running ftrace batchpointlightlegacy "E:/temp" "PointBatch_0_1_36" 4 0 0 batchpointlight_0_1_36.bin
+Running ftrace addmul "E:/temp" "POLICE PVP_LM0" 4 0 0 comp_0.bin
+Running ftrace texarealight "E:/temp" "light_1_1" 4 0 1 lights0.bin
+Running ftrace texarealight "E:/temp" "light_2_1" 4 0 1 lights1.bin
+Running ftrace arealight "E:/temp" "light_3_1" 4 0 1 lights2.bin
+Running ftrace texarealight "E:/temp" "light_4_1" 4 0 1 lights3.bin
+Running ftrace texarealight "E:/temp" "light_5_1" 4 0 1 lights4.bin
+Running ftrace texarealight "E:/temp" "light_6_1" 4 0 1 lights5.bin
+Running ftrace arealight "E:/temp" "light_7_1" 4 0 1 lights6.bin
+Running ftrace arealight "E:/temp" "light_8_1" 4 0 1 lights7.bin
+Running ftrace texarealight "E:/temp" "light_9_1" 4 0 1 lights8.bin
+Running ftrace texarealight "E:/temp" "light_10_1" 4 0 1 lights9.bin
+Running ftrace texarealight "E:/temp" "light_11_1" 4 0 1 lights10.bin
+Running ftrace batchpointlightlegacy "E:/temp" "PointBatch_1_0_0" 4 0 1 batchpointlight_1_0_0.bin
+Running ftrace batchpointlightlegacy "E:/temp" "PointBatch_1_1_36" 4 0 1 batchpointlight_1_1_36.bin
+Running ftrace addmul "E:/temp" "POLICE PVP_LMA1" 4 0 1 comp_1.bin
+Running ftrace texgi "E:/temp" "POLICE PVP_LM0_diffuse" 4 16 0 "gi_POLICE PVP_LM00.bin" "POLICE PVP_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "E:/temp" "POLICE PVP_LMA1_diffuse" 4 16 1 "gi_POLICE PVP_LMA10.bin" "POLICE PVP_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "E:/temp" "POLICE PVP_LM0_diffuse" 4 16 0 "gi_POLICE PVP_LM01.bin" "POLICE PVP_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "E:/temp" "POLICE PVP_LMA1_diffuse" 4 16 1 "gi_POLICE PVP_LMA11.bin" "POLICE PVP_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "E:/temp" "POLICE PVP_LM0_diffuse" 4 16 0 "gi_POLICE PVP_LM02.bin" "POLICE PVP_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "E:/temp" "POLICE PVP_LMA1_diffuse" 4 16 1 "gi_POLICE PVP_LMA12.bin" "POLICE PVP_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "E:/temp" "POLICE PVP_LM0_diffuse" 4 16 0 "gi_POLICE PVP_LM03.bin" "POLICE PVP_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "E:/temp" "POLICE PVP_LMA1_diffuse" 4 16 1 "gi_POLICE PVP_LMA13.bin" "POLICE PVP_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "E:/temp" "POLICE PVP_LM0_final" 4 16 0 "gi_POLICE PVP_LM04.bin" "POLICE PVP_LM0_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "E:/temp" "POLICE PVP_LMA1_final" 4 16 1 "gi_POLICE PVP_LMA14.bin" "POLICE PVP_LMA1_lights_HDR.lz4" vbTraceTex.bin
+Running denoiserLegacy c "E:/temp/POLICE PVP_LM0_final_HDR.lz4" "E:/temp/POLICE PVP_LM0_final_HDR.lz4" 2048 0
+Running seamfixer "E:/temp" "0" "POLICE PVP_LM0_final_HDR.lz4"
+Running denoiserLegacy c "E:/temp/POLICE PVP_LMA1_final_HDR.lz4" "E:/temp/POLICE PVP_LMA1_final_HDR.lz4" 2048 0
+Running seamfixer "E:/temp" "1" "POLICE PVP_LMA1_final_HDR.lz4"
+Running halffloat2hdr "E:/temp/POLICE PVP_LM0_final_HDR.lz4" "D:/projects/kingo_new/BGN CITY WARS/Assets/BakeryLightmaps/POLICE PVP_LM0_final.hdr" 1024
+Running halffloat2hdr "E:/temp/POLICE PVP_LMA1_final_HDR.lz4" "D:/projects/kingo_new/BGN CITY WARS/Assets/BakeryLightmaps/POLICE PVP_LMA1_final.hdr" 1024
+Total cache size 267816972
+Total cache size after purge 267816972
+Total cache size 267816972
+Total cache size after purge 267816972
+Total cache size 267816972
+Total cache size after purge 267816972
+Total cache size 267816972
+Total cache size after purge 267816972
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+initScene done
+Num alphas of 32x32: 1
+Num alphas of 45x45: 1
+Num alphas of 64x64: 2
+Done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+Rendering UV GBuffer for POLICE PVP_LM0 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for POLICE PVP_LMA1 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Done
+Done
+Running ftrace fixpos12 "E:/temp" "uvpos_POLICE PVP_LM0.lz4" 2 0 0 0
+Running ftrace fixpos12 "E:/temp" "uvpos_POLICE PVP_LMA1.lz4" 2 0 1 0
+Running ftrace texarealight "E:/temp" "light_1_0" 4 0 0 lights0.bin
+Running ftrace texarealight "E:/temp" "light_2_0" 4 0 0 lights1.bin
+Running ftrace arealight "E:/temp" "light_3_0" 4 0 0 lights2.bin
+Running ftrace texarealight "E:/temp" "light_4_0" 4 0 0 lights3.bin
+Running ftrace texarealight "E:/temp" "light_5_0" 4 0 0 lights4.bin
+Running ftrace texarealight "E:/temp" "light_6_0" 4 0 0 lights5.bin
+Running ftrace arealight "E:/temp" "light_7_0" 4 0 0 lights6.bin
+Running ftrace arealight "E:/temp" "light_8_0" 4 0 0 lights7.bin
+Running ftrace texarealight "E:/temp" "light_9_0" 4 0 0 lights8.bin
+Running ftrace texarealight "E:/temp" "light_10_0" 4 0 0 lights9.bin
+Running ftrace texarealight "E:/temp" "light_11_0" 4 0 0 lights10.bin
+Running ftrace batchpointlightlegacy "E:/temp" "PointBatch_0_0_0" 4 0 0 batchpointlight_0_0_0.bin
+Running ftrace batchpointlightlegacy "E:/temp" "PointBatch_0_1_36" 4 0 0 batchpointlight_0_1_36.bin
+Running ftrace addmul "E:/temp" "POLICE PVP_LM0" 4 0 0 comp_0.bin
+Running ftrace texarealight "E:/temp" "light_1_1" 4 0 1 lights0.bin
+Running ftrace texarealight "E:/temp" "light_2_1" 4 0 1 lights1.bin
+Running ftrace arealight "E:/temp" "light_3_1" 4 0 1 lights2.bin
+Running ftrace texarealight "E:/temp" "light_4_1" 4 0 1 lights3.bin
+Running ftrace texarealight "E:/temp" "light_5_1" 4 0 1 lights4.bin
+Running ftrace texarealight "E:/temp" "light_6_1" 4 0 1 lights5.bin
+Running ftrace arealight "E:/temp" "light_7_1" 4 0 1 lights6.bin
+Running ftrace arealight "E:/temp" "light_8_1" 4 0 1 lights7.bin
+Running ftrace texarealight "E:/temp" "light_9_1" 4 0 1 lights8.bin
+Running ftrace texarealight "E:/temp" "light_10_1" 4 0 1 lights9.bin
+Running ftrace texarealight "E:/temp" "light_11_1" 4 0 1 lights10.bin
+Running ftrace batchpointlightlegacy "E:/temp" "PointBatch_1_0_0" 4 0 1 batchpointlight_1_0_0.bin
+Running ftrace batchpointlightlegacy "E:/temp" "PointBatch_1_1_36" 4 0 1 batchpointlight_1_1_36.bin
+Running ftrace addmul "E:/temp" "POLICE PVP_LMA1" 4 0 1 comp_1.bin
+Running ftrace texgi "E:/temp" "POLICE PVP_LM0_diffuse" 4 16 0 "gi_POLICE PVP_LM00.bin" "POLICE PVP_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "E:/temp" "POLICE PVP_LMA1_diffuse" 4 16 1 "gi_POLICE PVP_LMA10.bin" "POLICE PVP_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "E:/temp" "POLICE PVP_LM0_diffuse" 4 16 0 "gi_POLICE PVP_LM01.bin" "POLICE PVP_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "E:/temp" "POLICE PVP_LMA1_diffuse" 4 16 1 "gi_POLICE PVP_LMA11.bin" "POLICE PVP_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "E:/temp" "POLICE PVP_LM0_diffuse" 4 16 0 "gi_POLICE PVP_LM02.bin" "POLICE PVP_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "E:/temp" "POLICE PVP_LMA1_diffuse" 4 16 1 "gi_POLICE PVP_LMA12.bin" "POLICE PVP_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "E:/temp" "POLICE PVP_LM0_diffuse" 4 16 0 "gi_POLICE PVP_LM03.bin" "POLICE PVP_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "E:/temp" "POLICE PVP_LMA1_diffuse" 4 16 1 "gi_POLICE PVP_LMA13.bin" "POLICE PVP_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "E:/temp" "POLICE PVP_LM0_final" 4 16 0 "gi_POLICE PVP_LM04.bin" "POLICE PVP_LM0_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "E:/temp" "POLICE PVP_LMA1_final" 4 16 1 "gi_POLICE PVP_LMA14.bin" "POLICE PVP_LMA1_lights_HDR.lz4" vbTraceTex.bin
+Running denoiserLegacy c "E:/temp/POLICE PVP_LM0_final_HDR.lz4" "E:/temp/POLICE PVP_LM0_final_HDR.lz4" 2048 0
+Running seamfixer "E:/temp" "0" "POLICE PVP_LM0_final_HDR.lz4"
+Running denoiserLegacy c "E:/temp/POLICE PVP_LMA1_final_HDR.lz4" "E:/temp/POLICE PVP_LMA1_final_HDR.lz4" 2048 0
+Running seamfixer "E:/temp" "1" "POLICE PVP_LMA1_final_HDR.lz4"
+Running halffloat2hdr "E:/temp/POLICE PVP_LM0_final_HDR.lz4" "D:/projects/kingo_new/BGN CITY WARS/Assets/BakeryLightmaps/POLICE PVP_LM0_final.hdr" 1024
+Running halffloat2hdr "E:/temp/POLICE PVP_LMA1_final_HDR.lz4" "D:/projects/kingo_new/BGN CITY WARS/Assets/BakeryLightmaps/POLICE PVP_LMA1_final.hdr" 1024
