@@ -45,11 +45,44 @@ public class LootAmmo : MonoBehaviour, IPunObservable
         }
 
     }
-    void OnTriggerEnter(Collider other)
 
+    private void Update()
     {
+        if (!Spawned && PhotonNetwork.IsMasterClient)
+        {
+            currentTime -= Time.deltaTime;
+
+            float seconds = Mathf.RoundToInt(currentTime % 60);
+
+            if (seconds != previousSeconds)
+            {
+                float minutes = Mathf.Floor(currentTime / 60);
+                previousSeconds = seconds;
+            }
 
 
+        }
+        else if (!PhotonNetwork.IsMasterClient)
+        {
+            if (Spawned)
+            {
+                RespawnLoot();
+            }
+            else
+            {
+                GetComponent<BoxCollider>().enabled = false;
+                transform.GetChild(0).gameObject.SetActive(false);
+            }
+        }
+        if (currentTime <= 0) // check to spawn
+        {
+            RespawnLoot();
+        }
+
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
         if (other.CompareTag("Player"))
         {
             Player = other.gameObject;
@@ -58,23 +91,23 @@ public class LootAmmo : MonoBehaviour, IPunObservable
                 PV.RPC("PickUP", RpcTarget.AllBufferedViaServer);
             }
         }
-
     }
     [PunRPC]
-    private void PickUP()
+    void PickUP()
     {
         AS.PlayOneShot(PickupSFX);
         if (Player != null)
         {
-            Player.GetComponent<WeaponStatus>().CurrentWeapon.GetComponent<WeaponShoot>().AmmoRefil();
+            Player.GetPhotonView().RPC("RestoreJetpackFuel", RpcTarget.AllBufferedViaServer);
         }
-
-
         PickedUp = true;
         GetComponent<BoxCollider>().enabled = false;
         transform.GetChild(0).gameObject.SetActive(false);
         Spawned = false;
         currentTime = RespawnTime;
+
+
+
     }
 
     void RespawnLoot()
@@ -91,6 +124,5 @@ public class LootAmmo : MonoBehaviour, IPunObservable
         {
             //    PV = GameObject.FindWithTag("Player").GetComponent<PhotonView>();
         }
-
     }
 }
