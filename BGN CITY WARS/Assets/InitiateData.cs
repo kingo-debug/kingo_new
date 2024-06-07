@@ -17,7 +17,7 @@ public class InitiateData : MonoBehaviour
 
 
     [Space(10)]
-    [Header("Equipped Inventory")]
+    [Header("initiate Inventory")]
     public string DefaultMelee;
     public string DefaultBackup;
     public string DefaultPrimary;

@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0d9d17b0f70dccd4f8e14a402f6a7205, type: 2}
+  - {fileID: 2100000, guid: d6d7f74ce6ce7534d8a421db1e6a612b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -144,7 +144,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0d9d17b0f70dccd4f8e14a402f6a7205, type: 2}
+  - {fileID: 2100000, guid: d6d7f74ce6ce7534d8a421db1e6a612b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -176,7 +176,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3143904429552054995}
   m_Layer: 16
-  m_Name: BGN-AK47
+  m_Name: BGN-AK45 GOLD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
