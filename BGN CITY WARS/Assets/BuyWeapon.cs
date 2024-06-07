@@ -19,6 +19,7 @@ public class BuyWeapon : MonoBehaviour
     private AudioSource AS;
 
     public string WeaponID;
+    private StatusLoad UIStatus;
 
     [SerializeField]
     private int Price;
@@ -32,6 +33,7 @@ public class BuyWeapon : MonoBehaviour
         EquipButton = transform.parent.GetChild(1).gameObject;
         BuySuccessMessage = GameObject.Find("SHOP NOTIFICATION").transform.GetChild(0).gameObject;
         BuyFailedMessage = GameObject.Find("SHOP NOTIFICATION").transform.GetChild(1).gameObject;
+        UIStatus = GameObject.Find("quick info").GetComponent<StatusLoad>();
 
     }
 
@@ -47,7 +49,7 @@ public class BuyWeapon : MonoBehaviour
             shopitems.OwnedWeapons.Add(WeaponID);
             EquipButton.SetActive(true); gameObject.SetActive(false);
             shopitems.SaveWeapons();
-           
+            UIStatus.LoadStatus();
         }
         else
         {
