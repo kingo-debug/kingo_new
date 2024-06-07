@@ -7,14 +7,14 @@ public class SkinManager : MonoBehaviour
     [SerializeField]
     private SkinnedMeshRenderer SkinMesh;
     public string EquippedSkin;
-    private InitiateData data;
+    private OwnedShopItems data;
     private PhotonView PV;
     private PhotonSerializerBGN photonSerializer;
 
     // Start is called before the first frame update
     void Start()
     {
-        data = GameObject.Find("ApplicationManager").GetComponent<InitiateData>();
+        data = GameObject.Find("OWNED SHOP ITEMS").GetComponent<OwnedShopItems>();
         PV = GetComponent<PhotonView>();
         photonSerializer = GetComponent<PhotonSerializerBGN>();
         Invoke("SpawnSkin", 0.02f);

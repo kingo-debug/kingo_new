@@ -8048,3 +8048,43 @@ Running denoiserLegacy c "E:/temp/POLICE PVP_LMA1_final_HDR.lz4" "E:/temp/POLICE
 Running seamfixer "E:/temp" "1" "POLICE PVP_LMA1_final_HDR.lz4"
 Running halffloat2hdr "E:/temp/POLICE PVP_LM0_final_HDR.lz4" "D:/projects/kingo_new/BGN CITY WARS/Assets/BakeryLightmaps/POLICE PVP_LM0_final.hdr" 1024
 Running halffloat2hdr "E:/temp/POLICE PVP_LMA1_final_HDR.lz4" "D:/projects/kingo_new/BGN CITY WARS/Assets/BakeryLightmaps/POLICE PVP_LMA1_final.hdr" 1024
+Total cache size 267816972
+Total cache size after purge 267816972
+Total cache size 267816972
+Total cache size after purge 267816972
+Total cache size 267816972
+Total cache size after purge 267816972
+Total cache size 267816972
+Total cache size after purge 267816972
+Total cache size 267816972
+Total cache size after purge 267816972
+abort_threads: Failed aborting id: 000000000000596C, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 000000000000C988, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 000000000002DB4C, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 000000000000992C, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 000000000006B3E8, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 000000000001E524, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 000000000001EAE8, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 000000000000596C, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 000000000000C988, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 000000000002DB4C, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 000000000000992C, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 000000000006B3E8, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 000000000001E524, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 000000000001EAE8, mono_thread_manage will ignore it
+
+[usbmuxd] Stop listen thread
+[usbmuxd] Listen thread exiting

@@ -4,8 +4,8 @@ using UnityEngine;
 public class EquipWeapon : MonoBehaviour
 {
     private BuyWeapon buy;
-    private InitiateData data;
-    private RefreshEquippedStates states;
+    private OwnedShopItems data;
+    private EquippedState states;
     private GameObject WeaponItem;
 
 
@@ -23,9 +23,9 @@ public class EquipWeapon : MonoBehaviour
         {
             WeaponItem = transform.parent.parent.gameObject;
             buy = transform.parent.GetChild(0).GetComponent<BuyWeapon>();
-            data = GameObject.Find("ApplicationManager").GetComponent<InitiateData>();
+            data = GameObject.Find("OWNED SHOP ITEMS").GetComponent<OwnedShopItems>();
             EquippedButton = transform.parent.GetChild(2).gameObject;
-            states = transform.parent.parent.parent.GetComponent<RefreshEquippedStates>();
+            states = transform.parent.parent.parent.GetComponent<EquippedState>();
         }
 
 
@@ -33,6 +33,7 @@ public class EquipWeapon : MonoBehaviour
        buy.WeaponID == data.EquippedMelee ||
        buy.WeaponID == data.EquippedPrimary ||
        buy.WeaponID == data.EquippedHeavy )
+   
         {
             Equip();
         }
@@ -46,16 +47,16 @@ public class EquipWeapon : MonoBehaviour
             Debug.Log(data.Weaponinventory[category] = buy.WeaponID);
             Debug.Log(data.Weaponinventory.TryGetValue(category, out string value));
             Debug.Log(value);
-            data.SaveStats();
+        //    data.SaveStats();
             #region Button Toggles
             EquippedButton.SetActive(true);
 
-            states.EquippedItem.transform.Find("STATE").GetChild(2).gameObject.SetActive(false);    //deactivate equipped button
-            states.EquippedItem.transform.transform.Find("STATE").GetChild(1).gameObject.SetActive(true);    //activate equip button
+            states.CurrentlyEquipped.transform.Find("STATE").GetChild(2).gameObject.SetActive(false);    //deactivate equipped button
+            states.CurrentlyEquipped.transform.transform.Find("STATE").GetChild(1).gameObject.SetActive(true);    //activate equip button
           
-            states.EquippedItem = transform.parent.parent.gameObject;    //update equipped item
-            states.EquippedItem.transform.Find("STATE").GetChild(2).gameObject.SetActive(true);    //activate equipped button
-            states.EquippedItem.transform.transform.Find("STATE").GetChild(1).gameObject.SetActive(false);    //deactivate equip button
+            states.CurrentlyEquipped = transform.parent.parent.gameObject;    //update equipped item
+            states.CurrentlyEquipped.transform.Find("STATE").GetChild(2).gameObject.SetActive(true);    //activate equipped button
+            states.CurrentlyEquipped.transform.transform.Find("STATE").GetChild(1).gameObject.SetActive(false);    //deactivate equip button
             #endregion
             CategorySelectPFP.Find("EQUIP PFP").GetComponent<Image>().sprite = WeaponItem.transform.Find("Weapon icon").GetComponent<Image>().sprite;
             gameObject.SetActive(false);

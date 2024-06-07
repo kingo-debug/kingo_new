@@ -20,8 +20,9 @@ public class NameinputField : MonoBehaviour
 
     private void OnInputFieldValueChanged(string value)
     {
-         PlayerPrefs.SetString("UserStats_PlayerName", value);
-        UserName = PlayerPrefs.GetString("UserStats_PlayerName");
+
+        ES3.Save("PlayerName", value);    //its like  public- int -FirstTime = 0 but dont need to give type  
+        UserName = ES3.Load<string>("PlayerName");
 
     }
 
@@ -39,7 +40,7 @@ public class NameinputField : MonoBehaviour
 
     void Updatefield()
     {
-        UserName = PlayerPrefs.GetString("UserStats_PlayerName");
+        UserName = UserName = ES3.Load<string>("PlayerName");
         PhotonNetwork.NickName = UserName;
         yourInputField.text = UserName;
         UIOverhead.UpdateUINameDisplay();

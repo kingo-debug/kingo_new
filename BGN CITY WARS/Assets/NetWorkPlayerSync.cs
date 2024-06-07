@@ -14,7 +14,7 @@ public class NetWorkPlayerSync : MonoBehaviour
     private Component[] NotMineComponents;
     private LookAtIK lookik;
     private AimIK aimik;
-    private InitiateData Data;
+    private OwnedShopItems Data;
     private SkinManager skinManager;
     private camera2 Camera2;
     private Camera Playercamera;
@@ -26,7 +26,7 @@ public class NetWorkPlayerSync : MonoBehaviour
         aimik = GetComponent<AimIK>();
         lookik = GetComponent<LookAtIK>();
         playerActions = GetComponent<PlayerActionsVar>();
-        Data = GameObject.Find("ApplicationManager").GetComponent<InitiateData>();
+        Data = GameObject.Find("OWNED SHOP ITEMS").GetComponent<OwnedShopItems>();
         skinManager = GetComponent<SkinManager>();
         Playercamera = transform.parent.transform.GetChild(1).GetChild(0).GetComponent<Camera>();
         Camera2 = transform.parent.transform.GetChild(1).GetChild(0).GetComponent<camera2>();

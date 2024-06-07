@@ -4,15 +4,17 @@ using UnityEngine;
 public class EquipSkin : MonoBehaviour
 {
     private BuySkin buy;
-    private InitiateData data;
-    [SerializeField]
-    private RefreshEquippedStates states;
-    private GameObject SkinItem;
+    private OwnedShopItems data;
+    private EquippedState states;
 
-    private GameObject EquippedButton;
+
+
 
     private void Start()
     {
+        buy = transform.parent.transform.GetChild(0).gameObject.GetComponent<BuySkin>();
+        data = GameObject.Find("OWNED SHOP ITEMS").GetComponent<OwnedShopItems>();
+        states = GameObject.Find("skin window").GetComponent<EquippedState>();
 
         if (buy.SkinID == data.EquippedSkin)
 
@@ -21,49 +23,20 @@ public class EquipSkin : MonoBehaviour
         }
     }
 
-    private void OnEnable()
-    {
-        if (SkinItem == null || buy == null || states == null | EquippedButton == null | data == null)
-        {
-            SkinItem = transform.parent.parent.gameObject;
-
-            data = GameObject.Find("ApplicationManager").GetComponent<InitiateData>();
-            EquippedButton = transform.parent.GetChild(2).gameObject;
-            buy = transform.parent.GetChild(0).GetComponent<BuySkin>();
-           states = GameObject.Find("skin window").GetComponent<RefreshEquippedStates>();
-
-        }
-
 
         
-    }
+    
     public void Equip()
     {
     
        Debug.Log(data.EquippedSkin = buy.SkinID);
-        data.SaveStats();
-        #region Button Toggles
-        EquippedButton.SetActive(true);
-        states.EquippedItem.transform.Find("STATE").GetChild(2).gameObject.SetActive(false);    //deactivate equipped button
-        states.EquippedItem.transform.transform.Find("STATE").GetChild(1).gameObject.SetActive(true);    //activate equip button
+        ES3.Save<string>("CurrentSkin", buy.SkinID);
 
-        states.EquippedItem = transform.parent.parent.gameObject;    //update equipped item
-
-        states.EquippedItem.transform.Find("STATE").GetChild(2).gameObject.SetActive(true);    //activate equipped button
-        states.EquippedItem.transform.transform.Find("STATE").GetChild(1).gameObject.SetActive(false);    //deactivate equip button
-
+        #region refresh states last equipped
+        states.CurrentlyEquipped.gameObject.SetActive(false); // Disable last equipped button
+        states.CurrentlyEquipped.transform.parent.GetChild(1).gameObject.SetActive(true); // enable its equip
+        states.CurrentlyEquipped = transform.parent.GetChild(2).gameObject; // set new equip button
         #endregion
-
-
-
-
-        gameObject.SetActive(false);
-
-
-
-
-        
-       
 
     }
 

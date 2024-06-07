@@ -5,7 +5,6 @@ using UnityEngine;
 public class BuySkin : MonoBehaviour
 {
 
-    private InitiateData Data;
     private OwnedShopItems shopitems;
     private GameObject BuySuccessMessage;
     private GameObject BuyFailedMessage;
@@ -20,12 +19,12 @@ public class BuySkin : MonoBehaviour
     private AudioSource AS;
 
     public string SkinID;
-
+    private StatusLoad UIStatus;
     [SerializeField]
     private int Price;
     private void OnEnable()
     {
-        shopitems = GameObject.Find("SHOP MENU").GetComponent<OwnedShopItems>();
+        shopitems = GameObject.Find("OWNED SHOP ITEMS").GetComponent<OwnedShopItems>();
         EquipButton = transform.parent.GetChild(1).gameObject;
         //check if already owned
         if (shopitems.OwnedSkins.Contains(SkinID))
@@ -38,7 +37,7 @@ public class BuySkin : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Data = GameObject.Find("ApplicationManager").GetComponent<InitiateData>();
+        UIStatus = GameObject.Find("quick info").GetComponent<StatusLoad>();
         AS = GameObject.Find("MENU SFX").GetComponent<AudioSource>();
 
         BuySuccessMessage = GameObject.Find("SHOP NOTIFICATION").transform.GetChild(0).gameObject;
@@ -51,15 +50,17 @@ public class BuySkin : MonoBehaviour
     public void Buy()
     {
 
-        if (Data.BGNCoins >= Price && !shopitems.OwnedSkins.Contains(SkinID))
+        if (ES3.Load<int>("BGNCoins") >= Price && !shopitems.OwnedSkins.Contains(SkinID))
         {
             BuySuccessMessage.SetActive(true);
-            Data.BGNCoins -= Price;
+            int SubtractedPrice = ES3.Load<int>("BGNCoins") - +Price;
+            ES3.Save<int>("BGNCoins", SubtractedPrice);
             AS.PlayOneShot(BuySuccessSFX);
             shopitems.OwnedSkins.Add(SkinID);
-            shopitems.SaveSkins();
-            Data.SaveStats();
             EquipButton.SetActive(true); gameObject.SetActive(false);
+            shopitems.SaveSkins();
+            UIStatus.LoadStatus();
+
 
         }
         else

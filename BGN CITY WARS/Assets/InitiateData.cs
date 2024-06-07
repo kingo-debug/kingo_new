@@ -8,62 +8,133 @@ using System.Collections.Generic;
 
 public class InitiateData : MonoBehaviour
 {
-    public int BGNCoins;
-    public int CurrentXP;
-    public int CurrentLevel;
-    public string ConvertedXP;
+
+   
+
+    [SerializeField]
+    private string DefaultSkinID = "SkinItem_322577"; // trev
+
+
+
     [Space(10)]
     [Header("Equipped Inventory")]
-    public string EquippedMelee;
-    public string EquippedBackup;
-    public string EquippedPrimary;
-    public string EquippedHeavy;
-
-
-    public Dictionary<string, string> Weaponinventory = new Dictionary<string, string>();
-
-
-
-    public string EquippedSkin;
-    [SerializeField]
-    private TextMeshProUGUI CoinsTextUI;
-
-    [SerializeField]
-    private TextMeshProUGUI CurrentLevelUI;
-
-    [SerializeField]
-    private TextMeshProUGUI ConvertedXPUi;
-
-    private void OnEnable()
-    {
-        PhotonNetwork.NickName = PlayerPrefs.GetString("UserStats_PlayerName");
-    }
+    public string DefaultMelee;
+    public string DefaultBackup;
+    public string DefaultPrimary;
+    public string DefaultHeavy;
 
     private void Awake()
     {
+    
         // data initiatation.
-        if (PlayerPrefs.GetInt("FirstTime") == 0)
+       if (ES3.Load<int>("FirstTime", 0) == 0)   //its like  public- int -FirstTime = 0
         {
+             Debug.Log("Welcome FirstTimer");
+              ES3.Save("FirstTime", 1);
+
+
+
+            #region Player Stats FirstTime
+            //SetUp New PlayerName
             int RandomNums = Random.Range(1000, 10000);
+           string DefaultName = "Player " + RandomNums.ToString();
+            ES3.Save("PlayerName", DefaultName);    //its like  public- int -FirstTime = 0 but dont need to give type  
+            Debug.Log(DefaultName+" assigned as Player Name for this New User.");
+            PhotonNetwork.NickName = DefaultName; // assign it to PhotonNetwork
 
-            //set all initiatated data.
-            #region Initiate UserStats
-            PlayerPrefs.SetString("UserStats_PlayerName", "Player" + RandomNums.ToString());
 
 
-            //ESsave for security
-            BGNCoins = 500;
-            ES3.Save("BgnCoins", BGNCoins);
-            // Default Skin Trev
-            EquippedSkin = ("SkinItem_322577");
 
+
+            // Setup new Player XP and level
+            int DefaultXP = 1;
+            int DefaultLVL = 1;
+            ES3.Save<int>("XP", DefaultXP);    //its like  public- int -FirstTime = 0 but dont need to give type  
+            ES3.Save<int>("LVL", DefaultLVL);    //its like  public- int -FirstTime = 0 but dont need to give type  
+            Debug.Log(DefaultXP + " Setup for new user XP");
+            Debug.Log(DefaultLVL + " Setup for new user LVL");
+
+
+
+
+            //Setup new Player  coins
+            int DefaultBGNCoins = 500;
+            ES3.Save<int>("BGNCoins", DefaultBGNCoins);
+            Debug.Log(DefaultBGNCoins + "SetUp for new User Starting Coins");
+
+
+            // Set Up new Player Default Skin        
+            ES3.Save<string>("CurrentSkin", DefaultSkinID);
+            Debug.Log(ES3.Load<string>("CurrentSkin") + "SetUp for new User as a default skin");
+
+            #endregion
+
+
+            #region Player Inventory FirstTime
+
+            ES3.Save<string>("MeleeEquip", DefaultMelee);
+            ES3.Save<string>("BackupEquip", DefaultBackup);
+            ES3.Save<string>("PrimaryEquip", DefaultPrimary);
+            ES3.Save<string>("HeavyEquip", DefaultHeavy);
+            #endregion
+        }
+        else
+        {
+            Debug.Log("Welcome Back");
+
+
+            #region Player Stats Load
+            //Retrieve PlayerName
+            int RandomNums = Random.Range(1000, 10000);
+            Debug.Log(ES3.Load<string>("PlayerName")+ "  was Retrieved From Saved File as User's Name");
+            PhotonNetwork.NickName = ES3.Load<string>("PlayerName"); // load it after file was modified like this
+
+
+            // retrieve Player Xp and lvl
+
+            Debug.Log(ES3.Load<int>("XP") + " was Retrieved From Saved File as Player XP");
+            Debug.Log(ES3.Load<int>("LVL") + " was   Retrieved From Saved File asPlayer  LVL");
+
+
+
+            //retrieve Coins
+            Debug.Log(ES3.Load<int>("BGNCoins") + " was  Retrieved From Saved File for User BGN Coins");
+            #endregion
+
+            // retrieve skin   
+            Debug.Log(ES3.Load<string>("CurrentSkin") + "  was Retrieved from file for default skin");
+
+
+
+            #region Player Inventory Load
 
 
             #endregion
 
-            #region GameSettings
-            //Audio
-            PlayerPrefs.SetFloat("Settings_Music Volume", 0.5f);
+        }
+        // {
+        //  
+
+        //set all initiatated data.
+        #region Initiate UserStats
+        //     PlayerPrefs.SetString("UserStats_PlayerName", "Player" + RandomNums.ToString());
+
+
+
+        // Default Skin Trev
+        //  EquippedSkin = ("SkinItem_322577");
+
+        //   ES3.Save("FirstTime", 1);
+        //  FirstTime = ES3.Load<int>("FirstTime");
+
+
+
+
+        #endregion
+
+        #region GameSettings
+        //Audio
+        PlayerPrefs.SetFloat("Settings_Music Volume", 0.5f);
             PlayerPrefs.SetFloat("Settings_SFX Volume", .75f);
 
             //Camera
@@ -74,79 +145,67 @@ public class InitiateData : MonoBehaviour
 
             #endregion
 
-            PlayerPrefs.SetInt("FirstTime", 1);
+         //   PlayerPrefs.SetInt("FirstTime", 1);
 
             #region NetWorking
             PhotonNetwork.NickName = PlayerPrefs.GetString("UserStats_PlayerName");
             #endregion
-        }
-        else
+    //    }
+     //   else
         // data retrieving.
-        {
-            #region Recieve UserStats
-            PlayerPrefs.SetString("UserStats_PlayerName", PlayerPrefs.GetString("UserStats_PlayerName"));
+    //    {
+         //   Debug.Log("Welcome Back");
+        //    #region Recieve UserStats
+          //  PlayerPrefs.SetString("UserStats_PlayerName", PlayerPrefs.GetString("UserStats_PlayerName"));
 
-            LoadStats();
+            //LoadStats();
 
-            #endregion
+           // #endregion
 
-            PlayerPrefs.SetInt("FirstTime", PlayerPrefs.GetInt("FirstTime"));
-        }
+
+      //  }
 
     }
     
 
  
-    public void SaveStats()
-    {
-        ES3.Save("BgnCoins", BGNCoins);
-        ES3.Save("CurrentLevel", CurrentLevel);
-        ES3.Save("CurrentXP", CurrentXP);
-        ES3.Save("Weaponinventory", Weaponinventory);
-        ES3.Save("EquippedSkin", EquippedSkin);
-        LoadStats();
+ //   public void SaveStats()
+ //   {
+    //    ES3.Save("BgnCoins", BGNCoins);
+    //    ES3.Save("CurrentLevel", CurrentLevel);
+   //     ES3.Save("CurrentXP", CurrentXP);
+    //    ES3.Save("Weaponinventory", Weaponinventory);
+    //    ES3.Save("EquippedSkin", EquippedSkin);
+     //   LoadStats();
 
-    }
+ //   }
 
-    public void LoadStats()
-    {
-        BGNCoins= ES3.Load("BgnCoins", BGNCoins);
-        CoinsTextUI.text = ES3.Load("BgnCoins", BGNCoins).ToString();
-
-
-        CurrentLevel = ES3.Load("CurrentLevel", CurrentLevel);
-        CurrentLevelUI.text = ES3.Load("CurrentLevel", CurrentLevel).ToString();
-        Weaponinventory = ES3.Load("Weaponinventory", Weaponinventory);
-
-     EquippedSkin = ES3.Load<string>("EquippedSkin");
-
-
-        #region load Inventory
-        EquippedMelee = Weaponinventory.GetValueOrDefault("Melee");
-        EquippedBackup = Weaponinventory.GetValueOrDefault("Backup");
-        EquippedPrimary = Weaponinventory.GetValueOrDefault("Primary");
-        EquippedHeavy = Weaponinventory.GetValueOrDefault("Heavy");
-        #endregion
+   // public void LoadStats()
+  //  {
+      //  BGNCoins= ES3.Load("BgnCoins", BGNCoins);
+      //  CoinsTextUI.text = ES3.Load("BgnCoins", BGNCoins).ToString();
 
 
 
-        #region XP
-        CurrentXP = ES3.Load("CurrentXP", CurrentXP);
-         ConvertedXP = CurrentXP.ToString() + "/" + (CurrentLevel * 99).ToString();
-        if(CurrentXP > CurrentLevel*99)
-        {
-            CurrentLevel++;
-            CurrentLevelUI.text = CurrentLevel.ToString();
-            CurrentXP = 0;
-            ConvertedXP = CurrentXP.ToString() + "/" + (CurrentLevel * 99).ToString();
+     //   Weaponinventory = ES3.Load("Weaponinventory", Weaponinventory);
 
-        }
+ //    EquippedSkin = ES3.Load<string>("EquippedSkin");
 
-        ConvertedXPUi.text = ConvertedXP;
+
+   //     #region load Inventory
+   //     EquippedMelee = Weaponinventory.GetValueOrDefault("Melee");
+ //       EquippedBackup = Weaponinventory.GetValueOrDefault("Backup");
+  //      EquippedPrimary = Weaponinventory.GetValueOrDefault("Primary");
+    //    EquippedHeavy = Weaponinventory.GetValueOrDefault("Heavy");
+    //    #endregion
+
+
+
+
     
-        #endregion
+  //      #endregion
 
 
-    }
+ //   }
 
 }

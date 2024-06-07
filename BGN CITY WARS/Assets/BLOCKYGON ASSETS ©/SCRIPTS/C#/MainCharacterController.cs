@@ -51,9 +51,12 @@ public class MainCharacterController : MonoBehaviour
     public bool Jumping = false;
     private float JumpTime = .32f;
     public float gravity = 9.8f;
+    [Space(3)]
+    [Header("Animation")]
     private Vector3 velocity;
     private Animator animator;
     private SpeedCheck speedcheck;
+    [SerializeField]
     private float SyncSpeed = 10f;
     private LookAtIK lookik;
     private AimIK aimik;
@@ -130,8 +133,8 @@ public class MainCharacterController : MonoBehaviour
         else
         {
             animator.SetFloat("PlayerVelocity", speedcheck.speed, 1, Time.deltaTime * 9);
-            animator.SetFloat("inputx", joystick.GetVector().x * SyncSpeed, 0.5f, Time.deltaTime * 5);
-            animator.SetFloat("inputY", joystick.GetVector().y * SyncSpeed, 0.5f, Time.deltaTime * 5);
+            animator.SetFloat("inputx", joystick.GetVector().x * SyncSpeed, 0.5f, Time.deltaTime * 1.15f);
+            animator.SetFloat("inputY", joystick.GetVector().y * SyncSpeed, 0.5f, Time.deltaTime * 1.15f);
             animator.SetFloat("inputMagnitude", new Vector2(animator.GetFloat("inputx"), animator.GetFloat("inputY")).magnitude);
 
         }

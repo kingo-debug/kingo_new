@@ -8,7 +8,6 @@ public class WeaponOwnershipCheck : MonoBehaviour
 
     private BuyWeapon Buy;
 
-    private InitiateData data;
     private OwnedShopItems shopitems;
     private EquipWeapon equip;
     private GameObject Equipped;
@@ -20,8 +19,7 @@ public class WeaponOwnershipCheck : MonoBehaviour
         Buy = transform.Find("STATE").transform.GetChild(0).gameObject.GetComponent<BuyWeapon>();
         equip = transform.Find("STATE").transform.GetChild(1).gameObject.GetComponent<EquipWeapon>();
         Equipped = transform.Find("STATE").transform.GetChild(2).gameObject;
-        data = GameObject.Find("ApplicationManager").GetComponent<InitiateData>();
-        shopitems = GameObject.Find("SHOP MENU").GetComponent<OwnedShopItems>();
+        shopitems = GameObject.Find("OWNED SHOP ITEMS").GetComponent<OwnedShopItems>();
         CheckOwnerShipAndEquip();
     }
 
@@ -48,10 +46,10 @@ public class WeaponOwnershipCheck : MonoBehaviour
             Owned = false;
         }
 
-        if (Buy.WeaponID == data.EquippedBackup ||
-       Buy.WeaponID == data.EquippedMelee ||
-       Buy.WeaponID == data.EquippedPrimary ||
-       Buy.WeaponID == data.EquippedHeavy && Owned==true)
+        if (Buy.WeaponID == shopitems.EquippedBackup ||
+       Buy.WeaponID == shopitems.EquippedMelee ||
+       Buy.WeaponID == shopitems.EquippedPrimary ||
+       Buy.WeaponID == shopitems.EquippedHeavy && Owned==true)
         {
            
                 

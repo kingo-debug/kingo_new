@@ -98,7 +98,6 @@ private AudioSource AS;
         AS.PlayOneShot(PickupSFX);  
         if(Player!=null)
         {
-           // Player.GetComponent<JetPackManager>().RestoreJetpackFuel();
             Player.GetPhotonView().RPC("RestoreJetpackFuel", RpcTarget.AllBufferedViaServer);
         }    
         PickedUp = true;
@@ -118,8 +117,6 @@ private AudioSource AS;
         transform.GetChild(0).gameObject.SetActive(true);
         currentTime = RespawnTime;
         Spawned = true;
-
-
     }
     void FindPlayer()
     {

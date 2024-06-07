@@ -5,7 +5,6 @@ using UnityEngine;
 public class BuyWeapon : MonoBehaviour
 {
 
-    private InitiateData Data;
     private OwnedShopItems shopitems;
     private GameObject BuySuccessMessage;
     private GameObject BuyFailedMessage;
@@ -27,9 +26,9 @@ public class BuyWeapon : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Data = GameObject.Find("ApplicationManager").GetComponent<InitiateData>();
+       
         AS = GameObject.Find("MENU SFX").GetComponent<AudioSource>();
-        shopitems = GameObject.Find("SHOP MENU").GetComponent<OwnedShopItems>();
+        shopitems = GameObject.Find("OWNED SHOP ITEMS").GetComponent<OwnedShopItems>();
         EquipButton = transform.parent.GetChild(1).gameObject;
         BuySuccessMessage = GameObject.Find("SHOP NOTIFICATION").transform.GetChild(0).gameObject;
         BuyFailedMessage = GameObject.Find("SHOP NOTIFICATION").transform.GetChild(1).gameObject;
@@ -39,15 +38,15 @@ public class BuyWeapon : MonoBehaviour
    public  void Buy()
     {
 
-        if (Data.BGNCoins >= Price && !shopitems.OwnedWeapons.Contains(WeaponID))
+        if (ES3.Load<int>("BGNCoins") >= Price && !shopitems.OwnedWeapons.Contains(WeaponID))
         {
             BuySuccessMessage.SetActive(true);
-            Data.BGNCoins -= Price;
+            int SubtractedPrice = ES3.Load<int>("BGNCoins") - +Price;
+            ES3.Save<int>("BGNCoins", SubtractedPrice);
             AS.PlayOneShot(BuySuccessSFX);
             shopitems.OwnedWeapons.Add(WeaponID);
-            shopitems.SaveWeapons();
-            Data.SaveStats();
             EquipButton.SetActive(true); gameObject.SetActive(false);
+            shopitems.SaveWeapons();
            
         }
         else
