@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using UnityEngine.UI;
 public class EquipHeavy : MonoBehaviour
 {
     private BuyWeapon buy;
@@ -37,7 +37,9 @@ public class EquipHeavy : MonoBehaviour
         #endregion
 
 
-
+        #region Selection Bar UI Icon
+        CategorySelectPFP.GetComponent<Image>().sprite = transform.parent.parent.Find("Weapon icon").GetComponent<Image>().sprite;
+        #endregion
 
     }
 }

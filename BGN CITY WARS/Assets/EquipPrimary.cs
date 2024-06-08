@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using UnityEngine.UI;
 public class EquipPrimary : MonoBehaviour
 {
     private BuyWeapon buy;
@@ -36,7 +36,9 @@ public class EquipPrimary : MonoBehaviour
         states.CurrentlyEquipped = transform.parent.GetChild(2).gameObject; // set new equip button
         #endregion
 
-
+        #region Selection Bar UI Icon
+        CategorySelectPFP.GetComponent<Image>().sprite = transform.parent.parent.Find("Weapon icon").GetComponent<Image>().sprite;
+        #endregion
 
 
     }
