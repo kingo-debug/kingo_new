@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using Photon.Pun;
 
 public class WeaponType : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class WeaponType : MonoBehaviour
     public int Weapontype;
     public int ReticleType;
     public bool Scope;
+    public bool Melee;
     private PlayerActionsVar actions;
     private Animator animator;
     private List<RectTransform> Reticles;
@@ -17,6 +19,13 @@ public class WeaponType : MonoBehaviour
     private SFXmanager sfxmanager;
 
 
+    private void Awake()
+    {
+        if( !GetComponent<PhotonView>().IsMine)
+        {
+            this.enabled = false;
+        }
+    }
 
     private void OnEnable()
     {
