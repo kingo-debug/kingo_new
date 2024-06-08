@@ -155,6 +155,10 @@ public class TakeDamage : MonoBehaviour
             Refreshbar.UpdateHP(HP);
             DieUi.SetActive(false);
 
+            if(!pv.IsMine)
+            {
+                GetComponent<DieEfX>().UnHide(); // reveal player after respawn from being hidden after death
+            }
             #endregion
 
         }

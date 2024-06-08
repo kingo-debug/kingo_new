@@ -11,7 +11,7 @@ public class DieEfX : MonoBehaviour
     private void Awake()
     {
         PhotonView PV = GetComponent<PhotonView>();
-        if(PV.IsMine)
+        if (PV.IsMine)
         {
             this.enabled = false;
         }
@@ -19,11 +19,18 @@ public class DieEfX : MonoBehaviour
     public void HideOut()
     {
 
-    foreach (GameObject item in ObjectsToHide)
-    {
+        foreach (GameObject item in ObjectsToHide)
+        {
             item.gameObject.SetActive(false);
-    }
-    
-    }
+        }
 
+    }
+    public void UnHide()
+    {
+
+        foreach (GameObject item in ObjectsToHide)
+        {
+            item.gameObject.SetActive(true);
+        }
+    }
 }
