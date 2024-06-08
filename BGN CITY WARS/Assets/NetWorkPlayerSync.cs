@@ -26,7 +26,7 @@ public class NetWorkPlayerSync : MonoBehaviour
         aimik = GetComponent<AimIK>();
         lookik = GetComponent<LookAtIK>();
         playerActions = GetComponent<PlayerActionsVar>();
-        Data = GameObject.Find("OWNED SHOP ITEMS").GetComponent<OwnedShopItems>();
+       // Data = GameObject.Find("OWNED SHOP ITEMS").GetComponent<OwnedShopItems>();
         skinManager = GetComponent<SkinManager>();
         Playercamera = transform.parent.transform.GetChild(1).GetChild(0).GetComponent<Camera>();
         Camera2 = transform.parent.transform.GetChild(1).GetChild(0).GetComponent<camera2>();
@@ -68,7 +68,7 @@ public class NetWorkPlayerSync : MonoBehaviour
         if (PV.IsMine)
         {
 
-            PunSerializer.SkinID = Data.EquippedSkin;
+            PunSerializer.SkinID = ES3.Load<string>("CurrentSkin");
             PunSerializer.InventoryTrack = playerActions.InventoryTrack;
             PunSerializer.CurrentWeaponType = playerActions.Weapontype;
             PunSerializer.Fired = playerActions.Fired;
