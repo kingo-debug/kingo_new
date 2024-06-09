@@ -25,7 +25,7 @@ public class SkinManager : MonoBehaviour
         if(PV.IsMine)
         {
 
-            SkinMesh.material =  Resources.Load<GameObject>(Path.Combine(("skins"), data.EquippedSkin)).GetComponent<SkinData>().SkinMaterial;
+            SkinMesh.material =  Resources.Load<GameObject>(Path.Combine(("skins"), ES3.Load<string>("CurrentSkin"))).GetComponent<SkinData>().SkinMaterial;
 
             EquippedSkin = data.EquippedSkin;
 
