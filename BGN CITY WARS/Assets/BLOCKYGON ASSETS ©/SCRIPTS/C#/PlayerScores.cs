@@ -40,13 +40,13 @@ public class PlayerScores : MonoBehaviourPunCallbacks, IPunObservable
         if (stream.IsWriting) // is Writing(CurrentPlayer)
         {
             stream.SendNext(TotalRoomKills);   //room kills Track
-            UpdateScoreData();
+        
 
         }
         else if (stream.IsReading) // is Reading(otherplayers)
         {          
             TotalRoomKills = (int)stream.ReceiveNext(); // total room kills      
-            UpdateScoreData();
+         
         }
 
     }
@@ -116,6 +116,7 @@ public class PlayerScores : MonoBehaviourPunCallbacks, IPunObservable
             NickName.text = PlayerOwner.GetComponent<PhotonSerializerBGN>().PlayerNickName;
 
             KillCount.text = TotalRoomKills.ToString();
+            gameObject.name = KillCount.text;
         }
   
 
