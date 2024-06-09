@@ -40,11 +40,13 @@ public class PlayerScores : MonoBehaviourPunCallbacks, IPunObservable
         if (stream.IsWriting) // is Writing(CurrentPlayer)
         {
             stream.SendNext(TotalRoomKills);   //room kills Track
+            UpdateScoreData();
 
         }
         else if (stream.IsReading) // is Reading(otherplayers)
         {          
             TotalRoomKills = (int)stream.ReceiveNext(); // total room kills      
+            UpdateScoreData();
         }
 
     }

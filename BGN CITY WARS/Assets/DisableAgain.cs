@@ -4,9 +4,14 @@ using UnityEngine;
 public class DisableAgain : MonoBehaviour
 {
     public float  Time=3f;
+
     private void OnEnable()
     {
-        Invoke("Deactivate", Time);
+        if(Time>0)
+        {
+            Invoke("Deactivate", Time);
+        }
+
     }
     void Deactivate()
     {
