@@ -13,6 +13,7 @@ public class UIOverHeadManager : MonoBehaviour
     public void UpdateUINameDisplay()
     {
         UINameDisplay.text = ES3.Load<string>("PlayerName");
+        PhotonNetwork.NickName = ES3.Load<string>("PlayerName");
     }
 
 
