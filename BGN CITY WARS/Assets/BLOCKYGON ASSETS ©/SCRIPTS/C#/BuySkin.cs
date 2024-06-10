@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class BuySkin : MonoBehaviour
 {
 
@@ -42,7 +40,8 @@ public class BuySkin : MonoBehaviour
 
         BuySuccessMessage = GameObject.Find("SHOP NOTIFICATION").transform.GetChild(0).gameObject;
         BuyFailedMessage = GameObject.Find("SHOP NOTIFICATION").transform.GetChild(1).gameObject;
-
+        TextMeshProUGUI PriceText = transform.GetChild(0).GetComponent<TextMeshProUGUI>();
+        PriceText.text = Price.ToString();
       
 
     }

@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class BuyWeapon : MonoBehaviour
@@ -34,6 +33,8 @@ public class BuyWeapon : MonoBehaviour
         BuySuccessMessage = GameObject.Find("SHOP NOTIFICATION").transform.GetChild(0).gameObject;
         BuyFailedMessage = GameObject.Find("SHOP NOTIFICATION").transform.GetChild(1).gameObject;
         UIStatus = GameObject.Find("quick info").GetComponent<StatusLoad>();
+        TextMeshProUGUI PriceText = transform.GetChild(0).GetComponent<TextMeshProUGUI>();
+        PriceText.text = Price.ToString();
 
     }
 
