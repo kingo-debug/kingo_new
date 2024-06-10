@@ -23,7 +23,7 @@ MonoBehaviour:
       Unity.VisualScripting.Core, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"EQUIPED
       SKIN","value":{"$content":[{"Key":{"$content":"Main","$type":"System.String"},"Value":{"$content":322577,"$type":"System.Int32"}}],"$type":"Unity.VisualScripting.AotDictionary"},"typeHandle":{"Identification":"Unity.VisualScripting.AotDictionary,
       Unity.VisualScripting.Core, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"Settings","value":{"$content":[{"Key":{"$content":"BG
-      Music","$type":"System.String"},"Value":{"$content":1,"$type":"System.Int32"}},{"Key":{"$content":"SFX","$type":"System.String"},"Value":{"$content":1,"$type":"System.Int32"}},{"Key":{"$content":"CAM
+      Music","$type":"System.String"},"Value":{"$content":25,"$type":"System.Int32"}},{"Key":{"$content":"SFX","$type":"System.String"},"Value":{"$content":1,"$type":"System.Int32"}},{"Key":{"$content":"CAM
       FOV","$type":"System.String"},"Value":{"$content":0.0,"$type":"System.Single"}},{"Key":{"$content":"Sens","$type":"System.String"},"Value":{"$content":0.6,"$type":"System.Single"}},{"Key":{"$content":"CamMode","$type":"System.String"},"Value":{"$content":0,"$type":"System.Int32"}},{"Key":{"$content":"Scope
       Sense","$type":"System.String"},"Value":{"$content":0.2,"$type":"System.Single"}}],"$type":"Unity.VisualScripting.AotDictionary"},"typeHandle":{"Identification":"Unity.VisualScripting.AotDictionary,
       Unity.VisualScripting.Core, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"USER
