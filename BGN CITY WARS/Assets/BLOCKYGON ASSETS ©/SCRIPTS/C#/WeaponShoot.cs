@@ -170,7 +170,9 @@ public class WeaponShoot : MonoBehaviour
         Parentvariables = PlayerParent.GetComponent<PlayerActionsVar>();
         Parentvariables.Fired = Fired;
         Parentanimator = PlayerParent.GetComponent<Animator>();
-        UpdateAmmoUI = PlayerParent.transform.Find("PLAYER Canvas").Find("WEAPON UI INFO").Find("AMMO").GetComponent<UpdateAmmoUI>();
+        if (UpdateAmmoUI == null)
+        { UpdateAmmoUI = PlayerParent.transform.Find("PLAYER Canvas").Find("WEAPON UI INFO").Find("AMMO").GetComponent<UpdateAmmoUI>(); }
+        
         UpdateAmmoUI.UpdateAmmoUIDisplay(currentclip, totalammo);
         swimcontrol = PlayerParent.GetComponent<SwimPlayerControl>();
 
