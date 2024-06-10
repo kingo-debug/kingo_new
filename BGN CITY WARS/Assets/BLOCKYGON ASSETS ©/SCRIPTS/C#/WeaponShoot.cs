@@ -170,6 +170,7 @@ public class WeaponShoot : MonoBehaviour
         Parentvariables = PlayerParent.GetComponent<PlayerActionsVar>();
         Parentvariables.Fired = Fired;
         Parentanimator = PlayerParent.GetComponent<Animator>();
+        UpdateAmmoUI = PlayerParent.transform.Find("PLAYER Canvas").Find("WEAPON UI INFO").Find("AMMO").GetComponent<UpdateAmmoUI>();
         UpdateAmmoUI.UpdateAmmoUIDisplay(currentclip, totalammo);
         swimcontrol = PlayerParent.GetComponent<SwimPlayerControl>();
 
@@ -186,7 +187,7 @@ public class WeaponShoot : MonoBehaviour
         DamageDelay = 0.25f;
         TargetHP = 100;
         currentclip = MaxClip;
-        totalammo = MaxAmmo;
+      //  totalammo = MaxAmmo; // fill ammo on start
         AmmoMessage = GameObject.Find("AMMO MESSAGE").GetComponent<TextMeshProUGUI>();
         Shootpoint = GameObject.FindGameObjectWithTag("ShootPoint").transform;
         CameraMain = Camera.main.gameObject;   pos = CameraMain.transform.GetChild(2);
@@ -196,7 +197,7 @@ public class WeaponShoot : MonoBehaviour
 
         Killcountupdate = GameObject.Find("KILL COUNT TEXT DISPLAY").GetComponent<UpdateKillDisplay>();
         ScoreItem = PlayerParent.GetComponent<PlayerActionsVar>().ScoreItemUI.gameObject.GetComponent<PlayerScores>();
-        UpdateAmmoUI = PlayerParent.transform.Find("PLAYER Canvas").Find("WEAPON UI INFO").Find("AMMO").GetComponent<UpdateAmmoUI>();
+
         mainCharacterController = PlayerParent.GetComponent<MainCharacterController>();
 
 
