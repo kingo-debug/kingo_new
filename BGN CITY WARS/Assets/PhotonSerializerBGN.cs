@@ -32,7 +32,8 @@ public class PhotonSerializerBGN : MonoBehaviourPunCallbacks,IPunObservable
     private void Start()
     {
         photonView = GetComponent<PhotonView>();
-        PlayerNickName = PhotonNetwork.NickName;
+        PlayerNickName = ES3.Load<string>("PlayerName");
+        PhotonNetwork.NickName = PlayerNickName;
     }
 
     

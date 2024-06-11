@@ -1,8 +1,6 @@
 using UnityEngine;
 using Photon.Pun;
-using TMPro;
-using System.Collections;
-using System.Collections.Generic;
+
 
 
 
@@ -77,6 +75,17 @@ public class InitiateData : MonoBehaviour
             ES3.Save<string>("PrimaryEquip", DefaultPrimary);
             ES3.Save<string>("HeavyEquip", DefaultHeavy);
             #endregion
+
+            #region UserSettings First Time
+            //audio
+            ES3.Save<int>("Music",50);
+            ES3.Save<int>("SFX", 100);
+            //Sensetivity
+            ES3.Save<float>("GeneralSense", 0.6f);
+            ES3.Save<float>("ScopeSense", 0.6f);
+            //CamMode
+            ES3.Save<int>("CameraMode", 0);
+            #endregion
         }
         else
         {
@@ -104,108 +113,8 @@ public class InitiateData : MonoBehaviour
             // retrieve skin   
             Debug.Log(ES3.Load<string>("CurrentSkin") + "  was Retrieved from file for default skin");
 
-
-
-            #region Player Inventory Load
-
-
-            #endregion
-
         }
-        // {
-        //  
-
-        //set all initiatated data.
-        #region Initiate UserStats
-        //     PlayerPrefs.SetString("UserStats_PlayerName", "Player" + RandomNums.ToString());
-
-
-
-        // Default Skin Trev
-        //  EquippedSkin = ("SkinItem_322577");
-
-        //   ES3.Save("FirstTime", 1);
-        //  FirstTime = ES3.Load<int>("FirstTime");
-
-
-
-
-        #endregion
-
-        #region GameSettings
-        //Audio
-        PlayerPrefs.SetFloat("Settings_Music Volume", 0.5f);
-            PlayerPrefs.SetFloat("Settings_SFX Volume", .75f);
-
-            //Camera
-            PlayerPrefs.SetInt("Settings_CamMode", 0);
-            PlayerPrefs.SetFloat("Settings_GeneralSens", 0.25f);
-            PlayerPrefs.SetFloat("Settings_ScopeSens", 0.15f);
-
-
-            #endregion
-
-         //   PlayerPrefs.SetInt("FirstTime", 1);
-
-            #region NetWorking
-            PhotonNetwork.NickName = PlayerPrefs.GetString("UserStats_PlayerName");
-            #endregion
-    //    }
-     //   else
-        // data retrieving.
-    //    {
-         //   Debug.Log("Welcome Back");
-        //    #region Recieve UserStats
-          //  PlayerPrefs.SetString("UserStats_PlayerName", PlayerPrefs.GetString("UserStats_PlayerName"));
-
-            //LoadStats();
-
-           // #endregion
-
-
-      //  }
-
+       
     }
     
-
- 
- //   public void SaveStats()
- //   {
-    //    ES3.Save("BgnCoins", BGNCoins);
-    //    ES3.Save("CurrentLevel", CurrentLevel);
-   //     ES3.Save("CurrentXP", CurrentXP);
-    //    ES3.Save("Weaponinventory", Weaponinventory);
-    //    ES3.Save("EquippedSkin", EquippedSkin);
-     //   LoadStats();
-
- //   }
-
-   // public void LoadStats()
-  //  {
-      //  BGNCoins= ES3.Load("BgnCoins", BGNCoins);
-      //  CoinsTextUI.text = ES3.Load("BgnCoins", BGNCoins).ToString();
-
-
-
-     //   Weaponinventory = ES3.Load("Weaponinventory", Weaponinventory);
-
- //    EquippedSkin = ES3.Load<string>("EquippedSkin");
-
-
-   //     #region load Inventory
-   //     EquippedMelee = Weaponinventory.GetValueOrDefault("Melee");
- //       EquippedBackup = Weaponinventory.GetValueOrDefault("Backup");
-  //      EquippedPrimary = Weaponinventory.GetValueOrDefault("Primary");
-    //    EquippedHeavy = Weaponinventory.GetValueOrDefault("Heavy");
-    //    #endregion
-
-
-
-
-    
-  //      #endregion
-
-
- //   }
-
-}
+ }
