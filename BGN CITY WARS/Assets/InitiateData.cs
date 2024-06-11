@@ -78,8 +78,8 @@ public class InitiateData : MonoBehaviour
 
             #region UserSettings First Time
             //audio
-            ES3.Save<int>("Music",50);
-            ES3.Save<int>("SFX", 100);
+            ES3.Save<float>("Music",50);
+            ES3.Save<float>("SFX", 100);
             //Sensetivity
             ES3.Save<float>("GeneralSense", 0.6f);
             ES3.Save<float>("ScopeSense", 0.6f);
