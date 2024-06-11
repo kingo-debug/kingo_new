@@ -17,20 +17,14 @@ public class GameSettings : MonoBehaviour
     void Start()
     {
     
-
-
         GeneralSense.value = ES3.Load<float>("GeneralSense");
         ScopeSens.value = ES3.Load<float>("ScopeSense");
 
         Music.value = ES3.Load<float>("Music");
         SFX.value = ES3.Load<float>("SFX");
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void OnGeneralSenseChange()
     {
