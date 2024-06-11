@@ -59,7 +59,7 @@ public class WeaponType : MonoBehaviour
         Invoke("UpdateReticle", 0.1f);
         sfxmanager = transform.root.transform.GetChild(0).GetComponent<SFXmanager>();
 
-
+        GetComponent<AudioSource>().volume =ES3.Load<float>("SFX"); ;
 
     }
 

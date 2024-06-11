@@ -9,19 +9,21 @@ public class GameSettings : MonoBehaviour
     Slider  ScopeSens;
 
     [SerializeField]
-    Slider Music;
+    Slider MusicSlider;
     [SerializeField]
-    Slider SFX;
-
-
+    Slider SFXSlider;
+    [SerializeField]
+    private AudioSource MusicAS;
+    [SerializeField]
+    private AudioSource SFXAS;
     void Start()
     {
     
         GeneralSense.value = ES3.Load<float>("GeneralSense");
         ScopeSens.value = ES3.Load<float>("ScopeSense");
 
-        Music.value = ES3.Load<float>("Music");
-        SFX.value = ES3.Load<float>("SFX");
+        MusicSlider.value = ES3.Load<float>("Music");
+        SFXSlider.value = ES3.Load<float>("SFX");
 
     }
 
@@ -56,23 +58,28 @@ public class GameSettings : MonoBehaviour
     public void OnMusicValueChange()
     {
 
-        ES3.Save<float>("Music", Music.value);
+        ES3.Save<float>("Music", MusicSlider.value);
         float convertedValue = ES3.Load<float>("Music") * 100;
         int integerValue = (int)convertedValue;
 
-        Music.transform.GetChild(2).GetComponent<Text>().text = integerValue.ToString();
+        MusicSlider.transform.GetChild(2).GetComponent<Text>().text = integerValue.ToString();
+
+        MusicAS.volume = ES3.Load<float>("Music"); // update Music volume
+
+
 
     }
 
     public void OnSFXValueChange()
     {
 
-        ES3.Save<float>("SFX", SFX.value);
+        ES3.Save<float>("SFX", SFXSlider.value);
         float convertedValue = ES3.Load<float>("SFX") * 100;
         int integerValue = (int)convertedValue;
 
-        SFX.transform.GetChild(2).GetComponent<Text>().text = integerValue.ToString();
+        SFXSlider.transform.GetChild(2).GetComponent<Text>().text = integerValue.ToString();
 
+        SFXAS.volume = ES3.Load<float>("SFX"); // update SFX volume
     }
 
 }

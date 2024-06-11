@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 
@@ -28,6 +26,7 @@ public class SFXmanager : MonoBehaviour
     {
         AS = this.GetComponent<AudioSource>();
         PV = this.GetComponent<PhotonView>();
+        AS.volume = ES3.Load<float>("SFX");
 
 
         #region SpatialBlend Specify
