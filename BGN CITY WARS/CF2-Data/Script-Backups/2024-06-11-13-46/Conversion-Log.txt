@@ -1,0 +1,11 @@
+Converting script [1 / 1]	[\MainCameraController.cs]
+	Fragments : 2
+		[ 0] : Line:   32	InputMethod   GetAxis             	("Mouse X")
+		[ 1] : Line:   33	InputMethod   GetAxis             	("Mouse Y")
+
+
+1 scripts modified!
+Overwriting actual scripts...
+	[0 / 1] from  [D:/projects/kingo_new/BGN CITY WARS/CF2-Data/Script-Backups/2024-06-11-13-46\Assets-After/\MainCameraController.cs] to [D:/projects/kingo_new/BGN CITY WARS/Assets/\MainCameraController.cs]
+
+Overwriting COMPLETED!

@@ -1,12 +1,9 @@
-﻿
-using Invector;
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
-
 
 public class camera2 : MonoBehaviour
 {
-    #region inspector properties    
+    #region Inspector Properties
 
     public Transform target;
     [Tooltip("Lerp speed between Camera States")]
@@ -25,15 +22,18 @@ public class camera2 : MonoBehaviour
     public float yMinLimit = -40f;
     public float yMaxLimit = 80f;
 
-    // New properties for touch input
-    [Tooltip("Touch rotation sensitivity on the X-axis")]
-    public float touchXSensitivity = 3f;
-    [Tooltip("Touch rotation sensitivity on the Y-axis")]
-    public float touchYSensitivity = 3f;
+    [Tooltip("Spread factor for the culling rays")]
+    public float raySpread = 1f;
+
+    [Tooltip("Maximum distance for the culling rays")]
+    public float rayDistance = 3f;
+
+    [Tooltip("Speed of smooth culling transitions")]
+    public float cullingSmoothSpeed = 5f;
 
     #endregion
 
-    #region hide properties    
+    #region Hide Properties
 
     [HideInInspector]
     public int indexList, indexLookPoint;
@@ -41,7 +41,7 @@ public class camera2 : MonoBehaviour
     public float offSetPlayerPivot;
     [HideInInspector]
     public string currentStateName;
-    //  [HideInInspector]
+    [HideInInspector]
     public Transform currentTarget;
     [HideInInspector]
     public Vector2 movementSpeed;
@@ -49,23 +49,21 @@ public class camera2 : MonoBehaviour
     public Transform targetLookAt;
 
     private Vector3 currentTargetPos;
-
-
     private Vector3 current_cPos;
-
     private Vector3 desired_cPos;
     private Camera _camera;
 
-    private float distance = 5f;
-    private float mouseY = 0f;
-    private float mouseX = 0f;
+    private float distance;
+    private float targetDistance;
+    private float mouseY;
+    private float mouseX;
 
     private float currentHeight;
+    private float targetHeight;
     public float cullingDistance;
     [SerializeField]
     private float checkHeightRadius = 0.4f;
 
-    private float clipPlaneMargin = 0f;
     private float forward = -1f;
     [SerializeField]
     private float xMinLimit = -360f;
@@ -78,10 +76,7 @@ public class camera2 : MonoBehaviour
 
     #endregion
 
-
-    private bool isShaking = false;
-    public float shakeAmount = 0.0f;
-    private Vector3 originalPosition;
+    #region Unity Methods
 
     void Start()
     {
@@ -90,6 +85,24 @@ public class camera2 : MonoBehaviour
         xMouseSensitivity = ES3.Load<float>("GeneralSense");
         yMouseSensitivity = ES3.Load<float>("GeneralSense");
     }
+
+    void LateUpdate()
+    {
+        if (target == null || targetLookAt == null) return;
+
+        CameraMovement();
+    }
+
+    void OnDrawGizmos()
+    {
+        if (currentTarget == null || !Application.isPlaying) return;
+
+        DrawCullingRays();
+    }
+
+    #endregion
+
+    #region Initialization
 
     public void Init()
     {
@@ -109,37 +122,15 @@ public class camera2 : MonoBehaviour
         mouseX = currentTarget.eulerAngles.y;
 
         distance = defaultDistance;
+        targetDistance = defaultDistance;
         currentHeight = height;
+        targetHeight = height;
     }
 
-    void LateUpdate()
-    {
-        if (target == null || targetLookAt == null) return;
+    #endregion
 
-        if (Application.isMobilePlatform)
-        {
-            //HandleTouchInput();
-        }
-        else
-        {
-           // HandleMouseInput();
-          // HandleTouchInput();
-        }
+    #region Camera Control
 
-        CameraMovement();
-        // Apply camera shake
-        if (isShaking)
-        {
-            Vector3 randomShake = Random.insideUnitSphere * shakeAmount;
-            transform.position = originalPosition + randomShake;
-        }
-    }
-
-
-    /// <summary>
-    /// Set the target for the camera
-    /// </summary>
-    /// <param name="New cursorObject"></param>
     public void SetTarget(Transform newTarget)
     {
         currentTarget = newTarget ? newTarget : target;
@@ -154,24 +145,13 @@ public class camera2 : MonoBehaviour
         Init();
     }
 
-    /// <summary>    
-    /// Convert a point in the screen in a Ray for the world
-    /// </summary>
-    /// <param name="Point"></param>
-    /// <returns></returns>
     public Ray ScreenPointToRay(Vector3 Point)
     {
         return this.GetComponent<Camera>().ScreenPointToRay(Point);
     }
 
-    /// <summary>
-    /// Camera Rotation behaviour
-    /// </summary>
-    /// <param name="x"></param>
-    /// <param name="y"></param>
     public void RotateCamera(float x, float y)
     {
-        // free rotation 
         mouseX += x * xMouseSensitivity;
         mouseY -= y * yMouseSensitivity;
 
@@ -179,8 +159,8 @@ public class camera2 : MonoBehaviour
         movementSpeed.y = -y;
         if (!lockCamera)
         {
-            mouseY = vExtensions.ClampAngle(mouseY, yMinLimit, yMaxLimit);
-            mouseX = vExtensions.ClampAngle(mouseX, xMinLimit, xMaxLimit);
+            mouseY = ClampAngle(mouseY, yMinLimit, yMaxLimit);
+            mouseX = ClampAngle(mouseX, xMinLimit, xMaxLimit);
         }
         else
         {
@@ -189,18 +169,16 @@ public class camera2 : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Camera behaviour
-    /// </summary>    
     void CameraMovement()
     {
         if (currentTarget == null)
             return;
 
-        distance = Mathf.Lerp(distance, defaultDistance, smoothFollow * Time.deltaTime);
-        cullingDistance = Mathf.Lerp(cullingDistance, distance, Time.deltaTime);
-        var camDir = (forward * targetLookAt.forward) + (rightOffset * targetLookAt.right);
+        targetDistance = defaultDistance;
+        targetHeight = height;
 
+        cullingDistance = Mathf.Lerp(cullingDistance, targetDistance, smoothFollow * Time.deltaTime);
+        var camDir = (forward * targetLookAt.forward) + (rightOffset * targetLookAt.right);
         camDir = camDir.normalized;
 
         var targetPos = new Vector3(currentTarget.position.x, currentTarget.position.y + offSetPlayerPivot, currentTarget.position.z);
@@ -209,10 +187,6 @@ public class camera2 : MonoBehaviour
         current_cPos = currentTargetPos + new Vector3(0, currentHeight, 0);
         RaycastHit hitInfo;
 
-        ClipPlanePoints planePoints = _camera.NearClipPlanePoints(current_cPos + (camDir * (distance)), clipPlaneMargin);
-        ClipPlanePoints oldPoints = _camera.NearClipPlanePoints(desired_cPos + (camDir * distance), clipPlaneMargin);
-
-        //Check if Height is not blocked 
         if (Physics.SphereCast(targetPos, checkHeightRadius, Vector3.up, out hitInfo, cullingHeight + 0.2f, cullingLayer))
         {
             var t = hitInfo.distance - 0.2f;
@@ -221,32 +195,21 @@ public class camera2 : MonoBehaviour
             cullingHeight = Mathf.Lerp(height, cullingHeight, Mathf.Clamp(t, 0.0f, 1.0f));
         }
 
-        //Check if desired target position is not blocked       
-        if (CullingRayCast(desired_cPos, oldPoints, out hitInfo, distance + 0.2f, cullingLayer, Color.blue))
+        if (AnyCullingRayCast(current_cPos, camDir, out hitInfo, rayDistance, cullingLayer))
         {
-            distance = hitInfo.distance - 0.2f;
-            if (distance < defaultDistance)
+            targetDistance = hitInfo.distance - 0.2f;
+            if (targetDistance < defaultDistance)
             {
                 var t = hitInfo.distance;
                 t -= cullingMinDist;
                 t /= cullingMinDist;
-                currentHeight = Mathf.Lerp(cullingHeight, height, Mathf.Clamp(t, 0.0f, 1.0f));
-                current_cPos = currentTargetPos + new Vector3(0, currentHeight, 0);
+                targetHeight = Mathf.Lerp(cullingHeight, height, Mathf.Clamp(t, 0.0f, 1.0f));
+                current_cPos = currentTargetPos + new Vector3(0, targetHeight, 0);
             }
         }
-        else
-        {
-            currentHeight = height;
-        }
-        //Check if target position with culling height applied is not blocked
-        if (CullingRayCast(current_cPos, planePoints, out hitInfo, distance, cullingLayer, Color.cyan)) distance = Mathf.Clamp(cullingDistance, 0.0f, defaultDistance);
 
-        // Apply camera shake
-        if (isShaking)
-        {
-            Vector3 randomShake = Random.insideUnitSphere * shakeAmount;
-            current_cPos += randomShake;
-        }
+        distance = Mathf.Lerp(distance, targetDistance, Time.deltaTime * cullingSmoothSpeed);
+        currentHeight = Mathf.Lerp(currentHeight, targetHeight, Time.deltaTime * cullingSmoothSpeed);
 
         var lookPoint = current_cPos + targetLookAt.forward * 2f;
         lookPoint += (targetLookAt.right * Vector3.Dot(camDir * (distance), targetLookAt.right));
@@ -260,74 +223,85 @@ public class camera2 : MonoBehaviour
         transform.rotation = rotation;
         movementSpeed = Vector2.zero;
     }
-  
 
-    /// <summary>
-    /// Custom Raycast using NearClipPlanesPoints
-    /// </summary>
-    /// <param name="_to"></param>
-    /// <param name="from"></param>
-    /// <param name="hitInfo"></param>
-    /// <param name="distance"></param>
-    /// <param name="cullingLayer"></param>
-    /// <returns></returns>
-    bool CullingRayCast(Vector3 from, ClipPlanePoints _to, out RaycastHit hitInfo, float distance, LayerMask cullingLayer, Color color)
+    bool AnyCullingRayCast(Vector3 from, Vector3 camDir, out RaycastHit hitInfo, float maxDistance, LayerMask cullingLayer)
     {
         bool value = false;
+        hitInfo = new RaycastHit();
+        RaycastHit tempHitInfo;
 
-        if (Physics.Raycast(from, _to.LowerLeft - from, out hitInfo, distance, cullingLayer))
+        Vector3[] directions = new Vector3[]
         {
-            value = true;
-            cullingDistance = hitInfo.distance;
+            camDir,
+            camDir + (transform.up * raySpread),
+            camDir - (transform.up * raySpread),
+            camDir + (transform.right * raySpread),
+            camDir - (transform.right * raySpread)
+        };
+
+        float closestDistance = maxDistance;
+        bool anyHit = false;
+
+        foreach (var direction in directions)
+        {
+            if (Physics.Raycast(from, direction, out tempHitInfo, maxDistance, cullingLayer))
+            {
+                anyHit = true;
+                if (tempHitInfo.distance < closestDistance)
+                {
+                    hitInfo = tempHitInfo;
+                    closestDistance = tempHitInfo.distance;
+                }
+            }
         }
 
-        if (Physics.Raycast(from, _to.LowerRight - from, out hitInfo, distance, cullingLayer))
+        if (anyHit)
         {
             value = true;
-            if (cullingDistance > hitInfo.distance) cullingDistance = hitInfo.distance;
+            cullingDistance = closestDistance;
         }
 
-        if (Physics.Raycast(from, _to.UpperLeft - from, out hitInfo, distance, cullingLayer))
-        {
-            value = true;
-            if (cullingDistance > hitInfo.distance) cullingDistance = hitInfo.distance;
-        }
-
-        if (Physics.Raycast(from, _to.UpperRight - from, out hitInfo, distance, cullingLayer))
-        {
-            value = true;
-            if (cullingDistance > hitInfo.distance) cullingDistance = hitInfo.distance;
-        }
-
-        return hitInfo.collider && value;
+        return value;
     }
 
-
-
-    // New method to start camera shake
-    public void StartCameraShake(float amount, float duration)
+    void DrawCullingRays()
     {
-        isShaking = true;
-        shakeAmount = amount;
-        originalPosition = transform.position;
+        Vector3[] directions = new Vector3[]
+        {
+            transform.forward * rayDistance,
+            (transform.forward + transform.up * raySpread) * rayDistance,
+            (transform.forward - transform.up * raySpread) * rayDistance,
+            (transform.forward + transform.right * raySpread) * rayDistance,
+            (transform.forward - transform.right * raySpread) * rayDistance
+        };
 
-        // Stop shaking after the specified duration
-        StartCoroutine(StopCameraShake(duration));
+        Gizmos.color = Color.red;
+
+        foreach (var direction in directions)
+        {
+            Gizmos.DrawLine(transform.position, transform.position + direction);
+        }
+
+        Gizmos.color = Color.yellow;
+
+        foreach (var direction in directions)
+        {
+            Gizmos.DrawSphere(transform.position + direction, 0.1f);
+        }
     }
 
-    // Coroutine to stop camera shake after a specified duration
-    private IEnumerator StopCameraShake(float duration)
+    #endregion
+
+    #region Helper Methods
+
+    private float ClampAngle(float angle, float min, float max)
     {
-        yield return new WaitForSeconds(duration);
-        isShaking = false;
-        transform.position = originalPosition;
+        if (angle < -360F)
+            angle += 360F;
+        if (angle > 360F)
+            angle -= 360F;
+        return Mathf.Clamp(angle, min, max);
     }
 
-
-
-
-
-
-
-
+    #endregion
 }
