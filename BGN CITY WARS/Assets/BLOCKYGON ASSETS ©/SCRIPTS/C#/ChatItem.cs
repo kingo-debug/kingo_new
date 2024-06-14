@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 using Photon.Pun;
 
@@ -9,15 +6,15 @@ public class ChatItem : MonoBehaviour,IPunObservable
 {
     [SerializeField]
     private TextMeshProUGUI txt;
-    PhotonView PV;
-    bool Set;
+    private  PhotonView PV;
+    private  bool Set;
 
     private void Start()
     {
-        PV = this.GetComponent<PhotonView>();
+        PV = GetComponent<PhotonView>();
         if(transform.parent==null)
         {
-            transform.parent =  GameObject.Find("MESSAGE ITEMS").transform;
+            transform.parent = GameObject.Find("ROOM DATA").transform.GetChild(1).transform.GetChild(6).transform.GetChild(0).transform.GetChild(0);
         }
         
      
