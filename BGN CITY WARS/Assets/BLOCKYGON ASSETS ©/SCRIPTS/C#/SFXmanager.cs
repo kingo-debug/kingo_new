@@ -22,6 +22,9 @@ public class SFXmanager : MonoBehaviour
     [SerializeField]
     private AudioClip RollSFX;
 
+
+    public AudioClip NewMessageItem;
+
     private void Start()
     {
         AS = this.GetComponent<AudioSource>();
@@ -126,6 +129,13 @@ public class SFXmanager : MonoBehaviour
         AS.PlayOneShot(RollSFX);
     }
         #endregion
+
+
+    [PunRPC]
+    public void PlayMessageNotification()
+    {
+        AS.PlayOneShot(NewMessageItem);
+    }
     }
 
 

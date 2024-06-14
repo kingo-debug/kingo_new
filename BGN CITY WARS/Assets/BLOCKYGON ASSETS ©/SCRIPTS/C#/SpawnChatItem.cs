@@ -14,6 +14,8 @@ public class SpawnChatItem : MonoBehaviour
 
     private PhotonView PV;
     private GameObject MessageItem;
+    [SerializeField]
+    private GameObject Messagesfx;
 
     private void Start()
     {
@@ -30,6 +32,30 @@ public class SpawnChatItem : MonoBehaviour
                 PV.RPC("SetTXTmessage", RpcTarget.AllBuffered);
             }
             #endregion
+            #region Alert All Players
+            if(Messagesfx.GetComponent<Toggle>().isOn)
+            {
+                // Find all GameObjects with the tag "Player"
+                GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+
+                // Iterate through each player and get their PhotonView component
+                foreach (GameObject player in players)
+                {
+                    PhotonView photonView = player.GetComponent<PhotonView>();
+
+                    if (photonView != null)
+                    {
+                        photonView.RPC("PlayMessageNotification", RpcTarget.Others);
+                    }
+                    else
+                    {
+                        Debug.LogWarning("No PhotonView found on: " + player.name);
+                    }
+                }
+            }
+        
+            #endregion
+
         }
 
         else  Debug.Log("MessageTooShort");
