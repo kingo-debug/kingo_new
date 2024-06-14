@@ -89,6 +89,7 @@ GameObject:
   - component: {fileID: 3436974445031883393}
   - component: {fileID: 1949080143102076487}
   - component: {fileID: 2555517484299405749}
+  - component: {fileID: 4898737570392611359}
   m_Layer: 0
   m_Name: MESSAGE ITEM_
   m_TagString: Untagged
@@ -178,7 +179,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 0c223fe308700e446920720eb8f7f75f, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.664
   m_Pitch: 0.87
   Loop: 0
@@ -284,6 +285,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4898737570392611359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3349734642257677432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0aa97e9ba54c6949a6d2b5585580aad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CanPlay: 0
+  ChatSound: {fileID: 8300000, guid: 0c223fe308700e446920720eb8f7f75f, type: 3}
 --- !u!1 &5695707028457774286
 GameObject:
   m_ObjectHideFlags: 0
