@@ -297,7 +297,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0aa97e9ba54c6949a6d2b5585580aad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CanPlay: 0
   ChatSound: {fileID: 8300000, guid: 0c223fe308700e446920720eb8f7f75f, type: 3}
 --- !u!1 &5695707028457774286
 GameObject:
