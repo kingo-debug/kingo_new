@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using TMPro;
@@ -23,13 +21,19 @@ public class SpawnChatItem : MonoBehaviour
     }
     public void SpawnChat()
     {
-       MessageItem =  PhotonNetwork.Instantiate("MESSAGE ITEM_", transform.position, transform.rotation);
-      MessageItem.transform.parent = ParentItem;
-        #region SetTXTmessage
+        if (Inputfield.GetComponent<TMP_InputField>().text.Length > 0)
         {
-            PV.RPC("SetTXTmessage", RpcTarget.AllBuffered);
+            MessageItem = PhotonNetwork.Instantiate("MESSAGE ITEM_", transform.position, transform.rotation);
+            MessageItem.transform.parent = ParentItem;
+            #region SetTXTmessage
+            {
+                PV.RPC("SetTXTmessage", RpcTarget.AllBuffered);
+            }
+            #endregion
         }
-        #endregion
+
+        else  Debug.Log("MessageTooShort");
+
     }
     [PunRPC]
     public void SetTXTmessage()
