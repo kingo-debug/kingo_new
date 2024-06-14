@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CamModes : MonoBehaviour
@@ -13,19 +11,15 @@ public class CamModes : MonoBehaviour
 
     [SerializeField]
     private float CombatDistance = 2f;
-    [SerializeField]
-    private float CombatRightOffset = 0.4f;
-    [SerializeField]
-    private float CombatHeight = 1.2f;
+
+
 
 
 
     [SerializeField]
     private float FreeDistance = 3f;
-    [SerializeField]
-    private float FreeRightOffset = 0.2f;
-    [SerializeField]
-    private float FreeHeight = 1.2f;
+
+
 
 
     public float AMC = 21;
@@ -61,9 +55,8 @@ public class CamModes : MonoBehaviour
 
             {
 
-                camcontroller.defaultDistance = Mathf.Lerp(camcontroller.defaultDistance,CombatDistance, Time.deltaTime * smoothness);
-                camcontroller.rightOffset = Mathf.Lerp(camcontroller.rightOffset, CombatRightOffset, Time.deltaTime * smoothness);
-                camcontroller.height = Mathf.Lerp(camcontroller.height, CombatHeight, Time.deltaTime * smoothness);
+                camcontroller.zOffset = Mathf.Lerp(camcontroller.zOffset, CombatDistance, Time.deltaTime * smoothness);
+         
             }
 
             if (vars.IsAiming && ! scopemanager.CanScope) // hipsfire mode//
@@ -80,9 +73,8 @@ public class CamModes : MonoBehaviour
             {
                 Camera.fieldOfView = Mathf.SmoothDamp(Camera.fieldOfView, FMC, ref currentspeedFMC, Time.deltaTime * smoothness);
                 
-                camcontroller.defaultDistance = Mathf.Lerp(camcontroller.defaultDistance, FreeDistance, Time.deltaTime * smoothness);
-                camcontroller.rightOffset = Mathf.Lerp(camcontroller.rightOffset, FreeRightOffset, Time.deltaTime * smoothness);
-                camcontroller.height = Mathf.Lerp(camcontroller.height, FreeHeight, Time.deltaTime * smoothness);
+                camcontroller.zOffset = Mathf.Lerp(camcontroller.zOffset, FreeDistance, Time.deltaTime * smoothness);
+
 
 
             }
