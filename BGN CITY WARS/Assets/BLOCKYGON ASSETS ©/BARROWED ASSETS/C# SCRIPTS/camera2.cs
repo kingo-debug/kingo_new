@@ -13,6 +13,9 @@ public class camera2 : MonoBehaviour
     [Tooltip("Debug purposes, lock the camera behind the character for better align the states")]
     public bool lockCamera;
 
+    public float zOffset = 0f; // Local Z offset
+
+
     public float rightOffset = 0f;
     public float defaultDistance = 2.5f;
     public float height = 1.4f;
@@ -185,6 +188,10 @@ public class camera2 : MonoBehaviour
         currentTargetPos = targetPos;
         desired_cPos = targetPos + new Vector3(0, height, 0);
         current_cPos = currentTargetPos + new Vector3(0, currentHeight, 0);
+
+        // Adjusted for Z offset
+        Vector3 adjusted_cPos = current_cPos + (targetLookAt.forward * -zOffset);
+
         RaycastHit hitInfo;
 
         if (Physics.SphereCast(targetPos, checkHeightRadius, Vector3.up, out hitInfo, cullingHeight + 0.2f, cullingLayer))
@@ -195,7 +202,7 @@ public class camera2 : MonoBehaviour
             cullingHeight = Mathf.Lerp(height, cullingHeight, Mathf.Clamp(t, 0.0f, 1.0f));
         }
 
-        if (AnyCullingRayCast(current_cPos, camDir, out hitInfo, rayDistance, cullingLayer))
+        if (AnyCullingRayCast(adjusted_cPos, camDir, out hitInfo, rayDistance, cullingLayer))
         {
             targetDistance = hitInfo.distance - 0.2f;
             if (targetDistance < defaultDistance)
@@ -204,25 +211,28 @@ public class camera2 : MonoBehaviour
                 t -= cullingMinDist;
                 t /= cullingMinDist;
                 targetHeight = Mathf.Lerp(cullingHeight, height, Mathf.Clamp(t, 0.0f, 1.0f));
-                current_cPos = currentTargetPos + new Vector3(0, targetHeight, 0);
+                adjusted_cPos = currentTargetPos + new Vector3(0, targetHeight, 0) + (targetLookAt.forward * -zOffset); // Adjusted for Z offset
             }
         }
 
         distance = Mathf.Lerp(distance, targetDistance, Time.deltaTime * cullingSmoothSpeed);
         currentHeight = Mathf.Lerp(currentHeight, targetHeight, Time.deltaTime * cullingSmoothSpeed);
 
-        var lookPoint = current_cPos + targetLookAt.forward * 2f;
+        var lookPoint = adjusted_cPos + targetLookAt.forward * 2f;
         lookPoint += (targetLookAt.right * Vector3.Dot(camDir * (distance), targetLookAt.right));
-        targetLookAt.position = current_cPos;
+        targetLookAt.position = adjusted_cPos;
 
         Quaternion newRot = Quaternion.Euler(mouseY, mouseX, 0);
         targetLookAt.rotation = Quaternion.Slerp(targetLookAt.rotation, newRot, smoothCameraRotation * Time.deltaTime);
-        transform.position = current_cPos + (camDir * (distance));
+        transform.position = adjusted_cPos + (camDir * distance); // Adjusted for Z offset
         var rotation = Quaternion.LookRotation((lookPoint) - transform.position);
 
         transform.rotation = rotation;
         movementSpeed = Vector2.zero;
     }
+
+
+
 
     bool AnyCullingRayCast(Vector3 from, Vector3 camDir, out RaycastHit hitInfo, float maxDistance, LayerMask cullingLayer)
     {

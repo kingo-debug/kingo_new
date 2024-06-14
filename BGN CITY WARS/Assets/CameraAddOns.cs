@@ -31,6 +31,6 @@ public class CameraAddOns : MonoBehaviour
  //   }
     public void AddFireRecoil( )
     {
-        Cam.fieldOfView -= CameraShakeStrenght * Time.deltaTime;
+     //   Cam.fieldOfView -= CameraShakeStrenght * Time.deltaTime;
     }
 }

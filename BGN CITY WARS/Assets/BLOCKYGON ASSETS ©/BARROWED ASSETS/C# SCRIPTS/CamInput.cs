@@ -45,7 +45,7 @@ namespace Invector.vCharacterController
                     return;
                 if (tpCamera)
                 {
-                    tpCamera.SetMainTarget(this.transform);
+                //    tpCamera.SetMainTarget(this.transform);
                     tpCamera.Init();
                 }
             }
