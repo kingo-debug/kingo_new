@@ -64,7 +64,8 @@ public class SpawnChatItem : MonoBehaviour
     [PunRPC]
     public void SetTXTmessage()
     {
-        MessageItem.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = PhotonNetwork.NickName + " : " + Inputfield.GetComponent<TMP_InputField>().text;  // set chat item logic
+        MessageItem.transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = Inputfield.GetComponent<TMP_InputField>().text;  // set chat item logic
+        MessageItem.transform.GetChild(1).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = PhotonNetwork.NickName + " : ";  // set chatter name item logic
     }
 
 }
