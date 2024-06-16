@@ -363,7 +363,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: playerDWDWDWWD
+  m_text: nAME
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9d2be89ed188627419cd3c5fdd1c4e3f, type: 2}
   m_sharedMaterial: {fileID: -6618347345542720429, guid: 9d2be89ed188627419cd3c5fdd1c4e3f, type: 2}
@@ -539,10 +539,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 3144625371678750759}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 242.82446, y: 8.8}
-  m_SizeDelta: {x: 436.7618, y: 94.2439}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 119.87, y: 8.547502}
+  m_SizeDelta: {x: 178.83, y: 29.1618}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8562485001820139970
 CanvasRenderer:
@@ -572,7 +572,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: dw
+  m_text: CHAT
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9d2be89ed188627419cd3c5fdd1c4e3f, type: 2}
   m_sharedMaterial: {fileID: -6618347345542720429, guid: 9d2be89ed188627419cd3c5fdd1c4e3f, type: 2}

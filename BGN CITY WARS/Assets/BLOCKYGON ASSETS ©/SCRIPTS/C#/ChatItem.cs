@@ -23,7 +23,7 @@ public class ChatItem : MonoBehaviour,IPunObservable
         if(PV.IsMine)
         {
             transform.GetChild(0).localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z); // invert BGs
-            transform.GetChild(0).transform.Find("chat text").localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+            transform.GetChild(0).transform.Find("chat text").localScale = new Vector3(-1, transform.localScale.y, transform.localScale.z);
             transform.GetChild(1).gameObject.SetActive(false); // disable name
             transform.GetChild(0).GetComponent<RectTransform>().localPosition = new Vector3(850f, transform.position.y, transform.position.z);
         }
