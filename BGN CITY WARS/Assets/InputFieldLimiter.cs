@@ -6,7 +6,7 @@ public class InputFieldLimiter : MonoBehaviour
 {
     public TMP_InputField inputField;
     public int maxCharacters = 100;
-    public string[] badWords = { "fuck", "bitch", "ass", "whore", "hoe", "faggot", "gay", "dick", "pussy", "sex", "boobs", "tities", "tits", "vagina", "penis", "cum", "ass" }; // Add your bad words here
+    public string[] badWords = { "fuck", "bitch", "ass", "whore", "hoe", "faggot", "gay", "dick", "pussy", "sex", "boobs", "tities", "tits", "vagina", "penis", "cum", "ass","nigga","nigger","suck" }; // Add your bad words here
 
     void Start()
     {

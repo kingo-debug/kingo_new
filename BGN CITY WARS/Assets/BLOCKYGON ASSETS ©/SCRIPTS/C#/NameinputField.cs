@@ -1,10 +1,11 @@
 using UnityEngine;
 using UnityEngine.UI;
 using Photon.Pun;
+using TMPro;
 
 public class NameinputField : MonoBehaviour
 {
-    public InputField yourInputField;
+    public TMP_InputField yourInputField;
 
     [SerializeField]
     private string UserName;
