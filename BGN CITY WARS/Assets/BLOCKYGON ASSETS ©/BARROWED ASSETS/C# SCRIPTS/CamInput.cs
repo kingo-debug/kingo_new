@@ -1,7 +1,5 @@
 ﻿using UnityEngine;
 
-namespace Invector.vCharacterController
-{
     public class CamInput : MonoBehaviour
     {
         #region Variables       
@@ -45,8 +43,7 @@ namespace Invector.vCharacterController
                     return;
                 if (tpCamera)
                 {
-                //    tpCamera.SetMainTarget(this.transform);
-                    tpCamera.Init();
+                           tpCamera.Init();
                 }
             }
         }
@@ -88,18 +85,7 @@ namespace Invector.vCharacterController
         }
 
   
-       
-        /// <summary>
-        /// Conditions to trigger the Jump animation & behavior
-        /// </summary>
-        /// <returns></returns>
-   
-        /// <summary>
-        /// Input to trigger the Jump 
-        /// </summary>
-       
-    
 
         #endregion       
-    }
+    
 }

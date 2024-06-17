@@ -58,7 +58,10 @@ public class InitiateData : MonoBehaviour
             //Setup new Player  coins
             int DefaultBGNCoins = 500;
             ES3.Save<int>("BGNCoins", DefaultBGNCoins);
-            Debug.Log(DefaultBGNCoins + "SetUp for new User Starting Coins");
+            //Setup new Player  coins
+            int DefaultBGNCash = 500;
+            ES3.Save<int>("BGNCash", DefaultBGNCash);
+            Debug.Log(DefaultBGNCash + "SetUp for new User Starting Cash");
 
 
             // Set Up new Player Default Skin        
@@ -108,6 +111,9 @@ public class InitiateData : MonoBehaviour
 
             //retrieve Coins
             Debug.Log(ES3.Load<int>("BGNCoins") + " was  Retrieved From Saved File for User BGN Coins");
+
+            //retrieve Cash
+            Debug.Log(ES3.Load<int>("BGNCash") + " was  Retrieved From Saved File for User BGN Cash");
             #endregion
 
             // retrieve skin   
