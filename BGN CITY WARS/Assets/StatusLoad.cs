@@ -18,6 +18,9 @@ public class StatusLoad : MonoBehaviour
 
     [SerializeField]
     private TextMeshProUGUI CoinsTextUI;
+
+    [SerializeField]
+    private TextMeshProUGUI CashTextUI;
     void Start()
     {
         LoadStatus();
@@ -45,7 +48,9 @@ public class StatusLoad : MonoBehaviour
 
         CoinsTextUI.text = ES3.Load<int>("BGNCoins").ToString();
 
+        // load cash
 
+        CashTextUI.text = ES3.Load<int>("BGNCash").ToString();
 
 
     }

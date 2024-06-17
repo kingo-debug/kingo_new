@@ -6,9 +6,6 @@ using Photon.Pun;
 
 public class InitiateData : MonoBehaviour
 {
-
-   
-
     [SerializeField]
     private string DefaultSkinID = "SkinItem_322577"; // trev
 
@@ -56,7 +53,7 @@ public class InitiateData : MonoBehaviour
 
 
             //Setup new Player  coins
-            int DefaultBGNCoins = 500;
+            int DefaultBGNCoins = 10;
             ES3.Save<int>("BGNCoins", DefaultBGNCoins);
             //Setup new Player  coins
             int DefaultBGNCash = 500;
