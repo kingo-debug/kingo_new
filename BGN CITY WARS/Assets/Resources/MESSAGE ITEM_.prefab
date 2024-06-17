@@ -27,14 +27,14 @@ RectTransform:
   m_GameObject: {fileID: 2062236518254320162}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -0.8297919, y: 0.8297919, z: 0.8297919}
+  m_LocalScale: {x: -0.54973716, y: 0.8297919, z: 0.8297919}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3144625371678750759}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 148.63077, y: 0}
+  m_AnchoredPosition: {x: 113.6, y: 0}
   m_SizeDelta: {x: 494.5391, y: 160.0887}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7990688783171785960
@@ -542,8 +542,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 113.9, y: 9.2}
-  m_SizeDelta: {x: 432.4189, y: 74.7902}
+  m_AnchoredPosition: {x: 67.84332, y: 9.2}
+  m_SizeDelta: {x: 340.3056, y: 75.8926}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8562485001820139970
 CanvasRenderer:
@@ -573,7 +573,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: CHAT
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9d2be89ed188627419cd3c5fdd1c4e3f, type: 2}
   m_sharedMaterial: {fileID: -6618347345542720429, guid: 9d2be89ed188627419cd3c5fdd1c4e3f, type: 2}
@@ -600,12 +600,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20.6
+  m_fontSize: 20
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 0.18
-  m_fontSizeMax: 20.6
+  m_fontSizeMin: 10
+  m_fontSizeMax: 20
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -636,7 +636,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -3.4102173, w: 0}
+  m_margin: {x: 0, y: 0, z: -1.0420151, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

@@ -48,6 +48,7 @@ public class ChatItem : MonoBehaviour,IPunObservable
             {
                 txt.text = (string)stream.ReceiveNext();
                 Name.text = (string)stream.ReceiveNext();
+                Set = true;
             }
         }
     }

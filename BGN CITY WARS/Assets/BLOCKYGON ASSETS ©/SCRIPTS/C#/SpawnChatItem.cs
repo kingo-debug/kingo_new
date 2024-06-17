@@ -29,7 +29,8 @@ public class SpawnChatItem : MonoBehaviour
             MessageItem.transform.parent = ParentItem;
             #region SetTXTmessage
             {
-                PV.RPC("SetTXTmessage", RpcTarget.AllBuffered);
+             //   PV.RPC("SetTXTmessage", RpcTarget.All);
+                SetTXTmessage();
             }
             #endregion
        
