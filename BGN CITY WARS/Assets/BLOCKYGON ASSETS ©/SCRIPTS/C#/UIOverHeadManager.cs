@@ -1,6 +1,5 @@
 using UnityEngine;
 using Photon.Pun;
-using TMPro;
 
 public class UIOverHeadManager : MonoBehaviour
 {
@@ -14,6 +13,7 @@ public class UIOverHeadManager : MonoBehaviour
     {
         UINameDisplay.text = ES3.Load<string>("PlayerName");
         PhotonNetwork.NickName = ES3.Load<string>("PlayerName");
+        UINameDisplay.GetComponent<TextSizeSync>().SyncTextSize();
     }
 
 
