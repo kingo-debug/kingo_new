@@ -3,13 +3,13 @@ using UnityEngine;
 
 public class TextSizeSync : MonoBehaviour
 {
-    private TextMeshPro Text;
+    private TextMeshProUGUI Text;
     RectTransform Rect;
 
     private void OnEnable()
     {
         Rect = GetComponent<RectTransform>();
-        Text = GetComponent<TextMeshPro>();
+        Text = GetComponent<TextMeshProUGUI>();
         SyncTextSize();
      }
     public void SyncTextSize()
