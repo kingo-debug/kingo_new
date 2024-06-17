@@ -6,6 +6,8 @@ public class ChatItem : MonoBehaviour,IPunObservable
 {
     [SerializeField]
     private TextMeshProUGUI txt;
+    [SerializeField]
+    private TextMeshProUGUI Name;
     private  PhotonView PV;
     private  bool Set;
 
@@ -24,7 +26,7 @@ public class ChatItem : MonoBehaviour,IPunObservable
         {
             transform.GetChild(0).localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z); // invert BGs
             transform.GetChild(0).transform.Find("chat text").localScale = new Vector3(-1, transform.localScale.y, transform.localScale.z);
-       //     transform.GetChild(1).gameObject.SetActive(false); // disable name
+            transform.GetChild(1).gameObject.SetActive(false); // disable name
             transform.GetChild(0).GetComponent<RectTransform>().localPosition = new Vector3(850f, transform.position.y, transform.position.z);
         }
         #endregion
@@ -39,11 +41,13 @@ public class ChatItem : MonoBehaviour,IPunObservable
             if (stream.IsWriting)
             {
                 stream.SendNext(txt.text);
+                stream.SendNext(Name.text);
                 Set = true;
             }
       else
             {
-                txt.text = (string)stream.ReceiveNext(); 
+                txt.text = (string)stream.ReceiveNext();
+                Name.text = (string)stream.ReceiveNext();
             }
         }
     }

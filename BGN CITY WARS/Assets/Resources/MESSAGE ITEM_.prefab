@@ -168,6 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   txt: {fileID: 3100189510346044439}
+  Name: {fileID: 1333820596024683590}
 --- !u!82 &1949080143102076487
 AudioSource:
   m_ObjectHideFlags: 0
