@@ -84,9 +84,7 @@ public class camera2 : MonoBehaviour
     void Start()
     {
         Init();
-
-        xMouseSensitivity = ES3.Load<float>("GeneralSense");
-        yMouseSensitivity = ES3.Load<float>("GeneralSense");
+        RefreshSensSetting();
     }
 
     void LateUpdate()
@@ -314,4 +312,9 @@ public class camera2 : MonoBehaviour
     }
 
     #endregion
+    public void RefreshSensSetting()
+    {
+        xMouseSensitivity = ES3.Load<float>("GeneralSense");
+        yMouseSensitivity = ES3.Load<float>("GeneralSense");
+    }
 }

@@ -18,8 +18,8 @@ public class GameSettings : MonoBehaviour
     private AudioSource SFXAS;
     void Start()
     {
-        MusicAS = GameObject.Find("MENU MUSIC").GetComponent<AudioSource>();
-        SFXAS = GameObject.Find("MENU SFX").GetComponent<AudioSource>();
+        MusicAS = GameObject.Find("BG MUSIC").GetComponent<AudioSource>();
+        SFXAS = GameObject.Find("SFX").GetComponent<AudioSource>();
         GeneralSense.value = ES3.Load<float>("GeneralSense");
         ScopeSens.value = ES3.Load<float>("ScopeSense");
 
