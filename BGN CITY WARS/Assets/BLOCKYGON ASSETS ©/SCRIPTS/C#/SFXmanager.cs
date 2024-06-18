@@ -140,6 +140,8 @@ public class SFXmanager : MonoBehaviour
     public void RefreshVolumeSettings()
     {
         AS.volume = ES3.Load<float>("SFX");
+        WeaponStatus weapon = GetComponent<WeaponStatus>();
+        weapon.CurrentWeapon.GetComponent<AudioSource>().volume = AS.volume;
     }
 
 
