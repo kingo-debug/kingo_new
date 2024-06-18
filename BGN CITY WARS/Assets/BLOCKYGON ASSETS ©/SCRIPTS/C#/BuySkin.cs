@@ -36,7 +36,7 @@ public class BuySkin : MonoBehaviour
     void Start()
     {
         UIStatus = GameObject.Find("quick info").GetComponent<StatusLoad>();
-        AS = GameObject.Find("MENU SFX").GetComponent<AudioSource>();
+        AS = GameObject.Find("SFX").GetComponent<AudioSource>();
 
         BuySuccessMessage = GameObject.Find("SHOP NOTIFICATION").transform.GetChild(0).gameObject;
         BuyFailedMessage = GameObject.Find("SHOP NOTIFICATION").transform.GetChild(1).gameObject;
