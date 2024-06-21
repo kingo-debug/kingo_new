@@ -1,8 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using Photon.Pun;
-using Photon;
 
 public class CarSpawner : MonoBehaviour
 
@@ -58,42 +55,38 @@ private VehicleCoolDown vehicleCoolDown;
     }
 
 
- void FixedUpdate() 
- 
- {
-   
-MessageError.SetActive(Blocked);
 
+ void FixedUpdate() 
+ {
+MessageError.SetActive(Blocked);
 CheckSpawnable();
 CheckEntry();
 SpawnCar();
-    
-
-
 }
+
+
 
     void CheckEntry()
     {
-        if(CarinRange != null && ControlFreak2.CF2Input.GetKeyDown(KeyCode.E))
+        if(CarinRange != null && ControlFreak2.CF2Input.GetKeyDown(KeyCode.T))
         {
             CarinRange.GetComponent<CarPlayerEntry>().EnterCar();
         }
     }
-void CheckSpawnable()
+
+
+
+    void CheckSpawnable()
 {
-
- 
-    
     if (Physics.CheckSphere(Player.position + OffsetCheck + transform.forward,BlockRadius,layerMask))
-    
-       {Blocked= true;
-     
-       }
-    
+        {
+            Blocked = true;
+        }
 
-     else 
-     {Blocked= false ;
-     }
+        else
+        {
+            Blocked = false;
+        }
 
 }
 
@@ -105,20 +98,15 @@ private void OnDrawGizmos()
 
 
 
-void SpawnCar()
-
+public void SpawnCar()
 {
- 
-if (Blocked != true && ControlFreak2.CF2Input.GetKeyDown(Keybind) & ReadyToSpawn)
+ if (Blocked != true && ReadyToSpawn)
 {
     
 ReadyToSpawn = false;
 
 ReadyToCool = true;
-
      
-
-
 if (IsSpawned)
 {
 PhotonNetwork.Destroy(VehichleSpawned);
@@ -134,24 +122,8 @@ VehichleSpawned = PhotonNetwork.Instantiate(VehicleToSpawn.name,VehiclePos.posit
 IsSpawned=true;
  }
 
-
-
-
-  
-
-
-
 }
 
 }
-
-
-
-
-
-
-
-
-
 
 }//EC
