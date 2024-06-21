@@ -61,7 +61,6 @@ private VehicleCoolDown vehicleCoolDown;
 MessageError.SetActive(Blocked);
 CheckSpawnable();
 CheckEntry();
-SpawnCar();
 }
 
 
