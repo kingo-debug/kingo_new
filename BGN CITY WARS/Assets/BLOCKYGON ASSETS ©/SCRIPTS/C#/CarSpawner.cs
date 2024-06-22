@@ -31,9 +31,7 @@ public KeyCode Keybind;
 public LayerMask layerMask;
     [Header("SpawnTime")]
     //Timer for respawn
-    public float SpawnTime=1f;
-public bool ReadyToCool = false;
-public bool ReadyToSpawn = true;
+ public float SpawnTime=1f;
 [SerializeField]
 private bool IsSpawned = false;
 //level script access
@@ -46,12 +44,9 @@ private VehicleCoolDown vehicleCoolDown;
     void Start()
     {
         Player = this.transform;
-        if (GameObject.FindGameObjectWithTag("Level Script") != null)
-        {
-            vehicleCoolDown = GameObject.FindGameObjectWithTag("Level Script").GetComponent<VehicleCoolDown>();
-            vehicleCoolDown.Player = this.gameObject;
-
-        }
+        vehicleCoolDown = GameObject.Find("VehicleCoolDown").GetComponent<VehicleCoolDown>();
+        vehicleCoolDown.Player = this.gameObject;
+        vehicleCoolDown.SpawnTimeValue = SpawnTime;
     }
 
 
@@ -99,30 +94,29 @@ private void OnDrawGizmos()
 
 public void SpawnCar()
 {
- if (Blocked != true && ReadyToSpawn)
-{
-    
-ReadyToSpawn = false;
+        if(vehicleCoolDown.Ready)
+        {
+            if (IsSpawned)
+            {
+                PhotonNetwork.Destroy(VehichleSpawned);
 
-ReadyToCool = true;
-     
-if (IsSpawned)
-{
-PhotonNetwork.Destroy(VehichleSpawned);
+                VehichleSpawned = PhotonNetwork.Instantiate(VehicleToSpawn.name, VehiclePos.position, VehiclePos.rotation);  // respawn car
+                IsSpawned = true;
+                vehicleCoolDown.SpawnTimeValue = SpawnTime;
+                vehicleCoolDown.Ready = false;
+            }
 
-VehichleSpawned = PhotonNetwork.Instantiate(VehicleToSpawn.name,VehiclePos.position,VehiclePos.rotation);
-IsSpawned= true;
-}
+            else
 
-else
+            {
+                VehichleSpawned = PhotonNetwork.Instantiate(VehicleToSpawn.name, VehiclePos.position, VehiclePos.rotation);  // spawn car first time
+                IsSpawned = true;
+                vehicleCoolDown.SpawnTimeValue = SpawnTime;
+                vehicleCoolDown.Ready = false;
+            }
 
- {
-VehichleSpawned = PhotonNetwork.Instantiate(VehicleToSpawn.name,VehiclePos.position,VehiclePos.rotation);
-IsSpawned=true;
- }
+        }
+    }
 
-}
-
-}
 
 }//EC
