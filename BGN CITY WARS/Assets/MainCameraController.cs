@@ -23,15 +23,16 @@ public class MainCameraController : MonoBehaviour
     private float currentY = 0.0f; // Current vertical rotation
 
     [Header("Culling")]
-    public float CullRadius = 1f;
-    public float RadiusDegradation = 0.25f;
     public LayerMask CullMask;
-    public float CulledDistance = 2f; // Distance from the player
-    public float DistanceDegradation = 0.5f; // Distance from the player
     public float TotalCullAmount;
+    public float CullRadius = 1f;
+    public float CullRadius2 = 0.25f;
+    public float CulledDistance = 2f; // Distance from the player
+    public float CulledDistance2 = 0.5f; // Distance from the player
+    public float RightDistanceCull = 0.2f; // Distance from the player
     public bool DefaultCull = false;
     public bool FirstCulled = false;
-
+    public bool SecondCulled = false;
     public bool BackupSphereActive = false;
     public float BackupSphereSize = 1f;
     public float BackupSphereDistance = 2;
@@ -71,18 +72,29 @@ void CheckCulling()
         float targetDistance = DefaultDistance;
         // Check for collision with the larger sphere
     
-        if ( Physics.CheckSphere(transform.position, CullRadius, CullMask) )
+        if ( Physics.CheckSphere(transform.position, CullRadius, CullMask) ) 
         {
             if(!FirstCulled)
             {
                 FirstCulled = true;
                 DefaultCull = false;
-                TotalCullAmount += CulledDistance;
+                TotalCullAmount += CulledDistance; // adjust camera distance at first sphere ball
                 Invoke("UpdateCull", 3f);
             }
         }
+        // Check for collision with the smaller sphere
+        if (Physics.CheckSphere(transform.position, CullRadius2, CullMask))
+        {
+            if (!SecondCulled)
+            {
+                SecondCulled = true;
+                DefaultCull = false;
+                TotalCullAmount +=CulledDistance2; // adjust camera distance after second sphere ball
+                RightDistance -= RightDistanceCull; // adjust camera right distance  after second sphere ball
+                Invoke("UpdateCull2", 3f);
+            }
+        }
 
-           
         // Gradually interpolate the current distance to the target distance
         currentDistance = Mathf.Lerp(currentDistance, TotalCullAmount, Time.deltaTime * DampSmoothness);
         // Calculate the new rotation
@@ -112,14 +124,25 @@ void  BackUpCull()
             FirstCulled = false;
             TotalCullAmount -= CulledDistance;
         }
- 
-    
+        else Invoke("UpdateCull", 3f);
+
+    }
+    void UpdateCull2()
+    {
+        if (!FirstCulled)
+        {
+            SecondCulled = false;
+            TotalCullAmount -=CulledDistance2; // remove extra added culls at exit
+            RightDistance += RightDistanceCull; // rstore camera right distance  after second sphere ball
+        }
+        else Invoke("UpdateCull2", 3f);
+
     }
 
-        private void OnDrawGizmosSelected()
+    private void OnDrawGizmosSelected()
     {
         Gizmos.DrawSphere(transform.position, CullRadius); // show cull
-        Gizmos.DrawSphere(transform.position, CullRadius - RadiusDegradation); // show cull degraded
+        Gizmos.DrawSphere(transform.position, CullRadius2); // show cull 2
 
         Gizmos.DrawSphere(transform.position - transform.forward * BackupSphereDistance, BackupSphereSize); // show cull backup
     }
