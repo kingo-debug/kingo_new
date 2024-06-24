@@ -19,6 +19,7 @@ public class MainCameraController : MonoBehaviour
     public float SpeedSmooth = 5f;
     public float DampSmoothness = 0.1f; // Variable to control smoothness
     private float currentDistance;
+    private float currentRight;
     private float currentX = 0.0f; // Current horizontal rotation
     private float currentY = 0.0f; // Current vertical rotation
 
@@ -27,6 +28,7 @@ public class MainCameraController : MonoBehaviour
     public float TotalCullAmount;
     public float CullRadius = 1f;
     public float CullRadius2 = 0.25f;
+    public float CullRadius2Offset = 1f;
     public float CulledDistance = 2f; // Distance from the player
     public float CulledDistance2 = 0.5f; // Distance from the player
     public float RightDistanceCull = 0.2f; // Distance from the player
@@ -44,6 +46,7 @@ public class MainCameraController : MonoBehaviour
         currentX = angles.y;
         currentY = angles.x;
         currentDistance = DefaultDistance; // Initialize currentDistance with DefaultDistance
+        currentRight = RightDistance;
         TotalCullAmount = DefaultDistance;
     }
 
@@ -83,7 +86,7 @@ void CheckCulling()
             }
         }
         // Check for collision with the smaller sphere
-        if (Physics.CheckSphere(transform.position, CullRadius2, CullMask))
+        if (Physics.CheckSphere(transform.position - transform.forward * CullRadius2Offset, CullRadius2, CullMask))
         {
             if (!SecondCulled)
             {
@@ -91,15 +94,17 @@ void CheckCulling()
                 DefaultCull = false;
                 TotalCullAmount +=CulledDistance2; // adjust camera distance after second sphere ball
                 RightDistance -= RightDistanceCull; // adjust camera right distance  after second sphere ball
-                Invoke("UpdateCull2", 3f);
+                Invoke("UpdateCull2", 0.5f);
             }
         }
 
         // Gradually interpolate the current distance to the target distance
         currentDistance = Mathf.Lerp(currentDistance, TotalCullAmount, Time.deltaTime * DampSmoothness);
+
+        currentRight = Mathf.Lerp(currentRight, RightDistance, Time.deltaTime * DampSmoothness);
         // Calculate the new rotation
         Quaternion targetRotation = Quaternion.Euler(currentY, currentX, 0);
-        Vector3 targetPosition = targetRotation * new Vector3(RightDistance, HeightDistance, -currentDistance) + player.position;
+        Vector3 targetPosition = targetRotation * new Vector3(currentRight, HeightDistance, -currentDistance) + player.position;
 
         // Smoothly interpolate towards the target rotation and position
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * RotationSmooth);
@@ -135,14 +140,14 @@ void  BackUpCull()
             TotalCullAmount -=CulledDistance2; // remove extra added culls at exit
             RightDistance += RightDistanceCull; // rstore camera right distance  after second sphere ball
         }
-        else Invoke("UpdateCull2", 3f);
+        else Invoke("UpdateCull2", 0.5f);
 
     }
 
     private void OnDrawGizmosSelected()
     {
         Gizmos.DrawSphere(transform.position, CullRadius); // show cull
-        Gizmos.DrawSphere(transform.position, CullRadius2); // show cull 2
+        Gizmos.DrawSphere(transform.position - transform.forward * CullRadius2Offset, CullRadius2); // show cull 2
 
         Gizmos.DrawSphere(transform.position - transform.forward * BackupSphereDistance, BackupSphereSize); // show cull backup
     }
