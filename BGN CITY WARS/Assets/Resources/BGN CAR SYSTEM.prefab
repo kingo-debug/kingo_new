@@ -914,8 +914,7 @@ GameObject:
   - component: {fileID: 7398494504061475942}
   - component: {fileID: 1807735386868815655}
   - component: {fileID: 3299908990502480077}
-  - component: {fileID: 7626578895121722923}
-  - component: {fileID: 8739210073152104262}
+  - component: {fileID: 1281830231716117786}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -1041,7 +1040,7 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
---- !u!114 &7626578895121722923
+--- !u!114 &1281830231716117786
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1050,57 +1049,35 @@ MonoBehaviour:
   m_GameObject: {fileID: 1194935772758784383}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9f50f78aca4d7c43b504f97b0c00757, type: 3}
+  m_Script: {fileID: 11500000, guid: 9d118156f0b1a91418eab31f26eacf53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 597479458790122087}
-  smoothCameraRotation: 12
-  cullingLayer:
-    serializedVersion: 2
-    m_Bits: 1
-  lockCamera: 0
-  zOffset: 3.7
-  rightOffset: 0
-  defaultDistance: 2.5
-  height: 1.4
-  smoothFollow: 10
-  xMouseSensitivity: 0.6
-  yMouseSensitivity: 0.6
+  player: {fileID: 2804419141240903550}
+  DefaultDistance: 5
+  RightDistance: 0
+  HeightDistance: 0.5
+  mouseSensitivity: 0.35
   yMinLimit: 0
   yMaxLimit: 80
-  minDistance: 1
-  raySpread: 0.1
-  rayDistance: 3
-  cullingSmoothSpeed: 5
-  indexList: 0
-  indexLookPoint: 0
-  offSetPlayerPivot: 0
-  currentStateName: 
-  currentTarget: {fileID: 0}
-  movementSpeed: {x: 0, y: 0}
-  targetLookAt: {fileID: 597479458790122087}
-  cullingDistance: 2.5
-  checkHeightRadius: 0.4
-  xMinLimit: -360
-  xMaxLimit: 360
-  cullingHeight: 0.2
-  cullingMinDist: 0.1
---- !u!114 &8739210073152104262
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1194935772758784383}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34e0a2f656977bc47a9f8921710719c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotateCameraXInput: Mouse X
-  rotateCameraYInput: Mouse Y
-  tpCamera: {fileID: 0}
-  cameraMain: {fileID: 0}
+  RotationSmooth: 500
+  SpeedSmooth: 500
+  DampSmoothness: 3
+  CullMask:
+    serializedVersion: 2
+    m_Bits: 1
+  TotalCullAmount: 5
+  CullRadius: 1
+  CullRadius2: 0.05
+  CullRadius2Offset: -0.58
+  CulledDistance: -1.3
+  CulledDistance2: -0.8
+  RightDistanceCull: 0.4
+  DefaultCull: 0
+  FirstCulled: 0
+  SecondCulled: 0
+  BackupSphereActive: 1
+  BackupSphereSize: 1
+  BackupSphereDistance: 2.5
 --- !u!1 &1264447758583838752
 GameObject:
   m_ObjectHideFlags: 0
@@ -6563,7 +6540,7 @@ Transform:
   m_GameObject: {fileID: 6295312714267184703}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.48, z: 0}
+  m_LocalPosition: {x: -0, y: 0.87, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
