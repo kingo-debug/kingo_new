@@ -32,6 +32,10 @@ public class MainCameraController : MonoBehaviour
     public bool DefaultCull = false;
     public bool FirstCulled = false;
 
+    public bool BackupSphereActive = false;
+    public float BackupSphereSize = 1f;
+    public float BackupSphereDistance = 2;
+
     void Start()
     {
         // Initialize the current rotation based on the camera's initial rotation
@@ -54,12 +58,13 @@ public class MainCameraController : MonoBehaviour
         // Clamp the vertical rotation
         currentY = Mathf.Clamp(currentY, yMinLimit, yMaxLimit);
 
-      CheckCulling();
+        CheckCulling();
+        BackUpCull();
     }
 
 
 
-     void CheckCulling()
+void CheckCulling()
     {
         // Calculate the new distance based on collision checks
       
@@ -77,9 +82,7 @@ public class MainCameraController : MonoBehaviour
             }
         }
 
-    
-       
-
+           
         // Gradually interpolate the current distance to the target distance
         currentDistance = Mathf.Lerp(currentDistance, TotalCullAmount, Time.deltaTime * DampSmoothness);
         // Calculate the new rotation
@@ -90,13 +93,26 @@ public class MainCameraController : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * RotationSmooth);
         transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * SpeedSmooth);
     }
-
+void  BackUpCull()
+    {
+        if (Physics.CheckSphere(transform.position - transform.forward * BackupSphereDistance, BackupSphereSize, CullMask))
+        {
+            BackupSphereActive = true;
+        }
+        else
+        {
+            BackupSphereActive = false;
+        }
+    }
 
     void UpdateCull()
     {
-       
+       if (!BackupSphereActive)
+        {
             FirstCulled = false;
             TotalCullAmount -= CulledDistance;
+        }
+ 
     
     }
 
@@ -104,7 +120,11 @@ public class MainCameraController : MonoBehaviour
     {
         Gizmos.DrawSphere(transform.position, CullRadius); // show cull
         Gizmos.DrawSphere(transform.position, CullRadius - RadiusDegradation); // show cull degraded
+
+        Gizmos.DrawSphere(transform.position - transform.forward * BackupSphereDistance, BackupSphereSize); // show cull backup
     }
 
 
 }
+
+
