@@ -1,101 +1,110 @@
 ﻿using UnityEngine;
 
+
 public class MainCameraController : MonoBehaviour
 {
-    public Transform target;                 // The target for the camera to follow
-    public float heightOffset = 2.0f;        // Height offset of the camera
-    public float rightOffset = 2.0f;         // Right offset of the camera
-    public float smoothSpeed = 0.125f;       // Smooth follow speed
-    public float maxDistance = 10.0f;        // Max distance from the target
-    public float minDistance = 2.0f;         // Min distance for culling
-    public float zoomCullingOffset = 1.0f;   // Offset to apply when culling
-    public LayerMask cullingLayer;           // Layer mask for culling objects
-    public float raycastPadding = 0.1f;      // Extra distance to detect thin surfaces
-    public float rayOffsetDistance = 0.5f;   // Distance to offset the side and top rays
-    public float cullLerpSpeed = 5.0f;       // Speed of interpolation for smooth culling transition
+    [Header("Distancing")]
+    public Transform player; // The player transform to follow
+    public float DefaultDistance = 5.0f; // Distance from the player
+    public float RightDistance = 0f; // Distance from the player
+    public float HeightDistance = 1f; // Distance from the player
 
-    public float mouseXSensitivity = 2.0f;   // Mouse X sensitivity
-    public float mouseYSensitivity = 2.0f;   // Mouse Y sensitivity
+    [Header("Controls")]
+    public float mouseSensitivity = 2.0f; // Sensitivity of the mouse input
+    public float yMinLimit = -20f; // Minimum vertical angle
+    public float yMaxLimit = 80f; // Maximum vertical angle
 
-    private Vector3 currentVelocity;
+    [Header("Smoothing")]
+    public float RotationSmooth = 5f;
+    public float SpeedSmooth = 5f;
+    public float DampSmoothness = 0.1f; // Variable to control smoothness
     private float currentDistance;
-    private float targetDistance;
-    private float yaw;
-    private float pitch;
+    private float currentX = 0.0f; // Current horizontal rotation
+    private float currentY = 0.0f; // Current vertical rotation
+
+    [Header("Culling")]
+    public float CullRadius = 1f;
+    public float RadiusDegradation = 0.25f;
+    public LayerMask CullMask;
+    public float CulledDistance = 2f; // Distance from the player
+    public float DistanceDegradation = 0.5f; // Distance from the player
+    public float TotalCullAmount;
+    public bool DefaultCull = false;
+    public bool FirstCulled = false;
 
     void Start()
     {
-        currentDistance = maxDistance;
-        targetDistance = maxDistance;
+        // Initialize the current rotation based on the camera's initial rotation
+        Vector3 angles = transform.eulerAngles;
+        currentX = angles.y;
+        currentY = angles.x;
+        currentDistance = DefaultDistance; // Initialize currentDistance with DefaultDistance
+        TotalCullAmount = DefaultDistance;
     }
 
     void LateUpdate()
     {
-        if (!target) return;
+        if (player == null)
+            return;
 
-        // Handle mouse input
-        yaw += ControlFreak2.CF2Input.GetAxis("Mouse X") * mouseXSensitivity;
-        pitch -= ControlFreak2.CF2Input.GetAxis("Mouse Y") * mouseYSensitivity;
-        pitch = Mathf.Clamp(pitch, -40, 85); // Clamp pitch to avoid flipping the camera
+        // Get mouse input
+        currentX += ControlFreak2.CF2Input.GetAxis("Mouse X") * mouseSensitivity;
+        currentY -= ControlFreak2.CF2Input.GetAxis("Mouse Y") * mouseSensitivity;
 
-        // Calculate the rotation and direction
-        Quaternion rotation = Quaternion.Euler(pitch, yaw, 0);
-        Vector3 direction = rotation * Vector3.forward;
+        // Clamp the vertical rotation
+        currentY = Mathf.Clamp(currentY, yMinLimit, yMaxLimit);
 
-        // Calculate the right offset vector and adjusted target position
-        Vector3 rightOffsetVector = rotation * Vector3.right * rightOffset;
-        Vector3 targetPositionWithHeight = target.position + Vector3.up * heightOffset;
+      CheckCulling();
+    }
 
-        // Calculate the desired position with right offset for culling
-        Vector3 desiredPositionWithRightOffset = targetPositionWithHeight - direction * maxDistance + rightOffsetVector;
 
-        // Wall collision handling using multiple rays
-        Vector3[] raycastOrigins = new Vector3[5];
-        raycastOrigins[0] = targetPositionWithHeight + rightOffsetVector;                                    // Center ray
-        raycastOrigins[1] = targetPositionWithHeight + rotation * Vector3.right * rayOffsetDistance + rightOffsetVector;  // Right ray
-        raycastOrigins[2] = targetPositionWithHeight - rotation * Vector3.right * rayOffsetDistance + rightOffsetVector;  // Left ray
-        raycastOrigins[3] = targetPositionWithHeight + rotation * Vector3.up * rayOffsetDistance + rightOffsetVector;    // Up ray
-        raycastOrigins[4] = targetPositionWithHeight - rotation * Vector3.up * rayOffsetDistance + rightOffsetVector;    // Down ray
 
-        float closestDistance = maxDistance;
-        bool hitSomething = false;
-        RaycastHit hit;
-
-        foreach (Vector3 origin in raycastOrigins)
+     void CheckCulling()
+    {
+        // Calculate the new distance based on collision checks
+      
+        float targetDistance = DefaultDistance;
+        // Check for collision with the larger sphere
+    
+        if ( Physics.CheckSphere(transform.position, CullRadius, CullMask) )
         {
-            if (Physics.Raycast(origin, (desiredPositionWithRightOffset - origin).normalized, out hit, maxDistance + raycastPadding, cullingLayer))
+            if(!FirstCulled)
             {
-                if (hit.transform != target)
-                {
-                    closestDistance = Mathf.Min(closestDistance, Mathf.Clamp(hit.distance - zoomCullingOffset, minDistance, maxDistance));
-                    hitSomething = true;
-                }
+                FirstCulled = true;
+                DefaultCull = false;
+                TotalCullAmount += CulledDistance;
+                Invoke("UpdateCull", 3f);
             }
         }
 
-        if (!hitSomething)
-        {
-            closestDistance = maxDistance;
-        }
+    
+       
 
-        // Smoothly interpolate the distance to prevent bouncing
-        targetDistance = Mathf.Lerp(targetDistance, closestDistance, Time.deltaTime * cullLerpSpeed);
-        currentDistance = targetDistance;
+        // Gradually interpolate the current distance to the target distance
+        currentDistance = Mathf.Lerp(currentDistance, TotalCullAmount, Time.deltaTime * DampSmoothness);
+        // Calculate the new rotation
+        Quaternion targetRotation = Quaternion.Euler(currentY, currentX, 0);
+        Vector3 targetPosition = targetRotation * new Vector3(RightDistance, HeightDistance, -currentDistance) + player.position;
 
-        // Final camera position adjustment with updated distance and right offset
-        Vector3 desiredPosition = targetPositionWithHeight - direction * currentDistance + rightOffsetVector;
-        Vector3 smoothedPosition = Vector3.SmoothDamp(transform.position, desiredPosition, ref currentVelocity, smoothSpeed);
-
-        transform.position = smoothedPosition;
-
-        // Make the camera look at the target's head
-        Vector3 lookAtTarget = target.position + Vector3.up * heightOffset;
-        transform.LookAt(lookAtTarget + rightOffsetVector);
-
-        // Debugging: Draw rays to visualize culling
-        foreach (Vector3 origin in raycastOrigins)
-        {
-            Debug.DrawLine(origin, origin + (desiredPositionWithRightOffset - origin).normalized * (maxDistance + raycastPadding), Color.red);
-        }
+        // Smoothly interpolate towards the target rotation and position
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * RotationSmooth);
+        transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * SpeedSmooth);
     }
+
+
+    void UpdateCull()
+    {
+       
+            FirstCulled = false;
+            TotalCullAmount -= CulledDistance;
+    
+    }
+
+        private void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawSphere(transform.position, CullRadius); // show cull
+        Gizmos.DrawSphere(transform.position, CullRadius - RadiusDegradation); // show cull degraded
+    }
+
+
 }

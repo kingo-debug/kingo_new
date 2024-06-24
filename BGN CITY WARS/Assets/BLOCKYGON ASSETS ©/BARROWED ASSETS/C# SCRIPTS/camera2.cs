@@ -14,8 +14,6 @@ public class camera2 : MonoBehaviour
     public bool lockCamera;
 
     public float zOffset = 0f; // Local Z offset
-
-
     public float rightOffset = 0f;
     public float defaultDistance = 2.5f;
     public float height = 1.4f;
@@ -24,6 +22,7 @@ public class camera2 : MonoBehaviour
     public float yMouseSensitivity = 3f;
     public float yMinLimit = -40f;
     public float yMaxLimit = 80f;
+    public float minDistance = 1f; // Minimum distance the camera can be from the target
 
     [Tooltip("Spread factor for the culling rays")]
     public float raySpread = 1f;
@@ -213,7 +212,8 @@ public class camera2 : MonoBehaviour
             }
         }
 
-        distance = Mathf.Lerp(distance, targetDistance, Time.deltaTime * cullingSmoothSpeed);
+        // Ensure the camera doesn't get closer than minDistance
+        distance = Mathf.Max(Mathf.Lerp(distance, targetDistance, Time.deltaTime * cullingSmoothSpeed), minDistance);
         currentHeight = Mathf.Lerp(currentHeight, targetHeight, Time.deltaTime * cullingSmoothSpeed);
 
         var lookPoint = adjusted_cPos + targetLookAt.forward * 2f;
@@ -228,9 +228,6 @@ public class camera2 : MonoBehaviour
         transform.rotation = rotation;
         movementSpeed = Vector2.zero;
     }
-
-
-
 
     bool AnyCullingRayCast(Vector3 from, Vector3 camDir, out RaycastHit hitInfo, float maxDistance, LayerMask cullingLayer)
     {
