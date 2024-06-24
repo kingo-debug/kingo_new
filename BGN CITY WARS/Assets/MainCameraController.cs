@@ -94,8 +94,10 @@ void CheckCulling()
                 DefaultCull = false;
                 TotalCullAmount +=CulledDistance2; // adjust camera distance after second sphere ball
                 RightDistance -= RightDistanceCull; // adjust camera right distance  after second sphere ball
-                Invoke("UpdateCull2", 0.5f);
+                Invoke("UpdateCull2", 0.5F);
             }
+
+
         }
 
         // Gradually interpolate the current distance to the target distance
