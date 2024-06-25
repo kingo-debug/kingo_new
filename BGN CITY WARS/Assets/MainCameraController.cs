@@ -38,6 +38,10 @@ public class MainCameraController : MonoBehaviour
     public bool BackupSphereActive = false;
     public float BackupSphereSize = 1f;
     public float BackupSphereDistance = 2;
+    //second backup
+    public bool SecondBackupSphereActive = false;
+    public float SecondBackupSphereSize = 0.5f;
+    public float SecondBackupSphereDistance = 1.2f;
 
     void Start()
     {
@@ -68,7 +72,7 @@ public class MainCameraController : MonoBehaviour
 
 
 
-void CheckCulling()
+    void CheckCulling()
     {
         // Calculate the new distance based on collision checks
       
@@ -112,9 +116,9 @@ void CheckCulling()
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * RotationSmooth);
         transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * SpeedSmooth);
     }
-void  BackUpCull()
+    void  BackUpCull()
     {
-        if (Physics.CheckSphere(transform.position - transform.forward * BackupSphereDistance, BackupSphereSize, CullMask))
+        if (Physics.CheckSphere(transform.position - transform.forward * BackupSphereDistance, BackupSphereSize, CullMask)) // FirstBackup
         {
             BackupSphereActive = true;
         }
@@ -122,11 +126,21 @@ void  BackUpCull()
         {
             BackupSphereActive = false;
         }
-    }
 
+
+
+        if (Physics.CheckSphere(transform.position - transform.forward * SecondBackupSphereDistance, SecondBackupSphereSize, CullMask)) //Second Backup
+        {
+            SecondBackupSphereActive = true;
+        }
+        else
+        {
+            SecondBackupSphereActive = false;
+        }
+    }
     void UpdateCull()
     {
-       if (!BackupSphereActive)
+       if (!BackupSphereActive && !SecondBackupSphereActive)
         {
             FirstCulled = false;
             TotalCullAmount -= CulledDistance;
@@ -136,7 +150,7 @@ void  BackUpCull()
     }
     void UpdateCull2()
     {
-        if (!FirstCulled)
+        if (!SecondBackupSphereActive)
         {
             SecondCulled = false;
             TotalCullAmount -=CulledDistance2; // remove extra added culls at exit
@@ -148,11 +162,17 @@ void  BackUpCull()
 
     private void OnDrawGizmosSelected()
     {
+        // Set color to red for culls
+        Gizmos.color = Color.red;
         Gizmos.DrawSphere(transform.position, CullRadius); // show cull
         Gizmos.DrawSphere(transform.position - transform.forward * CullRadius2Offset, CullRadius2); // show cull 2
 
+        // Set color to green for backups
+        Gizmos.color = Color.green;
         Gizmos.DrawSphere(transform.position - transform.forward * BackupSphereDistance, BackupSphereSize); // show cull backup
+        Gizmos.DrawSphere(transform.position - transform.forward * SecondBackupSphereDistance, SecondBackupSphereSize); // show cull backup
     }
+
 
 
 }
