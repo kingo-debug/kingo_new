@@ -52,6 +52,7 @@ public class MainCameraController : MonoBehaviour
         currentDistance = DefaultDistance; // Initialize currentDistance with DefaultDistance
         currentRight = RightDistance;
         TotalCullAmount = DefaultDistance;
+        RefreshSensSetting();
     }
 
     void LateUpdate()
@@ -173,7 +174,10 @@ public class MainCameraController : MonoBehaviour
         Gizmos.DrawSphere(transform.position - transform.forward * SecondBackupSphereDistance, SecondBackupSphereSize); // show cull backup
     }
 
-
+    public void RefreshSensSetting()
+    {
+        mouseSensitivity = ES3.Load<float>("GeneralSense");
+    }
 
 }
 

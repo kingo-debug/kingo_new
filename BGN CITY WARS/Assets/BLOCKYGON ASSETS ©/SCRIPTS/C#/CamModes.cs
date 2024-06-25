@@ -4,7 +4,7 @@ public class CamModes : MonoBehaviour
 {
     public Camera Camera;
     [SerializeField]
-    private camera2 camcontroller;
+    private MainCameraController camcontroller;
     public PlayerActionsVar vars;
     //CAM MODES
     public float FMC = 30f;
@@ -48,15 +48,19 @@ public class CamModes : MonoBehaviour
     void Update()
 
     {
-      
+        bool CombatChanged = false;
+        bool FreeChanged = false;
+
         if (!vars.Sprinting)
         {
-        if (vars.Combat) // combat mode//
-
-            {
-
-                camcontroller.zOffset = Mathf.Lerp(camcontroller.zOffset, CombatDistance, Time.deltaTime * smoothness);
          
+            if (vars.Combat) // combat mode//
+            {
+              
+                if (!CombatChanged)
+                camcontroller.TotalCullAmount += CombatDistance;
+                CombatChanged = true;
+                FreeChanged = false;
             }
 
             if (vars.IsAiming && ! scopemanager.CanScope) // hipsfire mode//
@@ -72,9 +76,13 @@ public class CamModes : MonoBehaviour
         if(!vars.Combat)  // free mode //
             {
                 Camera.fieldOfView = Mathf.SmoothDamp(Camera.fieldOfView, FMC, ref currentspeedFMC, Time.deltaTime * smoothness);
-                
-                camcontroller.zOffset = Mathf.Lerp(camcontroller.zOffset, FreeDistance, Time.deltaTime * smoothness);
-
+                if(!FreeChanged)
+                {
+                    camcontroller.TotalCullAmount -= CombatDistance;
+                    CombatChanged = false;
+                    FreeChanged = true;
+                }
+      
 
 
             }
