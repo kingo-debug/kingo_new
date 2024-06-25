@@ -1072,7 +1072,6 @@ MonoBehaviour:
   CulledDistance: -2.5
   CulledDistance2: -1
   RightDistanceCull: 0
-  DefaultCull: 0
   FirstCulled: 0
   SecondCulled: 0
   BackupSphereActive: 0
