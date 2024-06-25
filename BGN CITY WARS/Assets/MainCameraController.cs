@@ -32,7 +32,6 @@ public class MainCameraController : MonoBehaviour
     public float CulledDistance = 2f; // Distance from the player
     public float CulledDistance2 = 0.5f; // Distance from the player
     public float RightDistanceCull = 0.2f; // Distance from the player
-    public bool DefaultCull = false;
     public bool FirstCulled = false;
     public bool SecondCulled = false;
     public bool BackupSphereActive = false;
@@ -75,17 +74,13 @@ public class MainCameraController : MonoBehaviour
 
     void CheckCulling()
     {
-        // Calculate the new distance based on collision checks
       
-        float targetDistance = DefaultDistance;
-        // Check for collision with the larger sphere
-    
+      // Check for collision with the larger sphere
         if ( Physics.CheckSphere(transform.position, CullRadius, CullMask) ) 
         {
             if(!FirstCulled)
             {
                 FirstCulled = true;
-                DefaultCull = false;
                 TotalCullAmount += CulledDistance; // adjust camera distance at first sphere ball
                 Invoke("UpdateCull", 3f);
             }
@@ -96,7 +91,6 @@ public class MainCameraController : MonoBehaviour
             if (!SecondCulled)
             {
                 SecondCulled = true;
-                DefaultCull = false;
                 TotalCullAmount +=CulledDistance2; // adjust camera distance after second sphere ball
                 RightDistance -= RightDistanceCull; // adjust camera right distance  after second sphere ball
                 Invoke("UpdateCull2", 0.5F);
@@ -139,7 +133,7 @@ public class MainCameraController : MonoBehaviour
             SecondBackupSphereActive = false;
         }
     }
-    void UpdateCull()
+     void UpdateCull()
     {
        if (!BackupSphereActive && !SecondBackupSphereActive)
         {
@@ -173,7 +167,15 @@ public class MainCameraController : MonoBehaviour
         Gizmos.DrawSphere(transform.position - transform.forward * BackupSphereDistance, BackupSphereSize); // show cull backup
         Gizmos.DrawSphere(transform.position - transform.forward * SecondBackupSphereDistance, SecondBackupSphereSize); // show cull backup
     }
-
+    public void CustomCull()
+    {
+        if (!FirstCulled)
+        {
+            FirstCulled = true;
+            TotalCullAmount += CulledDistance; // adjust camera distance at first sphere ball
+            Invoke("UpdateCull", 3f);
+        }
+    }
     public void RefreshSensSetting()
     {
         mouseSensitivity = ES3.Load<float>("GeneralSense");

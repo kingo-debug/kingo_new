@@ -12,29 +12,19 @@ public class CamModes : MonoBehaviour
     [SerializeField]
     private float CombatDistance = 2f;
 
-
-
-
-
-    [SerializeField]
-    private float FreeDistance = 3f;
-
-
-
-
     public float AMC = 21;
     public float SCOPE = 15;
     public float SprintingFOV = 40f;
-     public float SprintDamp = 40f;
+    public float SprintDamp = 40f;
     public float smoothness = 40f;
     public float smoothnessAMC = 20f;
     private float currentspeedFMC;
     private  float currentspeedCMC;
     private float currentspeedAMC;
     private ScopingManager scopemanager;
+    private bool previousCombatState;
 
-    
-    
+
     private void Awake()
     {
        Camera = Camera.main;
@@ -43,27 +33,13 @@ public class CamModes : MonoBehaviour
     private void Start()
     {
         vars = GetComponent<PlayerActionsVar>();
+        previousCombatState = vars.Combat;
 
     }
     void Update()
 
-    {
-        bool CombatChanged = false;
-        bool FreeChanged = false;
-
-        if (!vars.Sprinting)
-        {
-         
-            if (vars.Combat) // combat mode//
-            {
-              
-                if (!CombatChanged)
-                camcontroller.TotalCullAmount += CombatDistance;
-                CombatChanged = true;
-                FreeChanged = false;
-            }
-
-            if (vars.IsAiming && ! scopemanager.CanScope) // hipsfire mode//
+    {          
+    if (vars.IsAiming && ! scopemanager.CanScope) // hipsfire mode//
         {
             Camera.fieldOfView = Mathf.SmoothDamp(Camera.fieldOfView, AMC, ref currentspeedAMC, Time.deltaTime * smoothnessAMC);
         }
@@ -71,26 +47,26 @@ public class CamModes : MonoBehaviour
         else if ( vars.IsAiming && scopemanager.CanScope) // scope aiming mode//
         {
             Camera.fieldOfView = Mathf.SmoothDamp(Camera.fieldOfView, SCOPE, ref currentspeedFMC, Time.deltaTime * smoothness);
-
         }
         if(!vars.Combat)  // free mode //
             {
-                Camera.fieldOfView = Mathf.SmoothDamp(Camera.fieldOfView, FMC, ref currentspeedFMC, Time.deltaTime * smoothness);
-                if(!FreeChanged)
-                {
-                    camcontroller.TotalCullAmount -= CombatDistance;
-                    CombatChanged = false;
-                    FreeChanged = true;
-                }
-      
-
-
+                Camera.fieldOfView = Mathf.SmoothDamp(Camera.fieldOfView, FMC, ref currentspeedFMC, Time.deltaTime * smoothness); 
             }
 
+        // Check if the combat state has changed
+        if (vars.Combat != previousCombatState)
+        {
+            if (vars.Combat)
+            {
+                float defaultsmooth = camcontroller.DampSmoothness;
+                camcontroller.DampSmoothness = 10f;
+                camcontroller.CustomCull();
+                camcontroller.DampSmoothness = defaultsmooth;
+            }
+               // Update the previousCombatState to the current state
+            previousCombatState = vars.Combat;
         }
-        else SprintfOV();
-
-}
+    }
     void SprintfOV()
     {
      if(vars.Sprinting)
@@ -101,7 +77,6 @@ public class CamModes : MonoBehaviour
     }   
 
     }
-
 
 
 
