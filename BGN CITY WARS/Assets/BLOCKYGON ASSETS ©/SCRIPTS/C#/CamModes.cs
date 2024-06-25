@@ -58,14 +58,17 @@ public class CamModes : MonoBehaviour
         {
             if (vars.Combat)
             {
-                float defaultsmooth = camcontroller.DampSmoothness;
-                camcontroller.DampSmoothness = 10f;
                 camcontroller.CustomCull();
-                camcontroller.DampSmoothness = defaultsmooth;
+                Invoke("ReCheckCombat", .002f);
             }
+
                // Update the previousCombatState to the current state
             previousCombatState = vars.Combat;
         }
+    }
+    void ReCheckCombat()
+    {
+        previousCombatState = vars.Combat ? false : true;
     }
     void SprintfOV()
     {
