@@ -1064,7 +1064,7 @@ MonoBehaviour:
   DampSmoothness: 5
   CullMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 5137
   TotalCullAmount: 5.5
   CullRadius: 1
   CullRadius2: 0.05
