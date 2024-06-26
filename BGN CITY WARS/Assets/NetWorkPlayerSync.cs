@@ -16,7 +16,7 @@ public class NetWorkPlayerSync : MonoBehaviour
     private AimIK aimik;
     private OwnedShopItems Data;
     private SkinManager skinManager;
-    private camera2 Camera2;
+    private MainCameraController CameraControler;
     private Camera Playercamera;
     private TakeDamage takedamage;
     void Awake()
@@ -29,7 +29,7 @@ public class NetWorkPlayerSync : MonoBehaviour
        // Data = GameObject.Find("OWNED SHOP ITEMS").GetComponent<OwnedShopItems>();
         skinManager = GetComponent<SkinManager>();
         Playercamera = transform.parent.transform.GetChild(1).GetChild(0).GetComponent<Camera>();
-        Camera2 = transform.parent.transform.GetChild(1).GetChild(0).GetComponent<camera2>();
+        CameraControler = transform.parent.transform.GetChild(1).GetChild(0).GetComponent<MainCameraController>();
         takedamage = GetComponent<TakeDamage>();
 
 
@@ -50,7 +50,7 @@ public class NetWorkPlayerSync : MonoBehaviour
                 }
             }
             Playercamera.enabled = false;
-            Camera2.enabled = false;
+            CameraControler.enabled = false;
             #endregion
 
         }
