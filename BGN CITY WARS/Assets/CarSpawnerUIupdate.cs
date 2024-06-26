@@ -19,7 +19,7 @@ public class CarSpawnerUIupdate : MonoBehaviour
     }
     void Update()
     {
-        Value = VCD.SpawnTimeValue;
+        Value = VCD.SpawnTimeValue / ConvertAmount;
         Converted = Value / ConvertAmount;
         VisualImage.fillAmount = Converted;
     }

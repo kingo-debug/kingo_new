@@ -46,7 +46,7 @@ private VehicleCoolDown vehicleCoolDown;
         Player = this.transform;
         vehicleCoolDown = GameObject.Find("VehicleCoolDown").GetComponent<VehicleCoolDown>();
         vehicleCoolDown.Player = this.gameObject;
-        vehicleCoolDown.SpawnTimeValue = SpawnTime;
+       
     }
 
 
@@ -96,6 +96,7 @@ public void SpawnCar()
 {
         if(vehicleCoolDown.Ready)
         {
+            vehicleCoolDown.SpawnTimeValue = SpawnTime;
             if (IsSpawned)
             {
                 PhotonNetwork.Destroy(VehichleSpawned);

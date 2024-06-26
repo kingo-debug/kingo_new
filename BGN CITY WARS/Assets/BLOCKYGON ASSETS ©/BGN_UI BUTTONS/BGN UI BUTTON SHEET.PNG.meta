@@ -324,6 +324,111 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: BGN UI BUTTON GAS
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 2
+        width: 82
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 771fadc853ab50b4eac4c5d236a2ba9e
+      internalID: 1607239435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGN UI BUTTON BRAKE
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 2
+        width: 82
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4a94ac6eb310ed43a18f7a8f6c27365
+      internalID: 461170153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGN UI BUTTON LEFT TURN
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 3
+        width: 83
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 836ff192291f2c14f92198cd8192ff9b
+      internalID: 66253857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGN UI BUTTON RIGHT TURN
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 2
+        width: 83
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d81a2ee05f4bbd4eb271cc7193d61e7
+      internalID: 1063450723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGN UI BUTTON CAMERA
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 1
+        width: 83
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87549c183a371d54d8a9e6155f29959f
+      internalID: -1841269441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -335,6 +440,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      BGN UI BUTTON BRAKE: 461170153
+      BGN UI BUTTON CAMERA: -1841269441
+      BGN UI BUTTON GAS: 1607239435
+      BGN UI BUTTON LEFT TURN: 66253857
+      BGN UI BUTTON RIGHT TURN: 1063450723
       BGN UI BUTTON SHEET_0: 1249032009
       BGN UI BUTTON SHEET_1: 174607567
       BGN UI BUTTON SHEET_2: 1015997257
