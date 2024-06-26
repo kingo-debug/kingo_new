@@ -349,8 +349,8 @@ TextureImporter:
       name: BGN UI BUTTON BRAKE
       rect:
         serializedVersion: 2
-        x: 90
-        y: 2
+        x: 88
+        y: 3
         width: 82
         height: 83
       alignment: 0
