@@ -27,7 +27,7 @@ public class BuyWeapon : MonoBehaviour
     void Start()
     {
        
-        AS = GameObject.Find("MENU SFX").GetComponent<AudioSource>();
+        AS = GameObject.Find("SFX").GetComponent<AudioSource>();
         shopitems = GameObject.Find("OWNED SHOP ITEMS").GetComponent<OwnedShopItems>();
         EquipButton = transform.parent.GetChild(1).gameObject;
         BuySuccessMessage = GameObject.Find("SHOP NOTIFICATION").transform.GetChild(0).gameObject;

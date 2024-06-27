@@ -18,7 +18,7 @@ public class ChatItem : MonoBehaviour,IPunObservable
         PV = GetComponent<PhotonView>();
         if(transform.parent==null)
         {
-            transform.parent = GameObject.Find("ROOM DATA").transform.GetChild(1).transform.GetChild(6).transform.GetChild(0).transform.GetChild(0);
+            transform.parent = GameObject.Find("ROOM DATA").transform.GetChild(0).transform.GetChild(6).transform.GetChild(0).transform.GetChild(0);
         }
 
         #region Flip if Sender is Player
