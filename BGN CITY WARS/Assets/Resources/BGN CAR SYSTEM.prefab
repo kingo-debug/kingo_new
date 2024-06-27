@@ -2149,10 +2149,8 @@ MonoBehaviour:
   toggleRigSwitchName: 
   pressBinding:
     enabled: 1
-    axisList:
-    - axisName: Vertical
-      axisPositiveSide: 1
-    keyList: 
+    axisList: []
+    keyList: 65000000
   toggleOnlyBinding:
     enabled: 0
     axisList: []
@@ -2859,7 +2857,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1584230194143620034
 Transform:
   m_ObjectHideFlags: 0
@@ -12043,7 +12041,7 @@ GameObject:
   - component: {fileID: 5542788556441117510}
   - component: {fileID: 6284312192375827665}
   m_Layer: 0
-  m_Name: GasButton-Sprite
+  m_Name: DOORButton-Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

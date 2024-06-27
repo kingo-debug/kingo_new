@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 using Photon.Pun;
 
 public class JetPackManager : MonoBehaviourPunCallbacks,IPunObservable
@@ -30,7 +29,7 @@ public class JetPackManager : MonoBehaviourPunCallbacks,IPunObservable
 
     [SerializeField]
     private GameObject JetPackObject;
-
+    [SerializeField]
     private UIBarRefresh UIBar;
 
     private FallDamage falldamage;
@@ -40,7 +39,6 @@ public class JetPackManager : MonoBehaviourPunCallbacks,IPunObservable
         Charcontroller = GetComponent<CharacterController>();
         maincont = GetComponent<MainCharacterController>();
         CurrentFuel = MaxFuel;
-        UIBar = GameObject.Find("JETPACK BAR").GetComponent<UIBarRefresh>();
         UIBar.gameObject.SetActive(false);
         UIBar.UpdateHP(Mathf.RoundToInt(CurrentFuel));
         falldamage = GetComponent<FallDamage>();
