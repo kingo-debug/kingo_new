@@ -148,14 +148,14 @@ public class MeleWeapon : MonoBehaviour
         swimcontrol = PlayerParent.GetComponent<SwimPlayerControl>();
 
         mainCharacterController = PlayerParent.GetComponent<MainCharacterController>();
-        ScoreItem = PlayerParent.GetComponent<PlayerActionsVar>().ScoreItemUI.gameObject.GetComponent<PlayerScores>();
+     //   ScoreItem = PlayerParent.GetComponent<PlayerActionsVar>().ScoreItemUI.gameObject.GetComponent<PlayerScores>();
     }
     private void Start()
     {
         DamageDelay = 0.25f;
         TargetHP = 100;
         AttackPoint = GameObject.Find("Pointst").transform.Find("Attack Point");
-        CameraMain = Camera.main.gameObject; pos = CameraMain.transform.GetChild(2);
+        CameraMain = Camera.main.gameObject; 
         SyncFireAnim();
 
         Killcountupdate = GameObject.Find("KILL COUNT TEXT DISPLAY").GetComponent<UpdateKillDisplay>();
