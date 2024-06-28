@@ -1,17 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using Photon;
 using Photon.Pun;
 public class MeleWeapon : MonoBehaviour
 {
   //vars
 public WeaponDATA WeaponType;
 public LayerMask layerMask;
-public float Speed;
-public float SwingSize;
-private int Swings = 0;
-public bool Fired;
+    [Header("Specs")]
+    public int BodyDamage = 40;
+    public int HeadDamage = 40;
+    public float SwingSize = 0.5f;
+    public float SwingSpeed = 1f;
+    private int Swings = 0;
+    public bool Fired;
+
 private float lastshot = 0f;
 public bool Canfire;
 public Transform SwingPoint;
@@ -22,9 +23,12 @@ private RaycastHit hit;
 private Collider collided;
 private Transform PlayerParent;
 public int weapontype;
-public bool ButtonFired;
 
-
+    [Header("SFX")]
+    [SerializeField]
+    private AudioClip SwingSFX;
+    [SerializeField]
+    private AudioClip BodyshotSFX;
 
 
 void OnEnable() 
@@ -44,7 +48,7 @@ void OnEnable()
  void FindParent()
     {
         PlayerParent = transform.parent.parent.parent.parent.parent.parent.parent.parent.parent.parent.parent.parent.parent;
-        SwingPoint = PlayerParent.transform.Find("ShootPos");
+        SwingPoint = PlayerParent.transform.Find("Points").transform.Find("Attack Point");
     }
     void Update()
 
@@ -66,14 +70,13 @@ void OnEnable()
          { //canfire
 
 
-          if (ButtonFired && PV.IsMine & Time.time > lastshot+WeaponType.FireRate)
+          if (ControlFreak2.CF2Input.GetMouseButton(0) && PV.IsMine & Time.time > lastshot+SwingSpeed)
            {
-            AS.PlayOneShot(WeaponType.FireSFX, 1f);
+            AS.PlayOneShot(SwingSFX, 1f);
             Fired = true;
             Swing();             
-       
             }
-            else if (ButtonFired==false)
+
 {
   return;
 }
@@ -123,7 +126,7 @@ void OnEnable()
             return;
             else // other online player detect
             {
-                AS.PlayOneShot(WeaponType.BodyshotSFX, 1f);
+                AS.PlayOneShot(BodyshotSFX, 1f);
 
                 PV.RPC("Bodydamage", RpcTarget.Others);
 
@@ -142,12 +145,12 @@ void OnEnable()
             {
             TakeDamage takedamage = collided.transform.parent.GetComponent<TakeDamage>();
 
-                AS.PlayOneShot(WeaponType.BodyshotSFX, 1f);
+                AS.PlayOneShot(BodyshotSFX, 1f);
 
                 Debug.Log("AI Target Detected-Body");
 
              
-               takedamage.Takedamage(WeaponType.BodyDamage);
+               takedamage.Takedamage(BodyDamage);
 
             }
 

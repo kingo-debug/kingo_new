@@ -33747,8 +33747,8 @@ namespace Unity.VisualScripting.Generated.Aot
 		public static void MeleWeapon_ButtonFired()
 		{
 			global::MeleWeapon target = default(global::MeleWeapon);
-			bool accessor = target.ButtonFired;
-			target.ButtonFired = default(bool);
+		//	bool accessor = target.ButtonFired;
+			//target.ButtonFired = default(bool);
 			global::Unity.VisualScripting.InstanceFieldAccessor<MeleWeapon, bool> optimized = new global::Unity.VisualScripting.InstanceFieldAccessor<MeleWeapon, bool>(default(global::System.Reflection.FieldInfo));
 			optimized.GetValue(default(global::MeleWeapon));
 			optimized.SetValue(default(global::MeleWeapon), default(bool));

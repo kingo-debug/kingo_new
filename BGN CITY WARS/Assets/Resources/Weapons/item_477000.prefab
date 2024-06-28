@@ -214,22 +214,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 4347554148320109732}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27fd65ddf96a1fd4a98c1a6febcc60a5, type: 3}
+  m_Script: {fileID: 11500000, guid: 931f491949b04ce44873f122b3ec0ae7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   WeaponType: {fileID: 0}
   layerMask:
     serializedVersion: 2
-    m_Bits: 0
-  Speed: 0
-  SwingSize: 0
+    m_Bits: 513
+  SwingSize: 1
+  SwingSpeed: 1
   Fired: 0
   Canfire: 0
   SwingPoint: {fileID: 0}
-  AS: {fileID: 0}
+  AS: {fileID: 2942148500365635639}
   TPV: {fileID: 0}
   weapontype: 0
-  ButtonFired: 0
 --- !u!1 &5668487565370002603
 GameObject:
   m_ObjectHideFlags: 0
