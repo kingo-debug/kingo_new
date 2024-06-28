@@ -217,22 +217,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 931f491949b04ce44873f122b3ec0ae7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WeaponType: {fileID: 0}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 513
+  Parentvariables: {fileID: 0}
+  PullOutTime: 0
+  SwingSpeed: 1
+  SwingSize: 1
   BodyDamage: 40
   HeadDamage: 40
-  SwingSize: 1
-  SwingSpeed: 1
-  Fired: 0
+  TotalDamageDealt: 0
+  AttackRange: 0
+  BulletsFired: 0
   Canfire: 0
-  SwingPoint: {fileID: 0}
-  AS: {fileID: 2942148500365635639}
-  TPV: {fileID: 0}
-  weapontype: 0
-  SwingSFX: {fileID: 8300000, guid: 6032072a992f61a448a379b2ba9aba1e, type: 3}
+  Fired: 0
+  modifiedFireRate: 0
+  bodyshotHit: 0
+  headshotHit: 0
+  layermask:
+    serializedVersion: 2
+    m_Bits: 0
+  FireSFX: {fileID: 0}
   BodyshotSFX: {fileID: 8300000, guid: 4c9b29de5bae56e4bac146d9df91072d, type: 3}
+  HeadshotSFX: {fileID: 0}
+  CameraMain: {fileID: 0}
+  DefaultReticle: {fileID: 0}
+  DamageDelay: 0
 --- !u!1 &5668487565370002603
 GameObject:
   m_ObjectHideFlags: 0
