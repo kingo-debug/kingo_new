@@ -34,9 +34,7 @@ public int weapontype;
 void OnEnable() 
 {
   weapontype=WeaponType.Weapontype;
-  
-  //PlayerParent.GetComponent<PlayerActionsVar>().Weapontype=weapontype;
-}
+  }
      void Start()
      {
         Invoke("FindParent", .5f);
@@ -157,7 +155,7 @@ void OnEnable()
             else
              {
 
-             AS.PlayOneShot(WeaponType.BodyshotSFX, 1f);
+             AS.PlayOneShot(BodyshotSFX, 1f);
 
                 Debug.Log("Iron Target Detected-Body");
 

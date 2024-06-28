@@ -221,6 +221,8 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 513
+  BodyDamage: 40
+  HeadDamage: 40
   SwingSize: 1
   SwingSpeed: 1
   Fired: 0
@@ -229,6 +231,8 @@ MonoBehaviour:
   AS: {fileID: 2942148500365635639}
   TPV: {fileID: 0}
   weapontype: 0
+  SwingSFX: {fileID: 8300000, guid: 6032072a992f61a448a379b2ba9aba1e, type: 3}
+  BodyshotSFX: {fileID: 8300000, guid: 4c9b29de5bae56e4bac146d9df91072d, type: 3}
 --- !u!1 &5668487565370002603
 GameObject:
   m_ObjectHideFlags: 0
