@@ -1,7 +1,6 @@
 using System.Collections;
 using UnityEngine;
 using Photon.Pun;
-using TMPro;
 public class MeleWeapon : MonoBehaviour
 {
 
@@ -20,7 +19,6 @@ public class MeleWeapon : MonoBehaviour
     public int TotalDamageDealt;
     public float AttackRange;
     private UpdateKillDisplay Killcountupdate;
-    private UpdateAmmoUI UpdateAmmoUI;
     private PlayerScores ScoreItem;
 
 
@@ -47,7 +45,6 @@ public class MeleWeapon : MonoBehaviour
     [Header("Weapon Settings")]
     [SerializeField]
     private LayerMask layermask;
-    private Vector3 point;
     private Transform pos;
     private Transform AttackPoint;
     private RaycastHit hit;
@@ -88,7 +85,6 @@ public class MeleWeapon : MonoBehaviour
     public float DamageDelay;
     private int LastDamageType;
     private GameObject HitReticleCrosshair;
-    private TextMeshProUGUI AmmoMessage;
     private SwimPlayerControl swimcontrol;
     private MainCharacterController mainCharacterController;
 
@@ -132,7 +128,6 @@ public class MeleWeapon : MonoBehaviour
         bodyshotHit = false;
         headshotHit = false;
         Parentanimator.SetBool("RELOAD", false);
-        AmmoMessage.text = ("");
         Canfire = false;
 
 
@@ -148,15 +143,15 @@ public class MeleWeapon : MonoBehaviour
         swimcontrol = PlayerParent.GetComponent<SwimPlayerControl>();
 
         mainCharacterController = PlayerParent.GetComponent<MainCharacterController>();
-     //   ScoreItem = PlayerParent.GetComponent<PlayerActionsVar>().ScoreItemUI.gameObject.GetComponent<PlayerScores>();
+        ScoreItem = PlayerParent.GetComponent<PlayerActionsVar>().ScoreItemUI.gameObject.GetComponent<PlayerScores>();
+        AttackPoint = GameObject.Find("Points").transform.Find("Attack Point");
+        CameraMain = Camera.main.gameObject;
+        SyncFireAnim();
     }
     private void Start()
     {
         DamageDelay = 0.25f;
         TargetHP = 100;
-        AttackPoint = GameObject.Find("Pointst").transform.Find("Attack Point");
-        CameraMain = Camera.main.gameObject; 
-        SyncFireAnim();
 
         Killcountupdate = GameObject.Find("KILL COUNT TEXT DISPLAY").GetComponent<UpdateKillDisplay>();
      
@@ -262,8 +257,6 @@ public class MeleWeapon : MonoBehaviour
 
 
         collided = hit.collider;
-
-        point = (hit.point);
         started = false;
 
 

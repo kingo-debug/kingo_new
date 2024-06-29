@@ -29,7 +29,7 @@ public class SFXmanager : MonoBehaviour
     {
         AS = this.GetComponent<AudioSource>();
         PV = this.GetComponent<PhotonView>();
-        RefreshVolumeSettings();
+        Invoke("DelayStart", 0.16f);
 
 
         #region SpatialBlend Specify
@@ -136,7 +136,10 @@ public class SFXmanager : MonoBehaviour
     {
         AS.PlayOneShot(NewMessageItem);
     }
-
+    void DelayStart()
+    {
+        RefreshVolumeSettings();
+    }
     public void RefreshVolumeSettings()
     {
         AS.volume = ES3.Load<float>("SFX");

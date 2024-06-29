@@ -29,21 +29,6 @@ public class WeaponType : MonoBehaviour
 
     private void OnEnable()
     {
-        Invoke("DelayAwake", 0.15f);
-    }
-    private void Start()
-    {
-        WeaponStatus Status = transform.root.GetChild(0).GetComponent<WeaponStatus>();
-        Status.CurrentWeapon = this.gameObject;
-        Crosshiars = GameObject.Find("CROSSHAIRS").transform;
-        Invoke("UpdateReticle", 0.1f);
-        sfxmanager = transform.root.transform.GetChild(0).GetComponent<SFXmanager>();
-
-        GetComponent<AudioSource>().volume =ES3.Load<float>("SFX"); ;
-
-    }
-    public void DelayAwake()
-    {
         actions = transform.root.GetChild(0).GetComponent<PlayerActionsVar>();
         animator = transform.root.GetChild(0).GetComponent<Animator>();
         WeaponStatus Status = transform.root.GetChild(0).GetComponent<WeaponStatus>();
@@ -58,6 +43,16 @@ public class WeaponType : MonoBehaviour
             transform.root.GetChild(0).GetComponent<ScopingManager>().WeaponMesh = transform.GetChild(0).transform.Find("BODY").gameObject;
 
         }
+    }
+    private void Start()
+    {
+        WeaponStatus Status = transform.root.GetChild(0).GetComponent<WeaponStatus>();
+        Status.CurrentWeapon = this.gameObject;
+        Crosshiars = GameObject.Find("CROSSHAIRS").transform;
+        Invoke("UpdateReticle", 0.1f);
+        sfxmanager = transform.root.transform.GetChild(0).GetComponent<SFXmanager>();
+
+        GetComponent<AudioSource>().volume =ES3.Load<float>("SFX"); ;
 
     }
     public void UpdateReticle() // AND  assign reload parts audio  to Player IS IN THIS FUNCTION
