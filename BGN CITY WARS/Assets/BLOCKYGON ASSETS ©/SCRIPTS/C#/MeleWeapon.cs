@@ -107,7 +107,7 @@ public class MeleWeapon : MonoBehaviour
         HeadShotKill = GameObject.Find("KILL FEEDS").transform.GetChild(1).gameObject;
 
         #endregion
-        Invoke("FindParent", .15f);
+        Invoke("FindParent", 0.15f);
         PV = this.GetComponent<PhotonView>();
         if (!PV.IsMine)
         {
@@ -143,9 +143,9 @@ public class MeleWeapon : MonoBehaviour
         swimcontrol = PlayerParent.GetComponent<SwimPlayerControl>();
 
         mainCharacterController = PlayerParent.GetComponent<MainCharacterController>();
-        ScoreItem = PlayerParent.GetComponent<PlayerActionsVar>().ScoreItemUI.gameObject.GetComponent<PlayerScores>();
-        AttackPoint = GameObject.Find("Points").transform.Find("Attack Point");
+        AttackPoint = PlayerParent.transform.Find("Points").transform.Find("Attack Point");
         CameraMain = Camera.main.gameObject;
+        ScoreItem = PlayerParent.GetComponent<PlayerActionsVar>().ScoreItemUI.gameObject.GetComponent<PlayerScores>();
         SyncFireAnim();
     }
     private void Start()
