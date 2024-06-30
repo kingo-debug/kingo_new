@@ -220,11 +220,11 @@ MonoBehaviour:
   Parentvariables: {fileID: 0}
   PullOutTime: 0
   SwingSpeed: 2
-  SwingSize: 1
+  SwingSize: 0.25
   BodyDamage: 40
   HeadDamage: 40
   TotalDamageDealt: 0
-  AttackRange: 0.2
+  AttackRange: 0.5
   BulletsFired: 0
   Canfire: 1
   Fired: 0

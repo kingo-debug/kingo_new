@@ -6,6 +6,7 @@ public class WeaponType : MonoBehaviour
 {
     public string WeaponName;
     public Sprite WeaponPFP;
+    public Sprite WeeaponFireUi;
     public int Weapontype;
     public int ReticleType;
     public bool Scope;
