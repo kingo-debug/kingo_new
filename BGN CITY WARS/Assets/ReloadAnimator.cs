@@ -19,8 +19,9 @@ public class ReloadAnimator : MonoBehaviour
             Clip.transform.parent = Hand;
             Clip.transform.localPosition = new Vector3(0, 0, 0);
             Clip.transform.localRotation = new Quaternion(0, 0, 0, 0);
+           // Clip.transform.localScale = new Vector3(1, 1, 1);
 
-  
+
     }
 
     public void AttachClip()
@@ -28,5 +29,6 @@ public class ReloadAnimator : MonoBehaviour
         Clip.transform.parent = FoundWeapon.GetChild(0).transform.Find("CLIP PLACE");
         Clip.transform.localPosition = new Vector3(0, 0, 0);
         Clip.transform.localRotation = new Quaternion(0, 0, 0, 0);
+        Clip.transform.localScale = new Vector3(1, 1, 1);
     }
 }
