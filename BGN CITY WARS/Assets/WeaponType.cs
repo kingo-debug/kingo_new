@@ -6,7 +6,7 @@ public class WeaponType : MonoBehaviour
 {
     public string WeaponName;
     public Sprite WeaponPFP;
-    public Sprite WeeaponFireUi;
+    public Sprite WeaponFireUi;
     public int Weapontype;
     public int ReticleType;
     public bool Scope;
@@ -42,7 +42,6 @@ public class WeaponType : MonoBehaviour
         if (Scope)
         {
             transform.root.GetChild(0).GetComponent<ScopingManager>().WeaponMesh = transform.GetChild(0).transform.Find("BODY").gameObject;
-
         }
     }
     private void Start()
