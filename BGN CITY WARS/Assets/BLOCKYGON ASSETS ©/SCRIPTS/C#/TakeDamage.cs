@@ -90,7 +90,7 @@ public class TakeDamage : MonoBehaviour
                 {
                     int remainingDamage = Damage - Shield;
                     Shield = 0;
-                    HP -= remainingDamage;       HPcap(); if (Refreshbar != null) { Refreshbar.UpdateHP(HP); };         StartCoroutine(Checklife());
+                    HP -= remainingDamage;       HPcap(); if (Refreshbar != null) { Refreshbar.UpdateHP(HP); };          StartCoroutine(Checklife());
                 }
                 else
                 {
@@ -121,51 +121,54 @@ public class TakeDamage : MonoBehaviour
 
     public IEnumerator Checklife()
     {
-        if(pv.IsMine&& HP<1&& CanDie)
+        if (pv != null)
         {
-            Dead = true;
-            if (TryGetComponent<Animator>(out animator))
+            if (pv.IsMine && HP < 1 && CanDie)
             {
+                Dead = true;
+
                 animator.SetLayerWeight(3, 1f);
                 animator.SetBool("DEAD", true);
-            }
-             
-            DieUi.SetActive(true);
-
-            MainCharacterController mainCharacterController;
-            if (TryGetComponent<MainCharacterController>(out mainCharacterController))
-            {
-                mainCharacterController.enabled = false;
-                mainCharacterController.StopAim();
-                mainCharacterController.Combatmode = false;
-                animator.SetBool("FIRE INPUT", false);
-            }
+                if (DieUi != null)
+                {
+                    DieUi.SetActive(true);
+                }
 
 
-            #region Respawn
-            yield return new WaitForSeconds(RespawnTime);
+                MainCharacterController mainCharacterController;
+                if (TryGetComponent<MainCharacterController>(out mainCharacterController))
+                {
+                    mainCharacterController.enabled = false;
+                    mainCharacterController.StopAim();
+                    mainCharacterController.Combatmode = false;
+                    animator.SetBool("FIRE INPUT", false);
+                }
 
-            Dead = false;
-            if (TryGetComponent<Animator>(out animator))
-            {
+
+                #region Respawn
+                yield return new WaitForSeconds(RespawnTime);
+
+                Dead = false;
                 animator.SetLayerWeight(3, 1f);
                 animator.SetBool("DEAD", false);
+
+                if (TryGetComponent<MainCharacterController>(out mainCharacterController))
+                {
+                    Transform spawnpoints = GameObject.FindWithTag("SP").transform;
+                    transform.position = spawnpoints.GetChild(Random.Range(0, spawnpoints.childCount)).position;
+                    mainCharacterController.enabled = true;
+                }
+                HP = 100;
+                Refreshbar.UpdateHP(HP);
+                if (DieUi != null)
+                {
+                    DieUi.SetActive(false);
+                }
+
+
+                #endregion
+
             }
-          
-
-            if (TryGetComponent<MainCharacterController>(out mainCharacterController))
-            {
-                Transform spawnpoints = GameObject.FindWithTag("SP").transform;
-                transform.position = spawnpoints.GetChild(Random.Range(0, spawnpoints.childCount)).position;
-                mainCharacterController.enabled = true;
-            }
-            HP = 100;
-            Refreshbar.UpdateHP(HP);
-            DieUi.SetActive(false);
-
-      
-            #endregion
-
         }
     }
 }
