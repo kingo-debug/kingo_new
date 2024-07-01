@@ -82,7 +82,7 @@ public class TakeDamage : MonoBehaviour
         {
             if (Shield <= 0f)
             {
-                HP -= Damage;                            HPcap(); if (Refreshbar != null) { Refreshbar.UpdateHP(HP); };        StartCoroutine("Checklife");
+                HP -= Damage;                            HPcap(); if (Refreshbar != null) { Refreshbar.UpdateHP(HP); };        StartCoroutine(Checklife());
             }
             else
             {
@@ -90,7 +90,7 @@ public class TakeDamage : MonoBehaviour
                 {
                     int remainingDamage = Damage - Shield;
                     Shield = 0;
-                    HP -= remainingDamage;       HPcap(); if (Refreshbar != null) { Refreshbar.UpdateHP(HP); };           StartCoroutine("Checklife");
+                    HP -= remainingDamage;       HPcap(); if (Refreshbar != null) { Refreshbar.UpdateHP(HP); };         StartCoroutine(Checklife());
                 }
                 else
                 {

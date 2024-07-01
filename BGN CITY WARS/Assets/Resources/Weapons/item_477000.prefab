@@ -187,6 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WeaponName: Fist
   WeaponPFP: {fileID: 21300000, guid: 38d76b4b4cee091489747dcd6de211a3, type: 3}
+  WeeaponFireUi: {fileID: 0}
   Weapontype: 0
   ReticleType: 0
   Scope: 0
