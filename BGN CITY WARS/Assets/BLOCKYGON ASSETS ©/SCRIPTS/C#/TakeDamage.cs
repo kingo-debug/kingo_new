@@ -62,7 +62,7 @@ public class TakeDamage : MonoBehaviour
         {
             if (Shield <= 0f & pv.IsMine)
             {
-                HP -= Damage;   Refreshbar.UpdateHP(HP);    StartCoroutine("Checklife");
+                HP -= Damage;                         if (Refreshbar != null) { Refreshbar.UpdateHP(HP); };               StartCoroutine("Checklife");
             }
             else
             {

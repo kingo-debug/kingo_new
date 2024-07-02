@@ -607,6 +607,59 @@ MonoBehaviour:
   touchPressureBinding:
     enabled: 0
     targetList: []
+--- !u!1 &919990746913264078
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1591804645549430770}
+  - component: {fileID: 2167637284197444493}
+  m_Layer: 9
+  m_Name: HIT BOX-BODY
+  m_TagString: IRON TARGET
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1591804645549430770
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919990746913264078}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 597479458790122087}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2167637284197444493
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919990746913264078}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.3247619, y: 1.2820851, z: 4.234266}
+  m_Center: {x: 0.000404343, y: 0.60178286, z: -0.0018368661}
 --- !u!1 &971409023862461675
 GameObject:
   m_ObjectHideFlags: 0
@@ -6437,6 +6490,7 @@ GameObject:
   - component: {fileID: 5340266008420858010}
   - component: {fileID: 2719962789337876074}
   - component: {fileID: 6740751858792940890}
+  - component: {fileID: 3260380444243822146}
   - component: {fileID: 2483409628598936916}
   - component: {fileID: 5392402489459566571}
   - component: {fileID: 7130965328512485408}
@@ -6444,9 +6498,9 @@ GameObject:
   - component: {fileID: 8545043743886281042}
   - component: {fileID: 7088521787565468390}
   - component: {fileID: 6234553059839639155}
-  m_Layer: 15
+  m_Layer: 8
   m_Name: BGN CAR ROOT
-  m_TagString: Player
+  m_TagString: CAR
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6473,6 +6527,7 @@ Transform:
   - {fileID: 2804419141240903550}
   - {fileID: 1377462450326490230}
   - {fileID: 7660740720505083282}
+  - {fileID: 1591804645549430770}
   m_Father: {fileID: 5246890675479992167}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &4117213078354450595
@@ -6579,6 +6634,29 @@ MonoBehaviour:
   maxRolloffDistance: 500
   dopplerLevel: 1
   useDoppler: 1
+--- !u!114 &3260380444243822146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6337527262795883793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c89a3712084f96b409ec71075ad8e07a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 100
+  Shield: 0
+  LastDamageTook: 0
+  MaxHPStart: 0
+  hurt: 0
+  CanDie: 0
+  Dead: 0
+  RespawnTime: 5
+  Refreshbar: {fileID: 0}
+  DieUi: {fileID: 0}
+  ActivateEvent: {fileID: 0}
 --- !u!114 &2483409628598936916
 MonoBehaviour:
   m_ObjectHideFlags: 0

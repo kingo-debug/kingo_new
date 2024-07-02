@@ -397,9 +397,20 @@ public class WeaponShoot : MonoBehaviour
                             AS.PlayOneShot(BodyshotSFX, 1f);
 
                             RpcTarget RPCTYPE = new RpcTarget();
-                            if (TPV.IsMine && TPV.gameObject.tag == ("CAR"))
+                            if (TPV.gameObject.tag == ("CAR"))
                             {
-                                RPCTYPE = RpcTarget.All;
+                                #region CAR DAMAGE
+                                AS.PlayOneShot(BodyshotSFX, 1f);
+
+                                Debug.Log("CarDetected");
+
+                                //Hit Reticle Enable
+                                HitReticleCrosshair.SetActive(true);
+
+                                TakeDamage takedamage = collided.transform.parent.GetComponent<TakeDamage>();
+                                if (takedamage != null)
+                                { takedamage.Takedamage(BodyDamage); }
+                                #endregion
                             }
                             else RPCTYPE = RpcTarget.Others;
 
