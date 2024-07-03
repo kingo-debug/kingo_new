@@ -60584,8 +60584,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4928272373975374891}
-  - component: {fileID: 4614749383591296067}
-  - component: {fileID: 2954537892204018816}
+  - component: {fileID: 1834295273633486117}
   m_Layer: 2
   m_Name: Explode Event
   m_TagString: Untagged
@@ -60608,7 +60607,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 597479458790122087}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4614749383591296067
+--- !u!114 &1834295273633486117
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -60617,33 +60616,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 8942568284595879218}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e741851cba3ad425c91ecf922cc6b379, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ee364d6ce6cd2d45a19d29407827813, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _data:
-    _json: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"parent","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.Transform,
-      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"FIRE
-      EFX","value":{"$content":1,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.Transform,
-      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"EXPLODE
-      EFX","value":{"$content":2,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.Transform,
-      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
-    _objectReferences:
-    - {fileID: 597479458790122087}
-    - {fileID: 3710623630000771163}
-    - {fileID: 660693763756741976}
---- !u!114 &2954537892204018816
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8942568284595879218}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2fe5546f775c47d2820aa5e8a715f53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _data:
-    _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
-    _objectReferences:
-    - {fileID: 11400000, guid: d98d9dd3238443449a8375ecf9fc7a92, type: 2}
