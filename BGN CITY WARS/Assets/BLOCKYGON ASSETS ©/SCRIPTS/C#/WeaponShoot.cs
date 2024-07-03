@@ -375,190 +375,132 @@ public class WeaponShoot : MonoBehaviour
         //check Bodyshot
 
         void BodyShot()
-
-
-        { // SF
-
-
-            if (collided != null && collided.name == "HIT BOX-BODY")
-
-
+        {
+            if (collided != null && collided.name == "HIT BOX-BODY") //bodyshot
             {
-
-                if (TPV != null)
-                    //self shoot detect
-                    if (TPV.IsMine && TPV.gameObject.tag != ("CAR"))
-                        return;
-                    else // other online player detect
-                    {
-                        TargetHP = TPV.GetComponent<TakeDamage>().HP;
-                        if (TargetHP > 0)
-                        {
-                            AS.PlayOneShot(BodyshotSFX, 1f);
-
-                            RpcTarget RPCTYPE = new RpcTarget();
-                            if (TPV.gameObject.tag == ("CAR"))
-                            {
-                                #region CAR DAMAGE
-                                AS.PlayOneShot(BodyshotSFX, 1f);
-
-                                Debug.Log("CarDetected");
-
-                                //Hit Reticle Enable
-                                HitReticleCrosshair.SetActive(true);
-
-                                TakeDamage takedamage = collided.transform.parent.GetComponent<TakeDamage>();
-                                if (takedamage != null)
-                                { takedamage.Takedamage(BodyDamage); }
-                                #endregion
-                            }
-                            else RPCTYPE = RpcTarget.Others;
-
-                            Bodydamage();
-
-                            Debug.Log("Real Player Detected-Body");
-
-                            HitReticleCrosshair.SetActive(true);
-                        }
-     
-                    }
-
-
-
-                else if (collided.name == "HIT BOX-BODY" && TPV == null)
+                if (TPV == null)
                 {
-                    ///AI detct
-                    if (collided.CompareTag("AI"))
+                    IronTarget();
+                }
+                else if (TPV.IsMine && collided.CompareTag("Player"))
+                {
+                    return; // self shoot Detect
+                }
 
-                    {
-                        TakeDamage takedamage = collided.transform.GetComponentInParent<TakeDamage>();
-
-                        AS.PlayOneShot(BodyshotSFX, 1f);
-
-                        Debug.Log("AI Target Detected-Body");
-
-                        //Hit Reticle Enable
-                        HitReticleCrosshair.SetActive(true);
-                        takedamage.Takedamage(BodyDamage);
-
-                    }
-
-                    else
-                    {
-
-                        AS.PlayOneShot(BodyshotSFX, 1f);
-
-                        Debug.Log("Iron Target Detected-Body");
-
-                        TakeDamage takedamage = collided.transform.parent.GetComponent<TakeDamage>();
-                        if (takedamage != null)
-                        { takedamage.Takedamage(BodyDamage); }
-
-                        //Hit Reticle Enable
-                        HitReticleCrosshair.SetActive(true);
-
-
-                    }
-
+                else  if(!TPV.IsMine && collided.CompareTag("Player"))
+                {
+                    RealPlayer(); // Other Player Detect
+                }
+                else if (collided.CompareTag("Car"))
+                {
+                    CarDetect(); // car detected
                 }
 
             }
 
-            else return;
 
-        } //EF
-          //check headshot
+            void IronTarget()
+            {
+                AS.PlayOneShot(BodyshotSFX, 1f);
 
+                Debug.Log("Iron Target Detected-Body");
+
+                TakeDamage takedamage = collided.transform.parent.GetComponent<TakeDamage>();
+                if (takedamage != null)
+                { takedamage.Takedamage(BodyDamage); }
+
+                //Hit Reticle Enable
+                HitReticleCrosshair.SetActive(true);
+            }
+
+            void RealPlayer()
+            {
+                TargetHP = TPV.GetComponent<TakeDamage>().HP;
+                if (TargetHP > 0)
+                {
+                    AS.PlayOneShot(BodyshotSFX, 1f);
+
+
+                    Bodydamage();
+
+                Debug.Log("Real Player Detected-Body");
+
+                HitReticleCrosshair.SetActive(true);
+                }
+            }
+            void CarDetect()
+            {
+                AS.PlayOneShot(BodyshotSFX, 1f);
+
+                Debug.Log("CarDetected");
+
+                //Hit Reticle Enable
+                HitReticleCrosshair.SetActive(true);
+
+                TakeDamage takedamage = collided.transform.parent.GetComponent<TakeDamage>();
+                if (takedamage != null)
+                { takedamage.Takedamage(BodyDamage); }
+            }
+        } 
+        //check headshot
         void HeadShot()
+        {
 
-
-        { // SF
-
-
-            if (collided != null && collided.name == "HIT BOX-HEAD")
-
-
+            if (collided != null && collided.name == "HIT BOX-HEAD") //bodyshot
             {
-
-                if (TPV != null)
-                    //self shoot detect
-                    if (TPV.IsMine && TPV.gameObject.tag != ("CAR"))
-                        return;
-                    else // other online player detect
-                    {
-       
-          
-                            TargetHP = TPV.GetComponent<TakeDamage>().HP;
-                        TargetShield = TPV.GetComponent<TakeDamage>().Shield;
-                        if (TargetHP > 0)
-                        {
-                            AS.PlayOneShot(HeadshotSFX, 1f);
-
-                            RpcTarget RPCTYPE = new RpcTarget();
-                            if (TPV.IsMine && TPV.gameObject.tag == ("CAR"))
-                            {
-                                RPCTYPE = RpcTarget.All;
-                            }
-                            else RPCTYPE = RpcTarget.Others;
-
-                            Headdamage();
-
-                            //  TPV = collided.GetComponent<PhotonView>();
-
-                            Debug.Log("Real Player Detected-HEAD");
-
-                            //Hit Reticle Enable
-                            HitReticleCrosshair.SetActive(true);
-                        }
-
-                    }
-
-
-
-                else if (collided.name == "HIT BOX-HEAD" && TPV == null)
+                if (TPV == null)
                 {
-                    ///AI detct
-                    if (collided.CompareTag("AI"))
-
-                    {
-                        TakeDamage takedamage = collided.transform.GetComponentInParent<TakeDamage>();
-
-                        AS.PlayOneShot(HeadshotSFX, 1f);
-
-                        Debug.Log("AI Target Detected-HEAD");
-
-                        //Hit Reticle Enable
-                        HitReticleCrosshair.SetActive(true);
-                        takedamage.Takedamage(HeadDamage);
-
-                    }
-
-                    else
-                    {
-
-                        AS.PlayOneShot(HeadshotSFX, 2.5f);
-
-                        Debug.Log("Iron Target Detected-hEAD");
-
-                        TakeDamage takedamage = collided.transform.parent.GetComponent<TakeDamage>();
-                        if (takedamage != null)
-                        { takedamage.Takedamage(HeadDamage); }
-
-                        //Hit Reticle Enable
-                        HitReticleCrosshair.SetActive(true);
-
-
-                    }
-
+                    IronTarget();
+                }
+                else if (TPV.IsMine && collided.CompareTag("Player"))
+                {
+                    return; // self shoot Detect
                 }
 
+                else if (!TPV.IsMine && collided.CompareTag("Player"))
+                {
+                    RealPlayer(); // Other Player Detect
+                }
             }
 
-            else return;
 
-        } //EF
 
-    }//EF
+
+            void IronTarget()
+            {
+                AS.PlayOneShot(HeadshotSFX, 1f);
+
+                Debug.Log("Iron Target Detected-Head");
+
+                TakeDamage takedamage = collided.transform.parent.GetComponent<TakeDamage>();
+                if (takedamage != null)
+                { takedamage.Takedamage(HeadDamage); }
+
+                //Hit Reticle Enable
+                HitReticleCrosshair.SetActive(true);
+            }
+
+            void RealPlayer()
+            {
+                TargetHP = TPV.GetComponent<TakeDamage>().HP;
+                if (TargetHP > 0)
+                {
+                    AS.PlayOneShot(HeadshotSFX, 1f);
+
+
+                    Bodydamage();
+
+                    Debug.Log("Real Player Detected-Head");
+
+                    HitReticleCrosshair.SetActive(true);
+                }
+            }
+
+        }
+
+    }
+
+
 
 
     void Bodydamage()

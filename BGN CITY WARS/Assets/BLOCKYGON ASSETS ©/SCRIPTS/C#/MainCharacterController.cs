@@ -68,6 +68,9 @@ public class MainCharacterController : MonoBehaviour
     [Header("Roll System")]
     public bool Rolling;
 
+    [Space(3)]
+    [Header("IK System")]
+    public float DefaultlookIK = 0.3f;
 
     #endregion
     void Start()
@@ -383,7 +386,7 @@ public class MainCharacterController : MonoBehaviour
         }
         animator.SetBool("IS AIMING", false);
         aimik.GetIKSolver().SetIKPositionWeight(Mathf.Lerp(aimik.GetIKSolver().IKPositionWeight, -0.01f,Time.deltaTime*1.15f));
-        lookik.GetIKSolver().SetIKPositionWeight(Mathf.Lerp(lookik.GetIKSolver().IKPositionWeight, -0.01f, Time.deltaTime * 1.15f));
+        lookik.GetIKSolver().SetIKPositionWeight(Mathf.Lerp(lookik.GetIKSolver().IKPositionWeight, DefaultlookIK, Time.deltaTime * 1.15f));
         actionsVar.IsAiming = false;
         if (weaponstatus.CurrentWeapon.GetComponent<WeaponType>().Scope)
         {
