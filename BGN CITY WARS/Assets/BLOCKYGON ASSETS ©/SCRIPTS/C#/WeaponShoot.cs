@@ -391,7 +391,7 @@ public class WeaponShoot : MonoBehaviour
                 {
                     RealPlayer(); // Other Player Detect
                 }
-                else if (collided.CompareTag("Car"))
+                else if (collided.CompareTag("CAR"))
                 {
                     CarDetect(); // car detected
                 }
@@ -488,7 +488,7 @@ public class WeaponShoot : MonoBehaviour
                     AS.PlayOneShot(HeadshotSFX, 1f);
 
 
-                    Bodydamage();
+                    Headdamage();
 
                     Debug.Log("Real Player Detected-Head");
 
