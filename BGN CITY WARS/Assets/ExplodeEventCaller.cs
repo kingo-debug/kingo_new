@@ -51,10 +51,15 @@ public class ExplodeEventCaller : MonoBehaviour
             SmokeVFX.gameObject.SetActive(true);
             FireVFX.gameObject.SetActive(false);
         }
-        else if (takedamage.HP <= FireHP)
+        else if (takedamage.HP <= FireHP && takedamage.HP > 0)
         {
             SmokeVFX.gameObject.SetActive(false);
             FireVFX.gameObject.SetActive(true);
+        }
+
+        else if (takedamage.HP <= 0)
+        {
+            Explode();
         }
 
 
@@ -73,6 +78,7 @@ public class ExplodeEventCaller : MonoBehaviour
         Exploded = true;
         Debug.Log("Boomed Exploded");
         //vfx play
+        SmokeVFX.gameObject.SetActive(false);
         FireVFX.gameObject.SetActive(false);
         ExplodeVFX.gameObject.SetActive(true);
         OtherVFX.gameObject.SetActive(true);

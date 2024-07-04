@@ -224,6 +224,7 @@ MonoBehaviour:
   SwingSize: 0.25
   BodyDamage: 40
   HeadDamage: 40
+  VehcileDamageDecrease: 35
   TotalDamageDealt: 0
   AttackRange: 0.5
   BulletsFired: 0

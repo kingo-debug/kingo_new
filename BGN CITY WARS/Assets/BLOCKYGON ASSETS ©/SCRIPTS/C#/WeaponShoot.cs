@@ -17,6 +17,7 @@ public class WeaponShoot : MonoBehaviour
     public float ReloadTime;
     public int BodyDamage;
     public int HeadDamage;
+    public int VehcileDamage;
     public int TotalDamageDealt;
     public float WeaponRange;
     private UpdateKillDisplay Killcountupdate;
@@ -439,7 +440,7 @@ public class WeaponShoot : MonoBehaviour
 
                 TakeDamage takedamage = collided.transform.parent.GetComponent<TakeDamage>();
                 if (takedamage != null)
-                { takedamage.Takedamage(BodyDamage); }
+                { takedamage.Takedamage(VehcileDamage); }
             }
         } 
         //check headshot
