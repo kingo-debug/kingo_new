@@ -70,6 +70,9 @@ MonoBehaviour:
   - EnterCar
   - ExitCar
   - PlayMessageNotification
+  - Explode
+  - FireUP
+  - SmokeUP
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1

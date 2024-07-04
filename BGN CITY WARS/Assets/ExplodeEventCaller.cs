@@ -1,4 +1,5 @@
 using UnityEngine;
+using Photon.Pun;
 
 public class ExplodeEventCaller : MonoBehaviour
 {
@@ -38,9 +39,16 @@ public class ExplodeEventCaller : MonoBehaviour
     [SerializeField]
     private GameObject ObjectEvent;
 
+    private PhotonView PV;
+
     void Start()
     {
         CurrentFireDestroyStartTime = DefaultFireDestroyStartTime;
+        if (TryGetComponent<PhotonView>(out PV))
+        {
+            PV = GetComponent<PhotonView>();
+        }
+
     }
 
     // Update is called once per frame
@@ -48,18 +56,38 @@ public class ExplodeEventCaller : MonoBehaviour
     {
         if (takedamage.HP <= SmokeHP && takedamage.HP > FireHP && !SmokeVFX.gameObject.activeSelf)
         {
-            SmokeVFX.gameObject.SetActive(true);
-            FireVFX.gameObject.SetActive(false);
+            if (PV != null)
+            {
+                PV.RPC("SmokeUP", RpcTarget.All);
+            }
+            else
+            {
+                SmokeUP();
+            }
         }
         else if (takedamage.HP <= FireHP && takedamage.HP > 0)
         {
-            SmokeVFX.gameObject.SetActive(false);
-            FireVFX.gameObject.SetActive(true);
+            if (PV != null)
+            {
+                PV.RPC("FireUP", RpcTarget.All);
+            }
+            else
+            {
+                FireUP();
+            }
         }
 
         else if (takedamage.HP <= 0)
         {
-            Explode();
+            if(PV!=null)
+            {
+                PV.RPC("Explode", RpcTarget.All);
+            }
+            else
+            {
+                Explode();
+            }
+        
         }
 
 
@@ -68,11 +96,19 @@ public class ExplodeEventCaller : MonoBehaviour
           CurrentFireDestroyStartTime -= OnFireDestroySpeed * Time.deltaTime; // sub time
             if(CurrentFireDestroyStartTime <= 0)
             {
-                Explode();
+                if (PV != null)
+                {
+                    PV.RPC("Explode", RpcTarget.All);
+                }
+                else
+                {
+                    Explode();
+                }
+
             }
         }
     }
-
+    [PunRPC]
     void Explode()
     {
         Exploded = true;
@@ -92,5 +128,18 @@ public class ExplodeEventCaller : MonoBehaviour
             ObjectEvent.SetActive(true);
         }
 
+    }
+    [PunRPC]
+    void SmokeUP()
+    {
+        SmokeVFX.gameObject.SetActive(true);
+        FireVFX.gameObject.SetActive(false);
+    }
+
+    [PunRPC]
+    void FireUP()
+    {
+        SmokeVFX.gameObject.SetActive(false);
+        FireVFX.gameObject.SetActive(true);
     }
 }

@@ -71,7 +71,8 @@ public class WeaponShoot : MonoBehaviour
     private AudioClip BodyshotSFX;
     [SerializeField]
     private AudioClip HeadshotSFX;
-
+    [SerializeField]
+    private AudioClip VehicleshotSFX;
 
     private Transform PlayerParent;
     // VFX SPAWN
@@ -431,7 +432,7 @@ public class WeaponShoot : MonoBehaviour
             }
             void CarDetect()
             {
-                AS.PlayOneShot(BodyshotSFX, 1f);
+                AS.PlayOneShot(VehicleshotSFX, 1f);
 
                 Debug.Log("CarDetected");
 
