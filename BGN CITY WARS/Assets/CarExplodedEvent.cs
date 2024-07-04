@@ -8,7 +8,23 @@ public class CarExplodedEvent : MonoBehaviour
     private Transform HitBox;
     private void OnEnable()
     {
-        carenter.enabled = false;
-        HitBox.gameObject.SetActive(false);
+        if (carenter.PlayerInCar)
+        {
+            carenter.Player.GetComponent<TakeDamage>().HP = 0;
+            carenter.ExitCar();
+            carenter.enabled = false;
+            HitBox.gameObject.SetActive(false);
+            carenter.ForceOutofRange();
+
+        }
+        else
+        {
+            carenter.enabled = false;
+            HitBox.gameObject.SetActive(false);
+            carenter.ForceOutofRange();
+
+        }
+
+
     }
 }

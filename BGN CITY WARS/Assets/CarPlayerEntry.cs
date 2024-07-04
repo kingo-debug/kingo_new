@@ -102,7 +102,8 @@ public class CarPlayerEntry : MonoBehaviour
         carcontroller.Move(0, 0, 50000, 50000);
         GetComponent<AudioSource>().enabled = false;
             GetComponent<Animator>().enabled = false;
-            PlayerInCar = false;
+            Player.GetComponent<TakeDamage>().StartCoroutine("Checklife");
+        PlayerInCar = false;
         }
         else
         {           
@@ -119,5 +120,9 @@ public class CarPlayerEntry : MonoBehaviour
         }
         
     }
-
+    public void ForceOutofRange()
+    {
+        DoorUIButton.SetActive(false);
+        Player.GetComponent<CarSpawner>().CarinRange = null;
+    }
 }

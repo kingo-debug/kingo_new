@@ -25664,7 +25664,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DoorUIButton: {fileID: 0}
   Player: {fileID: 0}
-  PlayerInCar: 1
+  PlayerInCar: 0
   EnterSound: {fileID: 8300000, guid: 5387b9ed08b08714b9f4338bce2a2bba, type: 3}
   StartSound: {fileID: 8300000, guid: c75ee2325f7738c4d91ff2553d00be15, type: 3}
   EFX: {fileID: 7939460834330525136}
