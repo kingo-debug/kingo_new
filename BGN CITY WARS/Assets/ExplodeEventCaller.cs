@@ -16,7 +16,8 @@ public class ExplodeEventCaller : MonoBehaviour
     private Transform FireVFX;
     [SerializeField]
     private Transform ExplodeVFX;
-
+    [SerializeField]
+    private Transform OtherVFX;
 
     [Header("BodySystem")]
     [SerializeField]
@@ -31,7 +32,11 @@ public class ExplodeEventCaller : MonoBehaviour
     [SerializeField]
     private float CurrentFireDestroyStartTime = 10;
     [SerializeField]
-    private float OnFireDestroySpeed = 10;
+    private float OnFireDestroySpeed = 1.5f;
+
+    public bool Exploded = false;
+    [SerializeField]
+    private GameObject ObjectEvent;
 
     void Start()
     {
@@ -41,39 +46,45 @@ public class ExplodeEventCaller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(FireVFX.gameObject.activeSelf)
+        if (takedamage.HP <= SmokeHP && takedamage.HP > FireHP && !SmokeVFX.gameObject.activeSelf)
         {
-            float timer = CurrentFireDestroyStartTime - OnFireDestroySpeed * Time.deltaTime;
-            if(timer<=0)
+            SmokeVFX.gameObject.SetActive(true);
+            FireVFX.gameObject.SetActive(false);
+        }
+        else if (takedamage.HP <= FireHP)
+        {
+            SmokeVFX.gameObject.SetActive(false);
+            FireVFX.gameObject.SetActive(true);
+        }
+
+
+        if (FireVFX.gameObject.activeSelf && !Exploded)
+        {
+          CurrentFireDestroyStartTime -= OnFireDestroySpeed * Time.deltaTime; // sub time
+            if(CurrentFireDestroyStartTime <= 0)
             {
                 Explode();
             }
         }
     }
 
-    private void OnEnable()
-    {
-        if(takedamage.HP<= SmokeHP && takedamage.HP > FireHP)
-        {
-            SmokeVFX.gameObject.SetActive(true);
-            FireVFX.gameObject.SetActive(false);
-        }
-        else if(takedamage.HP > FireHP)
-        {
-            SmokeVFX.gameObject.SetActive(false);
-            FireVFX.gameObject.SetActive(true);
-        }
-    }
-
     void Explode()
     {
+        Exploded = true;
+        Debug.Log("Boomed Exploded");
         //vfx play
         FireVFX.gameObject.SetActive(false);
         ExplodeVFX.gameObject.SetActive(true);
+        OtherVFX.gameObject.SetActive(true);
         //time reset
         CurrentFireDestroyStartTime = DefaultFireDestroyStartTime;
         //BodyReplace
         DefaultBody.gameObject.SetActive(false);
         DestroyedBody.gameObject.SetActive(true);
+        if(ObjectEvent!=null)
+        {
+            ObjectEvent.SetActive(true);
+        }
+
     }
 }

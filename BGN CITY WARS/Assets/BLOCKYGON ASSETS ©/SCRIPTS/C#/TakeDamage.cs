@@ -52,7 +52,7 @@ public class TakeDamage : MonoBehaviour
         LastDamageTook = Damage;
         hurt = true;
 
-        if (ActivateEvent.transform != null)
+        if (ActivateEvent != null)
         {
             ActivateEvent.gameObject.SetActive(true);
         }
