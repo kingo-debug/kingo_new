@@ -19,6 +19,7 @@ public class CarPlayerEntry : MonoBehaviour
     [SerializeField]
     private AudioClip StartSound;
 
+    private ExplodeEventCaller explodeevent;
     [SerializeField]
     private GameObject EFX;
 
@@ -27,13 +28,14 @@ public class CarPlayerEntry : MonoBehaviour
     {
         carcontroller = GetComponent<CarController>();
         PV = GetComponent<PhotonView>();
+        explodeevent = GetComponent<ExplodeEventCaller>();
     }
     void OnTriggerEnter(Collider other)
     {
         if (PV.IsMine)
         {
             Debug.Log(other.name + "InRange");
-            if(other.CompareTag("Player")&& other.gameObject.GetComponent<PhotonView>().IsMine)
+            if(other.CompareTag("Player")&& other.gameObject.GetComponent<PhotonView>().IsMine && ! explodeevent.Exploded)
             {
                 Player = other.gameObject;
                 DoorUIButton = Player.transform.Find("PLAYER Canvas").transform.Find("CF2-Rig").transform.GetChild(0).transform.Find("CarDoor").gameObject;
@@ -48,7 +50,7 @@ public class CarPlayerEntry : MonoBehaviour
         Debug.Log(other.name + "OUTRange");
         if (other.CompareTag("Player"))
         {
-            if (PV.IsMine)
+            if (PV.IsMine &&! explodeevent.Exploded)
             {
                 DoorUIButton.SetActive(false);
                 Player.GetComponent<CarSpawner>().CarinRange = null;
