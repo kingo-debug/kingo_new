@@ -125,7 +125,8 @@ public class CarPlayerEntry : MonoBehaviour
         if(Player!=null)
         {
             DoorUIButton.SetActive(false);
+            Player.GetComponent<CarSpawner>().CarinRange = null;
         }
-        Player.GetComponent<CarSpawner>().CarinRange = null;
+     
     }
 }
