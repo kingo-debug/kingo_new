@@ -30,7 +30,6 @@ public class ExplodeEventCaller : MonoBehaviour
     [Header("FireSettings")]
     [SerializeField]
     private float DefaultFireDestroyStartTime = 10;
-    [SerializeField]
     private float CurrentFireDestroyStartTime = 10;
     [SerializeField]
     private float OnFireDestroySpeed = 1.5f;
@@ -123,11 +122,6 @@ public class ExplodeEventCaller : MonoBehaviour
         //BodyReplace
         DefaultBody.gameObject.SetActive(false);
         DestroyedBody.gameObject.SetActive(true);
-        if(ObjectEvent!=null)
-        {
-            ObjectEvent.SetActive(true);
-        }
-
     }
     [PunRPC]
     void SmokeUP()
