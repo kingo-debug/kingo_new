@@ -25690,7 +25690,6 @@ MonoBehaviour:
   DefaultBody: {fileID: 2748597113258485473}
   DestroyedBody: {fileID: 5063943658091742998}
   DefaultFireDestroyStartTime: 10
-  CurrentFireDestroyStartTime: 10
   OnFireDestroySpeed: 1.5
   Exploded: 0
   ObjectEvent: {fileID: 1711239267160259029}

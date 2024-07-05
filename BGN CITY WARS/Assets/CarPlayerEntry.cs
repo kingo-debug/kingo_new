@@ -122,7 +122,10 @@ public class CarPlayerEntry : MonoBehaviour
     }
     public void ForceOutofRange()
     {
-        DoorUIButton.SetActive(false);
+        if(Player!=null)
+        {
+            DoorUIButton.SetActive(false);
+        }
         Player.GetComponent<CarSpawner>().CarinRange = null;
     }
 }
