@@ -58,18 +58,18 @@ public class ExplodeEventCaller : MonoBehaviour
         {
             if (PV != null)
             {
-                PV.RPC("SmokeUP", RpcTarget.All);
+                PV.RPC("SmokeUP", RpcTarget.AllBuffered);
             }
             else
             {
                 SmokeUP();
             }
         }
-        else if (takedamage.HP <= FireHP && takedamage.HP > 0)
+        else if (takedamage.HP <= FireHP && takedamage.HP > 0 && !FireVFX.gameObject.activeSelf)
         {
             if (PV != null)
             {
-                PV.RPC("FireUP", RpcTarget.All);
+                PV.RPC("FireUP", RpcTarget.AllBuffered);
             }
             else
             {
@@ -77,11 +77,11 @@ public class ExplodeEventCaller : MonoBehaviour
             }
         }
 
-        else if (takedamage.HP <= 0)
+        else if (takedamage.HP <= 0 && !Exploded)
         {
             if(PV!=null)
             {
-                PV.RPC("Explode", RpcTarget.All);
+                PV.RPC("Explode", RpcTarget.AllBuffered);
             }
             else
             {
@@ -94,11 +94,11 @@ public class ExplodeEventCaller : MonoBehaviour
         if (FireVFX.gameObject.activeSelf && !Exploded)
         {
           CurrentFireDestroyStartTime -= OnFireDestroySpeed * Time.deltaTime; // sub time
-            if(CurrentFireDestroyStartTime <= 0)
+            if(CurrentFireDestroyStartTime <= 0 && !Exploded)
             {
                 if (PV != null)
                 {
-                    PV.RPC("Explode", RpcTarget.All);
+                    PV.RPC("Explode", RpcTarget.AllBuffered);
                 }
                 else
                 {
