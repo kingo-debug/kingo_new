@@ -122,6 +122,11 @@ public class ExplodeEventCaller : MonoBehaviour
         //BodyReplace
         DefaultBody.gameObject.SetActive(false);
         DestroyedBody.gameObject.SetActive(true);
+
+        if (ObjectEvent != null)
+        {
+            ObjectEvent.SetActive(true);
+        }
     }
     [PunRPC]
     void SmokeUP()
