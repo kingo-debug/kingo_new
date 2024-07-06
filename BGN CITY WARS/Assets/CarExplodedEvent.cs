@@ -6,6 +6,8 @@ public class CarExplodedEvent : MonoBehaviour
     private CarPlayerEntry carenter;
     [SerializeField]
     private Transform HitBox;
+    [SerializeField]
+    private GameObject Pointer;
     private void OnEnable()
     {
         if (carenter.PlayerInCar)
@@ -25,6 +27,6 @@ public class CarExplodedEvent : MonoBehaviour
 
         }
 
-
+        Pointer.SetActive(false);
     }
 }

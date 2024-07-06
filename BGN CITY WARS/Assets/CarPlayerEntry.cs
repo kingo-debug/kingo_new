@@ -10,6 +10,8 @@ public class CarPlayerEntry : MonoBehaviour
     private CarController carcontroller;
     [SerializeField]
     private GameObject DoorUIButton;
+    [SerializeField]
+    private GameObject CarPointer;
     public GameObject Player;
     public bool PlayerInCar = false;
 
@@ -86,7 +88,7 @@ public class CarPlayerEntry : MonoBehaviour
             GetComponent<Animator>().enabled = true;
             PlayerInCar = true;
         }
-
+        CarPointer.SetActive(false);
     }
     [PunRPC]
     public void ExitCar()
