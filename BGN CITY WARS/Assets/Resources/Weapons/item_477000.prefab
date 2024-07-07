@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1191149998940490289}
   - component: {fileID: 4016920629615224043}
   - component: {fileID: 5300186208784281812}
+  - component: {fileID: -4145790328074019264}
   m_Layer: 0
   m_Name: item_477000
   m_TagString: weapon/active
@@ -242,6 +243,19 @@ MonoBehaviour:
   CameraMain: {fileID: 0}
   DefaultReticle: {fileID: 0}
   DamageDelay: 0.25
+--- !u!114 &-4145790328074019264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4347554148320109732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d5b2ca47858d764b85854acaaa5f1e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundData: SFX
 --- !u!1 &5668487565370002603
 GameObject:
   m_ObjectHideFlags: 0

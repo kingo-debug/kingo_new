@@ -14256,6 +14256,7 @@ GameObject:
   - component: {fileID: 4757565419753623012}
   - component: {fileID: 5061724406795692844}
   - component: {fileID: 4339730538231821587}
+  - component: {fileID: -3067777638070807110}
   m_Layer: 0
   m_Name: item_477997
   m_TagString: Untagged
@@ -14364,9 +14365,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
-    _objectReferences:
-    - {fileID: 11400000, guid: 876381332148db04fad2a9201a17deef, type: 2}
+    _json: '{"nest":{"source":"Macro","macro":null,"embed":null}}'
+    _objectReferences: []
 --- !u!114 &7468093203477495779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14418,9 +14418,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WeaponName: military
   WeaponPFP: {fileID: 21300000, guid: fa87b34f7dc59a64c95fc40ebb2c4e8b, type: 3}
+  WeaponFireUi: {fileID: 0}
   Weapontype: 3
   ReticleType: 3
   Scope: 0
+  Melee: 0
+  ReloadPartsSFX: []
 --- !u!114 &4339730538231821587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14434,6 +14437,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InventorySlot: 3
+--- !u!114 &-3067777638070807110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5560666304180107751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d5b2ca47858d764b85854acaaa5f1e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundData: SFX
 --- !u!1 &5611482629760683880
 GameObject:
   m_ObjectHideFlags: 0

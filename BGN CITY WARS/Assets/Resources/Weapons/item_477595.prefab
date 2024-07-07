@@ -5016,6 +5016,7 @@ GameObject:
   - component: {fileID: 7974759447167129766}
   - component: {fileID: 2660289304864789145}
   - component: {fileID: 6027529781833821261}
+  - component: {fileID: 3867899035753412633}
   m_Layer: 0
   m_Name: item_477595
   m_TagString: weapon/active
@@ -5081,9 +5082,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
-    _objectReferences:
-    - {fileID: 11400000, guid: 876381332148db04fad2a9201a17deef, type: 2}
+    _json: '{"nest":{"source":"Macro","macro":null,"embed":null}}'
+    _objectReferences: []
 --- !u!114 &4264529886726747220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5304,9 +5304,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WeaponName: 
   WeaponPFP: {fileID: 0}
+  WeaponFireUi: {fileID: 0}
   Weapontype: 0
   ReticleType: 1
   Scope: 0
+  Melee: 0
+  ReloadPartsSFX: []
 --- !u!114 &2660289304864789145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5332,10 +5335,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f6b635b5c4f1a540ac1ac063e79b151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DefaultReticleSize: {x: -30, y: -30}
-  ReticleRecoilAmount: {x: -50, y: -50}
+  DefaultReticleSize: 0
+  AimingReticleSize: 0
+  ReticleRecoilAmount: 0
   RecoilCoolDownSpeed: 1.5
-  SpreadSpeed: 20
+  PlayerAiming: 0
+  ReticleMaxSpread: 0
+--- !u!114 &3867899035753412633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2756809065339087750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d5b2ca47858d764b85854acaaa5f1e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundData: SFX
 --- !u!1 &3155694809895205082
 GameObject:
   m_ObjectHideFlags: 0

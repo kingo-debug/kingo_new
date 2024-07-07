@@ -148,6 +148,7 @@ GameObject:
   - component: {fileID: 2074298349314621454}
   - component: {fileID: 4379951350854006841}
   - component: {fileID: 7359258913769908615}
+  - component: {fileID: 3382526319870434482}
   m_Layer: 0
   m_Name: WheelHubFrontRight
   m_TagString: Untagged
@@ -319,6 +320,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SkidTrailPrefab: {fileID: 400000, guid: 4b6aa99de5d21424eab6ae279f31475b, type: 3}
   skidParticles: {fileID: 1092780067297092262}
+--- !u!114 &3382526319870434482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471955586407498743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d5b2ca47858d764b85854acaaa5f1e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundData: SFX
 --- !u!1 &474453180653550332
 GameObject:
   m_ObjectHideFlags: 0
@@ -19663,6 +19677,7 @@ GameObject:
   - component: {fileID: 823516587851996558}
   - component: {fileID: 146644152481637729}
   - component: {fileID: 1097406916635040386}
+  - component: {fileID: 4288780730915378721}
   m_Layer: 0
   m_Name: WheelHubRearLeft
   m_TagString: Untagged
@@ -19834,6 +19849,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SkidTrailPrefab: {fileID: 400000, guid: 4b6aa99de5d21424eab6ae279f31475b, type: 3}
   skidParticles: {fileID: 1092780067297092262}
+--- !u!114 &4288780730915378721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5403964396431036349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d5b2ca47858d764b85854acaaa5f1e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundData: SFX
 --- !u!1 &5540647386803095588
 GameObject:
   m_ObjectHideFlags: 0
@@ -19846,6 +19874,7 @@ GameObject:
   - component: {fileID: 7841914072493404058}
   - component: {fileID: 5874188665786453128}
   - component: {fileID: 3697998783797620802}
+  - component: {fileID: 8298921531286567019}
   m_Layer: 0
   m_Name: WheelHubRearRight
   m_TagString: Untagged
@@ -20017,6 +20046,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SkidTrailPrefab: {fileID: 400000, guid: 4b6aa99de5d21424eab6ae279f31475b, type: 3}
   skidParticles: {fileID: 1092780067297092262}
+--- !u!114 &8298921531286567019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5540647386803095588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d5b2ca47858d764b85854acaaa5f1e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundData: SFX
 --- !u!1 &5645205936215947495
 GameObject:
   m_ObjectHideFlags: 0
@@ -20334,6 +20376,7 @@ GameObject:
   - component: {fileID: 8954410425858312648}
   - component: {fileID: 7914818948846102447}
   - component: {fileID: 2070962920793901851}
+  - component: {fileID: 1828377798108685961}
   m_Layer: 0
   m_Name: FireBall
   m_TagString: Untagged
@@ -25261,6 +25304,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1828377798108685961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6065410505655292452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d5b2ca47858d764b85854acaaa5f1e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundData: SFX
 --- !u!1 &6150946622151707180
 GameObject:
   m_ObjectHideFlags: 0
@@ -25578,6 +25634,7 @@ GameObject:
   m_Component:
   - component: {fileID: 597479458790122087}
   - component: {fileID: 4117213078354450595}
+  - component: {fileID: 1292367395454847465}
   - component: {fileID: 5340266008420858010}
   - component: {fileID: 2719962789337876074}
   - component: {fileID: 6740751858792940890}
@@ -25589,6 +25646,7 @@ GameObject:
   - component: {fileID: 6637319578924172559}
   - component: {fileID: 8545043743886281042}
   - component: {fileID: 7088521787565468390}
+  - component: {fileID: 1345257090532147478}
   - component: {fileID: 6234553059839639155}
   m_Layer: 8
   m_Name: BGN CAR ROOT
@@ -25651,6 +25709,102 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!82 &1292367395454847465
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6337527262795883793}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &5340266008420858010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25906,6 +26060,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82c7c78a99cc7f942b3f1171a172209c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1345257090532147478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6337527262795883793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d5b2ca47858d764b85854acaaa5f1e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundData: SFX
 --- !u!114 &6234553059839639155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26108,6 +26275,7 @@ GameObject:
   - component: {fileID: 1020161446877467053}
   - component: {fileID: 2254941859540504021}
   - component: {fileID: 4885746434144529107}
+  - component: {fileID: 1586333427699934310}
   m_Layer: 0
   m_Name: FireBall
   m_TagString: Untagged
@@ -31035,6 +31203,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1586333427699934310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7318750965682321799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d5b2ca47858d764b85854acaaa5f1e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundData: SFX
 --- !u!1 &7364786885456010030
 GameObject:
   m_ObjectHideFlags: 0
@@ -31113,6 +31294,7 @@ GameObject:
   - component: {fileID: 7301246258595821096}
   - component: {fileID: 2641709675128550341}
   - component: {fileID: 9040468619684575871}
+  - component: {fileID: 7265989343297701419}
   m_Layer: 0
   m_Name: WheelHubFrontLeft
   m_TagString: Untagged
@@ -31284,6 +31466,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SkidTrailPrefab: {fileID: 400000, guid: 4b6aa99de5d21424eab6ae279f31475b, type: 3}
   skidParticles: {fileID: 1092780067297092262}
+--- !u!114 &7265989343297701419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7750831023440940470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d5b2ca47858d764b85854acaaa5f1e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundData: SFX
 --- !u!1 &7870563214670295620
 GameObject:
   m_ObjectHideFlags: 0
@@ -45957,6 +46152,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6037359216223393331}
+    - targetCorrespondingSourceObject: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6523698619338471920}
   m_SourcePrefab: {fileID: 100100000, guid: e1b08032bec16ba4eb1ae23cbd572664, type: 3}
 --- !u!4 &8356369619807389628 stripped
 Transform:
@@ -46064,3 +46262,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6523698619338471920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8357455964609666608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d5b2ca47858d764b85854acaaa5f1e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundData: SFX
