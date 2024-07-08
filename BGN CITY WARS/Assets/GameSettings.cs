@@ -86,8 +86,17 @@ public class GameSettings : MonoBehaviour
         SetVolume[] objectsWithSetVolume = FindObjectsOfType<SetVolume>();
         foreach (SetVolume setVolume in objectsWithSetVolume)
         {
-            setVolume.RefreshVolume();
+            if (setVolume != null)
+            {
+                setVolume.RefreshVolume();
+            }
+            else
+            {
+                // Handle the case where the object has been destroyed
+                Debug.LogWarning("An object with SetVolume component was destroyed.");
+                // Optionally, you could remove it from the list if needed
+                // listOfSetVolumes.Remove(setVolume);
+            }
         }
     }
-
 }

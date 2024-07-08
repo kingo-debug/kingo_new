@@ -40,9 +40,9 @@ scopes = {
 	"last_search.ED0D7199" = ""
 	"OpenInspectorPreview.ED0D7199" = "0"
 	"currentGroup.ED0D7199" = "all"
-	"last_search.B007E015" = "t:AudioSource"
+	"last_search.B007E015" = "res"
 	"OpenInspectorPreview.B007E015" = "0"
-	"currentGroup.B007E015" = "scene"
+	"currentGroup.B007E015" = "all"
 	"last_search.1D7A1EDD" = "h: t:AudioSource"
 	"OpenInspectorPreview.1D7A1EDD" = "0"
 	"currentGroup.1D7A1EDD" = "scene"
@@ -128,6 +128,7 @@ objectSelectors = {
 }
 recentSearches = [
 	"h: t:AudioSource"
+	"res"
 	""
 	"h:"
 	"h: ref=<$object:none$>"
