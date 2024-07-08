@@ -128,9 +128,9 @@ objectSelectors = {
 }
 recentSearches = [
 	"h: t:AudioSource"
+	""
 	"h:"
 	"h: ref=<$object:none$>"
-	""
 	"t:AudioSource au"
 	"t:AudioSource audio so"
 	"t:AudioSource"
