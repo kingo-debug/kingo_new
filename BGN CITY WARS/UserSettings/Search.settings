@@ -43,6 +43,9 @@ scopes = {
 	"last_search.B007E015" = "t:AudioSource"
 	"OpenInspectorPreview.B007E015" = "0"
 	"currentGroup.B007E015" = "scene"
+	"last_search.1D7A1EDD" = "h: t:AudioSource"
+	"OpenInspectorPreview.1D7A1EDD" = "0"
+	"currentGroup.1D7A1EDD" = "scene"
 }
 providers = {
 	asset = {
@@ -124,9 +127,14 @@ providers = {
 objectSelectors = {
 }
 recentSearches = [
+	"h: t:AudioSource"
+	"h:"
+	"h: ref=<$object:none$>"
+	""
+	"t:AudioSource au"
+	"t:AudioSource audio so"
 	"t:AudioSource"
 	"audio sourc"
-	""
 	"sasa"
 	"p: E"
 	"p: "
@@ -136,8 +144,7 @@ searchItemFavorites = [
 savedSearchesSortOrder = 0
 showSavedSearchPanel = true
 hideTabs = false
-expandedQueries = [
-]
+expandedQueries = [961552606]
 queryBuilder = true
 ignoredProperties = "id;name;classname;imagecontentshash"
 helperWidgetCurrentArea = "h:"

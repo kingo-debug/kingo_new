@@ -11731,6 +11731,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4002844940305688552}
   - component: {fileID: 1713835899522318187}
+  - component: {fileID: 5707242794454953206}
   m_Layer: 0
   m_Name: DoorOpen
   m_TagString: Untagged
@@ -11849,6 +11850,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5707242794454953206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4299018006635459091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d5b2ca47858d764b85854acaaa5f1e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundData: SFX
 --- !u!1 &4402579110337870033
 GameObject:
   m_ObjectHideFlags: 0
@@ -19547,6 +19561,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7035231405074427720}
   - component: {fileID: 5185233187422157336}
+  - component: {fileID: 976616071232868617}
   m_Layer: 0
   m_Name: carStart SFX
   m_TagString: Untagged
@@ -19665,6 +19680,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &976616071232868617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5348091130302848644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d5b2ca47858d764b85854acaaa5f1e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundData: SFX
 --- !u!1 &5403964396431036349
 GameObject:
   m_ObjectHideFlags: 0
@@ -25635,6 +25663,7 @@ GameObject:
   - component: {fileID: 597479458790122087}
   - component: {fileID: 4117213078354450595}
   - component: {fileID: 1292367395454847465}
+  - component: {fileID: 1345257090532147478}
   - component: {fileID: 5340266008420858010}
   - component: {fileID: 2719962789337876074}
   - component: {fileID: 6740751858792940890}
@@ -25646,7 +25675,6 @@ GameObject:
   - component: {fileID: 6637319578924172559}
   - component: {fileID: 8545043743886281042}
   - component: {fileID: 7088521787565468390}
-  - component: {fileID: 1345257090532147478}
   - component: {fileID: 6234553059839639155}
   m_Layer: 8
   m_Name: BGN CAR ROOT
@@ -25805,6 +25833,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1345257090532147478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6337527262795883793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d5b2ca47858d764b85854acaaa5f1e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundData: SFX
 --- !u!114 &5340266008420858010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26060,19 +26101,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82c7c78a99cc7f942b3f1171a172209c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1345257090532147478
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6337527262795883793}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d5b2ca47858d764b85854acaaa5f1e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SoundData: SFX
 --- !u!114 &6234553059839639155
 MonoBehaviour:
   m_ObjectHideFlags: 0

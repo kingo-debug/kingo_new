@@ -15,7 +15,7 @@ public class SetVolume : MonoBehaviour
 
     private void OnEnable()
     {
-        Invoke("RefreshVolume", 0.1f);
+        Invoke("RefreshVolume", 0.01f);
     }
 
 
