@@ -89,6 +89,7 @@ public class CarPlayerEntry : MonoBehaviour
             PlayerInCar = true;
         }
         CarPointer.SetActive(false);
+        GetComponent<SetVolume>().RefreshVolume();
     }
     [PunRPC]
     public void ExitCar()
