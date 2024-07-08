@@ -40,9 +40,9 @@ scopes = {
 	"last_search.ED0D7199" = ""
 	"OpenInspectorPreview.ED0D7199" = "0"
 	"currentGroup.ED0D7199" = "all"
-	"last_search.B007E015" = "1"
+	"last_search.B007E015" = "t:AudioSource"
 	"OpenInspectorPreview.B007E015" = "0"
-	"currentGroup.B007E015" = "all"
+	"currentGroup.B007E015" = "scene"
 }
 providers = {
 	asset = {
@@ -124,6 +124,8 @@ providers = {
 objectSelectors = {
 }
 recentSearches = [
+	"t:AudioSource"
+	"audio sourc"
 	""
 	"sasa"
 	"p: E"
@@ -132,13 +134,13 @@ recentSearches = [
 searchItemFavorites = [
 ]
 savedSearchesSortOrder = 0
-showSavedSearchPanel = false
+showSavedSearchPanel = true
 hideTabs = false
 expandedQueries = [
 ]
-queryBuilder = false
+queryBuilder = true
 ignoredProperties = "id;name;classname;imagecontentshash"
-helperWidgetCurrentArea = "all"
+helperWidgetCurrentArea = "h:"
 disabledIndexers = ""
 minIndexVariations = 2
 findProviderIndexHelper = true

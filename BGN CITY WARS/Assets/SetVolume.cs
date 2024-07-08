@@ -5,9 +5,22 @@ public class SetVolume : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField]
     string SoundData;
+    private AudioSource AS;
 
     void Start()
     {
-       GetComponent<AudioSource>().volume = ES3.Load<float>(SoundData);
+        AS = GetComponent<AudioSource>();
+        RefreshVolume();
+    }
+
+    private void OnEnable()
+    {
+        Invoke("RefreshVolume", 0.1f);
+    }
+
+
+    public void RefreshVolume()
+    {
+        AS.volume = ES3.Load<float>(SoundData);
     }
 }

@@ -81,6 +81,13 @@ public class GameSettings : MonoBehaviour
         SFXSlider.transform.GetChild(2).GetComponent<Text>().text = integerValue.ToString();
 
         SFXAS.volume = ES3.Load<float>("SFX"); // update SFX volume
+
+        // Find all objects with the SetVolume component and call RefreshVolume on each
+        SetVolume[] objectsWithSetVolume = FindObjectsOfType<SetVolume>();
+        foreach (SetVolume setVolume in objectsWithSetVolume)
+        {
+            setVolume.RefreshVolume();
+        }
     }
 
 }
