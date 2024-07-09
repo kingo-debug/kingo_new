@@ -14,6 +14,8 @@ public class CarPlayerEntry : MonoBehaviour
     private GameObject CarPointer;
     public GameObject Player;
     public bool PlayerInCar = false;
+    [SerializeField]
+    private UIBarRefresh HpUiBar;
 
     [Header("SFX")]
     [SerializeField]
@@ -31,6 +33,8 @@ public class CarPlayerEntry : MonoBehaviour
         carcontroller = GetComponent<CarController>();
         PV = GetComponent<PhotonView>();
         explodeevent = GetComponent<ExplodeEventCaller>();
+      
+
     }
     void OnTriggerEnter(Collider other)
     {
@@ -90,6 +94,7 @@ public class CarPlayerEntry : MonoBehaviour
         }
         CarPointer.SetActive(false);
         GetComponent<SetVolume>().RefreshVolume();
+        HpUiBar.UpdateHP(GetComponent<TakeDamage>().HP);
     }
     [PunRPC]
     public void ExitCar()
