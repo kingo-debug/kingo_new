@@ -27090,6 +27090,9 @@ MonoBehaviour:
   m_RevRangeBoundary: 1
   m_SlipLimit: 1
   m_BrakeTorque: 20000
+  Speed: 0
+  smoothingFactor: 0.1
+  SpeedUI: {fileID: 7164701302237544182}
 --- !u!114 &2719962789337876074
 MonoBehaviour:
   m_ObjectHideFlags: 0
