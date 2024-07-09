@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using TMPro;
 
 #pragma warning disable 649
 namespace UnityStandardAssets.Vehicles.Car
@@ -37,6 +38,13 @@ namespace UnityStandardAssets.Vehicles.Car
         [SerializeField] private float m_RevRangeBoundary = 1f;
         [SerializeField] private float m_SlipLimit;
         [SerializeField] private float m_BrakeTorque;
+
+        public float Speed;
+        private float smoothedSpeed = 0f;
+        [SerializeField]  private float smoothingFactor = 0.1f; // Adjust this factor to smooth more or less
+        [SerializeField]
+        private TMPro.TextMeshProUGUI SpeedUI;
+
 
         private Quaternion[] m_WheelMeshLocalRotations;
         private Vector3 m_Prevpos, m_Pos;
@@ -175,24 +183,34 @@ namespace UnityStandardAssets.Vehicles.Car
 
         private void CapSpeed()
         {
-            float speed = m_Rigidbody.velocity.magnitude;
+            // Calculate the raw speed
+            float rawSpeed = m_Rigidbody.velocity.magnitude;
+
+            // Convert raw speed to the appropriate unit
             switch (m_SpeedType)
             {
                 case SpeedType.MPH:
-
-                    speed *= 2.23693629f;
-                    if (speed > m_Topspeed)
-                        m_Rigidbody.velocity = (m_Topspeed/2.23693629f) * m_Rigidbody.velocity.normalized;
+                    rawSpeed *= 2.23693629f;
                     break;
 
                 case SpeedType.KPH:
-                    speed *= 3.6f;
-                    if (speed > m_Topspeed)
-                        m_Rigidbody.velocity = (m_Topspeed/3.6f) * m_Rigidbody.velocity.normalized;
+                    rawSpeed *= 3.6f;
                     break;
             }
-        }
 
+            // Apply smoothing
+            smoothedSpeed = Mathf.Lerp(smoothedSpeed, rawSpeed, smoothingFactor);
+
+            // Cap the speed if it exceeds the top speed
+            if (smoothedSpeed > m_Topspeed)
+            {
+                m_Rigidbody.velocity = (m_Topspeed / (m_SpeedType == SpeedType.MPH ? 2.23693629f : 3.6f)) * m_Rigidbody.velocity.normalized;
+                smoothedSpeed = m_Topspeed;
+            }
+
+            // Display the smoothed speed as an integer
+            SpeedUI.text = Mathf.RoundToInt(smoothedSpeed).ToString();
+        }
 
         private void ApplyDrive(float accel, float footbrake)
         {

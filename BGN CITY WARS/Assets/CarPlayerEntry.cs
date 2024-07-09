@@ -47,6 +47,7 @@ public class CarPlayerEntry : MonoBehaviour
                 DoorUIButton = Player.transform.Find("PLAYER Canvas").transform.Find("CF2-Rig").transform.GetChild(0).transform.Find("CarDoor").gameObject;
                 DoorUIButton.SetActive(true);
                 Player.GetComponent<CarSpawner>().CarinRange = gameObject;
+
             }
         }
     }
