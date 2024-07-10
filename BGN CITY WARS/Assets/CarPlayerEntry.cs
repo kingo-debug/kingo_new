@@ -27,6 +27,9 @@ public class CarPlayerEntry : MonoBehaviour
     [SerializeField]
     private GameObject EFX;
 
+    [SerializeField]
+    private LayerMask ExitPointCheck;
+
 
     private void Start()
     {
@@ -102,25 +105,50 @@ public class CarPlayerEntry : MonoBehaviour
     {
         if (PV.IsMine)
         {
-        Player.transform.position = transform.Find("EXIT POINTS").transform.Find("LEFT").transform.position;
-        transform.parent.GetChild(1).gameObject.SetActive(false); // Car Cameras Disable
-        transform.Find("CAR CANVAS").transform.GetChild(0).gameObject.SetActive(false); // disable car canvas
-        GetComponent<CarController>().enabled = false; // disable car controller
-        GetComponent<CarUserControl>().enabled = false; //disable car controls
-        Player.transform.root.gameObject.SetActive(true); // Enable Player
-        carcontroller.Move(0, 0, 50000, 50000);
-        GetComponent<AudioSource>().enabled = false;
+            Transform exitPoints = transform.Find("EXIT POINTS");
+            Transform leftExit = exitPoints.Find("LEFT");
+            Transform rightExit = exitPoints.Find("RIGHT");
+            Transform topExit = exitPoints.Find("TOP");
+
+            Transform selectedExit = leftExit; // default to left
+
+            if (Physics.Raycast(rightExit.position, Vector3.down, 1f, ExitPointCheck))
+            {
+                if (Physics.Raycast(leftExit.position, Vector3.down, 1f, ExitPointCheck))
+                {
+                    selectedExit = topExit; // both left and right blocked, use top
+                }
+                else
+                {
+                    selectedExit = leftExit; // right blocked, use left
+                }
+            }
+            else
+            {
+                selectedExit = rightExit; // right not blocked, use right
+            }
+
+            Player.transform.position = selectedExit.position;
+
+            transform.parent.GetChild(1).gameObject.SetActive(false); // Car Cameras Disable
+            transform.Find("CAR CANVAS").transform.GetChild(0).gameObject.SetActive(false); // disable car canvas
+            GetComponent<CarController>().enabled = false; // disable car controller
+            GetComponent<CarUserControl>().enabled = false; //disable car controls
+            Player.transform.root.gameObject.SetActive(true); // Enable Player
+            carcontroller.Move(0, 0, 50000, 50000);
+            GetComponent<AudioSource>().enabled = false;
             GetComponent<Animator>().enabled = false;
             Player.GetComponent<TakeDamage>().StartCoroutine("Checklife");
-        PlayerInCar = false;
+            PlayerInCar = false;
         }
         else
-        {           
+        {
             GetComponent<AudioSource>().enabled = false;
             GetComponent<Animator>().enabled = false;
             PlayerInCar = false;
         }
     }
+
     private void Update()
     {
         if(ControlFreak2.CF2Input.GetKeyDown(KeyCode.E) && PlayerInCar)
