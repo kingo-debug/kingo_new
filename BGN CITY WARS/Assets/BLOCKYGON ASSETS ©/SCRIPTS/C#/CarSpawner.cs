@@ -105,6 +105,7 @@ public void SpawnCar()
                 IsSpawned = true;
                 vehicleCoolDown.SpawnTimeValue = SpawnTime;
                 vehicleCoolDown.Ready = false;
+                CarinRange.GetComponent<CarPlayerEntry>().ForceOutofRange();
             }
 
             else
@@ -117,7 +118,7 @@ public void SpawnCar()
             }
 
         }
-    }
+}
 
 
 }//EC
