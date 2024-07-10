@@ -33,11 +33,14 @@ public class TakeDamage : MonoBehaviour
     private void Start()
     {
         int MaxHP = 100;
-        if(MaxHPStart)
+        if (MaxHPStart)
         {
             HP = MaxHP;
+            if (Refreshbar != null)
+            {
+                Refreshbar.UpdateHP(HP);
+            }
         }
-     
         pv = this.GetComponent<PhotonView>();
         if(CanDie)
         {

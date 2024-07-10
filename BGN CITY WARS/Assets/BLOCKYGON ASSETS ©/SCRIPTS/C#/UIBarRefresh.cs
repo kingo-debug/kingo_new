@@ -13,7 +13,7 @@ public class UIBarRefresh : MonoBehaviour
 
     private void Start()
     {
-        Hp = 100;
+    //    Hp = 100;
         UpdateHP(Hp);
     }
     public void UpdateHP(int HP)

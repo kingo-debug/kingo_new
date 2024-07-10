@@ -27466,7 +27466,7 @@ MonoBehaviour:
   HP: 100
   Shield: 0
   LastDamageTook: 0
-  MaxHPStart: 0
+  MaxHPStart: 1
   hurt: 0
   CanDie: 0
   Dead: 0
