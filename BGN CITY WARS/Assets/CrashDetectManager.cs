@@ -13,8 +13,10 @@ public class CrashDetectManager : MonoBehaviour
 
     [SerializeField]
     private float MinSpeedCrash;
-
+    [SerializeField]
+    private float CrashDamageAdjust = 3f;
     private AudioSource AS;
+    private TakeDamage takedamage;
 
 
     // Start is called before the first frame update
@@ -22,15 +24,23 @@ public class CrashDetectManager : MonoBehaviour
     {
         carcontroller = GetComponent<CarController>();
        AS = transform.Find("ETC").Find("Audio Source").gameObject.GetComponent<AudioSource>();
+        takedamage = GetComponent<TakeDamage>();
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.name);
-        if (carcontroller.smoothedSpeed> MinSpeedCrash)
+        if (!other.CompareTag("Player")&& carcontroller.smoothedSpeed> MinSpeedCrash)
         {
-            AS.PlayOneShot(Crash1SFX);
+            AS.PlayOneShot(Crash1SFX);  // damage car enviremental crash
+            takedamage.Takedamage(Mathf.RoundToInt(carcontroller.smoothedSpeed/2));
         }
-       
+
+        else if (other.CompareTag("Player") && carcontroller.smoothedSpeed > MinSpeedCrash)
+
+        {
+            other.GetComponent<Animator>().SetLayerWeight(3, 1);
+            other.GetComponent<TakeDamage>().Takedamage(Mathf.RoundToInt(carcontroller.smoothedSpeed / 2));
+        }
+
     }
 }

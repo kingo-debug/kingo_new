@@ -12951,7 +12951,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0.771
+      value: 0.134
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -27495,7 +27495,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -27666,7 +27666,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Crash1SFX: {fileID: 8300000, guid: ffda69ef07257904db14a905cc4e86a3, type: 3}
   Crash2SF: {fileID: 0}
-  MinSpeedCrash: 5
+  MinSpeedCrash: 25
+  CrashDamageAdjust: 3
 --- !u!114 &2483409628598936916
 MonoBehaviour:
   m_ObjectHideFlags: 0
