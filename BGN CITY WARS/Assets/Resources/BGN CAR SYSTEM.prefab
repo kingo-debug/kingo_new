@@ -27368,7 +27368,7 @@ GameObject:
   - component: {fileID: 5549064523054342136}
   - component: {fileID: 2483409628598936916}
   - component: {fileID: 5392402489459566571}
-  - component: {fileID: 4356948135534074334}
+  - component: {fileID: 1079256651813671795}
   - component: {fileID: 7130965328512485408}
   - component: {fileID: 2910670010552543276}
   - component: {fileID: 6637319578924172559}
@@ -27724,7 +27724,7 @@ MonoBehaviour:
     InterpolateOption: 0
     InterpolateMoveTowardsSpeed: 1
     InterpolateLerpSpeed: 0
---- !u!65 &4356948135534074334
+--- !u!65 &1079256651813671795
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -27743,8 +27743,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.372496, y: 1.1515023, z: 0.07929951}
-  m_Center: {x: -0.000010281801, y: 0.66676223, z: 2.1584926}
+  m_Size: {x: 2.372496, y: 0.6182249, z: 0.07929945}
+  m_Center: {x: -0.000008891994, y: 0.7829935, z: 2.158491}
 --- !u!135 &7130965328512485408
 SphereCollider:
   m_ObjectHideFlags: 0
