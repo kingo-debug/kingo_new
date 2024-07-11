@@ -40,7 +40,7 @@ namespace UnityStandardAssets.Vehicles.Car
         [SerializeField] private float m_BrakeTorque;
 
         public float Speed;
-        private float smoothedSpeed = 0f;
+        public float smoothedSpeed = 0f;
         [SerializeField]  private float smoothingFactor = 0.1f; // Adjust this factor to smooth more or less
         [SerializeField]
         private TMPro.TextMeshProUGUI SpeedUI;

@@ -27,7 +27,7 @@ public class CrashDetectManager : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log(other.name);
-        if (carcontroller.Speed> MinSpeedCrash)
+        if (carcontroller.smoothedSpeed> MinSpeedCrash)
         {
             AS.PlayOneShot(Crash1SFX);
         }
