@@ -21,7 +21,7 @@ public class CrashDetectManager : MonoBehaviour
     void Start()
     {
         carcontroller = GetComponent<CarController>();
-       AS = GetComponent<AudioSource>();
+       AS = transform.Find("ETC").Find("Audio Source").gameObject.GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter(Collider other)
