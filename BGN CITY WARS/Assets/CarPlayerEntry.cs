@@ -112,9 +112,9 @@ public class CarPlayerEntry : MonoBehaviour
 
             Transform selectedExit = leftExit; // default to left
 
-            if (Physics.Raycast(rightExit.position, Vector3.down, 1f, ExitPointCheck))
+            if (Physics.Raycast(transform.position, -Vector3.right, 1f, ExitPointCheck))
             {
-                if (Physics.Raycast(leftExit.position, Vector3.down, 1f, ExitPointCheck))
+                if (Physics.Raycast(transform.position, Vector3.right, 1f, ExitPointCheck))
                 {
                     selectedExit = topExit; // both left and right blocked, use top
                 }
