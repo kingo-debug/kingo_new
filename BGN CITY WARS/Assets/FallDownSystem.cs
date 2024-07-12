@@ -15,10 +15,11 @@ public class FallDownSystem : MonoBehaviour
     [PunRPC]
     public void FallDown()
     {
+        
         animator.SetLayerWeight(3, 1);
         animator.SetBool("FellDown", true);
 
-
+        characterController.enabled = false;
         mainCharacterController.enabled = false;
         mainCharacterController.StopAim();
         mainCharacterController.Combatmode = false;
