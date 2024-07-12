@@ -1144,7 +1144,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -27436,7 +27436,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 1
+  m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!82 &1292367395454847465
@@ -27682,7 +27682,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ObservedComponentsFoldoutOpen: 1
   Group: 0
-  prefixField: 0
+  prefixField: -1
   Synchronization: 1
   OwnershipTransfer: 0
   observableSearch: 2
@@ -27690,8 +27690,8 @@ MonoBehaviour:
   - {fileID: 5392402489459566571}
   - {fileID: 6234553059839639155}
   sceneViewId: 0
-  InstantiationId: 1011
-  isRuntimeInstantiated: 1
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!114 &5392402489459566571
 MonoBehaviour:
   m_ObjectHideFlags: 0

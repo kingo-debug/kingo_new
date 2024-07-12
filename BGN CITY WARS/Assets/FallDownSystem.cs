@@ -4,11 +4,13 @@ public class FallDownSystem : MonoBehaviour
 {
     private Animator animator;
     private MainCharacterController mainCharacterController;
+    private CharacterController characterController;
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
         mainCharacterController = GetComponent<MainCharacterController>();
+        characterController = GetComponent<CharacterController>();
     }
     [PunRPC]
     public void FallDown()
@@ -29,6 +31,7 @@ public class FallDownSystem : MonoBehaviour
         animator.SetBool("FellDown", false);
         animator.SetLayerWeight(3, 0);
         mainCharacterController.enabled = true;
+        characterController.enabled = true;
 
 
 

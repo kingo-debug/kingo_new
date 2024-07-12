@@ -14,7 +14,11 @@ public class CrashDetectManager : MonoBehaviour
     [SerializeField]
     private float MinSpeedCrash;
     [SerializeField]
+    private float MinSpeedRunOver = 5f;
+    [SerializeField]
     private float CrashDamageAdjust = 3f;
+    [SerializeField]
+    private float PlayersDamageAdjust = 1.5f;
     private AudioSource AS;
     private TakeDamage takedamage;
 
@@ -35,11 +39,12 @@ public class CrashDetectManager : MonoBehaviour
             takedamage.Takedamage(Mathf.RoundToInt(carcontroller.smoothedSpeed/ CrashDamageAdjust));
         }
 
-        else if (other.CompareTag("Player") && carcontroller.smoothedSpeed > MinSpeedCrash) 
+        else if (other.CompareTag("Player") && carcontroller.smoothedSpeed > MinSpeedRunOver) 
             // Run over players
         {
-            other.GetComponent<PhotonView>().RPC("FallDown", RpcTarget.Others);
-            other.GetComponent<TakeDamage>().Takedamage(Mathf.RoundToInt(carcontroller.smoothedSpeed / 2));
+            other.GetComponent<CharacterController>().enabled = false;
+            other.GetComponent<PhotonView>().RPC("FallDown", RpcTarget.Others); // trip other player
+            other.GetComponent<PhotonView>().RPC("Takedamage", RpcTarget.Others, Mathf.RoundToInt(carcontroller.smoothedSpeed / PlayersDamageAdjust)); // damage other player
         }
 
     }
