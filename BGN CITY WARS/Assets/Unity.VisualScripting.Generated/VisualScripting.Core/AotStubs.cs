@@ -974,6 +974,9 @@ namespace Unity.VisualScripting.Generated.Aot
 	// BackupStateManager.op_Implicit
 	// BackupStateManager.op_Equality
 	// BackupStateManager.op_Inequality
+	// BillBoard2D.op_Implicit
+	// BillBoard2D.op_Equality
+	// BillBoard2D.op_Inequality
 	// BlockTouchInJoystickArea.op_Implicit
 	// BlockTouchInJoystickArea.op_Equality
 	// BlockTouchInJoystickArea.op_Inequality
@@ -1253,6 +1256,9 @@ namespace Unity.VisualScripting.Generated.Aot
 	// CarAddOnSystems.op_Implicit
 	// CarAddOnSystems.op_Equality
 	// CarAddOnSystems.op_Inequality
+	// CarExplodedEvent.op_Implicit
+	// CarExplodedEvent.op_Equality
+	// CarExplodedEvent.op_Inequality
 	// CarManager.op_Implicit
 	// CarManager.op_Equality
 	// CarManager.op_Inequality
@@ -1274,6 +1280,9 @@ namespace Unity.VisualScripting.Generated.Aot
 	// CoinsUItext.op_Implicit
 	// CoinsUItext.op_Equality
 	// CoinsUItext.op_Inequality
+	// CrashDetectManager.op_Implicit
+	// CrashDetectManager.op_Equality
+	// CrashDetectManager.op_Inequality
 	// cSharpTest_.op_Implicit
 	// cSharpTest_.op_Equality
 	// cSharpTest_.op_Inequality
@@ -1310,9 +1319,15 @@ namespace Unity.VisualScripting.Generated.Aot
 	// EquipPrimary.op_Implicit
 	// EquipPrimary.op_Equality
 	// EquipPrimary.op_Inequality
+	// ExplodeEventCaller.op_Implicit
+	// ExplodeEventCaller.op_Equality
+	// ExplodeEventCaller.op_Inequality
 	// FallDamage.op_Implicit
 	// FallDamage.op_Equality
 	// FallDamage.op_Inequality
+	// FallDownSystem.op_Implicit
+	// FallDownSystem.op_Equality
+	// FallDownSystem.op_Inequality
 	// FrameRateManager.op_Implicit
 	// FrameRateManager.op_Equality
 	// FrameRateManager.op_Inequality
@@ -2580,18 +2595,18 @@ namespace Unity.VisualScripting.Generated.Aot
 	// Photon.Pun.PhotonView.IsMine
 	// UnityEngine.GameObject.Destroy
 	// UnityEngine.Input.GetKey
-	// UnityEngine.Transform.Find
-	// UnityEngine.Transform.position
 	// UnityEngine.Transform.LookAt
+	// UnityEngine.Transform.position
+	// UnityEngine.Transform.Find
 	// UnityEngine.Debug.Log
 	// UnityEngine.UI.Text.text
 	// UnityEngine.GameObject.Find
 	// UnityEngine.SkinnedMeshRenderer.material
 	// UnityEngine.UI.Image.color
 	// UnityEngine.Transform.root
-	// UnityEngine.Random.Range
-	// UnityEngine.Camera.main
 	// UnityEngine.Transform.childCount
+	// UnityEngine.Camera.main
+	// UnityEngine.Random.Range
 	// UnityEngine.Resources.Load
 	// SkinData.SkinMaterial
 	// UnityEngine.Component.GetComponent
@@ -2599,9 +2614,9 @@ namespace Unity.VisualScripting.Generated.Aot
 	// PhotonSerializerBGN.SkinID
 	// int.ToString
 	// UnityEngine.Component.GetComponentInParent
-	// WeaponStatus.CurrentClip
 	// TMPro.TextMeshProUGUI.text
 	// WeaponStatus.TotalAmmo
+	// WeaponStatus.CurrentClip
 	// PlayerActionsVar.InventoryTrack
 	// object.ToString
 	// Photon.Pun.PhotonView.Owner
@@ -2640,41 +2655,16 @@ namespace Unity.VisualScripting.Generated.Aot
 	// ControlFreak2.TouchButton.SetRig
 	// ControlFreak2.DynamicRegion.SetRig
 	// UserStatus.Skin
-	// UnityEngine.Transform.localPosition
-	// UnityEngine.Transform.localScale
-	// UnityEngine.MeshRenderer.enabled
-	// UnityEngine.GameObject.GetComponent
-	// WeaponShoot.Reloading
-	// UnityEngine.Animator.SetFloat
-	// WeaponShoot.ReloadTime
-	// UnityEngine.AudioSource.pitch
-	// WeaponShoot.FireRate
-	// UnityEngine.Transform.name
-	// WeaponShoot.enabled
-	// UnityEngine.RectTransform.sizeDelta
-	// UnityEngine.Vector2.ClampMagnitude
-	// UnityEngine.Vector2.y
-	// WeaponShoot.MaxAmmo
-	// WeaponShoot.totalammo
-	// WeaponShoot.MaxClip
-	// WeaponShoot.currentclip
-	// WeaponShoot.StopAllCoroutines
-	// UnityEngine.AudioSource.Stop
-	// Shotgun.StopAllCoroutines
-	// Shotgun.enabled
-	// UnityEngine.Input.GetKeyDown
-	// WeaponShoot.BulletTrailVFX
-	// UnityEngine.Component.GetComponentsInChildren
-	// MeleWeapon.ButtonFired
-	// Photon.Realtime.Player.ToString
 	// UnityEngine.GameObject.GetComponentInParent
 	// WeaponStatus.NoAmmo
 	// PlayerActionsVar.IsReloading
 	// UnityEngine.WheelCollider.motorTorque
 	// UnityEngine.Rigidbody.centerOfMass
+	// UnityEngine.Transform.localPosition
 	// UnityEngine.WheelCollider.sidewaysFriction
 	// UnityEngine.WheelFrictionCurve.stiffness
 	// UnityEngine.WheelCollider.brakeTorque
+	// UnityEngine.AudioSource.pitch
 	// UnityEngine.WheelCollider.isGrounded
 	// UnityEngine.WheelCollider.GetWorldPose
 	// UnityEngine.Mathf.Round
@@ -2685,14 +2675,16 @@ namespace Unity.VisualScripting.Generated.Aot
 	// int.TryParse
 	// UnityEngine.RectTransform.localScale
 	// UnityEngine.Quaternion.identity
+	// UnityEngine.Input.GetKeyDown
 	// PlayerActionsVar.canfire
 	// PlayerActionsVar.IsAiming
 	// PlayerActionsVar.Sprinting
 	// PhotonSerializerBGN.CurrentWeaponType
 	// PlayerActionsVar.Fired
 	// PlayerActionsVar.Combat
-	// TakeDamage.HP
 	// UnityEngine.BoxCollider.enabled
+	// UnityEngine.MeshRenderer.enabled
+	// TakeDamage.HP
 	// Cinemachine.Examples.PlayerTransformcontrol.enabled
 	// UnityEngine.Animator.SetLayerWeight
 	// UnityEngine.Animator.GetLayerWeight
@@ -2700,6 +2692,7 @@ namespace Unity.VisualScripting.Generated.Aot
 	// UnityEngine.Input.GetAxisRaw
 	// ControlFreak2.TouchJoystick.GetVector
 	// UnityEngine.Vector2.x
+	// UnityEngine.Vector2.y
 	// UnityEngine.Vector3.ClampMagnitude
 	// UnityEngine.Vector3.Normalize
 	// UnityEngine.Transform.forward
@@ -2741,7 +2734,6 @@ namespace Unity.VisualScripting.Generated.Aot
 	// SpeedCheck.speed
 	// UnityEngine.Application.targetFrameRate
 	// WeaponShoot.bodyshotHit
-	// Cinemachine.Examples.PlayerTransformcontrol.joystickAxis
 	// UnityEngine.UI.Image.fillAmount
 	// TakeDamage.Shield
 	// RootMotion.FinalIK.AimIK.enabled
@@ -2756,6 +2748,8 @@ namespace Unity.VisualScripting.Generated.Aot
 	// PhotonSerializerBGN.Shield
 	// CamModes.enabled
 	// Photon.Pun.PhotonNetwork.SerializationRate
+	// WeaponShoot.ReloadTime
+	// UnityEngine.Animator.SetFloat
 	// UnityEngine.Animator.SetInteger
 	// UnityEngine.Animator.SetFloat
 	// float.IsNaN
@@ -2772,11 +2766,14 @@ namespace Unity.VisualScripting.Generated.Aot
 	// UnityEngine.Rigidbody.isKinematic
 	// UnityEngine.SphereCollider.enabled
 	// UnityEngine.Rigidbody.useGravity
-	// PlayerScores.TotalRoomKills
-	// PlayerActionsVar.TotalRoomkillsTrack
+	// UnityEngine.Component.GetComponentsInChildren
+	// UnityEngine.AudioSource.Stop
 	// PhotonSerializerBGN.PlayerNickName
 	// PlayerScores.PlayerName
+	// PlayerScores.TotalRoomKills
+	// PlayerActionsVar.TotalRoomkillsTrack
 	// UnityEngine.Object..ctor
+	// UnityEngine.Transform.name
 	// Unity.VisualScripting.ScriptMachine.enabled
 	// Unity.VisualScripting.StateMachine.enabled
 	// UnityEngine.MeshRenderer.material
@@ -2795,8 +2792,8 @@ namespace Unity.VisualScripting.Generated.Aot
 	// UnityEngine.SkinnedMeshRenderer.materials
 	// TakeDamage.LastDamageTook
 	// --------------- Scene Stubs
-	// UnityEngine.UI.Slider.value
 	// float.ToString
+	// UnityEngine.UI.Slider.value
 	// --------------- Scene Stubs
 	// Photon.Pun.PhotonNetwork.CountOfRooms
 	// UnityEngine.RectTransform.GetChild
@@ -14032,6 +14029,41 @@ namespace Unity.VisualScripting.Generated.Aot
 			optimized.Invoke(default(object[]));
 		}
 		
+		// BillBoard2D.op_Implicit
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void BillBoard2D_op_Implicit()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			bool conversion = ((bool)(arg0));
+			global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, bool> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// BillBoard2D.op_Equality
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void BillBoard2D_op_Equality()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+			bool @operator = (arg0 == arg1);
+			global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0, arg1);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// BillBoard2D.op_Inequality
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void BillBoard2D_op_Inequality()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+			bool @operator = (arg0 != arg1);
+			global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0, arg1);
+			optimized.Invoke(default(object[]));
+		}
+		
 		// BlockTouchInJoystickArea.op_Implicit
 		[global::UnityEngine.Scripting.PreserveAttribute()]
 		public static void BlockTouchInJoystickArea_op_Implicit()
@@ -17287,6 +17319,41 @@ namespace Unity.VisualScripting.Generated.Aot
 			optimized.Invoke(default(object[]));
 		}
 		
+		// CarExplodedEvent.op_Implicit
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void CarExplodedEvent_op_Implicit()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			bool conversion = ((bool)(arg0));
+			global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, bool> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// CarExplodedEvent.op_Equality
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void CarExplodedEvent_op_Equality()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+			bool @operator = (arg0 == arg1);
+			global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0, arg1);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// CarExplodedEvent.op_Inequality
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void CarExplodedEvent_op_Inequality()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+			bool @operator = (arg0 != arg1);
+			global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0, arg1);
+			optimized.Invoke(default(object[]));
+		}
+		
 		// CarManager.op_Implicit
 		[global::UnityEngine.Scripting.PreserveAttribute()]
 		public static void CarManager_op_Implicit()
@@ -17523,6 +17590,41 @@ namespace Unity.VisualScripting.Generated.Aot
 		// CoinsUItext.op_Inequality
 		[global::UnityEngine.Scripting.PreserveAttribute()]
 		public static void CoinsUItext_op_Inequality()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+			bool @operator = (arg0 != arg1);
+			global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0, arg1);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// CrashDetectManager.op_Implicit
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void CrashDetectManager_op_Implicit()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			bool conversion = ((bool)(arg0));
+			global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, bool> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// CrashDetectManager.op_Equality
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void CrashDetectManager_op_Equality()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+			bool @operator = (arg0 == arg1);
+			global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0, arg1);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// CrashDetectManager.op_Inequality
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void CrashDetectManager_op_Inequality()
 		{
 			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
 			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
@@ -17952,6 +18054,41 @@ namespace Unity.VisualScripting.Generated.Aot
 			optimized.Invoke(default(object[]));
 		}
 		
+		// ExplodeEventCaller.op_Implicit
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void ExplodeEventCaller_op_Implicit()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			bool conversion = ((bool)(arg0));
+			global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, bool> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// ExplodeEventCaller.op_Equality
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void ExplodeEventCaller_op_Equality()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+			bool @operator = (arg0 == arg1);
+			global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0, arg1);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// ExplodeEventCaller.op_Inequality
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void ExplodeEventCaller_op_Inequality()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+			bool @operator = (arg0 != arg1);
+			global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0, arg1);
+			optimized.Invoke(default(object[]));
+		}
+		
 		// FallDamage.op_Implicit
 		[global::UnityEngine.Scripting.PreserveAttribute()]
 		public static void FallDamage_op_Implicit()
@@ -17978,6 +18115,41 @@ namespace Unity.VisualScripting.Generated.Aot
 		// FallDamage.op_Inequality
 		[global::UnityEngine.Scripting.PreserveAttribute()]
 		public static void FallDamage_op_Inequality()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+			bool @operator = (arg0 != arg1);
+			global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0, arg1);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// FallDownSystem.op_Implicit
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void FallDownSystem_op_Implicit()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			bool conversion = ((bool)(arg0));
+			global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, bool> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// FallDownSystem.op_Equality
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void FallDownSystem_op_Equality()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+			bool @operator = (arg0 == arg1);
+			global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0, arg1);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// FallDownSystem.op_Inequality
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void FallDownSystem_op_Inequality()
 		{
 			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
 			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
@@ -32742,14 +32914,14 @@ namespace Unity.VisualScripting.Generated.Aot
 			optimized.Invoke(default(object[]));
 		}
 		
-		// UnityEngine.Transform.Find
+		// UnityEngine.Transform.LookAt
 		[global::UnityEngine.Scripting.PreserveAttribute()]
-		public static void UnityEngine_Transform_Find()
+		public static void UnityEngine_Transform_LookAt()
 		{
 			global::UnityEngine.Transform target = default(global::UnityEngine.Transform);
-			string arg0 = default(string);
-			target.Find(arg0);
-			global::Unity.VisualScripting.InstanceFunctionInvoker<UnityEngine.Transform, string, UnityEngine.Transform> optimized = new global::Unity.VisualScripting.InstanceFunctionInvoker<UnityEngine.Transform, string, UnityEngine.Transform>(default(global::System.Reflection.MethodInfo));
+			global::UnityEngine.Transform arg0 = default(global::UnityEngine.Transform);
+			target.LookAt(arg0);
+			global::Unity.VisualScripting.InstanceActionInvoker<UnityEngine.Transform, UnityEngine.Transform> optimized = new global::Unity.VisualScripting.InstanceActionInvoker<UnityEngine.Transform, UnityEngine.Transform>(default(global::System.Reflection.MethodInfo));
 			optimized.Invoke(default(global::UnityEngine.Transform), arg0);
 			optimized.Invoke(default(object[]));
 		}
@@ -32766,14 +32938,14 @@ namespace Unity.VisualScripting.Generated.Aot
 			optimized.SetValue(default(global::UnityEngine.Transform), default(global::UnityEngine.Vector3));
 		}
 		
-		// UnityEngine.Transform.LookAt
+		// UnityEngine.Transform.Find
 		[global::UnityEngine.Scripting.PreserveAttribute()]
-		public static void UnityEngine_Transform_LookAt()
+		public static void UnityEngine_Transform_Find()
 		{
 			global::UnityEngine.Transform target = default(global::UnityEngine.Transform);
-			global::UnityEngine.Transform arg0 = default(global::UnityEngine.Transform);
-			target.LookAt(arg0);
-			global::Unity.VisualScripting.InstanceActionInvoker<UnityEngine.Transform, UnityEngine.Transform> optimized = new global::Unity.VisualScripting.InstanceActionInvoker<UnityEngine.Transform, UnityEngine.Transform>(default(global::System.Reflection.MethodInfo));
+			string arg0 = default(string);
+			target.Find(arg0);
+			global::Unity.VisualScripting.InstanceFunctionInvoker<UnityEngine.Transform, string, UnityEngine.Transform> optimized = new global::Unity.VisualScripting.InstanceFunctionInvoker<UnityEngine.Transform, string, UnityEngine.Transform>(default(global::System.Reflection.MethodInfo));
 			optimized.Invoke(default(global::UnityEngine.Transform), arg0);
 			optimized.Invoke(default(object[]));
 		}
@@ -32846,16 +33018,14 @@ namespace Unity.VisualScripting.Generated.Aot
 			optimized.GetValue(default(global::UnityEngine.Transform));
 		}
 		
-		// UnityEngine.Random.Range
+		// UnityEngine.Transform.childCount
 		[global::UnityEngine.Scripting.PreserveAttribute()]
-		public static void UnityEngine_Random_Range()
+		public static void UnityEngine_Transform_childCount()
 		{
-			int arg0 = default(int);
-			int arg1 = default(int);
-			global::UnityEngine.Random.Range(arg0, arg1);
-			global::Unity.VisualScripting.StaticFunctionInvoker<int, int, int> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<int, int, int>(default(global::System.Reflection.MethodInfo));
-			optimized.Invoke(null, arg0, arg1);
-			optimized.Invoke(default(object[]));
+			global::UnityEngine.Transform target = default(global::UnityEngine.Transform);
+			int accessor = target.childCount;
+			global::Unity.VisualScripting.InstancePropertyAccessor<UnityEngine.Transform, int> optimized = new global::Unity.VisualScripting.InstancePropertyAccessor<UnityEngine.Transform, int>(default(global::System.Reflection.PropertyInfo));
+			optimized.GetValue(default(global::UnityEngine.Transform));
 		}
 		
 		// UnityEngine.Camera.main
@@ -32867,14 +33037,16 @@ namespace Unity.VisualScripting.Generated.Aot
 			optimized.GetValue(null);
 		}
 		
-		// UnityEngine.Transform.childCount
+		// UnityEngine.Random.Range
 		[global::UnityEngine.Scripting.PreserveAttribute()]
-		public static void UnityEngine_Transform_childCount()
+		public static void UnityEngine_Random_Range()
 		{
-			global::UnityEngine.Transform target = default(global::UnityEngine.Transform);
-			int accessor = target.childCount;
-			global::Unity.VisualScripting.InstancePropertyAccessor<UnityEngine.Transform, int> optimized = new global::Unity.VisualScripting.InstancePropertyAccessor<UnityEngine.Transform, int>(default(global::System.Reflection.PropertyInfo));
-			optimized.GetValue(default(global::UnityEngine.Transform));
+			int arg0 = default(int);
+			int arg1 = default(int);
+			global::UnityEngine.Random.Range(arg0, arg1);
+			global::Unity.VisualScripting.StaticFunctionInvoker<int, int, int> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<int, int, int>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0, arg1);
+			optimized.Invoke(default(object[]));
 		}
 		
 		// UnityEngine.Resources.Load
@@ -32959,18 +33131,6 @@ namespace Unity.VisualScripting.Generated.Aot
 			optimized.Invoke(default(object[]));
 		}
 		
-		// WeaponStatus.CurrentClip
-		[global::UnityEngine.Scripting.PreserveAttribute()]
-		public static void WeaponStatus_CurrentClip()
-		{
-			global::WeaponStatus target = default(global::WeaponStatus);
-			int accessor = target.CurrentClip;
-			target.CurrentClip = default(int);
-			global::Unity.VisualScripting.InstanceFieldAccessor<WeaponStatus, int> optimized = new global::Unity.VisualScripting.InstanceFieldAccessor<WeaponStatus, int>(default(global::System.Reflection.FieldInfo));
-			optimized.GetValue(default(global::WeaponStatus));
-			optimized.SetValue(default(global::WeaponStatus), default(int));
-		}
-		
 		// TMPro.TextMeshProUGUI.text
 		[global::UnityEngine.Scripting.PreserveAttribute()]
 		public static void TMPro_TextMeshProUGUI_text()
@@ -32990,6 +33150,18 @@ namespace Unity.VisualScripting.Generated.Aot
 			global::WeaponStatus target = default(global::WeaponStatus);
 			int accessor = target.TotalAmmo;
 			target.TotalAmmo = default(int);
+			global::Unity.VisualScripting.InstanceFieldAccessor<WeaponStatus, int> optimized = new global::Unity.VisualScripting.InstanceFieldAccessor<WeaponStatus, int>(default(global::System.Reflection.FieldInfo));
+			optimized.GetValue(default(global::WeaponStatus));
+			optimized.SetValue(default(global::WeaponStatus), default(int));
+		}
+		
+		// WeaponStatus.CurrentClip
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void WeaponStatus_CurrentClip()
+		{
+			global::WeaponStatus target = default(global::WeaponStatus);
+			int accessor = target.CurrentClip;
+			target.CurrentClip = default(int);
 			global::Unity.VisualScripting.InstanceFieldAccessor<WeaponStatus, int> optimized = new global::Unity.VisualScripting.InstanceFieldAccessor<WeaponStatus, int>(default(global::System.Reflection.FieldInfo));
 			optimized.GetValue(default(global::WeaponStatus));
 			optimized.SetValue(default(global::WeaponStatus), default(int));
@@ -33444,327 +33616,6 @@ namespace Unity.VisualScripting.Generated.Aot
 			optimized.SetValue(default(global::UserStatus), default(global::UnityEngine.Material));
 		}
 		
-		// UnityEngine.Transform.localPosition
-		[global::UnityEngine.Scripting.PreserveAttribute()]
-		public static void UnityEngine_Transform_localPosition()
-		{
-			global::UnityEngine.Transform target = default(global::UnityEngine.Transform);
-			global::UnityEngine.Vector3 accessor = target.localPosition;
-			target.localPosition = default(global::UnityEngine.Vector3);
-			global::Unity.VisualScripting.InstancePropertyAccessor<UnityEngine.Transform, UnityEngine.Vector3> optimized = new global::Unity.VisualScripting.InstancePropertyAccessor<UnityEngine.Transform, UnityEngine.Vector3>(default(global::System.Reflection.PropertyInfo));
-			optimized.GetValue(default(global::UnityEngine.Transform));
-			optimized.SetValue(default(global::UnityEngine.Transform), default(global::UnityEngine.Vector3));
-		}
-		
-		// UnityEngine.Transform.localScale
-		[global::UnityEngine.Scripting.PreserveAttribute()]
-		public static void UnityEngine_Transform_localScale()
-		{
-			global::UnityEngine.Transform target = default(global::UnityEngine.Transform);
-			global::UnityEngine.Vector3 accessor = target.localScale;
-			target.localScale = default(global::UnityEngine.Vector3);
-			global::Unity.VisualScripting.InstancePropertyAccessor<UnityEngine.Transform, UnityEngine.Vector3> optimized = new global::Unity.VisualScripting.InstancePropertyAccessor<UnityEngine.Transform, UnityEngine.Vector3>(default(global::System.Reflection.PropertyInfo));
-			optimized.GetValue(default(global::UnityEngine.Transform));
-			optimized.SetValue(default(global::UnityEngine.Transform), default(global::UnityEngine.Vector3));
-		}
-		
-		// UnityEngine.MeshRenderer.enabled
-		[global::UnityEngine.Scripting.PreserveAttribute()]
-		public static void UnityEngine_MeshRenderer_enabled()
-		{
-			global::UnityEngine.Renderer target = default(global::UnityEngine.Renderer);
-			bool accessor = target.enabled;
-			target.enabled = default(bool);
-			global::Unity.VisualScripting.InstancePropertyAccessor<UnityEngine.Renderer, bool> optimized = new global::Unity.VisualScripting.InstancePropertyAccessor<UnityEngine.Renderer, bool>(default(global::System.Reflection.PropertyInfo));
-			optimized.GetValue(default(global::UnityEngine.Renderer));
-			optimized.SetValue(default(global::UnityEngine.Renderer), default(bool));
-		}
-		
-		// UnityEngine.GameObject.GetComponent
-		[global::UnityEngine.Scripting.PreserveAttribute()]
-		public static void UnityEngine_GameObject_GetComponent()
-		{
-			global::UnityEngine.GameObject target = default(global::UnityEngine.GameObject);
-			global::System.Type arg0 = default(global::System.Type);
-			target.GetComponent(arg0);
-			global::Unity.VisualScripting.InstanceFunctionInvoker<UnityEngine.GameObject, System.Type, UnityEngine.Component> optimized = new global::Unity.VisualScripting.InstanceFunctionInvoker<UnityEngine.GameObject, System.Type, UnityEngine.Component>(default(global::System.Reflection.MethodInfo));
-			optimized.Invoke(default(global::UnityEngine.GameObject), arg0);
-			optimized.Invoke(default(object[]));
-		}
-		
-		// WeaponShoot.Reloading
-		[global::UnityEngine.Scripting.PreserveAttribute()]
-		public static void WeaponShoot_Reloading()
-		{
-			global::WeaponShoot target = default(global::WeaponShoot);
-			bool accessor = target.Reloading;
-			target.Reloading = default(bool);
-			global::Unity.VisualScripting.InstanceFieldAccessor<WeaponShoot, bool> optimized = new global::Unity.VisualScripting.InstanceFieldAccessor<WeaponShoot, bool>(default(global::System.Reflection.FieldInfo));
-			optimized.GetValue(default(global::WeaponShoot));
-			optimized.SetValue(default(global::WeaponShoot), default(bool));
-		}
-		
-		// UnityEngine.Animator.SetFloat
-		[global::UnityEngine.Scripting.PreserveAttribute()]
-		public static void UnityEngine_Animator_SetFloat()
-		{
-			global::UnityEngine.Animator target = default(global::UnityEngine.Animator);
-			string arg0 = default(string);
-			float arg1 = default(float);
-			target.SetFloat(arg0, arg1);
-			global::Unity.VisualScripting.InstanceActionInvoker<UnityEngine.Animator, string, float> optimized = new global::Unity.VisualScripting.InstanceActionInvoker<UnityEngine.Animator, string, float>(default(global::System.Reflection.MethodInfo));
-			optimized.Invoke(default(global::UnityEngine.Animator), arg0, arg1);
-			optimized.Invoke(default(object[]));
-		}
-		
-		// WeaponShoot.ReloadTime
-		[global::UnityEngine.Scripting.PreserveAttribute()]
-		public static void WeaponShoot_ReloadTime()
-		{
-			global::WeaponShoot target = default(global::WeaponShoot);
-			float accessor = target.ReloadTime;
-			target.ReloadTime = default(float);
-			global::Unity.VisualScripting.InstanceFieldAccessor<WeaponShoot, float> optimized = new global::Unity.VisualScripting.InstanceFieldAccessor<WeaponShoot, float>(default(global::System.Reflection.FieldInfo));
-			optimized.GetValue(default(global::WeaponShoot));
-			optimized.SetValue(default(global::WeaponShoot), default(float));
-		}
-		
-		// UnityEngine.AudioSource.pitch
-		[global::UnityEngine.Scripting.PreserveAttribute()]
-		public static void UnityEngine_AudioSource_pitch()
-		{
-			global::UnityEngine.AudioSource target = default(global::UnityEngine.AudioSource);
-			float accessor = target.pitch;
-			target.pitch = default(float);
-			global::Unity.VisualScripting.InstancePropertyAccessor<UnityEngine.AudioSource, float> optimized = new global::Unity.VisualScripting.InstancePropertyAccessor<UnityEngine.AudioSource, float>(default(global::System.Reflection.PropertyInfo));
-			optimized.GetValue(default(global::UnityEngine.AudioSource));
-			optimized.SetValue(default(global::UnityEngine.AudioSource), default(float));
-		}
-		
-		// WeaponShoot.FireRate
-		[global::UnityEngine.Scripting.PreserveAttribute()]
-		public static void WeaponShoot_FireRate()
-		{
-			global::WeaponShoot target = default(global::WeaponShoot);
-			float accessor = target.FireRate;
-			target.FireRate = default(float);
-			global::Unity.VisualScripting.InstanceFieldAccessor<WeaponShoot, float> optimized = new global::Unity.VisualScripting.InstanceFieldAccessor<WeaponShoot, float>(default(global::System.Reflection.FieldInfo));
-			optimized.GetValue(default(global::WeaponShoot));
-			optimized.SetValue(default(global::WeaponShoot), default(float));
-		}
-		
-		// UnityEngine.Transform.name
-		[global::UnityEngine.Scripting.PreserveAttribute()]
-		public static void UnityEngine_Transform_name()
-		{
-			global::UnityEngine.Object target = default(global::UnityEngine.Object);
-			string accessor = target.name;
-			target.name = default(string);
-			global::Unity.VisualScripting.InstancePropertyAccessor<UnityEngine.Object, string> optimized = new global::Unity.VisualScripting.InstancePropertyAccessor<UnityEngine.Object, string>(default(global::System.Reflection.PropertyInfo));
-			optimized.GetValue(default(global::UnityEngine.Object));
-			optimized.SetValue(default(global::UnityEngine.Object), default(string));
-		}
-		
-		// WeaponShoot.enabled
-		[global::UnityEngine.Scripting.PreserveAttribute()]
-		public static void WeaponShoot_enabled()
-		{
-			global::UnityEngine.Behaviour target = default(global::UnityEngine.Behaviour);
-			bool accessor = target.enabled;
-			target.enabled = default(bool);
-			global::Unity.VisualScripting.InstancePropertyAccessor<UnityEngine.Behaviour, bool> optimized = new global::Unity.VisualScripting.InstancePropertyAccessor<UnityEngine.Behaviour, bool>(default(global::System.Reflection.PropertyInfo));
-			optimized.GetValue(default(global::UnityEngine.Behaviour));
-			optimized.SetValue(default(global::UnityEngine.Behaviour), default(bool));
-		}
-		
-		// UnityEngine.RectTransform.sizeDelta
-		[global::UnityEngine.Scripting.PreserveAttribute()]
-		public static void UnityEngine_RectTransform_sizeDelta()
-		{
-			global::UnityEngine.RectTransform target = default(global::UnityEngine.RectTransform);
-			global::UnityEngine.Vector2 accessor = target.sizeDelta;
-			target.sizeDelta = default(global::UnityEngine.Vector2);
-			global::Unity.VisualScripting.InstancePropertyAccessor<UnityEngine.RectTransform, UnityEngine.Vector2> optimized = new global::Unity.VisualScripting.InstancePropertyAccessor<UnityEngine.RectTransform, UnityEngine.Vector2>(default(global::System.Reflection.PropertyInfo));
-			optimized.GetValue(default(global::UnityEngine.RectTransform));
-			optimized.SetValue(default(global::UnityEngine.RectTransform), default(global::UnityEngine.Vector2));
-		}
-		
-		// UnityEngine.Vector2.ClampMagnitude
-		[global::UnityEngine.Scripting.PreserveAttribute()]
-		public static void UnityEngine_Vector2_ClampMagnitude()
-		{
-			global::UnityEngine.Vector2 arg0 = default(global::UnityEngine.Vector2);
-			float arg1 = default(float);
-			global::UnityEngine.Vector2.ClampMagnitude(arg0, arg1);
-			global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Vector2, float, UnityEngine.Vector2> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Vector2, float, UnityEngine.Vector2>(default(global::System.Reflection.MethodInfo));
-			optimized.Invoke(null, arg0, arg1);
-			optimized.Invoke(default(object[]));
-		}
-		
-		// UnityEngine.Vector2.y
-		[global::UnityEngine.Scripting.PreserveAttribute()]
-		public static void UnityEngine_Vector2_y()
-		{
-			global::UnityEngine.Vector2 target = default(global::UnityEngine.Vector2);
-			float accessor = target.y;
-			target.y = default(float);
-			global::Unity.VisualScripting.ReflectionFieldAccessor optimized = new global::Unity.VisualScripting.ReflectionFieldAccessor(default(global::System.Reflection.FieldInfo));
-			optimized.GetValue(default(global::UnityEngine.Vector2));
-			optimized.SetValue(default(global::UnityEngine.Vector2), default(float));
-		}
-		
-		// WeaponShoot.MaxAmmo
-		[global::UnityEngine.Scripting.PreserveAttribute()]
-		public static void WeaponShoot_MaxAmmo()
-		{
-			global::WeaponShoot target = default(global::WeaponShoot);
-			int accessor = target.MaxAmmo;
-			target.MaxAmmo = default(int);
-			global::Unity.VisualScripting.InstanceFieldAccessor<WeaponShoot, int> optimized = new global::Unity.VisualScripting.InstanceFieldAccessor<WeaponShoot, int>(default(global::System.Reflection.FieldInfo));
-			optimized.GetValue(default(global::WeaponShoot));
-			optimized.SetValue(default(global::WeaponShoot), default(int));
-		}
-		
-		// WeaponShoot.totalammo
-		[global::UnityEngine.Scripting.PreserveAttribute()]
-		public static void WeaponShoot_totalammo()
-		{
-			global::WeaponShoot target = default(global::WeaponShoot);
-			int accessor = target.totalammo;
-			target.totalammo = default(int);
-			global::Unity.VisualScripting.InstanceFieldAccessor<WeaponShoot, int> optimized = new global::Unity.VisualScripting.InstanceFieldAccessor<WeaponShoot, int>(default(global::System.Reflection.FieldInfo));
-			optimized.GetValue(default(global::WeaponShoot));
-			optimized.SetValue(default(global::WeaponShoot), default(int));
-		}
-		
-		// WeaponShoot.MaxClip
-		[global::UnityEngine.Scripting.PreserveAttribute()]
-		public static void WeaponShoot_MaxClip()
-		{
-			global::WeaponShoot target = default(global::WeaponShoot);
-			int accessor = target.MaxClip;
-			target.MaxClip = default(int);
-			global::Unity.VisualScripting.InstanceFieldAccessor<WeaponShoot, int> optimized = new global::Unity.VisualScripting.InstanceFieldAccessor<WeaponShoot, int>(default(global::System.Reflection.FieldInfo));
-			optimized.GetValue(default(global::WeaponShoot));
-			optimized.SetValue(default(global::WeaponShoot), default(int));
-		}
-		
-		// WeaponShoot.currentclip
-		[global::UnityEngine.Scripting.PreserveAttribute()]
-		public static void WeaponShoot_currentclip()
-		{
-			global::WeaponShoot target = default(global::WeaponShoot);
-			int accessor = target.currentclip;
-			target.currentclip = default(int);
-			global::Unity.VisualScripting.InstanceFieldAccessor<WeaponShoot, int> optimized = new global::Unity.VisualScripting.InstanceFieldAccessor<WeaponShoot, int>(default(global::System.Reflection.FieldInfo));
-			optimized.GetValue(default(global::WeaponShoot));
-			optimized.SetValue(default(global::WeaponShoot), default(int));
-		}
-		
-		// WeaponShoot.StopAllCoroutines
-		[global::UnityEngine.Scripting.PreserveAttribute()]
-		public static void WeaponShoot_StopAllCoroutines()
-		{
-			global::UnityEngine.MonoBehaviour target = default(global::UnityEngine.MonoBehaviour);
-			target.StopAllCoroutines();
-			global::Unity.VisualScripting.InstanceActionInvoker<UnityEngine.MonoBehaviour> optimized = new global::Unity.VisualScripting.InstanceActionInvoker<UnityEngine.MonoBehaviour>(default(global::System.Reflection.MethodInfo));
-			optimized.Invoke(default(global::UnityEngine.MonoBehaviour));
-			optimized.Invoke(default(object[]));
-		}
-		
-		// UnityEngine.AudioSource.Stop
-		[global::UnityEngine.Scripting.PreserveAttribute()]
-		public static void UnityEngine_AudioSource_Stop()
-		{
-			global::UnityEngine.AudioSource target = default(global::UnityEngine.AudioSource);
-			target.Stop();
-			global::Unity.VisualScripting.InstanceActionInvoker<UnityEngine.AudioSource> optimized = new global::Unity.VisualScripting.InstanceActionInvoker<UnityEngine.AudioSource>(default(global::System.Reflection.MethodInfo));
-			optimized.Invoke(default(global::UnityEngine.AudioSource));
-			optimized.Invoke(default(object[]));
-		}
-		
-		// Shotgun.StopAllCoroutines
-		[global::UnityEngine.Scripting.PreserveAttribute()]
-		public static void Shotgun_StopAllCoroutines()
-		{
-			global::UnityEngine.MonoBehaviour target = default(global::UnityEngine.MonoBehaviour);
-			target.StopAllCoroutines();
-			global::Unity.VisualScripting.InstanceActionInvoker<UnityEngine.MonoBehaviour> optimized = new global::Unity.VisualScripting.InstanceActionInvoker<UnityEngine.MonoBehaviour>(default(global::System.Reflection.MethodInfo));
-			optimized.Invoke(default(global::UnityEngine.MonoBehaviour));
-			optimized.Invoke(default(object[]));
-		}
-		
-		// Shotgun.enabled
-		[global::UnityEngine.Scripting.PreserveAttribute()]
-		public static void Shotgun_enabled()
-		{
-			global::UnityEngine.Behaviour target = default(global::UnityEngine.Behaviour);
-			bool accessor = target.enabled;
-			target.enabled = default(bool);
-			global::Unity.VisualScripting.InstancePropertyAccessor<UnityEngine.Behaviour, bool> optimized = new global::Unity.VisualScripting.InstancePropertyAccessor<UnityEngine.Behaviour, bool>(default(global::System.Reflection.PropertyInfo));
-			optimized.GetValue(default(global::UnityEngine.Behaviour));
-			optimized.SetValue(default(global::UnityEngine.Behaviour), default(bool));
-		}
-		
-		// UnityEngine.Input.GetKeyDown
-		[global::UnityEngine.Scripting.PreserveAttribute()]
-		public static void UnityEngine_Input_GetKeyDown()
-		{
-			global::UnityEngine.KeyCode arg0 = default(global::UnityEngine.KeyCode);
-			global::UnityEngine.Input.GetKeyDown(arg0);
-			global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.KeyCode, bool> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.KeyCode, bool>(default(global::System.Reflection.MethodInfo));
-			optimized.Invoke(null, arg0);
-			optimized.Invoke(default(object[]));
-		}
-		
-		// WeaponShoot.BulletTrailVFX
-		[global::UnityEngine.Scripting.PreserveAttribute()]
-		public static void WeaponShoot_BulletTrailVFX()
-		{
-			global::WeaponShoot target = default(global::WeaponShoot);
-			global::UnityEngine.ParticleSystem accessor = target.BulletTrailVFX;
-			target.BulletTrailVFX = default(global::UnityEngine.ParticleSystem);
-			global::Unity.VisualScripting.InstanceFieldAccessor<WeaponShoot, UnityEngine.ParticleSystem> optimized = new global::Unity.VisualScripting.InstanceFieldAccessor<WeaponShoot, UnityEngine.ParticleSystem>(default(global::System.Reflection.FieldInfo));
-			optimized.GetValue(default(global::WeaponShoot));
-			optimized.SetValue(default(global::WeaponShoot), default(global::UnityEngine.ParticleSystem));
-		}
-		
-		// UnityEngine.Component.GetComponentsInChildren
-		[global::UnityEngine.Scripting.PreserveAttribute()]
-		public static void UnityEngine_Component_GetComponentsInChildren()
-		{
-			global::UnityEngine.Component target = default(global::UnityEngine.Component);
-			global::System.Type arg0 = default(global::System.Type);
-			bool arg1 = default(bool);
-			target.GetComponentsInChildren(arg0, arg1);
-			global::Unity.VisualScripting.InstanceFunctionInvoker<UnityEngine.Component, System.Type, bool, UnityEngine.Component[]> optimized = new global::Unity.VisualScripting.InstanceFunctionInvoker<UnityEngine.Component, System.Type, bool, UnityEngine.Component[]>(default(global::System.Reflection.MethodInfo));
-			optimized.Invoke(default(global::UnityEngine.Component), arg0, arg1);
-			optimized.Invoke(default(object[]));
-		}
-		
-		// MeleWeapon.ButtonFired
-		[global::UnityEngine.Scripting.PreserveAttribute()]
-		public static void MeleWeapon_ButtonFired()
-		{
-			global::MeleWeapon target = default(global::MeleWeapon);
-		//	bool accessor = target.ButtonFired;
-			//target.ButtonFired = default(bool);
-			global::Unity.VisualScripting.InstanceFieldAccessor<MeleWeapon, bool> optimized = new global::Unity.VisualScripting.InstanceFieldAccessor<MeleWeapon, bool>(default(global::System.Reflection.FieldInfo));
-			optimized.GetValue(default(global::MeleWeapon));
-			optimized.SetValue(default(global::MeleWeapon), default(bool));
-		}
-		
-		// Photon.Realtime.Player.ToString
-		[global::UnityEngine.Scripting.PreserveAttribute()]
-		public static void Photon_Realtime_Player_ToString()
-		{
-			global::Photon.Realtime.Player target = default(global::Photon.Realtime.Player);
-			target.ToString();
-			global::Unity.VisualScripting.ReflectionInvoker optimized = new global::Unity.VisualScripting.ReflectionInvoker(default(global::System.Reflection.MethodInfo));
-			optimized.Invoke(default(global::Photon.Realtime.Player));
-			optimized.Invoke(default(object[]));
-		}
-		
 		// UnityEngine.GameObject.GetComponentInParent
 		[global::UnityEngine.Scripting.PreserveAttribute()]
 		public static void UnityEngine_GameObject_GetComponentInParent()
@@ -33826,6 +33677,18 @@ namespace Unity.VisualScripting.Generated.Aot
 			optimized.SetValue(default(global::UnityEngine.Rigidbody), default(global::UnityEngine.Vector3));
 		}
 		
+		// UnityEngine.Transform.localPosition
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void UnityEngine_Transform_localPosition()
+		{
+			global::UnityEngine.Transform target = default(global::UnityEngine.Transform);
+			global::UnityEngine.Vector3 accessor = target.localPosition;
+			target.localPosition = default(global::UnityEngine.Vector3);
+			global::Unity.VisualScripting.InstancePropertyAccessor<UnityEngine.Transform, UnityEngine.Vector3> optimized = new global::Unity.VisualScripting.InstancePropertyAccessor<UnityEngine.Transform, UnityEngine.Vector3>(default(global::System.Reflection.PropertyInfo));
+			optimized.GetValue(default(global::UnityEngine.Transform));
+			optimized.SetValue(default(global::UnityEngine.Transform), default(global::UnityEngine.Vector3));
+		}
+		
 		// UnityEngine.WheelCollider.sidewaysFriction
 		[global::UnityEngine.Scripting.PreserveAttribute()]
 		public static void UnityEngine_WheelCollider_sidewaysFriction()
@@ -33860,6 +33723,18 @@ namespace Unity.VisualScripting.Generated.Aot
 			global::Unity.VisualScripting.InstancePropertyAccessor<UnityEngine.WheelCollider, float> optimized = new global::Unity.VisualScripting.InstancePropertyAccessor<UnityEngine.WheelCollider, float>(default(global::System.Reflection.PropertyInfo));
 			optimized.GetValue(default(global::UnityEngine.WheelCollider));
 			optimized.SetValue(default(global::UnityEngine.WheelCollider), default(float));
+		}
+		
+		// UnityEngine.AudioSource.pitch
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void UnityEngine_AudioSource_pitch()
+		{
+			global::UnityEngine.AudioSource target = default(global::UnityEngine.AudioSource);
+			float accessor = target.pitch;
+			target.pitch = default(float);
+			global::Unity.VisualScripting.InstancePropertyAccessor<UnityEngine.AudioSource, float> optimized = new global::Unity.VisualScripting.InstancePropertyAccessor<UnityEngine.AudioSource, float>(default(global::System.Reflection.PropertyInfo));
+			optimized.GetValue(default(global::UnityEngine.AudioSource));
+			optimized.SetValue(default(global::UnityEngine.AudioSource), default(float));
 		}
 		
 		// UnityEngine.WheelCollider.isGrounded
@@ -33975,6 +33850,17 @@ namespace Unity.VisualScripting.Generated.Aot
 			optimized.GetValue(null);
 		}
 		
+		// UnityEngine.Input.GetKeyDown
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void UnityEngine_Input_GetKeyDown()
+		{
+			global::UnityEngine.KeyCode arg0 = default(global::UnityEngine.KeyCode);
+			global::UnityEngine.Input.GetKeyDown(arg0);
+			global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.KeyCode, bool> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.KeyCode, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0);
+			optimized.Invoke(default(object[]));
+		}
+		
 		// PlayerActionsVar.canfire
 		[global::UnityEngine.Scripting.PreserveAttribute()]
 		public static void PlayerActionsVar_canfire()
@@ -34047,18 +33933,6 @@ namespace Unity.VisualScripting.Generated.Aot
 			optimized.SetValue(default(global::PlayerActionsVar), default(bool));
 		}
 		
-		// TakeDamage.HP
-		[global::UnityEngine.Scripting.PreserveAttribute()]
-		public static void TakeDamage_HP()
-		{
-			global::TakeDamage target = default(global::TakeDamage);
-			int accessor = target.HP;
-			target.HP = default(int);
-			global::Unity.VisualScripting.InstanceFieldAccessor<TakeDamage, int> optimized = new global::Unity.VisualScripting.InstanceFieldAccessor<TakeDamage, int>(default(global::System.Reflection.FieldInfo));
-			optimized.GetValue(default(global::TakeDamage));
-			optimized.SetValue(default(global::TakeDamage), default(int));
-		}
-		
 		// UnityEngine.BoxCollider.enabled
 		[global::UnityEngine.Scripting.PreserveAttribute()]
 		public static void UnityEngine_BoxCollider_enabled()
@@ -34069,6 +33943,30 @@ namespace Unity.VisualScripting.Generated.Aot
 			global::Unity.VisualScripting.InstancePropertyAccessor<UnityEngine.Collider, bool> optimized = new global::Unity.VisualScripting.InstancePropertyAccessor<UnityEngine.Collider, bool>(default(global::System.Reflection.PropertyInfo));
 			optimized.GetValue(default(global::UnityEngine.Collider));
 			optimized.SetValue(default(global::UnityEngine.Collider), default(bool));
+		}
+		
+		// UnityEngine.MeshRenderer.enabled
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void UnityEngine_MeshRenderer_enabled()
+		{
+			global::UnityEngine.Renderer target = default(global::UnityEngine.Renderer);
+			bool accessor = target.enabled;
+			target.enabled = default(bool);
+			global::Unity.VisualScripting.InstancePropertyAccessor<UnityEngine.Renderer, bool> optimized = new global::Unity.VisualScripting.InstancePropertyAccessor<UnityEngine.Renderer, bool>(default(global::System.Reflection.PropertyInfo));
+			optimized.GetValue(default(global::UnityEngine.Renderer));
+			optimized.SetValue(default(global::UnityEngine.Renderer), default(bool));
+		}
+		
+		// TakeDamage.HP
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void TakeDamage_HP()
+		{
+			global::TakeDamage target = default(global::TakeDamage);
+			int accessor = target.HP;
+			target.HP = default(int);
+			global::Unity.VisualScripting.InstanceFieldAccessor<TakeDamage, int> optimized = new global::Unity.VisualScripting.InstanceFieldAccessor<TakeDamage, int>(default(global::System.Reflection.FieldInfo));
+			optimized.GetValue(default(global::TakeDamage));
+			optimized.SetValue(default(global::TakeDamage), default(int));
 		}
 		
 		// Cinemachine.Examples.PlayerTransformcontrol.enabled
@@ -34147,6 +34045,18 @@ namespace Unity.VisualScripting.Generated.Aot
 			global::UnityEngine.Vector2 target = default(global::UnityEngine.Vector2);
 			float accessor = target.x;
 			target.x = default(float);
+			global::Unity.VisualScripting.ReflectionFieldAccessor optimized = new global::Unity.VisualScripting.ReflectionFieldAccessor(default(global::System.Reflection.FieldInfo));
+			optimized.GetValue(default(global::UnityEngine.Vector2));
+			optimized.SetValue(default(global::UnityEngine.Vector2), default(float));
+		}
+		
+		// UnityEngine.Vector2.y
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void UnityEngine_Vector2_y()
+		{
+			global::UnityEngine.Vector2 target = default(global::UnityEngine.Vector2);
+			float accessor = target.y;
+			target.y = default(float);
 			global::Unity.VisualScripting.ReflectionFieldAccessor optimized = new global::Unity.VisualScripting.ReflectionFieldAccessor(default(global::System.Reflection.FieldInfo));
 			optimized.GetValue(default(global::UnityEngine.Vector2));
 			optimized.SetValue(default(global::UnityEngine.Vector2), default(float));
@@ -34631,18 +34541,6 @@ namespace Unity.VisualScripting.Generated.Aot
 			optimized.SetValue(default(global::WeaponShoot), default(bool));
 		}
 		
-		// Cinemachine.Examples.PlayerTransformcontrol.joystickAxis
-		[global::UnityEngine.Scripting.PreserveAttribute()]
-		public static void Cinemachine_Examples_PlayerTransformcontrol_joystickAxis()
-		{
-			global::Cinemachine.Examples.PlayerTransformcontrol target = default(global::Cinemachine.Examples.PlayerTransformcontrol);
-			global::UnityEngine.Vector2 accessor = target.joystickAxis;
-			target.joystickAxis = default(global::UnityEngine.Vector2);
-			global::Unity.VisualScripting.InstanceFieldAccessor<Cinemachine.Examples.PlayerTransformcontrol, UnityEngine.Vector2> optimized = new global::Unity.VisualScripting.InstanceFieldAccessor<Cinemachine.Examples.PlayerTransformcontrol, UnityEngine.Vector2>(default(global::System.Reflection.FieldInfo));
-			optimized.GetValue(default(global::Cinemachine.Examples.PlayerTransformcontrol));
-			optimized.SetValue(default(global::Cinemachine.Examples.PlayerTransformcontrol), default(global::UnityEngine.Vector2));
-		}
-		
 		// UnityEngine.UI.Image.fillAmount
 		[global::UnityEngine.Scripting.PreserveAttribute()]
 		public static void UnityEngine_UI_Image_fillAmount()
@@ -34807,6 +34705,31 @@ namespace Unity.VisualScripting.Generated.Aot
 			global::Unity.VisualScripting.StaticPropertyAccessor<int> optimized = new global::Unity.VisualScripting.StaticPropertyAccessor<int>(default(global::System.Reflection.PropertyInfo));
 			optimized.GetValue(null);
 			optimized.SetValue(null, default(int));
+		}
+		
+		// WeaponShoot.ReloadTime
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void WeaponShoot_ReloadTime()
+		{
+			global::WeaponShoot target = default(global::WeaponShoot);
+			float accessor = target.ReloadTime;
+			target.ReloadTime = default(float);
+			global::Unity.VisualScripting.InstanceFieldAccessor<WeaponShoot, float> optimized = new global::Unity.VisualScripting.InstanceFieldAccessor<WeaponShoot, float>(default(global::System.Reflection.FieldInfo));
+			optimized.GetValue(default(global::WeaponShoot));
+			optimized.SetValue(default(global::WeaponShoot), default(float));
+		}
+		
+		// UnityEngine.Animator.SetFloat
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void UnityEngine_Animator_SetFloat()
+		{
+			global::UnityEngine.Animator target = default(global::UnityEngine.Animator);
+			string arg0 = default(string);
+			float arg1 = default(float);
+			target.SetFloat(arg0, arg1);
+			global::Unity.VisualScripting.InstanceActionInvoker<UnityEngine.Animator, string, float> optimized = new global::Unity.VisualScripting.InstanceActionInvoker<UnityEngine.Animator, string, float>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(default(global::UnityEngine.Animator), arg0, arg1);
+			optimized.Invoke(default(object[]));
 		}
 		
 		// UnityEngine.Animator.SetInteger
@@ -34993,28 +34916,28 @@ namespace Unity.VisualScripting.Generated.Aot
 			optimized.SetValue(default(global::UnityEngine.Rigidbody), default(bool));
 		}
 		
-		// PlayerScores.TotalRoomKills
+		// UnityEngine.Component.GetComponentsInChildren
 		[global::UnityEngine.Scripting.PreserveAttribute()]
-		public static void PlayerScores_TotalRoomKills()
+		public static void UnityEngine_Component_GetComponentsInChildren()
 		{
-			global::PlayerScores target = default(global::PlayerScores);
-			int accessor = target.TotalRoomKills;
-			target.TotalRoomKills = default(int);
-			global::Unity.VisualScripting.InstanceFieldAccessor<PlayerScores, int> optimized = new global::Unity.VisualScripting.InstanceFieldAccessor<PlayerScores, int>(default(global::System.Reflection.FieldInfo));
-			optimized.GetValue(default(global::PlayerScores));
-			optimized.SetValue(default(global::PlayerScores), default(int));
+			global::UnityEngine.Component target = default(global::UnityEngine.Component);
+			global::System.Type arg0 = default(global::System.Type);
+			bool arg1 = default(bool);
+			target.GetComponentsInChildren(arg0, arg1);
+			global::Unity.VisualScripting.InstanceFunctionInvoker<UnityEngine.Component, System.Type, bool, UnityEngine.Component[]> optimized = new global::Unity.VisualScripting.InstanceFunctionInvoker<UnityEngine.Component, System.Type, bool, UnityEngine.Component[]>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(default(global::UnityEngine.Component), arg0, arg1);
+			optimized.Invoke(default(object[]));
 		}
 		
-		// PlayerActionsVar.TotalRoomkillsTrack
+		// UnityEngine.AudioSource.Stop
 		[global::UnityEngine.Scripting.PreserveAttribute()]
-		public static void PlayerActionsVar_TotalRoomkillsTrack()
+		public static void UnityEngine_AudioSource_Stop()
 		{
-			global::PlayerActionsVar target = default(global::PlayerActionsVar);
-			int accessor = target.TotalRoomkillsTrack;
-			target.TotalRoomkillsTrack = default(int);
-			global::Unity.VisualScripting.InstanceFieldAccessor<PlayerActionsVar, int> optimized = new global::Unity.VisualScripting.InstanceFieldAccessor<PlayerActionsVar, int>(default(global::System.Reflection.FieldInfo));
-			optimized.GetValue(default(global::PlayerActionsVar));
-			optimized.SetValue(default(global::PlayerActionsVar), default(int));
+			global::UnityEngine.AudioSource target = default(global::UnityEngine.AudioSource);
+			target.Stop();
+			global::Unity.VisualScripting.InstanceActionInvoker<UnityEngine.AudioSource> optimized = new global::Unity.VisualScripting.InstanceActionInvoker<UnityEngine.AudioSource>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(default(global::UnityEngine.AudioSource));
+			optimized.Invoke(default(object[]));
 		}
 		
 		// PhotonSerializerBGN.PlayerNickName
@@ -35041,11 +34964,47 @@ namespace Unity.VisualScripting.Generated.Aot
 			optimized.SetValue(default(global::PlayerScores), default(string));
 		}
 		
+		// PlayerScores.TotalRoomKills
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void PlayerScores_TotalRoomKills()
+		{
+			global::PlayerScores target = default(global::PlayerScores);
+			int accessor = target.TotalRoomKills;
+			target.TotalRoomKills = default(int);
+			global::Unity.VisualScripting.InstanceFieldAccessor<PlayerScores, int> optimized = new global::Unity.VisualScripting.InstanceFieldAccessor<PlayerScores, int>(default(global::System.Reflection.FieldInfo));
+			optimized.GetValue(default(global::PlayerScores));
+			optimized.SetValue(default(global::PlayerScores), default(int));
+		}
+		
+		// PlayerActionsVar.TotalRoomkillsTrack
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void PlayerActionsVar_TotalRoomkillsTrack()
+		{
+			global::PlayerActionsVar target = default(global::PlayerActionsVar);
+			int accessor = target.TotalRoomkillsTrack;
+			target.TotalRoomkillsTrack = default(int);
+			global::Unity.VisualScripting.InstanceFieldAccessor<PlayerActionsVar, int> optimized = new global::Unity.VisualScripting.InstanceFieldAccessor<PlayerActionsVar, int>(default(global::System.Reflection.FieldInfo));
+			optimized.GetValue(default(global::PlayerActionsVar));
+			optimized.SetValue(default(global::PlayerActionsVar), default(int));
+		}
+		
 		// UnityEngine.Object..ctor
 		[global::UnityEngine.Scripting.PreserveAttribute()]
 		public static void UnityEngine_Object_ctor()
 		{
 			new UnityEngine.Object();
+		}
+		
+		// UnityEngine.Transform.name
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void UnityEngine_Transform_name()
+		{
+			global::UnityEngine.Object target = default(global::UnityEngine.Object);
+			string accessor = target.name;
+			target.name = default(string);
+			global::Unity.VisualScripting.InstancePropertyAccessor<UnityEngine.Object, string> optimized = new global::Unity.VisualScripting.InstancePropertyAccessor<UnityEngine.Object, string>(default(global::System.Reflection.PropertyInfo));
+			optimized.GetValue(default(global::UnityEngine.Object));
+			optimized.SetValue(default(global::UnityEngine.Object), default(string));
 		}
 		
 		// Unity.VisualScripting.ScriptMachine.enabled
@@ -35248,6 +35207,17 @@ namespace Unity.VisualScripting.Generated.Aot
 			optimized.SetValue(default(global::TakeDamage), default(int));
 		}
 		
+		// float.ToString
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void float_ToString()
+		{
+			float target = default(float);
+			target.ToString();
+			global::Unity.VisualScripting.ReflectionInvoker optimized = new global::Unity.VisualScripting.ReflectionInvoker(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(default(float));
+			optimized.Invoke(default(object[]));
+		}
+		
 		// UnityEngine.UI.Slider.value
 		[global::UnityEngine.Scripting.PreserveAttribute()]
 		public static void UnityEngine_UI_Slider_value()
@@ -35258,17 +35228,6 @@ namespace Unity.VisualScripting.Generated.Aot
 			global::Unity.VisualScripting.InstancePropertyAccessor<UnityEngine.UI.Slider, float> optimized = new global::Unity.VisualScripting.InstancePropertyAccessor<UnityEngine.UI.Slider, float>(default(global::System.Reflection.PropertyInfo));
 			optimized.GetValue(default(global::UnityEngine.UI.Slider));
 			optimized.SetValue(default(global::UnityEngine.UI.Slider), default(float));
-		}
-		
-		// float.ToString
-		[global::UnityEngine.Scripting.PreserveAttribute()]
-		public static void float_ToString()
-		{
-			float target = default(float);
-			target.ToString();
-			global::Unity.VisualScripting.ReflectionInvoker optimized = new global::Unity.VisualScripting.ReflectionInvoker(default(global::System.Reflection.MethodInfo));
-			optimized.Invoke(default(float));
-			optimized.Invoke(default(object[]));
 		}
 		
 		// Photon.Pun.PhotonNetwork.CountOfRooms
