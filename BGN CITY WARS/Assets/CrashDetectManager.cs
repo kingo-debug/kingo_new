@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityStandardAssets.Vehicles.Car;
-
+using Photon.Pun;
 
 public class CrashDetectManager : MonoBehaviour
 {
@@ -35,10 +35,10 @@ public class CrashDetectManager : MonoBehaviour
             takedamage.Takedamage(Mathf.RoundToInt(carcontroller.smoothedSpeed/2));
         }
 
-        else if (other.CompareTag("Player") && carcontroller.smoothedSpeed > MinSpeedCrash)
-
+        else if (other.CompareTag("Player") && carcontroller.smoothedSpeed > MinSpeedCrash) 
+            // Run over players
         {
-            other.GetComponent<Animator>().SetLayerWeight(3, 1);
+            other.GetComponent<PhotonView>().RPC("FallDown", RpcTarget.Others);
             other.GetComponent<TakeDamage>().Takedamage(Mathf.RoundToInt(carcontroller.smoothedSpeed / 2));
         }
 
