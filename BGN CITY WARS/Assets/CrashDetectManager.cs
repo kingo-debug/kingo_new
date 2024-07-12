@@ -32,7 +32,7 @@ public class CrashDetectManager : MonoBehaviour
         if (!other.CompareTag("Player")&& carcontroller.smoothedSpeed> MinSpeedCrash)
         {
             AS.PlayOneShot(Crash1SFX);  // damage car enviremental crash
-            takedamage.Takedamage(Mathf.RoundToInt(carcontroller.smoothedSpeed/2));
+            takedamage.Takedamage(Mathf.RoundToInt(carcontroller.smoothedSpeed/ CrashDamageAdjust));
         }
 
         else if (other.CompareTag("Player") && carcontroller.smoothedSpeed > MinSpeedCrash) 

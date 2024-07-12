@@ -1842,9 +1842,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2804419141240903550}
-  DefaultDistance: 5.5
+  DefaultDistance: 6
   RightDistance: 0
-  HeightDistance: 0.15
+  HeightDistance: 0
   mouseSensitivity: 0.35
   yMinLimit: 10
   yMaxLimit: 80
@@ -27312,7 +27312,7 @@ Transform:
   m_GameObject: {fileID: 6295312714267184703}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 1.444, z: 0}
+  m_LocalPosition: {x: -0, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -27667,7 +27667,7 @@ MonoBehaviour:
   Crash1SFX: {fileID: 8300000, guid: ffda69ef07257904db14a905cc4e86a3, type: 3}
   Crash2SF: {fileID: 0}
   MinSpeedCrash: 25
-  CrashDamageAdjust: 3
+  CrashDamageAdjust: 7
 --- !u!114 &2483409628598936916
 MonoBehaviour:
   m_ObjectHideFlags: 0
