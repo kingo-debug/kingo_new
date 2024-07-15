@@ -38,7 +38,6 @@ public class WeaponShoot : MonoBehaviour
     private float lastshot = 0f;
     [Space(10)]
     [Header("Firing Info")]
-    public bool Canfire = false;
     private bool started;
     public bool Fired;
     public float modifiedFireRate;
@@ -160,7 +159,7 @@ public class WeaponShoot : MonoBehaviour
         headshotHit = false;
         Parentanimator.SetBool("RELOAD", false);
         AmmoMessage.text = ("");
-        Canfire = false;
+        Parentvariables.canfire = false;
 
 
 
@@ -171,7 +170,7 @@ public class WeaponShoot : MonoBehaviour
         weaponstatus = PlayerParent.GetComponent<WeaponStatus>();
         Parentvariables = PlayerParent.GetComponent<PlayerActionsVar>();
         Parentvariables.Fired = Fired;
-        Parentanimator = PlayerParent.GetComponent<Animator>();
+        Parentanimator = PlayerParent.GetComponent<Animator>();    
         if (UpdateAmmoUI == null)
         { UpdateAmmoUI = PlayerParent.transform.Find("PLAYER Canvas").Find("WEAPON UI INFO").Find("AMMO").GetComponent<UpdateAmmoUI>(); }
         
@@ -193,7 +192,6 @@ public class WeaponShoot : MonoBehaviour
         currentclip = MaxClip;
       //  totalammo = MaxAmmo; // fill ammo on start
         AmmoMessage = GameObject.Find("AMMO MESSAGE").GetComponent<TextMeshProUGUI>();
-        Shootpoint = GameObject.FindGameObjectWithTag("ShootPoint").transform;
         CameraMain = Camera.main.gameObject;   pos = CameraMain.transform.GetChild(2);
         CamAddons = CameraMain.GetComponent<CameraAddOns>();
         SyncFireAnim();
@@ -201,7 +199,7 @@ public class WeaponShoot : MonoBehaviour
 
         Killcountupdate = GameObject.Find("KILL COUNT TEXT DISPLAY").GetComponent<UpdateKillDisplay>();
         ScoreItem = PlayerParent.GetComponent<PlayerActionsVar>().ScoreItemUI.gameObject.GetComponent<PlayerScores>();
-
+        Shootpoint =PlayerParent.transform.parent.GetChild(1).GetChild(0).transform.Find("ShootPos");
         mainCharacterController = PlayerParent.GetComponent<MainCharacterController>();
 
 
@@ -249,13 +247,13 @@ public class WeaponShoot : MonoBehaviour
         }
 
 
-        if (Canfire)
+        if (Parentvariables.canfire)
         { //canfire
 
             if (ControlFreak2.CF2Input.GetMouseButton(0) == true ) // first condition
 
             { 
-               if( PV.IsMine && Time.time > lastshot + modifiedFireRate && currentclip > 0 && !Reloading && Canfire&& !swimcontrol.Swiming && !mainCharacterController.Rolling)
+               if( PV.IsMine && Time.time > lastshot + modifiedFireRate && currentclip > 0 && !Reloading && Parentvariables .canfire&& !swimcontrol.Swiming && !mainCharacterController.Rolling)
                 {
                     AS.PlayOneShot(FireSFX, 1f);
 
@@ -735,7 +733,7 @@ public class WeaponShoot : MonoBehaviour
     IEnumerator ReadyForFire()
     {
         yield return new WaitForSeconds(PullOutTime);
-        Canfire = true;
+        Parentvariables.canfire = true;
 
     }
     #endregion 

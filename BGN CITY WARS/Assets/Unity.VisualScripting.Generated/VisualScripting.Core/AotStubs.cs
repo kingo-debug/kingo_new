@@ -34425,19 +34425,19 @@ namespace Unity.VisualScripting.Generated.Aot
 		}
 		
 		// WeaponShoot.Canfire
-		[global::UnityEngine.Scripting.PreserveAttribute()]
-		public static void WeaponShoot_Canfire()
-		{
-			global::WeaponShoot target = default(global::WeaponShoot);
-			bool accessor = target.Canfire;
-			target.Canfire = default(bool);
-			global::Unity.VisualScripting.InstanceFieldAccessor<WeaponShoot, bool> optimized = new global::Unity.VisualScripting.InstanceFieldAccessor<WeaponShoot, bool>(default(global::System.Reflection.FieldInfo));
-			optimized.GetValue(default(global::WeaponShoot));
-			optimized.SetValue(default(global::WeaponShoot), default(bool));
-		}
-		
-		// UnityEngine.CharacterController.height
-		[global::UnityEngine.Scripting.PreserveAttribute()]
+		//[global::UnityEngine.Scripting.PreserveAttribute()]
+  //      public static void weaponshoot_canfire()
+  //      {
+  //          global::weaponshoot target = default(global::weaponshoot);
+  //          bool accessor = target.canfire;
+  //          target.canfire = default(bool);
+  //          global::unity.visualscripting.instancefieldaccessor<weaponshoot, bool> optimized = new global::unity.visualscripting.instancefieldaccessor<weaponshoot, bool>(default(global::system.reflection.fieldinfo));
+  //          optimized.getvalue(default(global::weaponshoot));
+  //          optimized.setvalue(default(global::weaponshoot), default(bool));
+  //      }
+
+        // UnityEngine.CharacterController.height
+        [global::UnityEngine.Scripting.PreserveAttribute()]
 		public static void UnityEngine_CharacterController_height()
 		{
 			global::UnityEngine.CharacterController target = default(global::UnityEngine.CharacterController);

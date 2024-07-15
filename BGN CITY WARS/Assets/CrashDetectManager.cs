@@ -39,7 +39,7 @@ public class CrashDetectManager : MonoBehaviour
             takedamage.Takedamage(Mathf.RoundToInt(carcontroller.smoothedSpeed/ CrashDamageAdjust));
         }
 
-        else if (other.CompareTag("Player") && carcontroller.smoothedSpeed > MinSpeedRunOver) 
+        else if (other.name ==("Player Root") && carcontroller.smoothedSpeed > MinSpeedRunOver) 
             // Run over players
         {
             other.GetComponent<CharacterController>().enabled = false;

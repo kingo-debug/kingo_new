@@ -12,12 +12,15 @@ public class InventoryManager : MonoBehaviour
     private PhotonView PV;
     private Animator animator;
     private PhotonSerializerBGN photonSerializer;
+    private FallDownSystem falldown;
     // Start is called before the first frame update
     void Start()
     {
         PV = GetComponent<PhotonView>();
         animator = GetComponent<Animator>();
         photonSerializer = GetComponent<PhotonSerializerBGN>();
+        falldown = GetComponent<FallDownSystem>();
+
         if (PV.IsMine)
         {
             Actions.InventoryTrack = 0;
@@ -30,13 +33,13 @@ public class InventoryManager : MonoBehaviour
 
     public void RefreshInventory()
     {
-        if(PV.IsMine)
+        if(PV.IsMine && !falldown.Fell)
         {
-            int inventoryTrackInt = Actions.InventoryTrack; // Assuming you have a method to get the inventory track int value
-            int index = 0; // Counter variable to keep track of the index
 
             foreach (Transform item in Inventory)
             {
+            int inventoryTrackInt = Actions.InventoryTrack; // Assuming you have a method to get the inventory track int value
+            int index = 0; // Counter variable to keep track of the index
                 // Check if the current index matches the inventory track int
                 if (!Switched && index == inventoryTrackInt)
                 {
