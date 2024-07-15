@@ -34,11 +34,11 @@ public class InventoryManager : MonoBehaviour
     {
         if(PV.IsMine)
         {
-
-            foreach (Transform item in Inventory)
-            {
             int inventoryTrackInt = Actions.InventoryTrack; // Assuming you have a method to get the inventory track int value
             int index = 0; // Counter variable to keep track of the index
+            foreach (Transform item in Inventory)
+            {
+            
                 // Check if the current index matches the inventory track int
                 if (!Switched && index == inventoryTrackInt)
                 {

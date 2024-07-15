@@ -15,7 +15,7 @@ public class FallDownSystem : MonoBehaviour
         animator = GetComponent<Animator>();
         mainCharacterController = GetComponent<MainCharacterController>();
         characterController = GetComponent<CharacterController>();
-        ScreenBlock = transform.Find("SCREEN BLOCKERS").transform.GetChild(0).gameObject;
+        ScreenBlock =transform.Find("PLAYER Canvas").transform.Find("SCREEN BLOCKERS").transform.GetChild(0).gameObject;
     }
     [PunRPC]
     public void FallDown()
