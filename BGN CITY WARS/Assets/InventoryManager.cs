@@ -19,7 +19,6 @@ public class InventoryManager : MonoBehaviour
         PV = GetComponent<PhotonView>();
         animator = GetComponent<Animator>();
         photonSerializer = GetComponent<PhotonSerializerBGN>();
-        falldown = GetComponent<FallDownSystem>();
 
         if (PV.IsMine)
         {
@@ -33,7 +32,7 @@ public class InventoryManager : MonoBehaviour
 
     public void RefreshInventory()
     {
-        if(PV.IsMine && !falldown.Fell)
+        if(PV.IsMine)
         {
 
             foreach (Transform item in Inventory)

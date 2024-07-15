@@ -7,6 +7,7 @@ public class FallDownSystem : MonoBehaviour
     private CharacterController characterController;
     private PhotonView PV;
     public bool Fell = false;
+    private GameObject ScreenBlock;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +15,7 @@ public class FallDownSystem : MonoBehaviour
         animator = GetComponent<Animator>();
         mainCharacterController = GetComponent<MainCharacterController>();
         characterController = GetComponent<CharacterController>();
+        ScreenBlock = transform.Find("SCREEN BLOCKERS").transform.GetChild(0).gameObject;
     }
     [PunRPC]
     public void FallDown()
@@ -31,6 +33,8 @@ public class FallDownSystem : MonoBehaviour
         GetComponent<PlayerActionsVar>().canfire = false;
 
         Fell = true;
+
+        ScreenBlock.SetActive(true);
     }
 
 
@@ -41,6 +45,7 @@ public class FallDownSystem : MonoBehaviour
             animator.SetLayerWeight(3, 0);
             characterController.enabled = true;
         GetComponent<PlayerActionsVar>().canfire = true;
+        ScreenBlock.SetActive(false) ;
         Fell = false;
         if (PV.IsMine)
         {
