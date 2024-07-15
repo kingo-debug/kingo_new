@@ -439,7 +439,7 @@ public class WeaponShoot : MonoBehaviour
 
                 TakeDamage takedamage = collided.transform.parent.GetComponent<TakeDamage>();
                 if (takedamage != null)
-                { takedamage.Takedamage(VehcileDamage); }
+                { collided.transform.parent.GetComponent<PhotonView>().RPC("Takedamage", RpcTarget.All, VehcileDamage); }
             }
         } 
         //check headshot
