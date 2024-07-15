@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: "Assets/BLOCKYGON ASSETS \xA9/Scenes/LoadingScreenMain.unity"
     guid: 6e4f1e2b69f2df648a08d2b53d57c118
   - enabled: 1
