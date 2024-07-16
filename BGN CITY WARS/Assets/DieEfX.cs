@@ -6,12 +6,14 @@ public class DieEfX : MonoBehaviour
  
  [SerializeField]
  private GameObject[] ObjectsToHide;
+    private CharacterController characterController;
 
     private PhotonView PV;
 
     private void Awake()
     {
         PV = GetComponent<PhotonView>();
+        characterController = GetComponent<CharacterController>();
     }
     public void HideOut()
     {
@@ -34,4 +36,13 @@ public class DieEfX : MonoBehaviour
         }
     }
    }
+    void OnDied()
+    {
+        #region Character Controller ReSize
+        characterController.radius = 0;
+        characterController.height = 0;
+        characterController.center = new Vector3(0, .5f, 0);
+        #endregion
+    }
+
 }
