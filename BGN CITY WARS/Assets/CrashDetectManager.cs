@@ -47,7 +47,7 @@ public class CrashDetectManager : MonoBehaviour
             CharacterController characterController = other.GetComponent<CharacterController>();
           characterController.radius = 0;
             characterController.height = 0;
-            characterController.center = new Vector3(0, 0, 0);
+            characterController.center = new Vector3(0, 0.5f, 0);
             #endregion
             other.GetComponent<PhotonView>().RPC("FallDown", RpcTarget.All); // trip other player
             other.GetComponent<PhotonView>().RPC("Takedamage", RpcTarget.All, Mathf.RoundToInt(carcontroller.smoothedSpeed / PlayersDamageAdjust)); // damage other player

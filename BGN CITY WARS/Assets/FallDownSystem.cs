@@ -23,17 +23,25 @@ public class FallDownSystem : MonoBehaviour
         
         animator.SetLayerWeight(3, 1);
         animator.SetBool("FellDown", true);
+        #region Character Controller ReSize
+        characterController.radius = 0;
+        characterController.height = 0;
+        characterController.center = new Vector3(0, .5f, 0);
+        #endregion
+        if(PV.IsMine)
+        {
+            mainCharacterController.StopAim();
+            mainCharacterController.Combatmode = false;
+            animator.SetBool("FIRE INPUT", false);
+            ScreenBlock.SetActive(true);
+        }
 
-        mainCharacterController.enabled = false;
-        mainCharacterController.StopAim();
-        mainCharacterController.Combatmode = false;
-        animator.SetBool("FIRE INPUT", false);
 
         GetComponent<PlayerActionsVar>().canfire = false;
 
         Fell = true;
 
-        ScreenBlock.SetActive(true);
+
     }
 
 
@@ -49,11 +57,11 @@ public class FallDownSystem : MonoBehaviour
         #endregion
 
         GetComponent<PlayerActionsVar>().canfire = true;
-        ScreenBlock.SetActive(false) ;
+
         Fell = false;
         if (PV.IsMine)
         {
-            mainCharacterController.enabled = true;        
+            ScreenBlock.SetActive(false);
         }
 
 

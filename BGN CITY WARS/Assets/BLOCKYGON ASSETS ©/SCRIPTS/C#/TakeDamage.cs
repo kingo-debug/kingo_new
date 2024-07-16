@@ -141,10 +141,17 @@ public class TakeDamage : MonoBehaviour
                 MainCharacterController mainCharacterController;
                 if (TryGetComponent<MainCharacterController>(out mainCharacterController))
                 {
-                    mainCharacterController.enabled = false;
+                    transform.Find("PLAYER Canvas").transform.Find("SCREEN BLOCKERS").GetChild(0).gameObject.SetActive(true);
                     mainCharacterController.StopAim();
                     mainCharacterController.Combatmode = false;
                     animator.SetBool("FIRE INPUT", false);
+                    #region Character Controller ReSize
+                    CharacterController characterController = GetComponent<CharacterController>();
+                    characterController.radius = 0;
+                    characterController.height = 0;
+                    characterController.center = new Vector3(0, 0.5f, 0);
+                    #endregion
+
                 }
 
 
@@ -159,7 +166,14 @@ public class TakeDamage : MonoBehaviour
                 {
                     Transform spawnpoints = GameObject.FindWithTag("SP").transform;
                     transform.position = spawnpoints.GetChild(Random.Range(0, spawnpoints.childCount)).position;
-                    mainCharacterController.enabled = true;
+                    transform.Find("PLAYER Canvas").transform.Find("SCREEN BLOCKERS").GetChild(0).gameObject.SetActive(false);
+
+                    #region Character Controller ReSize
+                    CharacterController characterController = GetComponent<CharacterController>();
+                    characterController.radius = 1;
+                    characterController.height = 4;
+                    characterController.center = new Vector3(0, 1.5f, 0);
+                    #endregion
                 }
                 HP = 100;
                 Refreshbar.UpdateHP(HP);
