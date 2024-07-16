@@ -42,9 +42,15 @@ public class CrashDetectManager : MonoBehaviour
         else if (other.name ==("Player Root") && carcontroller.smoothedSpeed > MinSpeedRunOver) 
             // Run over players
         {
-            other.GetComponent<CharacterController>().enabled = false;
-            other.GetComponent<PhotonView>().RPC("FallDown", RpcTarget.Others); // trip other player
-            other.GetComponent<PhotonView>().RPC("Takedamage", RpcTarget.Others, Mathf.RoundToInt(carcontroller.smoothedSpeed / PlayersDamageAdjust)); // damage other player
+
+            #region Character Controller ReSize
+            CharacterController characterController = other.GetComponent<CharacterController>();
+          characterController.radius = 0;
+            characterController.height = 0;
+            characterController.center = new Vector3(0, 0, 0);
+            #endregion
+            other.GetComponent<PhotonView>().RPC("FallDown", RpcTarget.All); // trip other player
+            other.GetComponent<PhotonView>().RPC("Takedamage", RpcTarget.All, Mathf.RoundToInt(carcontroller.smoothedSpeed / PlayersDamageAdjust)); // damage other player
         }
 
     }

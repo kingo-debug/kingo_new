@@ -24,7 +24,6 @@ public class FallDownSystem : MonoBehaviour
         animator.SetLayerWeight(3, 1);
         animator.SetBool("FellDown", true);
 
-        characterController.enabled = false;
         mainCharacterController.enabled = false;
         mainCharacterController.StopAim();
         mainCharacterController.Combatmode = false;
@@ -43,7 +42,12 @@ public class FallDownSystem : MonoBehaviour
    
             animator.SetBool("FellDown", false);
             animator.SetLayerWeight(3, 0);
-            characterController.enabled = true;
+        #region Character Controller ReSize
+        characterController.radius = 1;
+        characterController.height = 4;
+        characterController.center = new Vector3(0, 1.5f, 0);
+        #endregion
+
         GetComponent<PlayerActionsVar>().canfire = true;
         ScreenBlock.SetActive(false) ;
         Fell = false;

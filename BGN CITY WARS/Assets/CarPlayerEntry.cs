@@ -75,8 +75,7 @@ public class CarPlayerEntry : MonoBehaviour
         if(PV.IsMine)
         {
             Player.transform.root.gameObject.SetActive(false); // Disable Player
-            GetComponent<CarController>().enabled = true;
-            GetComponent<CarUserControl>().enabled = true;
+      //      GetComponent<CarController>().enabled = true;
             GetComponent<CarAudio>().enabled = true;
             GetComponent<Animator>().enabled = true;
             if (TryGetComponent<AudioSource>(out AudioSource AS))
@@ -132,9 +131,8 @@ public class CarPlayerEntry : MonoBehaviour
 
             transform.parent.GetChild(1).gameObject.SetActive(false); // Car Cameras Disable
             transform.Find("CAR CANVAS").transform.GetChild(0).gameObject.SetActive(false); // disable car canvas
-            GetComponent<CarController>().enabled = false; // disable car controller
-            GetComponent<CarUserControl>().enabled = false; //disable car controls
-            Player.transform.root.gameObject.SetActive(true); // Enable Player
+           // GetComponent<CarController>().enabled = false; // disable car controller
+                Player.transform.root.gameObject.SetActive(true); // Enable Player
             carcontroller.Move(0, 0, 50000, 50000);
             GetComponent<AudioSource>().enabled = false;
             GetComponent<Animator>().enabled = false;
