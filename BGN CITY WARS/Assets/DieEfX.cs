@@ -4,9 +4,10 @@ public class DieEfX : MonoBehaviour
 
 {
  
- [SerializeField]
- private GameObject[] ObjectsToHide;
-    private CharacterController characterController;
+[SerializeField]
+private GameObject[] ObjectsToHide;
+private CharacterController characterController;
+private GameObject ScreenBlock;
 
     private PhotonView PV;
 
@@ -14,6 +15,7 @@ public class DieEfX : MonoBehaviour
     {
         PV = GetComponent<PhotonView>();
         characterController = GetComponent<CharacterController>();
+        ScreenBlock = transform.Find("PLAYER Canvas").transform.Find("SCREEN BLOCKERS").transform.GetChild(0).gameObject;
     }
     public void HideOut()
     {
@@ -43,6 +45,8 @@ public class DieEfX : MonoBehaviour
         characterController.height = 0;
         characterController.center = new Vector3(0, .5f, 0);
         #endregion
+
+        ScreenBlock.SetActive(true);
     }
 
 }
