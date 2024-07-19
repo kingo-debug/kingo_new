@@ -18,10 +18,12 @@ public class SFXmanager : MonoBehaviour
     [SerializeField]
     private AudioClip[] LadderClimb;
 
-    public AudioClip[] ReloadPart ;
+    public AudioClip[] ReloadPart;
     [SerializeField]
     private AudioClip RollSFX;
 
+    [SerializeField]
+    private AudioClip[] HurtSFX;
 
     public AudioClip NewMessageItem;
 
@@ -139,6 +141,7 @@ public class SFXmanager : MonoBehaviour
     void DelayStart()
     {
         RefreshVolumeSettings();
+        HurtSFX = GetComponent<SkinManager>().SkinItem.GetComponent<SkinData>().CharHurtSFX;
     }
     public void RefreshVolumeSettings()
     {
@@ -147,7 +150,16 @@ public class SFXmanager : MonoBehaviour
         weapon.CurrentWeapon.GetComponent<AudioSource>().volume = AS.volume;
     }
 
+    public void PlayHurtSFX()
+    {
+       if(HurtSFX.Length>0)
+        {
+            int nextSFXIndex = Random.Range(0, HurtSFX.Length);
+            AudioClip nextSFX = HurtSFX[nextSFXIndex];
+            AS.PlayOneShot(nextSFX, 1f);
 
+        }
+    }
 
     }
 

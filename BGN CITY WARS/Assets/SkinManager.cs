@@ -9,6 +9,7 @@ public class SkinManager : MonoBehaviour
     public string EquippedSkin;
     private PhotonView PV;
     private PhotonSerializerBGN photonSerializer;
+    public GameObject SkinItem;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +23,7 @@ public class SkinManager : MonoBehaviour
     {
         if(PV.IsMine)
         {
-
+            SkinItem = Resources.Load<GameObject>(Path.Combine(("skins"), ES3.Load<string>("CurrentSkin")));
             SkinMesh.material =  Resources.Load<GameObject>(Path.Combine(("skins"), ES3.Load<string>("CurrentSkin"))).GetComponent<SkinData>().SkinMaterial;
 
             EquippedSkin = ES3.Load<string>("CurrentSkin");
@@ -30,7 +31,9 @@ public class SkinManager : MonoBehaviour
         }
         else
         {
-            SkinMesh.material = Resources.Load<GameObject>(Path.Combine(("skins"),photonSerializer.SkinID)).GetComponent<SkinData>().SkinMaterial;
+            SkinItem = Resources.Load<GameObject>(Path.Combine(("skins"), photonSerializer.SkinID));
+
+           SkinMesh.material = Resources.Load<GameObject>(Path.Combine(("skins"),photonSerializer.SkinID)).GetComponent<SkinData>().SkinMaterial;
 
             EquippedSkin = photonSerializer.SkinID;
 

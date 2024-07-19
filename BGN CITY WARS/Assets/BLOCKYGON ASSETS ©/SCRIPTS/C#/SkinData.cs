@@ -8,4 +8,6 @@ public string SkinName;
 public Material SkinMaterial;
 public Sprite SkinPFP;
 public Color SkinRarity;
+public AudioClip[] CharHurtSFX; 
+public AudioClip[] CharScreamsFX;
 }

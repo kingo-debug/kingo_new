@@ -44,7 +44,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d21139e4ec61d7448830f17ac4f7cb47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SkinName: Trev
+  SkinName: Trevese
   SkinMaterial: {fileID: 2100000, guid: 9af789e82d98c2143a0ad44e9308bfc2, type: 2}
   SkinPFP: {fileID: 21300000, guid: eb927957ef513c74ab95640a830827a6, type: 3}
   SkinRarity: {r: 0.4716981, g: 0.46502313, b: 0.46502313, a: 0}
+  CharHurtSFX:
+  - {fileID: 8300000, guid: d1c8ff0c230216140a766906394606b0, type: 3}
+  - {fileID: 8300000, guid: 0676516f01adf0449b9eae37b382b069, type: 3}
+  - {fileID: 8300000, guid: 936d91f638f198e4abb3c35a9cb6cf0b, type: 3}
+  CharScreamsFX: []
