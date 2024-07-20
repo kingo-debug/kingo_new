@@ -108,7 +108,7 @@ public class ExplodeEventCaller : MonoBehaviour
         }
     }
     [PunRPC]
-    void Explode()
+    public void Explode()
     {
         Exploded = true;
         Debug.Log("Boomed Exploded");

@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using TMPro;
+using Photon.Pun;
 
 #pragma warning disable 649
 namespace UnityStandardAssets.Vehicles.Car
@@ -38,7 +39,12 @@ namespace UnityStandardAssets.Vehicles.Car
         [SerializeField] private float m_RevRangeBoundary = 1f;
         [SerializeField] private float m_SlipLimit;
         [SerializeField] private float m_BrakeTorque;
-   
+        [Header ("WaterSettings")]
+        [SerializeField] private float UnderWaterDrownTime = 3f;
+        public bool UnderWater = false;
+        private float underwaterTimer = 0.0f; // This will track how long the player has been underwater
+
+
         public float Speed;
         public float smoothedSpeed = 0f;
         [SerializeField] private float smoothingFactor = 0.1f; // Adjust this factor to smooth more or less
@@ -63,12 +69,15 @@ namespace UnityStandardAssets.Vehicles.Car
         public float MaxSpeed { get { return m_Topspeed; } }
         public float Revs { get; private set; }
         public float AccelInput { get; private set; }
+        private CarPlayerEntry playerentry;
+
 
         private CarPlayerEntry playerentery;
 
         // Use this for initialization
         private void Start()
         {
+            playerentery = GetComponent<CarPlayerEntry>();
             m_WheelMeshLocalRotations = new Quaternion[4];
             for (int i = 0; i < 4; i++)
             {
@@ -99,6 +108,8 @@ namespace UnityStandardAssets.Vehicles.Car
             }
 
             CapSpeed();
+
+            UnderWaterCheck();
 
         }
 
@@ -374,7 +385,32 @@ namespace UnityStandardAssets.Vehicles.Car
             }
         }
 
+        void UnderWaterCheck()
+        {
+            if (UnderWater)
+            {
+                // Increment the timer
+                underwaterTimer += Time.deltaTime;
 
+                // Check if the timer has reached the drown time
+                if (underwaterTimer >= UnderWaterDrownTime && playerentery.PlayerInCar)
+                {
+                    Drown();
+                }
+            }
+            else
+            {
+                // Reset the timer if the player is not underwater
+                underwaterTimer = 0.0f;
+            }
+   
+        }
+        void Drown()
+        {
+            playerentery.ExitCar();
+            playerentery.Player.GetComponent<PhotonView>().RPC("Takedamage", RpcTarget.All, 100);
+            UnderWater = false;
+        }
         private void AdjustTorque(float forwardSlip)
         {
             if (forwardSlip >= m_SlipLimit && m_CurrentTorque >= 0)
@@ -405,5 +441,7 @@ namespace UnityStandardAssets.Vehicles.Car
         }
     }
 
+    
 
 }
+

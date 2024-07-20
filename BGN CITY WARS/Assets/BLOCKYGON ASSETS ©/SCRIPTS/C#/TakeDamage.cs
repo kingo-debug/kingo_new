@@ -47,7 +47,10 @@ public class TakeDamage : MonoBehaviour
             animator = GetComponent<Animator>();
         }
     }
-
+    private void OnEnable()
+    {
+        StartCoroutine(Checklife());
+    }
 
     [PunRPC]
     public void Takedamage(int Damage)

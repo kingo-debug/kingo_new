@@ -13050,17 +13050,17 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 5387b9ed08b08714b9f4338bce2a2bba, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
-  m_Pitch: 0.8
+  m_Pitch: 1.1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 196
+  Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 0
+  MaxDistance: 15
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -21013,20 +21013,20 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c75ee2325f7738c4d91ff2553d00be15, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4e915b25a175ce64599029e52cb42723, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
-  m_Pitch: 1
+  m_Pitch: 1.1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 0
+  MaxDistance: 15
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -27588,6 +27588,8 @@ MonoBehaviour:
   m_RevRangeBoundary: 1
   m_SlipLimit: 1
   m_BrakeTorque: 20000
+  UnderWaterDrownTime: 3
+  UnderWater: 0
   Speed: 0
   smoothedSpeed: 0
   smoothingFactor: 0.1
