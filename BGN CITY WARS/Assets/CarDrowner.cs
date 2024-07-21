@@ -10,6 +10,7 @@ public class CarDrowner : MonoBehaviour
         if(other.tag=="CAR")
         {
             other.GetComponent<CarController>().UnderWater = true;
+            other.GetComponent<Rigidbody>().drag = 18;
         }
     }
 
@@ -18,6 +19,7 @@ public class CarDrowner : MonoBehaviour
         if (other.tag == "CAR")
         {
             other.GetComponent<CarController>().UnderWater = false;
+            other.GetComponent<Rigidbody>().drag = 0.2f;
         }
     }
 }

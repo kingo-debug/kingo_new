@@ -7347,7 +7347,7 @@ GameObject:
   - component: {fileID: 5664441287318584272}
   m_Layer: 2
   m_Name: CAR BODY
-  m_TagString: Untagged
+  m_TagString: CAR
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27437,7 +27437,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!82 &1292367395454847465
 AudioSource:
   m_ObjectHideFlags: 0
@@ -27750,7 +27750,7 @@ SphereCollider:
     m_Bits: 8
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 16777207
+    m_Bits: 33554423
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
