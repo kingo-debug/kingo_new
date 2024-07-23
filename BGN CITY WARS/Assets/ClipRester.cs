@@ -1,25 +1,20 @@
 using UnityEngine;
-using System.Collections;
 
 public class ClipRester : MonoBehaviour
 {
-   Transform  Clip ;
-    private void Start()
-    {
-        Clip = transform.GetChild(0);
-    }
+    // Start is called before the first frame update
 
+    [SerializeField]
+    private Transform Clip;
+    [SerializeField]
+    private Transform ClipPlace;
     private void OnDisable()
     {
-        StartCoroutine(SetParentNextFrame());
+        Clip.SetParent(ClipPlace);
+        Clip.transform.localPosition = new Vector3(0, 0, 0);
+        Clip.transform.localRotation = new Quaternion(0, 0, 0, 0);
+        Clip.transform.localScale = new Vector3(1, 1, 1);
     }
 
-    private IEnumerator SetParentNextFrame()
-    {
-        yield return new WaitForEndOfFrame(); // Wait until the end of the frame
-        if (Clip != null)
-        {
-            Clip.SetParent(transform);
-        }
-    }
+
 }
