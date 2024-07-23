@@ -43,6 +43,8 @@ namespace UnityStandardAssets.Vehicles.Car
         [SerializeField] private float UnderWaterDrownTime = 3f;
         public bool UnderWater = false;
         private float underwaterTimer = 0.0f; // This will track how long the player has been underwater
+        [SerializeField]
+        private GameObject UnderWaterSFX;
 
 
         public float Speed;
@@ -391,7 +393,11 @@ namespace UnityStandardAssets.Vehicles.Car
             {
                 // Increment the timer
                 underwaterTimer += Time.deltaTime;
-
+                if(!UnderWaterSFX.activeSelf)
+                {
+                    UnderWaterSFX.SetActive(true); // under water screen efx
+                }
+      
                 // Check if the timer has reached the drown time
                 if (underwaterTimer >= UnderWaterDrownTime && playerentery.PlayerInCar)
                 {
@@ -402,6 +408,10 @@ namespace UnityStandardAssets.Vehicles.Car
             {
                 // Reset the timer if the player is not underwater
                 underwaterTimer = 0.0f;
+                if (UnderWaterSFX.activeSelf)
+                {
+                    UnderWaterSFX.SetActive(false); // under water screen efx
+                }
             }
    
         }
