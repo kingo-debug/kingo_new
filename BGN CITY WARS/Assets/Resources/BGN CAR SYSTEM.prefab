@@ -7420,7 +7420,7 @@ GameObject:
   - component: {fileID: 6532429106341332357}
   - component: {fileID: 8220434466870862229}
   - component: {fileID: 5664441287318584272}
-  m_Layer: 2
+  m_Layer: 8
   m_Name: CAR BODY
   m_TagString: CAR
   m_Icon: {fileID: 0}

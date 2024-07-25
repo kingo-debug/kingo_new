@@ -67,8 +67,13 @@ public class NetWorkPlayerSync : MonoBehaviour
 
         if (PV.IsMine)
         {
-
-            PunSerializer.SkinID = ES3.Load<string>("CurrentSkin");
+            bool SkinSet = false;
+                if(!SkinSet)
+            {
+                PunSerializer.SkinID = ES3.Load<string>("CurrentSkin");
+                SkinSet = true;
+            }
+          
             PunSerializer.InventoryTrack = playerActions.InventoryTrack;
             PunSerializer.CurrentWeaponType = playerActions.Weapontype;
             PunSerializer.Fired = playerActions.Fired;

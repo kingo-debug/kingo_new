@@ -1,18 +1,31 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Enableothers : MonoBehaviour
 {
     [SerializeField]
     private Transform[] Others;
-    private void OnDisable()
+    [SerializeField]
+    private bool OnEnabled = false;
+    private void OnEnable()
     {
-        foreach (Transform other in Others)
+        if (OnEnabled)
         {
-            other.gameObject.SetActive(true);
+            foreach (Transform other in Others)
+            {
+                other.gameObject.SetActive(true);
+            }
         }
     }
 
+    private void OnDisable()
+    {
+        if (!OnEnabled)
+        {
+            foreach (Transform other in Others)
+            {
+                other.gameObject.SetActive(true);
+            }
+        }
+    }
 
 }

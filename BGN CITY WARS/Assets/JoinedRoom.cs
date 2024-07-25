@@ -35,7 +35,7 @@ public class JoinedRoom : MonoBehaviourPunCallbacks
     }
 
 
-
+    
 
 
 
@@ -51,5 +51,10 @@ public class JoinedRoom : MonoBehaviourPunCallbacks
         }
         else
             ErrorMaxRooms.gameObject.SetActive(true);
+    }
+
+    public override void OnJoinRoomFailed(short returnCode, string message)
+    {
+        Debug.Log(message);
     }
 }
