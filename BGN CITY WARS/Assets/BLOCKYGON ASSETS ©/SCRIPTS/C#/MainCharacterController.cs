@@ -32,7 +32,10 @@ public class MainCharacterController : MonoBehaviour
     private float FMMoveThreshold;
     public float FMSpeed;
     public float MoveSmoothness;
+    public float AirMoveSmoothness;
     private float Lerp;
+    private float AirLerp;
+    Vector3 movement;
     [SerializeField]
     private float FreeRotationSpeed;
     private Quaternion freeRotation;
@@ -75,7 +78,7 @@ public class MainCharacterController : MonoBehaviour
     #endregion
     void Start()
     {
-        
+
         joystick = GameObject.FindWithTag("JoyStick").GetComponent<TouchJoystick>();
 
         animator = GetComponent<Animator>();
@@ -147,7 +150,7 @@ public class MainCharacterController : MonoBehaviour
         if (Combatmode)
         {
             CombatMode();
-        
+
         }
         else
         {
@@ -155,16 +158,16 @@ public class MainCharacterController : MonoBehaviour
         }
 
         #region IK 
-        if (!ISAiming && aimik.GetIKSolver().IKPositionWeight>0)
+        if (!ISAiming && aimik.GetIKSolver().IKPositionWeight > 0)
         {
             StopAim();
         }
         #endregion
 
         #region RollingCheck
-       if (Rolling)
+        if (Rolling)
         {
-          Roll();
+            Roll();
         }
         if (!Rolling && animator.GetLayerWeight(7) > 0)
         {
@@ -181,7 +184,7 @@ public class MainCharacterController : MonoBehaviour
         //Combat mode features
 
         #region Strafe Move
-        Vector3 Strafemove = transform.rotation * new Vector3(joystick.GetVector().x * CMSpeed, 0, joystick.GetVector().y * CMSpeed) * Time.deltaTime;
+        Vector3 Strafemove = transform.rotation * new Vector3(joystick.GetVector().x * CMSpeed, velocity.y, joystick.GetVector().y * CMSpeed) * Time.deltaTime;
         CharController.Move(Strafemove);
         #endregion
         #region RotateChar
@@ -194,36 +197,62 @@ public class MainCharacterController : MonoBehaviour
         actionsVar.Combat = Combatmode;
     }
 
-   public  void FreeMode()
+    public void FreeMode()
     {
 
         #region Free Movement
-        if (PV.IsMine && joystick.GetVector().magnitude > FMMoveThreshold)
-
+        if (PV.IsMine )
         {
             // Get the joystick input vector
             Vector3 joystickInput = joystick.GetVector();
-            if (Lerp < FMSpeed)
+
+            #region Ground Lerp
+            if (Lerp < FMSpeed && joystickInput.magnitude > 0.1)
             {
-                Lerp = Mathf.Clamp(Lerp += MoveSmoothness * Time.deltaTime, 0, FMSpeed);
+                Lerp = Mathf.Clamp(Lerp += MoveSmoothness * Time.deltaTime, 0, FMSpeed);    // lerp up movement 
             }
 
 
+            if (Lerp > 0 && joystickInput.magnitude < 0.1)
+            {
+                Lerp = Mathf.Clamp(Lerp -= MoveSmoothness * 0.5f * Time.deltaTime, 0, FMSpeed);   // lerp down movement 
+            }
+
+            #endregion
+            #region AirBorn Lerp
+            if (AirLerp < FMSpeed && joystickInput.magnitude > 0.1)
+            {
+                AirLerp = Mathf.Clamp(AirLerp += AirMoveSmoothness * Time.deltaTime, 0, FMSpeed);    // lerp up movement 
+            }          
+            #endregion
+
+            if (CharController.isGrounded)
+            {
+                // Create a movement vector based on the joystick input
+                movement = transform.rotation * new Vector3(0, velocity.y * Time.deltaTime, Mathf.Abs(joystickInput.magnitude*Lerp * Time.deltaTime));
+
+                AirLerp = Mathf.Clamp(AirLerp -= AirMoveSmoothness * 0.5f * Time.deltaTime, 0, FMSpeed);   // lerp down movement 
+
+            }
+            else
+            {
+                // Create a movement vector based on the joystick input
+                movement = transform.rotation * new Vector3(0, velocity.y * Time.deltaTime, Mathf.Abs(AirLerp * Time.deltaTime));
+
+       
+                   
+
+            }
 
 
-            // Create a movement vector based on the joystick input
-            Vector3 movement = transform.rotation * new Vector3(0, 0, Mathf.Abs(joystickInput.magnitude * Lerp * Time.deltaTime));
 
             // Apply the movement to the character controller
             CharController.Move(movement);
+
+
+
         }
-        else
-        {
-            if (Lerp > 0)
-            {
-                Lerp = Mathf.Clamp(Lerp -= MoveSmoothness * 0.5f * Time.deltaTime, 0, FMSpeed);
-            }
-        }
+
 
         #endregion
 
@@ -280,30 +309,30 @@ public class MainCharacterController : MonoBehaviour
 
     void Jump()
     {
-        if(PV.IsMine)
+        if (PV.IsMine)
         {
             if (isGrounded && velocity.y < 0)
             {
                 velocity.y = -2f; // Ensure you are grounded to avoid gravity accumulation
             }
 
-            if (ControlFreak2.CF2Input.GetKey(KeyCode.Space) && isGrounded&& !Rolling)
+            if (ControlFreak2.CF2Input.GetKey(KeyCode.Space) && isGrounded && !Rolling)
             {
                 Jumping = true;
-               StartCoroutine(Resetjump());
+                StartCoroutine(Resetjump());
                 // Calculate the jump velocity based on jump height
                 velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
 
             }
-                // Apply gravity to pull the character down
-                velocity.y += gravity * Time.deltaTime;
+            // Apply gravity to pull the character down
+            velocity.y += gravity * Time.deltaTime;
 
-                // Move the character
-                CharController.Move(velocity * Time.deltaTime);
+            // Move the character
+          //  CharController.Move(velocity * Time.deltaTime);
 
         }
 
-        if (jpmanager.JetPackActive && ControlFreak2.CF2Input.GetKey(KeyCode.Space) &&!Jumping)
+        if (jpmanager.JetPackActive && ControlFreak2.CF2Input.GetKey(KeyCode.Space) && !Jumping)
         {
             velocity.y = -0f;
         }
@@ -313,20 +342,20 @@ public class MainCharacterController : MonoBehaviour
 
     void Aim()
     {
-        if(PV.IsMine)
+        if (PV.IsMine)
         {
             if (ControlFreak2.CF2Input.GetMouseButtonDown(1)) // first condition
-                if( !actionsVar.IsReloading && actionsVar.Weapontype > 0 && !swimcontrols.Swiming&& !Rolling)
+                if (!actionsVar.IsReloading && actionsVar.Weapontype > 0 && !swimcontrols.Swiming && !Rolling)
                 {
                     if (ISAiming)
                     {
                         ISAiming = false;
-                     //   animator.SetBool("IS AIMING", false);
-                   //     weaponstatus.CurrentWeapon.GetComponent<WeaponRecoil>().PlayerAiming = false;
-                      //  aimik.GetIKSolver().SetIKPositionWeight(0);
-                       // lookik.GetIKSolver().SetIKPositionWeight(0);
-                      //  actionsVar.IsAiming = false;
-         
+                        //   animator.SetBool("IS AIMING", false);
+                        //     weaponstatus.CurrentWeapon.GetComponent<WeaponRecoil>().PlayerAiming = false;
+                        //  aimik.GetIKSolver().SetIKPositionWeight(0);
+                        // lookik.GetIKSolver().SetIKPositionWeight(0);
+                        //  actionsVar.IsAiming = false;
+
                         if (weaponstatus.CurrentWeapon.GetComponent<WeaponType>().Scope)
                         {
                             GetComponent<ScopingManager>().ScopeOff();
@@ -346,46 +375,46 @@ public class MainCharacterController : MonoBehaviour
                         {
                             GetComponent<ScopingManager>().ScopeOn();
                         }
-              
+
 
                     }
                 }
-            
 
 
 
-            
-            else if (actionsVar.IsReloading)
-            {
-                ISAiming = false;
-            //    weaponstatus.CurrentWeapon.GetComponent<WeaponRecoil>().PlayerAiming = false;
-              //  animator.SetBool("IS AIMING", false);
-             //   aimik.GetIKSolver().SetIKPositionWeight(0);
-             //   lookik.GetIKSolver().SetIKPositionWeight(0);
-          //      actionsVar.IsAiming = false;
 
-                if (weaponstatus.CurrentWeapon.GetComponent<WeaponType>().Scope)
+
+                else if (actionsVar.IsReloading)
+                {
+                    ISAiming = false;
+                    //    weaponstatus.CurrentWeapon.GetComponent<WeaponRecoil>().PlayerAiming = false;
+                    //  animator.SetBool("IS AIMING", false);
+                    //   aimik.GetIKSolver().SetIKPositionWeight(0);
+                    //   lookik.GetIKSolver().SetIKPositionWeight(0);
+                    //      actionsVar.IsAiming = false;
+
+                    if (weaponstatus.CurrentWeapon.GetComponent<WeaponType>().Scope)
                     {
                         GetComponent<ScopingManager>().ScopeOff();
                     }
-                       
-                  
+
+
 
 
                 }
         }
 
-    }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+    }
 
     public void StopAim()
     {
         ISAiming = false;
-        if (weaponstatus.CurrentWeapon.GetComponent<WeaponRecoil>()!=null)
+        if (weaponstatus.CurrentWeapon.GetComponent<WeaponRecoil>() != null)
         {
             weaponstatus.CurrentWeapon.GetComponent<WeaponRecoil>().PlayerAiming = false;
         }
         animator.SetBool("IS AIMING", false);
-        aimik.GetIKSolver().SetIKPositionWeight(Mathf.Lerp(aimik.GetIKSolver().IKPositionWeight, -0.01f,Time.deltaTime*1.15f));
+        aimik.GetIKSolver().SetIKPositionWeight(Mathf.Lerp(aimik.GetIKSolver().IKPositionWeight, -0.01f, Time.deltaTime * 1.15f));
         lookik.GetIKSolver().SetIKPositionWeight(Mathf.Lerp(lookik.GetIKSolver().IKPositionWeight, DefaultlookIK, Time.deltaTime * 1.15f));
         actionsVar.IsAiming = false;
         if (weaponstatus.CurrentWeapon.GetComponent<WeaponType>().Scope)
@@ -393,11 +422,11 @@ public class MainCharacterController : MonoBehaviour
             GetComponent<ScopingManager>().ScopeOff();
         }
 
-}
+    }
 
     void Shoot()
     {
-      if (PV.IsMine)
+        if (PV.IsMine)
         {
             if (ControlFreak2.CF2Input.GetMouseButton(0) && !actionsVar.IsReloading && !weaponstatus.NoAmmo && !Rolling)
             {
@@ -415,7 +444,7 @@ public class MainCharacterController : MonoBehaviour
 
     public void Roll()
     {
-        if(isGrounded)
+        if (isGrounded)
         {
             Rolling = true;
             animator.SetLayerWeight(7, Mathf.Lerp(animator.GetLayerWeight(7), 1.1f, Time.deltaTime * 8));
@@ -433,7 +462,5 @@ public class MainCharacterController : MonoBehaviour
         animator.SetBool("ROLL", false);
     }
 }
-
-
 
 
