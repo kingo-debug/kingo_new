@@ -183,18 +183,24 @@ public class MainCharacterController : MonoBehaviour
     {
         //Combat mode features
 
-        #region Strafe Move
-        Vector3 Strafemove = transform.rotation * new Vector3(joystick.GetVector().x * CMSpeed, velocity.y, joystick.GetVector().y * CMSpeed) * Time.deltaTime;
-        CharController.Move(Strafemove);
-        #endregion
-        #region RotateChar
-        Vector3 Rotation = new Vector3(MainCamera.forward.x, 0, MainCamera.forward.z);
+        if (PV.IsMine)
+        {
+            // Get the joystick input vector
+            Vector3 joystickInput = joystick.GetVector();
+            #region Strafe Move
+            Vector3 Strafemove = transform.rotation * new Vector3(joystickInput.x * CMSpeed, velocity.y, joystick.GetVector().y * CMSpeed) * Time.deltaTime;
+            CharController.Move(Strafemove);
+            #endregion
+            #region RotateChar
+            Vector3 Rotation = new Vector3(MainCamera.forward.x, 0, MainCamera.forward.z);
 
-        Vector3 SmoothRotation = Vector3.Lerp(transform.forward, Rotation, Time.deltaTime * RotateTowardsSpeed);
+            Vector3 SmoothRotation = Vector3.Lerp(transform.forward, Rotation, Time.deltaTime * RotateTowardsSpeed);
 
-        transform.forward = (SmoothRotation);
-        #endregion
-        actionsVar.Combat = Combatmode;
+            transform.forward = (SmoothRotation);
+            #endregion
+            actionsVar.Combat = Combatmode;
+        }
+           
     }
 
     public void FreeMode()
