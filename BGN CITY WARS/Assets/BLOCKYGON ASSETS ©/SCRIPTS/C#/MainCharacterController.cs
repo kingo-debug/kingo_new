@@ -10,8 +10,14 @@ using RootMotion.FinalIK;
 public class MainCharacterController : MonoBehaviour
 {
     #region Variables
+    [Header("Movement")]
     [Space(10)]
-    [Header("ControollerMode")]
+    private Vector3 moveDirection = Vector3.zero;
+    private Vector3 move;
+    public float speed = 6.0f;
+    [SerializeField]
+    private Transform PlayerBody;
+    [Header("ControllerMode")]
     [Space(3)]
     public bool Combatmode;
     [SerializeField]
@@ -34,7 +40,6 @@ public class MainCharacterController : MonoBehaviour
     public float MoveSmoothness;
     public float AirMoveSmoothness;
     private float Lerp;
-    private float AirLerp;
     Vector3 movement;
     [SerializeField]
     private float FreeRotationSpeed;
@@ -49,9 +54,11 @@ public class MainCharacterController : MonoBehaviour
     [Space(3)]
     [Header("JumpingSystem")]
     public bool isGrounded;
+    public float airControlFactor = 0.5f;
     [SerializeField]
     private float jumpHeight = 5f;
     public bool Jumping = false;
+    [SerializeField]
     private float JumpTime = .32f;
     public float gravity = 9.8f;
     [Space(3)]
@@ -67,6 +74,9 @@ public class MainCharacterController : MonoBehaviour
     private WeaponStatus weaponstatus;
     private SwimPlayerControl swimcontrols;
     private JetPackManager jpmanager;
+
+    public Transform cameraTransform; // Reference to the camera's transform
+
     [Space(3)]
     [Header("Roll System")]
     public bool Rolling;
@@ -109,8 +119,7 @@ public class MainCharacterController : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        isGrounded = CharController.isGrounded;
+    {  
         #region Animator Parameters.
         animator.SetBool("Grounded", isGrounded);
         animator.SetBool("combat", Combatmode);
@@ -124,9 +133,7 @@ public class MainCharacterController : MonoBehaviour
         if (Combatmode && !actionsVar.Fired && !ISAiming && !animator.GetBool("FIRE INPUT"))
         {
             StartCoroutine(ResetCombatMode());
-
         }
-
 
         if (float.IsNaN(animator.GetFloat("PlayerVelocity")))
         {
@@ -134,28 +141,48 @@ public class MainCharacterController : MonoBehaviour
             animator.SetFloat("inputx", 0f);
             animator.SetFloat("inputY", 0f);
             animator.SetFloat("inputMagnitude", 0f);
-
         }
         else
         {
-            animator.SetFloat("PlayerVelocity", speedcheck.speed, 1, Time.deltaTime * 9);
+            animator.SetFloat("PlayerVelocity", speedcheck.horizontalSpeed, 1, Time.deltaTime * 9);
             animator.SetFloat("inputx", joystick.GetVector().x * SyncSpeed, 0.5f, Time.deltaTime * 1.15f);
             animator.SetFloat("inputY", joystick.GetVector().y * SyncSpeed, 0.5f, Time.deltaTime * 1.15f);
             animator.SetFloat("inputMagnitude", new Vector2(animator.GetFloat("inputx"), animator.GetFloat("inputY")).magnitude);
-
         }
-
         #endregion
 
+        isGrounded = CharController.isGrounded;
+
+        if (isGrounded && moveDirection.y < 0)
+        {
+            moveDirection.y = -2f; // Ensure the player stays grounded
+        }
+
+        float moveHorizontal = ControlFreak2.CF2Input.GetAxis("Horizontal");
+        float moveVertical = ControlFreak2.CF2Input.GetAxis("Vertical");
+
+        actionsVar.Combat = Combatmode;
         if (Combatmode)
         {
-            CombatMode();
-
+            CombatModeMovement(moveHorizontal, moveVertical);
+            RotateToCameraDirection();
         }
         else
         {
-            FreeMode();
+            FreeModeMovement(moveHorizontal, moveVertical);
         }
+
+        moveDirection.y += gravity * Time.deltaTime;
+        CharController.Move(moveDirection * Time.deltaTime);
+
+        // Create  Movement
+        move = transform.right * moveHorizontal + transform.forward * moveVertical;
+
+        if (jpmanager.JetPackActive && ControlFreak2.CF2Input.GetKey(KeyCode.Space) && !Jumping)
+        {
+            moveDirection.y = -0f;
+        }
+
 
         #region IK 
         if (!ISAiming && aimik.GetIKSolver().IKPositionWeight > 0)
@@ -163,7 +190,6 @@ public class MainCharacterController : MonoBehaviour
             StopAim();
         }
         #endregion
-
         #region RollingCheck
         if (Rolling)
         {
@@ -174,23 +200,92 @@ public class MainCharacterController : MonoBehaviour
             ResetRoll();
         }
         #endregion
-        Jump();
+
         Aim();
         Shoot();
     }
 
+
+
+
+    void CombatModeMovement(float moveHorizontal, float moveVertical)
+    {
+        Vector3 move = transform.right * moveHorizontal + transform.forward * moveVertical;
+
+        if (isGrounded)
+        {
+            moveDirection = move * speed;
+            if (ControlFreak2.CF2Input.GetKey(KeyCode.Space))
+            {
+                moveDirection.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            }
+        }
+        else
+        {
+            // Airborne control
+            moveDirection.x += move.x * speed * airControlFactor * Time.deltaTime;
+            moveDirection.z += move.z * speed * airControlFactor * Time.deltaTime;
+        }
+    }
+
+    void RotateToCameraDirection()
+    {
+        // Only rotate around the Y-axis to follow the camera's direction
+        Vector3 cameraForward = cameraTransform.forward;
+        cameraForward.y = 0; // Keep rotation on the horizontal plane
+        if (cameraForward.sqrMagnitude > 0.1f)
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(cameraForward);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * RotateTowardsSpeed);
+        }
+    }
+
+    void FreeModeMovement(float moveHorizontal, float moveVertical)
+    {
+        // Calculate the move direction relative to the camera
+        Vector3 cameraForward = cameraTransform.forward;
+        Vector3 cameraRight = cameraTransform.right;
+        cameraForward.y = 0f; // Keep the movement in the horizontal plane
+        cameraRight.y = 0f; // Keep the movement in the horizontal plane
+
+        Vector3 move = cameraRight * moveHorizontal + cameraForward * moveVertical;
+        move.Normalize(); // Normalize the movement vector to maintain consistent speed
+
+        if (isGrounded)
+        {
+            moveDirection = move * speed;
+            if (ControlFreak2.CF2Input.GetKey(KeyCode.Space))
+            {
+                moveDirection.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            }
+        }
+        else
+        {
+            // Airborne control
+            moveDirection.x += move.x * speed * airControlFactor * Time.deltaTime;
+            moveDirection.z += move.z * speed * airControlFactor * Time.deltaTime;
+        }
+
+        // Rotate player to face the move direction
+        if (move != Vector3.zero)
+        {
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(move), 0.15f);
+        }
+    }
+
+
+
+
+
+
+
     void CombatMode()
     {
         //Combat mode features
-
-        if (PV.IsMine)
+        if (PV.IsMine&& CharController.isGrounded)
         {
             // Get the joystick input vector
-            Vector3 joystickInput = joystick.GetVector();
-            #region Strafe Move
-            Vector3 Strafemove = transform.rotation * new Vector3(joystickInput.x * CMSpeed, velocity.y, joystick.GetVector().y * CMSpeed) * Time.deltaTime;
-            CharController.Move(Strafemove);
-            #endregion
+            Vector3 joystickInput = joystick.GetVector();                
             #region RotateChar
             Vector3 Rotation = new Vector3(MainCamera.forward.x, 0, MainCamera.forward.z);
 
@@ -199,81 +294,23 @@ public class MainCharacterController : MonoBehaviour
             transform.forward = (SmoothRotation);
             #endregion
             actionsVar.Combat = Combatmode;
-        }
-           
+        }       
     }
 
     public void FreeMode()
     {
-
-        #region Free Movement
-        if (PV.IsMine )
-        {
-            // Get the joystick input vector
-            Vector3 joystickInput = joystick.GetVector();
-
-            #region Ground Lerp
-            if (Lerp < FMSpeed && joystickInput.magnitude > 0.1)
-            {
-                Lerp = Mathf.Clamp(Lerp += MoveSmoothness * Time.deltaTime, 0, FMSpeed);    // lerp up movement 
-            }
-
-
-            if (Lerp > 0 && joystickInput.magnitude < 0.1)
-            {
-                Lerp = Mathf.Clamp(Lerp -= MoveSmoothness * 0.5f * Time.deltaTime, 0, FMSpeed);   // lerp down movement 
-            }
-
-            #endregion
-            #region AirBorn Lerp
-            if (AirLerp < FMSpeed && joystickInput.magnitude > 0.1)
-            {
-                AirLerp = Mathf.Clamp(AirLerp += AirMoveSmoothness * Time.deltaTime, 0, FMSpeed);    // lerp up movement 
-            }          
-            #endregion
-
-            if (CharController.isGrounded)
-            {
-                // Create a movement vector based on the joystick input
-                movement = transform.rotation * new Vector3(0, velocity.y * Time.deltaTime, Mathf.Abs(joystickInput.magnitude*Lerp * Time.deltaTime));
-
-                AirLerp = Mathf.Clamp(AirLerp -= AirMoveSmoothness * 0.5f * Time.deltaTime, 0, FMSpeed);   // lerp down movement 
-
-            }
-            else
-            {
-                // Create a movement vector based on the joystick input
-                movement = transform.rotation * new Vector3(0, velocity.y * Time.deltaTime, Mathf.Abs(AirLerp * Time.deltaTime));
-
-       
-                   
-
-            }
-
-
-
-            // Apply the movement to the character controller
-            CharController.Move(movement);
-
-
-
-        }
-
-
-        #endregion
-
         #region Free Rotate
-        if (joystick.GetVector() != Vector2.zero && targetDirection.magnitude > 0.1f)
+        if (joystick.GetVector() != Vector2.zero && targetDirection.magnitude > 0.1f && CharController.isGrounded)
         {
             Vector3 lookDirection = targetDirection.normalized;
-            freeRotation = Quaternion.LookRotation(lookDirection, transform.up);
+            freeRotation = Quaternion.LookRotation(lookDirection,transform.up);
             var diferenceRotation = freeRotation.eulerAngles.y - transform.eulerAngles.y;
-            var eulerY = transform.eulerAngles.y;
+            var eulerY =transform.eulerAngles.y;
 
             if (diferenceRotation < 0 || diferenceRotation > 0) eulerY = freeRotation.eulerAngles.y;
             var euler = new Vector3(0, eulerY, 0);
 
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(euler), turnSpeed * FreeRotationSpeed * Time.deltaTime);
+           transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(euler), turnSpeed * FreeRotationSpeed * Time.deltaTime);
         }
 
         FreeRotationSpeed = 1f;
@@ -287,12 +324,25 @@ public class MainCharacterController : MonoBehaviour
         targetDirection = joystick.GetVector().x * right + joystick.GetVector().y * forward;
 
         #endregion
-
         actionsVar.Combat = Combatmode;
-
-
     }
 
+    public void AirBornMode()
+    {
+        // Airborne control
+        moveDirection.x += move.x * speed * airControlFactor * Time.deltaTime;
+        moveDirection.z += move.z * speed * airControlFactor * Time.deltaTime;
+        if (jpmanager.Accelerating)
+                {
+                    #region RotateChar
+                    Vector3 Rotation = new Vector3(MainCamera.forward.x, 0, MainCamera.forward.z);
+
+                    Vector3 SmoothRotation = Vector3.Lerp(transform.forward, Rotation, Time.deltaTime * RotateTowardsSpeed);
+
+                    transform.forward = (SmoothRotation);
+                    #endregion
+                }             
+    }
     IEnumerator ResetCombatMode()
     {
         yield return new WaitForSeconds(CombatCoolDown);
@@ -315,28 +365,13 @@ public class MainCharacterController : MonoBehaviour
 
     void Jump()
     {
-        if (PV.IsMine)
-        {
-            if (isGrounded && velocity.y < 0)
-            {
-                velocity.y = -2f; // Ensure you are grounded to avoid gravity accumulation
-            }
-
-            if (ControlFreak2.CF2Input.GetKey(KeyCode.Space) && isGrounded && !Rolling)
-            {
+   if (ControlFreak2.CF2Input.GetKey(KeyCode.Space) && isGrounded && !Rolling)
+     {        
                 Jumping = true;
-                StartCoroutine(Resetjump());
-                // Calculate the jump velocity based on jump height
-                velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-
-            }
-            // Apply gravity to pull the character down
-            velocity.y += gravity * Time.deltaTime;
-
-            // Move the character
-          //  CharController.Move(velocity * Time.deltaTime);
-
-        }
+                StartCoroutine(Resetjump());            
+                moveDirection.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+     }
+                 
 
         if (jpmanager.JetPackActive && ControlFreak2.CF2Input.GetKey(KeyCode.Space) && !Jumping)
         {
@@ -344,6 +379,9 @@ public class MainCharacterController : MonoBehaviour
         }
 
     }
+
+
+
 
 
     void Aim()
@@ -411,7 +449,6 @@ public class MainCharacterController : MonoBehaviour
         }
 
     }
-
     public void StopAim()
     {
         ISAiming = false;
@@ -429,7 +466,6 @@ public class MainCharacterController : MonoBehaviour
         }
 
     }
-
     void Shoot()
     {
         if (PV.IsMine)
@@ -447,7 +483,6 @@ public class MainCharacterController : MonoBehaviour
             }
         }
     }
-
     public void Roll()
     {
         if (isGrounded)

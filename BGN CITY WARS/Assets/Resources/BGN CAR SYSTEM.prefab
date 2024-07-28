@@ -33365,6 +33365,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Others:
   - {fileID: 4538089932142239876}
+  OnEnabled: 0
 --- !u!1 &7458851000557710579
 GameObject:
   m_ObjectHideFlags: 0

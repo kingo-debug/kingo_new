@@ -8088,3 +8088,406 @@ abort_threads: Failed aborting id: 000000000001EAE8, mono_thread_manage will ign
 
 [usbmuxd] Stop listen thread
 [usbmuxd] Listen thread exiting
+2024-7-27
+Rendering UV GBuffer for empty_LM0 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for empty_LMA1 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for empty_LMA2 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for empty_LMA3 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for empty_LMA4 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for empty_LMA5 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for empty_LMA6 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for empty_LMA7 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for empty_LMA8 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for empty_LMA9 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for empty_LMA10 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for empty_LMA11 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Done
+Done
+Running ftraceRTX fixpos12 "E:/temp" "uvpos_empty_LMA2.lz4" 2 0 2 0
+Running ftraceRTX fixpos12 "E:/temp" "uvpos_empty_LMA10.lz4" 2 0 10 0
+Running ftraceRTX fixpos12 "E:/temp" "uvpos_empty_LM0.lz4" 2 0 0 0
+Running ftraceRTX fixpos12 "E:/temp" "uvpos_empty_LMA9.lz4" 2 0 9 0
+Running ftraceRTX fixpos12 "E:/temp" "uvpos_empty_LMA4.lz4" 2 0 4 0
+Running ftraceRTX fixpos12 "E:/temp" "uvpos_empty_LMA5.lz4" 2 0 5 0
+Running ftraceRTX fixpos12 "E:/temp" "uvpos_empty_LMA3.lz4" 2 0 3 0
+Running ftraceRTX fixpos12 "E:/temp" "uvpos_empty_LMA11.lz4" 2 0 11 0
+Running ftraceRTX fixpos12 "E:/temp" "uvpos_empty_LMA1.lz4" 2 0 1 0
+Running ftraceRTX fixpos12 "E:/temp" "uvpos_empty_LMA6.lz4" 2 0 6 0
+Running ftraceRTX fixpos12 "E:/temp" "uvpos_empty_LMA8.lz4" 2 0 8 0
+Running ftraceRTX fixpos12 "E:/temp" "uvpos_empty_LMA7.lz4" 2 0 7 0
+Running ftraceRTX batchpointlightlegacy "E:/temp" "PointBatch_2_0_0" 68 0 2 batchpointlight_2_0_0.bin
+Running ftraceRTX batchpointlightlegacy "E:/temp" "PointBatch_2_1_1" 4 0 2 batchpointlight_2_1_1.bin
+Running ftraceRTX addmul "E:/temp" "empty_LMA2" 4 0 2 comp_2.bin
+Running ftraceRTX diradd "E:/temp" "empty_LMA2_lights_Dir.lz4" 64 0 2 dircomp_2.bin
+Running ftraceRTX batchpointlightlegacy "E:/temp" "PointBatch_10_0_0" 68 0 10 batchpointlight_10_0_0.bin
+Running ftraceRTX batchpointlightlegacy "E:/temp" "PointBatch_10_1_1" 4 0 10 batchpointlight_10_1_1.bin
+Running ftraceRTX addmul "E:/temp" "empty_LMA10" 4 0 10 comp_10.bin
+Running ftraceRTX diradd "E:/temp" "empty_LMA10_lights_Dir.lz4" 64 0 10 dircomp_10.bin
+Running ftraceRTX batchpointlightlegacy "E:/temp" "PointBatch_0_0_0" 68 0 0 batchpointlight_0_0_0.bin
+Running ftraceRTX batchpointlightlegacy "E:/temp" "PointBatch_0_1_1" 4 0 0 batchpointlight_0_1_1.bin
+Running ftraceRTX addmul "E:/temp" "empty_LM0" 4 0 0 comp_0.bin
+Running ftraceRTX diradd "E:/temp" "empty_LM0_lights_Dir.lz4" 64 0 0 dircomp_0.bin
+Running ftraceRTX batchpointlightlegacy "E:/temp" "PointBatch_9_0_0" 68 0 9 batchpointlight_9_0_0.bin
+Running ftraceRTX batchpointlightlegacy "E:/temp" "PointBatch_9_1_1" 4 0 9 batchpointlight_9_1_1.bin
+Running ftraceRTX addmul "E:/temp" "empty_LMA9" 4 0 9 comp_9.bin
+Running ftraceRTX diradd "E:/temp" "empty_LMA9_lights_Dir.lz4" 64 0 9 dircomp_9.bin
+Running ftraceRTX batchpointlightlegacy "E:/temp" "PointBatch_4_0_0" 68 0 4 batchpointlight_4_0_0.bin
+Running ftraceRTX batchpointlightlegacy "E:/temp" "PointBatch_4_1_1" 4 0 4 batchpointlight_4_1_1.bin
+Running ftraceRTX addmul "E:/temp" "empty_LMA4" 4 0 4 comp_4.bin
+Running ftraceRTX diradd "E:/temp" "empty_LMA4_lights_Dir.lz4" 64 0 4 dircomp_4.bin
+Running ftraceRTX batchpointlightlegacy "E:/temp" "PointBatch_5_0_0" 68 0 5 batchpointlight_5_0_0.bin
+Running ftraceRTX batchpointlightlegacy "E:/temp" "PointBatch_5_1_1" 4 0 5 batchpointlight_5_1_1.bin
+Running ftraceRTX addmul "E:/temp" "empty_LMA5" 4 0 5 comp_5.bin
+Running ftraceRTX diradd "E:/temp" "empty_LMA5_lights_Dir.lz4" 64 0 5 dircomp_5.bin
+Running ftraceRTX batchpointlightlegacy "E:/temp" "PointBatch_3_0_0" 68 0 3 batchpointlight_3_0_0.bin
+Running ftraceRTX batchpointlightlegacy "E:/temp" "PointBatch_3_1_1" 4 0 3 batchpointlight_3_1_1.bin
+Running ftraceRTX addmul "E:/temp" "empty_LMA3" 4 0 3 comp_3.bin
+Running ftraceRTX diradd "E:/temp" "empty_LMA3_lights_Dir.lz4" 64 0 3 dircomp_3.bin
+Running ftraceRTX batchpointlightlegacy "E:/temp" "PointBatch_11_0_0" 68 0 11 batchpointlight_11_0_0.bin
+Running ftraceRTX batchpointlightlegacy "E:/temp" "PointBatch_11_1_1" 4 0 11 batchpointlight_11_1_1.bin
+Running ftraceRTX addmul "E:/temp" "empty_LMA11" 4 0 11 comp_11.bin
+Running ftraceRTX diradd "E:/temp" "empty_LMA11_lights_Dir.lz4" 64 0 11 dircomp_11.bin
+Running ftraceRTX batchpointlightlegacy "E:/temp" "PointBatch_1_0_0" 68 0 1 batchpointlight_1_0_0.bin
+Running ftraceRTX batchpointlightlegacy "E:/temp" "PointBatch_1_1_1" 4 0 1 batchpointlight_1_1_1.bin
+Running ftraceRTX addmul "E:/temp" "empty_LMA1" 4 0 1 comp_1.bin
+Running ftraceRTX diradd "E:/temp" "empty_LMA1_lights_Dir.lz4" 64 0 1 dircomp_1.bin
+Running ftraceRTX batchpointlightlegacy "E:/temp" "PointBatch_6_0_0" 68 0 6 batchpointlight_6_0_0.bin
+Running ftraceRTX batchpointlightlegacy "E:/temp" "PointBatch_6_1_1" 4 0 6 batchpointlight_6_1_1.bin
+Running ftraceRTX addmul "E:/temp" "empty_LMA6" 4 0 6 comp_6.bin
+Running ftraceRTX diradd "E:/temp" "empty_LMA6_lights_Dir.lz4" 64 0 6 dircomp_6.bin
+Running ftraceRTX batchpointlightlegacy "E:/temp" "PointBatch_8_0_0" 68 0 8 batchpointlight_8_0_0.bin
+Running ftraceRTX batchpointlightlegacy "E:/temp" "PointBatch_8_1_1" 4 0 8 batchpointlight_8_1_1.bin
+Running ftraceRTX addmul "E:/temp" "empty_LMA8" 4 0 8 comp_8.bin
+Running ftraceRTX diradd "E:/temp" "empty_LMA8_lights_Dir.lz4" 64 0 8 dircomp_8.bin
+Running ftraceRTX batchpointlightlegacy "E:/temp" "PointBatch_7_0_0" 68 0 7 batchpointlight_7_0_0.bin
+Running ftraceRTX batchpointlightlegacy "E:/temp" "PointBatch_7_1_1" 4 0 7 batchpointlight_7_1_1.bin
+Running ftraceRTX addmul "E:/temp" "empty_LMA7" 4 0 7 comp_7.bin
+Running ftraceRTX diradd "E:/temp" "empty_LMA7_lights_Dir.lz4" 64 0 7 dircomp_7.bin
+Running ftraceRTX texgi "E:/temp" "empty_LMA2_diffuse" 4 16 2 "gi_empty_LMA20.bin" "empty_LMA2_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "E:/temp" "empty_LMA10_diffuse" 4 16 10 "gi_empty_LMA100.bin" "empty_LMA10_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "E:/temp" "empty_LM0_diffuse" 4 16 0 "gi_empty_LM00.bin" "empty_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "E:/temp" "empty_LMA9_diffuse" 4 16 9 "gi_empty_LMA90.bin" "empty_LMA9_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "E:/temp" "empty_LMA4_diffuse" 4 16 4 "gi_empty_LMA40.bin" "empty_LMA4_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "E:/temp" "empty_LMA5_diffuse" 4 16 5 "gi_empty_LMA50.bin" "empty_LMA5_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "E:/temp" "empty_LMA3_diffuse" 4 16 3 "gi_empty_LMA30.bin" "empty_LMA3_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "E:/temp" "empty_LMA11_diffuse" 4 16 11 "gi_empty_LMA110.bin" "empty_LMA11_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "E:/temp" "empty_LMA1_diffuse" 4 16 1 "gi_empty_LMA10.bin" "empty_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "E:/temp" "empty_LMA6_diffuse" 4 16 6 "gi_empty_LMA60.bin" "empty_LMA6_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "E:/temp" "empty_LMA8_diffuse" 4 16 8 "gi_empty_LMA80.bin" "empty_LMA8_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "E:/temp" "empty_LMA7_diffuse" 4 16 7 "gi_empty_LMA70.bin" "empty_LMA7_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "E:/temp" "empty_LMA2_diffuse" 4 16 2 "gi_empty_LMA21.bin" "empty_LMA2_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "E:/temp" "empty_LMA10_diffuse" 4 16 10 "gi_empty_LMA101.bin" "empty_LMA10_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "E:/temp" "empty_LM0_diffuse" 4 16 0 "gi_empty_LM01.bin" "empty_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "E:/temp" "empty_LMA9_diffuse" 4 16 9 "gi_empty_LMA91.bin" "empty_LMA9_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "E:/temp" "empty_LMA4_diffuse" 4 16 4 "gi_empty_LMA41.bin" "empty_LMA4_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "E:/temp" "empty_LMA5_diffuse" 4 16 5 "gi_empty_LMA51.bin" "empty_LMA5_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "E:/temp" "empty_LMA3_diffuse" 4 16 3 "gi_empty_LMA31.bin" "empty_LMA3_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "E:/temp" "empty_LMA11_diffuse" 4 16 11 "gi_empty_LMA111.bin" "empty_LMA11_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "E:/temp" "empty_LMA1_diffuse" 4 16 1 "gi_empty_LMA11.bin" "empty_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "E:/temp" "empty_LMA6_diffuse" 4 16 6 "gi_empty_LMA61.bin" "empty_LMA6_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "E:/temp" "empty_LMA8_diffuse" 4 16 8 "gi_empty_LMA81.bin" "empty_LMA8_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "E:/temp" "empty_LMA7_diffuse" 4 16 7 "gi_empty_LMA71.bin" "empty_LMA7_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "E:/temp" "empty_LMA2_diffuse" 4 16 2 "gi_empty_LMA22.bin" "empty_LMA2_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "E:/temp" "empty_LMA10_diffuse" 4 16 10 "gi_empty_LMA102.bin" "empty_LMA10_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "E:/temp" "empty_LM0_diffuse" 4 16 0 "gi_empty_LM02.bin" "empty_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "E:/temp" "empty_LMA9_diffuse" 4 16 9 "gi_empty_LMA92.bin" "empty_LMA9_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "E:/temp" "empty_LMA4_diffuse" 4 16 4 "gi_empty_LMA42.bin" "empty_LMA4_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "E:/temp" "empty_LMA5_diffuse" 4 16 5 "gi_empty_LMA52.bin" "empty_LMA5_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "E:/temp" "empty_LMA3_diffuse" 4 16 3 "gi_empty_LMA32.bin" "empty_LMA3_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "E:/temp" "empty_LMA11_diffuse" 4 16 11 "gi_empty_LMA112.bin" "empty_LMA11_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "E:/temp" "empty_LMA1_diffuse" 4 16 1 "gi_empty_LMA12.bin" "empty_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "E:/temp" "empty_LMA6_diffuse" 4 16 6 "gi_empty_LMA62.bin" "empty_LMA6_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "E:/temp" "empty_LMA8_diffuse" 4 16 8 "gi_empty_LMA82.bin" "empty_LMA8_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "E:/temp" "empty_LMA7_diffuse" 4 16 7 "gi_empty_LMA72.bin" "empty_LMA7_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "E:/temp" "empty_LMA2_diffuse" 4 16 2 "gi_empty_LMA23.bin" "empty_LMA2_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "E:/temp" "empty_LMA10_diffuse" 4 16 10 "gi_empty_LMA103.bin" "empty_LMA10_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "E:/temp" "empty_LM0_diffuse" 4 16 0 "gi_empty_LM03.bin" "empty_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "E:/temp" "empty_LMA9_diffuse" 4 16 9 "gi_empty_LMA93.bin" "empty_LMA9_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "E:/temp" "empty_LMA4_diffuse" 4 16 4 "gi_empty_LMA43.bin" "empty_LMA4_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "E:/temp" "empty_LMA5_diffuse" 4 16 5 "gi_empty_LMA53.bin" "empty_LMA5_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "E:/temp" "empty_LMA3_diffuse" 4 16 3 "gi_empty_LMA33.bin" "empty_LMA3_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "E:/temp" "empty_LMA11_diffuse" 4 16 11 "gi_empty_LMA113.bin" "empty_LMA11_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "E:/temp" "empty_LMA1_diffuse" 4 16 1 "gi_empty_LMA13.bin" "empty_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "E:/temp" "empty_LMA6_diffuse" 4 16 6 "gi_empty_LMA63.bin" "empty_LMA6_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "E:/temp" "empty_LMA8_diffuse" 4 16 8 "gi_empty_LMA83.bin" "empty_LMA8_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "E:/temp" "empty_LMA7_diffuse" 4 16 7 "gi_empty_LMA73.bin" "empty_LMA7_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgidir "E:/temp" "empty_LMA2_final" 84 16 2 "gi_empty_LMA24.bin" "empty_LMA2_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgidir "E:/temp" "empty_LMA10_final" 84 16 10 "gi_empty_LMA104.bin" "empty_LMA10_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgidir "E:/temp" "empty_LM0_final" 84 16 0 "gi_empty_LM04.bin" "empty_LM0_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgidir "E:/temp" "empty_LMA9_final" 84 16 9 "gi_empty_LMA94.bin" "empty_LMA9_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgidir "E:/temp" "empty_LMA4_final" 84 16 4 "gi_empty_LMA44.bin" "empty_LMA4_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgidir "E:/temp" "empty_LMA5_final" 84 16 5 "gi_empty_LMA54.bin" "empty_LMA5_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgidir "E:/temp" "empty_LMA3_final" 84 16 3 "gi_empty_LMA34.bin" "empty_LMA3_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgidir "E:/temp" "empty_LMA11_final" 84 16 11 "gi_empty_LMA114.bin" "empty_LMA11_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgidir "E:/temp" "empty_LMA1_final" 84 16 1 "gi_empty_LMA14.bin" "empty_LMA1_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgidir "E:/temp" "empty_LMA6_final" 84 16 6 "gi_empty_LMA64.bin" "empty_LMA6_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgidir "E:/temp" "empty_LMA8_final" 84 16 8 "gi_empty_LMA84.bin" "empty_LMA8_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgidir "E:/temp" "empty_LMA7_final" 84 16 7 "gi_empty_LMA74.bin" "empty_LMA7_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX add "E:/temp" "empty_LMA2_final_HDR.lz4" 4 0 2 comp_indirect2.bin
+Running ftraceRTX diradd "E:/temp" "empty_LMA2_final_Dir.lz4" 64 0 2 dircomp_indirect2.bin
+Running ftraceRTX add "E:/temp" "empty_LMA10_final_HDR.lz4" 4 0 10 comp_indirect10.bin
+Running ftraceRTX diradd "E:/temp" "empty_LMA10_final_Dir.lz4" 64 0 10 dircomp_indirect10.bin
+Running ftraceRTX add "E:/temp" "empty_LM0_final_HDR.lz4" 4 0 0 comp_indirect0.bin
+Running ftraceRTX diradd "E:/temp" "empty_LM0_final_Dir.lz4" 64 0 0 dircomp_indirect0.bin
+Running ftraceRTX add "E:/temp" "empty_LMA9_final_HDR.lz4" 4 0 9 comp_indirect9.bin
+Running ftraceRTX diradd "E:/temp" "empty_LMA9_final_Dir.lz4" 64 0 9 dircomp_indirect9.bin
+Running ftraceRTX add "E:/temp" "empty_LMA4_final_HDR.lz4" 4 0 4 comp_indirect4.bin
+Running ftraceRTX diradd "E:/temp" "empty_LMA4_final_Dir.lz4" 64 0 4 dircomp_indirect4.bin
+Running ftraceRTX add "E:/temp" "empty_LMA5_final_HDR.lz4" 4 0 5 comp_indirect5.bin
+Running ftraceRTX diradd "E:/temp" "empty_LMA5_final_Dir.lz4" 64 0 5 dircomp_indirect5.bin
+Running ftraceRTX add "E:/temp" "empty_LMA3_final_HDR.lz4" 4 0 3 comp_indirect3.bin
+Running ftraceRTX diradd "E:/temp" "empty_LMA3_final_Dir.lz4" 64 0 3 dircomp_indirect3.bin
+Running ftraceRTX add "E:/temp" "empty_LMA11_final_HDR.lz4" 4 0 11 comp_indirect11.bin
+Running ftraceRTX diradd "E:/temp" "empty_LMA11_final_Dir.lz4" 64 0 11 dircomp_indirect11.bin
+Running ftraceRTX add "E:/temp" "empty_LMA1_final_HDR.lz4" 4 0 1 comp_indirect1.bin
+Running ftraceRTX diradd "E:/temp" "empty_LMA1_final_Dir.lz4" 64 0 1 dircomp_indirect1.bin
+Running ftraceRTX add "E:/temp" "empty_LMA6_final_HDR.lz4" 4 0 6 comp_indirect6.bin
+Running ftraceRTX diradd "E:/temp" "empty_LMA6_final_Dir.lz4" 64 0 6 dircomp_indirect6.bin
+Running ftraceRTX add "E:/temp" "empty_LMA8_final_HDR.lz4" 4 0 8 comp_indirect8.bin
+Running ftraceRTX diradd "E:/temp" "empty_LMA8_final_Dir.lz4" 64 0 8 dircomp_indirect8.bin
+Running ftraceRTX add "E:/temp" "empty_LMA7_final_HDR.lz4" 4 0 7 comp_indirect7.bin
+Running ftraceRTX diradd "E:/temp" "empty_LMA7_final_Dir.lz4" 64 0 7 dircomp_indirect7.bin
+Running denoiserOIDN D "E:/temp/empty_LMA2_final_Dir.lz4" "E:/temp/empty_LMA2_final_Dir.lz4" 512 0
+Running denoiserOIDN c "E:/temp/empty_LMA2_final_HDR.lz4" "E:/temp/empty_LMA2_final_HDR.lz4" 512 0
+Running seamfixer "E:/temp" "2" "empty_LMA2_final_HDR.lz4" "empty_LMA2_final_Dir.lz4
+Running denoiserOIDN D "E:/temp/empty_LMA10_final_Dir.lz4" "E:/temp/empty_LMA10_final_Dir.lz4" 512 0
+Running denoiserOIDN c "E:/temp/empty_LMA10_final_HDR.lz4" "E:/temp/empty_LMA10_final_HDR.lz4" 512 0
+Running seamfixer "E:/temp" "10" "empty_LMA10_final_HDR.lz4" "empty_LMA10_final_Dir.lz4
+Running denoiserOIDN D "E:/temp/empty_LM0_final_Dir.lz4" "E:/temp/empty_LM0_final_Dir.lz4" 512 0
+Running denoiserOIDN c "E:/temp/empty_LM0_final_HDR.lz4" "E:/temp/empty_LM0_final_HDR.lz4" 512 0
+Running seamfixer "E:/temp" "0" "empty_LM0_final_HDR.lz4" "empty_LM0_final_Dir.lz4
+Running denoiserOIDN D "E:/temp/empty_LMA9_final_Dir.lz4" "E:/temp/empty_LMA9_final_Dir.lz4" 512 0
+Running denoiserOIDN c "E:/temp/empty_LMA9_final_HDR.lz4" "E:/temp/empty_LMA9_final_HDR.lz4" 512 0
+Running seamfixer "E:/temp" "9" "empty_LMA9_final_HDR.lz4" "empty_LMA9_final_Dir.lz4
+Running denoiserOIDN D "E:/temp/empty_LMA4_final_Dir.lz4" "E:/temp/empty_LMA4_final_Dir.lz4" 512 0
+Running denoiserOIDN c "E:/temp/empty_LMA4_final_HDR.lz4" "E:/temp/empty_LMA4_final_HDR.lz4" 512 0
+Running seamfixer "E:/temp" "4" "empty_LMA4_final_HDR.lz4" "empty_LMA4_final_Dir.lz4
+Running denoiserOIDN D "E:/temp/empty_LMA5_final_Dir.lz4" "E:/temp/empty_LMA5_final_Dir.lz4" 512 0
+Running denoiserOIDN c "E:/temp/empty_LMA5_final_HDR.lz4" "E:/temp/empty_LMA5_final_HDR.lz4" 512 0
+Running seamfixer "E:/temp" "5" "empty_LMA5_final_HDR.lz4" "empty_LMA5_final_Dir.lz4
+Running denoiserOIDN D "E:/temp/empty_LMA3_final_Dir.lz4" "E:/temp/empty_LMA3_final_Dir.lz4" 512 0
+Running denoiserOIDN c "E:/temp/empty_LMA3_final_HDR.lz4" "E:/temp/empty_LMA3_final_HDR.lz4" 512 0
+Running seamfixer "E:/temp" "3" "empty_LMA3_final_HDR.lz4" "empty_LMA3_final_Dir.lz4
+Running denoiserOIDN D "E:/temp/empty_LMA11_final_Dir.lz4" "E:/temp/empty_LMA11_final_Dir.lz4" 512 0
+Running denoiserOIDN c "E:/temp/empty_LMA11_final_HDR.lz4" "E:/temp/empty_LMA11_final_HDR.lz4" 512 0
+Running seamfixer "E:/temp" "11" "empty_LMA11_final_HDR.lz4" "empty_LMA11_final_Dir.lz4
+Running denoiserOIDN D "E:/temp/empty_LMA1_final_Dir.lz4" "E:/temp/empty_LMA1_final_Dir.lz4" 512 0
+Running denoiserOIDN c "E:/temp/empty_LMA1_final_HDR.lz4" "E:/temp/empty_LMA1_final_HDR.lz4" 512 0
+Running seamfixer "E:/temp" "1" "empty_LMA1_final_HDR.lz4" "empty_LMA1_final_Dir.lz4
+Running denoiserOIDN D "E:/temp/empty_LMA6_final_Dir.lz4" "E:/temp/empty_LMA6_final_Dir.lz4" 512 0
+Running denoiserOIDN c "E:/temp/empty_LMA6_final_HDR.lz4" "E:/temp/empty_LMA6_final_HDR.lz4" 512 0
+Running seamfixer "E:/temp" "6" "empty_LMA6_final_HDR.lz4" "empty_LMA6_final_Dir.lz4
+Running denoiserOIDN D "E:/temp/empty_LMA8_final_Dir.lz4" "E:/temp/empty_LMA8_final_Dir.lz4" 512 0
+Running denoiserOIDN c "E:/temp/empty_LMA8_final_HDR.lz4" "E:/temp/empty_LMA8_final_HDR.lz4" 512 0
+Running seamfixer "E:/temp" "8" "empty_LMA8_final_HDR.lz4" "empty_LMA8_final_Dir.lz4
+Running denoiserOIDN D "E:/temp/empty_LMA7_final_Dir.lz4" "E:/temp/empty_LMA7_final_Dir.lz4" 512 0
+Running denoiserOIDN c "E:/temp/empty_LMA7_final_HDR.lz4" "E:/temp/empty_LMA7_final_HDR.lz4" 512 0
+Running seamfixer "E:/temp" "7" "empty_LMA7_final_HDR.lz4" "empty_LMA7_final_Dir.lz4
+Running halffloat2hdr "E:/temp/empty_LMA2_final_HDR.lz4" "D:/projects/kingo_new/BGN CITY WARS/Assets/BakeryLightmaps/empty_LMA2_final.hdr" 1024
+Running rgba2tga "E:/temp/empty_LMA2_final_Dir.lz4" "D:/projects/kingo_new/BGN CITY WARS/Assets/BakeryLightmaps/empty_LMA2_dir.tga" 
+Running halffloat2hdr "E:/temp/empty_LMA10_final_HDR.lz4" "D:/projects/kingo_new/BGN CITY WARS/Assets/BakeryLightmaps/empty_LMA10_final.hdr" 1024
+Running rgba2tga "E:/temp/empty_LMA10_final_Dir.lz4" "D:/projects/kingo_new/BGN CITY WARS/Assets/BakeryLightmaps/empty_LMA10_dir.tga" 
+Running halffloat2hdr "E:/temp/empty_LM0_final_HDR.lz4" "D:/projects/kingo_new/BGN CITY WARS/Assets/BakeryLightmaps/empty_LM0_final.hdr" 1024
+Running rgba2tga "E:/temp/empty_LM0_final_Dir.lz4" "D:/projects/kingo_new/BGN CITY WARS/Assets/BakeryLightmaps/empty_LM0_dir.tga" 
+Running halffloat2hdr "E:/temp/empty_LMA9_final_HDR.lz4" "D:/projects/kingo_new/BGN CITY WARS/Assets/BakeryLightmaps/empty_LMA9_final.hdr" 1024
+Running rgba2tga "E:/temp/empty_LMA9_final_Dir.lz4" "D:/projects/kingo_new/BGN CITY WARS/Assets/BakeryLightmaps/empty_LMA9_dir.tga" 
+Running halffloat2hdr "E:/temp/empty_LMA4_final_HDR.lz4" "D:/projects/kingo_new/BGN CITY WARS/Assets/BakeryLightmaps/empty_LMA4_final.hdr" 1024
+Running rgba2tga "E:/temp/empty_LMA4_final_Dir.lz4" "D:/projects/kingo_new/BGN CITY WARS/Assets/BakeryLightmaps/empty_LMA4_dir.tga" 
+Running halffloat2hdr "E:/temp/empty_LMA5_final_HDR.lz4" "D:/projects/kingo_new/BGN CITY WARS/Assets/BakeryLightmaps/empty_LMA5_final.hdr" 1024
+Running rgba2tga "E:/temp/empty_LMA5_final_Dir.lz4" "D:/projects/kingo_new/BGN CITY WARS/Assets/BakeryLightmaps/empty_LMA5_dir.tga" 
+Running halffloat2hdr "E:/temp/empty_LMA3_final_HDR.lz4" "D:/projects/kingo_new/BGN CITY WARS/Assets/BakeryLightmaps/empty_LMA3_final.hdr" 1024
+Running rgba2tga "E:/temp/empty_LMA3_final_Dir.lz4" "D:/projects/kingo_new/BGN CITY WARS/Assets/BakeryLightmaps/empty_LMA3_dir.tga" 
+Running halffloat2hdr "E:/temp/empty_LMA11_final_HDR.lz4" "D:/projects/kingo_new/BGN CITY WARS/Assets/BakeryLightmaps/empty_LMA11_final.hdr" 1024
+Running rgba2tga "E:/temp/empty_LMA11_final_Dir.lz4" "D:/projects/kingo_new/BGN CITY WARS/Assets/BakeryLightmaps/empty_LMA11_dir.tga" 
+Running halffloat2hdr "E:/temp/empty_LMA1_final_HDR.lz4" "D:/projects/kingo_new/BGN CITY WARS/Assets/BakeryLightmaps/empty_LMA1_final.hdr" 1024
+Running rgba2tga "E:/temp/empty_LMA1_final_Dir.lz4" "D:/projects/kingo_new/BGN CITY WARS/Assets/BakeryLightmaps/empty_LMA1_dir.tga" 
+Running halffloat2hdr "E:/temp/empty_LMA6_final_HDR.lz4" "D:/projects/kingo_new/BGN CITY WARS/Assets/BakeryLightmaps/empty_LMA6_final.hdr" 1024
+Running rgba2tga "E:/temp/empty_LMA6_final_Dir.lz4" "D:/projects/kingo_new/BGN CITY WARS/Assets/BakeryLightmaps/empty_LMA6_dir.tga" 
+Running halffloat2hdr "E:/temp/empty_LMA8_final_HDR.lz4" "D:/projects/kingo_new/BGN CITY WARS/Assets/BakeryLightmaps/empty_LMA8_final.hdr" 1024
+Running rgba2tga "E:/temp/empty_LMA8_final_Dir.lz4" "D:/projects/kingo_new/BGN CITY WARS/Assets/BakeryLightmaps/empty_LMA8_dir.tga" 
+Running halffloat2hdr "E:/temp/empty_LMA7_final_HDR.lz4" "D:/projects/kingo_new/BGN CITY WARS/Assets/BakeryLightmaps/empty_LMA7_final.hdr" 1024
+Running rgba2tga "E:/temp/empty_LMA7_final_Dir.lz4" "D:/projects/kingo_new/BGN CITY WARS/Assets/BakeryLightmaps/empty_LMA7_dir.tga" 
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Total cache size 268350056
+Total cache size after purge 268350056
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Total cache size 268350056
+Total cache size after purge 268350056
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Total cache size 268350056
+Total cache size after purge 268350056
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Total cache size 268350056
+Total cache size after purge 268350056
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Total cache size 268350056
+Total cache size after purge 268350056
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Total cache size 268350056
+Total cache size after purge 268350056
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Total cache size 268350056
+Total cache size after purge 268350056
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Total cache size 268350056
+Total cache size after purge 268350056
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Total cache size 268350056
+Total cache size after purge 268350056
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Total cache size 268350056
+Total cache size after purge 268350056
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Total cache size 268350056
+Total cache size after purge 268350056
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Total cache size 268350056
+Total cache size after purge 268350056
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Total cache size 268350056
+Total cache size after purge 268350056
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Total cache size 268350056
+Total cache size after purge 268350056
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Total cache size 268350056
+Total cache size after purge 268350056
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Total cache size 268350056
+Total cache size after purge 268350056
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Total cache size 268350056
+Total cache size after purge 268350056
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Total cache size 268350056
+Total cache size after purge 268350056
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Total cache size 268350056
+Total cache size after purge 268350056
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Total cache size 268350056
+Total cache size after purge 268350056
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
