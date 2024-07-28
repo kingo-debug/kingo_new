@@ -212,6 +212,7 @@ public class MainCharacterController : MonoBehaviour
     void CombatModeMovement(float moveHorizontal, float moveVertical)
     {
         Vector3 move = transform.right * moveHorizontal + transform.forward * moveVertical;
+        move = Vector3.ClampMagnitude(move, 1f); // Normalize the vector to maintain consistent speed
 
         if (isGrounded)
         {
@@ -274,6 +275,15 @@ public class MainCharacterController : MonoBehaviour
             // Airborne control
             moveDirection.x += move.x * speed * airControlFactor * Time.deltaTime;
             moveDirection.z += move.z * speed * airControlFactor * Time.deltaTime;
+
+            // Clamp the horizontal speed
+            Vector3 horizontalVelocity = new Vector3(moveDirection.x, 0, moveDirection.z);
+            if (horizontalVelocity.magnitude > maxAirSpeed)
+            {
+                horizontalVelocity = horizontalVelocity.normalized * maxAirSpeed;
+                moveDirection.x = horizontalVelocity.x;
+                moveDirection.z = horizontalVelocity.z;
+            }
         }
 
         // Rotate player to face the move direction
