@@ -55,6 +55,7 @@ public class MainCharacterController : MonoBehaviour
     [Header("JumpingSystem")]
     public bool isGrounded;
     public float airControlFactor = 0.5f;
+    public float maxAirSpeed = 3.0f; // Max speed while airborne
     [SerializeField]
     private float jumpHeight = 5f;
     public bool Jumping = false;
@@ -225,6 +226,15 @@ public class MainCharacterController : MonoBehaviour
             // Airborne control
             moveDirection.x += move.x * speed * airControlFactor * Time.deltaTime;
             moveDirection.z += move.z * speed * airControlFactor * Time.deltaTime;
+
+            // Clamp the horizontal speed
+            Vector3 horizontalVelocity = new Vector3(moveDirection.x, 0, moveDirection.z);
+            if (horizontalVelocity.magnitude > maxAirSpeed)
+            {
+                horizontalVelocity = horizontalVelocity.normalized * maxAirSpeed;
+                moveDirection.x = horizontalVelocity.x;
+                moveDirection.z = horizontalVelocity.z;
+            }
         }
     }
 
