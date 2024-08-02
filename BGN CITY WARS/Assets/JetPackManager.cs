@@ -82,7 +82,7 @@ public class JetPackManager : MonoBehaviourPunCallbacks,IPunObservable
                         AccerlateVFX.SetActive(false);
 
                     // Move the character controller upwards using the jetpack speed
-                    Charcontroller.Move(Vector3.up * Time.deltaTime * DeaccelerationRate*currentJetpackSpeed);  // deaccel
+                    Charcontroller.Move(Vector3.up * Time.deltaTime * currentJetpackSpeed * DeaccelerationRate);  // deaccel
                 }
             }
         }
