@@ -28,34 +28,24 @@ public class MainCharacterController : MonoBehaviour
     [SerializeField]
     private float RotateTowardsSpeed;
     public bool ISAiming = false;
-    [SerializeField]
-    private float CMMoveThreshold;
-    public float CMSpeed;
     [Space(10)]
     [Header("FreeMode")]
     [Space(3)]
-    [SerializeField]
-    private float FMMoveThreshold;
-    public float FMSpeed;
-    public float MoveSmoothness;
     public float AirMoveSmoothness;
     [SerializeField]
     private float accelerationRate = 10f;
     [SerializeField]
     private float decelerationRate = 10f;
 
-    private float Lerp;
-    Vector3 movement;
     [SerializeField]
     private float FreeRotationSpeed = 0.15f;
-    private Quaternion freeRotation;
     public float turnSpeed = 10f;
     //misc
     private PhotonView PV;
     private ControlFreak2.TouchJoystick joystick;
     private CharacterController CharController;
     private Transform MainCamera;
-    private Vector3 targetDirection;
+
     [Space(3)]
     [Header("JumpingSystem")]
     public bool isGrounded;
@@ -63,12 +53,18 @@ public class MainCharacterController : MonoBehaviour
     public float maxAirSpeed = 3.0f; // Max speed while airborne
     [SerializeField]
     private float AirRotationSpeed = 0.08f;
+    // Define this variable at the class level
+    private float nextJumpTime = 0f;
+    public float jumpCooldown = 0.5f; // Set this to the desired cooldown time
+
     [SerializeField]
     private float jumpHeight = 5f;
     public bool Jumping = false;
     [SerializeField]
     private float JumpTime = .32f;
     public float gravity = 9.8f;
+
+
     [Space(3)]
     [Header("Animation")]
     private Vector3 velocity;
@@ -119,8 +115,6 @@ public class MainCharacterController : MonoBehaviour
         {
             this.enabled = false; ;
         }
-
-       // FreeMode();
     }
 
 
@@ -135,7 +129,6 @@ public class MainCharacterController : MonoBehaviour
         if (actionsVar.Fired || ISAiming)
         {
             Combatmode = true;
-
         }
 
         if (Combatmode && !actionsVar.Fired && !ISAiming && !animator.GetBool("FIRE INPUT"))
@@ -227,11 +220,16 @@ public class MainCharacterController : MonoBehaviour
         if (isGrounded)
         {
             moveDirection = move * speed;
-            if (ControlFreak2.CF2Input.GetKey(KeyCode.Space)) // jumping
+
+            // Check if the player is allowed to jump
+            if (ControlFreak2.CF2Input.GetKey(KeyCode.Space) && Time.time >= nextJumpTime)
             {
                 moveDirection.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
                 Jumping = true;
                 StartCoroutine(Resetjump());
+
+                // Set the next allowed jump time
+                nextJumpTime = Time.time + jumpCooldown;
             }
         }
         else
@@ -282,11 +280,15 @@ public class MainCharacterController : MonoBehaviour
             moveDirection.x = Mathf.Lerp(moveDirection.x, targetMoveDirection.x, Time.deltaTime * accelerationRate);
             moveDirection.z = Mathf.Lerp(moveDirection.z, targetMoveDirection.z, Time.deltaTime * accelerationRate);
 
-            if (ControlFreak2.CF2Input.GetKey(KeyCode.Space))
+            // Check if the player is allowed to jump
+            if (ControlFreak2.CF2Input.GetKey(KeyCode.Space) && Time.time >= nextJumpTime)
             {
                 moveDirection.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
                 Jumping = true;
                 StartCoroutine(Resetjump());
+
+                // Set the next allowed jump time
+                nextJumpTime = Time.time + jumpCooldown;
             }
 
             // Apply deceleration when no input is detected
@@ -295,8 +297,6 @@ public class MainCharacterController : MonoBehaviour
                 moveDirection.x = Mathf.Lerp(moveDirection.x, 0, Time.deltaTime * decelerationRate);
                 moveDirection.z = Mathf.Lerp(moveDirection.z, 0, Time.deltaTime * decelerationRate);
             }
-
-
         }
         else
         {
@@ -312,6 +312,7 @@ public class MainCharacterController : MonoBehaviour
                 moveDirection.z = horizontalVelocity.z;
             }
         }
+
         #region Free Rotate
         if (move != Vector3.zero) // rotate free
         {
@@ -320,7 +321,6 @@ public class MainCharacterController : MonoBehaviour
         }
         #endregion
     }
-
 
 
 
