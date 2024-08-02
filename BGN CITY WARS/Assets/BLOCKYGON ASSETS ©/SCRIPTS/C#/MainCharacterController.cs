@@ -231,7 +231,7 @@ public class MainCharacterController : MonoBehaviour
             {
                 moveDirection.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
                 Jumping = true;
-                Resetjump();
+                StartCoroutine(Resetjump());
             }
         }
         else
@@ -286,7 +286,7 @@ public class MainCharacterController : MonoBehaviour
             {
                 moveDirection.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
                 Jumping = true;
-                Resetjump();
+                StartCoroutine(Resetjump());
             }
 
             // Apply deceleration when no input is detected

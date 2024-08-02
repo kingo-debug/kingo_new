@@ -12,6 +12,7 @@ public class JetPackManager : MonoBehaviourPunCallbacks,IPunObservable
     public float initialJetpackSpeed = 0.5f;
     public float maxJetpackSpeed = 5f;
     public float accelerationRate = 0.1f;
+    public float DeaccelerationRate = 0.1f;
     public bool Accelerating;
     private PhotonView PV;
 
@@ -64,26 +65,28 @@ public class JetPackManager : MonoBehaviourPunCallbacks,IPunObservable
 
     private void Update()
     {
-        if (PV.IsMine)
+        if(PV.IsMine)
         {
-            if (ControlFreak2.CF2Input.GetKey(KeyCode.Space) && !maincont.Jumping && JetPackActive&&!Charcontroller.isGrounded&& CurrentFuel >0)
-        {
-   
-                AccelerateJP();
-                if (!AccerlateVFX.activeSelf)
-                AccerlateVFX.SetActive(true);
-                Accelerating = true;
+            if (JetPackActive && !maincont.Jumping && JetPackActive && !Charcontroller.isGrounded && CurrentFuel > 0)
+            {
+                if (ControlFreak2.CF2Input.GetKey(KeyCode.Space))
+                {
+                    AccelerateJP();
+                }
 
+                else
+                {
+                    Accelerating = false;
+                    currentJetpackSpeed = Mathf.Clamp(currentJetpackSpeed - accelerationRate * Time.deltaTime, initialJetpackSpeed, maxJetpackSpeed);
+                    if (AccerlateVFX.activeSelf)
+                        AccerlateVFX.SetActive(false);
+
+                    // Move the character controller upwards using the jetpack speed
+                    Charcontroller.Move(Vector3.up * Time.deltaTime * DeaccelerationRate*currentJetpackSpeed);  // deaccel
+                }
             }
- 
-        else
-        {
-            Accelerating = false;
-            currentJetpackSpeed = Mathf.Clamp(currentJetpackSpeed - accelerationRate * Time.deltaTime, initialJetpackSpeed, maxJetpackSpeed);
-            if (AccerlateVFX.activeSelf)
-            AccerlateVFX.SetActive(false);
         }
-    }
+    
         else if (AccerlateVFX)
         {
             JetPackObject.SetActive(JetPackActive);
@@ -92,6 +95,7 @@ public class JetPackManager : MonoBehaviourPunCallbacks,IPunObservable
     }
     void AccelerateJP()
     {
+        Accelerating = true;
         // Gradually increase the jetpack speed
         currentJetpackSpeed = Mathf.Clamp(currentJetpackSpeed + accelerationRate * Time.deltaTime, initialJetpackSpeed, maxJetpackSpeed);
 
@@ -110,6 +114,13 @@ public class JetPackManager : MonoBehaviourPunCallbacks,IPunObservable
         #region UI Bar
         UIBar.UpdateHP(Mathf.RoundToInt(CurrentFuel));
         #endregion
+
+        #region VFX
+        if (!AccerlateVFX.activeSelf)
+            AccerlateVFX.SetActive(true);
+        #endregion
+
+
     }
     [PunRPC]
     public void RestoreJetpackFuel()
