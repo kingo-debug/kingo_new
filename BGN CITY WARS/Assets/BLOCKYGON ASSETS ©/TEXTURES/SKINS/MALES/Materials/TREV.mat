@@ -12,8 +12,7 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
-  m_InvalidKeywords:
-  - _SURFACE_TYPE_OPAQUE
+  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -86,7 +85,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AlphaClip: 1
+    - _AlphaClip: 0
     - _AlphaToMask: 0
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
@@ -113,7 +112,7 @@ Material:
     - _QueueOffset: 1
     - _ReceiveShadows: 1
     - _SampleGI: 0
-    - _Shine_Brightness: 0.5
+    - _Shine_Brightness: 0.75
     - _Shininess: 0
     - _Smoothness: 0
     - _SmoothnessSource: 0
@@ -127,11 +126,11 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0.75, g: 0.75, b: 0.75, a: 1}
+    - _BaseColor: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 1}
     - _Color: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _ShineColor: {r: 0.1792453, g: 0.1792453, b: 0.1792453, a: 1}
-    - _ShineDirrection: {r: -5, g: -5, b: -15, a: 0}
+    - _ShineDirrection: {r: -3, g: 0, b: -10, a: 0}
     - _SpecColor: {r: 0.5, g: 0.5, b: 0.5, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &8458580463958003595

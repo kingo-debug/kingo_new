@@ -37,7 +37,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Base:
-        m_Texture: {fileID: 2800000, guid: 1de5d06c08e240442af3f332bf3ee91e, type: 3}
+        m_Texture: {fileID: 2800000, guid: 69aaf8e530a510344be8c8a868db089c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
@@ -73,7 +73,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 1
     - _SampleGI: 0
-    - _Shine_Brightness: -0.5
+    - _Shine_Brightness: 0.15
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 0
@@ -82,5 +82,5 @@ Material:
     - _BaseColor: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 1}
     - _Color: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 1}
     - _ShineColor: {r: 0.1792453, g: 0.1792453, b: 0.1792453, a: 1}
-    - _ShineDirrection: {r: -3, g: -10, b: -10, a: 0}
+    - _ShineDirrection: {r: -3, g: 0, b: -10, a: 0}
   m_BuildTextureStacks: []

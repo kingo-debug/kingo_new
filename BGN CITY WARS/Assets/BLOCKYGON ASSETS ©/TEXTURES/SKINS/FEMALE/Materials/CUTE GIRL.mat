@@ -32,7 +32,7 @@ Material:
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
-  m_LockedProperties: _Shine_Brightness
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -125,7 +125,7 @@ Material:
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _SampleGI: 0
-    - _Shine_Brightness: -0.1
+    - _Shine_Brightness: 0.75
     - _Shininess: 0
     - _Smoothness: 0
     - _SmoothnessSource: 0
@@ -142,7 +142,7 @@ Material:
     - _BaseColor: {r: 0.8962264, g: 0.8962264, b: 0.8962264, a: 1}
     - _Color: {r: 0.8962264, g: 0.8962264, b: 0.8962264, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _ShineColor: {r: 0, g: 0, b: 0, a: 1}
-    - _ShineDirrection: {r: -6, g: -5, b: -6, a: 0}
+    - _ShineColor: {r: 0.26415092, g: 0.26415092, b: 0.26415092, a: 1}
+    - _ShineDirrection: {r: -6, g: 0, b: -8, a: 0}
     - _SpecColor: {r: 0.19999945, g: 0.19999945, b: 0.19999945, a: 0}
   m_BuildTextureStacks: []
