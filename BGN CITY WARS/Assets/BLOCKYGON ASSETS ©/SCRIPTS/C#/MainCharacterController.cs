@@ -124,7 +124,7 @@ public class MainCharacterController : MonoBehaviour
     {  
         #region Animator Parameters.
         animator.SetBool("Grounded", isGrounded);
-        animator.SetBool("combat", Combatmode);
+        animator.SetBool("combat", Combatmode);      
 
         if (actionsVar.Fired || ISAiming)
         {
@@ -226,6 +226,7 @@ public class MainCharacterController : MonoBehaviour
             {
                 moveDirection.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
                 Jumping = true;
+                animator.SetBool("Jump", true);  
                 StartCoroutine(Resetjump());
 
                 // Set the next allowed jump time
@@ -285,6 +286,7 @@ public class MainCharacterController : MonoBehaviour
             {
                 moveDirection.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
                 Jumping = true;
+                animator.SetBool("Jump", true);
                 StartCoroutine(Resetjump());
 
                 // Set the next allowed jump time
@@ -380,6 +382,7 @@ public class MainCharacterController : MonoBehaviour
     {
         yield return new WaitForSeconds(JumpTime);
         Jumping = false;
+        animator.SetBool("Jump", false);
 
     }
 
