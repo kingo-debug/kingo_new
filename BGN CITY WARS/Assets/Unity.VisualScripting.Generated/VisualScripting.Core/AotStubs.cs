@@ -1202,6 +1202,9 @@ namespace Unity.VisualScripting.Generated.Aot
 	// TakeDamage.op_Implicit
 	// TakeDamage.op_Equality
 	// TakeDamage.op_Inequality
+	// testMapRespawner.op_Implicit
+	// testMapRespawner.op_Equality
+	// testMapRespawner.op_Inequality
 	// ThrowWeapon.op_Implicit
 	// ThrowWeapon.op_Equality
 	// ThrowWeapon.op_Inequality
@@ -1229,9 +1232,6 @@ namespace Unity.VisualScripting.Generated.Aot
 	// WeaponStatus.op_Implicit
 	// WeaponStatus.op_Equality
 	// WeaponStatus.op_Inequality
-	// testMapRespawner.op_Implicit
-	// testMapRespawner.op_Equality
-	// testMapRespawner.op_Inequality
 	// CarKeyBinds.op_Implicit
 	// CarKeyBinds.op_Equality
 	// CarKeyBinds.op_Inequality
@@ -1256,6 +1256,9 @@ namespace Unity.VisualScripting.Generated.Aot
 	// CarAddOnSystems.op_Implicit
 	// CarAddOnSystems.op_Equality
 	// CarAddOnSystems.op_Inequality
+	// CarDrowner.op_Implicit
+	// CarDrowner.op_Equality
+	// CarDrowner.op_Inequality
 	// CarExplodedEvent.op_Implicit
 	// CarExplodedEvent.op_Equality
 	// CarExplodedEvent.op_Inequality
@@ -1277,6 +1280,9 @@ namespace Unity.VisualScripting.Generated.Aot
 	// ChildChangeDetector.op_Implicit
 	// ChildChangeDetector.op_Equality
 	// ChildChangeDetector.op_Inequality
+	// ClipRester.op_Implicit
+	// ClipRester.op_Equality
+	// ClipRester.op_Inequality
 	// CoinsUItext.op_Implicit
 	// CoinsUItext.op_Equality
 	// CoinsUItext.op_Inequality
@@ -1502,6 +1508,9 @@ namespace Unity.VisualScripting.Generated.Aot
 	// PhotonTransformSerializer.op_Implicit
 	// PhotonTransformSerializer.op_Equality
 	// PhotonTransformSerializer.op_Inequality
+	// PlayerControllerTest.op_Implicit
+	// PlayerControllerTest.op_Equality
+	// PlayerControllerTest.op_Inequality
 	// PlayOneShot.op_Implicit
 	// PlayOneShot.op_Equality
 	// PlayOneShot.op_Inequality
@@ -1616,6 +1625,9 @@ namespace Unity.VisualScripting.Generated.Aot
 	// SwimWater.op_Implicit
 	// SwimWater.op_Equality
 	// SwimWater.op_Inequality
+	// SwipeToRotate.op_Implicit
+	// SwipeToRotate.op_Equality
+	// SwipeToRotate.op_Inequality
 	// TextSizeSync.op_Implicit
 	// TextSizeSync.op_Equality
 	// TextSizeSync.op_Inequality
@@ -2595,8 +2607,8 @@ namespace Unity.VisualScripting.Generated.Aot
 	// Photon.Pun.PhotonView.IsMine
 	// UnityEngine.GameObject.Destroy
 	// UnityEngine.Input.GetKey
-	// UnityEngine.Transform.Find
 	// UnityEngine.Transform.position
+	// UnityEngine.Transform.Find
 	// UnityEngine.Transform.LookAt
 	// UnityEngine.Debug.Log
 	// UnityEngine.UI.Text.text
@@ -2604,8 +2616,8 @@ namespace Unity.VisualScripting.Generated.Aot
 	// UnityEngine.SkinnedMeshRenderer.material
 	// UnityEngine.UI.Image.color
 	// UnityEngine.Transform.root
-	// UnityEngine.Random.Range
 	// UnityEngine.Camera.main
+	// UnityEngine.Random.Range
 	// UnityEngine.Transform.childCount
 	// UnityEngine.Resources.Load
 	// SkinData.SkinMaterial
@@ -2613,11 +2625,11 @@ namespace Unity.VisualScripting.Generated.Aot
 	// System.IO.Path.Combine
 	// PhotonSerializerBGN.SkinID
 	// int.ToString
-	// UnityEngine.Component.GetComponentInParent
-	// WeaponStatus.CurrentClip
-	// TMPro.TextMeshProUGUI.text
-	// WeaponStatus.TotalAmmo
 	// PlayerActionsVar.InventoryTrack
+	// UnityEngine.Component.GetComponentInParent
+	// WeaponStatus.TotalAmmo
+	// TMPro.TextMeshProUGUI.text
+	// WeaponStatus.CurrentClip
 	// object.ToString
 	// Photon.Pun.PhotonView.Owner
 	// UnityEngine.GameObject.name
@@ -2730,7 +2742,6 @@ namespace Unity.VisualScripting.Generated.Aot
 	// PlayerKeyBinds.crouchkey
 	// UnityEngine.CharacterController.velocity
 	// Cinemachine.Examples.PlayerTransformcontrol.turnSpeed
-	// SpeedCheck.speed
 	// UnityEngine.Application.targetFrameRate
 	// WeaponShoot.bodyshotHit
 	// UnityEngine.UI.Image.fillAmount
@@ -2767,10 +2778,10 @@ namespace Unity.VisualScripting.Generated.Aot
 	// UnityEngine.Rigidbody.useGravity
 	// UnityEngine.Component.GetComponentsInChildren
 	// UnityEngine.AudioSource.Stop
-	// PlayerActionsVar.TotalRoomkillsTrack
-	// PlayerScores.TotalRoomKills
 	// PhotonSerializerBGN.PlayerNickName
 	// PlayerScores.PlayerName
+	// PlayerScores.TotalRoomKills
+	// PlayerActionsVar.TotalRoomkillsTrack
 	// UnityEngine.Object..ctor
 	// UnityEngine.Transform.name
 	// Unity.VisualScripting.ScriptMachine.enabled
@@ -2806,8 +2817,8 @@ namespace Unity.VisualScripting.Generated.Aot
 	// RoomGameManager.CurrentWinnner
 	// Photon.Pun.PhotonNetwork.CurrentRoom
 	// Photon.Realtime.Room.Name
-	// UnityEngine.GameObject.Destroy
 	// UnityEngine.GameObject.Instantiate
+	// UnityEngine.GameObject.Destroy
 	// Photon.Pun.PhotonNetwork.Disconnect
 	// Photon.Pun.PhotonNetwork.LeaveRoom
 	// UnityEngine.SceneManagement.SceneManager.LoadScene
@@ -16688,6 +16699,41 @@ namespace Unity.VisualScripting.Generated.Aot
 			optimized.Invoke(default(object[]));
 		}
 		
+		// testMapRespawner.op_Implicit
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void testMapRespawner_op_Implicit()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			bool conversion = ((bool)(arg0));
+			global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, bool> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// testMapRespawner.op_Equality
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void testMapRespawner_op_Equality()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+			bool @operator = (arg0 == arg1);
+			global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0, arg1);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// testMapRespawner.op_Inequality
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void testMapRespawner_op_Inequality()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+			bool @operator = (arg0 != arg1);
+			global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0, arg1);
+			optimized.Invoke(default(object[]));
+		}
+		
 		// ThrowWeapon.op_Implicit
 		[global::UnityEngine.Scripting.PreserveAttribute()]
 		public static void ThrowWeapon_op_Implicit()
@@ -17003,41 +17049,6 @@ namespace Unity.VisualScripting.Generated.Aot
 			optimized.Invoke(default(object[]));
 		}
 		
-		// testMapRespawner.op_Implicit
-		[global::UnityEngine.Scripting.PreserveAttribute()]
-		public static void testMapRespawner_op_Implicit()
-		{
-			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
-			bool conversion = ((bool)(arg0));
-			global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, bool> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
-			optimized.Invoke(null, arg0);
-			optimized.Invoke(default(object[]));
-		}
-		
-		// testMapRespawner.op_Equality
-		[global::UnityEngine.Scripting.PreserveAttribute()]
-		public static void testMapRespawner_op_Equality()
-		{
-			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
-			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
-			bool @operator = (arg0 == arg1);
-			global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
-			optimized.Invoke(null, arg0, arg1);
-			optimized.Invoke(default(object[]));
-		}
-		
-		// testMapRespawner.op_Inequality
-		[global::UnityEngine.Scripting.PreserveAttribute()]
-		public static void testMapRespawner_op_Inequality()
-		{
-			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
-			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
-			bool @operator = (arg0 != arg1);
-			global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
-			optimized.Invoke(null, arg0, arg1);
-			optimized.Invoke(default(object[]));
-		}
-		
 		// CarKeyBinds.op_Implicit
 		[global::UnityEngine.Scripting.PreserveAttribute()]
 		public static void CarKeyBinds_op_Implicit()
@@ -17318,6 +17329,41 @@ namespace Unity.VisualScripting.Generated.Aot
 			optimized.Invoke(default(object[]));
 		}
 		
+		// CarDrowner.op_Implicit
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void CarDrowner_op_Implicit()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			bool conversion = ((bool)(arg0));
+			global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, bool> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// CarDrowner.op_Equality
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void CarDrowner_op_Equality()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+			bool @operator = (arg0 == arg1);
+			global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0, arg1);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// CarDrowner.op_Inequality
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void CarDrowner_op_Inequality()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+			bool @operator = (arg0 != arg1);
+			global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0, arg1);
+			optimized.Invoke(default(object[]));
+		}
+		
 		// CarExplodedEvent.op_Implicit
 		[global::UnityEngine.Scripting.PreserveAttribute()]
 		public static void CarExplodedEvent_op_Implicit()
@@ -17554,6 +17600,41 @@ namespace Unity.VisualScripting.Generated.Aot
 		// ChildChangeDetector.op_Inequality
 		[global::UnityEngine.Scripting.PreserveAttribute()]
 		public static void ChildChangeDetector_op_Inequality()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+			bool @operator = (arg0 != arg1);
+			global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0, arg1);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// ClipRester.op_Implicit
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void ClipRester_op_Implicit()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			bool conversion = ((bool)(arg0));
+			global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, bool> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// ClipRester.op_Equality
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void ClipRester_op_Equality()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+			bool @operator = (arg0 == arg1);
+			global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0, arg1);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// ClipRester.op_Inequality
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void ClipRester_op_Inequality()
 		{
 			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
 			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
@@ -20188,6 +20269,41 @@ namespace Unity.VisualScripting.Generated.Aot
 			optimized.Invoke(default(object[]));
 		}
 		
+		// PlayerControllerTest.op_Implicit
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void PlayerControllerTest_op_Implicit()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			bool conversion = ((bool)(arg0));
+			global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, bool> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// PlayerControllerTest.op_Equality
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void PlayerControllerTest_op_Equality()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+			bool @operator = (arg0 == arg1);
+			global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0, arg1);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// PlayerControllerTest.op_Inequality
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void PlayerControllerTest_op_Inequality()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+			bool @operator = (arg0 != arg1);
+			global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0, arg1);
+			optimized.Invoke(default(object[]));
+		}
+		
 		// PlayOneShot.op_Implicit
 		[global::UnityEngine.Scripting.PreserveAttribute()]
 		public static void PlayOneShot_op_Implicit()
@@ -21509,6 +21625,41 @@ namespace Unity.VisualScripting.Generated.Aot
 		// SwimWater.op_Inequality
 		[global::UnityEngine.Scripting.PreserveAttribute()]
 		public static void SwimWater_op_Inequality()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+			bool @operator = (arg0 != arg1);
+			global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0, arg1);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// SwipeToRotate.op_Implicit
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void SwipeToRotate_op_Implicit()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			bool conversion = ((bool)(arg0));
+			global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, bool> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// SwipeToRotate.op_Equality
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void SwipeToRotate_op_Equality()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+			bool @operator = (arg0 == arg1);
+			global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0, arg1);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// SwipeToRotate.op_Inequality
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void SwipeToRotate_op_Inequality()
 		{
 			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
 			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
@@ -32913,18 +33064,6 @@ namespace Unity.VisualScripting.Generated.Aot
 			optimized.Invoke(default(object[]));
 		}
 		
-		// UnityEngine.Transform.Find
-		[global::UnityEngine.Scripting.PreserveAttribute()]
-		public static void UnityEngine_Transform_Find()
-		{
-			global::UnityEngine.Transform target = default(global::UnityEngine.Transform);
-			string arg0 = default(string);
-			target.Find(arg0);
-			global::Unity.VisualScripting.InstanceFunctionInvoker<UnityEngine.Transform, string, UnityEngine.Transform> optimized = new global::Unity.VisualScripting.InstanceFunctionInvoker<UnityEngine.Transform, string, UnityEngine.Transform>(default(global::System.Reflection.MethodInfo));
-			optimized.Invoke(default(global::UnityEngine.Transform), arg0);
-			optimized.Invoke(default(object[]));
-		}
-		
 		// UnityEngine.Transform.position
 		[global::UnityEngine.Scripting.PreserveAttribute()]
 		public static void UnityEngine_Transform_position()
@@ -32935,6 +33074,18 @@ namespace Unity.VisualScripting.Generated.Aot
 			global::Unity.VisualScripting.InstancePropertyAccessor<UnityEngine.Transform, UnityEngine.Vector3> optimized = new global::Unity.VisualScripting.InstancePropertyAccessor<UnityEngine.Transform, UnityEngine.Vector3>(default(global::System.Reflection.PropertyInfo));
 			optimized.GetValue(default(global::UnityEngine.Transform));
 			optimized.SetValue(default(global::UnityEngine.Transform), default(global::UnityEngine.Vector3));
+		}
+		
+		// UnityEngine.Transform.Find
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void UnityEngine_Transform_Find()
+		{
+			global::UnityEngine.Transform target = default(global::UnityEngine.Transform);
+			string arg0 = default(string);
+			target.Find(arg0);
+			global::Unity.VisualScripting.InstanceFunctionInvoker<UnityEngine.Transform, string, UnityEngine.Transform> optimized = new global::Unity.VisualScripting.InstanceFunctionInvoker<UnityEngine.Transform, string, UnityEngine.Transform>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(default(global::UnityEngine.Transform), arg0);
+			optimized.Invoke(default(object[]));
 		}
 		
 		// UnityEngine.Transform.LookAt
@@ -33017,6 +33168,15 @@ namespace Unity.VisualScripting.Generated.Aot
 			optimized.GetValue(default(global::UnityEngine.Transform));
 		}
 		
+		// UnityEngine.Camera.main
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void UnityEngine_Camera_main()
+		{
+			global::UnityEngine.Camera accessor = global::UnityEngine.Camera.main;
+			global::Unity.VisualScripting.StaticPropertyAccessor<UnityEngine.Camera> optimized = new global::Unity.VisualScripting.StaticPropertyAccessor<UnityEngine.Camera>(default(global::System.Reflection.PropertyInfo));
+			optimized.GetValue(null);
+		}
+		
 		// UnityEngine.Random.Range
 		[global::UnityEngine.Scripting.PreserveAttribute()]
 		public static void UnityEngine_Random_Range()
@@ -33027,15 +33187,6 @@ namespace Unity.VisualScripting.Generated.Aot
 			global::Unity.VisualScripting.StaticFunctionInvoker<int, int, int> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<int, int, int>(default(global::System.Reflection.MethodInfo));
 			optimized.Invoke(null, arg0, arg1);
 			optimized.Invoke(default(object[]));
-		}
-		
-		// UnityEngine.Camera.main
-		[global::UnityEngine.Scripting.PreserveAttribute()]
-		public static void UnityEngine_Camera_main()
-		{
-			global::UnityEngine.Camera accessor = global::UnityEngine.Camera.main;
-			global::Unity.VisualScripting.StaticPropertyAccessor<UnityEngine.Camera> optimized = new global::Unity.VisualScripting.StaticPropertyAccessor<UnityEngine.Camera>(default(global::System.Reflection.PropertyInfo));
-			optimized.GetValue(null);
 		}
 		
 		// UnityEngine.Transform.childCount
@@ -33118,6 +33269,18 @@ namespace Unity.VisualScripting.Generated.Aot
 			optimized.Invoke(default(object[]));
 		}
 		
+		// PlayerActionsVar.InventoryTrack
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void PlayerActionsVar_InventoryTrack()
+		{
+			global::PlayerActionsVar target = default(global::PlayerActionsVar);
+			int accessor = target.InventoryTrack;
+			target.InventoryTrack = default(int);
+			global::Unity.VisualScripting.InstanceFieldAccessor<PlayerActionsVar, int> optimized = new global::Unity.VisualScripting.InstanceFieldAccessor<PlayerActionsVar, int>(default(global::System.Reflection.FieldInfo));
+			optimized.GetValue(default(global::PlayerActionsVar));
+			optimized.SetValue(default(global::PlayerActionsVar), default(int));
+		}
+		
 		// UnityEngine.Component.GetComponentInParent
 		[global::UnityEngine.Scripting.PreserveAttribute()]
 		public static void UnityEngine_Component_GetComponentInParent()
@@ -33130,13 +33293,13 @@ namespace Unity.VisualScripting.Generated.Aot
 			optimized.Invoke(default(object[]));
 		}
 		
-		// WeaponStatus.CurrentClip
+		// WeaponStatus.TotalAmmo
 		[global::UnityEngine.Scripting.PreserveAttribute()]
-		public static void WeaponStatus_CurrentClip()
+		public static void WeaponStatus_TotalAmmo()
 		{
 			global::WeaponStatus target = default(global::WeaponStatus);
-			int accessor = target.CurrentClip;
-			target.CurrentClip = default(int);
+			int accessor = target.TotalAmmo;
+			target.TotalAmmo = default(int);
 			global::Unity.VisualScripting.InstanceFieldAccessor<WeaponStatus, int> optimized = new global::Unity.VisualScripting.InstanceFieldAccessor<WeaponStatus, int>(default(global::System.Reflection.FieldInfo));
 			optimized.GetValue(default(global::WeaponStatus));
 			optimized.SetValue(default(global::WeaponStatus), default(int));
@@ -33154,28 +33317,16 @@ namespace Unity.VisualScripting.Generated.Aot
 			optimized.SetValue(default(global::TMPro.TMP_Text), default(string));
 		}
 		
-		// WeaponStatus.TotalAmmo
+		// WeaponStatus.CurrentClip
 		[global::UnityEngine.Scripting.PreserveAttribute()]
-		public static void WeaponStatus_TotalAmmo()
+		public static void WeaponStatus_CurrentClip()
 		{
 			global::WeaponStatus target = default(global::WeaponStatus);
-			int accessor = target.TotalAmmo;
-			target.TotalAmmo = default(int);
+			int accessor = target.CurrentClip;
+			target.CurrentClip = default(int);
 			global::Unity.VisualScripting.InstanceFieldAccessor<WeaponStatus, int> optimized = new global::Unity.VisualScripting.InstanceFieldAccessor<WeaponStatus, int>(default(global::System.Reflection.FieldInfo));
 			optimized.GetValue(default(global::WeaponStatus));
 			optimized.SetValue(default(global::WeaponStatus), default(int));
-		}
-		
-		// PlayerActionsVar.InventoryTrack
-		[global::UnityEngine.Scripting.PreserveAttribute()]
-		public static void PlayerActionsVar_InventoryTrack()
-		{
-			global::PlayerActionsVar target = default(global::PlayerActionsVar);
-			int accessor = target.InventoryTrack;
-			target.InventoryTrack = default(int);
-			global::Unity.VisualScripting.InstanceFieldAccessor<PlayerActionsVar, int> optimized = new global::Unity.VisualScripting.InstanceFieldAccessor<PlayerActionsVar, int>(default(global::System.Reflection.FieldInfo));
-			optimized.GetValue(default(global::PlayerActionsVar));
-			optimized.SetValue(default(global::PlayerActionsVar), default(int));
 		}
 		
 		// object.ToString
@@ -34493,7 +34644,6 @@ namespace Unity.VisualScripting.Generated.Aot
 			optimized.SetValue(default(global::Cinemachine.Examples.PlayerTransformcontrol), default(float));
 		}
 		
-	
 		// UnityEngine.Application.targetFrameRate
 		[global::UnityEngine.Scripting.PreserveAttribute()]
 		public static void UnityEngine_Application_targetFrameRate()
@@ -34916,30 +35066,6 @@ namespace Unity.VisualScripting.Generated.Aot
 			optimized.Invoke(default(object[]));
 		}
 		
-		// PlayerActionsVar.TotalRoomkillsTrack
-		[global::UnityEngine.Scripting.PreserveAttribute()]
-		public static void PlayerActionsVar_TotalRoomkillsTrack()
-		{
-			global::PlayerActionsVar target = default(global::PlayerActionsVar);
-			int accessor = target.TotalRoomkillsTrack;
-			target.TotalRoomkillsTrack = default(int);
-			global::Unity.VisualScripting.InstanceFieldAccessor<PlayerActionsVar, int> optimized = new global::Unity.VisualScripting.InstanceFieldAccessor<PlayerActionsVar, int>(default(global::System.Reflection.FieldInfo));
-			optimized.GetValue(default(global::PlayerActionsVar));
-			optimized.SetValue(default(global::PlayerActionsVar), default(int));
-		}
-		
-		// PlayerScores.TotalRoomKills
-		[global::UnityEngine.Scripting.PreserveAttribute()]
-		public static void PlayerScores_TotalRoomKills()
-		{
-			global::PlayerScores target = default(global::PlayerScores);
-			int accessor = target.TotalRoomKills;
-			target.TotalRoomKills = default(int);
-			global::Unity.VisualScripting.InstanceFieldAccessor<PlayerScores, int> optimized = new global::Unity.VisualScripting.InstanceFieldAccessor<PlayerScores, int>(default(global::System.Reflection.FieldInfo));
-			optimized.GetValue(default(global::PlayerScores));
-			optimized.SetValue(default(global::PlayerScores), default(int));
-		}
-		
 		// PhotonSerializerBGN.PlayerNickName
 		[global::UnityEngine.Scripting.PreserveAttribute()]
 		public static void PhotonSerializerBGN_PlayerNickName()
@@ -34962,6 +35088,30 @@ namespace Unity.VisualScripting.Generated.Aot
 			global::Unity.VisualScripting.InstanceFieldAccessor<PlayerScores, string> optimized = new global::Unity.VisualScripting.InstanceFieldAccessor<PlayerScores, string>(default(global::System.Reflection.FieldInfo));
 			optimized.GetValue(default(global::PlayerScores));
 			optimized.SetValue(default(global::PlayerScores), default(string));
+		}
+		
+		// PlayerScores.TotalRoomKills
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void PlayerScores_TotalRoomKills()
+		{
+			global::PlayerScores target = default(global::PlayerScores);
+			int accessor = target.TotalRoomKills;
+			target.TotalRoomKills = default(int);
+			global::Unity.VisualScripting.InstanceFieldAccessor<PlayerScores, int> optimized = new global::Unity.VisualScripting.InstanceFieldAccessor<PlayerScores, int>(default(global::System.Reflection.FieldInfo));
+			optimized.GetValue(default(global::PlayerScores));
+			optimized.SetValue(default(global::PlayerScores), default(int));
+		}
+		
+		// PlayerActionsVar.TotalRoomkillsTrack
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void PlayerActionsVar_TotalRoomkillsTrack()
+		{
+			global::PlayerActionsVar target = default(global::PlayerActionsVar);
+			int accessor = target.TotalRoomkillsTrack;
+			target.TotalRoomkillsTrack = default(int);
+			global::Unity.VisualScripting.InstanceFieldAccessor<PlayerActionsVar, int> optimized = new global::Unity.VisualScripting.InstanceFieldAccessor<PlayerActionsVar, int>(default(global::System.Reflection.FieldInfo));
+			optimized.GetValue(default(global::PlayerActionsVar));
+			optimized.SetValue(default(global::PlayerActionsVar), default(int));
 		}
 		
 		// UnityEngine.Object..ctor
@@ -35314,17 +35464,6 @@ namespace Unity.VisualScripting.Generated.Aot
 			optimized.SetValue(default(global::Photon.Realtime.Room), default(string));
 		}
 		
-		// UnityEngine.GameObject.Destroy
-		[global::UnityEngine.Scripting.PreserveAttribute()]
-		public static void UnityEngine_GameObject_Destroy_0()
-		{
-			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
-			global::UnityEngine.Object.Destroy(arg0);
-			global::Unity.VisualScripting.StaticActionInvoker<UnityEngine.Object> optimized = new global::Unity.VisualScripting.StaticActionInvoker<UnityEngine.Object>(default(global::System.Reflection.MethodInfo));
-			optimized.Invoke(null, arg0);
-			optimized.Invoke(default(object[]));
-		}
-		
 		// UnityEngine.GameObject.Instantiate
 		[global::UnityEngine.Scripting.PreserveAttribute()]
 		public static void UnityEngine_GameObject_Instantiate()
@@ -35336,6 +35475,17 @@ namespace Unity.VisualScripting.Generated.Aot
 			global::UnityEngine.Object.Instantiate(arg0, arg1, arg2, arg3);
 			global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Vector3, UnityEngine.Quaternion, UnityEngine.Transform, UnityEngine.Object> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Vector3, UnityEngine.Quaternion, UnityEngine.Transform, UnityEngine.Object>(default(global::System.Reflection.MethodInfo));
 			optimized.Invoke(null, arg0, arg1, arg2, arg3);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// UnityEngine.GameObject.Destroy
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void UnityEngine_GameObject_Destroy_0()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			global::UnityEngine.Object.Destroy(arg0);
+			global::Unity.VisualScripting.StaticActionInvoker<UnityEngine.Object> optimized = new global::Unity.VisualScripting.StaticActionInvoker<UnityEngine.Object>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0);
 			optimized.Invoke(default(object[]));
 		}
 		
