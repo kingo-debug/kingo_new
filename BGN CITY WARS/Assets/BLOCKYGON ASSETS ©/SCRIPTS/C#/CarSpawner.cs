@@ -38,7 +38,7 @@ private bool IsSpawned = false;
 [SerializeField]
 private VehicleCoolDown vehicleCoolDown;
 
-
+    private PhotonView pv;
 
     //set Player
     void Start()
@@ -46,6 +46,7 @@ private VehicleCoolDown vehicleCoolDown;
         Player = this.transform;
         vehicleCoolDown = GameObject.Find("VehicleCoolDown").GetComponent<VehicleCoolDown>();
         vehicleCoolDown.Player = this.gameObject;
+        pv = GetComponent<PhotonView>();
        
     }
 
@@ -62,7 +63,7 @@ CheckEntry();
 
     void CheckEntry()
     {
-        if(CarinRange != null && ControlFreak2.CF2Input.GetKeyDown(KeyCode.T))
+        if(CarinRange != null && ControlFreak2.CF2Input.GetKeyDown(KeyCode.T)&& pv.IsMine)
         {
             CarinRange.GetComponent<CarPlayerEntry>().EnterCar();
         }
