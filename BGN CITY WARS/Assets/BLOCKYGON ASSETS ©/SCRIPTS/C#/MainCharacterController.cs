@@ -12,6 +12,7 @@ public class MainCharacterController : MonoBehaviour
     #region Variables
     [Header("Movement")]
     [Space(10)]
+    public bool CanMove = true;
     private Vector3 moveDirection = Vector3.zero;
     private Vector3 move;
     public float speed = 6.0f;
@@ -92,7 +93,6 @@ public class MainCharacterController : MonoBehaviour
     #endregion
     void Start()
     {
-
         joystick = GameObject.FindWithTag("JoyStick").GetComponent<TouchJoystick>();
 
         animator = GetComponent<Animator>();
@@ -177,7 +177,11 @@ public class MainCharacterController : MonoBehaviour
         }
 
         moveDirection.y += gravity * Time.deltaTime;
-        CharController.Move(moveDirection * Time.deltaTime);
+        if(CanMove)
+        {
+            CharController.Move(moveDirection * Time.deltaTime);
+        }
+
 
         // Create  Movement
         move = transform.right * moveHorizontal + transform.forward * moveVertical;
@@ -316,7 +320,7 @@ public class MainCharacterController : MonoBehaviour
         }
 
         #region Free Rotate
-        if (move != Vector3.zero) // rotate free
+        if (move != Vector3.zero && CanMove) // rotate free
         {
             float rotationspeed = (isGrounded) ? FreeRotationSpeed : AirRotationSpeed;
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(move), rotationspeed);
