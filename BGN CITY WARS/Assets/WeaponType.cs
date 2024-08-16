@@ -19,43 +19,49 @@ public class WeaponType : MonoBehaviour
     private AudioClip[] ReloadPartsSFX;
     private SFXmanager sfxmanager;
 
+    private PhotonView PV;
 
     private void Awake()
     {
-        if( !GetComponent<PhotonView>().IsMine)
-        {
-            this.enabled = false;
-        }
+        PV = GetComponent<PhotonView>();
     }
-
     private void OnEnable()
     {
-        actions = transform.root.GetChild(0).GetComponent<PlayerActionsVar>();
-        animator = transform.root.GetChild(0).GetComponent<Animator>();
-        WeaponStatus Status = transform.root.GetChild(0).GetComponent<WeaponStatus>();
-        Status.CurrentWeapon = this.gameObject;
-        actions.Weapontype = Weapontype;
-        animator.SetInteger("WeaponType", Weapontype);
-        Crosshiars = GameObject.Find("CROSSHAIRS").transform;
-        Invoke("UpdateReticle", 0.1f);
-        transform.root.transform.GetChild(0).GetComponent<ScopingManager>().CanScope = Scope;
-        if (Scope)
+        if(PV.IsMine)
         {
-            transform.root.GetChild(0).GetComponent<ScopingManager>().WeaponMesh = transform.GetChild(0).transform.Find("BODY").gameObject;
+            actions = transform.root.GetChild(0).GetComponent<PlayerActionsVar>();
+            animator = transform.root.GetChild(0).GetComponent<Animator>();
+            WeaponStatus Status = transform.root.GetChild(0).GetComponent<WeaponStatus>();
+            Status.CurrentWeapon = this.gameObject;
+            actions.Weapontype = Weapontype;
+            animator.SetInteger("WeaponType", Weapontype);
+            Crosshiars = GameObject.Find("CROSSHAIRS").transform;
+            Invoke("UpdateReticle", 0.1f);
+            transform.root.transform.GetChild(0).GetComponent<ScopingManager>().CanScope = Scope;
+            if (Scope)
+            {
+                transform.root.GetChild(0).GetComponent<ScopingManager>().WeaponMesh = transform.GetChild(0).transform.Find("BODY").gameObject;
+            }
         }
+        Invoke ("UpdateReloadSFX", 0.1f);
+
+
     }
     private void Start()
     {
-        WeaponStatus Status = transform.root.GetChild(0).GetComponent<WeaponStatus>();
-        Status.CurrentWeapon = this.gameObject;
-        Crosshiars = GameObject.Find("CROSSHAIRS").transform;
-        Invoke("UpdateReticle", 0.1f);
-        sfxmanager = transform.root.transform.GetChild(0).GetComponent<SFXmanager>();
-
+        
+        if (PV.IsMine)
+        {
+            WeaponStatus Status = transform.root.GetChild(0).GetComponent<WeaponStatus>();
+            Status.CurrentWeapon = this.gameObject;
+            Crosshiars = GameObject.Find("CROSSHAIRS").transform;
+            Invoke("UpdateReticle", 0.1f);
+        }      
+      
         GetComponent<AudioSource>().volume =ES3.Load<float>("SFX"); ;
 
     }
-    public void UpdateReticle() // AND  assign reload parts audio  to Player IS IN THIS FUNCTION
+    public void UpdateReticle() 
     {
 
         if (ReticleType == 0)
@@ -70,7 +76,13 @@ public class WeaponType : MonoBehaviour
         {
             Crosshiars.GetChild(2).gameObject.SetActive(true);
         }
+       
+    }
+    public void UpdateReloadSFX()  //  assign reload parts audio  to Player IS IN THIS FUNCTION
+    {
+        sfxmanager = transform.root.transform.GetChild(0).GetComponent<SFXmanager>();
         sfxmanager.ReloadPart = ReloadPartsSFX; // assign reload parts to Player
     }
+
 
 }

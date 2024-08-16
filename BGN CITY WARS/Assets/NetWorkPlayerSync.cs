@@ -19,6 +19,8 @@ public class NetWorkPlayerSync : MonoBehaviour
     private MainCameraController CameraControler;
     private Camera Playercamera;
     private TakeDamage takedamage;
+
+    private bool DisabledBefore = false;
     void Awake()
     {
         PV = GetComponent<PhotonView>();
@@ -115,9 +117,14 @@ public class NetWorkPlayerSync : MonoBehaviour
     public void OnDisable()
     {
         PV.RPC("DisablePlayer", RpcTarget.Others);
+        DisabledBefore = true;
     }
     public void OnEnable()
     {
-        PV.RPC("EnablePlayer", RpcTarget.Others);
+        if(DisabledBefore)
+        {
+            PV.RPC("EnablePlayer", RpcTarget.Others);
+        }
+       
     }
 }

@@ -30,19 +30,16 @@ public class CarPlayerEntry : MonoBehaviour
     [SerializeField]
     private LayerMask ExitPointCheck;
 
-    private void Awake()
-    {
-        if (!PV.IsMine)
-        {
-            this.enabled = false;
-        }
-    }
     private void Start()
     {
         carcontroller = GetComponent<CarController>();
         PV = GetComponent<PhotonView>();
         explodeevent = GetComponent<ExplodeEventCaller>();
-      
+        if (!PV.IsMine)
+        {
+            this.enabled = false;
+        }
+
 
     }
     void OnTriggerEnter(Collider other)
