@@ -39,9 +39,10 @@ private GameObject ScreenBlock;
             item.gameObject.SetActive(true);
         }
 
-            maincontroller.CanMove = true;
+         
         }
-   }
+    
+    }
     void OnDied()
     {
         #region Character Controller ReSize

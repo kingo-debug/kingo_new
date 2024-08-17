@@ -79,10 +79,15 @@ public class JetPackManager : MonoBehaviourPunCallbacks,IPunObservable
                     Accelerating = false;
                     currentJetpackSpeed = Mathf.Clamp(currentJetpackSpeed - accelerationRate * Time.deltaTime, initialJetpackSpeed, maxJetpackSpeed);
                     if (AccerlateVFX.activeSelf)
+                    {
                         AccerlateVFX.SetActive(false);
+                    }                   
+                    if(maincont.CanMove)
+                    {
+                        // Move the character controller upwards using the jetpack speed
+                        Charcontroller.Move(Vector3.up * Time.deltaTime * currentJetpackSpeed * DeaccelerationRate);  // deaccel
+                    }
 
-                    // Move the character controller upwards using the jetpack speed
-                    Charcontroller.Move(Vector3.up * Time.deltaTime * currentJetpackSpeed * DeaccelerationRate);  // deaccel
                 }
             }
         }
@@ -98,9 +103,12 @@ public class JetPackManager : MonoBehaviourPunCallbacks,IPunObservable
         Accelerating = true;
         // Gradually increase the jetpack speed
         currentJetpackSpeed = Mathf.Clamp(currentJetpackSpeed + accelerationRate * Time.deltaTime, initialJetpackSpeed, maxJetpackSpeed);
+        if(maincont.CanMove)
+        {
+            // Move the character controller upwards using the jetpack speed
+            Charcontroller.Move(Vector3.up * Time.deltaTime * currentJetpackSpeed);
+        }
 
-        // Move the character controller upwards using the jetpack speed
-        Charcontroller.Move(Vector3.up * Time.deltaTime * currentJetpackSpeed);
         falldamage.ResetFalling();
 
         #region Fuel

@@ -95,7 +95,7 @@ public class FallDamage : MonoBehaviour
 
     private void Update()
     {
-        if (!Mainchar.isGrounded &&! jpmanager.Accelerating && ! SwimControl.Swiming)
+        if (!Mainchar.isGrounded &&! jpmanager.Accelerating && ! SwimControl.Swiming&& Mainchar.CanMove)
         {
             FallingTime += FallingSpeed * Time.deltaTime;
         }
