@@ -30,15 +30,15 @@ public class EquipBackup : MonoBehaviour
         Debug.Log(data.EquippedBackup = buy.WeaponID);
         ES3.Save<string>("BackupEquip", buy.WeaponID);
 
+        #region Selection Bar UI Icon
+        CategorySelectPFP.GetComponent<Image>().sprite = transform.parent.parent.transform.Find("Weapon icon").GetComponent<Image>().sprite;
+        #endregion
         #region refresh states last equipped
         states.CurrentlyEquipped.gameObject.SetActive(false); // Disable last equipped button
         states.CurrentlyEquipped.transform.parent.GetChild(1).gameObject.SetActive(true); // enable its equip
         states.CurrentlyEquipped = transform.parent.GetChild(2).gameObject; // set new equip button
         #endregion
 
-        #region Selection Bar UI Icon
-        CategorySelectPFP.GetComponent<Image>().sprite = transform.parent.parent.Find("Weapon icon").GetComponent<Image>().sprite;
-        #endregion
 
 
     }

@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using UnityEngine.UI;
 public class BackupStateManager : MonoBehaviour
 {
     [SerializeField]
@@ -8,6 +8,8 @@ public class BackupStateManager : MonoBehaviour
     GameObject EquipState;
     [SerializeField]
     GameObject EquippedState;
+    [SerializeField]
+    private Transform CategorySelectPFP;
 
     EquippedState states;
     OwnedShopItems ownedShopItems;
@@ -40,7 +42,9 @@ public class BackupStateManager : MonoBehaviour
                 #region refresh states last equipped
                 states.CurrentlyEquipped = transform.GetChild(2).gameObject;
                 #endregion
-
+                #region Selection Bar UI Icon
+                CategorySelectPFP.GetComponent<Image>().sprite = transform.parent.transform.Find("Weapon icon").GetComponent<Image>().sprite;
+                #endregion
 
             }
             else

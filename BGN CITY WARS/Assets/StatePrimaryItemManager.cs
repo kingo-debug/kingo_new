@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class StatePrimaryItemManager : MonoBehaviour
 {
     [SerializeField]
@@ -10,6 +8,9 @@ public class StatePrimaryItemManager : MonoBehaviour
     GameObject EquipState;
     [SerializeField]
     GameObject EquippedState;
+    [SerializeField]
+    private Transform CategorySelectPFP;
+
 
     EquippedState states;
     OwnedShopItems ownedShopItems;
@@ -18,7 +19,6 @@ public class StatePrimaryItemManager : MonoBehaviour
     void Start()
     {
         RefreshStates();
-
     }
 
     private void OnEnable()
@@ -38,6 +38,10 @@ public class StatePrimaryItemManager : MonoBehaviour
             {
                 EquippedState.SetActive(true);
                 EquipState.SetActive(false);
+
+                #region Selection Bar UI Icon
+                CategorySelectPFP.GetComponent<Image>().sprite = transform.parent.transform.Find("Weapon icon").GetComponent<Image>().sprite;
+                #endregion
 
                 #region refresh states last equipped
                 states.CurrentlyEquipped = transform.GetChild(2).gameObject;
