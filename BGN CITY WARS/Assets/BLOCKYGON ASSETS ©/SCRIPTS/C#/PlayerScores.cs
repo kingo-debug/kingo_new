@@ -94,11 +94,18 @@ public class PlayerScores : MonoBehaviourPunCallbacks, IPunObservable
 
 
     public void UpdateScoreData()
-    {      
-        if(PV.IsMine)
-        {
-            PlayerOwner = GameObject.Find(PV.Owner.ToString()).gameObject.transform.GetChild(0).gameObject;  //find player owner object for local
+    {
 
+        GameObject Findobject = GameObject.Find(PV.Owner.ToString());
+        if(Findobject !=null)
+        {
+            PlayerOwner= Findobject.gameObject.transform.GetChild(0).gameObject;  //find player owner object for local
+            
+        }
+
+        if (PV.IsMine)
+        {
+        
             PlayerOwner.GetComponent<PlayerActionsVar>().ScoreItemUI = gameObject;
 
             NickName.text = PlayerOwner.GetComponent<PhotonSerializerBGN>().PlayerNickName;
@@ -114,7 +121,7 @@ public class PlayerScores : MonoBehaviourPunCallbacks, IPunObservable
         }
         else
         {
-            PlayerOwner = GameObject.Find(PV.Owner.ToString()).gameObject.transform.GetChild(0).gameObject;   //find player owner object for others
+       //   PlayerOwner = GameObject.Find(PV.Owner.ToString()).gameObject.transform.GetChild(0).gameObject;   //find player owner object for others
 
             NickName.text = PlayerOwner.GetComponent<PhotonSerializerBGN>().PlayerNickName;
 
