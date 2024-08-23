@@ -78,3 +78,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Fronts
+    uniqueID: 327196021
+    locked: 0
