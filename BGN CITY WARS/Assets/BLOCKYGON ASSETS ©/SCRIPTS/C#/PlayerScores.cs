@@ -76,7 +76,7 @@ public class PlayerScores : MonoBehaviourPunCallbacks, IPunObservable
     {
         if (transform.parent == null)
         {
-            transform.parent = GameObject.Find("SCENE Canvas").transform.GetChild(1).GetChild(1).GetChild(0);
+            transform.parent = GameObject.Find("SCENE Canvas").transform.GetChild(2).GetChild(1).GetChild(0);
             if(transform.localScale != new Vector3(1,1,1))
             {
                 transform.localScale = new Vector3(1, 1, 1);

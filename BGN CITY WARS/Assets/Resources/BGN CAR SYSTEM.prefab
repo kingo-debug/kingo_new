@@ -279,6 +279,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3799543770646160500}
+  - component: {fileID: 5717664131684247282}
   m_Layer: 3
   m_Name: MINI MAP
   m_TagString: Untagged
@@ -302,6 +303,20 @@ Transform:
   - {fileID: 6888993132447812418}
   m_Father: {fileID: 597479458790122087}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5717664131684247282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 338198419757092876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd59f7de66b032440a3ba3ab764fda0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MinimapCam: {fileID: 0}
+  MinimapSize: 53
 --- !u!1 &412984026132147827
 GameObject:
   m_ObjectHideFlags: 0
@@ -13536,7 +13551,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6888993132447812418}
   - component: {fileID: 8438096451307831552}
-  - component: {fileID: 8347391404699308834}
   m_Layer: 14
   m_Name: Car indicator
   m_TagString: Untagged
@@ -13553,7 +13567,7 @@ Transform:
   m_GameObject: {fileID: 4466994408130509884}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 14.4, z: 0}
+  m_LocalPosition: {x: 0, y: -5, z: 0}
   m_LocalScale: {x: 43.944, y: 50, z: 50}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13611,20 +13625,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8347391404699308834
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4466994408130509884}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd59f7de66b032440a3ba3ab764fda0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MinimapCam: {fileID: 0}
-  MinimapSize: 47
 --- !u!1 &4474777809876520886
 GameObject:
   m_ObjectHideFlags: 0
@@ -28642,6 +28642,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 597479458790122087}
+  PV: {fileID: 0}
 --- !u!1 &7304646309745311884
 GameObject:
   m_ObjectHideFlags: 0
