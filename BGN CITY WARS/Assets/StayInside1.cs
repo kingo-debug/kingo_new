@@ -9,7 +9,6 @@ public class StayInside1 : MonoBehaviour
     private void Start()
     {
 		MinimapCam = GameObject.Find("MINI MAP CAM").transform;
-
 	}
     void Update()
 	{
