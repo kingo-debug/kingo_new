@@ -65,7 +65,8 @@ CheckEntry();
     {
         if(CarinRange != null && ControlFreak2.CF2Input.GetKeyDown(KeyCode.T)&& pv.IsMine)
         {
-            CarinRange.GetComponent<CarPlayerEntry>().EnterCar();
+            // CarinRange.GetComponent<CarPlayerEntry>().EnterCar();
+            CarinRange.GetComponent<PhotonView>().RPC("EnterCar",RpcTarget.All);
         }
     }
 

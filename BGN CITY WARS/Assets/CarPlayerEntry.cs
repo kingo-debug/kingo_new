@@ -30,6 +30,9 @@ public class CarPlayerEntry : MonoBehaviour
     [SerializeField]
     private LayerMask ExitPointCheck;
 
+    [SerializeField]
+    private GameObject[] OthersObjects;
+
     private void Start()
     {
         carcontroller = GetComponent<CarController>();
@@ -37,7 +40,7 @@ public class CarPlayerEntry : MonoBehaviour
         explodeevent = GetComponent<ExplodeEventCaller>();
         if (!PV.IsMine)
         {
-            this.enabled = false;
+          //this.enabled = false;
         }
 
 
@@ -97,6 +100,10 @@ public class CarPlayerEntry : MonoBehaviour
             GetComponent<AudioSource>().enabled = true;
             GetComponent<Animator>().enabled = true;
             PlayerInCar = true;
+            foreach (GameObject item in OthersObjects)
+            {
+                item.SetActive(true);
+            }
         }
         CarPointer.SetActive(false);
         GetComponent<SetVolume>().RefreshVolume();
@@ -147,6 +154,10 @@ public class CarPlayerEntry : MonoBehaviour
             GetComponent<AudioSource>().enabled = false;
             GetComponent<Animator>().enabled = false;
             PlayerInCar = false;
+            foreach (GameObject item in OthersObjects)
+            {
+                item.SetActive(false);
+            }
         }
     }
 
@@ -154,7 +165,9 @@ public class CarPlayerEntry : MonoBehaviour
     {
         if(ControlFreak2.CF2Input.GetKeyDown(KeyCode.E) && PlayerInCar)
         {
-            ExitCar();
+            // ExitCar();
+            PV.RPC("ExitCar", RpcTarget.All);
+          
         }
         
     }
