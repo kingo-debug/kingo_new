@@ -12,13 +12,38 @@ public class MainMapWindow : MonoBehaviour
     [Header("UI Boundary")]
     [SerializeField] private RectTransform swipeArea; // Assign the UI boundary (e.g., an invisible UI image)
 
+    [Header("Zoom Settings")]
+    [SerializeField] private Camera mainCamera; // Reference to the main camera
+    [SerializeField] private Slider zoomSlider; // Reference to the slider for zoom control
+    public float minZoom = 5f; // Minimum orthographic size
+    public float maxZoom = 20f; // Maximum orthographic size
+
     private Vector2 startTouchPosition;
     private Vector2 currentTouchPosition;
     private bool isTouching;
 
+    private Vector3 targetPosition;
+
+    private void Start()
+    {
+        // Initialize the target position with the current position
+        targetPosition = target.position;
+
+        // Initialize the slider values based on the camera's orthographic size
+        if (zoomSlider != null && mainCamera != null && mainCamera.orthographic)
+        {
+            zoomSlider.minValue = minZoom;
+            zoomSlider.maxValue = maxZoom;
+            zoomSlider.value = mainCamera.orthographicSize;
+        }
+    }
+
     private void Update()
     {
         HandleTouchInput();
+
+        // Smoothly interpolate the target's position
+        target.position = Vector3.Lerp(target.position, targetPosition, Time.deltaTime * moveSpeed);
     }
 
     private void HandleTouchInput()
@@ -49,13 +74,13 @@ public class MainMapWindow : MonoBehaviour
                             if (Mathf.Abs(swipeDelta.x) > Mathf.Abs(swipeDelta.y))
                             {
                                 // Horizontal swipe (left/right)
-                                float moveAmountX = swipeDelta.x * moveSpeed * Time.deltaTime;
+                                float moveAmountX = swipeDelta.x * moveSpeed * 0.01f; // Adjusted for smoother movement
                                 MoveHorizontal(moveAmountX);
                             }
                             else
                             {
                                 // Vertical swipe (up/down)
-                                float moveAmountZ = swipeDelta.y * moveSpeed * Time.deltaTime;
+                                float moveAmountZ = swipeDelta.y * moveSpeed * 0.01f; // Adjusted for smoother movement
                                 MoveVertical(moveAmountZ);
                             }
                         }
@@ -75,23 +100,26 @@ public class MainMapWindow : MonoBehaviour
 
     private void MoveHorizontal(float moveAmountX)
     {
-        Vector3 newPosition = target.position;
-        newPosition.x += moveAmountX;
+        targetPosition.x += moveAmountX;
 
         // Clamp the X position to the defined limits
-        newPosition.x = Mathf.Clamp(newPosition.x, xClamp.x, xClamp.y);
-
-        target.position = newPosition;
+        targetPosition.x = Mathf.Clamp(targetPosition.x, xClamp.x, xClamp.y);
     }
 
     private void MoveVertical(float moveAmountZ)
     {
-        Vector3 newPosition = target.position;
-        newPosition.z += moveAmountZ;
+        targetPosition.z += moveAmountZ;
 
         // Clamp the Z position to the defined limits
-        newPosition.z = Mathf.Clamp(newPosition.z, zClamp.x, zClamp.y);
+        targetPosition.z = Mathf.Clamp(targetPosition.z, zClamp.x, zClamp.y);
+    }
 
-        target.position = newPosition;
+    // Function to be called by the Slider to control camera zoom
+    public void OnZoomSliderChanged()
+    {
+        if (mainCamera != null && mainCamera.orthographic)
+        {
+            mainCamera.orthographicSize = Mathf.Clamp(zoomSlider.value, minZoom, maxZoom);
+        }
     }
 }

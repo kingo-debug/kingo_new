@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3274357062435472991}
   - component: {fileID: 3256997914331069978}
   - component: {fileID: 7956856870393281606}
-  - component: {fileID: 3215360117699493786}
   m_Layer: 3
   m_Name: MAIN MAP CAM
   m_TagString: Untagged
@@ -130,24 +129,6 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
---- !u!114 &3215360117699493786
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3426279243647638222}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5ce082ceca28714991b884540e323a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  offset: {x: 0, y: 250, z: 0}
-  smoothSpeed: 0.05
-  inheritXRotation: 0
-  inheritYRotation: 0
-  inheritZRotation: 0
 --- !u!1 &3986664611885935756
 GameObject:
   m_ObjectHideFlags: 0
