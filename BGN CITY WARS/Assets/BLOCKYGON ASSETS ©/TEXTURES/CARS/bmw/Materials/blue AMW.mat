@@ -122,7 +122,7 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _ShineColor: {r: 0.03773582, g: 0.03773582, b: 0.03773582, a: 1}
-    - _ShineDirrection: {r: -8, g: -2, b: -8, a: 0}
+    - _ShineDirrection: {r: -2, g: -6, b: -8, a: 0}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &4727581684029633636
