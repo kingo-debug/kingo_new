@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class Enableothers : MonoBehaviour
 {
-    [SerializeField]
-    private Transform[] Others;
+   
+    public Transform[] Others;
     [SerializeField]
     private bool OnEnabled = false;
     private void OnEnable()
