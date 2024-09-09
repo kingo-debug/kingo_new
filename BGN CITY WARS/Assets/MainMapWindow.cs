@@ -5,6 +5,7 @@ public class MainMapWindow : MonoBehaviour
 {
     [Header("Movement Settings")]
     [SerializeField] private Transform target; // Assign the object you want to move (e.g., camera target)
+    public Transform playerTarget; // Assign the PlayerTarget you want to recenter to
     public float moveSpeed = 10f; // Speed at which the target moves
     public Vector2 xClamp = new Vector2(-50f, 50f); // Clamp for X axis movement (left/right)
     public Vector2 zClamp = new Vector2(-50f, 50f); // Clamp for Z axis movement (up/down)
@@ -18,9 +19,14 @@ public class MainMapWindow : MonoBehaviour
     public float minZoom = 5f; // Minimum orthographic size
     public float maxZoom = 20f; // Maximum orthographic size
 
+    [Header("Point Marker Settings")]
+    [SerializeField] private GameObject pointMarkerPrefab; // Prefab for the Point Marker
+    private GameObject currentPointMarker; // Reference to the currently active Point Marker
+
     private Vector2 startTouchPosition;
     private Vector2 currentTouchPosition;
     private bool isTouching;
+    private bool isSwipe;
 
     private Vector3 targetPosition;
 
@@ -59,6 +65,7 @@ public class MainMapWindow : MonoBehaviour
                 {
                     case TouchPhase.Began:
                         isTouching = true;
+                        isSwipe = false;
                         startTouchPosition = touch.position;
                         break;
 
@@ -83,6 +90,7 @@ public class MainMapWindow : MonoBehaviour
                                 float moveAmountZ = swipeDelta.y * moveSpeed * 0.01f; // Adjusted for smoother movement
                                 MoveVertical(moveAmountZ);
                             }
+                            isSwipe = true; // If there is movement, it is considered a swipe
                         }
 
                         // Update start position to current for smooth movement
@@ -91,6 +99,10 @@ public class MainMapWindow : MonoBehaviour
 
                     case TouchPhase.Ended:
                     case TouchPhase.Canceled:
+                        if (!isSwipe) // Only interact with point marker if it wasn't a swipe
+                        {
+                            HandlePointMarker();
+                        }
                         isTouching = false;
                         break;
                 }
@@ -120,6 +132,50 @@ public class MainMapWindow : MonoBehaviour
         if (mainCamera != null && mainCamera.orthographic)
         {
             mainCamera.orthographicSize = Mathf.Clamp(zoomSlider.value, minZoom, maxZoom);
+        }
+    }
+
+    // Function to recenter the target's position to match PlayerTarget's X and Z positions
+    public void RecenterToPlayerTarget()
+    {
+        Vector3 playerTargetPosition = playerTarget.position;
+
+        // Update only the X and Z position of the target, ignore Y
+        targetPosition.x = playerTargetPosition.x;
+        targetPosition.z = playerTargetPosition.z;
+
+        // Apply clamping to ensure the position is within bounds
+        targetPosition.x = Mathf.Clamp(targetPosition.x, xClamp.x, xClamp.y);
+        targetPosition.z = Mathf.Clamp(targetPosition.z, zClamp.x, zClamp.y);
+    }
+
+    // Function to handle the spawning or removal of a Point Marker
+    private void HandlePointMarker()
+    {
+        if (currentPointMarker != null)
+        {
+            // Destroy the existing Point Marker if one exists
+            Destroy(currentPointMarker);
+            currentPointMarker = null; // Clear the reference
+        }
+        else
+        {
+            // If no Point Marker exists, spawn a new one
+            SpawnPointMarker();
+        }
+    }
+
+    // Function to spawn a Point Marker at the target's X and Z position, with Y set to 0
+    private void SpawnPointMarker()
+    {
+        if (pointMarkerPrefab != null)
+        {
+            Vector3 spawnPosition = new Vector3(target.position.x, 0, target.position.z);
+            currentPointMarker = Instantiate(pointMarkerPrefab, spawnPosition, Quaternion.identity);
+        }
+        else
+        {
+            Debug.LogWarning("Point Marker Prefab is not assigned!");
         }
     }
 }
