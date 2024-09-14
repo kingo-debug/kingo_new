@@ -31,7 +31,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["BLOCKYGON_LUXURY_TREE_"],"padding":[256],"unwrapper":[0]}'
+    - '#BAKERY{"meshName":["BLOCKYGON_LUXURY_TREE_"],"padding":[59],"unwrapper":[0]}'
     clipAnimations: []
     isReadable: 0
   meshes:

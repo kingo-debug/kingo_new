@@ -36,7 +36,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["BLOCKYGON_TREE_CUT_","BLOCKYGON_TREE_CUT__3","BLOCKYGON_TREE_CUT__2","BLOCKYGON_TREE_CUT__1"],"padding":[72,65,81,94],"unwrapper":[0,0,0,0]}'
+    - '#BAKERY{"meshName":["BLOCKYGON_TREE_CUT__3","BLOCKYGON_TREE_CUT__2","BLOCKYGON_TREE_CUT__1","BLOCKYGON_TREE_CUT_"],"padding":[79,110,114,87],"unwrapper":[0,0,0,0]}'
     clipAnimations: []
     isReadable: 0
   meshes:

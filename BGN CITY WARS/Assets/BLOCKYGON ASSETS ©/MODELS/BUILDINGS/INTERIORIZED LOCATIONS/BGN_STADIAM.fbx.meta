@@ -76,7 +76,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["ROOF","FLOOR","FIELD","SOCCER_MARK","GOAL_1","GOAL"],"padding":[3,7,2,63,74,74],"unwrapper":[0,0,0,0,0,0]}'
+    - '#BAKERY{"meshName":["SOCCER_MARK","ROOF","GOAL_1","GOAL","FLOOR","FIELD"],"padding":[63,3,74,74,7,2],"unwrapper":[0,0,0,0,0,0]}'
     clipAnimations: []
     isReadable: 0
   meshes:
