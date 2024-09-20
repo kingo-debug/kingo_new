@@ -7659,3 +7659,47 @@ Running seamfixer "C:\Users\gamer\AppData\Local\Temp\frender" "0" "HOSPITAL PVP_
 Running halffloat2hdr "C:\Users\gamer\AppData\Local\Temp\frender/HOSPITAL PVP_LMA2_final_HDR.lz4" "E:/Unity Git Projects/kingo_new/BGN CITY WARS/Assets/BakeryLightmaps/HOSPITAL PVP_LMA2_final.hdr" 1024
 Running halffloat2hdr "C:\Users\gamer\AppData\Local\Temp\frender/HOSPITAL PVP_LMA1_final_HDR.lz4" "E:/Unity Git Projects/kingo_new/BGN CITY WARS/Assets/BakeryLightmaps/HOSPITAL PVP_LMA1_final.hdr" 1024
 Running halffloat2hdr "C:\Users\gamer\AppData\Local\Temp\frender/HOSPITAL PVP_LM0_final_HDR.lz4" "E:/Unity Git Projects/kingo_new/BGN CITY WARS/Assets/BakeryLightmaps/HOSPITAL PVP_LM0_final.hdr" 1024
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Total cache size 268113624
+Total cache size after purge 268113624
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Total cache size 268113624
+Total cache size after purge 268113624
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Total cache size 268113624
+Total cache size after purge 268113624
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Total cache size 268113624
+Total cache size after purge 268113624
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Total cache size 268113624
+Total cache size after purge 268113624
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Total cache size 268113624
+Total cache size after purge 268113624
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Total cache size 268113624
+Total cache size after purge 268113624
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Total cache size 268113624
+Total cache size after purge 268113624
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file

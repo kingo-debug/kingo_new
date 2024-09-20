@@ -18,6 +18,10 @@ public class InitiateData : MonoBehaviour
     public string DefaultPrimary;
     public string DefaultHeavy;
 
+    [Space(10)]
+    [Header("initiate Armor")]
+    public string DefaultArmor;
+
     private void Awake()
     {
     
@@ -67,13 +71,18 @@ public class InitiateData : MonoBehaviour
 
             #endregion
 
-
             #region Player Inventory FirstTime
 
             ES3.Save<string>("MeleeEquip", DefaultMelee);
             ES3.Save<string>("BackupEquip", DefaultBackup);
             ES3.Save<string>("PrimaryEquip", DefaultPrimary);
             ES3.Save<string>("HeavyEquip", DefaultHeavy);
+            #endregion
+
+            #region Player Armor FirstTime
+
+            ES3.Save<string>("CurrentArmor", DefaultArmor);
+
             #endregion
 
             #region UserSettings First Time
