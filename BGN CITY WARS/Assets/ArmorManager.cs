@@ -21,10 +21,16 @@ public class ArmorManager : MonoBehaviour
     {
         if (PV.IsMine)
         {
+            //spawn UpperpartArmor
             CurrentBodyArmor = PhotonNetwork.Instantiate(Path.Combine("Armors", ES3.Load<string>("CurrentArmor")), new Vector3(0, 0, 0), Quaternion.identity);
-            Transform LowerPart = CurrentBodyArmor.transform.Find("UPPER PART ARMOR").transform;
-            LowerPart.transform.parent = TargetUpperBody; LowerPart.transform.localPosition = new Vector3(0, 0, 0); LowerPart.transform.localRotation = new Quaternion(0, 0, 0, 0);//MeleeWeapon.transform.localScale = new Vector3(1, 1, 1); 
+            Transform Upperpart = CurrentBodyArmor.transform.Find("UPPER PART ARMOR").transform;
+            Upperpart.transform.parent = TargetUpperBody; Upperpart.transform.localPosition = new Vector3(0, 0, 0); Upperpart.transform.localRotation = new Quaternion(0, 0, 0, 0);Upperpart.transform.localScale = new Vector3(0.01590658f,0.01780851f,0.01282499f);
 
+
+            //spawn LowerpartArmor
+            CurrentBodyArmor = PhotonNetwork.Instantiate(Path.Combine("Armors", ES3.Load<string>("CurrentArmor")), new Vector3(0, 0, 0), Quaternion.identity);
+            Transform LowerPart = CurrentBodyArmor.transform.Find("LOWER PART AMROR").transform;
+            LowerPart.transform.parent = TargetUpperBody; LowerPart.transform.localPosition = new Vector3(0, 0, 0); LowerPart.transform.localRotation = new Quaternion(0, 0, 0, 0); LowerPart.transform.localScale = new Vector3(0.01590658f, 0.01780851f, 0.01282499f);
 
 
 
