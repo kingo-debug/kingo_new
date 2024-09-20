@@ -30,7 +30,7 @@ public class ArmorManager : MonoBehaviour
             //spawn LowerpartArmor
             CurrentBodyArmor = PhotonNetwork.Instantiate(Path.Combine("Armors", ES3.Load<string>("CurrentArmor")), new Vector3(0, 0, 0), Quaternion.identity);
             Transform LowerPart = CurrentBodyArmor.transform.Find("LOWER PART AMROR").transform;
-            LowerPart.transform.parent = TargetUpperBody; LowerPart.transform.localPosition = new Vector3(0, 0, 0); LowerPart.transform.localRotation = new Quaternion(0, 0, 0, 0); LowerPart.transform.localScale = new Vector3(0.01590658f, 0.01780851f, 0.01282499f);
+            LowerPart.transform.parent = TargetLowerBody; LowerPart.transform.localPosition = new Vector3(0, 0, 0); LowerPart.transform.localRotation = new Quaternion(0, 0, 0, 0); LowerPart.transform.localScale = new Vector3(0.01590658f, 0.01780851f, 0.01282499f);
 
 
 
