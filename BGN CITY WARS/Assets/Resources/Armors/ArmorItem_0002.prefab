@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6860787906932811712}
   - component: {fileID: 8805437674885659928}
   - component: {fileID: 1436292997120209348}
+  - component: {fileID: 6032957520683051842}
   m_Layer: 0
   m_Name: UPPER PART ARMOR
   m_TagString: Untagged
@@ -2813,6 +2814,20 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!114 &6032957520683051842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 778543451241925015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 078486f10c111644a81c9b8cda9b3cab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ArmorAmount: 80
+  ArmorName: Heavy Start
 --- !u!1 &2124837560377675850
 GameObject:
   m_ObjectHideFlags: 0

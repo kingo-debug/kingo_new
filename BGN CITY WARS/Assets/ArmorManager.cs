@@ -23,6 +23,9 @@ public class ArmorManager : MonoBehaviour
         {
             //spawn Body armor
             CurrentBodyArmor = PhotonNetwork.Instantiate(Path.Combine("Armors", ES3.Load<string>("CurrentArmor")), new Vector3(0, 0, 0), Quaternion.identity);
+
+
+
             //assign upperPartArmor
             Transform Upperpart = CurrentBodyArmor.transform.Find("UPPER PART ARMOR").transform;
             Upperpart.transform.parent = TargetUpperBody; Upperpart.transform.localPosition = new Vector3(0, 0, 0); Upperpart.transform.localRotation = new Quaternion(0, 0, 0, 0);Upperpart.transform.localScale = new Vector3(0.01590658f,0.01780851f,0.01282499f);

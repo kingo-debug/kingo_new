@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 
@@ -22,6 +21,8 @@ public class TakeDamage : MonoBehaviour
     private Animator animator;
     [SerializeField]
     private UIBarRefresh Refreshbar;
+    [SerializeField]
+    private UIBarRefresh Refreshbar2;
 
     [SerializeField]
     private GameObject DieUi;
@@ -40,12 +41,22 @@ public class TakeDamage : MonoBehaviour
             {
                 Refreshbar.UpdateHP(HP);
             }
+
+            if (Refreshbar2 != null)
+            {           
+                Invoke("DelayBar2Refresh", 0.1f);
+            }
+     
         }
         pv = this.GetComponent<PhotonView>();
         if(CanDie)
         {
             animator = GetComponent<Animator>();
         }
+    }
+    public void DelayBar2Refresh()
+    {
+        Refreshbar2.UpdateHP(Shield);
     }
     private void OnEnable()
     {
@@ -80,7 +91,7 @@ public class TakeDamage : MonoBehaviour
                 }
                 else
                 {
-                    Shield -= Damage;
+                    Shield -= Damage; SHIELDcap(); if (Refreshbar2 != null) { Refreshbar2.UpdateHP(Shield); };
                 }
             }
         }
