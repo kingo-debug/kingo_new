@@ -48,7 +48,7 @@ public class CamModes : MonoBehaviour
         {
             Camera.fieldOfView = Mathf.SmoothDamp(Camera.fieldOfView, SCOPE, ref currentspeedFMC, Time.deltaTime * smoothness);
         }
-        if(!vars.Combat)  // free mode //
+        if(!vars.IsAiming)  // free mode //
             {
                 Camera.fieldOfView = Mathf.SmoothDamp(Camera.fieldOfView, FMC, ref currentspeedFMC, Time.deltaTime * smoothness); 
             }

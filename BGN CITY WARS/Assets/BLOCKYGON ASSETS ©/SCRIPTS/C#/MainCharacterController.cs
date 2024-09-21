@@ -22,7 +22,9 @@ public class MainCharacterController : MonoBehaviour
     [Space(3)]
     public bool Combatmode;
     [SerializeField]
-    private float CombatCoolDown;
+    private float CombatCoolDownSpeed;
+    [SerializeField] private float CombatStartTime = 5f;
+    [SerializeField] private float CurrentCoolingTime;
     [Space(10)]
     [Header("CombatMode")]
     [Space(3)]
@@ -128,12 +130,18 @@ public class MainCharacterController : MonoBehaviour
 
         if (actionsVar.Fired || ISAiming)
         {
-            Combatmode = true;
+            CurrentCoolingTime = CombatStartTime;
         }
 
-        if (Combatmode && !actionsVar.Fired && !ISAiming && !animator.GetBool("FIRE INPUT"))
+
+        if(CurrentCoolingTime>0)
         {
-            StartCoroutine(ResetCombatMode());
+            CurrentCoolingTime -= CombatCoolDownSpeed*Time.deltaTime;
+            Combatmode = true;
+        }
+        else
+        {
+            Combatmode = false ;
         }
 
         if (float.IsNaN(animator.GetFloat("PlayerVelocity")))
@@ -369,9 +377,8 @@ public class MainCharacterController : MonoBehaviour
                     #endregion
                 }             
     }
-    IEnumerator ResetCombatMode()
-    {
-        yield return new WaitForSeconds(CombatCoolDown);
+    void ResetCombatMode()
+    {  
 
         if (Combatmode && !actionsVar.Fired && !ISAiming && !animator.GetBool("FIRE INPUT"))
         {
