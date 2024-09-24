@@ -8035,3 +8035,19 @@ Symbol file LoadedFromMemory is not a mono symbol file
 Symbol file LoadedFromMemory is not a mono symbol file
 Symbol file LoadedFromMemory is not a mono symbol file
 Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+abort_threads: Failed aborting id: 0000000000003DC8, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 0000000000002CCC, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 0000000000002720, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 0000000000003DC8, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 0000000000002CCC, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 0000000000002720, mono_thread_manage will ignore it
+
