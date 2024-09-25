@@ -13,11 +13,11 @@ public class ArmorManager : MonoBehaviour
     void Start()
     {
         PV = GetComponent<PhotonView>();
-        photonSerializer = GetComponent<PhotonSerializerBGN>();
+     //   photonSerializer = GetComponent<PhotonSerializerBGN>();
         Invoke("SpawnArmor", 0.01f);
     }
 
-    private void SpawnArmor()
+    public void SpawnArmor()
     {
         if (PV.IsMine)
         {
