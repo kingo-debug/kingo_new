@@ -33,6 +33,7 @@ public class OwnedShopItems : MonoBehaviour
 
         LoadWeapons();
         LoadSkins();
+        LoadArmors();
     }
 
     public void SaveWeapons()
@@ -72,7 +73,8 @@ public class OwnedShopItems : MonoBehaviour
     }
     public void SaveArmors()
     {
-        ES3.Save<List<string>>("OwnedArmors", OwnedArmors);
+        ES3.Save<List<string>>("OwnedArmors", OwnedArmors
+            );
     }
 
 }

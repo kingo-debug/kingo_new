@@ -125,6 +125,8 @@ public class InitiateData : MonoBehaviour
 
             // retrieve skin   
             Debug.Log(ES3.Load<string>("CurrentSkin") + "  was Retrieved from file for default skin");
+            // retrieve Equiped armor   
+            Debug.Log(ES3.Load<string>("CurrentArmor") + "  was Retrieved from file for CurrentArmor");
 
         }
        
