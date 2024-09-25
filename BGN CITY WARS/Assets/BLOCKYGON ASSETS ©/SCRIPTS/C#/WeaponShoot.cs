@@ -77,6 +77,7 @@ public class WeaponShoot : MonoBehaviour
     // VFX SPAWN
     [Header("WeaponVFX")]
     public ParticleSystem BulletTrailVFX;
+    public Material TrailMaterial;
     public ParticleSystem BulletDropVFX;
     public GameObject BulletHoleVFX;
     [SerializeField]
@@ -169,20 +170,24 @@ public class WeaponShoot : MonoBehaviour
         PlayerParent = transform.parent.parent.parent.parent.parent.parent.parent.parent.parent.parent.parent.parent.parent;
         weaponstatus = PlayerParent.GetComponent<WeaponStatus>();
         Parentvariables = PlayerParent.GetComponent<PlayerActionsVar>();
+        // VFX
+        BulletTrailVFX = PlayerParent.Find("VFX").transform.Find("BULLETS TRAIL VFX").transform.GetComponent<ParticleSystem>();
+        // Access the Trail Renderer component from the Particle System
+        ParticleSystemRenderer trailRenderer = BulletTrailVFX.GetComponent<ParticleSystemRenderer>();
+        // Check if a renderer component is attached
+        if (trailRenderer != null)
+        {        
+            trailRenderer.trailMaterial = TrailMaterial; // Assign the new material
+        }
+    
         Parentvariables.Fired = Fired;
         Parentanimator = PlayerParent.GetComponent<Animator>();    
         if (UpdateAmmoUI == null)
-        { UpdateAmmoUI = PlayerParent.transform.Find("PLAYER Canvas").Find("WEAPON UI INFO").Find("AMMO").GetComponent<UpdateAmmoUI>(); }
-        
+        { UpdateAmmoUI = PlayerParent.transform.Find("PLAYER Canvas").Find("WEAPON UI INFO").Find("AMMO").GetComponent<UpdateAmmoUI>(); } 
         UpdateAmmoUI.UpdateAmmoUIDisplay(currentclip, totalammo);
         swimcontrol = PlayerParent.GetComponent<SwimPlayerControl>();
 
-
-
         AmmoRefresh();
-
-
-
 
     }
     private void Start()
