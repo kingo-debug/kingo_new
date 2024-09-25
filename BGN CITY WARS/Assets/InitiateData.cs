@@ -59,7 +59,8 @@ public class InitiateData : MonoBehaviour
             //Setup new Player  coins
             int DefaultBGNCoins = 10;
             ES3.Save<int>("BGNCoins", DefaultBGNCoins);
-            //Setup new Player  coins
+
+            //Setup new Player  Cash
             int DefaultBGNCash = 500;
             ES3.Save<int>("BGNCash", DefaultBGNCash);
             Debug.Log(DefaultBGNCash + "SetUp for new User Starting Cash");

@@ -1,0 +1,65 @@
+using UnityEngine.UI;
+using UnityEngine;
+
+public class StateArmorItemManager : MonoBehaviour
+{
+    [SerializeField]
+    GameObject BuyState;
+    [SerializeField]
+    GameObject EquipState;
+    [SerializeField]
+    GameObject EquippedState;
+    [SerializeField]
+    private Transform CategorySelectPFP;
+
+    EquippedState states;
+    OwnedShopItems ownedShopItems;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        RefreshStates();
+    }
+
+    private void OnEnable()
+    {
+        states = GameObject.Find("ScrollView-BodyArmor").GetComponent<EquippedState>();
+        ownedShopItems = GameObject.Find("OWNED SHOP ITEMS").GetComponent<OwnedShopItems>();
+        RefreshStates();
+    }
+    public void RefreshStates()
+    {
+        if (ownedShopItems.OwnedArmors.Contains(BuyState.GetComponent<BuyArmor>().ArmorID))  // check owns
+        {
+            BuyState.SetActive(false);  // does own, Disable buy button
+
+
+            if (BuyState.GetComponent<BuyArmor>().ArmorID == ownedShopItems.EquippedArmor)  // check equip
+            {
+                EquippedState.SetActive(true);
+                EquipState.SetActive(false);
+                #region Selection Bar UI Icon
+                CategorySelectPFP.GetComponent<Image>().sprite = transform.parent.transform.Find("Armor icon").GetComponent<Image>().sprite;
+                #endregion
+                #region refresh states last equipped
+                states.CurrentlyEquipped = transform.GetChild(2).gameObject;
+                #endregion
+
+
+            }
+            else
+            {
+                EquippedState.SetActive(false);
+                EquipState.SetActive(true);
+            }
+
+        }
+        else
+        {
+            BuyState.SetActive(true);// does not own, enable buy button,disable other states.
+            EquipState.SetActive(false);
+            EquippedState.SetActive(false);
+        }
+
+    }
+}
