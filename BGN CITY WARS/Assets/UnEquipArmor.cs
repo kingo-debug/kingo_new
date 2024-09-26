@@ -3,12 +3,15 @@ using UnityEngine;
 
 public class UnEquipArmor : MonoBehaviour
 {
-    private BuyArmor buy;
     private OwnedShopItems data;
     private EquippedState states;
 
     [SerializeField]
     private Transform EquipButton;
+    [SerializeField]
+    private Transform LowerArmorPlacement;
+    [SerializeField]
+    private Transform UpperArmorPlacement;
     //[SerializeField]
     //private Transform CategorySelectPFP;
 
@@ -16,7 +19,6 @@ public class UnEquipArmor : MonoBehaviour
 
     private void Start()
     {
-        buy = transform.parent.transform.GetChild(0).gameObject.GetComponent<BuyArmor>();
         data = GameObject.Find("OWNED SHOP ITEMS").GetComponent<OwnedShopItems>();
         states = GameObject.Find("ScrollView-BodyArmor").GetComponent<EquippedState>();
 
@@ -36,6 +38,12 @@ public class UnEquipArmor : MonoBehaviour
         #endregion
 
         EquipButton.gameObject.SetActive(true);
+
+        if(LowerArmorPlacement.childCount>0)
+        {
+            Destroy(LowerArmorPlacement.GetChild(0).transform.gameObject);
+            Destroy(UpperArmorPlacement.GetChild(0).transform.gameObject);
+        }
 
         //#region Selection Bar UI Icon
         //CategorySelectPFP.GetComponent<Image>().sprite = transform.parent.parent.Find("Armor icon").GetComponent<Image>().sprite;
