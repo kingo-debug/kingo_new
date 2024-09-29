@@ -5,8 +5,8 @@ public class ArmorManager : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject CurrentBodyArmor;
-    [SerializeField] private Transform TargetUpperBody;
-    [SerializeField] private Transform TargetLowerBody;
+    public Transform TargetUpperBody;
+  public Transform TargetLowerBody;
     private PhotonView PV;
     private PhotonSerializerBGN photonSerializer;
 

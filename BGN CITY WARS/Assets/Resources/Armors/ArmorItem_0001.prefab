@@ -4226,6 +4226,7 @@ GameObject:
   m_Component:
   - component: {fileID: 495740560745163478}
   - component: {fileID: 2013228447611222614}
+  - component: {fileID: -952266866335413985}
   m_Layer: 0
   m_Name: ArmorItem_0001
   m_TagString: Untagged
@@ -4273,3 +4274,15 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &-952266866335413985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6363787393188775986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9460aa0496843d046bba950d79fae443, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
