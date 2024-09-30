@@ -9,6 +9,7 @@ public class ArmorManager : MonoBehaviour
   public Transform TargetLowerBody;
     private PhotonView PV;
     private PhotonSerializerBGN photonSerializer;
+    
 
     void Start()
     {
@@ -49,5 +50,10 @@ public class ArmorManager : MonoBehaviour
             
 
         }
+    }
+
+    public void RemoveArmor()
+    {
+
     }
 }

@@ -7,6 +7,7 @@ public class ArmorOwnerLocate : MonoBehaviour
     private PhotonView PV;
     private Transform Upperpart;
     private Transform LowerPart;
+    private GameObject PlayerOwner;
     void Start()
     {
         PV = GetComponent<PhotonView>();
@@ -19,8 +20,8 @@ public class ArmorOwnerLocate : MonoBehaviour
     {
         if (!PV.IsMine) // locate other Player as parent for armor
         {
-            GameObject PlayerOwner;
-            PlayerOwner = GameObject.Find(PV.Owner.NickName);
+
+            PlayerOwner = GameObject.Find(PV.Owner.ToString()).transform.GetChild(0).gameObject;
 
             Upperpart.transform.parent = PlayerOwner.GetComponent<ArmorManager>().TargetUpperBody; ; Upperpart.transform.localPosition = new Vector3(0, 0, 0); Upperpart.transform.localRotation = new Quaternion(0, 0, 0, 0); Upperpart.transform.localScale = new Vector3(0.01590658f, 0.01780851f, 0.01282499f);
 

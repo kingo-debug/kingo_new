@@ -80,6 +80,7 @@ public class PlayerScores : MonoBehaviourPunCallbacks, IPunObservable
             if(transform.localScale != new Vector3(1,1,1))
             {
                 transform.localScale = new Vector3(1, 1, 1);
+                transform.position = new Vector3(transform.position.x, transform.position.y, 0);
             }
                
             

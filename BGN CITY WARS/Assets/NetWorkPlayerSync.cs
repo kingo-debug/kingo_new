@@ -82,6 +82,7 @@ public class NetWorkPlayerSync : MonoBehaviour
             PunSerializer.LookIK = lookik.GetIKSolver().IKPositionWeight;
             PunSerializer.AimIK = aimik.GetIKSolver().IKPositionWeight;
             PunSerializer.HP = takedamage.HP;
+            PunSerializer.Shield = takedamage.Shield;
 
         }
         else
@@ -93,7 +94,7 @@ public class NetWorkPlayerSync : MonoBehaviour
             skinManager.EquippedSkin = PunSerializer.SkinID;
 
             takedamage.HP = PunSerializer.HP;
-
+            takedamage.Shield = PunSerializer.Shield;
 
 
 
