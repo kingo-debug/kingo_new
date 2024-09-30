@@ -18,9 +18,9 @@ public class UIBarRefresh : MonoBehaviour
     public void UpdateHP(int HP)
     {
         Hp = HP;
-        txt.text = HP.ToString() + ("/100");
+        txt.text = HP.ToString();
         slider.value = HP;
-
+        slider.maxValue = HP;
 
     }
 }
