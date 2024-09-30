@@ -79,7 +79,7 @@ public class TakeDamage : MonoBehaviour
         {
             if (Shield <= 0f & pv.IsMine)
             {
-                HP -= Damage;                         if (Refreshbar != null) { Refreshbar.UpdateHP(HP); };               StartCoroutine("Checklife"); Refreshbar2.UpdateHP(Shield);
+                HP -= Damage;                         if (Refreshbar != null) { Refreshbar.UpdateHP(HP); };               StartCoroutine("Checklife"); if (Refreshbar2 != null) { Refreshbar2.UpdateHP(Shield); };
             }
             else
             {
@@ -87,7 +87,7 @@ public class TakeDamage : MonoBehaviour
                 {
                     int remainingDamage = Damage - Shield;
                     Shield = 0;
-                    HP -= remainingDamage;           HPcap();  if (Refreshbar != null) { Refreshbar.UpdateHP(HP); };    StartCoroutine("Checklife");  Refreshbar2.UpdateHP(Shield);
+                    HP -= remainingDamage;           HPcap();  if (Refreshbar != null) { Refreshbar.UpdateHP(HP); };    StartCoroutine("Checklife"); if (Refreshbar2 != null) { Refreshbar2.UpdateHP(Shield); };
                 }
                 else
                 {
@@ -99,7 +99,7 @@ public class TakeDamage : MonoBehaviour
         {
             if (Shield <= 0f)
             {
-                HP -= Damage;                            HPcap(); if (Refreshbar != null) { Refreshbar.UpdateHP(HP); };        StartCoroutine(Checklife()); Refreshbar2.UpdateHP(Shield);
+                HP -= Damage;                            HPcap(); if (Refreshbar != null) { Refreshbar.UpdateHP(HP); };        StartCoroutine(Checklife()); if (Refreshbar2 != null) { Refreshbar2.UpdateHP(Shield); };
             }
             else
             {
@@ -107,7 +107,7 @@ public class TakeDamage : MonoBehaviour
                 {
                     int remainingDamage = Damage - Shield;
                     Shield = 0;
-                    HP -= remainingDamage;       HPcap(); if (Refreshbar != null) { Refreshbar.UpdateHP(HP); };          StartCoroutine(Checklife());   Refreshbar2.UpdateHP(Shield);
+                    HP -= remainingDamage;       HPcap(); if (Refreshbar != null) { Refreshbar.UpdateHP(HP); };          StartCoroutine(Checklife()); if (Refreshbar2 != null) { Refreshbar2.UpdateHP(Shield); };
                 }
                 else
                 {
@@ -133,7 +133,7 @@ public class TakeDamage : MonoBehaviour
     [PunRPC]
     public void RestoreHP()
     {
-        HP = 100; if (Refreshbar != null) { Refreshbar.UpdateHP(HP); }; Refreshbar2.UpdateHP(Shield);
+        HP = 100; if (Refreshbar != null) { Refreshbar.UpdateHP(HP); }; if (Refreshbar2 != null) { Refreshbar2.UpdateHP(Shield); };
     }
 
     public IEnumerator Checklife()
@@ -191,8 +191,11 @@ public class TakeDamage : MonoBehaviour
                     #endregion
                 }
                 HP = 100;
+                if (GetComponent<ArmorManager>().CurrentBodyArmor!= null)
+                {
+                    Shield = GetComponent<ArmorManager>().TargetUpperBody.transform.GetChild(0).GetComponent<PlayerArmor>().ArmorAmount; // restore Shield to armor Equipped
+                }
 
-                Shield = GetComponent<ArmorManager>().TargetUpperBody.transform.GetChild(0).GetComponent<PlayerArmor>().ArmorAmount; // restore Shield to armor Equipped
                 Refreshbar.UpdateHP(HP);
                 Refreshbar2.UpdateHP(Shield);
                 if (DieUi != null)
