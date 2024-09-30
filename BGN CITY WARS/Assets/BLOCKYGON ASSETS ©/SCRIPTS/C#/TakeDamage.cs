@@ -117,6 +117,23 @@ public class TakeDamage : MonoBehaviour
         }
     }
 
+
+    public void TakeFallDamage(int Damage)
+    {
+        LastDamageTook = Damage;
+        hurt = true;
+        if (ActivateEvent != null)
+        {
+            ActivateEvent.gameObject.SetActive(true);
+        }
+
+
+        if (HP > 0 && pv != null)
+        {        
+                HP -= Damage; if (Refreshbar != null) { Refreshbar.UpdateHP(HP); }; StartCoroutine("Checklife"); if (Refreshbar2 != null) { Refreshbar2.UpdateHP(Shield); };       
+        }
+    }
+
     //when hp goes below 0 it sets back to 0
     private void HPcap()
     {
@@ -209,4 +226,5 @@ public class TakeDamage : MonoBehaviour
             }
         }
     }
+
 }

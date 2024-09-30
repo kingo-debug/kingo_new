@@ -81,16 +81,16 @@ public class FallDamage : MonoBehaviour
 
     void CallMinDamage()
     {
-        takedamage.Takedamage(MinDamage);
+        takedamage.TakeFallDamage(MinDamage);
       
     }
     void CallMidDamage()
     {
-        takedamage.Takedamage(MidDamage);
+        takedamage.TakeFallDamage(MidDamage);
     }
     void CallMaxDamage()
     {
-        takedamage.Takedamage(MaxDamage);
+        takedamage.TakeFallDamage(MaxDamage);
     }
 
     private void Update()
