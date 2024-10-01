@@ -44,7 +44,7 @@ public class TakeDamage : MonoBehaviour
 
             if (Refreshbar2 != null)
             {           
-                Invoke("DelayBar2Refresh", 0.1f);
+                Invoke("DelayBar2Refresh", 0.1f);           
             }
      
         }

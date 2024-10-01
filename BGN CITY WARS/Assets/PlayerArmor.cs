@@ -24,6 +24,8 @@ public class PlayerArmor : MonoBehaviour
             takedamage = transform.root.GetChild(0).GetComponent<TakeDamage>();
             takedamage.Shield = ArmorAmount;
             takedamage.DelayBar2Refresh();
+         
+
         }
         else
         {

@@ -14,13 +14,16 @@ public class UIBarRefresh : MonoBehaviour
     private void Start()
     {
         UpdateHP(Hp);
+        Invoke("SyncMaxValue", 0.15f);
     }
     public void UpdateHP(int HP)
     {
         Hp = HP;
         txt.text = HP.ToString();
         slider.value = HP;
-        slider.maxValue = HP;
-
+    }
+    void SyncMaxValue()
+    {
+        slider.maxValue = Hp;
     }
 }

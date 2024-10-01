@@ -9,12 +9,12 @@ public class ArmorManager : MonoBehaviour
   public Transform TargetLowerBody;
     private PhotonView PV;
     private PhotonSerializerBGN photonSerializer;
+    [SerializeField] private ArmorUICheck checkarmor;
     
 
     void Start()
     {
         PV = GetComponent<PhotonView>();
-     //   photonSerializer = GetComponent<PhotonSerializerBGN>();
         Invoke("SpawnArmor", 0.01f);
     }
 
@@ -35,6 +35,7 @@ public class ArmorManager : MonoBehaviour
             Transform LowerPart = CurrentBodyArmor.transform.Find("LOWER PART AMROR").transform;
             LowerPart.transform.parent = TargetLowerBody; LowerPart.transform.localPosition = new Vector3(0, 0, 0); LowerPart.transform.localRotation = new Quaternion(0, 0, 0, 0); LowerPart.transform.localScale = new Vector3(0.01590658f, 0.01780851f, 0.01282499f);
 
+                checkarmor.ShowShieldBar();
             }
               
 
@@ -45,7 +46,6 @@ public class ArmorManager : MonoBehaviour
         }
         else
         {
-       //     CurrentBodyArmor = Resources.Load<GameObject>(Path.Combine(("skins"), photonSerializer.SkinID));
         
             
 
@@ -54,6 +54,6 @@ public class ArmorManager : MonoBehaviour
 
     public void RemoveArmor()
     {
-
+        checkarmor.HideShieldBar();
     }
 }
