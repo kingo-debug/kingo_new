@@ -3,7 +3,7 @@ using UnityEngine;
 public class ArmorUICheck : MonoBehaviour
 {
     // Start is called before the first frame update
-    private CanvasGroup group;
+ [SerializeField] private CanvasGroup group;
 
  public void ShowShieldBar()
     {
