@@ -12,8 +12,11 @@ public class PlayerArmor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PV = transform.parent.GetComponent<PhotonView>();
-        Invoke("SetArmor", 0.05f);
+        if(transform.root.gameObject.name!= "MENU ELEMENTS") // ignore for main menu
+        {
+            PV = transform.parent.GetComponent<PhotonView>();
+            Invoke("SetArmor", 0.05f);
+        }
 
     }
 
