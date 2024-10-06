@@ -5,8 +5,9 @@ public class ArmorManager : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject CurrentBodyArmor;
-    public Transform TargetUpperBody;
-  public Transform TargetLowerBody;
+    public Transform TargetMainBody;
+    public Transform TargetShoulderR;
+  public Transform TargetShoulderL;
     private PhotonView PV;
     private PhotonSerializerBGN photonSerializer;
     [SerializeField] private ArmorUICheck checkarmor;
@@ -26,14 +27,21 @@ public class ArmorManager : MonoBehaviour
             {
                 //spawn Body armor
                 CurrentBodyArmor = PhotonNetwork.Instantiate(Path.Combine("Armors", ES3.Load<string>("CurrentArmor")), new Vector3(0, 0, 0), Quaternion.identity);
-                
-            //assign upperPartArmor
-            Transform Upperpart = CurrentBodyArmor.transform.Find("UPPER PART ARMOR").transform;
-            Upperpart.transform.parent = TargetUpperBody; Upperpart.transform.localPosition = new Vector3(0, 0, 0); Upperpart.transform.localRotation = new Quaternion(0, 0, 0, 0);Upperpart.transform.localScale = new Vector3(0.01590658f,0.01780851f,0.01282499f);
 
-            //assign LowerPartArmor
-            Transform LowerPart = CurrentBodyArmor.transform.Find("LOWER PART AMROR").transform;
-            LowerPart.transform.parent = TargetLowerBody; LowerPart.transform.localPosition = new Vector3(0, 0, 0); LowerPart.transform.localRotation = new Quaternion(0, 0, 0, 0); LowerPart.transform.localScale = new Vector3(0.01590658f, 0.01780851f, 0.01282499f);
+                //assign BODY PART ARMOR
+                Transform BodyPart = CurrentBodyArmor.transform.Find("BODY PART ARMOR").transform;
+                BodyPart.transform.parent = TargetMainBody; BodyPart.transform.localPosition = new Vector3(0, 0, 0); BodyPart.transform.localRotation = new Quaternion(0, 0, 0, 0); BodyPart.transform.localScale = new Vector3(0.01590658f,0.01780851f,0.01282499f);
+
+                // Check if the "SHOULDER RIGHT" part exists before assigning LowerPartArmor
+                Transform rightPart = CurrentBodyArmor?.transform.Find("SHOULDER RIGHT");
+
+                if (rightPart != null)
+                {
+                    rightPart.transform.parent = TargetShoulderR;
+                    rightPart.transform.localPosition = Vector3.zero; // Instead of new Vector3(0, 0, 0)
+                    rightPart.transform.localRotation = Quaternion.identity; // Instead of new Quaternion(0, 0, 0, 0)
+                    rightPart.transform.localScale = new Vector3(0.01590658f, 0.01780851f, 0.01282499f);
+                }
 
                 checkarmor.ShowShieldBar();
             }

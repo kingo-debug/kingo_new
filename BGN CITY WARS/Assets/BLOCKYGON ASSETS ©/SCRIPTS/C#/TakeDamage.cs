@@ -210,7 +210,7 @@ public class TakeDamage : MonoBehaviour
                 HP = 100;
                 if (GetComponent<ArmorManager>().CurrentBodyArmor!= null)
                 {
-                    Shield = GetComponent<ArmorManager>().TargetUpperBody.transform.GetChild(0).GetComponent<PlayerArmor>().ArmorAmount; // restore Shield to armor Equipped
+                    Shield = GetComponent<ArmorManager>().TargetMainBody.transform.GetChild(0).GetComponent<PlayerArmor>().ArmorAmount; // restore Shield to armor Equipped
                 }
 
                 Refreshbar.UpdateHP(HP);
