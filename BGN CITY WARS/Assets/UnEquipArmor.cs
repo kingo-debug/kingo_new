@@ -12,8 +12,8 @@ public class UnEquipArmor : MonoBehaviour
     private Transform LowerArmorPlacement;
     [SerializeField]
     private Transform UpperArmorPlacement;
-    //[SerializeField]
-    //private Transform CategorySelectPFP;
+    [SerializeField]
+    private Transform CategorySelectPFP;
 
 
 
@@ -45,9 +45,9 @@ public class UnEquipArmor : MonoBehaviour
             Destroy(UpperArmorPlacement.GetChild(0).transform.gameObject);
         }
 
-        //#region Selection Bar UI Icon
-        //CategorySelectPFP.GetComponent<Image>().sprite = transform.parent.parent.Find("Armor icon").GetComponent<Image>().sprite;
-        //#endregion
+        #region Selection Bar UI Icon
+        CategorySelectPFP.GetComponent<Image>().sprite = transform.parent.parent.Find("Armor icon").GetComponent<Image>().sprite;
+        #endregion
     }
 
 }
