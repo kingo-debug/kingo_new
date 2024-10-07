@@ -16,13 +16,16 @@ public class UnEquipArmor : MonoBehaviour
     private Transform CategorySelectPFP;
 
 
-
+    private void OnEnable()
+    {
+        #region Selection Bar UI Icon
+        CategorySelectPFP.GetComponent<Image>().sprite = transform.parent.parent.Find("Armor icon").GetComponent<Image>().sprite;
+        #endregion
+    }
     private void Start()
     {
         data = GameObject.Find("OWNED SHOP ITEMS").GetComponent<OwnedShopItems>();
-        states = GameObject.Find("ScrollView-BodyArmor").GetComponent<EquippedState>();
-
-      
+        states = GameObject.Find("ScrollView-BodyArmor").GetComponent<EquippedState>();   
     }
     public void UnEquip()
     {
@@ -45,9 +48,7 @@ public class UnEquipArmor : MonoBehaviour
             Destroy(UpperArmorPlacement.GetChild(0).transform.gameObject);
         }
 
-        #region Selection Bar UI Icon
-        CategorySelectPFP.GetComponent<Image>().sprite = transform.parent.parent.Find("Armor icon").GetComponent<Image>().sprite;
-        #endregion
+      
     }
 
 }
