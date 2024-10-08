@@ -18,7 +18,7 @@ public class ArmorOwnerLocate : MonoBehaviour
             if (transform.childCount > 1)
             {
                 RightShoulderCover = transform.GetChild(1);
-                LeftShoulderCover = transform.GetChild(1);
+                LeftShoulderCover = transform.GetChild(2);
             }
       
         }
