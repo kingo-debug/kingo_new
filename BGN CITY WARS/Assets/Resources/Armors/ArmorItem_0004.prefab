@@ -81,7 +81,7 @@ GameObject:
   - component: {fileID: 4838684462186729378}
   - component: {fileID: 235839679511996338}
   - component: {fileID: 4769573523642685391}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: BODY PART ARMOR
   m_TagString: Untagged
   m_Icon: {fileID: 0}

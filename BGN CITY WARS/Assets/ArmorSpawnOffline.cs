@@ -26,6 +26,10 @@ public class ArmorSpawnOffline : MonoBehaviour
 
                 if (armorPrefab != null)
                 {
+                    if(TargetUpperBody.childCount>0)
+                    {
+                        Destroy(TargetUpperBody.GetChild(0));
+                    }
                     // Instantiate the prefab at the given position and rotation
                     CurrentBodyArmor = GameObject.Instantiate(armorPrefab, new Vector3(0, 0, 0), Quaternion.identity);
                 }

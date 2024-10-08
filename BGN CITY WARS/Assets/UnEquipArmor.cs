@@ -9,9 +9,8 @@ public class UnEquipArmor : MonoBehaviour
     [SerializeField]
     private Transform EquipButton;
     [SerializeField]
-    private Transform LowerArmorPlacement;
-    [SerializeField]
-    private Transform UpperArmorPlacement;
+    private Transform MainArmorPlacement;
+
     [SerializeField]
     private Transform CategorySelectPFP;
 
@@ -25,7 +24,10 @@ public class UnEquipArmor : MonoBehaviour
     private void Start()
     {
         data = GameObject.Find("OWNED SHOP ITEMS").GetComponent<OwnedShopItems>();
-        states = GameObject.Find("ScrollView-BodyArmor").GetComponent<EquippedState>();   
+        states = GameObject.Find("ScrollView-BodyArmor").GetComponent<EquippedState>();
+        #region Selection Bar UI Icon
+        CategorySelectPFP.GetComponent<Image>().sprite = transform.parent.parent.Find("Armor icon").GetComponent<Image>().sprite;
+        #endregion
     }
     public void UnEquip()
     {
@@ -42,10 +44,10 @@ public class UnEquipArmor : MonoBehaviour
 
         EquipButton.gameObject.SetActive(true);
 
-        if(LowerArmorPlacement.childCount>0)
+        if(MainArmorPlacement.childCount>0)
         {
-            Destroy(LowerArmorPlacement.GetChild(0).transform.gameObject);
-            Destroy(UpperArmorPlacement.GetChild(0).transform.gameObject);
+            Destroy(MainArmorPlacement.GetChild(0).transform.gameObject);
+        //    Destroy(UpperArmorPlacement.GetChild(0).transform.gameObject);
         }
 
       

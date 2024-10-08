@@ -10,6 +10,12 @@ public class EquipArmor : MonoBehaviour
     [SerializeField]
     private Transform CategorySelectPFP;
 
+    [SerializeField]
+    private Sprite CategoryUNSelectPFP;
+
+    [SerializeField]
+    private Transform MainArmorPlacement;
+
 
 
     private void Start()
@@ -23,6 +29,12 @@ public class EquipArmor : MonoBehaviour
         {
             Equip();
         }
+        else
+        {
+            #region Selection Bar UI Icon
+            CategorySelectPFP.GetComponent<Image>().sprite = CategoryUNSelectPFP;
+            #endregion
+        }
     }
     public void Equip()
     {
@@ -30,6 +42,11 @@ public class EquipArmor : MonoBehaviour
 
         Debug.Log(data.EquippedArmor = buy.ArmorID);
         ES3.Save<string>("CurrentArmor", buy.ArmorID);
+
+        if (MainArmorPlacement.childCount > 0)
+        {
+            Destroy(MainArmorPlacement.GetChild(0).transform.gameObject);
+        }
 
         #region refresh states last equipped
         states.CurrentlyEquipped.gameObject.SetActive(false); // Disable last equipped button
