@@ -121,7 +121,7 @@ public class LootAmmo : MonoBehaviour, IPunObservable
     }
     void FindPlayer()
     {
-        if (GameObject.FindWithTag("Player").GetComponent<PhotonView>().IsMine)
+       // if (GameObject.FindWithTag("Player").GetComponent<PhotonView>().IsMine)
         {
             //    PV = GameObject.FindWithTag("Player").GetComponent<PhotonView>();
         }
