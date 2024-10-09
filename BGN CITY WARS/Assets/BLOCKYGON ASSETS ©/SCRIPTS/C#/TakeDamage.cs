@@ -163,6 +163,7 @@ public class TakeDamage : MonoBehaviour
 
                 animator.SetLayerWeight(3, 1f);
                 animator.SetBool("DEAD", true);
+                ES3.Save<int>("TotalDeaths", ES3.Load<int>("TotalDeaths")+1);
                 if (DieUi != null)
                 {
                     DieUi.SetActive(true);

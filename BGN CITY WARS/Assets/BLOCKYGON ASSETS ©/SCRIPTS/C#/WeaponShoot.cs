@@ -534,8 +534,8 @@ public class WeaponShoot : MonoBehaviour
         Killcountupdate.UpdateKillCount(Parentvariables.TotalRoomkillsTrack);
         ScoreItem.UpdateScoreData();
         TotalDamageDealt = 0;
-
-
+        ES3.Save<int>("TotalBodyShotKills", ES3.Load<int>("TotalBodyShotKills") +1) ;
+        ES3.Save<int>("TotalScore", ES3.Load<int>("TotalScore") + 2);
         TargetHP = 100;
 
         GameObject Killpopupitem = PhotonNetwork.Instantiate("KILLS POPUP ITEM", transform.position, Quaternion.identity); // spawn kill UI notification
@@ -551,8 +551,8 @@ public class WeaponShoot : MonoBehaviour
         Killcountupdate.UpdateKillCount(Parentvariables.TotalRoomkillsTrack);
         ScoreItem.UpdateScoreData();
         TotalDamageDealt = 0;
-
-
+        ES3.Save<int>("TotalHeadShotKills", ES3.Load<int>("TotalHeadShotKills") + 1);
+        ES3.Save<int>("TotalScore", ES3.Load<int>("TotalScore") + 3);
         TargetHP = 100;
 
         GameObject Killpopupitem = PhotonNetwork.Instantiate("KILLS POPUP ITEM", transform.position, Quaternion.identity); // spawn kill UI notification

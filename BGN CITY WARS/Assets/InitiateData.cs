@@ -40,10 +40,13 @@ public class InitiateData : MonoBehaviour
             ES3.Save("PlayerName", DefaultName);    //its like  public- int -FirstTime = 0 but dont need to give type  
             Debug.Log(DefaultName+" assigned as Player Name for this New User.");
             PhotonNetwork.NickName = DefaultName; // assign it to PhotonNetwork
-
-
-
-
+                                                  // pLAYER Stats to default
+            ES3.Save<int>("TotalScore", 0);
+            ES3.Save<int>("TotalSandBoxWins", 0);
+            ES3.Save<int>("TotalPVPWins", 0);
+            ES3.Save<int>("TotalBodyShotKills",0); 
+            ES3.Save<int>("TotalHeadShotKills", 0);
+            ES3.Save<int>("TotalDeaths", 0);
 
             // Setup new Player XP and level
             int DefaultXP = 1;
