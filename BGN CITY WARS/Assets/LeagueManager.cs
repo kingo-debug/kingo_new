@@ -38,7 +38,7 @@ public class LeagueManager : MonoBehaviour
         // Total Score is loaded and initially set
         TotalScores = ES3.Load<int>("TotalScore", 0);
         TotalScore.text = TotalScores.ToString();
-
+        
         // Set Progress Value
         ProgressValue.value = TotalScores;
 

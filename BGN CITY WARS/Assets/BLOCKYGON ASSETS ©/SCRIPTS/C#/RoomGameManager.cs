@@ -32,21 +32,26 @@ public class RoomGameManager : MonoBehaviour, IPunObservable
 
     void Update()
     {
-        currentTime -= Time.deltaTime;
 
         float seconds = Mathf.RoundToInt(currentTime % 60);
 
-        if (seconds != previousSeconds)
-        {
-            float minutes = Mathf.Floor(currentTime / 60);
-            timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
-            previousSeconds = seconds;
-        }
+ 
+            currentTime -= Time.deltaTime;         
+   
 
-        if (currentTime <= 0)
-        {
-            EvaluateWinner();
-        }
+        if (seconds != previousSeconds)
+            {
+                float minutes = Mathf.Floor(currentTime / 60);
+                timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+                previousSeconds = seconds;
+            }
+
+            if (currentTime <= 0)
+            {
+                EvaluateWinner();
+            }
+        
+     
     }
 
     void EvaluateWinner()
