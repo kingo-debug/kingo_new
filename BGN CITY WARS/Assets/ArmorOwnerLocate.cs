@@ -35,7 +35,7 @@ public class ArmorOwnerLocate : MonoBehaviour
 
                 if (LeftShoulderCover != null) // check if has L shoulder
                 {
-                    LeftShoulderCover.transform.parent = PlayerOwner.GetComponent<ArmorManager>().TargetShoulderR; ; LeftShoulderCover.transform.localPosition = new Vector3(0, 0, 0); LeftShoulderCover.transform.localRotation = new Quaternion(0, 0, 0, 0); LeftShoulderCover.transform.localScale = new Vector3(0.01590658f, 0.01780851f, 0.01282499f);
+                    LeftShoulderCover.transform.parent = PlayerOwner.GetComponent<ArmorManager>().TargetShoulderL ; LeftShoulderCover.transform.localPosition = new Vector3(0, 0, 0); LeftShoulderCover.transform.localRotation = new Quaternion(0, 0, 0, 0); LeftShoulderCover.transform.localScale = new Vector3(0.01590658f, 0.01780851f, 0.01282499f);
                 }
             }
             #endregion
