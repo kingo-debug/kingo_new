@@ -69,6 +69,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9460aa0496843d046bba950d79fae443, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BodyVestPart: {fileID: 6659918893589682618}
+  RightShoulderCover: {fileID: 0}
+  LeftShoulderCover: {fileID: 0}
 --- !u!1 &8244958614449349580
 GameObject:
   m_ObjectHideFlags: 0
@@ -81,6 +84,7 @@ GameObject:
   - component: {fileID: 4838684462186729378}
   - component: {fileID: 235839679511996338}
   - component: {fileID: 4769573523642685391}
+  - component: {fileID: 4799060567690581364}
   m_Layer: 18
   m_Name: BODY PART ARMOR
   m_TagString: Untagged
@@ -167,3 +171,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ArmorAmount: 120
   ArmorName: Hard Vest 1
+--- !u!114 &4799060567690581364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8244958614449349580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d61a5354eea37941a5791e0dd155a2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Others:
+  - {fileID: 6363787393188775986}

@@ -5,8 +5,9 @@ public class ArmorSpawnOffline : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject CurrentBodyArmor;
-    [SerializeField] private Transform TargetUpperBody;
-    [SerializeField] private Transform TargetLowerBody;
+    [SerializeField] private Transform MainBodyVest;
+    [SerializeField] private Transform Shoulder_R;
+    [SerializeField] private Transform Shoulder_L;
     private PhotonSerializerBGN photonSerializer;
 
     void Start()
@@ -26,9 +27,9 @@ public class ArmorSpawnOffline : MonoBehaviour
 
                 if (armorPrefab != null)
                 {
-                    if(TargetUpperBody.childCount>0)
+                    if(MainBodyVest.childCount>0)
                     {
-                        Destroy(TargetUpperBody.GetChild(0));
+                        Destroy(MainBodyVest.GetChild(0));
                     }
                     // Instantiate the prefab at the given position and rotation
                     CurrentBodyArmor = GameObject.Instantiate(armorPrefab, new Vector3(0, 0, 0), Quaternion.identity);
@@ -39,15 +40,24 @@ public class ArmorSpawnOffline : MonoBehaviour
                 }
 
 
-                //assign upperPartArmor
-                Transform Upperpart = CurrentBodyArmor.transform.Find("UPPER PART ARMOR").transform;
-                Upperpart.transform.parent = TargetUpperBody; Upperpart.transform.localPosition = new Vector3(0, 0, 0); Upperpart.transform.localRotation = new Quaternion(0, 0, 0, 0); Upperpart.transform.localScale = new Vector3(0.01590658f, 0.01780851f, 0.01282499f);
-                Upperpart.gameObject.layer = 18;
+                //assign MainBodyPart
+                Transform MainBody = CurrentBodyArmor.transform.Find("BODY PART ARMOR").transform;
+                MainBody.transform.parent = MainBodyVest; MainBody.transform.localPosition = new Vector3(0, 0, 0); MainBody.transform.localRotation = new Quaternion(0, 0, 0, 0); MainBody.transform.localScale = new Vector3(0.01590658f, 0.01780851f, 0.01282499f);
+                MainBody.gameObject.layer = 18;
 
-                //assign LowerPartArmor
-                Transform LowerPart = CurrentBodyArmor.transform.Find("LOWER PART AMROR").transform;
-                LowerPart.transform.parent = TargetLowerBody; LowerPart.transform.localPosition = new Vector3(0, 0, 0); LowerPart.transform.localRotation = new Quaternion(0, 0, 0, 0); LowerPart.transform.localScale = new Vector3(0.01590658f, 0.01780851f, 0.01282499f);
-                LowerPart.gameObject.layer = 18;
+                if(CurrentBodyArmor.transform.childCount>1)
+                {
+                    //assign SHOULDER R
+                    Transform ShoulderR = CurrentBodyArmor.transform.Find("SHOULDER_R").transform;
+                    ShoulderR.transform.parent = Shoulder_R; ShoulderR.transform.localPosition = new Vector3(0, 0, 0); ShoulderR.transform.localRotation = new Quaternion(0, 0, 0, 0); ShoulderR.transform.localScale = new Vector3(0.01590658f, 0.01780851f, 0.01282499f);
+                    ShoulderR.gameObject.layer = 18;
+
+                    //assign SHOULDER L
+                    Transform ShoulderL = CurrentBodyArmor.transform.Find("SHOULDER_L").transform;
+                    ShoulderL.transform.parent = Shoulder_R; ShoulderL.transform.localPosition = new Vector3(0, 0, 0); ShoulderL.transform.localRotation = new Quaternion(0, 0, 0, 0); ShoulderL.transform.localScale = new Vector3(0.01590658f, 0.01780851f, 0.01282499f);
+                    ShoulderL.gameObject.layer = 18;
+                }
+
             }
 
 

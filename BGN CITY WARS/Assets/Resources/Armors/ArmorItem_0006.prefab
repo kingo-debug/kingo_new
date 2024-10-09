@@ -154,6 +154,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9460aa0496843d046bba950d79fae443, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BodyVestPart: {fileID: 3658279714333685970}
+  RightShoulderCover: {fileID: 7302305349952252161}
+  LeftShoulderCover: {fileID: 7565563345842298701}
 --- !u!1 &7763469163969571525
 GameObject:
   m_ObjectHideFlags: 0
@@ -248,6 +251,8 @@ GameObject:
   - component: {fileID: 3658279714333685970}
   - component: {fileID: 327572737545753926}
   - component: {fileID: 6328182860641667601}
+  - component: {fileID: 5575626057759451431}
+  - component: {fileID: 7683803214682645276}
   m_Layer: 18
   m_Name: BODY PART ARMOR
   m_TagString: Untagged
@@ -320,3 +325,33 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &5575626057759451431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9000452135605190975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 078486f10c111644a81c9b8cda9b3cab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ArmorAmount: 200
+  ArmorName: Pumpkin Fire
+--- !u!114 &7683803214682645276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9000452135605190975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d61a5354eea37941a5791e0dd155a2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Others:
+  - {fileID: 7763469163969571525}
+  - {fileID: 3147801250084543070}
+  - {fileID: 6363787393188775986}

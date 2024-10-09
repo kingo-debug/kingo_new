@@ -40,7 +40,7 @@ scopes = {
 	"last_search.ED0D7199" = ""
 	"OpenInspectorPreview.ED0D7199" = "0"
 	"currentGroup.ED0D7199" = "all"
-	"last_search.B007E015" = "h: t:PlayerScores"
+	"last_search.B007E015" = "aRMORsPAWN"
 	"OpenInspectorPreview.B007E015" = "0"
 	"currentGroup.B007E015" = "all"
 	"last_search.1D7A1EDD" = "h: t:AudioSource"
@@ -127,11 +127,11 @@ providers = {
 objectSelectors = {
 }
 recentSearches = [
+	""
 	"h: t:PlayerScores"
 	"h:"
 	"h: t:AudioSource"
 	"res"
-	""
 	"h: ref=<$object:none$>"
 	"t:AudioSource au"
 	"t:AudioSource audio so"

@@ -5,23 +5,13 @@ public class ArmorOwnerLocate : MonoBehaviour
 {
     // Start is called before the first frame update
     private PhotonView PV;
-    private Transform BodyVestPart;
-    private Transform RightShoulderCover;
-    private Transform LeftShoulderCover;
+    [SerializeField] private Transform BodyVestPart;
+    [SerializeField]private Transform RightShoulderCover;
+    [SerializeField] private Transform LeftShoulderCover;
     private GameObject PlayerOwner;
     void Start()
     {
         PV = GetComponent<PhotonView>();
-        if(transform.childCount>0)
-        {
-            BodyVestPart = transform.GetChild(0);
-            if (transform.childCount > 1)
-            {
-                RightShoulderCover = transform.GetChild(1);
-                LeftShoulderCover = transform.GetChild(2);
-            }
-      
-        }
 
         AssignParent();
     }
@@ -71,13 +61,6 @@ public class ArmorOwnerLocate : MonoBehaviour
 
     }
 
-
-    private void OnDestroy()
-    {
-        Destroy(BodyVestPart.gameObject);
-        Destroy(RightShoulderCover.gameObject);
-        Destroy(LeftShoulderCover.gameObject);
-    }
 
 
 }

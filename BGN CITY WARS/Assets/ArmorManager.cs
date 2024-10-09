@@ -33,14 +33,20 @@ public class ArmorManager : MonoBehaviour
                 BodyPart.transform.parent = TargetMainBody; BodyPart.transform.localPosition = new Vector3(0, 0, 0); BodyPart.transform.localRotation = new Quaternion(0, 0, 0, 0); BodyPart.transform.localScale = new Vector3(0.01590658f,0.01780851f,0.01282499f);
 
                 // Check if the "SHOULDER RIGHT" part exists before assigning LowerPartArmor
-                Transform rightPart = CurrentBodyArmor?.transform.Find("SHOULDER RIGHT");
+                Transform rightPart = CurrentBodyArmor?.transform.Find("SHOULDER_R");
+                Transform LeftPart = CurrentBodyArmor?.transform.Find("SHOULDER_L");
 
-                if (rightPart != null)
+                if (rightPart != null && LeftPart != null)
                 {
                     rightPart.transform.parent = TargetShoulderR;
                     rightPart.transform.localPosition = Vector3.zero; // Instead of new Vector3(0, 0, 0)
                     rightPart.transform.localRotation = Quaternion.identity; // Instead of new Quaternion(0, 0, 0, 0)
                     rightPart.transform.localScale = new Vector3(0.01590658f, 0.01780851f, 0.01282499f);
+
+                    LeftPart.transform.parent = TargetShoulderL;
+                    LeftPart.transform.localPosition = Vector3.zero; // Instead of new Vector3(0, 0, 0)
+                    LeftPart.transform.localRotation = Quaternion.identity; // Instead of new Quaternion(0, 0, 0, 0)
+                    LeftPart.transform.localScale = new Vector3(0.01590658f, 0.01780851f, 0.01282499f);
                 }
 
                 checkarmor.ShowShieldBar();
