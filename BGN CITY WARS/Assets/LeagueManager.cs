@@ -6,7 +6,7 @@ public class LeagueManager : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI CurentLeagueName;
     [SerializeField] private Image CurrentLeagueIcon;
-    [SerializeField] private Image NexLeagueIcon;
+    [SerializeField] private Image NexLeagueIcon;  // Next league icon
     [SerializeField] private Slider ProgressValue;
     [SerializeField] private TextMeshProUGUI TotalScore;
     private int TotalScores;
@@ -38,10 +38,11 @@ public class LeagueManager : MonoBehaviour
         // Total Score is loaded and initially set
         TotalScores = ES3.Load<int>("TotalScore", 0);
         TotalScore.text = TotalScores.ToString();
-        
+
         // Set Progress Value
         ProgressValue.value = TotalScores;
         ES3.Save<Sprite>("LeagueLogo", CurrentLeagueIcon.sprite);
+
         // Initialize league settings
         UpdateLeague(TotalScores);
     }
@@ -63,11 +64,12 @@ public class LeagueManager : MonoBehaviour
         int minScore = 0;
         int maxScore = 0;
 
-        // Check score ranges and update league name, icon, slider max value, and reset progress bar to 0
+        // Apex League: 20 point difference
         if (score >= 0 && score <= 20)
         {
             CurentLeagueName.text = "Apex 1";
             CurrentLeagueIcon.sprite = Apex1;
+            NexLeagueIcon.sprite = Apex2;
             minScore = 0;
             maxScore = 20;
         }
@@ -75,6 +77,7 @@ public class LeagueManager : MonoBehaviour
         {
             CurentLeagueName.text = "Apex 2";
             CurrentLeagueIcon.sprite = Apex2;
+            NexLeagueIcon.sprite = Apex3;
             minScore = 20;
             maxScore = 40;
         }
@@ -82,6 +85,7 @@ public class LeagueManager : MonoBehaviour
         {
             CurentLeagueName.text = "Apex 3";
             CurrentLeagueIcon.sprite = Apex3;
+            NexLeagueIcon.sprite = ApexMaster;
             minScore = 40;
             maxScore = 60;
         }
@@ -89,92 +93,111 @@ public class LeagueManager : MonoBehaviour
         {
             CurentLeagueName.text = "Apex Master";
             CurrentLeagueIcon.sprite = ApexMaster;
+            NexLeagueIcon.sprite = Warrior1;
             minScore = 60;
             maxScore = 80;
         }
-        else if (score > 80 && score <= 100)
+
+        // Warrior League: 40 point difference
+        else if (score > 80 && score <= 120)
         {
             CurentLeagueName.text = "Warrior 1";
             CurrentLeagueIcon.sprite = Warrior1;
+            NexLeagueIcon.sprite = Warrior2;
             minScore = 80;
-            maxScore = 100;
+            maxScore = 120;
         }
-        else if (score > 100 && score <= 120)
+        else if (score > 120 && score <= 160)
         {
             CurentLeagueName.text = "Warrior 2";
             CurrentLeagueIcon.sprite = Warrior2;
-            minScore = 100;
-            maxScore = 120;
+            NexLeagueIcon.sprite = Warrior3;
+            minScore = 120;
+            maxScore = 160;
         }
-        else if (score > 120 && score <= 140)
+        else if (score > 160 && score <= 200)
         {
             CurentLeagueName.text = "Warrior 3";
             CurrentLeagueIcon.sprite = Warrior3;
-            minScore = 120;
-            maxScore = 140;
+            NexLeagueIcon.sprite = WarriorMaster;
+            minScore = 160;
+            maxScore = 200;
         }
-        else if (score > 140 && score <= 160)
+        else if (score > 200 && score <= 240)
         {
             CurentLeagueName.text = "Warrior Master";
             CurrentLeagueIcon.sprite = WarriorMaster;
-            minScore = 140;
-            maxScore = 160;
+            NexLeagueIcon.sprite = Reckless1;
+            minScore = 200;
+            maxScore = 240;
         }
-        else if (score > 160 && score <= 180)
+
+        // Reckless League: 80 point difference
+        else if (score > 240 && score <= 320)
         {
             CurentLeagueName.text = "Reckless 1";
             CurrentLeagueIcon.sprite = Reckless1;
-            minScore = 160;
-            maxScore = 180;
+            NexLeagueIcon.sprite = Reckless2;
+            minScore = 240;
+            maxScore = 320;
         }
-        else if (score > 180 && score <= 200)
+        else if (score > 320 && score <= 400)
         {
             CurentLeagueName.text = "Reckless 2";
             CurrentLeagueIcon.sprite = Reckless2;
-            minScore = 180;
-            maxScore = 200;
+            NexLeagueIcon.sprite = Reckless3;
+            minScore = 320;
+            maxScore = 400;
         }
-        else if (score > 200 && score <= 220)
+        else if (score > 400 && score <= 480)
         {
             CurentLeagueName.text = "Reckless 3";
             CurrentLeagueIcon.sprite = Reckless3;
-            minScore = 200;
-            maxScore = 220;
+            NexLeagueIcon.sprite = RecklessMaster;
+            minScore = 400;
+            maxScore = 480;
         }
-        else if (score > 220 && score <= 240)
+        else if (score > 480 && score <= 560)
         {
             CurentLeagueName.text = "Reckless Master";
             CurrentLeagueIcon.sprite = RecklessMaster;
-            minScore = 220;
-            maxScore = 240;
+            NexLeagueIcon.sprite = Royal1;
+            minScore = 480;
+            maxScore = 560;
         }
-        else if (score > 240 && score <= 260)
+
+        // Royal League: 160 point difference
+        else if (score > 560 && score <= 720)
         {
             CurentLeagueName.text = "Royal 1";
             CurrentLeagueIcon.sprite = Royal1;
-            minScore = 240;
-            maxScore = 260;
+            NexLeagueIcon.sprite = Royal2;
+            minScore = 560;
+            maxScore = 720;
         }
-        else if (score > 260 && score <= 280)
+        else if (score > 720 && score <= 880)
         {
             CurentLeagueName.text = "Royal 2";
             CurrentLeagueIcon.sprite = Royal2;
-            minScore = 260;
-            maxScore = 280;
+            NexLeagueIcon.sprite = Royal3;
+            minScore = 720;
+            maxScore = 880;
         }
-        else if (score > 280 && score <= 300)
+        else if (score > 880 && score <= 1040)
         {
             CurentLeagueName.text = "Royal 3";
             CurrentLeagueIcon.sprite = Royal3;
-            minScore = 280;
-            maxScore = 300;
+            NexLeagueIcon.sprite = RoyalMaster;
+            minScore = 880;
+            maxScore = 1040;
         }
-        else if (score > 300)
+        else if (score > 1040)
         {
             CurentLeagueName.text = "Royal Master";
             CurrentLeagueIcon.sprite = RoyalMaster;
-            minScore = 300;
-            maxScore = 320;
+            NexLeagueIcon.sprite = null;  // No next league after Royal Master
+            minScore = 1040;
+            maxScore = 1200;
         }
 
         // Set max value of the slider to the league's range and reset the progress bar
