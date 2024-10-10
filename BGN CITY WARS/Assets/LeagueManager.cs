@@ -41,7 +41,7 @@ public class LeagueManager : MonoBehaviour
         
         // Set Progress Value
         ProgressValue.value = TotalScores;
-
+        ES3.Save<Sprite>("LeagueLogo", CurrentLeagueIcon.sprite);
         // Initialize league settings
         UpdateLeague(TotalScores);
     }
@@ -54,6 +54,7 @@ public class LeagueManager : MonoBehaviour
 
         // Update the league based on the loaded score
         UpdateLeague(TotalScores);
+        ES3.Save<Sprite>("LeagueLogo", CurrentLeagueIcon.sprite);
     }
 
     void UpdateLeague(int score)
