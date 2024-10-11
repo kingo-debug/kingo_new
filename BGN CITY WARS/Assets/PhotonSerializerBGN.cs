@@ -11,6 +11,7 @@ public class PhotonSerializerBGN : MonoBehaviourPunCallbacks,IPunObservable
     public int HP;
     public int Shield;
     public int Stamina;
+    public Sprite LeagueLogo;
 
 
 
@@ -65,6 +66,7 @@ public class PhotonSerializerBGN : MonoBehaviourPunCallbacks,IPunObservable
             stream.SendNext(Fired);    //FiredBool
 
 
+
         }
         else
         {
@@ -86,6 +88,8 @@ public class PhotonSerializerBGN : MonoBehaviourPunCallbacks,IPunObservable
             AimIK = (float)stream.ReceiveNext(); // other player aIMik
 
             Fired = (bool)stream.ReceiveNext(); // other player FiredBool
+
+      
 
         }
     }

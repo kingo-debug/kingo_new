@@ -21,7 +21,7 @@ public class SkinManager : MonoBehaviour
 
     public void SpawnSkin()
     {
-        if(PV.IsMine)
+        if(PV.IsMine || gameObject.name == "BG OBJ MESH") // check if local player in game or in main menu
         {
             SkinItem = Resources.Load<GameObject>(Path.Combine(("skins"), ES3.Load<string>("CurrentSkin")));
             SkinMesh.material =  Resources.Load<GameObject>(Path.Combine(("skins"), ES3.Load<string>("CurrentSkin"))).GetComponent<SkinData>().SkinMaterial;
@@ -29,14 +29,16 @@ public class SkinManager : MonoBehaviour
             EquippedSkin = ES3.Load<string>("CurrentSkin");
 
         }
-        else
+        else if (gameObject.name != "BG OBJ MESH") // check if player is not local nor menu
         {
             SkinItem = Resources.Load<GameObject>(Path.Combine(("skins"), photonSerializer.SkinID));
 
            SkinMesh.material = Resources.Load<GameObject>(Path.Combine(("skins"),photonSerializer.SkinID)).GetComponent<SkinData>().SkinMaterial;
 
             EquippedSkin = photonSerializer.SkinID;
-
         }
+
+
+
     }
 }

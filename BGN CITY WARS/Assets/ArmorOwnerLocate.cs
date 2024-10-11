@@ -39,7 +39,7 @@ public class ArmorOwnerLocate : MonoBehaviour
                 }
             }
             #endregion
-            else
+            else 
             {
                 #region AssignArmorForPlayerMainMenu
                 if (BodyVestPart != null) // check if has Vest
