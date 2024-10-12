@@ -117,15 +117,15 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278215167
-  m_fontColor: {r: 1, g: 0.38001707, b: 0, a: 1}
+    rgba: 4278240511
+  m_fontColor: {r: 1, g: 0.76997477, b: 0, a: 1}
   m_enableVertexGradient: 1
   m_colorMode: 2
   m_fontColorGradient:
-    topLeft: {r: 0.4433962, g: 0.08817727, b: 0.039738327, a: 1}
-    topRight: {r: 0.4433962, g: 0.08817727, b: 0.039738327, a: 1}
-    bottomLeft: {r: 1, g: 0.03105119, b: 0.0141509175, a: 1}
-    bottomRight: {r: 1, g: 0.03105119, b: 0.0141509175, a: 1}
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 0.5283019, g: 0.19737563, b: 0.0473478, a: 1}
+    bottomRight: {r: 0.5283019, g: 0.19737563, b: 0.0473478, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
@@ -135,13 +135,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
+  m_fontSize: 25
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 18
-  m_fontSizeMax: 29.5
-  m_fontStyle: 3
+  m_fontSizeMin: 25
+  m_fontSizeMax: 33.8
+  m_fontStyle: 18
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
