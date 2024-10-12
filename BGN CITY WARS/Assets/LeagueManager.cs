@@ -55,7 +55,7 @@ public class LeagueManager : MonoBehaviour
 
         // Update the league based on the loaded score
         UpdateLeague(TotalScores);
-        ES3.Save<Sprite>("LeagueLogo", CurrentLeagueIcon.sprite);
+        ES3.Save<string>("League", CurrentLeagueIcon.sprite.name);
     }
 
     void UpdateLeague(int score)

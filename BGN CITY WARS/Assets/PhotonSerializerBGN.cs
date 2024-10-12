@@ -1,8 +1,8 @@
 using UnityEngine;
-using Photon.Pun;   
+using Photon.Pun;
 
 
-public class PhotonSerializerBGN : MonoBehaviourPunCallbacks,IPunObservable
+public class PhotonSerializerBGN : MonoBehaviourPunCallbacks, IPunObservable
 {
     [SerializeField]
     private new PhotonView photonView;
@@ -11,7 +11,7 @@ public class PhotonSerializerBGN : MonoBehaviourPunCallbacks,IPunObservable
     public int HP;
     public int Shield;
     public int Stamina;
-    public Sprite LeagueLogo;
+    public string LeagueLogoPath;
 
 
 
@@ -35,9 +35,10 @@ public class PhotonSerializerBGN : MonoBehaviourPunCallbacks,IPunObservable
         photonView = GetComponent<PhotonView>();
         PlayerNickName = ES3.Load<string>("PlayerName");
         PhotonNetwork.NickName = PlayerNickName;
+
     }
 
-    
+
 
 
 
@@ -65,6 +66,7 @@ public class PhotonSerializerBGN : MonoBehaviourPunCallbacks,IPunObservable
 
             stream.SendNext(Fired);    //FiredBool
 
+            stream.SendNext(LeagueLogoPath); //PlayerLeagueLogoPath
 
 
         }
@@ -89,7 +91,8 @@ public class PhotonSerializerBGN : MonoBehaviourPunCallbacks,IPunObservable
 
             Fired = (bool)stream.ReceiveNext(); // other player FiredBool
 
-      
+            LeagueLogoPath = (string)stream.ReceiveNext(); // other player PlayerNickName
+
 
         }
     }

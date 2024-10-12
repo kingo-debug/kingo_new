@@ -47,6 +47,7 @@ public class InitiateData : MonoBehaviour
             ES3.Save<int>("TotalBodyShotKills",0); 
             ES3.Save<int>("TotalHeadShotKills", 0);
             ES3.Save<int>("TotalDeaths", 0);
+            ES3.Save<string>("League", "Apex !");
 
             // Setup new Player XP and level
             int DefaultXP = 1;
