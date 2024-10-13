@@ -41,7 +41,9 @@ MonoBehaviour:
     - Boxophobic.Utils.Scripts
     - Cinemachine
     - ControlFreak2
+    - Danqzq.LeaderboardCreator
     - FbxBuildTestAssets
+    - LeaderboardCreatorEditor
     - MeshBakerCore
     - MeshBakerEditor
     - MultiPlay.Editor
