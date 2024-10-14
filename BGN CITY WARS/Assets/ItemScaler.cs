@@ -13,7 +13,7 @@ public class ItemScaler : MonoBehaviour
 
     private void Start()
     {
-        mapCamera = GameObject.Find("MAIN MAP CAM").GetComponent<Camera>();
+        mapCamera = GameObject.Find("MAP CAMERAS").transform.GetChild(0).GetComponent<Camera>();
         if (mapCamera == null)
         {
             mapCamera = Camera.main;
@@ -46,4 +46,5 @@ public class ItemScaler : MonoBehaviour
         // Apply the scale to the item
         transform.localScale = initialScale * scaleFactor;
     }
+
 }
