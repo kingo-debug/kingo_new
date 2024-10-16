@@ -19,6 +19,7 @@ public class MainCameraController : MonoBehaviour
     public float SpeedSmooth = 5f;
     public float DampSmoothness = 0.1f; // Variable to control smoothness
     private float currentDistance;
+    [SerializeField]private float DistanceFromTarget;
     private float currentRight;
     private float currentX = 0.0f; // Current horizontal rotation
     private float currentY = 0.0f; // Current vertical rotation
@@ -107,9 +108,13 @@ public class MainCameraController : MonoBehaviour
         Quaternion targetRotation = Quaternion.Euler(currentY, currentX, 0);
         Vector3 targetPosition = targetRotation * new Vector3(currentRight, HeightDistance, -currentDistance) + player.position;
 
+
+        Vector3 convertdistance = transform.position - player.position;
+        DistanceFromTarget = convertdistance.magnitude;
         // Smoothly interpolate towards the target rotation and position
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * RotationSmooth);
-        transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * SpeedSmooth);
+
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * RotationSmooth); // set up look at
+        transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * SpeedSmooth); // set up follow
     }
     void  BackUpCull()
     {

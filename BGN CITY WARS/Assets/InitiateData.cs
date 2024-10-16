@@ -19,6 +19,10 @@ public class InitiateData : MonoBehaviour
     public string DefaultHeavy;
 
     [Space(10)]
+    [Header("initiate Default Vehicle")]
+    public string DefaultVehicle;
+
+    [Space(10)]
     [Header("initiate Armor")]
     public string DefaultArmor;
 
@@ -87,6 +91,12 @@ public class InitiateData : MonoBehaviour
             #region Player Armor FirstTime
 
             ES3.Save<string>("CurrentArmor", DefaultArmor);
+
+            #endregion
+
+            #region Player Vehicle FirstTime
+
+            ES3.Save<string>("CurrentVehicle", DefaultVehicle);
 
             #endregion
 

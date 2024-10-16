@@ -10,6 +10,7 @@ public class OwnedShopItems : MonoBehaviour
     public List<string> OwnedWeapons;
     public List<string> OwnedSkins;
     public List<string> OwnedArmors;
+    public List<string> OwnedVehicles;
     public Dictionary<string, string> Weaponinventory = new Dictionary<string, string>();
 
 
@@ -27,6 +28,10 @@ public class OwnedShopItems : MonoBehaviour
     [Space(10)]
     [Header("Equipped Armor")]
     public string EquippedArmor;
+
+    [Space(10)]
+    [Header("Equipped Vehicle")]
+    public string EquippedVehicle;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +39,7 @@ public class OwnedShopItems : MonoBehaviour
         LoadWeapons();
         LoadSkins();
         LoadArmors();
+        LoadVehicles();
     }
 
     public void SaveWeapons()
@@ -73,8 +79,18 @@ public class OwnedShopItems : MonoBehaviour
     }
     public void SaveArmors()
     {
-        ES3.Save<List<string>>("OwnedArmors", OwnedArmors
-            );
+        ES3.Save<List<string>>("OwnedArmors", OwnedArmors);
     }
 
+    public void SaveVehicles()
+    {
+        ES3.Save<List<string>>("OwnedVehicles", OwnedVehicles);
+    }
+
+    public void LoadVehicles()
+    {
+        OwnedVehicles = ES3.Load<List<string>>("OwnedVehicles", OwnedVehicles);
+
+        EquippedVehicle = ES3.Load<string>("CurrentVehicle");
+    }
 }
