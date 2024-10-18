@@ -50,7 +50,8 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    extraUserProperties: []
+    extraUserProperties:
+    - '#BAKERY{"meshName":["TIRE__4_","TIRE__3_","TIRE__2_","TIRE__1_","POLICE_TAG__3_","POLICE_TAG__2_","_911___2_","_911___1_","BGN_POLICE_VAN"],"padding":[256,256,256,256,256,256,256,256,78],"unwrapper":[0,0,0,0,0,0,0,0,0]}'
     clipAnimations: []
     isReadable: 0
   meshes:

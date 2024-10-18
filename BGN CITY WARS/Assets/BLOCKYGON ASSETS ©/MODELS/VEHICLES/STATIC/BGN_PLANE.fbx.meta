@@ -40,7 +40,8 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    extraUserProperties: []
+    extraUserProperties:
+    - '#BAKERY{"meshName":["ARMY_TAG__1_","ARMY_TAG","BGN_PLANE"],"padding":[256,256,15],"unwrapper":[0,0,0]}'
     clipAnimations: []
     isReadable: 0
   meshes:

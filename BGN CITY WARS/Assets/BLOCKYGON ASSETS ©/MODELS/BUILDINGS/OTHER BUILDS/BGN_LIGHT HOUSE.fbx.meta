@@ -46,7 +46,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["BGN_LIGHT HOUSE"],"padding":[202],"unwrapper":[0]}'
+    - '#BAKERY{"meshName":["BGN_LIGHT HOUSE"],"padding":[15],"unwrapper":[0]}'
     clipAnimations: []
     isReadable: 0
   meshes:
