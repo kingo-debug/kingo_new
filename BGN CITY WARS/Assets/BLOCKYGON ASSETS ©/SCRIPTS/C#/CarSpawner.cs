@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using Photon.Pun;
-
+using System.IO;
 public class CarSpawner : MonoBehaviour
 
 {//SC
@@ -9,7 +9,7 @@ public class CarSpawner : MonoBehaviour
     //Spawnvars
     [Space(10)]
     [Header("Vehicle Spawn Settings")]
-    public Transform VehiclePos;
+public Transform VehiclePos;
 public GameObject VehicleToSpawn;
 [SerializeField]
 private GameObject VehichleSpawned;
@@ -47,12 +47,15 @@ private VehicleCoolDown vehicleCoolDown;
         vehicleCoolDown = GameObject.Find("VehicleCoolDown").GetComponent<VehicleCoolDown>();
         vehicleCoolDown.Player = this.gameObject;
         pv = GetComponent<PhotonView>();
-       
+        VehicleToSpawn = Resources.Load<GameObject>(Path.Combine("Vehicles", ES3.Load<string>("CurrentVehicle")));
+
+
+
     }
 
 
 
- void FixedUpdate() 
+    void FixedUpdate() 
  {
 MessageError.SetActive(Blocked);
 CheckSpawnable();
@@ -103,7 +106,7 @@ public void SpawnCar()
             {
                 PhotonNetwork.Destroy(VehichleSpawned);
 
-                VehichleSpawned = PhotonNetwork.Instantiate(VehicleToSpawn.name, VehiclePos.position, VehiclePos.rotation);  // respawn car
+                VehichleSpawned = PhotonNetwork.Instantiate(Path.Combine("Vehicles", ES3.Load<string>("CurrentVehicle")), VehiclePos.position, VehiclePos.rotation);  // respawn car
                 IsSpawned = true;
                 vehicleCoolDown.SpawnTimeValue = SpawnTime;
                 vehicleCoolDown.Ready = false;
