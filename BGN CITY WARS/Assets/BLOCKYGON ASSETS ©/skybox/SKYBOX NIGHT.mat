@@ -159,7 +159,7 @@ Material:
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _Rotation: 236
-    - _RotationSpeed: 10
+    - _RotationSpeed: 1
     - _Rotationn: 1
     - _SkyboxExtended: 1
     - _Smoothness: 0.5
