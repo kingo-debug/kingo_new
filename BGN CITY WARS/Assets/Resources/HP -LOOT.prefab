@@ -250,7 +250,6 @@ GameObject:
   - component: {fileID: 3738884125511871399}
   - component: {fileID: 3738884125508971397}
   - component: {fileID: 3738884125509970245}
-  - component: {fileID: 5815750135842220513}
   m_Layer: 17
   m_Name: PowerUp
   m_TagString: Untagged
@@ -323,27 +322,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &5815750135842220513
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3738884125511972743}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1b3df788f2d0b1e4b8f7401dbbffe3a7, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4337684085205569507
 GameObject:
   m_ObjectHideFlags: 0
@@ -355,7 +333,6 @@ GameObject:
   - component: {fileID: 4793136016696614104}
   - component: {fileID: 7661621957170242962}
   - component: {fileID: 6590515245768507654}
-  - component: {fileID: 2105022088540230770}
   m_Layer: 17
   m_Name: default
   m_TagString: Untagged
@@ -428,17 +405,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &2105022088540230770
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4337684085205569507}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bff1903c6340b0f4cb0a3670d9d54243, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RotateDirection: {x: 0, y: 1, z: 0}
-  Speed: 30
