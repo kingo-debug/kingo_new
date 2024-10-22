@@ -35,7 +35,8 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    extraUserProperties: []
+    extraUserProperties:
+    - '#BAKERY{"meshName":["BGN_STEER_BARS"],"padding":[90],"unwrapper":[0]}'
     clipAnimations: []
     isReadable: 0
   meshes:

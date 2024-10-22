@@ -41,7 +41,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["BLOCKYGON_OFFICE_CHAIR"],"padding":[92],"unwrapper":[0]}'
+    - '#BAKERY{"meshName":["BLOCKYGON_OFFICE_CHAIR"],"padding":[256],"unwrapper":[0]}'
     clipAnimations: []
     isReadable: 0
   meshes:
