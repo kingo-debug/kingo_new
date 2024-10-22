@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using Photon.Pun;
+using System.Collections.Generic;
 
 public class TakeDamage : MonoBehaviour
 {
@@ -26,7 +27,8 @@ public class TakeDamage : MonoBehaviour
 
     [SerializeField]
     private GameObject DieUi;
-
+    [SerializeField]
+    SpawnPointManager SPM;
     [Header("Event")]
     public Transform ActivateEvent;
 
@@ -196,10 +198,14 @@ public class TakeDamage : MonoBehaviour
                 animator.SetBool("DEAD", false);
 
                 if (TryGetComponent<MainCharacterController>(out mainCharacterController))
-                {
-                    Transform spawnpoints = GameObject.FindWithTag("SP").transform;
-                    transform.position = spawnpoints.GetChild(Random.Range(0, spawnpoints.childCount)).position;
-                    transform.Find("PLAYER Canvas").transform.Find("SCREEN BLOCKERS").GetChild(0).gameObject.SetActive(false);
+                {            
+                    List<Transform> spawnpoints = SPM.spawnPoints;
+
+                    // Set the position to a random Transform from the list
+                    transform.position = spawnpoints[Random.Range(0, spawnpoints.Count)].position;
+
+                    // Disable the first child of "SCREEN BLOCKERS" within the "PLAYER Canvas"
+                    transform.Find("PLAYER Canvas").Find("SCREEN BLOCKERS").GetChild(0).gameObject.SetActive(false);
 
                     #region Character Controller ReSize
                     CharacterController characterController = GetComponent<CharacterController>();
