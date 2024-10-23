@@ -37,6 +37,8 @@ private bool IsSpawned = false;
 //level script access
 [SerializeField]
 private VehicleCoolDown vehicleCoolDown;
+    [Header("Other")]
+    [SerializeField] TargetIndicator TargetIndicator;
 
     private PhotonView pv;
 
@@ -48,9 +50,6 @@ private VehicleCoolDown vehicleCoolDown;
         vehicleCoolDown.Player = this.gameObject;
         pv = GetComponent<PhotonView>();
         VehicleToSpawn = Resources.Load<GameObject>(Path.Combine("Vehicles", ES3.Load<string>("CurrentVehicle")));
-
-
-
     }
 
 
@@ -110,6 +109,8 @@ public void SpawnCar()
                 IsSpawned = true;
                 vehicleCoolDown.SpawnTimeValue = SpawnTime;
                 vehicleCoolDown.Ready = false;
+                TargetIndicator.target = VehichleSpawned.transform;
+                TargetIndicator.gameObject.SetActive(true);
                 CarinRange.GetComponent<CarPlayerEntry>().ForceOutofRange();
             }
 
